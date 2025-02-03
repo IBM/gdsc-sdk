@@ -1,0 +1,11 @@
+# Reportsv3CustomChartTemplatev2
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**TemplateId** | **string** |  | [optional] [default to null]
+**UserId** | **string** | The creator of the template. | [optional] [default to null]
+**VegaDefinition** | **string** | The VEGA chart template, as a stringified JSON. | [optional] [default to null]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

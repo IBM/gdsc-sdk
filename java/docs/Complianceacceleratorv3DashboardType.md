@@ -1,0 +1,21 @@
+
+
+# Complianceacceleratorv3DashboardType
+
+## Enum
+
+
+* `UNDEFINED_DASH` (value: `"UNDEFINED_DASH"`)
+
+* `CCPA_REPORTS_DASH` (value: `"CCPA_REPORTS_DASH"`)
+
+* `SECURITY_REPORTS_DASH` (value: `"SECURITY_REPORTS_DASH"`)
+
+* `GDPR_REPORTS_DASH` (value: `"GDPR_REPORTS_DASH"`)
+
+* `CCPA_WORKSPACE_DASH` (value: `"CCPA_WORKSPACE_DASH"`)
+
+* `GDPR_WORKSPACE_DASH` (value: `"GDPR_WORKSPACE_DASH"`)
+
+
+
