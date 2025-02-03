@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="guardium sdk java examples" type="Application" factoryName="Application">
+    <envs>
+      <env name="API_KEY" value="&quot;Basic OTJlMTM2NTktMTE3YS00ZWNmLWFkZjctZjBkNjA5NDMzMzQ0OjEyMTZkMTIwLWM5N2ItNGIyMi1hMjhiLTE1NTIxM2Y0MDVjZQ==&quot;" />
+      <env name="URL" value="https://insightsdev11.fyre.ibm.com:8443" />
+    </envs>
+    <module name="example" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

@@ -1,0 +1,11 @@
+# Reportsv3UpdateVariantOverrideRequest
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Key** | **string** |  | [optional] [default to null]
+**Values** | **map[string]string** |  | [optional] [default to null]
+**VariantId** | **string** |  | [optional] [default to null]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
