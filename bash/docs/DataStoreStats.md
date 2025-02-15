@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **appFlowsCount** | **integer** |  | [optional] [default to null]
 **configFlowsCount** | **integer** |  | [optional] [default to null]
 **sensitivitiesCount** | **integer** |  | [optional] [default to null]
+**userAccessCount** | **integer** |  | [optional] [default to null]
 **sensitivitiesSummary** | [**array[SensitivitySummary]**](SensitivitySummary.md) |  | [optional] [default to null]
 **vulnerabilitiesSummary** | [**array[VulnerabilitiesCriticalityCountInner]**](VulnerabilitiesCriticalityCountInner.md) |  | [optional] [default to null]
 

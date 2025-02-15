@@ -66,6 +66,7 @@ class TestDataStore(unittest.TestCase):
                     app_flows_count = 3, 
                     config_flows_count = 63, 
                     sensitivities_count = 70, 
+                    user_access_count = 1.337, 
                     sensitivities_summary = [
                         ibm_gdsc_sdk_software.models.sensitivity_summary.SensitivitySummary(
                             tag = 'BUSINESS_EMAIL_ADDRESS', 

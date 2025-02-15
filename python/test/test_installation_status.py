@@ -35,7 +35,8 @@ class TestInstallationStatus(unittest.TestCase):
         model = InstallationStatus()
         if include_optional:
             return InstallationStatus(
-                discovery_permissions = True
+                discovery_permissions = True,
+                is_install_complete = True
             )
         else:
             return InstallationStatus(

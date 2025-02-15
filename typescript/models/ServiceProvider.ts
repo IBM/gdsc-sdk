@@ -24,5 +24,6 @@ export enum ServiceProvider {
     Office365 = 'office365',
     AtlassianJira = 'atlassian-jira',
     AtlassianConfluence = 'atlassian-confluence',
-    Salesforce = 'salesforce'
+    Salesforce = 'salesforce',
+    Snowflake = 'snowflake'
 }

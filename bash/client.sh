@@ -169,19 +169,20 @@ operation_parameters_minimum_occurrences["authServerServiceGetOauthClient:::clie
 operation_parameters_minimum_occurrences["addAnalyzedRegion:::AddAnalyzedRegionRequest"]=1
 operation_parameters_minimum_occurrences["addCloudAccounts:::AddCloudAccountsRequest"]=1
 operation_parameters_minimum_occurrences["generateAzureAuthUrl:::tenantId"]=0
+operation_parameters_minimum_occurrences["generateSnowflakeAuthUrl:::ClientInfo"]=1
 operation_parameters_minimum_occurrences["getAnalyzedRegionStatus:::cloudProvider"]=1
 operation_parameters_minimum_occurrences["getAnalyzedRegionStatus:::region"]=1
 operation_parameters_minimum_occurrences["getCloudAccountInstallationStatus:::cloudProvider"]=1
 operation_parameters_minimum_occurrences["getCloudAccountInstallationStatus:::cloudAccountId"]=1
+operation_parameters_minimum_occurrences["getRefreshTokenExpiry:::providerId"]=1
 operation_parameters_minimum_occurrences["removeAccounts:::accountIds"]=1
 operation_parameters_minimum_occurrences["removeAccounts:::serviceProvider"]=1
 operation_parameters_minimum_occurrences["removeAccountsInstructions:::accountIds"]=1
 operation_parameters_minimum_occurrences["removeAccountsInstructions:::serviceProvider"]=1
-operation_parameters_minimum_occurrences["setCompliances:::Compliance"]=1
 operation_parameters_minimum_occurrences["submitGoogleWorkspaceAdminEmail:::SubmitAdminEmailParams"]=1
 operation_parameters_minimum_occurrences["submitOffice365TenantInfo:::TenantInfo"]=1
-operation_parameters_minimum_occurrences["submitSalesforceAuthCode:::AuthCode"]=1
 operation_parameters_minimum_occurrences["submitSlackAuthCode:::SubmitAuthCode"]=1
+operation_parameters_minimum_occurrences["submitSnowflakeAuthCode:::AuthInfo"]=1
 operation_parameters_minimum_occurrences["complianceAcceleratorCreateWorkspace:::Complianceacceleratorv3CreateWorkspaceRequest"]=1
 operation_parameters_minimum_occurrences["complianceAcceleratorDeleteComplianceWorkspaces:::regulations"]=0
 operation_parameters_minimum_occurrences["complianceAcceleratorDeleteComplianceWorkspaces:::deleteAll"]=0
@@ -493,13 +494,8 @@ operation_parameters_minimum_occurrences["policyBuilderPoliciesGroups:::group_id
 operation_parameters_minimum_occurrences["policyBuilderRuleValidation:::Policybuilderv3GetRuleValidationRequest"]=1
 operation_parameters_minimum_occurrences["policyBuilderStorePoliciesGdp:::central_manager_id"]=1
 operation_parameters_minimum_occurrences["policyBuilderStorePoliciesGdp:::Policybuilderv3StorePolicyGdpRequest"]=1
-operation_parameters_minimum_occurrences["qSDataManagerGetAppDataForProvisionId:::provision_id"]=1
-operation_parameters_minimum_occurrences["qSDataManagerGetNetLocDimDataForScanId:::scan_id"]=1
-operation_parameters_minimum_occurrences["qSDataManagerInsertAllEntities:::Qspmdatamanagerv3InsertEntitiesRequest"]=1
 operation_parameters_minimum_occurrences["qSDataManagerRegisterScan:::Qspmdatamanagerv3ScanRequest"]=1
 operation_parameters_minimum_occurrences["qSDataManagerRetrieveScan:::scan_id"]=1
-operation_parameters_minimum_occurrences["qSDataManagerSearchEntityData:::Qspmdatamanagerv3SearchEntityDataRequest"]=1
-operation_parameters_minimum_occurrences["qSDataManagerUpdateNetLocation:::Qspmdatamanagerv3UpdateNetLocRequest"]=1
 operation_parameters_minimum_occurrences["qSPluginManagerInvokeAppProv:::plugin_id"]=1
 operation_parameters_minimum_occurrences["qSPluginManagerInvokeAppProv:::Qspmpluginmanagerv3PluginRQ"]=1
 operation_parameters_minimum_occurrences["qSPluginManagerInvokeExplorerV1:::plugin_id"]=1
@@ -783,19 +779,20 @@ operation_parameters_maximum_occurrences["authServerServiceGetOauthClient:::clie
 operation_parameters_maximum_occurrences["addAnalyzedRegion:::AddAnalyzedRegionRequest"]=0
 operation_parameters_maximum_occurrences["addCloudAccounts:::AddCloudAccountsRequest"]=0
 operation_parameters_maximum_occurrences["generateAzureAuthUrl:::tenantId"]=0
+operation_parameters_maximum_occurrences["generateSnowflakeAuthUrl:::ClientInfo"]=0
 operation_parameters_maximum_occurrences["getAnalyzedRegionStatus:::cloudProvider"]=0
 operation_parameters_maximum_occurrences["getAnalyzedRegionStatus:::region"]=0
 operation_parameters_maximum_occurrences["getCloudAccountInstallationStatus:::cloudProvider"]=0
 operation_parameters_maximum_occurrences["getCloudAccountInstallationStatus:::cloudAccountId"]=0
+operation_parameters_maximum_occurrences["getRefreshTokenExpiry:::providerId"]=0
 operation_parameters_maximum_occurrences["removeAccounts:::accountIds"]=0
 operation_parameters_maximum_occurrences["removeAccounts:::serviceProvider"]=0
 operation_parameters_maximum_occurrences["removeAccountsInstructions:::accountIds"]=0
 operation_parameters_maximum_occurrences["removeAccountsInstructions:::serviceProvider"]=0
-operation_parameters_maximum_occurrences["setCompliances:::Compliance"]=0
 operation_parameters_maximum_occurrences["submitGoogleWorkspaceAdminEmail:::SubmitAdminEmailParams"]=0
 operation_parameters_maximum_occurrences["submitOffice365TenantInfo:::TenantInfo"]=0
-operation_parameters_maximum_occurrences["submitSalesforceAuthCode:::AuthCode"]=0
 operation_parameters_maximum_occurrences["submitSlackAuthCode:::SubmitAuthCode"]=0
+operation_parameters_maximum_occurrences["submitSnowflakeAuthCode:::AuthInfo"]=0
 operation_parameters_maximum_occurrences["complianceAcceleratorCreateWorkspace:::Complianceacceleratorv3CreateWorkspaceRequest"]=0
 operation_parameters_maximum_occurrences["complianceAcceleratorDeleteComplianceWorkspaces:::regulations"]=0
 operation_parameters_maximum_occurrences["complianceAcceleratorDeleteComplianceWorkspaces:::deleteAll"]=0
@@ -1107,13 +1104,8 @@ operation_parameters_maximum_occurrences["policyBuilderPoliciesGroups:::group_id
 operation_parameters_maximum_occurrences["policyBuilderRuleValidation:::Policybuilderv3GetRuleValidationRequest"]=0
 operation_parameters_maximum_occurrences["policyBuilderStorePoliciesGdp:::central_manager_id"]=0
 operation_parameters_maximum_occurrences["policyBuilderStorePoliciesGdp:::Policybuilderv3StorePolicyGdpRequest"]=0
-operation_parameters_maximum_occurrences["qSDataManagerGetAppDataForProvisionId:::provision_id"]=0
-operation_parameters_maximum_occurrences["qSDataManagerGetNetLocDimDataForScanId:::scan_id"]=0
-operation_parameters_maximum_occurrences["qSDataManagerInsertAllEntities:::Qspmdatamanagerv3InsertEntitiesRequest"]=0
 operation_parameters_maximum_occurrences["qSDataManagerRegisterScan:::Qspmdatamanagerv3ScanRequest"]=0
 operation_parameters_maximum_occurrences["qSDataManagerRetrieveScan:::scan_id"]=0
-operation_parameters_maximum_occurrences["qSDataManagerSearchEntityData:::Qspmdatamanagerv3SearchEntityDataRequest"]=0
-operation_parameters_maximum_occurrences["qSDataManagerUpdateNetLocation:::Qspmdatamanagerv3UpdateNetLocRequest"]=0
 operation_parameters_maximum_occurrences["qSPluginManagerInvokeAppProv:::plugin_id"]=0
 operation_parameters_maximum_occurrences["qSPluginManagerInvokeAppProv:::Qspmpluginmanagerv3PluginRQ"]=0
 operation_parameters_maximum_occurrences["qSPluginManagerInvokeExplorerV1:::plugin_id"]=0
@@ -1394,19 +1386,20 @@ operation_parameters_collection_type["authServerServiceGetOauthClient:::client_i
 operation_parameters_collection_type["addAnalyzedRegion:::AddAnalyzedRegionRequest"]=""
 operation_parameters_collection_type["addCloudAccounts:::AddCloudAccountsRequest"]=""
 operation_parameters_collection_type["generateAzureAuthUrl:::tenantId"]=""
+operation_parameters_collection_type["generateSnowflakeAuthUrl:::ClientInfo"]=""
 operation_parameters_collection_type["getAnalyzedRegionStatus:::cloudProvider"]=""
 operation_parameters_collection_type["getAnalyzedRegionStatus:::region"]=""
 operation_parameters_collection_type["getCloudAccountInstallationStatus:::cloudProvider"]=""
 operation_parameters_collection_type["getCloudAccountInstallationStatus:::cloudAccountId"]=""
+operation_parameters_collection_type["getRefreshTokenExpiry:::providerId"]=""
 operation_parameters_collection_type["removeAccounts:::accountIds"]="multi"
 operation_parameters_collection_type["removeAccounts:::serviceProvider"]=""
 operation_parameters_collection_type["removeAccountsInstructions:::accountIds"]="multi"
 operation_parameters_collection_type["removeAccountsInstructions:::serviceProvider"]=""
-operation_parameters_collection_type["setCompliances:::Compliance"]=
 operation_parameters_collection_type["submitGoogleWorkspaceAdminEmail:::SubmitAdminEmailParams"]=""
 operation_parameters_collection_type["submitOffice365TenantInfo:::TenantInfo"]=""
-operation_parameters_collection_type["submitSalesforceAuthCode:::AuthCode"]=""
 operation_parameters_collection_type["submitSlackAuthCode:::SubmitAuthCode"]=""
+operation_parameters_collection_type["submitSnowflakeAuthCode:::AuthInfo"]=""
 operation_parameters_collection_type["complianceAcceleratorCreateWorkspace:::Complianceacceleratorv3CreateWorkspaceRequest"]=""
 operation_parameters_collection_type["complianceAcceleratorDeleteComplianceWorkspaces:::regulations"]="multi"
 operation_parameters_collection_type["complianceAcceleratorDeleteComplianceWorkspaces:::deleteAll"]=""
@@ -1718,13 +1711,8 @@ operation_parameters_collection_type["policyBuilderPoliciesGroups:::group_ids"]=
 operation_parameters_collection_type["policyBuilderRuleValidation:::Policybuilderv3GetRuleValidationRequest"]=""
 operation_parameters_collection_type["policyBuilderStorePoliciesGdp:::central_manager_id"]=""
 operation_parameters_collection_type["policyBuilderStorePoliciesGdp:::Policybuilderv3StorePolicyGdpRequest"]=""
-operation_parameters_collection_type["qSDataManagerGetAppDataForProvisionId:::provision_id"]=""
-operation_parameters_collection_type["qSDataManagerGetNetLocDimDataForScanId:::scan_id"]=""
-operation_parameters_collection_type["qSDataManagerInsertAllEntities:::Qspmdatamanagerv3InsertEntitiesRequest"]=""
 operation_parameters_collection_type["qSDataManagerRegisterScan:::Qspmdatamanagerv3ScanRequest"]=""
 operation_parameters_collection_type["qSDataManagerRetrieveScan:::scan_id"]=""
-operation_parameters_collection_type["qSDataManagerSearchEntityData:::Qspmdatamanagerv3SearchEntityDataRequest"]=""
-operation_parameters_collection_type["qSDataManagerUpdateNetLocation:::Qspmdatamanagerv3UpdateNetLocRequest"]=""
 operation_parameters_collection_type["qSPluginManagerInvokeAppProv:::plugin_id"]=""
 operation_parameters_collection_type["qSPluginManagerInvokeAppProv:::Qspmpluginmanagerv3PluginRQ"]=""
 operation_parameters_collection_type["qSPluginManagerInvokeExplorerV1:::plugin_id"]=""
@@ -2409,26 +2397,26 @@ echo "  $ops" | column -t -s ';'
     echo -e "${BOLD}${WHITE}[cloudAccounts]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}addAnalyzedRegion${OFF};Add a new region for data classification (AUTH)
-  ${CYAN}addCloudAccounts${OFF};Add cloud account connections to Guardium Insights SaaS DSPM (AUTH)
+  ${CYAN}addCloudAccounts${OFF};Add cloud account connections to DSPM (AUTH)
   ${CYAN}generateAtlassianConfluenceAuthUrl${OFF};Generate a Confluence authentication URL (AUTH)
   ${CYAN}generateAtlassianJiraAuthUrl${OFF};Generate a JIRA authentication URL (AUTH)
   ${CYAN}generateAzureAuthUrl${OFF};Generate azure authorization url (AUTH)
   ${CYAN}generateOffice365AuthUrl${OFF};Generate a Microsoft 365 consent URL (AUTH)
-  ${CYAN}generateSalesforceAuthUrl${OFF};Generate a Salesforce consent URL (AUTH)
   ${CYAN}generateSlackAuthUrl${OFF};Generate a Slack authentication URL (AUTH)
+  ${CYAN}generateSnowflakeAuthUrl${OFF};Validate and Generate a Snowflake OAuth URL (AUTH)
   ${CYAN}getAnalyzedRegionStatus${OFF};Get the status of analyzer installation for a region (AUTH)
   ${CYAN}getAzureAdminConsentStatus${OFF};Get Azure admin consent status (AUTH)
   ${CYAN}getCloudAccountInstallationStatus${OFF};Get the installation status of a cloud account (AUTH)
-  ${CYAN}getCompliances${OFF};Get a list of selected compliances (AUTH)
-  ${CYAN}listLinkedAccounts${OFF};List cloud accounts connected to Guardium Insights SaaS DSPM (AUTH)
+  ${CYAN}getRefreshTokenExpiry${OFF};Get Snowflake Refresh Token Expiry date (AUTH)
+  ${CYAN}listLinkedAccounts${OFF};List cloud accounts connected to DSPM (AUTH)
   ${CYAN}removeAccounts${OFF};Post cloud account ID connections to be removed (AUTH)
   ${CYAN}removeAccountsInstructions${OFF};Post cloud account IDs and get instructions to remove the accounts (AUTH)
   ${CYAN}retrieveServiceAccountId${OFF};Get Google Workspace authentication (AUTH)
-  ${CYAN}setCompliances${OFF};Set a list of selected compliances (AUTH)
+  ${CYAN}snowflakeIntegrationScript${OFF};Generate Snowflake Integration Script (AUTH)
   ${CYAN}submitGoogleWorkspaceAdminEmail${OFF};Submit email for service account authorization (AUTH)
   ${CYAN}submitOffice365TenantInfo${OFF};Submit Microsoft 365 customer information (AUTH)
-  ${CYAN}submitSalesforceAuthCode${OFF};Submit Salesforce customer information (AUTH)
   ${CYAN}submitSlackAuthCode${OFF};Submit a Slack authentication code (AUTH)
+  ${CYAN}submitSnowflakeAuthCode${OFF};Submit Snowflake oAuth code (AUTH)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -2536,7 +2524,7 @@ read -r -d '' ops <<EOF
   ${CYAN}getDataResourcesSummary${OFF};Data resources summary (AUTH)
   ${CYAN}listDataResources${OFF};List data resources that match a given filter (AUTH)
   ${CYAN}listDataResourcesNames${OFF};List names of data resources (AUTH)
-  ${CYAN}removeResource${OFF};Remove resource from Guardium Insights SaaS DSPM (AUTH)
+  ${CYAN}removeResource${OFF};Remove resource from DSPM (AUTH)
   ${CYAN}updateResourceReviewStatus${OFF};Set review status of a data resource (AUTH)
 EOF
 echo "  $ops" | column -t -s ';'
@@ -2717,7 +2705,7 @@ Description: returns the summaries of all policies on that central manager (AUTH
   ${CYAN}guardiumConnectorGetHealthInfo${OFF};Summary: Get gealth info
 Description: Get health information from Guardium Data Protection central mamangers. (AUTH) (AUTH)
   ${CYAN}guardiumConnectorGetLatestDMExtractionProfile${OFF};Summary: Get latest DM extraction profile
-Description: Return the Datamart Extraction Profile for Guardium Insights. (AUTH) (AUTH)
+Description: Return the Datamart Extraction Profile for Guardium. (AUTH) (AUTH)
   ${CYAN}guardiumConnectorGetStreamingStatus${OFF};Summary: Get streaming status
 Description: Return the streaming configuration. (AUTH) (AUTH)
   ${CYAN}guardiumConnectorGetSyncDMs${OFF};Summary: Get sync DMs
@@ -2729,7 +2717,7 @@ Description: Return the list of tasks from a central manager. (AUTH) (AUTH)
   ${CYAN}guardiumConnectorRunGDPReport${OFF};Summary: Run GDP report
 Description: Run GDP report. (AUTH) (AUTH)
   ${CYAN}guardiumConnectorSetupCM${OFF};Summary: Setup CM
-Description: Set up the registration between a GDP Central manager and Guardium Insights. (AUTH) (AUTH)
+Description: Set up the registration between a GDP Central manager and Guardium. (AUTH) (AUTH)
   ${CYAN}guardiumConnectorSetupDatamarts${OFF};Description: setup custom datamart execution mode (AUTH) (AUTH)
   ${CYAN}guardiumConnectorTaskError${OFF};Summary: Task error
 Description: Log error messages from GDP task execution. (AUTH) (AUTH)
@@ -2890,22 +2878,12 @@ echo "  $ops" | column -t -s ';'
     echo ""
     echo -e "${BOLD}${WHITE}[qSDataManager]${OFF}"
 read -r -d '' ops <<EOF
-  ${CYAN}qSDataManagerGetAppDataForProvisionId${OFF};Summary: Fetch Application Provisoning Details
-Description: Fetch details from app dimension entity for given provision id. (AUTH) (AUTH)
   ${CYAN}qSDataManagerGetMasterData${OFF};Summary: master data for all entities
 Description: Retrieves All Dimension and Fact tables data. (AUTH) (AUTH)
-  ${CYAN}qSDataManagerGetNetLocDimDataForScanId${OFF};Summary: Fetch Netlocation Details
-Description: Fetch details from netloc dimension entity for a given scanid. (AUTH) (AUTH)
-  ${CYAN}qSDataManagerInsertAllEntities${OFF};Summary: Insert Data
-Description: Insert All Dimension and Fact tables data. (AUTH) (AUTH)
   ${CYAN}qSDataManagerRegisterScan${OFF};Summary: Insert ScanDetails
 Description: Register new data into scan dimension table. (AUTH) (AUTH)
   ${CYAN}qSDataManagerRetrieveScan${OFF};Summary: Fetch ScanDetails
 Description: Fetch details from scan dimension table. (AUTH) (AUTH)
-  ${CYAN}qSDataManagerSearchEntityData${OFF};Summary: Retrieve Entity Data
-Description:Retrieve Entity data for given parameters (AUTH) (AUTH)
-  ${CYAN}qSDataManagerUpdateNetLocation${OFF};Summary: Update Netlocation Details
-Description: Update netloc dimension entity for agiven scanid. (AUTH) (AUTH)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -3078,7 +3056,7 @@ Description: Perform tuning risk event actions. (AUTH) (AUTH)
   ${CYAN}riskAnalyticsControllerSetRiskEventStatus${OFF};Summary: Set risk event status
 Description: Update the risk status and justification. (AUTH) (AUTH)
   ${CYAN}riskAnalyticsControllerSetUserUISettings${OFF};Summary: Set user UI settings
-Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium Insights. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium Insights. (AUTH) (AUTH)
+Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium. (AUTH) (AUTH)
   ${CYAN}riskAnalyticsControllerUpdateRiskFeedback${OFF};Summary: Update risk feedback
 Description: Provide feedback for one or more risk events (AUTH) (AUTH)
 EOF
@@ -3244,7 +3222,7 @@ echo "  $ops" | column -t -s ';'
     echo -e "${BOLD}${WHITE}[universalConnectorManager]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}universalConnectorManagerGetCertificate${OFF};Summary: Get certificate
-Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium Insights. (AUTH) (AUTH)
+Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium. (AUTH) (AUTH)
   ${CYAN}universalConnectorManagerGetConnectors${OFF};Summary: Get connectors
 Description: Get all the connectors Universal Connector can support. Includes a list of event pipelines (input--filter pairs), along with the supported data source types and platforms. (AUTH) (AUTH)
   ${CYAN}universalConnectorManagerListConnectionsSummary${OFF};Summary: List connections summary
@@ -4146,9 +4124,9 @@ print_addAnalyzedRegion_help() {
 ##############################################################################
 print_addCloudAccounts_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}addCloudAccounts - Add cloud account connections to Guardium Insights SaaS DSPM${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}addCloudAccounts - Add cloud account connections to DSPM${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "You can add a single or multiple cloud account connections from the same cloud provider.<BR>Adding these cloud account connections will trigger Guardium Insights SaaS DSPM for data store discovery.<BR>To enable data classification, run the 'Add a new region for data classification' API." | paste -sd' ' | fold -sw 80
+    echo -e "You can add a single or multiple cloud account connections from the same cloud provider.<BR>Adding these cloud account connections will trigger Guardium DSPM for data store discovery.<BR>To enable data classification, run the 'Add a new region for data classification' API." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -4261,28 +4239,6 @@ print_generateOffice365AuthUrl_help() {
 }
 ##############################################################################
 #
-# Print help for generateSalesforceAuthUrl operation
-#
-##############################################################################
-print_generateSalesforceAuthUrl_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}generateSalesforceAuthUrl - Generate a Salesforce consent URL${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "Generate an administrator consent URL for Salesforce integration." | paste -sd' ' | fold -sw 80
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=400
-    echo -e "${result_color_table[${code:0:1}]}  400;Bad Request${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Access-Control-Allow-Methods${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Access-Control-Allow-Headers${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-}
-##############################################################################
-#
 # Print help for generateSlackAuthUrl operation
 #
 ##############################################################################
@@ -4305,6 +4261,31 @@ print_generateSlackAuthUrl_help() {
 }
 ##############################################################################
 #
+# Print help for generateSnowflakeAuthUrl operation
+#
+##############################################################################
+print_generateSnowflakeAuthUrl_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}generateSnowflakeAuthUrl - Validate and Generate a Snowflake OAuth URL${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Generate an administrator consent URL for Snowflake integration." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=400
+    echo -e "${result_color_table[${code:0:1}]}  400;Bad Request${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Methods${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Headers${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+}
+##############################################################################
+#
 # Print help for getAnalyzedRegionStatus operation
 #
 ##############################################################################
@@ -4312,7 +4293,7 @@ print_getAnalyzedRegionStatus_help() {
     echo ""
     echo -e "${BOLD}${WHITE}getAnalyzedRegionStatus - Get the status of analyzer installation for a region${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Get the installation status of Guardium Insights SaaS DSPM for a region." | paste -sd' ' | fold -sw 80
+    echo -e "Get the installation status of Guardium DSPM for a region." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}cloudProvider${OFF} ${BLUE}[CloudServiceProvider]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The cloud provider for the cloud account${YELLOW} Specify as: cloudProvider=value${OFF}" \
@@ -4379,15 +4360,17 @@ print_getCloudAccountInstallationStatus_help() {
 }
 ##############################################################################
 #
-# Print help for getCompliances operation
+# Print help for getRefreshTokenExpiry operation
 #
 ##############################################################################
-print_getCompliances_help() {
+print_getRefreshTokenExpiry_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}getCompliances - Get a list of selected compliances${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}getRefreshTokenExpiry - Get Snowflake Refresh Token Expiry date${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "List the compliance frameworks selected." | paste -sd' ' | fold -sw 80
+    echo -e "Get Snowflake Refresh Token Expiry date." | paste -sd' ' | fold -sw 80
     echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}providerId${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The ID of the provider ${YELLOW}Specify as: providerId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
@@ -4406,9 +4389,9 @@ print_getCompliances_help() {
 ##############################################################################
 print_listLinkedAccounts_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}listLinkedAccounts - List cloud accounts connected to Guardium Insights SaaS DSPM${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}listLinkedAccounts - List cloud accounts connected to DSPM${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Get a list of all the connected cloud accounts monitored by Guardium Insights SaaS DSPM." | paste -sd' ' | fold -sw 80
+    echo -e "Get a list of all the connected cloud accounts monitored by Guardium DSPM." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -4434,7 +4417,7 @@ print_removeAccounts_help() {
     echo ""
     echo -e "${BOLD}${WHITE}removeAccounts - Post cloud account ID connections to be removed${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Post cloud account ID connections to be removed from Guardium Insights SaaS DSPM." | paste -sd' ' | fold -sw 80
+    echo -e "Post cloud account ID connections to be removed from Guardium DSPM." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}accountIds${OFF} ${BLUE}[array[string]]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: accountIds=value1 accountIds=value2 accountIds=...${OFF}" \
@@ -4543,17 +4526,14 @@ print_retrieveServiceAccountId_help() {
 }
 ##############################################################################
 #
-# Print help for setCompliances operation
+# Print help for snowflakeIntegrationScript operation
 #
 ##############################################################################
-print_setCompliances_help() {
+print_snowflakeIntegrationScript_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}setCompliances - Set a list of selected compliances${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}snowflakeIntegrationScript - Generate Snowflake Integration Script${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Select one or more compliance frameworks." | paste -sd' ' | fold -sw 80
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "Generate Snowflake integration Script." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -4618,14 +4598,39 @@ print_submitOffice365TenantInfo_help() {
 }
 ##############################################################################
 #
-# Print help for submitSalesforceAuthCode operation
+# Print help for submitSlackAuthCode operation
 #
 ##############################################################################
-print_submitSalesforceAuthCode_help() {
+print_submitSlackAuthCode_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}submitSalesforceAuthCode - Submit Salesforce customer information${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}submitSlackAuthCode - Submit a Slack authentication code${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Submit customer information for Salesforce integration." | paste -sd' ' | fold -sw 80
+    echo -e "Submit a Slack authentication code." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=400
+    echo -e "${result_color_table[${code:0:1}]}  400;Bad Request${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Methods${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Headers${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+}
+##############################################################################
+#
+# Print help for submitSnowflakeAuthCode operation
+#
+##############################################################################
+print_submitSnowflakeAuthCode_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}submitSnowflakeAuthCode - Submit Snowflake oAuth code${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Storing code that is returned from Snowflake oAuth." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -4654,31 +4659,6 @@ print_submitSalesforceAuthCode_help() {
         echo -e "       ${BLUE}Access-Control-Allow-Headers${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
     code=503
     echo -e "${result_color_table[${code:0:1}]}  503;Service Unavailable${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for submitSlackAuthCode operation
-#
-##############################################################################
-print_submitSlackAuthCode_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}submitSlackAuthCode - Submit a Slack authentication code${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "Submit a Slack authentication code." | paste -sd' ' | fold -sw 80
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=400
-    echo -e "${result_color_table[${code:0:1}]}  400;Bad Request${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Access-Control-Allow-Methods${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Access-Control-Allow-Headers${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -5393,7 +5373,7 @@ print_getActualFlowsSummary_help() {
     echo ""
     echo -e "${BOLD}${WHITE}getActualFlowsSummary - Get summary of actual flows${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Get a summary of all the actual flows discovered by Guardium Insights SaaS DSPM, that is, details about source and destination, and other information." | paste -sd' ' | fold -sw 80
+    echo -e "Get a summary of all the actual flows discovered by Guardium DSPM, that is, details about source and destination, and other information." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}filter${OFF} ${BLUE}[ListActualFlowsFilterParameter]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: filter=value${OFF}" \
@@ -5712,9 +5692,9 @@ print_listDataResourcesNames_help() {
 ##############################################################################
 print_removeResource_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}removeResource - Remove resource from Guardium Insights SaaS DSPM${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}removeResource - Remove resource from DSPM${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Removes a resource, with all its sensitivities, from Guardium Insights SaaS DSPM dashboard. This action does not remove the resource from the resource's source environment." | paste -sd' ' | fold -sw 80
+    echo -e "Removes a resource, with all its sensitivities, from Guardium DSPM dashboard. This action does not remove the resource from the resource's source environment." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}dataResourceId${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Data resource ID ${YELLOW}Specify as: dataResourceId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -5760,7 +5740,7 @@ print_getSensitivitiesSummary_help() {
     echo ""
     echo -e "${BOLD}${WHITE}getSensitivitiesSummary - Get the summary of sensitivities${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Get a summarised information about all sensitivities classified by Guardium Insights SaaS DSPM." | paste -sd' ' | fold -sw 80
+    echo -e "Get a summarised information about all sensitivities classified by Guardium DSPM." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}filter${OFF} ${BLUE}[ListSensitivitiesFilterParameter]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: filter=value${OFF}" \
@@ -5916,7 +5896,7 @@ print_listDataStores_help() {
     echo ""
     echo -e "${BOLD}${WHITE}listDataStores - List data stores${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "List all data stores discovered by Guardium Insights SaaS DSPM." | paste -sd' ' | fold -sw 80
+    echo -e "List all data stores discovered by Guardium DSPM." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}filter${OFF} ${BLUE}[ListDataStoresFilterParameter]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: filter=value${OFF}" \
@@ -7507,7 +7487,7 @@ Description: Get health information from Guardium Data Protection central mamang
 print_guardiumConnectorGetLatestDMExtractionProfile_help() {
     echo ""
     echo -e "${BOLD}${WHITE}guardiumConnectorGetLatestDMExtractionProfile - Summary: Get latest DM extraction profile
-Description: Return the Datamart Extraction Profile for Guardium Insights.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+Description: Return the Datamart Extraction Profile for Guardium.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}central_manager_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Central Manager ID. ${YELLOW}Specify as: central_manager_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -7627,7 +7607,7 @@ Description: Run GDP report.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEAD
 print_guardiumConnectorSetupCM_help() {
     echo ""
     echo -e "${BOLD}${WHITE}guardiumConnectorSetupCM - Summary: Setup CM
-Description: Set up the registration between a GDP Central manager and Guardium Insights.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+Description: Set up the registration between a GDP Central manager and Guardium.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -8914,25 +8894,6 @@ Description: Store policies.  (This API is called from GDP only)${OFF}${BLUE}(AU
 }
 ##############################################################################
 #
-# Print help for qSDataManagerGetAppDataForProvisionId operation
-#
-##############################################################################
-print_qSDataManagerGetAppDataForProvisionId_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}qSDataManagerGetAppDataForProvisionId - Summary: Fetch Application Provisoning Details
-Description: Fetch details from app dimension entity for given provision id.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}provision_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Identifier for the provision request ${YELLOW}Specify as: provision_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
 # Print help for qSDataManagerGetMasterData operation
 #
 ##############################################################################
@@ -8940,45 +8901,6 @@ print_qSDataManagerGetMasterData_help() {
     echo ""
     echo -e "${BOLD}${WHITE}qSDataManagerGetMasterData - Summary: master data for all entities
 Description: Retrieves All Dimension and Fact tables data.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for qSDataManagerGetNetLocDimDataForScanId operation
-#
-##############################################################################
-print_qSDataManagerGetNetLocDimDataForScanId_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}qSDataManagerGetNetLocDimDataForScanId - Summary: Fetch Netlocation Details
-Description: Fetch details from netloc dimension entity for a given scanid.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}scan_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Identifier for the scan to retrieve netloc data for ${YELLOW}Specify as: scan_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for qSDataManagerInsertAllEntities operation
-#
-##############################################################################
-print_qSDataManagerInsertAllEntities_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}qSDataManagerInsertAllEntities - Summary: Insert Data
-Description: Insert All Dimension and Fact tables data.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -9019,46 +8941,6 @@ Description: Fetch details from scan dimension table.${OFF}${BLUE}(AUTH - BASIC)
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}scan_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: scan_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for qSDataManagerSearchEntityData operation
-#
-##############################################################################
-print_qSDataManagerSearchEntityData_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}qSDataManagerSearchEntityData - Summary: Retrieve Entity Data
-Description:Retrieve Entity data for given parameters${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for qSDataManagerUpdateNetLocation operation
-#
-##############################################################################
-print_qSDataManagerUpdateNetLocation_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}qSDataManagerUpdateNetLocation - Summary: Update Netlocation Details
-Description: Update netloc dimension entity for agiven scanid.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
@@ -10604,7 +10486,7 @@ Description: Update the risk status and justification.${OFF}${BLUE}(AUTH - BASIC
 print_riskAnalyticsControllerSetUserUISettings_help() {
     echo ""
     echo -e "${BOLD}${WHITE}riskAnalyticsControllerSetUserUISettings - Summary: Set user UI settings
-Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium Insights. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium Insights.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -11782,7 +11664,7 @@ print_listLinkedVendors_help() {
     echo ""
     echo -e "${BOLD}${WHITE}listLinkedVendors - Get the summary of a third party vendor${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Get a list of all third party vendors associated to your cloud environments (relevant for the cloud environments connected to Guardium Insights SaaS DSPM only)." | paste -sd' ' | fold -sw 80
+    echo -e "Get a list of all third party vendors associated to your cloud environments (relevant for the cloud environments connected to Guardium DSPM only)." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -11808,7 +11690,7 @@ print_listTrustedAssets_help() {
     echo ""
     echo -e "${BOLD}${WHITE}listTrustedAssets - Get a list of all the actual trusted assets${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Get a list of roles, buckets or service principles, and their entitled permissions associated to your cloud environments connected to Guardium Insights SaaS DSPM." | paste -sd' ' | fold -sw 80
+    echo -e "Get a list of roles, buckets or service principles, and their entitled permissions associated to your cloud environments connected to Guardium DSPM." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}filter${OFF} ${BLUE}[ListTrusteesFilterParameter]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: filter=value${OFF}" \
@@ -11836,7 +11718,7 @@ print_listTrustedAssets_help() {
 print_universalConnectorManagerGetCertificate_help() {
     echo ""
     echo -e "${BOLD}${WHITE}universalConnectorManagerGetCertificate - Summary: Get certificate
-Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium Insights.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -14688,42 +14570,6 @@ call_generateOffice365AuthUrl() {
 
 ##############################################################################
 #
-# Call generateSalesforceAuthUrl operation
-#
-##############################################################################
-call_generateSalesforceAuthUrl() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(  )
-    local path
-
-    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/saasApps/salesforce/generateAuthUrl" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
 # Call generateSlackAuthUrl operation
 #
 ##############################################################################
@@ -14755,6 +14601,84 @@ call_generateSlackAuthUrl() {
         echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
     else
         eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call generateSnowflakeAuthUrl operation
+#
+##############################################################################
+call_generateSnowflakeAuthUrl() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/saasApps/snowflake/generateAuthUrl" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
     fi
 }
 
@@ -14868,19 +14792,19 @@ call_getCloudAccountInstallationStatus() {
 
 ##############################################################################
 #
-# Call getCompliances operation
+# Call getRefreshTokenExpiry operation
 #
 ##############################################################################
-call_getCompliances() {
+call_getRefreshTokenExpiry() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local path_parameter_names=()
+    local path_parameter_names=(providerId)
     # ignore error about 'query_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/compliances" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/saasApps/snowflake/getRefreshTokenExpiry/{providerId}" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -15048,10 +14972,10 @@ call_retrieveServiceAccountId() {
 
 ##############################################################################
 #
-# Call setCompliances operation
+# Call snowflakeIntegrationScript operation
 #
 ##############################################################################
-call_setCompliances() {
+call_snowflakeIntegrationScript() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -15060,11 +14984,11 @@ call_setCompliances() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/compliances" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/saasApps/snowflake/snowflakeIntegrationScript" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
-    local method="POST"
+    local method="GET"
     local headers_curl
     headers_curl=$(header_arguments_to_curl)
     if [[ -n $header_accept ]]; then
@@ -15075,52 +14999,10 @@ call_setCompliances() {
     if [[ -n $basic_auth_credential ]]; then
         basic_auth_option="-u ${basic_auth_credential}"
     fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
     else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
     fi
 }
 
@@ -15282,10 +15164,10 @@ call_submitOffice365TenantInfo() {
 
 ##############################################################################
 #
-# Call submitSalesforceAuthCode operation
+# Call submitSlackAuthCode operation
 #
 ##############################################################################
-call_submitSalesforceAuthCode() {
+call_submitSlackAuthCode() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -15294,7 +15176,7 @@ call_submitSalesforceAuthCode() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/saasApps/salesforce/submitAuthCodeInfo" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/saasApps/slack/submitAuthCode" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -15360,10 +15242,10 @@ call_submitSalesforceAuthCode() {
 
 ##############################################################################
 #
-# Call submitSlackAuthCode operation
+# Call submitSnowflakeAuthCode operation
 #
 ##############################################################################
-call_submitSlackAuthCode() {
+call_submitSnowflakeAuthCode() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -15372,7 +15254,7 @@ call_submitSlackAuthCode() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/saasApps/slack/submitAuthCode" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/saasApps/snowflake/submitAuthCode" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -26017,42 +25899,6 @@ call_policyBuilderStorePoliciesGdp() {
 
 ##############################################################################
 #
-# Call qSDataManagerGetAppDataForProvisionId operation
-#
-##############################################################################
-call_qSDataManagerGetAppDataForProvisionId() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(provision_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/datamanager/application/{provision_id}/data" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
 # Call qSDataManagerGetMasterData operation
 #
 ##############################################################################
@@ -26084,120 +25930,6 @@ call_qSDataManagerGetMasterData() {
         echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
     else
         eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call qSDataManagerGetNetLocDimDataForScanId operation
-#
-##############################################################################
-call_qSDataManagerGetNetLocDimDataForScanId() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(scan_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/datamanager/network/{scan_id}/data" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call qSDataManagerInsertAllEntities operation
-#
-##############################################################################
-call_qSDataManagerInsertAllEntities() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/datamanager/all/entities" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="POST"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
     fi
 }
 
@@ -26312,162 +26044,6 @@ call_qSDataManagerRetrieveScan() {
         echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
     else
         eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call qSDataManagerSearchEntityData operation
-#
-##############################################################################
-call_qSDataManagerSearchEntityData() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/datamanager/entity/search" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="POST"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
-# Call qSDataManagerUpdateNetLocation operation
-#
-##############################################################################
-call_qSDataManagerUpdateNetLocation() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/datamanager/network" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="PUT"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
     fi
 }
 
@@ -35559,11 +35135,11 @@ case $key in
     generateOffice365AuthUrl)
     operation="generateOffice365AuthUrl"
     ;;
-    generateSalesforceAuthUrl)
-    operation="generateSalesforceAuthUrl"
-    ;;
     generateSlackAuthUrl)
     operation="generateSlackAuthUrl"
+    ;;
+    generateSnowflakeAuthUrl)
+    operation="generateSnowflakeAuthUrl"
     ;;
     getAnalyzedRegionStatus)
     operation="getAnalyzedRegionStatus"
@@ -35574,8 +35150,8 @@ case $key in
     getCloudAccountInstallationStatus)
     operation="getCloudAccountInstallationStatus"
     ;;
-    getCompliances)
-    operation="getCompliances"
+    getRefreshTokenExpiry)
+    operation="getRefreshTokenExpiry"
     ;;
     listLinkedAccounts)
     operation="listLinkedAccounts"
@@ -35589,8 +35165,8 @@ case $key in
     retrieveServiceAccountId)
     operation="retrieveServiceAccountId"
     ;;
-    setCompliances)
-    operation="setCompliances"
+    snowflakeIntegrationScript)
+    operation="snowflakeIntegrationScript"
     ;;
     submitGoogleWorkspaceAdminEmail)
     operation="submitGoogleWorkspaceAdminEmail"
@@ -35598,11 +35174,11 @@ case $key in
     submitOffice365TenantInfo)
     operation="submitOffice365TenantInfo"
     ;;
-    submitSalesforceAuthCode)
-    operation="submitSalesforceAuthCode"
-    ;;
     submitSlackAuthCode)
     operation="submitSlackAuthCode"
+    ;;
+    submitSnowflakeAuthCode)
+    operation="submitSnowflakeAuthCode"
     ;;
     complianceAcceleratorCreateWorkspace)
     operation="complianceAcceleratorCreateWorkspace"
@@ -36195,29 +35771,14 @@ case $key in
     policyBuilderStorePoliciesGdp)
     operation="policyBuilderStorePoliciesGdp"
     ;;
-    qSDataManagerGetAppDataForProvisionId)
-    operation="qSDataManagerGetAppDataForProvisionId"
-    ;;
     qSDataManagerGetMasterData)
     operation="qSDataManagerGetMasterData"
-    ;;
-    qSDataManagerGetNetLocDimDataForScanId)
-    operation="qSDataManagerGetNetLocDimDataForScanId"
-    ;;
-    qSDataManagerInsertAllEntities)
-    operation="qSDataManagerInsertAllEntities"
     ;;
     qSDataManagerRegisterScan)
     operation="qSDataManagerRegisterScan"
     ;;
     qSDataManagerRetrieveScan)
     operation="qSDataManagerRetrieveScan"
-    ;;
-    qSDataManagerSearchEntityData)
-    operation="qSDataManagerSearchEntityData"
-    ;;
-    qSDataManagerUpdateNetLocation)
-    operation="qSDataManagerUpdateNetLocation"
     ;;
     qSPluginManagerInvokeAppProv)
     operation="qSPluginManagerInvokeAppProv"
@@ -36904,11 +36465,11 @@ case $operation in
     generateOffice365AuthUrl)
     call_generateOffice365AuthUrl
     ;;
-    generateSalesforceAuthUrl)
-    call_generateSalesforceAuthUrl
-    ;;
     generateSlackAuthUrl)
     call_generateSlackAuthUrl
+    ;;
+    generateSnowflakeAuthUrl)
+    call_generateSnowflakeAuthUrl
     ;;
     getAnalyzedRegionStatus)
     call_getAnalyzedRegionStatus
@@ -36919,8 +36480,8 @@ case $operation in
     getCloudAccountInstallationStatus)
     call_getCloudAccountInstallationStatus
     ;;
-    getCompliances)
-    call_getCompliances
+    getRefreshTokenExpiry)
+    call_getRefreshTokenExpiry
     ;;
     listLinkedAccounts)
     call_listLinkedAccounts
@@ -36934,8 +36495,8 @@ case $operation in
     retrieveServiceAccountId)
     call_retrieveServiceAccountId
     ;;
-    setCompliances)
-    call_setCompliances
+    snowflakeIntegrationScript)
+    call_snowflakeIntegrationScript
     ;;
     submitGoogleWorkspaceAdminEmail)
     call_submitGoogleWorkspaceAdminEmail
@@ -36943,11 +36504,11 @@ case $operation in
     submitOffice365TenantInfo)
     call_submitOffice365TenantInfo
     ;;
-    submitSalesforceAuthCode)
-    call_submitSalesforceAuthCode
-    ;;
     submitSlackAuthCode)
     call_submitSlackAuthCode
+    ;;
+    submitSnowflakeAuthCode)
+    call_submitSnowflakeAuthCode
     ;;
     complianceAcceleratorCreateWorkspace)
     call_complianceAcceleratorCreateWorkspace
@@ -37540,29 +37101,14 @@ case $operation in
     policyBuilderStorePoliciesGdp)
     call_policyBuilderStorePoliciesGdp
     ;;
-    qSDataManagerGetAppDataForProvisionId)
-    call_qSDataManagerGetAppDataForProvisionId
-    ;;
     qSDataManagerGetMasterData)
     call_qSDataManagerGetMasterData
-    ;;
-    qSDataManagerGetNetLocDimDataForScanId)
-    call_qSDataManagerGetNetLocDimDataForScanId
-    ;;
-    qSDataManagerInsertAllEntities)
-    call_qSDataManagerInsertAllEntities
     ;;
     qSDataManagerRegisterScan)
     call_qSDataManagerRegisterScan
     ;;
     qSDataManagerRetrieveScan)
     call_qSDataManagerRetrieveScan
-    ;;
-    qSDataManagerSearchEntityData)
-    call_qSDataManagerSearchEntityData
-    ;;
-    qSDataManagerUpdateNetLocation)
-    call_qSDataManagerUpdateNetLocation
     ;;
     qSPluginManagerInvokeAppProv)
     call_qSPluginManagerInvokeAppProv

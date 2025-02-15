@@ -23,7 +23,7 @@ Summary: Create Oauth client Description: Create/register new Oauth client.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.authserver_create_oauth_client_request import AuthserverCreateOauthClientRequest
 from ibm_gdsc_sdk_software.models.authserver_create_oauth_client_response import AuthserverCreateOauthClientResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -109,7 +109,7 @@ Summary: Delete Oauth client Description: Delete registered Oauth client by clie
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
 
@@ -192,7 +192,7 @@ Summary: Get access token Description: Get access token from passed clientId and
 * Basic Authentication (BasicAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.authserver_get_access_token_response import AuthserverGetAccessTokenResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -267,7 +267,7 @@ Summary: Get Oauth client Description: Get registered Oauth client by clientId.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.authserver_get_oauth_client_response import AuthserverGetOauthClientResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -352,7 +352,7 @@ Summary: Get user Description: Get user.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.authserver_get_user_response import AuthserverGetUserResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -433,7 +433,7 @@ Summary: List Oauth client Description: List all registered Oauth client.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.authserver_list_oauth_client_response import AuthserverListOauthClientResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint

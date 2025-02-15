@@ -21,12 +21,12 @@ Summary: Get datamarts Description: Return a list of files inside a datamart to 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.DatamartProcessorServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.DatamartProcessorServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -94,12 +94,12 @@ Summary: Get datamarts Description: Return a list of datamarts for a time interv
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.DatamartProcessorServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.DatamartProcessorServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -169,12 +169,12 @@ Summary: Get rarliest start time Description: Return the earliest time period of
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.DatamartProcessorServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.DatamartProcessorServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -238,12 +238,12 @@ This endpoint does not need any parameter.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.DatamartProcessorServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.DatamartProcessorServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -311,12 +311,12 @@ Summary: Store extraction logs Description: Store the datamart extraction logs i
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.DatamartProcessorServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.DatamartProcessorServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -386,12 +386,12 @@ Summary: Upload datamart Description: Upload datamart file for ingestion.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.DatamartProcessorServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.DatamartProcessorServiceApi;
 
 public class Example {
   public static void main(String[] args) {

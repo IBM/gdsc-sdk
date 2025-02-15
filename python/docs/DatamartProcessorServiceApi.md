@@ -23,7 +23,7 @@ Summary: Get datamarts Description: Return a list of files inside a datamart to 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.datamartprocessorv3_get_datamart_info_response import Datamartprocessorv3GetDatamartInfoResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -108,7 +108,7 @@ Summary: Get datamarts Description: Return a list of datamarts for a time interv
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.datamartprocessorv3_get_datamart_response import Datamartprocessorv3GetDatamartResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -195,7 +195,7 @@ Summary: Get rarliest start time Description: Return the earliest time period of
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.datamartprocessorv3_get_earliest_start_time_response import Datamartprocessorv3GetEarliestStartTimeResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -276,7 +276,7 @@ This endpoint does not need any parameter.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.datamartprocessorv3_status_response_base import Datamartprocessorv3StatusResponseBase
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -360,7 +360,7 @@ Summary: Store extraction logs Description: Store the datamart extraction logs i
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.datamartprocessorv3_dm_extraction_logs_request import Datamartprocessorv3DMExtractionLogsRequest
 from ibm_gdsc_sdk_software.models.datamartprocessorv3_dm_extraction_logs_response import Datamartprocessorv3DMExtractionLogsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -448,7 +448,7 @@ Summary: Upload datamart Description: Upload datamart file for ingestion.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
 

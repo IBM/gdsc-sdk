@@ -14,7 +14,7 @@ import { Guardiumconnectorv3TaskObject } from '../models/Guardiumconnectorv3Task
 import { HttpFile } from '../http/http';
 
 /**
-* SetupCMResponse is the response after registering a GDP Central manager to Guardium insights.
+* SetupCMResponse is the response after registering a GDP Central manager to Guardium.
 */
 export class Guardiumconnectorv3SetupCMResponse {
     /**

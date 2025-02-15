@@ -12,7 +12,6 @@ PolicyPluginRQ is the request object for InvokePolicy API.
 |**orgId** | **String** |  |  [optional] |
 |**pluginId** | **String** |  |  [optional] |
 |**runForAllScans** | **Boolean** |  |  [optional] |
-|**runForGivenScan** | **Boolean** |  |  [optional] |
 |**scanDesc** | **String** |  |  [optional] |
 |**scanId** | **String** |  |  [optional] |
 |**scanType** | **String** |  |  [optional] |

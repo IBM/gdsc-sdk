@@ -10,7 +10,6 @@ Name | Type | Description | Notes
 **org_id** | **str** |  | [optional] 
 **plugin_id** | **str** |  | [optional] 
 **run_for_all_scans** | **bool** |  | [optional] 
-**run_for_given_scan** | **bool** |  | [optional] 
 **scan_desc** | **str** |  | [optional] 
 **scan_id** | **str** |  | [optional] 
 **scan_type** | **str** |  | [optional] 

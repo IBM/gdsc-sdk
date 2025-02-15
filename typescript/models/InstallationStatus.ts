@@ -14,6 +14,7 @@ import { HttpFile } from '../http/http';
 
 export class InstallationStatus {
     'discoveryPermissions'?: boolean;
+    'isInstallComplete'?: boolean;
 
     static readonly discriminator: string | undefined = undefined;
 
@@ -21,6 +22,12 @@ export class InstallationStatus {
         {
             "name": "discoveryPermissions",
             "baseName": "discoveryPermissions",
+            "type": "boolean",
+            "format": ""
+        },
+        {
+            "name": "isInstallComplete",
+            "baseName": "isInstallComplete",
             "type": "boolean",
             "format": ""
         }    ];

@@ -28,7 +28,7 @@ Summary: Create scheduled job Description: Create a new scheduled job with tasks
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.schedulerv3_create_scheduled_job_request import Schedulerv3CreateScheduledJobRequest
 from ibm_gdsc_sdk_software.models.schedulerv3_create_scheduled_job_response import Schedulerv3CreateScheduledJobResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -114,7 +114,7 @@ Summary: Delete scheduled job Description: Delete a single scheduled job.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.schedulerv3_delete_scheduled_job_response import Schedulerv3DeleteScheduledJobResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -199,7 +199,7 @@ Summary: Get dependencies Description: returns IDs of distribution rules, respon
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.schedulerv3_get_dependencies_response import Schedulerv3GetDependenciesResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -284,7 +284,7 @@ Summary: Get distribution rules Description: Return a list of distribution rule 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.schedulerv3_get_distribution_rules_response import Schedulerv3GetDistributionRulesResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -365,7 +365,7 @@ Summary: Get scheduled job Description: Return a single ScheduledJob in detail.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.schedulerv3_get_scheduled_job_response import Schedulerv3GetScheduledJobResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -450,7 +450,7 @@ Summary: Get scheduled jobs Description: Return a list of scheduled jobs and the
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.schedulerv3_scheduled_job_summary_response import Schedulerv3ScheduledJobSummaryResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -537,7 +537,7 @@ Summary: Get schedules by report Description: Return an array of scheduled job I
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.schedulerv3_get_schedules_by_report_request import Schedulerv3GetSchedulesByReportRequest
 from ibm_gdsc_sdk_software.models.schedulerv3_get_schedules_by_report_response import Schedulerv3GetSchedulesByReportResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -625,7 +625,7 @@ Summary: Get tags Description: Return an array of all the unique tags from sched
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.schedulerv3_get_tags_response import Schedulerv3GetTagsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -706,7 +706,7 @@ Summary: Search scheduled jobs Description: Return a filtered list of scheduled 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.schedulerv3_scheduled_job_summary_response import Schedulerv3ScheduledJobSummaryResponse
 from ibm_gdsc_sdk_software.models.schedulerv3_search_scheduled_jobs_request import Schedulerv3SearchScheduledJobsRequest
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -792,7 +792,7 @@ Summary: Search scheduled task runs Description: Return a list of scheduled task
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.schedulerv3_search_scheduled_task_runs_request import Schedulerv3SearchScheduledTaskRunsRequest
 from ibm_gdsc_sdk_software.models.schedulerv3_search_scheduled_task_runs_response import Schedulerv3SearchScheduledTaskRunsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -878,7 +878,7 @@ Summary: Update scheduled job Description: Update a single schedule job.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.schedulerv3_update_scheduled_job_request import Schedulerv3UpdateScheduledJobRequest
 from ibm_gdsc_sdk_software.models.schedulerv3_update_scheduled_job_response import Schedulerv3UpdateScheduledJobResponse
 from ibm_gdsc_sdk_software.rest import ApiException

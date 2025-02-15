@@ -17,12 +17,12 @@ Summary: Delete cache key Description: Return delete key result message.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.AnalyticsEventsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.AnalyticsEventsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -92,12 +92,12 @@ Summary: For QS Advisor risk notification only Description: Sends QS Advisor ris
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.AnalyticsEventsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.AnalyticsEventsServiceApi;
 
 public class Example {
   public static void main(String[] args) {

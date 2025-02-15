@@ -165,7 +165,7 @@ export class ThirdPartyVendorsApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Get a list of all third party vendors associated to your cloud environments (relevant for the cloud environments connected to Guardium Insights SaaS DSPM only).
+     * Get a list of all third party vendors associated to your cloud environments (relevant for the cloud environments connected to Guardium DSPM only).
      * Get the summary of a third party vendor
      */
     public async listLinkedVendors(_options?: Configuration): Promise<RequestContext> {
@@ -195,7 +195,7 @@ export class ThirdPartyVendorsApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Get a list of roles, buckets or service principles, and their entitled permissions associated to your cloud environments connected to Guardium Insights SaaS DSPM.
+     * Get a list of roles, buckets or service principles, and their entitled permissions associated to your cloud environments connected to Guardium DSPM.
      * Get a list of all the actual trusted assets
      * @param filter 
      */

@@ -46,7 +46,7 @@ Description: returns the summaries of all policies on that central manager
 [**guardiumConnectorGetHealthInfo**](GuardiumConnectorApi.md#guardiumConnectorGetHealthInfo) | **GET** /api/v3/central_managers/{central_manager_id}/health_info | Summary: Get gealth info
 Description: Get health information from Guardium Data Protection central mamangers.
 [**guardiumConnectorGetLatestDMExtractionProfile**](GuardiumConnectorApi.md#guardiumConnectorGetLatestDMExtractionProfile) | **GET** /api/v3/central_managers/{central_manager_id}/datamart_extraction_profile | Summary: Get latest DM extraction profile
-Description: Return the Datamart Extraction Profile for Guardium Insights.
+Description: Return the Datamart Extraction Profile for Guardium.
 [**guardiumConnectorGetStreamingStatus**](GuardiumConnectorApi.md#guardiumConnectorGetStreamingStatus) | **GET** /api/v3/central_managers/{central_manager_id}/streaming | Summary: Get streaming status
 Description: Return the streaming configuration.
 [**guardiumConnectorGetSyncDMs**](GuardiumConnectorApi.md#guardiumConnectorGetSyncDMs) | **GET** /api/v3/central_managers/{central_manager_id}/sync | Summary: Get sync DMs
@@ -58,7 +58,7 @@ Description: Return the list of tasks from a central manager.
 [**guardiumConnectorRunGDPReport**](GuardiumConnectorApi.md#guardiumConnectorRunGDPReport) | **POST** /api/v3/central_managers/{central_manager_id}/run_report | Summary: Run GDP report
 Description: Run GDP report.
 [**guardiumConnectorSetupCM**](GuardiumConnectorApi.md#guardiumConnectorSetupCM) | **POST** /api/v3/central_managers/setup | Summary: Setup CM
-Description: Set up the registration between a GDP Central manager and Guardium Insights.
+Description: Set up the registration between a GDP Central manager and Guardium.
 [**guardiumConnectorSetupDatamarts**](GuardiumConnectorApi.md#guardiumConnectorSetupDatamarts) | **POST** /api/v3/central_managers/{central_manager_id}/datamarts/setup | Description: setup custom datamart execution mode
 [**guardiumConnectorTaskError**](GuardiumConnectorApi.md#guardiumConnectorTaskError) | **POST** /api/v3/central_managers/{central_manager_id}/tasks/error | Summary: Task error
 Description: Log error messages from GDP task execution.
@@ -825,7 +825,7 @@ Name | Type | Description  | Notes
 ## guardiumConnectorGetLatestDMExtractionProfile
 
 Summary: Get latest DM extraction profile
-Description: Return the Datamart Extraction Profile for Guardium Insights.
+Description: Return the Datamart Extraction Profile for Guardium.
 
 ### Example
 
@@ -1030,7 +1030,7 @@ Name | Type | Description  | Notes
 ## guardiumConnectorSetupCM
 
 Summary: Setup CM
-Description: Set up the registration between a GDP Central manager and Guardium Insights.
+Description: Set up the registration between a GDP Central manager and Guardium.
 
 ### Example
 

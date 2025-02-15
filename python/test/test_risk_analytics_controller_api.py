@@ -127,7 +127,7 @@ class TestRiskAnalyticsControllerApi(unittest.TestCase):
     def test_risk_analytics_controller_set_user_ui_settings(self) -> None:
         """Test case for risk_analytics_controller_set_user_ui_settings
 
-        Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium Insights. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium Insights.
+        Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium.
         """
         pass
 

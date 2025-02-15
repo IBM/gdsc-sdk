@@ -45,6 +45,10 @@ export class Groupbuilderv3LdapConfig {
     */
     'importLimit'?: number;
     /**
+    * DN name of the LDAP group to get members from.  Alternative to explicit filter.
+    */
+    'ldapGroupName'?: string;
+    /**
     * ID of the ICP LDAP definition from which to import.
     */
     'ldapId'?: string;
@@ -97,6 +101,12 @@ export class Groupbuilderv3LdapConfig {
             "baseName": "import_limit",
             "type": "number",
             "format": "int32"
+        },
+        {
+            "name": "ldapGroupName",
+            "baseName": "ldap_group_name",
+            "type": "string",
+            "format": ""
         },
         {
             "name": "ldapId",

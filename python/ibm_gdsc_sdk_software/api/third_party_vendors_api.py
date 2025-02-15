@@ -923,7 +923,7 @@ class ThirdPartyVendorsApi:
     ) -> List[LinkedVendor]:
         """Get the summary of a third party vendor
 
-        Get a list of all third party vendors associated to your cloud environments (relevant for the cloud environments connected to Guardium Insights SaaS DSPM only).
+        Get a list of all third party vendors associated to your cloud environments (relevant for the cloud environments connected to Guardium DSPM only).
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -987,7 +987,7 @@ class ThirdPartyVendorsApi:
     ) -> ApiResponse[List[LinkedVendor]]:
         """Get the summary of a third party vendor
 
-        Get a list of all third party vendors associated to your cloud environments (relevant for the cloud environments connected to Guardium Insights SaaS DSPM only).
+        Get a list of all third party vendors associated to your cloud environments (relevant for the cloud environments connected to Guardium DSPM only).
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1051,7 +1051,7 @@ class ThirdPartyVendorsApi:
     ) -> RESTResponseType:
         """Get the summary of a third party vendor
 
-        Get a list of all third party vendors associated to your cloud environments (relevant for the cloud environments connected to Guardium Insights SaaS DSPM only).
+        Get a list of all third party vendors associated to your cloud environments (relevant for the cloud environments connected to Guardium DSPM only).
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1170,7 +1170,7 @@ class ThirdPartyVendorsApi:
     ) -> List[Trustee]:
         """Get a list of all the actual trusted assets
 
-        Get a list of roles, buckets or service principles, and their entitled permissions associated to your cloud environments connected to Guardium Insights SaaS DSPM.
+        Get a list of roles, buckets or service principles, and their entitled permissions associated to your cloud environments connected to Guardium DSPM.
 
         :param filter:
         :type filter: ListTrusteesFilterParameter
@@ -1238,7 +1238,7 @@ class ThirdPartyVendorsApi:
     ) -> ApiResponse[List[Trustee]]:
         """Get a list of all the actual trusted assets
 
-        Get a list of roles, buckets or service principles, and their entitled permissions associated to your cloud environments connected to Guardium Insights SaaS DSPM.
+        Get a list of roles, buckets or service principles, and their entitled permissions associated to your cloud environments connected to Guardium DSPM.
 
         :param filter:
         :type filter: ListTrusteesFilterParameter
@@ -1306,7 +1306,7 @@ class ThirdPartyVendorsApi:
     ) -> RESTResponseType:
         """Get a list of all the actual trusted assets
 
-        Get a list of roles, buckets or service principles, and their entitled permissions associated to your cloud environments connected to Guardium Insights SaaS DSPM.
+        Get a list of roles, buckets or service principles, and their entitled permissions associated to your cloud environments connected to Guardium DSPM.
 
         :param filter:
         :type filter: ListTrusteesFilterParameter

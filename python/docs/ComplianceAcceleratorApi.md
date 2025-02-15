@@ -22,7 +22,7 @@ Summary: Create workspace Description: Create a workspace.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.complianceacceleratorv3_create_workspace_request import Complianceacceleratorv3CreateWorkspaceRequest
 from ibm_gdsc_sdk_software.models.stream_result_of_complianceacceleratorv3_create_workspace_response import StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -108,7 +108,7 @@ Summary: Delete compliance workspaces Description: Delete workspaces.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.complianceacceleratorv3_delete_compliance_workspaces_response import Complianceacceleratorv3DeleteComplianceWorkspacesResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -195,7 +195,7 @@ Summary: Get compliance info Description: Return stored compliance data.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.complianceacceleratorv3_get_compliance_info_response import Complianceacceleratorv3GetComplianceInfoResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -276,7 +276,7 @@ HydrateWorkspace - Hydrates specified objects within a workspace
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.complianceacceleratorv3_hydrate_compliance_workspaces_request import Complianceacceleratorv3HydrateComplianceWorkspacesRequest
 from ibm_gdsc_sdk_software.models.complianceacceleratorv3_hydrate_compliance_workspaces_response import Complianceacceleratorv3HydrateComplianceWorkspacesResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -362,7 +362,7 @@ Summary: Store compliance info Description: Store compliance data.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.complianceacceleratorv3_store_compliance_info_request import Complianceacceleratorv3StoreComplianceInfoRequest
 from ibm_gdsc_sdk_software.models.complianceacceleratorv3_store_compliance_info_response import Complianceacceleratorv3StoreComplianceInfoResponse
 from ibm_gdsc_sdk_software.rest import ApiException

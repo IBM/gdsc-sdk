@@ -18,7 +18,7 @@ Summary: Test regex Description: Match a text string with a regular expression u
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.snifassistv3_status_response_base import Snifassistv3StatusResponseBase
 from ibm_gdsc_sdk_software.models.snifassistv3_test_regex_request import Snifassistv3TestRegexRequest
 from ibm_gdsc_sdk_software.rest import ApiException

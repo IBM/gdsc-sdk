@@ -41,6 +41,7 @@ class TestQspmpluginmanagerv3PluginRQ(unittest.TestCase):
                 org_id = '',
                 plugin_id = '',
                 provision_id = '',
+                run_for_all_scans = True,
                 scan_desc = '',
                 scan_id = '',
                 scan_type = '',

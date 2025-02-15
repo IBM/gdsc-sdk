@@ -30,12 +30,11 @@ class Qspmpluginmanagerv3PolicyPluginRQ(BaseModel):
     org_id: Optional[StrictStr] = None
     plugin_id: Optional[StrictStr] = None
     run_for_all_scans: Optional[StrictBool] = None
-    run_for_given_scan: Optional[StrictBool] = None
     scan_desc: Optional[StrictStr] = None
     scan_id: Optional[StrictStr] = None
     scan_type: Optional[StrictStr] = None
     user_email: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["external_param", "org_id", "plugin_id", "run_for_all_scans", "run_for_given_scan", "scan_desc", "scan_id", "scan_type", "user_email"]
+    __properties: ClassVar[List[str]] = ["external_param", "org_id", "plugin_id", "run_for_all_scans", "scan_desc", "scan_id", "scan_type", "user_email"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -92,7 +91,6 @@ class Qspmpluginmanagerv3PolicyPluginRQ(BaseModel):
             "org_id": obj.get("org_id"),
             "plugin_id": obj.get("plugin_id"),
             "run_for_all_scans": obj.get("run_for_all_scans"),
-            "run_for_given_scan": obj.get("run_for_given_scan"),
             "scan_desc": obj.get("scan_desc"),
             "scan_id": obj.get("scan_id"),
             "scan_type": obj.get("scan_type"),

@@ -27,12 +27,12 @@ Summary: Create integration Description: Create a set of new templates for a new
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.TemplatesServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.TemplatesServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -100,12 +100,12 @@ Summary: Create template Description: Create a new template.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.TemplatesServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.TemplatesServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -173,12 +173,12 @@ Summary: Delete integration Description: Delete all templates associated with an
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.TemplatesServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.TemplatesServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -246,12 +246,12 @@ Summary: Delete template Description: Delete a specific template.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.TemplatesServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.TemplatesServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -319,12 +319,12 @@ Summary: Get origin default content Description: Return the default content for 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.TemplatesServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.TemplatesServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -396,12 +396,12 @@ Summary: Get origin fields Description: Return the fields available with a speci
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.TemplatesServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.TemplatesServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -469,12 +469,12 @@ Summary: Get template Description: Return a specific template by id.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.TemplatesServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.TemplatesServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -544,12 +544,12 @@ Summary: Get templates Description: Return all templates based on supplied filte
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.TemplatesServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.TemplatesServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -629,12 +629,12 @@ Summary: Test template Description: Analyze a specified template to ensure will 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.TemplatesServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.TemplatesServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -702,12 +702,12 @@ Summary: Transform template Description: Process the specified template and retu
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.TemplatesServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.TemplatesServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -775,12 +775,12 @@ Summary: Transform template JSON Description: Process the specified template and
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.TemplatesServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.TemplatesServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -848,12 +848,12 @@ Summary: Update template Description: Update a single template.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.TemplatesServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.TemplatesServiceApi;
 
 public class Example {
   public static void main(String[] args) {

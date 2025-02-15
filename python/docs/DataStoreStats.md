@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **app_flows_count** | **float** |  | [optional] 
 **config_flows_count** | **float** |  | [optional] 
 **sensitivities_count** | **float** |  | [optional] 
+**user_access_count** | **float** | number of users entitled to access the data store | [optional] 
 **sensitivities_summary** | [**List[SensitivitySummary]**](SensitivitySummary.md) |  | [optional] 
 **vulnerabilities_summary** | [**List[VulnerabilitiesCriticalityCountInner]**](VulnerabilitiesCriticalityCountInner.md) |  | [optional] 
 

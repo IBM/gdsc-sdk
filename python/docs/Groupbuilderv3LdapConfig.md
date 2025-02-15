@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **filter** | **str** | LDAP search query to use to find objects. | [optional] 
 **filter_scope** | **int** | Scope of LDAP search:  sub-tree vs immediate base DN children. | [optional] 
 **import_limit** | **int** | Maximum number of objects to import. | [optional] 
+**ldap_group_name** | **str** | DN name of the LDAP group to get members from.  Alternative to explicit filter. | [optional] 
 **ldap_id** | **str** | ID of the ICP LDAP definition from which to import. | [optional] 
 **member_prefix** | **str** | Prefix that will be added to each imported member. | [optional] 
 

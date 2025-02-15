@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 Get summary of actual flows
 
-Get a summary of all the actual flows discovered by Guardium Insights SaaS DSPM, that is, details about source and destination, and other information.
+Get a summary of all the actual flows discovered by Guardium DSPM, that is, details about source and destination, and other information.
 
 ### Example
 

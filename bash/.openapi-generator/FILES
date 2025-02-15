@@ -7,6 +7,7 @@ client.sh.bash-completion
 docs/AccessType.md
 docs/AccessTypeCountInner.md
 docs/AccessibleDataStores.md
+docs/AccessiblePermissionsConfigurations.md
 docs/ActualFlow.md
 docs/ActualFlowPath.md
 docs/ActualFlowsSummary.md
@@ -141,6 +142,7 @@ docs/Auditv3GetActivityRecordsResponse.md
 docs/Auditv3PutActivityRecordRequest.md
 docs/Auditv3PutActivityRecordResponse.md
 docs/AuthCode.md
+docs/AuthInfo.md
 docs/AuthServerServiceApi.md
 docs/AuthUrl.md
 docs/Authenticate200Response.md
@@ -156,6 +158,7 @@ docs/AuthserverGetUserResponse.md
 docs/AuthserverListOauthClientResponse.md
 docs/AuthserverOauthClient.md
 docs/ClassificationStatus.md
+docs/ClientInfo.md
 docs/CloudAccountCountInner.md
 docs/CloudAccountDetails.md
 docs/CloudAccountInstallationStatus.md
@@ -573,6 +576,8 @@ docs/ListPotentialFlowsPaths200Response.md
 docs/ListSensitivities200Response.md
 docs/ListSensitivitiesFilterParameter.md
 docs/ListTrusteesFilterParameter.md
+docs/ListUsersEntitlements200Response.md
+docs/ListUsersEntitlements200ResponseResultsInner.md
 docs/ListVendorDataStoresFilterParameter.md
 docs/ListVulnerabilities200Response.md
 docs/ListVulnerabilitiesByDataStore200Response.md
@@ -621,6 +626,7 @@ docs/Outliersenginev3SourcesStats.md
 docs/Outliersenginev3StatisticsResponse.md
 docs/Outliersenginev3UpdateWorkingHoursPeriodsRequest.md
 docs/Outliersenginev3WorkingHoursPeriod.md
+docs/PermissionsConfigurations.md
 docs/PipelineconfigServiceApi.md
 docs/Pipelineconfigv3DeleteTenantResponse.md
 docs/PolicyBuilderApi.md
@@ -694,7 +700,6 @@ docs/QSPluginManagerApi.md
 docs/QSPolicyManagerApi.md
 docs/Qspmdatamanagerv3AppData.md
 docs/Qspmdatamanagerv3AppDataResponse.md
-docs/Qspmdatamanagerv3InsertEntitiesRequest.md
 docs/Qspmdatamanagerv3MasterDataModel.md
 docs/Qspmdatamanagerv3MasterDataResponse.md
 docs/Qspmdatamanagerv3NetlocData.md
@@ -702,9 +707,7 @@ docs/Qspmdatamanagerv3NetlocDataResponse.md
 docs/Qspmdatamanagerv3Row.md
 docs/Qspmdatamanagerv3ScanRequest.md
 docs/Qspmdatamanagerv3ScanResponse.md
-docs/Qspmdatamanagerv3SearchEntityDataRequest.md
 docs/Qspmdatamanagerv3SearchEntityDataResponse.md
-docs/Qspmdatamanagerv3UpdateNetLocRequest.md
 docs/Qspmdatamanagerv3UpdateNetLocResponse.md
 docs/Qspmpluginmanagerv3EntityNewSchema.md
 docs/Qspmpluginmanagerv3PluginRQ.md
@@ -1006,6 +1009,7 @@ docs/Schedulerv3TaskType.md
 docs/Schedulerv3UpdateScheduledJobRequest.md
 docs/Schedulerv3UpdateScheduledJobResponse.md
 docs/Schedulerv3WorkflowType.md
+docs/Script.md
 docs/SensitivitiesItemsInner.md
 docs/SensitivitiesSummary.md
 docs/Sensitivity.md
@@ -1127,6 +1131,7 @@ docs/Tenantuserv3User.md
 docs/Tenantuserv3UserState.md
 docs/Tenantuserv3UserTenant.md
 docs/ThirdPartyVendorsApi.md
+docs/TokenExpiryInfo.md
 docs/Trustee.md
 docs/TypesCountInner.md
 docs/UniversalConnectorManagerApi.md
@@ -1153,10 +1158,12 @@ docs/UpdateCustodianBody.md
 docs/UpdateDatastoreCustodian200Response.md
 docs/UpdateResourceReviewBody.md
 docs/UpdateResourceReviewStatus200Response.md
-docs/UserEntitlementsFilter.md
+docs/UserEntitlementInfo.md
 docs/UserEntitlementsUserSensitiveCategoriesOptionsUserIdParameter.md
 docs/UserSensitiveCategories.md
+docs/UserSensitiveCategories200Response.md
 docs/UserSensitiveCategoriesSensitiveCategoriesInner.md
+docs/UserStores200Response.md
 docs/Vendor.md
 docs/VendorAccount.md
 docs/VendorCertificate.md

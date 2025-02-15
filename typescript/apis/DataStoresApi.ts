@@ -144,7 +144,7 @@ export class DataStoresApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * List all data stores discovered by Guardium Insights SaaS DSPM.
+     * List all data stores discovered by Guardium DSPM.
      * List data stores
      * @param filter 
      * @param sort 

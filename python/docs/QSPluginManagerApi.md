@@ -22,7 +22,7 @@ Summary: Invoke only application provisioning data plugin Description:Parses app
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_plugin_rq import Qspmpluginmanagerv3PluginRQ
 from ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_plugin_rs import Qspmpluginmanagerv3PluginRS
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -110,7 +110,7 @@ Summary: Invoke only explorer inventory data plugin Description:Parses explorer 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_plugin_rq import Qspmpluginmanagerv3PluginRQ
 from ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_plugin_rs import Qspmpluginmanagerv3PluginRS
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -198,7 +198,7 @@ Summary: Invoke only explorer analytics data plugin Description:Parses explorer 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_plugin_rq import Qspmpluginmanagerv3PluginRQ
 from ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_plugin_rs import Qspmpluginmanagerv3PluginRS
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -286,7 +286,7 @@ Summary: Invoke consolidated or only network data plugin Description:Parses inpu
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_plugin_rq import Qspmpluginmanagerv3PluginRQ
 from ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_plugin_rs import Qspmpluginmanagerv3PluginRS
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -374,7 +374,7 @@ Summary: Invoke only policy data plugin Description:Parses policy input file and
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_policy_plugin_rq import Qspmpluginmanagerv3PolicyPluginRQ
 from ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_policy_plugin_rs import Qspmpluginmanagerv3PolicyPluginRS
 from ibm_gdsc_sdk_software.rest import ApiException

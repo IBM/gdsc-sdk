@@ -29,7 +29,7 @@ Summary: Authorize Description: Authenticate a user and return a JWT.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.jumpboxv3_authorize_request import Jumpboxv3AuthorizeRequest
 from ibm_gdsc_sdk_software.models.jumpboxv3_authorize_response import Jumpboxv3AuthorizeResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -114,7 +114,7 @@ Summary: Delete tenant Description: Delete a tenant.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
 
@@ -196,7 +196,7 @@ Summary: Delete user Description: Delete the user.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
 
@@ -279,7 +279,7 @@ Summary: Get tenant Description: Get a tenant.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.jumpboxv3_get_tenant_response import Jumpboxv3GetTenantResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -362,7 +362,7 @@ Summary: Get tenants Description: Get all tenant base on UID.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.jumpboxv3_get_tenants_response import Jumpboxv3GetTenantsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -453,7 +453,7 @@ Summary: Get users Description: Get all users base on a tenantID.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.tenantuserv3_get_users_response import Tenantuserv3GetUsersResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -538,7 +538,7 @@ Summary: Post tenants Description: Create a tenant.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.jumpboxv3_post_tenants_request import Jumpboxv3PostTenantsRequest
 from ibm_gdsc_sdk_software.models.jumpboxv3_post_tenants_response import Jumpboxv3PostTenantsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -624,7 +624,7 @@ Summary: Post users Description: Create users.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.jumpboxv3_post_users_bulk_request import Jumpboxv3PostUsersBulkRequest
 from ibm_gdsc_sdk_software.models.jumpboxv3_post_users_bulk_response import Jumpboxv3PostUsersBulkResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -710,7 +710,7 @@ Summary: Search users Description: Search for all users matching the provided st
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.jumpboxv3_search_users_request import Jumpboxv3SearchUsersRequest
 from ibm_gdsc_sdk_software.models.jumpboxv3_search_users_response import Jumpboxv3SearchUsersResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -796,7 +796,7 @@ Summary: Test user Description: Test a user lookup to a given LDAP.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.jumpboxv3_test_user_request import Jumpboxv3TestUserRequest
 from ibm_gdsc_sdk_software.models.jumpboxv3_test_user_response import Jumpboxv3TestUserResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -881,7 +881,7 @@ Summary: Update tenant Description: Update a tenant.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.jumpboxv3_update_tenant_request import Jumpboxv3UpdateTenantRequest
 from ibm_gdsc_sdk_software.models.jumpboxv3_update_tenant_response import Jumpboxv3UpdateTenantResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -963,7 +963,7 @@ Summary: Update users Description: Update an array of users.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.jumpboxv3_update_users_bulk_request import Jumpboxv3UpdateUsersBulkRequest
 from ibm_gdsc_sdk_software.models.jumpboxv3_update_users_bulk_response import Jumpboxv3UpdateUsersBulkResponse
 from ibm_gdsc_sdk_software.rest import ApiException

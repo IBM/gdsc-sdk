@@ -41,12 +41,12 @@ Summary: Create Connections accounts Description: Create Connections acccounts.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ConnectionsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ConnectionsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -114,12 +114,12 @@ Summary: Create connections configs Description: Create Connection config by con
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ConnectionsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ConnectionsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -187,12 +187,12 @@ Summary: Create plugin Description: Create UC generic plugin
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ConnectionsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ConnectionsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -260,12 +260,12 @@ Summary: Create settings Description: Create Settings.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ConnectionsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ConnectionsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -333,12 +333,12 @@ Summary: Delete Connections accounts Description: Delete Connections acccounts.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ConnectionsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ConnectionsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -406,12 +406,12 @@ Summary: Delete connections configs Description: Delete Connection config by con
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ConnectionsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ConnectionsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -479,12 +479,12 @@ Summary: Delete connector Description: Delete a Connection.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ConnectionsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ConnectionsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -552,12 +552,12 @@ Summary: Delete plugin. Description: Delete plugin.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ConnectionsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ConnectionsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -625,12 +625,12 @@ Summary: Get banner state for object verb page.  Description: Get banner state f
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ConnectionsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ConnectionsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -694,12 +694,12 @@ Summary: Get Connections accounts Description: Get Connections acccounts.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ConnectionsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ConnectionsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -769,12 +769,12 @@ Summary: Get connections configs Description: Get Connection config by connectio
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ConnectionsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ConnectionsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -844,12 +844,12 @@ Summary: Get connections with filters Description: Get connections with filters.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ConnectionsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ConnectionsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -917,12 +917,12 @@ Summary: Get connectors summary Description: Get a summary of Connectors.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ConnectionsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ConnectionsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -986,12 +986,12 @@ Summary: Get data sources Description: Get a list of data sources.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ConnectionsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ConnectionsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1055,12 +1055,12 @@ Summary: Get list of guard record fields.  Description: Get list of guard record
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ConnectionsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ConnectionsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1124,12 +1124,12 @@ Summary: Get headers Description: Get a list of Headers.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ConnectionsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ConnectionsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1193,12 +1193,12 @@ Summary: Get plugins  Description: Get custom universal connector plugins
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ConnectionsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ConnectionsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1266,12 +1266,12 @@ Summary: Get settings Description: Get a list of Settings.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ConnectionsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ConnectionsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1335,12 +1335,12 @@ Summary: Partial update connectors Description: Partial update of Connectors.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ConnectionsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ConnectionsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1408,12 +1408,12 @@ Summary: Post stap command Description: Send a STAP command down to kafka for sn
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ConnectionsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ConnectionsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1481,12 +1481,12 @@ Summary: Update banner state for object verb page.  Description: Update banner s
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ConnectionsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ConnectionsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1554,12 +1554,12 @@ Summary: Update Connections accounts Description: Update Connections acccounts.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ConnectionsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ConnectionsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1627,12 +1627,12 @@ Summary: Update connections configs Description: Update Connection config by con
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ConnectionsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ConnectionsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1700,12 +1700,12 @@ Summary: Update connectors Description: Update a list of Connectors.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ConnectionsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ConnectionsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1773,12 +1773,12 @@ Summary: Update plugin. Description: Update plugin.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ConnectionsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ConnectionsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1848,12 +1848,12 @@ Summary: Update settings Description: Update Settings.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ConnectionsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ConnectionsServiceApi;
 
 public class Example {
   public static void main(String[] args) {

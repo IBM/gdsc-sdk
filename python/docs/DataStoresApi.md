@@ -28,7 +28,7 @@ Get details of a specific data store by its ID.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.data_store import DataStore
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -108,7 +108,7 @@ Get a summary of all the data stores, that is, name of data resources, types of 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.data_stores_summary import DataStoresSummary
 from ibm_gdsc_sdk_software.models.list_data_stores_filter_parameter import ListDataStoresFilterParameter
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -189,7 +189,7 @@ Get a list of all the labels of custom data stores.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
 
@@ -263,14 +263,14 @@ Name | Type | Description  | Notes
 
 List data stores
 
-List all data stores discovered by Guardium Insights SaaS DSPM.
+List all data stores discovered by Guardium DSPM.
 
 ### Example
 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.list_data_stores200_response import ListDataStores200Response
 from ibm_gdsc_sdk_software.models.list_data_stores_filter_parameter import ListDataStoresFilterParameter
 from ibm_gdsc_sdk_software.models.list_data_stores_sort_parameter import ListDataStoresSortParameter
@@ -358,7 +358,7 @@ Get a list of the available cloud tag keys of data stores that can be filtered o
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
 
@@ -439,7 +439,7 @@ Get a list of the available cloud tag values of data stores that can be filtered
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
 
@@ -522,7 +522,7 @@ Lists the data stores that can be filtered or classified.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
 
@@ -601,7 +601,7 @@ Post the request for a data store rescan.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.rescan_data_store_request import RescanDataStoreRequest
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -679,7 +679,7 @@ Add or update a custom label for a data store.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.set_data_store_label_request import SetDataStoreLabelRequest
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -759,7 +759,7 @@ Add or update the name of a specific data store.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.update_custodian_body import UpdateCustodianBody
 from ibm_gdsc_sdk_software.models.update_datastore_custodian200_response import UpdateDatastoreCustodian200Response
 from ibm_gdsc_sdk_software.rest import ApiException

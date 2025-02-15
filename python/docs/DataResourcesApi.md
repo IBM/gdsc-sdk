@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**get_data_resources_summary**](DataResourcesApi.md#get_data_resources_summary) | **GET** /api/v1/dspm/dataResources/summary | Data resources summary
 [**list_data_resources**](DataResourcesApi.md#list_data_resources) | **GET** /api/v1/dspm/dataResources | List data resources that match a given filter
 [**list_data_resources_names**](DataResourcesApi.md#list_data_resources_names) | **GET** /api/v1/dspm/dataResources/names | List names of data resources
-[**remove_resource**](DataResourcesApi.md#remove_resource) | **DELETE** /api/v1/dspm/dataResources/{dataResourceId}/removeResource | Remove resource from Guardium Insights SaaS DSPM
+[**remove_resource**](DataResourcesApi.md#remove_resource) | **DELETE** /api/v1/dspm/dataResources/{dataResourceId}/removeResource | Remove resource from DSPM
 [**update_resource_review_status**](DataResourcesApi.md#update_resource_review_status) | **PUT** /api/v1/dspm/dataResources/{dataResourceId}/reviewed | Set review status of a data resource
 
 
@@ -24,7 +24,7 @@ Get additional details on a specific data resource by providing its ID.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.data_resource import DataResource
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -104,7 +104,7 @@ Get a summary of all the data resource, that is, number of data resources, types
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.data_resources_summary import DataResourcesSummary
 from ibm_gdsc_sdk_software.models.list_data_resources_filter_parameter import ListDataResourcesFilterParameter
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -187,7 +187,7 @@ Get a list of data resources based on the filter applied. You can filter by data
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.list_data_resources200_response import ListDataResources200Response
 from ibm_gdsc_sdk_software.models.list_data_resources_filter_parameter import ListDataResourcesFilterParameter
 from ibm_gdsc_sdk_software.models.list_data_resources_sort_parameter import ListDataResourcesSortParameter
@@ -277,7 +277,7 @@ List and filter data resources by their names
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
 
@@ -349,16 +349,16 @@ Name | Type | Description  | Notes
 # **remove_resource**
 > RemoveResource200Response remove_resource(data_resource_id, data_store_id)
 
-Remove resource from Guardium Insights SaaS DSPM
+Remove resource from DSPM
 
-Removes a resource, with all its sensitivities, from Guardium Insights SaaS DSPM dashboard. This action does not remove the resource from the resource's source environment.
+Removes a resource, with all its sensitivities, from Guardium DSPM dashboard. This action does not remove the resource from the resource's source environment.
 
 ### Example
 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.remove_resource200_response import RemoveResource200Response
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -388,7 +388,7 @@ with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
     data_store_id = 'arn:aws:s3::123456789101:mys3-prod' # str | Data store ID
 
     try:
-        # Remove resource from Guardium Insights SaaS DSPM
+        # Remove resource from DSPM
         api_response = api_instance.remove_resource(data_resource_id, data_store_id)
         print("The response of DataResourcesApi->remove_resource:\n")
         pprint(api_response)
@@ -440,7 +440,7 @@ Set the review status of a specific data resource in a specific data store.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.update_resource_review_body import UpdateResourceReviewBody
 from ibm_gdsc_sdk_software.models.update_resource_review_status200_response import UpdateResourceReviewStatus200Response
 from ibm_gdsc_sdk_software.rest import ApiException

@@ -43,7 +43,7 @@ Summary: Create Connections accounts Description: Create Connections acccounts.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.connectionsv3_create_connections_accounts_request import Connectionsv3CreateConnectionsAccountsRequest
 from ibm_gdsc_sdk_software.models.connectionsv3_create_connections_accounts_response import Connectionsv3CreateConnectionsAccountsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -129,7 +129,7 @@ Summary: Create connections configs Description: Create Connection config by con
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.connectionsv3_create_connections_configs_request import Connectionsv3CreateConnectionsConfigsRequest
 from ibm_gdsc_sdk_software.models.connectionsv3_create_connections_configs_response import Connectionsv3CreateConnectionsConfigsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -215,7 +215,7 @@ Summary: Create plugin Description: Create UC generic plugin
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.connectionsv3_create_plugin_request import Connectionsv3CreatePluginRequest
 from ibm_gdsc_sdk_software.models.connectionsv3_create_plugin_response import Connectionsv3CreatePluginResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -301,7 +301,7 @@ Summary: Create settings Description: Create Settings.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.connectionsv3_create_settings_request import Connectionsv3CreateSettingsRequest
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -386,7 +386,7 @@ Summary: Delete Connections accounts Description: Delete Connections acccounts.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.connectionsv3_delete_connections_accounts_response import Connectionsv3DeleteConnectionsAccountsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -471,7 +471,7 @@ Summary: Delete connections configs Description: Delete Connection config by con
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.connectionsv3_delete_connections_configs_response import Connectionsv3DeleteConnectionsConfigsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -556,7 +556,7 @@ Summary: Delete connector Description: Delete a Connection.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
 
@@ -640,7 +640,7 @@ Summary: Delete plugin. Description: Delete plugin.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.connectionsv3_delete_plugin_response import Connectionsv3DeletePluginResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -725,7 +725,7 @@ Summary: Get banner state for object verb page.  Description: Get banner state f
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.connectionsv3_get_banner_state_response import Connectionsv3GetBannerStateResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -806,7 +806,7 @@ Summary: Get Connections accounts Description: Get Connections acccounts.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.connectionsv3_get_connections_accounts_response import Connectionsv3GetConnectionsAccountsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -893,7 +893,7 @@ Summary: Get connections configs Description: Get Connection config by connectio
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.connectionsv3_get_connections_configs_response import Connectionsv3GetConnectionsConfigsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -980,7 +980,7 @@ Summary: Get connections with filters Description: Get connections with filters.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.connectionsv3_get_connections_with_filters_request import Connectionsv3GetConnectionsWithFiltersRequest
 from ibm_gdsc_sdk_software.models.connectionsv3_get_connections_with_filters_response import Connectionsv3GetConnectionsWithFiltersResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -1066,7 +1066,7 @@ Summary: Get connectors summary Description: Get a summary of Connectors.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.connectionsv3_get_connectors_summary_response import Connectionsv3GetConnectorsSummaryResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1147,7 +1147,7 @@ Summary: Get data sources Description: Get a list of data sources.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.connectionsv3_get_data_sources_response import Connectionsv3GetDataSourcesResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1228,7 +1228,7 @@ Summary: Get list of guard record fields.  Description: Get list of guard record
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.connectionsv3_get_guard_record_fields_response import Connectionsv3GetGuardRecordFieldsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1309,7 +1309,7 @@ Summary: Get headers Description: Get a list of Headers.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.connectionsv3_get_headers_response import Connectionsv3GetHeadersResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1390,7 +1390,7 @@ Summary: Get plugins  Description: Get custom universal connector plugins
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.connectionsv3_get_plugins_response import Connectionsv3GetPluginsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1475,7 +1475,7 @@ Summary: Get settings Description: Get a list of Settings.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.connectionsv3_get_settings_response import Connectionsv3GetSettingsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1556,7 +1556,7 @@ Summary: Partial update connectors Description: Partial update of Connectors.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.connectionsv3_partial_update_connectors_request import Connectionsv3PartialUpdateConnectorsRequest
 from ibm_gdsc_sdk_software.models.connectionsv3_partial_update_connectors_response import Connectionsv3PartialUpdateConnectorsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -1642,7 +1642,7 @@ Summary: Post stap command Description: Send a STAP command down to kafka for sn
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.connectionsv3_stap_command_request import Connectionsv3StapCommandRequest
 from ibm_gdsc_sdk_software.models.connectionsv3_status_response_base import Connectionsv3StatusResponseBase
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -1728,7 +1728,7 @@ Summary: Update banner state for object verb page.  Description: Update banner s
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.connectionsv3_update_banner_state_request import Connectionsv3UpdateBannerStateRequest
 from ibm_gdsc_sdk_software.models.connectionsv3_update_banner_state_response import Connectionsv3UpdateBannerStateResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -1814,7 +1814,7 @@ Summary: Update Connections accounts Description: Update Connections acccounts.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.connectionsv3_update_connections_accounts_request import Connectionsv3UpdateConnectionsAccountsRequest
 from ibm_gdsc_sdk_software.models.connectionsv3_update_connections_accounts_response import Connectionsv3UpdateConnectionsAccountsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -1900,7 +1900,7 @@ Summary: Update connections configs Description: Update Connection config by con
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.connectionsv3_update_connections_configs_request import Connectionsv3UpdateConnectionsConfigsRequest
 from ibm_gdsc_sdk_software.models.connectionsv3_update_connections_configs_response import Connectionsv3UpdateConnectionsConfigsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -1986,7 +1986,7 @@ Summary: Update connectors Description: Update a list of Connectors.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.connectionsv3_update_connectors_request import Connectionsv3UpdateConnectorsRequest
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -2071,7 +2071,7 @@ Summary: Update plugin. Description: Update plugin.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.connectionsv3_update_plugin_request import Connectionsv3UpdatePluginRequest
 from ibm_gdsc_sdk_software.models.connectionsv3_update_plugin_response import Connectionsv3UpdatePluginResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -2159,7 +2159,7 @@ Summary: Update settings Description: Update Settings.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.connectionsv3_update_settings_request import Connectionsv3UpdateSettingsRequest
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint

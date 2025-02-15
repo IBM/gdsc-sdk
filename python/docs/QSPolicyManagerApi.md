@@ -22,7 +22,7 @@ BatchStatusUpdate - trigger the batch to update the status of the Ticket .
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.qspmpolicymanagerv3_standard_empty_response import Qspmpolicymanagerv3StandardEmptyResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -107,7 +107,7 @@ CreateTicket - Create a new Incident .
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.qspmpolicymanagerv3_create_ticket_request import Qspmpolicymanagerv3CreateTicketRequest
 from ibm_gdsc_sdk_software.models.qspmpolicymanagerv3_create_ticket_response import Qspmpolicymanagerv3CreateTicketResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -193,7 +193,7 @@ FetchFilesfromBuckets - fetch the file(s) from bucket of the object storage
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.qspmpolicymanagerv3_fetch_object_store_file_response import Qspmpolicymanagerv3FetchObjectStoreFileResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -274,7 +274,7 @@ ProcessPolicyDimentionRecords - fetch the records from Policy Dimention and upda
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.qspmpolicymanagerv3_process_policy_dimention_records_request import Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest
 from ibm_gdsc_sdk_software.models.qspmpolicymanagerv3_process_policy_dimention_records_resonse import Qspmpolicymanagerv3ProcessPolicyDimentionRecordsResonse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -360,7 +360,7 @@ UpdateTicketStatus - Update the ticket status based on the IntegrationId and Tic
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.qspmpolicymanagerv3_update_ticket_status_request import Qspmpolicymanagerv3UpdateTicketStatusRequest
 from ibm_gdsc_sdk_software.models.qspmpolicymanagerv3_update_ticket_status_response import Qspmpolicymanagerv3UpdateTicketStatusResponse
 from ibm_gdsc_sdk_software.rest import ApiException

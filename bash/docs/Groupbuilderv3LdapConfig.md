@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **filter** | **string** |  | [optional] [default to null]
 **filterUnderscorescope** | **integer** |  | [optional] [default to null]
 **importUnderscorelimit** | **integer** |  | [optional] [default to null]
+**ldapUnderscoregroupUnderscorename** | **string** |  | [optional] [default to null]
 **ldapUnderscoreid** | **string** |  | [optional] [default to null]
 **memberUnderscoreprefix** | **string** |  | [optional] [default to null]
 

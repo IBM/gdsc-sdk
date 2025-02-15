@@ -58,12 +58,12 @@ Summary: Create a category Description: Create a report category
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -131,12 +131,12 @@ Summary: Create chart Description: Create custom chart based on provided propert
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -204,12 +204,12 @@ Summary: Create chart template v2 Description: Create custom VEGA chart template
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -277,12 +277,12 @@ Summary: Create chart v2 Description: Create custom VEGA chart based on provided
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -350,12 +350,12 @@ Summary - Create fields by category Description: Cteate category fields based on
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -423,12 +423,12 @@ Summary: Create a join Description: Create a custom report join
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -496,12 +496,12 @@ Summary: Create report Description: Create custom report based on provided prope
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -569,12 +569,12 @@ Summary: Create a variant Description: Create a variant for reports
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -642,12 +642,12 @@ Summary: Delete a category Description: Delete a report category
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -717,12 +717,12 @@ Summary: Delete chart Description: Delete a custom chart.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -790,12 +790,12 @@ Summary: Delete chart template v2 Description: Delete a custom VEGA chart templa
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -863,12 +863,12 @@ Summary: Delete chart v2 Description: Delete a custom VEGA chart.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -936,12 +936,12 @@ Summary - Delete fields by category Description: Delete category fields based on
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1011,12 +1011,12 @@ Summary: Delete a join Description: Delete a custom join
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1084,12 +1084,12 @@ Summary: Delete report Description: Delete a custom report.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1157,12 +1157,12 @@ Summary: Delete a variant Description: Delete a variant
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1230,12 +1230,12 @@ Summary:  Get all available report categories. Description: Get all category rel
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1303,12 +1303,12 @@ Summary: Get chart settings Description: Get a custom chart based on provided re
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1378,12 +1378,12 @@ Summary: Get chart settings v2 Description: Get a custom VEGA chart based on pro
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1453,12 +1453,12 @@ Summary: Get chart template v2 Description: Get all custom VEGA chart templates.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1522,12 +1522,12 @@ Summary: Get fields by categories Description: Get all category related fields o
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1595,12 +1595,12 @@ Summary: Get fields by category Description: Get all category related fields or 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1672,12 +1672,12 @@ Summary: Get all joins Description: Get all custom joins.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1745,12 +1745,12 @@ Summary: Get query by report definition Description: Get query by report definit
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1818,12 +1818,12 @@ Summary: Get query by report ID Description: Get query by report ID.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1891,12 +1891,12 @@ Summary: Get report definition Description: Get report definition.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1964,12 +1964,12 @@ Summary: Get report groups Description: Get reports used by the provided groups.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2037,12 +2037,12 @@ Summary: Get report synopsis Description: Return BriefReport.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2110,12 +2110,12 @@ Summary: Get report timestamp header Description: Get where to take a report tim
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2185,12 +2185,12 @@ Summary: Get reports Description: Get reports list.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2260,12 +2260,12 @@ Summary: Get the reports that use a join Description: Get the reports that use a
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2333,12 +2333,12 @@ Summary: Get reports tags Description: Get all report distinct tags.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2402,12 +2402,12 @@ Summary: Get a variant Description: Get a given variant
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2475,12 +2475,12 @@ Summary: Get all variants Description: Get all variants in reports
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2544,12 +2544,12 @@ Summary: Partial chart update Description: Update a custom chart with partial in
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2619,12 +2619,12 @@ Summary: Partial report update Description: Update a custom report with partial 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2694,12 +2694,12 @@ Summary: Run a variant Description: Run the operations in a variant
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2767,12 +2767,12 @@ Summary: Transpose Description: Return the corresponding full sql data.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2840,12 +2840,12 @@ Summary: Update chart Description: Update a custom chart.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2915,12 +2915,12 @@ Summary: Update chart v2 Description: Update a custom VEGA chart.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2990,12 +2990,12 @@ Summary: Update a join Description: Update a custom join
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -3065,12 +3065,12 @@ Summary: Update report Description: Update a custom report.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -3140,12 +3140,12 @@ Summary: Update a variant Description: Update a variant with a custom override
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.ReportsServiceApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.ReportsServiceApi;
 
 public class Example {
   public static void main(String[] args) {

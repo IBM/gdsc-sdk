@@ -39,7 +39,8 @@ class TestLinkedAccounts(unittest.TestCase):
                 cloud_account_name = '123456789101',
                 is_main_cloud_account = True,
                 installation_status = ibm_gdsc_sdk_software.models.installation_status.InstallationStatus(
-                    discovery_permissions = True, ),
+                    discovery_permissions = True, 
+                    is_install_complete = True, ),
                 service_provider = 'aws',
                 region_availability = {
                     'key' : True
@@ -58,7 +59,8 @@ class TestLinkedAccounts(unittest.TestCase):
                 cloud_account_name = '123456789101',
                 is_main_cloud_account = True,
                 installation_status = ibm_gdsc_sdk_software.models.installation_status.InstallationStatus(
-                    discovery_permissions = True, ),
+                    discovery_permissions = True, 
+                    is_install_complete = True, ),
                 service_provider = 'aws',
                 regions = [
                     ibm_gdsc_sdk_software.models.analyzed_region.AnalyzedRegion(

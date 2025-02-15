@@ -25,7 +25,7 @@ Summary: Create dataset Description: Save a definition in the database.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.ecosystemv3_create_dataset_request import Ecosystemv3CreateDatasetRequest
 from ibm_gdsc_sdk_software.models.ecosystemv3_create_dataset_response import Ecosystemv3CreateDatasetResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -111,7 +111,7 @@ Summary: Data insert Description: Process Data received from webhook API and ins
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.ecosystemv3_data_insert_request import Ecosystemv3DataInsertRequest
 from ibm_gdsc_sdk_software.models.ecosystemv3_data_insert_response import Ecosystemv3DataInsertResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -199,7 +199,7 @@ Summary: Delete datasets Description: Delete an array of datasets.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.ecosystemv3_delete_datasets_response import Ecosystemv3DeleteDatasetsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -284,7 +284,7 @@ Summary: Get dataset data Description: Return data report for a given dataset.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.ecosystemv3_get_dataset_data_response import Ecosystemv3GetDatasetDataResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -383,7 +383,7 @@ Summary: Get dataset detail Description: Return detail on a dataset definition.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.ecosystemv3_get_dataset_detail_response import Ecosystemv3GetDatasetDetailResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -468,7 +468,7 @@ Summary: Get datasets Description: Return dataset list that matches the specifie
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.ecosystemv3_get_datasets_response import Ecosystemv3GetDatasetsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -563,7 +563,7 @@ Summary: Get purgable rows Description: Check the number of rows that can be pur
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.ecosystemv3_get_purgable_rows_request import Ecosystemv3GetPurgableRowsRequest
 from ibm_gdsc_sdk_software.models.ecosystemv3_get_purgable_rows_response import Ecosystemv3GetPurgableRowsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -649,7 +649,7 @@ Summary: Purge data Description: Purge data.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.ecosystemv3_purge_data_response import Ecosystemv3PurgeDataResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint

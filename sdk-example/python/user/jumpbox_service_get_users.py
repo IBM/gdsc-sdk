@@ -30,7 +30,6 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 #configuration.api_key['ApiKeyAuth'] = os.environ['API_KEY']
 configuration.verify_ssl = False
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-#configuration.api_key_prefix['ApiKeyAuth'] = "Basic NDcwMzBhMGUtNmRjMi00OTNiLTkzNGMtOTgxOWQxNTE0NzA3OmVlYjBhNDE2LTA0YWYtNDJiOS1iNjBkLTdlNjViNjE5MjQ3MQ=="
 # Enter a context with an instance of the API client
 
 with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:

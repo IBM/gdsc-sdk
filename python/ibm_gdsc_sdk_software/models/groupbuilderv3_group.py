@@ -28,7 +28,7 @@ from typing_extensions import Self
 
 class Groupbuilderv3Group(BaseModel):
     """
-    Group imports groups from a Guradium Data Protection central manager to Guardium Insights.
+    Group imports groups from a Guradium Data Protection central manager to Guardium.
     """ # noqa: E501
     access_level: Optional[StrictInt] = Field(default=None, description="Group access level.")
     description: Optional[StrictStr] = Field(default=None, description="Group description.")

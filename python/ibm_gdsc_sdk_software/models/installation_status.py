@@ -27,7 +27,8 @@ class InstallationStatus(BaseModel):
     InstallationStatus
     """ # noqa: E501
     discovery_permissions: Optional[StrictBool] = Field(default=None, alias="discoveryPermissions")
-    __properties: ClassVar[List[str]] = ["discoveryPermissions"]
+    is_install_complete: Optional[StrictBool] = Field(default=None, alias="isInstallComplete")
+    __properties: ClassVar[List[str]] = ["discoveryPermissions", "isInstallComplete"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -80,7 +81,8 @@ class InstallationStatus(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "discoveryPermissions": obj.get("discoveryPermissions")
+            "discoveryPermissions": obj.get("discoveryPermissions"),
+            "isInstallComplete": obj.get("isInstallComplete")
         })
         return _obj
 

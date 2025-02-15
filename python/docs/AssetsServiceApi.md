@@ -44,7 +44,7 @@ AssetIngestion - Asset Ingestion Api to ingest assets from different application
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.assetsv3_asset_ingestion_request import Assetsv3AssetIngestionRequest
 from ibm_gdsc_sdk_software.models.assetsv3_asset_ingestion_response import Assetsv3AssetIngestionResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -130,7 +130,7 @@ AssetIngestionManualTrigger - Manual trigger for Scheduled Asset Ingestion of da
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.assetsv3_asset_ingestion_response import Assetsv3AssetIngestionResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -215,7 +215,7 @@ ClonePolicy - Clone a policy.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.assetsv3_clone_policy_request import Assetsv3ClonePolicyRequest
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -302,7 +302,7 @@ CreateUpdatePolicy - Create/update new Policy.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.assetsv3_create_update_policy_request import Assetsv3CreateUpdatePolicyRequest
 from ibm_gdsc_sdk_software.models.assetsv3_create_update_policy_response import Assetsv3CreateUpdatePolicyResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -388,7 +388,7 @@ DeleteFilterTemplateForAssets - Deleting a template using TemplateID in manage a
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.assetsv3_asset_filter_template_request import Assetsv3AssetFilterTemplateRequest
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -475,7 +475,7 @@ DeletePolicies - Delete Policy returns response code and message.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
 
@@ -559,7 +559,7 @@ FetchAssetChangeLog - Fetch the logs for any actions performed on assets.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.assetsv3_fetch_asset_change_log_request import Assetsv3FetchAssetChangeLogRequest
 from ibm_gdsc_sdk_software.models.assetsv3_fetch_asset_change_log_response import Assetsv3FetchAssetChangeLogResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -645,7 +645,7 @@ FetchAssetDashboard - Gets Filter Templates for Dshboard Widgets.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.assetsv3_fetch_asset_dashboard_response import Assetsv3FetchAssetDashboardResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -752,7 +752,7 @@ FetchAssetList - Asset Fetch Api .
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.assetsv3_fetch_asset_list_request import Assetsv3FetchAssetListRequest
 from ibm_gdsc_sdk_software.models.assetsv3_fetch_asset_list_response import Assetsv3FetchAssetListResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -838,7 +838,7 @@ FetchAssetsForMergeSplit : Fetch assets for Merge and Split.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.assetsv3_fetch_assets_for_merge_split_response import Assetsv3FetchAssetsForMergeSplitResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -931,7 +931,7 @@ FindAssetName - Checks if the given Asset Name has already been assigned to an a
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.assetsv3_find_asset_name_response import Assetsv3FindAssetNameResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1016,7 +1016,7 @@ GetAssetOverview - Get asset overview widgets data for a particular asset.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.assetsv3_asset_overview_response import Assetsv3AssetOverviewResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1115,7 +1115,7 @@ GetAssetTopology- Get list of topology for a parent asset.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.assetsv3_get_asset_topology_request import Assetsv3GetAssetTopologyRequest
 from ibm_gdsc_sdk_software.models.assetsv3_get_asset_topology_response import Assetsv3GetAssetTopologyResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -1201,7 +1201,7 @@ GetFilterTemplateForAssets - Get list of filters query templates for manage asse
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.assetsv3_get_filter_template_response import Assetsv3GetFilterTemplateResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1286,7 +1286,7 @@ GetFiltersForAssets - Get a list of filters category and sub category with all d
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.assetsv3_get_filters_data_response import Assetsv3GetFiltersDataResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1367,7 +1367,7 @@ ListPolicy - List all policies.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.assetsv3_list_policy_response import Assetsv3ListPolicyResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1448,7 +1448,7 @@ ListRule - List all rules for a policy.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.assetsv3_list_rule_response import Assetsv3ListRuleResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1533,7 +1533,7 @@ ListTagDomains - Get Tag categories by request parameters .
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.assetsv3_list_tag_domains_response import Assetsv3ListTagDomainsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1622,7 +1622,7 @@ ListTags - Get Tags for Manage Tags listing screen .
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.assetsv3_list_tags_response import Assetsv3ListTagsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1707,7 +1707,7 @@ MergeOrSplitAssets - Merge or split the selected assets.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.assetsv3_merge_or_split_assets_request import Assetsv3MergeOrSplitAssetsRequest
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1792,7 +1792,7 @@ SaveAssignedTags - Save Assigned Tags to TAG_DSDEF_MAP table.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.assetsv3_save_assigned_tags_request import Assetsv3SaveAssignedTagsRequest
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1877,7 +1877,7 @@ SaveTagConceptData - creates a custom tag
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.assetsv3_save_tag_concept_data_request import Assetsv3SaveTagConceptDataRequest
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1962,7 +1962,7 @@ SaveTagDomainData - creates a custom category to be assigned to a tag
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.assetsv3_save_tag_domain_data_request import Assetsv3SaveTagDomainDataRequest
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -2047,7 +2047,7 @@ SaveUpdateFilterTemplateForAssets - Save/Update a filters query to use as templa
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.assetsv3_save_update_filter_template_request import Assetsv3SaveUpdateFilterTemplateRequest
 from ibm_gdsc_sdk_software.models.assetsv3_save_update_filter_template_response import Assetsv3SaveUpdateFilterTemplateResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -2133,7 +2133,7 @@ SetBannerState - Set banner state for asset inventory page.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.assetsv3_set_banner_state_request import Assetsv3SetBannerStateRequest
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -2218,7 +2218,7 @@ UpdateAssetName - Udates the name of the asset as given by the user.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.assetsv3_update_asset_name_request import Assetsv3UpdateAssetNameRequest
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -2303,7 +2303,7 @@ UpdatePolicy - Update existing Policy status.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.assetsv3_update_policy_request import Assetsv3UpdatePolicyRequest
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint

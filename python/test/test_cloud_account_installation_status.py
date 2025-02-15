@@ -35,7 +35,8 @@ class TestCloudAccountInstallationStatus(unittest.TestCase):
         model = CloudAccountInstallationStatus()
         if include_optional:
             return CloudAccountInstallationStatus(
-                discovery_permissions = True
+                discovery_permissions = True,
+                is_install_complete = True
             )
         else:
             return CloudAccountInstallationStatus(

@@ -21,7 +21,7 @@ Summary: Create dashboard Description: Create a unique dashboard.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.dashboardsv3_create_dashboard_response import Dashboardsv3CreateDashboardResponse
 from ibm_gdsc_sdk_software.models.dashboardsv3_dashboard import Dashboardsv3Dashboard
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -107,7 +107,7 @@ Summary: Delete dashboard Description: Delete a unique dashboard.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.dashboardsv3_delete_dashboard_request import Dashboardsv3DeleteDashboardRequest
 from ibm_gdsc_sdk_software.models.dashboardsv3_delete_dashboard_response import Dashboardsv3DeleteDashboardResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -195,7 +195,7 @@ Summary: Get dashboards Description: Get a list of dashboards with all data.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.dashboardsv3_get_dashboards_response import Dashboardsv3GetDashboardsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -276,7 +276,7 @@ Summary: Update dashboard Description: Update a dashboard.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.dashboardsv3_update_dashboard_request import Dashboardsv3UpdateDashboardRequest
 from ibm_gdsc_sdk_software.models.dashboardsv3_update_dashboard_response import Dashboardsv3UpdateDashboardResponse
 from ibm_gdsc_sdk_software.rest import ApiException

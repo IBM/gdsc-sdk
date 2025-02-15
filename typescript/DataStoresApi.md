@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 # **listDataStores**
 > ListDataStores200Response listDataStores()
 
-List all data stores discovered by Guardium Insights SaaS DSPM.
+List all data stores discovered by Guardium DSPM.
 
 ### Example
 

@@ -5,6 +5,7 @@ import {mergeMap, map} from  '../rxjsStub';
 import { AccessType } from '../models/AccessType';
 import { AccessTypeCountInner } from '../models/AccessTypeCountInner';
 import { AccessibleDataStores } from '../models/AccessibleDataStores';
+import { AccessiblePermissionsConfigurations } from '../models/AccessiblePermissionsConfigurations';
 import { ActualFlow } from '../models/ActualFlow';
 import { ActualFlowPath } from '../models/ActualFlowPath';
 import { ActualFlowsSummary } from '../models/ActualFlowsSummary';
@@ -136,6 +137,7 @@ import { Auditv3GetActivityRecordsResponse } from '../models/Auditv3GetActivityR
 import { Auditv3PutActivityRecordRequest } from '../models/Auditv3PutActivityRecordRequest';
 import { Auditv3PutActivityRecordResponse } from '../models/Auditv3PutActivityRecordResponse';
 import { AuthCode } from '../models/AuthCode';
+import { AuthInfo } from '../models/AuthInfo';
 import { AuthUrl } from '../models/AuthUrl';
 import { Authenticate200Response } from '../models/Authenticate200Response';
 import { Authenticate400Response } from '../models/Authenticate400Response';
@@ -150,6 +152,7 @@ import { AuthserverGetUserResponse } from '../models/AuthserverGetUserResponse';
 import { AuthserverListOauthClientResponse } from '../models/AuthserverListOauthClientResponse';
 import { AuthserverOauthClient } from '../models/AuthserverOauthClient';
 import { ClassificationStatus } from '../models/ClassificationStatus';
+import { ClientInfo } from '../models/ClientInfo';
 import { CloudAccountCountInner } from '../models/CloudAccountCountInner';
 import { CloudAccountDetails } from '../models/CloudAccountDetails';
 import { CloudAccountInstallationStatus } from '../models/CloudAccountInstallationStatus';
@@ -550,6 +553,8 @@ import { ListPotentialFlowsPaths200Response } from '../models/ListPotentialFlows
 import { ListSensitivities200Response } from '../models/ListSensitivities200Response';
 import { ListSensitivitiesFilterParameter } from '../models/ListSensitivitiesFilterParameter';
 import { ListTrusteesFilterParameter } from '../models/ListTrusteesFilterParameter';
+import { ListUsersEntitlements200Response } from '../models/ListUsersEntitlements200Response';
+import { ListUsersEntitlements200ResponseResultsInner } from '../models/ListUsersEntitlements200ResponseResultsInner';
 import { ListVendorDataStoresFilterParameter } from '../models/ListVendorDataStoresFilterParameter';
 import { ListVulnerabilities200Response } from '../models/ListVulnerabilities200Response';
 import { ListVulnerabilitiesByDataStore200Response } from '../models/ListVulnerabilitiesByDataStore200Response';
@@ -596,6 +601,7 @@ import { Outliersenginev3SourcesStats } from '../models/Outliersenginev3SourcesS
 import { Outliersenginev3StatisticsResponse } from '../models/Outliersenginev3StatisticsResponse';
 import { Outliersenginev3UpdateWorkingHoursPeriodsRequest } from '../models/Outliersenginev3UpdateWorkingHoursPeriodsRequest';
 import { Outliersenginev3WorkingHoursPeriod } from '../models/Outliersenginev3WorkingHoursPeriod';
+import { PermissionsConfigurations } from '../models/PermissionsConfigurations';
 import { Pipelineconfigv3DeleteTenantResponse } from '../models/Pipelineconfigv3DeleteTenantResponse';
 import { Policybuilderv3Action } from '../models/Policybuilderv3Action';
 import { Policybuilderv3ActionMetadata } from '../models/Policybuilderv3ActionMetadata';
@@ -664,7 +670,6 @@ import { ProtobufFieldMask } from '../models/ProtobufFieldMask';
 import { ProtobufNullValue } from '../models/ProtobufNullValue';
 import { Qspmdatamanagerv3AppData } from '../models/Qspmdatamanagerv3AppData';
 import { Qspmdatamanagerv3AppDataResponse } from '../models/Qspmdatamanagerv3AppDataResponse';
-import { Qspmdatamanagerv3InsertEntitiesRequest } from '../models/Qspmdatamanagerv3InsertEntitiesRequest';
 import { Qspmdatamanagerv3MasterDataModel } from '../models/Qspmdatamanagerv3MasterDataModel';
 import { Qspmdatamanagerv3MasterDataResponse } from '../models/Qspmdatamanagerv3MasterDataResponse';
 import { Qspmdatamanagerv3NetlocData } from '../models/Qspmdatamanagerv3NetlocData';
@@ -672,9 +677,7 @@ import { Qspmdatamanagerv3NetlocDataResponse } from '../models/Qspmdatamanagerv3
 import { Qspmdatamanagerv3Row } from '../models/Qspmdatamanagerv3Row';
 import { Qspmdatamanagerv3ScanRequest } from '../models/Qspmdatamanagerv3ScanRequest';
 import { Qspmdatamanagerv3ScanResponse } from '../models/Qspmdatamanagerv3ScanResponse';
-import { Qspmdatamanagerv3SearchEntityDataRequest } from '../models/Qspmdatamanagerv3SearchEntityDataRequest';
 import { Qspmdatamanagerv3SearchEntityDataResponse } from '../models/Qspmdatamanagerv3SearchEntityDataResponse';
-import { Qspmdatamanagerv3UpdateNetLocRequest } from '../models/Qspmdatamanagerv3UpdateNetLocRequest';
 import { Qspmdatamanagerv3UpdateNetLocResponse } from '../models/Qspmdatamanagerv3UpdateNetLocResponse';
 import { Qspmpluginmanagerv3EntityNewSchema } from '../models/Qspmpluginmanagerv3EntityNewSchema';
 import { Qspmpluginmanagerv3PluginRQ } from '../models/Qspmpluginmanagerv3PluginRQ';
@@ -969,6 +972,7 @@ import { Schedulerv3TaskType } from '../models/Schedulerv3TaskType';
 import { Schedulerv3UpdateScheduledJobRequest } from '../models/Schedulerv3UpdateScheduledJobRequest';
 import { Schedulerv3UpdateScheduledJobResponse } from '../models/Schedulerv3UpdateScheduledJobResponse';
 import { Schedulerv3WorkflowType } from '../models/Schedulerv3WorkflowType';
+import { Script } from '../models/Script';
 import { SensitivitiesItemsInner } from '../models/SensitivitiesItemsInner';
 import { SensitivitiesSummary } from '../models/SensitivitiesSummary';
 import { Sensitivity } from '../models/Sensitivity';
@@ -1085,6 +1089,7 @@ import { Tenantuserv3UpdateUsersBulkResponse } from '../models/Tenantuserv3Updat
 import { Tenantuserv3User } from '../models/Tenantuserv3User';
 import { Tenantuserv3UserState } from '../models/Tenantuserv3UserState';
 import { Tenantuserv3UserTenant } from '../models/Tenantuserv3UserTenant';
+import { TokenExpiryInfo } from '../models/TokenExpiryInfo';
 import { Trustee } from '../models/Trustee';
 import { TypesCountInner } from '../models/TypesCountInner';
 import { Universalconnectormanagerv3ConnectionRoute } from '../models/Universalconnectormanagerv3ConnectionRoute';
@@ -1110,10 +1115,12 @@ import { UpdateCustodianBody } from '../models/UpdateCustodianBody';
 import { UpdateDatastoreCustodian200Response } from '../models/UpdateDatastoreCustodian200Response';
 import { UpdateResourceReviewBody } from '../models/UpdateResourceReviewBody';
 import { UpdateResourceReviewStatus200Response } from '../models/UpdateResourceReviewStatus200Response';
-import { UserEntitlementsFilter } from '../models/UserEntitlementsFilter';
+import { UserEntitlementInfo } from '../models/UserEntitlementInfo';
 import { UserEntitlementsUserSensitiveCategoriesOptionsUserIdParameter } from '../models/UserEntitlementsUserSensitiveCategoriesOptionsUserIdParameter';
 import { UserSensitiveCategories } from '../models/UserSensitiveCategories';
+import { UserSensitiveCategories200Response } from '../models/UserSensitiveCategories200Response';
 import { UserSensitiveCategoriesSensitiveCategoriesInner } from '../models/UserSensitiveCategoriesSensitiveCategoriesInner';
+import { UserStores200Response } from '../models/UserStores200Response';
 import { Vendor } from '../models/Vendor';
 import { VendorAccount } from '../models/VendorAccount';
 import { VendorCertificate } from '../models/VendorCertificate';
@@ -2526,8 +2533,8 @@ export class ObservableCloudAccountsApi {
     }
 
     /**
-     * You can add a single or multiple cloud account connections from the same cloud provider.<BR>Adding these cloud account connections will trigger Guardium Insights SaaS DSPM for data store discovery.<BR>To enable data classification, run the \'Add a new region for data classification\' API.
-     * Add cloud account connections to Guardium Insights SaaS DSPM
+     * You can add a single or multiple cloud account connections from the same cloud provider.<BR>Adding these cloud account connections will trigger Guardium DSPM for data store discovery.<BR>To enable data classification, run the \'Add a new region for data classification\' API.
+     * Add cloud account connections to DSPM
      * @param addCloudAccountsRequest 
      */
     public addCloudAccountsWithHttpInfo(addCloudAccountsRequest: AddCloudAccountsRequest, _options?: Configuration): Observable<HttpInfo<AddCloudAccounts200Response>> {
@@ -2550,8 +2557,8 @@ export class ObservableCloudAccountsApi {
     }
 
     /**
-     * You can add a single or multiple cloud account connections from the same cloud provider.<BR>Adding these cloud account connections will trigger Guardium Insights SaaS DSPM for data store discovery.<BR>To enable data classification, run the \'Add a new region for data classification\' API.
-     * Add cloud account connections to Guardium Insights SaaS DSPM
+     * You can add a single or multiple cloud account connections from the same cloud provider.<BR>Adding these cloud account connections will trigger Guardium DSPM for data store discovery.<BR>To enable data classification, run the \'Add a new region for data classification\' API.
+     * Add cloud account connections to DSPM
      * @param addCloudAccountsRequest 
      */
     public addCloudAccounts(addCloudAccountsRequest: AddCloudAccountsRequest, _options?: Configuration): Observable<AddCloudAccounts200Response> {
@@ -2685,37 +2692,6 @@ export class ObservableCloudAccountsApi {
     }
 
     /**
-     * Generate an administrator consent URL for Salesforce integration.
-     * Generate a Salesforce consent URL
-     */
-    public generateSalesforceAuthUrlWithHttpInfo(_options?: Configuration): Observable<HttpInfo<AuthUrl>> {
-        const requestContextPromise = this.requestFactory.generateSalesforceAuthUrl(_options);
-
-        // build promise chain
-        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
-        for (let middleware of this.configuration.middleware) {
-            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
-        }
-
-        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
-            pipe(mergeMap((response: ResponseContext) => {
-                let middlewarePostObservable = of(response);
-                for (let middleware of this.configuration.middleware) {
-                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
-                }
-                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.generateSalesforceAuthUrlWithHttpInfo(rsp)));
-            }));
-    }
-
-    /**
-     * Generate an administrator consent URL for Salesforce integration.
-     * Generate a Salesforce consent URL
-     */
-    public generateSalesforceAuthUrl(_options?: Configuration): Observable<AuthUrl> {
-        return this.generateSalesforceAuthUrlWithHttpInfo(_options).pipe(map((apiResponse: HttpInfo<AuthUrl>) => apiResponse.data));
-    }
-
-    /**
      * Generate a Slack authentication URL.
      * Generate a Slack authentication URL
      */
@@ -2747,7 +2723,40 @@ export class ObservableCloudAccountsApi {
     }
 
     /**
-     * Get the installation status of Guardium Insights SaaS DSPM for a region.
+     * Generate an administrator consent URL for Snowflake integration.
+     * Validate and Generate a Snowflake OAuth URL
+     * @param clientInfo 
+     */
+    public generateSnowflakeAuthUrlWithHttpInfo(clientInfo: ClientInfo, _options?: Configuration): Observable<HttpInfo<AuthUrl>> {
+        const requestContextPromise = this.requestFactory.generateSnowflakeAuthUrl(clientInfo, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.generateSnowflakeAuthUrlWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Generate an administrator consent URL for Snowflake integration.
+     * Validate and Generate a Snowflake OAuth URL
+     * @param clientInfo 
+     */
+    public generateSnowflakeAuthUrl(clientInfo: ClientInfo, _options?: Configuration): Observable<AuthUrl> {
+        return this.generateSnowflakeAuthUrlWithHttpInfo(clientInfo, _options).pipe(map((apiResponse: HttpInfo<AuthUrl>) => apiResponse.data));
+    }
+
+    /**
+     * Get the installation status of Guardium DSPM for a region.
      * Get the status of analyzer installation for a region
      * @param cloudProvider The cloud provider for the cloud account
      * @param region The region code
@@ -2772,7 +2781,7 @@ export class ObservableCloudAccountsApi {
     }
 
     /**
-     * Get the installation status of Guardium Insights SaaS DSPM for a region.
+     * Get the installation status of Guardium DSPM for a region.
      * Get the status of analyzer installation for a region
      * @param cloudProvider The cloud provider for the cloud account
      * @param region The region code
@@ -2848,11 +2857,12 @@ export class ObservableCloudAccountsApi {
     }
 
     /**
-     * List the compliance frameworks selected.
-     * Get a list of selected compliances
+     * Get Snowflake Refresh Token Expiry date.
+     * Get Snowflake Refresh Token Expiry date
+     * @param providerId The ID of the provider
      */
-    public getCompliancesWithHttpInfo(_options?: Configuration): Observable<HttpInfo<Array<Compliance>>> {
-        const requestContextPromise = this.requestFactory.getCompliances(_options);
+    public getRefreshTokenExpiryWithHttpInfo(providerId: string, _options?: Configuration): Observable<HttpInfo<TokenExpiryInfo>> {
+        const requestContextPromise = this.requestFactory.getRefreshTokenExpiry(providerId, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -2866,21 +2876,22 @@ export class ObservableCloudAccountsApi {
                 for (let middleware of this.configuration.middleware) {
                     middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
                 }
-                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getCompliancesWithHttpInfo(rsp)));
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getRefreshTokenExpiryWithHttpInfo(rsp)));
             }));
     }
 
     /**
-     * List the compliance frameworks selected.
-     * Get a list of selected compliances
+     * Get Snowflake Refresh Token Expiry date.
+     * Get Snowflake Refresh Token Expiry date
+     * @param providerId The ID of the provider
      */
-    public getCompliances(_options?: Configuration): Observable<Array<Compliance>> {
-        return this.getCompliancesWithHttpInfo(_options).pipe(map((apiResponse: HttpInfo<Array<Compliance>>) => apiResponse.data));
+    public getRefreshTokenExpiry(providerId: string, _options?: Configuration): Observable<TokenExpiryInfo> {
+        return this.getRefreshTokenExpiryWithHttpInfo(providerId, _options).pipe(map((apiResponse: HttpInfo<TokenExpiryInfo>) => apiResponse.data));
     }
 
     /**
-     * Get a list of all the connected cloud accounts monitored by Guardium Insights SaaS DSPM.
-     * List cloud accounts connected to Guardium Insights SaaS DSPM
+     * Get a list of all the connected cloud accounts monitored by Guardium DSPM.
+     * List cloud accounts connected to DSPM
      */
     public listLinkedAccountsWithHttpInfo(_options?: Configuration): Observable<HttpInfo<Array<LinkedAccounts>>> {
         const requestContextPromise = this.requestFactory.listLinkedAccounts(_options);
@@ -2902,15 +2913,15 @@ export class ObservableCloudAccountsApi {
     }
 
     /**
-     * Get a list of all the connected cloud accounts monitored by Guardium Insights SaaS DSPM.
-     * List cloud accounts connected to Guardium Insights SaaS DSPM
+     * Get a list of all the connected cloud accounts monitored by Guardium DSPM.
+     * List cloud accounts connected to DSPM
      */
     public listLinkedAccounts(_options?: Configuration): Observable<Array<LinkedAccounts>> {
         return this.listLinkedAccountsWithHttpInfo(_options).pipe(map((apiResponse: HttpInfo<Array<LinkedAccounts>>) => apiResponse.data));
     }
 
     /**
-     * Post cloud account ID connections to be removed from Guardium Insights SaaS DSPM.
+     * Post cloud account ID connections to be removed from Guardium DSPM.
      * Post cloud account ID connections to be removed
      * @param accountIds 
      * @param serviceProvider 
@@ -2935,7 +2946,7 @@ export class ObservableCloudAccountsApi {
     }
 
     /**
-     * Post cloud account ID connections to be removed from Guardium Insights SaaS DSPM.
+     * Post cloud account ID connections to be removed from Guardium DSPM.
      * Post cloud account ID connections to be removed
      * @param accountIds 
      * @param serviceProvider 
@@ -3011,12 +3022,11 @@ export class ObservableCloudAccountsApi {
     }
 
     /**
-     * Select one or more compliance frameworks.
-     * Set a list of selected compliances
-     * @param compliance 
+     * Generate Snowflake integration Script.
+     * Generate Snowflake Integration Script
      */
-    public setCompliancesWithHttpInfo(compliance: Array<Compliance>, _options?: Configuration): Observable<HttpInfo<any>> {
-        const requestContextPromise = this.requestFactory.setCompliances(compliance, _options);
+    public snowflakeIntegrationScriptWithHttpInfo(_options?: Configuration): Observable<HttpInfo<Script>> {
+        const requestContextPromise = this.requestFactory.snowflakeIntegrationScript(_options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -3030,17 +3040,16 @@ export class ObservableCloudAccountsApi {
                 for (let middleware of this.configuration.middleware) {
                     middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
                 }
-                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.setCompliancesWithHttpInfo(rsp)));
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.snowflakeIntegrationScriptWithHttpInfo(rsp)));
             }));
     }
 
     /**
-     * Select one or more compliance frameworks.
-     * Set a list of selected compliances
-     * @param compliance 
+     * Generate Snowflake integration Script.
+     * Generate Snowflake Integration Script
      */
-    public setCompliances(compliance: Array<Compliance>, _options?: Configuration): Observable<any> {
-        return this.setCompliancesWithHttpInfo(compliance, _options).pipe(map((apiResponse: HttpInfo<any>) => apiResponse.data));
+    public snowflakeIntegrationScript(_options?: Configuration): Observable<Script> {
+        return this.snowflakeIntegrationScriptWithHttpInfo(_options).pipe(map((apiResponse: HttpInfo<Script>) => apiResponse.data));
     }
 
     /**
@@ -3110,39 +3119,6 @@ export class ObservableCloudAccountsApi {
     }
 
     /**
-     * Submit customer information for Salesforce integration.
-     * Submit Salesforce customer information
-     * @param authCode 
-     */
-    public submitSalesforceAuthCodeWithHttpInfo(authCode: AuthCode, _options?: Configuration): Observable<HttpInfo<void>> {
-        const requestContextPromise = this.requestFactory.submitSalesforceAuthCode(authCode, _options);
-
-        // build promise chain
-        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
-        for (let middleware of this.configuration.middleware) {
-            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
-        }
-
-        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
-            pipe(mergeMap((response: ResponseContext) => {
-                let middlewarePostObservable = of(response);
-                for (let middleware of this.configuration.middleware) {
-                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
-                }
-                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.submitSalesforceAuthCodeWithHttpInfo(rsp)));
-            }));
-    }
-
-    /**
-     * Submit customer information for Salesforce integration.
-     * Submit Salesforce customer information
-     * @param authCode 
-     */
-    public submitSalesforceAuthCode(authCode: AuthCode, _options?: Configuration): Observable<void> {
-        return this.submitSalesforceAuthCodeWithHttpInfo(authCode, _options).pipe(map((apiResponse: HttpInfo<void>) => apiResponse.data));
-    }
-
-    /**
      * Submit a Slack authentication code.
      * Submit a Slack authentication code
      * @param submitAuthCode 
@@ -3173,6 +3149,39 @@ export class ObservableCloudAccountsApi {
      */
     public submitSlackAuthCode(submitAuthCode: SubmitAuthCode, _options?: Configuration): Observable<any> {
         return this.submitSlackAuthCodeWithHttpInfo(submitAuthCode, _options).pipe(map((apiResponse: HttpInfo<any>) => apiResponse.data));
+    }
+
+    /**
+     * Storing code that is returned from Snowflake oAuth.
+     * Submit Snowflake oAuth code
+     * @param authInfo 
+     */
+    public submitSnowflakeAuthCodeWithHttpInfo(authInfo: AuthInfo, _options?: Configuration): Observable<HttpInfo<void>> {
+        const requestContextPromise = this.requestFactory.submitSnowflakeAuthCode(authInfo, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.submitSnowflakeAuthCodeWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Storing code that is returned from Snowflake oAuth.
+     * Submit Snowflake oAuth code
+     * @param authInfo 
+     */
+    public submitSnowflakeAuthCode(authInfo: AuthInfo, _options?: Configuration): Observable<void> {
+        return this.submitSnowflakeAuthCodeWithHttpInfo(authInfo, _options).pipe(map((apiResponse: HttpInfo<void>) => apiResponse.data));
     }
 
 }
@@ -4362,7 +4371,7 @@ export class ObservableDataMovementsApi {
     }
 
     /**
-     * Get a summary of all the actual flows discovered by Guardium Insights SaaS DSPM, that is, details about source and destination, and other information.
+     * Get a summary of all the actual flows discovered by Guardium DSPM, that is, details about source and destination, and other information.
      * Get summary of actual flows
      * @param filter 
      */
@@ -4386,7 +4395,7 @@ export class ObservableDataMovementsApi {
     }
 
     /**
-     * Get a summary of all the actual flows discovered by Guardium Insights SaaS DSPM, that is, details about source and destination, and other information.
+     * Get a summary of all the actual flows discovered by Guardium DSPM, that is, details about source and destination, and other information.
      * Get summary of actual flows
      * @param filter 
      */
@@ -4808,8 +4817,8 @@ export class ObservableDataResourcesApi {
     }
 
     /**
-     * Removes a resource, with all its sensitivities, from Guardium Insights SaaS DSPM dashboard. This action does not remove the resource from the resource\'s source environment.
-     * Remove resource from Guardium Insights SaaS DSPM
+     * Removes a resource, with all its sensitivities, from Guardium DSPM dashboard. This action does not remove the resource from the resource\'s source environment.
+     * Remove resource from DSPM
      * @param dataResourceId Data resource ID
      * @param dataStoreId Data store ID
      */
@@ -4833,8 +4842,8 @@ export class ObservableDataResourcesApi {
     }
 
     /**
-     * Removes a resource, with all its sensitivities, from Guardium Insights SaaS DSPM dashboard. This action does not remove the resource from the resource\'s source environment.
-     * Remove resource from Guardium Insights SaaS DSPM
+     * Removes a resource, with all its sensitivities, from Guardium DSPM dashboard. This action does not remove the resource from the resource\'s source environment.
+     * Remove resource from DSPM
      * @param dataResourceId Data resource ID
      * @param dataStoreId Data store ID
      */
@@ -4896,7 +4905,7 @@ export class ObservableDataSensitivitiesApi {
     }
 
     /**
-     * Get a summarised information about all sensitivities classified by Guardium Insights SaaS DSPM.
+     * Get a summarised information about all sensitivities classified by Guardium DSPM.
      * Get the summary of sensitivities
      * @param filter 
      */
@@ -4920,7 +4929,7 @@ export class ObservableDataSensitivitiesApi {
     }
 
     /**
-     * Get a summarised information about all sensitivities classified by Guardium Insights SaaS DSPM.
+     * Get a summarised information about all sensitivities classified by Guardium DSPM.
      * Get the summary of sensitivities
      * @param filter 
      */
@@ -5120,7 +5129,7 @@ export class ObservableDataStoresApi {
     }
 
     /**
-     * List all data stores discovered by Guardium Insights SaaS DSPM.
+     * List all data stores discovered by Guardium DSPM.
      * List data stores
      * @param filter 
      * @param sort 
@@ -5147,7 +5156,7 @@ export class ObservableDataStoresApi {
     }
 
     /**
-     * List all data stores discovered by Guardium Insights SaaS DSPM.
+     * List all data stores discovered by Guardium DSPM.
      * List data stores
      * @param filter 
      * @param sort 
@@ -7639,7 +7648,7 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for Guardium Insights.
+     * Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for Guardium.
      * @param centralManagerId Central Manager ID.
      */
     public guardiumConnectorGetLatestDMExtractionProfileWithHttpInfo(centralManagerId: string, _options?: Configuration): Observable<HttpInfo<Guardiumconnectorv3GetLatestDMExtractionProfileResponse>> {
@@ -7662,7 +7671,7 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for Guardium Insights.
+     * Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for Guardium.
      * @param centralManagerId Central Manager ID.
      */
     public guardiumConnectorGetLatestDMExtractionProfile(centralManagerId: string, _options?: Configuration): Observable<Guardiumconnectorv3GetLatestDMExtractionProfileResponse> {
@@ -7831,7 +7840,7 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Setup CM Description: Set up the registration between a GDP Central manager and Guardium Insights.
+     * Summary: Setup CM Description: Set up the registration between a GDP Central manager and Guardium.
      * @param guardiumconnectorv3SetupCMRequest 
      */
     public guardiumConnectorSetupCMWithHttpInfo(guardiumconnectorv3SetupCMRequest: Guardiumconnectorv3SetupCMRequest, _options?: Configuration): Observable<HttpInfo<Guardiumconnectorv3SetupCMResponse>> {
@@ -7854,7 +7863,7 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Setup CM Description: Set up the registration between a GDP Central manager and Guardium Insights.
+     * Summary: Setup CM Description: Set up the registration between a GDP Central manager and Guardium.
      * @param guardiumconnectorv3SetupCMRequest 
      */
     public guardiumConnectorSetupCM(guardiumconnectorv3SetupCMRequest: Guardiumconnectorv3SetupCMRequest, _options?: Configuration): Observable<Guardiumconnectorv3SetupCMResponse> {
@@ -9959,37 +9968,6 @@ export class ObservableQSDataManagerApi {
     }
 
     /**
-     * Summary: Fetch Application Provisoning Details Description: Fetch details from app dimension entity for given provision id.
-     * @param provisionId Identifier for the provision request
-     */
-    public qSDataManagerGetAppDataForProvisionIdWithHttpInfo(provisionId: string, _options?: Configuration): Observable<HttpInfo<Qspmdatamanagerv3AppDataResponse>> {
-        const requestContextPromise = this.requestFactory.qSDataManagerGetAppDataForProvisionId(provisionId, _options);
-
-        // build promise chain
-        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
-        for (let middleware of this.configuration.middleware) {
-            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
-        }
-
-        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
-            pipe(mergeMap((response: ResponseContext) => {
-                let middlewarePostObservable = of(response);
-                for (let middleware of this.configuration.middleware) {
-                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
-                }
-                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.qSDataManagerGetAppDataForProvisionIdWithHttpInfo(rsp)));
-            }));
-    }
-
-    /**
-     * Summary: Fetch Application Provisoning Details Description: Fetch details from app dimension entity for given provision id.
-     * @param provisionId Identifier for the provision request
-     */
-    public qSDataManagerGetAppDataForProvisionId(provisionId: string, _options?: Configuration): Observable<Qspmdatamanagerv3AppDataResponse> {
-        return this.qSDataManagerGetAppDataForProvisionIdWithHttpInfo(provisionId, _options).pipe(map((apiResponse: HttpInfo<Qspmdatamanagerv3AppDataResponse>) => apiResponse.data));
-    }
-
-    /**
      * Summary: master data for all entities Description: Retrieves All Dimension and Fact tables data.
      */
     public qSDataManagerGetMasterDataWithHttpInfo(_options?: Configuration): Observable<HttpInfo<Qspmdatamanagerv3MasterDataResponse>> {
@@ -10016,68 +9994,6 @@ export class ObservableQSDataManagerApi {
      */
     public qSDataManagerGetMasterData(_options?: Configuration): Observable<Qspmdatamanagerv3MasterDataResponse> {
         return this.qSDataManagerGetMasterDataWithHttpInfo(_options).pipe(map((apiResponse: HttpInfo<Qspmdatamanagerv3MasterDataResponse>) => apiResponse.data));
-    }
-
-    /**
-     * Summary: Fetch Netlocation Details Description: Fetch details from netloc dimension entity for a given scanid.
-     * @param scanId Identifier for the scan to retrieve netloc data for
-     */
-    public qSDataManagerGetNetLocDimDataForScanIdWithHttpInfo(scanId: string, _options?: Configuration): Observable<HttpInfo<Qspmdatamanagerv3NetlocDataResponse>> {
-        const requestContextPromise = this.requestFactory.qSDataManagerGetNetLocDimDataForScanId(scanId, _options);
-
-        // build promise chain
-        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
-        for (let middleware of this.configuration.middleware) {
-            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
-        }
-
-        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
-            pipe(mergeMap((response: ResponseContext) => {
-                let middlewarePostObservable = of(response);
-                for (let middleware of this.configuration.middleware) {
-                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
-                }
-                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.qSDataManagerGetNetLocDimDataForScanIdWithHttpInfo(rsp)));
-            }));
-    }
-
-    /**
-     * Summary: Fetch Netlocation Details Description: Fetch details from netloc dimension entity for a given scanid.
-     * @param scanId Identifier for the scan to retrieve netloc data for
-     */
-    public qSDataManagerGetNetLocDimDataForScanId(scanId: string, _options?: Configuration): Observable<Qspmdatamanagerv3NetlocDataResponse> {
-        return this.qSDataManagerGetNetLocDimDataForScanIdWithHttpInfo(scanId, _options).pipe(map((apiResponse: HttpInfo<Qspmdatamanagerv3NetlocDataResponse>) => apiResponse.data));
-    }
-
-    /**
-     * Summary: Insert Data Description: Insert All Dimension and Fact tables data.
-     * @param qspmdatamanagerv3InsertEntitiesRequest 
-     */
-    public qSDataManagerInsertAllEntitiesWithHttpInfo(qspmdatamanagerv3InsertEntitiesRequest: Qspmdatamanagerv3InsertEntitiesRequest, _options?: Configuration): Observable<HttpInfo<any>> {
-        const requestContextPromise = this.requestFactory.qSDataManagerInsertAllEntities(qspmdatamanagerv3InsertEntitiesRequest, _options);
-
-        // build promise chain
-        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
-        for (let middleware of this.configuration.middleware) {
-            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
-        }
-
-        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
-            pipe(mergeMap((response: ResponseContext) => {
-                let middlewarePostObservable = of(response);
-                for (let middleware of this.configuration.middleware) {
-                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
-                }
-                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.qSDataManagerInsertAllEntitiesWithHttpInfo(rsp)));
-            }));
-    }
-
-    /**
-     * Summary: Insert Data Description: Insert All Dimension and Fact tables data.
-     * @param qspmdatamanagerv3InsertEntitiesRequest 
-     */
-    public qSDataManagerInsertAllEntities(qspmdatamanagerv3InsertEntitiesRequest: Qspmdatamanagerv3InsertEntitiesRequest, _options?: Configuration): Observable<any> {
-        return this.qSDataManagerInsertAllEntitiesWithHttpInfo(qspmdatamanagerv3InsertEntitiesRequest, _options).pipe(map((apiResponse: HttpInfo<any>) => apiResponse.data));
     }
 
     /**
@@ -10140,68 +10056,6 @@ export class ObservableQSDataManagerApi {
      */
     public qSDataManagerRetrieveScan(scanId: string, _options?: Configuration): Observable<Qspmdatamanagerv3ScanResponse> {
         return this.qSDataManagerRetrieveScanWithHttpInfo(scanId, _options).pipe(map((apiResponse: HttpInfo<Qspmdatamanagerv3ScanResponse>) => apiResponse.data));
-    }
-
-    /**
-     * Summary: Retrieve Entity Data Description:Retrieve Entity data for given parameters
-     * @param qspmdatamanagerv3SearchEntityDataRequest 
-     */
-    public qSDataManagerSearchEntityDataWithHttpInfo(qspmdatamanagerv3SearchEntityDataRequest: Qspmdatamanagerv3SearchEntityDataRequest, _options?: Configuration): Observable<HttpInfo<Qspmdatamanagerv3SearchEntityDataResponse>> {
-        const requestContextPromise = this.requestFactory.qSDataManagerSearchEntityData(qspmdatamanagerv3SearchEntityDataRequest, _options);
-
-        // build promise chain
-        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
-        for (let middleware of this.configuration.middleware) {
-            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
-        }
-
-        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
-            pipe(mergeMap((response: ResponseContext) => {
-                let middlewarePostObservable = of(response);
-                for (let middleware of this.configuration.middleware) {
-                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
-                }
-                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.qSDataManagerSearchEntityDataWithHttpInfo(rsp)));
-            }));
-    }
-
-    /**
-     * Summary: Retrieve Entity Data Description:Retrieve Entity data for given parameters
-     * @param qspmdatamanagerv3SearchEntityDataRequest 
-     */
-    public qSDataManagerSearchEntityData(qspmdatamanagerv3SearchEntityDataRequest: Qspmdatamanagerv3SearchEntityDataRequest, _options?: Configuration): Observable<Qspmdatamanagerv3SearchEntityDataResponse> {
-        return this.qSDataManagerSearchEntityDataWithHttpInfo(qspmdatamanagerv3SearchEntityDataRequest, _options).pipe(map((apiResponse: HttpInfo<Qspmdatamanagerv3SearchEntityDataResponse>) => apiResponse.data));
-    }
-
-    /**
-     * Summary: Update Netlocation Details Description: Update netloc dimension entity for agiven scanid.
-     * @param qspmdatamanagerv3UpdateNetLocRequest 
-     */
-    public qSDataManagerUpdateNetLocationWithHttpInfo(qspmdatamanagerv3UpdateNetLocRequest: Qspmdatamanagerv3UpdateNetLocRequest, _options?: Configuration): Observable<HttpInfo<Qspmdatamanagerv3UpdateNetLocResponse>> {
-        const requestContextPromise = this.requestFactory.qSDataManagerUpdateNetLocation(qspmdatamanagerv3UpdateNetLocRequest, _options);
-
-        // build promise chain
-        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
-        for (let middleware of this.configuration.middleware) {
-            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
-        }
-
-        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
-            pipe(mergeMap((response: ResponseContext) => {
-                let middlewarePostObservable = of(response);
-                for (let middleware of this.configuration.middleware) {
-                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
-                }
-                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.qSDataManagerUpdateNetLocationWithHttpInfo(rsp)));
-            }));
-    }
-
-    /**
-     * Summary: Update Netlocation Details Description: Update netloc dimension entity for agiven scanid.
-     * @param qspmdatamanagerv3UpdateNetLocRequest 
-     */
-    public qSDataManagerUpdateNetLocation(qspmdatamanagerv3UpdateNetLocRequest: Qspmdatamanagerv3UpdateNetLocRequest, _options?: Configuration): Observable<Qspmdatamanagerv3UpdateNetLocResponse> {
-        return this.qSDataManagerUpdateNetLocationWithHttpInfo(qspmdatamanagerv3UpdateNetLocRequest, _options).pipe(map((apiResponse: HttpInfo<Qspmdatamanagerv3UpdateNetLocResponse>) => apiResponse.data));
     }
 
 }
@@ -12701,7 +12555,7 @@ export class ObservableRiskAnalyticsControllerApi {
     }
 
     /**
-     * Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium Insights. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium Insights.
+     * Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium.
      * @param riskanalyticscontrollerv3SetUserUISettingsRequest 
      */
     public riskAnalyticsControllerSetUserUISettingsWithHttpInfo(riskanalyticscontrollerv3SetUserUISettingsRequest: Riskanalyticscontrollerv3SetUserUISettingsRequest, _options?: Configuration): Observable<HttpInfo<Riskanalyticscontrollerv3SetUserUISettingsResponse>> {
@@ -12724,7 +12578,7 @@ export class ObservableRiskAnalyticsControllerApi {
     }
 
     /**
-     * Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium Insights. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium Insights.
+     * Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium.
      * @param riskanalyticscontrollerv3SetUserUISettingsRequest 
      */
     public riskAnalyticsControllerSetUserUISettings(riskanalyticscontrollerv3SetUserUISettingsRequest: Riskanalyticscontrollerv3SetUserUISettingsRequest, _options?: Configuration): Observable<Riskanalyticscontrollerv3SetUserUISettingsResponse> {
@@ -14664,7 +14518,7 @@ export class ObservableThirdPartyVendorsApi {
     }
 
     /**
-     * Get a list of all third party vendors associated to your cloud environments (relevant for the cloud environments connected to Guardium Insights SaaS DSPM only).
+     * Get a list of all third party vendors associated to your cloud environments (relevant for the cloud environments connected to Guardium DSPM only).
      * Get the summary of a third party vendor
      */
     public listLinkedVendorsWithHttpInfo(_options?: Configuration): Observable<HttpInfo<Array<LinkedVendor>>> {
@@ -14687,7 +14541,7 @@ export class ObservableThirdPartyVendorsApi {
     }
 
     /**
-     * Get a list of all third party vendors associated to your cloud environments (relevant for the cloud environments connected to Guardium Insights SaaS DSPM only).
+     * Get a list of all third party vendors associated to your cloud environments (relevant for the cloud environments connected to Guardium DSPM only).
      * Get the summary of a third party vendor
      */
     public listLinkedVendors(_options?: Configuration): Observable<Array<LinkedVendor>> {
@@ -14695,7 +14549,7 @@ export class ObservableThirdPartyVendorsApi {
     }
 
     /**
-     * Get a list of roles, buckets or service principles, and their entitled permissions associated to your cloud environments connected to Guardium Insights SaaS DSPM.
+     * Get a list of roles, buckets or service principles, and their entitled permissions associated to your cloud environments connected to Guardium DSPM.
      * Get a list of all the actual trusted assets
      * @param filter 
      */
@@ -14719,7 +14573,7 @@ export class ObservableThirdPartyVendorsApi {
     }
 
     /**
-     * Get a list of roles, buckets or service principles, and their entitled permissions associated to your cloud environments connected to Guardium Insights SaaS DSPM.
+     * Get a list of roles, buckets or service principles, and their entitled permissions associated to your cloud environments connected to Guardium DSPM.
      * Get a list of all the actual trusted assets
      * @param filter 
      */
@@ -14746,7 +14600,7 @@ export class ObservableUniversalConnectorManagerApi {
     }
 
     /**
-     * Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium Insights.
+     * Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium.
      */
     public universalConnectorManagerGetCertificateWithHttpInfo(_options?: Configuration): Observable<HttpInfo<Universalconnectormanagerv3FileResponse>> {
         const requestContextPromise = this.requestFactory.universalConnectorManagerGetCertificate(_options);
@@ -14768,7 +14622,7 @@ export class ObservableUniversalConnectorManagerApi {
     }
 
     /**
-     * Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium Insights.
+     * Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium.
      */
     public universalConnectorManagerGetCertificate(_options?: Configuration): Observable<Universalconnectormanagerv3FileResponse> {
         return this.universalConnectorManagerGetCertificateWithHttpInfo(_options).pipe(map((apiResponse: HttpInfo<Universalconnectormanagerv3FileResponse>) => apiResponse.data));

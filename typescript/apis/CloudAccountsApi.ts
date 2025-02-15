@@ -12,22 +12,24 @@ import { AddAnalyzedRegion200Response } from '../models/AddAnalyzedRegion200Resp
 import { AddAnalyzedRegionRequest } from '../models/AddAnalyzedRegionRequest';
 import { AddCloudAccounts200Response } from '../models/AddCloudAccounts200Response';
 import { AddCloudAccountsRequest } from '../models/AddCloudAccountsRequest';
-import { AuthCode } from '../models/AuthCode';
+import { AuthInfo } from '../models/AuthInfo';
 import { AuthUrl } from '../models/AuthUrl';
 import { Authenticate400Response } from '../models/Authenticate400Response';
+import { ClientInfo } from '../models/ClientInfo';
 import { CloudAccountInstallationStatus } from '../models/CloudAccountInstallationStatus';
 import { CloudServiceProvider } from '../models/CloudServiceProvider';
-import { Compliance } from '../models/Compliance';
 import { GetAnalyzedRegionStatus200Response } from '../models/GetAnalyzedRegionStatus200Response';
 import { LinkedAccounts } from '../models/LinkedAccounts';
 import { Office365TenantInfo } from '../models/Office365TenantInfo';
 import { RemoveAccountsInstructions200Response } from '../models/RemoveAccountsInstructions200Response';
+import { Script } from '../models/Script';
 import { ServiceAccountClientId } from '../models/ServiceAccountClientId';
 import { ServiceAccountInstallationStatus } from '../models/ServiceAccountInstallationStatus';
 import { ServiceProvider } from '../models/ServiceProvider';
 import { SubmitAdminEmailParams } from '../models/SubmitAdminEmailParams';
 import { SubmitAuthCode } from '../models/SubmitAuthCode';
 import { TenantInfo } from '../models/TenantInfo';
+import { TokenExpiryInfo } from '../models/TokenExpiryInfo';
 
 /**
  * no description
@@ -83,8 +85,8 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * You can add a single or multiple cloud account connections from the same cloud provider.<BR>Adding these cloud account connections will trigger Guardium Insights SaaS DSPM for data store discovery.<BR>To enable data classification, run the \'Add a new region for data classification\' API.
-     * Add cloud account connections to Guardium Insights SaaS DSPM
+     * You can add a single or multiple cloud account connections from the same cloud provider.<BR>Adding these cloud account connections will trigger Guardium DSPM for data store discovery.<BR>To enable data classification, run the \'Add a new region for data classification\' API.
+     * Add cloud account connections to DSPM
      * @param addCloudAccountsRequest 
      */
     public async addCloudAccounts(addCloudAccountsRequest: AddCloudAccountsRequest, _options?: Configuration): Promise<RequestContext> {
@@ -258,36 +260,6 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Generate an administrator consent URL for Salesforce integration.
-     * Generate a Salesforce consent URL
-     */
-    public async generateSalesforceAuthUrl(_options?: Configuration): Promise<RequestContext> {
-        let _config = _options || this.configuration;
-
-        // Path Params
-        const localVarPath = '/api/v1/dspm/cloudAccounts/saasApps/salesforce/generateAuthUrl';
-
-        // Make Request Context
-        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
-        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
-
-
-        let authMethod: SecurityAuthentication | undefined;
-        // Apply auth methods
-        authMethod = _config.authMethods["ApiKeyAuth"]
-        if (authMethod?.applySecurityAuthentication) {
-            await authMethod?.applySecurityAuthentication(requestContext);
-        }
-        
-        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
-        if (defaultAuth?.applySecurityAuthentication) {
-            await defaultAuth?.applySecurityAuthentication(requestContext);
-        }
-
-        return requestContext;
-    }
-
-    /**
      * Generate a Slack authentication URL.
      * Generate a Slack authentication URL
      */
@@ -318,7 +290,55 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Get the installation status of Guardium Insights SaaS DSPM for a region.
+     * Generate an administrator consent URL for Snowflake integration.
+     * Validate and Generate a Snowflake OAuth URL
+     * @param clientInfo 
+     */
+    public async generateSnowflakeAuthUrl(clientInfo: ClientInfo, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'clientInfo' is not null or undefined
+        if (clientInfo === null || clientInfo === undefined) {
+            throw new RequiredError("CloudAccountsApi", "generateSnowflakeAuthUrl", "clientInfo");
+        }
+
+
+        // Path Params
+        const localVarPath = '/api/v1/dspm/cloudAccounts/saasApps/snowflake/generateAuthUrl';
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        // Body Params
+        const contentType = ObjectSerializer.getPreferredMediaType([
+            "application/json"
+        ]);
+        requestContext.setHeaderParam("Content-Type", contentType);
+        const serializedBody = ObjectSerializer.stringify(
+            ObjectSerializer.serialize(clientInfo, "ClientInfo", ""),
+            contentType
+        );
+        requestContext.setBody(serializedBody);
+
+        let authMethod: SecurityAuthentication | undefined;
+        // Apply auth methods
+        authMethod = _config.authMethods["ApiKeyAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Get the installation status of Guardium DSPM for a region.
      * Get the status of analyzer installation for a region
      * @param cloudProvider The cloud provider for the cloud account
      * @param region The region code
@@ -448,14 +468,22 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * List the compliance frameworks selected.
-     * Get a list of selected compliances
+     * Get Snowflake Refresh Token Expiry date.
+     * Get Snowflake Refresh Token Expiry date
+     * @param providerId The ID of the provider
      */
-    public async getCompliances(_options?: Configuration): Promise<RequestContext> {
+    public async getRefreshTokenExpiry(providerId: string, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
+        // verify required parameter 'providerId' is not null or undefined
+        if (providerId === null || providerId === undefined) {
+            throw new RequiredError("CloudAccountsApi", "getRefreshTokenExpiry", "providerId");
+        }
+
+
         // Path Params
-        const localVarPath = '/api/v1/dspm/cloudAccounts/compliances';
+        const localVarPath = '/api/v1/dspm/cloudAccounts/saasApps/snowflake/getRefreshTokenExpiry/{providerId}'
+            .replace('{' + 'providerId' + '}', encodeURIComponent(String(providerId)));
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -478,8 +506,8 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Get a list of all the connected cloud accounts monitored by Guardium Insights SaaS DSPM.
-     * List cloud accounts connected to Guardium Insights SaaS DSPM
+     * Get a list of all the connected cloud accounts monitored by Guardium DSPM.
+     * List cloud accounts connected to DSPM
      */
     public async listLinkedAccounts(_options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
@@ -508,7 +536,7 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Post cloud account ID connections to be removed from Guardium Insights SaaS DSPM.
+     * Post cloud account ID connections to be removed from Guardium DSPM.
      * Post cloud account ID connections to be removed
      * @param accountIds 
      * @param serviceProvider 
@@ -646,37 +674,19 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Select one or more compliance frameworks.
-     * Set a list of selected compliances
-     * @param compliance 
+     * Generate Snowflake integration Script.
+     * Generate Snowflake Integration Script
      */
-    public async setCompliances(compliance: Array<Compliance>, _options?: Configuration): Promise<RequestContext> {
+    public async snowflakeIntegrationScript(_options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
-        // verify required parameter 'compliance' is not null or undefined
-        if (compliance === null || compliance === undefined) {
-            throw new RequiredError("CloudAccountsApi", "setCompliances", "compliance");
-        }
-
-
         // Path Params
-        const localVarPath = '/api/v1/dspm/cloudAccounts/compliances';
+        const localVarPath = '/api/v1/dspm/cloudAccounts/saasApps/snowflake/snowflakeIntegrationScript';
 
         // Make Request Context
-        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
         requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
 
-
-        // Body Params
-        const contentType = ObjectSerializer.getPreferredMediaType([
-            "application/json"
-        ]);
-        requestContext.setHeaderParam("Content-Type", contentType);
-        const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(compliance, "Array<Compliance>", ""),
-            contentType
-        );
-        requestContext.setBody(serializedBody);
 
         let authMethod: SecurityAuthentication | undefined;
         // Apply auth methods
@@ -790,54 +800,6 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Submit customer information for Salesforce integration.
-     * Submit Salesforce customer information
-     * @param authCode 
-     */
-    public async submitSalesforceAuthCode(authCode: AuthCode, _options?: Configuration): Promise<RequestContext> {
-        let _config = _options || this.configuration;
-
-        // verify required parameter 'authCode' is not null or undefined
-        if (authCode === null || authCode === undefined) {
-            throw new RequiredError("CloudAccountsApi", "submitSalesforceAuthCode", "authCode");
-        }
-
-
-        // Path Params
-        const localVarPath = '/api/v1/dspm/cloudAccounts/saasApps/salesforce/submitAuthCodeInfo';
-
-        // Make Request Context
-        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
-        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
-
-
-        // Body Params
-        const contentType = ObjectSerializer.getPreferredMediaType([
-            "application/json"
-        ]);
-        requestContext.setHeaderParam("Content-Type", contentType);
-        const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(authCode, "AuthCode", ""),
-            contentType
-        );
-        requestContext.setBody(serializedBody);
-
-        let authMethod: SecurityAuthentication | undefined;
-        // Apply auth methods
-        authMethod = _config.authMethods["ApiKeyAuth"]
-        if (authMethod?.applySecurityAuthentication) {
-            await authMethod?.applySecurityAuthentication(requestContext);
-        }
-        
-        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
-        if (defaultAuth?.applySecurityAuthentication) {
-            await defaultAuth?.applySecurityAuthentication(requestContext);
-        }
-
-        return requestContext;
-    }
-
-    /**
      * Submit a Slack authentication code.
      * Submit a Slack authentication code
      * @param submitAuthCode 
@@ -866,6 +828,54 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
             ObjectSerializer.serialize(submitAuthCode, "SubmitAuthCode", ""),
+            contentType
+        );
+        requestContext.setBody(serializedBody);
+
+        let authMethod: SecurityAuthentication | undefined;
+        // Apply auth methods
+        authMethod = _config.authMethods["ApiKeyAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Storing code that is returned from Snowflake oAuth.
+     * Submit Snowflake oAuth code
+     * @param authInfo 
+     */
+    public async submitSnowflakeAuthCode(authInfo: AuthInfo, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'authInfo' is not null or undefined
+        if (authInfo === null || authInfo === undefined) {
+            throw new RequiredError("CloudAccountsApi", "submitSnowflakeAuthCode", "authInfo");
+        }
+
+
+        // Path Params
+        const localVarPath = '/api/v1/dspm/cloudAccounts/saasApps/snowflake/submitAuthCode';
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        // Body Params
+        const contentType = ObjectSerializer.getPreferredMediaType([
+            "application/json"
+        ]);
+        requestContext.setHeaderParam("Content-Type", contentType);
+        const serializedBody = ObjectSerializer.stringify(
+            ObjectSerializer.serialize(authInfo, "AuthInfo", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -1109,10 +1119,10 @@ export class CloudAccountsApiResponseProcessor {
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
      *
-     * @params response Response returned by the server for a request to generateSalesforceAuthUrl
+     * @params response Response returned by the server for a request to generateSlackAuthUrl
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async generateSalesforceAuthUrlWithHttpInfo(response: ResponseContext): Promise<HttpInfo<AuthUrl >> {
+     public async generateSlackAuthUrlWithHttpInfo(response: ResponseContext): Promise<HttpInfo<AuthUrl >> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
             const body: AuthUrl = ObjectSerializer.deserialize(
@@ -1145,10 +1155,10 @@ export class CloudAccountsApiResponseProcessor {
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
      *
-     * @params response Response returned by the server for a request to generateSlackAuthUrl
+     * @params response Response returned by the server for a request to generateSnowflakeAuthUrl
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async generateSlackAuthUrlWithHttpInfo(response: ResponseContext): Promise<HttpInfo<AuthUrl >> {
+     public async generateSnowflakeAuthUrlWithHttpInfo(response: ResponseContext): Promise<HttpInfo<AuthUrl >> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
             const body: AuthUrl = ObjectSerializer.deserialize(
@@ -1289,16 +1299,16 @@ export class CloudAccountsApiResponseProcessor {
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
      *
-     * @params response Response returned by the server for a request to getCompliances
+     * @params response Response returned by the server for a request to getRefreshTokenExpiry
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async getCompliancesWithHttpInfo(response: ResponseContext): Promise<HttpInfo<Array<Compliance> >> {
+     public async getRefreshTokenExpiryWithHttpInfo(response: ResponseContext): Promise<HttpInfo<TokenExpiryInfo >> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
-            const body: Array<Compliance> = ObjectSerializer.deserialize(
+            const body: TokenExpiryInfo = ObjectSerializer.deserialize(
                 ObjectSerializer.parse(await response.body.text(), contentType),
-                "Array<Compliance>", ""
-            ) as Array<Compliance>;
+                "TokenExpiryInfo", ""
+            ) as TokenExpiryInfo;
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
         }
         if (isCodeInRange("400", response.httpStatusCode)) {
@@ -1311,10 +1321,10 @@ export class CloudAccountsApiResponseProcessor {
 
         // Work around for missing responses in specification, e.g. for petstore.yaml
         if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
-            const body: Array<Compliance> = ObjectSerializer.deserialize(
+            const body: TokenExpiryInfo = ObjectSerializer.deserialize(
                 ObjectSerializer.parse(await response.body.text(), contentType),
-                "Array<Compliance>", ""
-            ) as Array<Compliance>;
+                "TokenExpiryInfo", ""
+            ) as TokenExpiryInfo;
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
         }
 
@@ -1507,16 +1517,16 @@ export class CloudAccountsApiResponseProcessor {
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
      *
-     * @params response Response returned by the server for a request to setCompliances
+     * @params response Response returned by the server for a request to snowflakeIntegrationScript
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async setCompliancesWithHttpInfo(response: ResponseContext): Promise<HttpInfo<any >> {
+     public async snowflakeIntegrationScriptWithHttpInfo(response: ResponseContext): Promise<HttpInfo<Script >> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
-            const body: any = ObjectSerializer.deserialize(
+            const body: Script = ObjectSerializer.deserialize(
                 ObjectSerializer.parse(await response.body.text(), contentType),
-                "any", ""
-            ) as any;
+                "Script", ""
+            ) as Script;
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
         }
         if (isCodeInRange("400", response.httpStatusCode)) {
@@ -1529,10 +1539,10 @@ export class CloudAccountsApiResponseProcessor {
 
         // Work around for missing responses in specification, e.g. for petstore.yaml
         if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
-            const body: any = ObjectSerializer.deserialize(
+            const body: Script = ObjectSerializer.deserialize(
                 ObjectSerializer.parse(await response.body.text(), contentType),
-                "any", ""
-            ) as any;
+                "Script", ""
+            ) as Script;
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
         }
 
@@ -1615,10 +1625,46 @@ export class CloudAccountsApiResponseProcessor {
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
      *
-     * @params response Response returned by the server for a request to submitSalesforceAuthCode
+     * @params response Response returned by the server for a request to submitSlackAuthCode
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async submitSalesforceAuthCodeWithHttpInfo(response: ResponseContext): Promise<HttpInfo<void >> {
+     public async submitSlackAuthCodeWithHttpInfo(response: ResponseContext): Promise<HttpInfo<any >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: any = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "any", ""
+            ) as any;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("400", response.httpStatusCode)) {
+            const body: Authenticate400Response = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Authenticate400Response", ""
+            ) as Authenticate400Response;
+            throw new ApiException<Authenticate400Response>(response.httpStatusCode, "Bad Request", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: any = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "any", ""
+            ) as any;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to submitSnowflakeAuthCode
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async submitSnowflakeAuthCodeWithHttpInfo(response: ResponseContext): Promise<HttpInfo<void >> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, undefined);
@@ -1654,42 +1700,6 @@ export class CloudAccountsApiResponseProcessor {
                 ObjectSerializer.parse(await response.body.text(), contentType),
                 "void", ""
             ) as void;
-            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
-        }
-
-        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
-    }
-
-    /**
-     * Unwraps the actual response sent by the server from the response context and deserializes the response content
-     * to the expected objects
-     *
-     * @params response Response returned by the server for a request to submitSlackAuthCode
-     * @throws ApiException if the response code was not in [200, 299]
-     */
-     public async submitSlackAuthCodeWithHttpInfo(response: ResponseContext): Promise<HttpInfo<any >> {
-        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
-        if (isCodeInRange("200", response.httpStatusCode)) {
-            const body: any = ObjectSerializer.deserialize(
-                ObjectSerializer.parse(await response.body.text(), contentType),
-                "any", ""
-            ) as any;
-            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
-        }
-        if (isCodeInRange("400", response.httpStatusCode)) {
-            const body: Authenticate400Response = ObjectSerializer.deserialize(
-                ObjectSerializer.parse(await response.body.text(), contentType),
-                "Authenticate400Response", ""
-            ) as Authenticate400Response;
-            throw new ApiException<Authenticate400Response>(response.httpStatusCode, "Bad Request", body, response.headers);
-        }
-
-        // Work around for missing responses in specification, e.g. for petstore.yaml
-        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
-            const body: any = ObjectSerializer.deserialize(
-                ObjectSerializer.parse(await response.body.text(), contentType),
-                "any", ""
-            ) as any;
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
         }
 

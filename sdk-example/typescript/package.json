@@ -1,8 +1,8 @@
 {
   "name": "sdk-example-typescript",
-  "version": "",
-  "description": "guardium sdk example",
-  "author": "guardium sdk users",
+  "version": "3.6.0",
+  "description": "IBM Guardium Data Security Center SDK example",
+  "author": "IBM Guardium Data Security Center SDK Contributors",
   "repository": {
     "type": "git",
     "url": "https://github.com/IBM/gdsc-sdk.git"
@@ -13,7 +13,7 @@
     "openapi-client",
     "openapi-generator"
   ],
-  "license": "Unlicense",
+  "license": "Apache License, Version 2.0",
   "main": "./dist/index.js",
   "type": "commonjs",
   "exports": {
@@ -28,7 +28,7 @@
     "prepare": "npm run build"
   },
   "dependencies": {
-    "SDK_NAME": "SDK_VERSION",
+    "@ibm-gdsc/ibm-gdsc-sdk-software": "^3.6.0",
     "es6-promise": "^4.2.4",
     "url-parse": "^1.4.3",
     "whatwg-fetch": "^3.0.0"

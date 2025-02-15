@@ -14,14 +14,14 @@ Method | HTTP request | Description
 
 Get the summary of sensitivities
 
-Get a summarised information about all sensitivities classified by Guardium Insights SaaS DSPM.
+Get a summarised information about all sensitivities classified by Guardium DSPM.
 
 ### Example
 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.list_sensitivities_filter_parameter import ListSensitivitiesFilterParameter
 from ibm_gdsc_sdk_software.models.sensitivities_summary import SensitivitiesSummary
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -102,7 +102,7 @@ Get details of a sensitivity by providing its ID.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.sensitivity import Sensitivity
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -182,7 +182,7 @@ Get a list of all the sensitivities based on an applied filter.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.last_seen_sort_schema import LastSeenSortSchema
 from ibm_gdsc_sdk_software.models.list_sensitivities200_response import ListSensitivities200Response
 from ibm_gdsc_sdk_software.models.list_sensitivities_filter_parameter import ListSensitivitiesFilterParameter

@@ -20,7 +20,6 @@ export class Qspmpluginmanagerv3PolicyPluginRQ {
     'orgId'?: string;
     'pluginId'?: string;
     'runForAllScans'?: boolean;
-    'runForGivenScan'?: boolean;
     'scanDesc'?: string;
     'scanId'?: string;
     'scanType'?: string;
@@ -50,12 +49,6 @@ export class Qspmpluginmanagerv3PolicyPluginRQ {
         {
             "name": "runForAllScans",
             "baseName": "run_for_all_scans",
-            "type": "boolean",
-            "format": ""
-        },
-        {
-            "name": "runForGivenScan",
-            "baseName": "run_for_given_scan",
             "type": "boolean",
             "format": ""
         },

@@ -35,6 +35,7 @@ class ServiceProvider(str, Enum):
     ATLASSIAN_MINUS_JIRA = 'atlassian-jira'
     ATLASSIAN_MINUS_CONFLUENCE = 'atlassian-confluence'
     SALESFORCE = 'salesforce'
+    SNOWFLAKE = 'snowflake'
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:

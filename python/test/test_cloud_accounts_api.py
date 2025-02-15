@@ -36,7 +36,7 @@ class TestCloudAccountsApi(unittest.TestCase):
     def test_add_cloud_accounts(self) -> None:
         """Test case for add_cloud_accounts
 
-        Add cloud account connections to Guardium Insights SaaS DSPM
+        Add cloud account connections to DSPM
         """
         pass
 
@@ -68,17 +68,17 @@ class TestCloudAccountsApi(unittest.TestCase):
         """
         pass
 
-    def test_generate_salesforce_auth_url(self) -> None:
-        """Test case for generate_salesforce_auth_url
-
-        Generate a Salesforce consent URL
-        """
-        pass
-
     def test_generate_slack_auth_url(self) -> None:
         """Test case for generate_slack_auth_url
 
         Generate a Slack authentication URL
+        """
+        pass
+
+    def test_generate_snowflake_auth_url(self) -> None:
+        """Test case for generate_snowflake_auth_url
+
+        Validate and Generate a Snowflake OAuth URL
         """
         pass
 
@@ -103,17 +103,17 @@ class TestCloudAccountsApi(unittest.TestCase):
         """
         pass
 
-    def test_get_compliances(self) -> None:
-        """Test case for get_compliances
+    def test_get_refresh_token_expiry(self) -> None:
+        """Test case for get_refresh_token_expiry
 
-        Get a list of selected compliances
+        Get Snowflake Refresh Token Expiry date
         """
         pass
 
     def test_list_linked_accounts(self) -> None:
         """Test case for list_linked_accounts
 
-        List cloud accounts connected to Guardium Insights SaaS DSPM
+        List cloud accounts connected to DSPM
         """
         pass
 
@@ -138,10 +138,10 @@ class TestCloudAccountsApi(unittest.TestCase):
         """
         pass
 
-    def test_set_compliances(self) -> None:
-        """Test case for set_compliances
+    def test_snowflake_integration_script(self) -> None:
+        """Test case for snowflake_integration_script
 
-        Set a list of selected compliances
+        Generate Snowflake Integration Script
         """
         pass
 
@@ -159,17 +159,17 @@ class TestCloudAccountsApi(unittest.TestCase):
         """
         pass
 
-    def test_submit_salesforce_auth_code(self) -> None:
-        """Test case for submit_salesforce_auth_code
-
-        Submit Salesforce customer information
-        """
-        pass
-
     def test_submit_slack_auth_code(self) -> None:
         """Test case for submit_slack_auth_code
 
         Submit a Slack authentication code
+        """
+        pass
+
+    def test_submit_snowflake_auth_code(self) -> None:
+        """Test case for submit_snowflake_auth_code
+
+        Submit Snowflake oAuth code
         """
         pass
 

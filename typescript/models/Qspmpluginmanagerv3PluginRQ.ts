@@ -20,6 +20,7 @@ export class Qspmpluginmanagerv3PluginRQ {
     'orgId'?: string;
     'pluginId'?: string;
     'provisionId'?: string;
+    'runForAllScans'?: boolean;
     'scanDesc'?: string;
     'scanId'?: string;
     'scanType'?: string;
@@ -51,6 +52,12 @@ export class Qspmpluginmanagerv3PluginRQ {
             "baseName": "provision_id",
             "type": "string",
             "format": "int64"
+        },
+        {
+            "name": "runForAllScans",
+            "baseName": "run_for_all_scans",
+            "type": "boolean",
+            "format": ""
         },
         {
             "name": "scanDesc",

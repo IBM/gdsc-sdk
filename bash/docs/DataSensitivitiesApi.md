@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 Get the summary of sensitivities
 
-Get a summarised information about all sensitivities classified by Guardium Insights SaaS DSPM.
+Get a summarised information about all sensitivities classified by Guardium DSPM.
 
 ### Example
 

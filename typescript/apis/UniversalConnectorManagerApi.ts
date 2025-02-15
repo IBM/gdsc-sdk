@@ -22,7 +22,7 @@ import { Universalconnectormanagerv3UploadPluginRequest } from '../models/Univer
 export class UniversalConnectorManagerApiRequestFactory extends BaseAPIRequestFactory {
 
     /**
-     * Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium Insights.
+     * Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium.
      */
     public async universalConnectorManagerGetCertificate(_options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;

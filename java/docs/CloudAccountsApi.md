@@ -5,26 +5,26 @@ All URIs are relative to *http://localhost*
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
 | [**addAnalyzedRegion**](CloudAccountsApi.md#addAnalyzedRegion) | **POST** /api/v1/dspm/cloudAccounts/cloudProviders/analyzedRegions | Add a new region for data classification |
-| [**addCloudAccounts**](CloudAccountsApi.md#addCloudAccounts) | **POST** /api/v1/dspm/cloudAccounts/cloudProviders | Add cloud account connections to Guardium Insights SaaS DSPM |
+| [**addCloudAccounts**](CloudAccountsApi.md#addCloudAccounts) | **POST** /api/v1/dspm/cloudAccounts/cloudProviders | Add cloud account connections to DSPM |
 | [**generateAtlassianConfluenceAuthUrl**](CloudAccountsApi.md#generateAtlassianConfluenceAuthUrl) | **GET** /api/v1/dspm/cloudAccounts/saasApps/atlassian-confluence/generateAuthUrl | Generate a Confluence authentication URL |
 | [**generateAtlassianJiraAuthUrl**](CloudAccountsApi.md#generateAtlassianJiraAuthUrl) | **GET** /api/v1/dspm/cloudAccounts/saasApps/atlassian-jira/generateAuthUrl | Generate a JIRA authentication URL |
 | [**generateAzureAuthUrl**](CloudAccountsApi.md#generateAzureAuthUrl) | **GET** /api/v1/dspm/cloudAccounts/azure/generateAuthUrl | Generate azure authorization url |
 | [**generateOffice365AuthUrl**](CloudAccountsApi.md#generateOffice365AuthUrl) | **GET** /api/v1/dspm/cloudAccounts/saasApps/office365/generateAuthUrl | Generate a Microsoft 365 consent URL |
-| [**generateSalesforceAuthUrl**](CloudAccountsApi.md#generateSalesforceAuthUrl) | **GET** /api/v1/dspm/cloudAccounts/saasApps/salesforce/generateAuthUrl | Generate a Salesforce consent URL |
 | [**generateSlackAuthUrl**](CloudAccountsApi.md#generateSlackAuthUrl) | **GET** /api/v1/dspm/cloudAccounts/saasApps/slack/generateAuthUrl | Generate a Slack authentication URL |
+| [**generateSnowflakeAuthUrl**](CloudAccountsApi.md#generateSnowflakeAuthUrl) | **POST** /api/v1/dspm/cloudAccounts/saasApps/snowflake/generateAuthUrl | Validate and Generate a Snowflake OAuth URL |
 | [**getAnalyzedRegionStatus**](CloudAccountsApi.md#getAnalyzedRegionStatus) | **GET** /api/v1/dspm/cloudAccounts/cloudProviders/analyzedRegions/status | Get the status of analyzer installation for a region |
 | [**getAzureAdminConsentStatus**](CloudAccountsApi.md#getAzureAdminConsentStatus) | **GET** /api/v1/dspm/cloudAccounts/azure/getAdminConsentStatus | Get Azure admin consent status |
 | [**getCloudAccountInstallationStatus**](CloudAccountsApi.md#getCloudAccountInstallationStatus) | **GET** /api/v1/dspm/cloudAccounts/{cloudProvider}/{cloudAccountId}/installationStatus | Get the installation status of a cloud account |
-| [**getCompliances**](CloudAccountsApi.md#getCompliances) | **GET** /api/v1/dspm/cloudAccounts/compliances | Get a list of selected compliances |
-| [**listLinkedAccounts**](CloudAccountsApi.md#listLinkedAccounts) | **GET** /api/v1/dspm/cloudAccounts/linkedAccounts | List cloud accounts connected to Guardium Insights SaaS DSPM |
+| [**getRefreshTokenExpiry**](CloudAccountsApi.md#getRefreshTokenExpiry) | **GET** /api/v1/dspm/cloudAccounts/saasApps/snowflake/getRefreshTokenExpiry/{providerId} | Get Snowflake Refresh Token Expiry date |
+| [**listLinkedAccounts**](CloudAccountsApi.md#listLinkedAccounts) | **GET** /api/v1/dspm/cloudAccounts/linkedAccounts | List cloud accounts connected to DSPM |
 | [**removeAccounts**](CloudAccountsApi.md#removeAccounts) | **DELETE** /api/v1/dspm/cloudAccounts/removeAccounts | Post cloud account ID connections to be removed |
 | [**removeAccountsInstructions**](CloudAccountsApi.md#removeAccountsInstructions) | **GET** /api/v1/dspm/cloudAccounts/removeAccountsInstructions | Post cloud account IDs and get instructions to remove the accounts |
 | [**retrieveServiceAccountId**](CloudAccountsApi.md#retrieveServiceAccountId) | **GET** /api/v1/dspm/cloudAccounts/saasApps/google/retrieveServiceAccountId | Get Google Workspace authentication |
-| [**setCompliances**](CloudAccountsApi.md#setCompliances) | **POST** /api/v1/dspm/cloudAccounts/compliances | Set a list of selected compliances |
+| [**snowflakeIntegrationScript**](CloudAccountsApi.md#snowflakeIntegrationScript) | **GET** /api/v1/dspm/cloudAccounts/saasApps/snowflake/snowflakeIntegrationScript | Generate Snowflake Integration Script |
 | [**submitGoogleWorkspaceAdminEmail**](CloudAccountsApi.md#submitGoogleWorkspaceAdminEmail) | **POST** /api/v1/dspm/cloudAccounts/saasApps/google/submitAdminEmail | Submit email for service account authorization |
 | [**submitOffice365TenantInfo**](CloudAccountsApi.md#submitOffice365TenantInfo) | **POST** /api/v1/dspm/cloudAccounts/saasApps/office365/submitTenantInfo | Submit Microsoft 365 customer information |
-| [**submitSalesforceAuthCode**](CloudAccountsApi.md#submitSalesforceAuthCode) | **POST** /api/v1/dspm/cloudAccounts/saasApps/salesforce/submitAuthCodeInfo | Submit Salesforce customer information |
 | [**submitSlackAuthCode**](CloudAccountsApi.md#submitSlackAuthCode) | **POST** /api/v1/dspm/cloudAccounts/saasApps/slack/submitAuthCode | Submit a Slack authentication code |
+| [**submitSnowflakeAuthCode**](CloudAccountsApi.md#submitSnowflakeAuthCode) | **POST** /api/v1/dspm/cloudAccounts/saasApps/snowflake/submitAuthCode | Submit Snowflake oAuth code |
 
 
 <a id="addAnalyzedRegion"></a>
@@ -38,12 +38,12 @@ Install a new analyzer in the specified region to enable data classification in 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.CloudAccountsApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.CloudAccountsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -101,19 +101,19 @@ public class Example {
 # **addCloudAccounts**
 > AddCloudAccounts200Response addCloudAccounts(addCloudAccountsRequest)
 
-Add cloud account connections to Guardium Insights SaaS DSPM
+Add cloud account connections to DSPM
 
-You can add a single or multiple cloud account connections from the same cloud provider.&lt;BR&gt;Adding these cloud account connections will trigger Guardium Insights SaaS DSPM for data store discovery.&lt;BR&gt;To enable data classification, run the &#39;Add a new region for data classification&#39; API.
+You can add a single or multiple cloud account connections from the same cloud provider.&lt;BR&gt;Adding these cloud account connections will trigger Guardium DSPM for data store discovery.&lt;BR&gt;To enable data classification, run the &#39;Add a new region for data classification&#39; API.
 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.CloudAccountsApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.CloudAccountsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -178,12 +178,12 @@ Generate an Atlassian authentication URL for Confluence integration.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.CloudAccountsApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.CloudAccountsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -244,12 +244,12 @@ Generate an Atlassian authentication URL for JIRA integration.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.CloudAccountsApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.CloudAccountsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -310,12 +310,12 @@ Generate azure authorization url.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.CloudAccountsApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.CloudAccountsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -380,12 +380,12 @@ Generate an administrator consent URL for Microsoft 365 integration.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.CloudAccountsApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.CloudAccountsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -435,72 +435,6 @@ This endpoint does not need any parameter.
 | **200** | success |  -  |
 | **400** | Bad Request |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
 
-<a id="generateSalesforceAuthUrl"></a>
-# **generateSalesforceAuthUrl**
-> AuthUrl generateSalesforceAuthUrl()
-
-Generate a Salesforce consent URL
-
-Generate an administrator consent URL for Salesforce integration.
-
-### Example
-```java
-// Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.CloudAccountsApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
-    
-    // Configure API key authorization: ApiKeyAuth
-    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //ApiKeyAuth.setApiKeyPrefix("Token");
-
-    CloudAccountsApi apiInstance = new CloudAccountsApi(defaultClient);
-    try {
-      AuthUrl result = apiInstance.generateSalesforceAuthUrl();
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling CloudAccountsApi#generateSalesforceAuthUrl");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**AuthUrl**](AuthUrl.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | success |  -  |
-| **400** | Bad Request |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
-
 <a id="generateSlackAuthUrl"></a>
 # **generateSlackAuthUrl**
 > AuthUrl generateSlackAuthUrl()
@@ -512,12 +446,12 @@ Generate a Slack authentication URL.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.CloudAccountsApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.CloudAccountsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -567,23 +501,93 @@ This endpoint does not need any parameter.
 | **200** | success |  -  |
 | **400** | Bad Request |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
 
+<a id="generateSnowflakeAuthUrl"></a>
+# **generateSnowflakeAuthUrl**
+> AuthUrl generateSnowflakeAuthUrl(clientInfo)
+
+Validate and Generate a Snowflake OAuth URL
+
+Generate an administrator consent URL for Snowflake integration.
+
+### Example
+```java
+// Import classes:
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.CloudAccountsApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    CloudAccountsApi apiInstance = new CloudAccountsApi(defaultClient);
+    ClientInfo clientInfo = new ClientInfo(); // ClientInfo | 
+    try {
+      AuthUrl result = apiInstance.generateSnowflakeAuthUrl(clientInfo);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling CloudAccountsApi#generateSnowflakeAuthUrl");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **clientInfo** | [**ClientInfo**](ClientInfo.md)|  | |
+
+### Return type
+
+[**AuthUrl**](AuthUrl.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | success |  -  |
+| **400** | Bad Request |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
 <a id="getAnalyzedRegionStatus"></a>
 # **getAnalyzedRegionStatus**
 > GetAnalyzedRegionStatus200Response getAnalyzedRegionStatus(cloudProvider, region)
 
 Get the status of analyzer installation for a region
 
-Get the installation status of Guardium Insights SaaS DSPM for a region.
+Get the installation status of Guardium DSPM for a region.
 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.CloudAccountsApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.CloudAccountsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -650,12 +654,12 @@ Get Azure admin consent status.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.CloudAccountsApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.CloudAccountsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -716,12 +720,12 @@ Get the installation status of a cloud account.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.CloudAccountsApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.CloudAccountsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -777,23 +781,23 @@ public class Example {
 | **200** | success |  -  |
 | **400** | Bad Request |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
 
-<a id="getCompliances"></a>
-# **getCompliances**
-> List&lt;Compliance&gt; getCompliances()
+<a id="getRefreshTokenExpiry"></a>
+# **getRefreshTokenExpiry**
+> TokenExpiryInfo getRefreshTokenExpiry(providerId)
 
-Get a list of selected compliances
+Get Snowflake Refresh Token Expiry date
 
-List the compliance frameworks selected.
+Get Snowflake Refresh Token Expiry date.
 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.CloudAccountsApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.CloudAccountsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -807,11 +811,12 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     CloudAccountsApi apiInstance = new CloudAccountsApi(defaultClient);
+    String providerId = "providerId_example"; // String | The ID of the provider
     try {
-      List<Compliance> result = apiInstance.getCompliances();
+      TokenExpiryInfo result = apiInstance.getRefreshTokenExpiry(providerId);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling CloudAccountsApi#getCompliances");
+      System.err.println("Exception when calling CloudAccountsApi#getRefreshTokenExpiry");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -822,11 +827,14 @@ public class Example {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **providerId** | **String**| The ID of the provider | |
 
 ### Return type
 
-[**List&lt;Compliance&gt;**](Compliance.md)
+[**TokenExpiryInfo**](TokenExpiryInfo.md)
 
 ### Authorization
 
@@ -847,19 +855,19 @@ This endpoint does not need any parameter.
 # **listLinkedAccounts**
 > List&lt;LinkedAccounts&gt; listLinkedAccounts()
 
-List cloud accounts connected to Guardium Insights SaaS DSPM
+List cloud accounts connected to DSPM
 
-Get a list of all the connected cloud accounts monitored by Guardium Insights SaaS DSPM.
+Get a list of all the connected cloud accounts monitored by Guardium DSPM.
 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.CloudAccountsApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.CloudAccountsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -915,17 +923,17 @@ This endpoint does not need any parameter.
 
 Post cloud account ID connections to be removed
 
-Post cloud account ID connections to be removed from Guardium Insights SaaS DSPM.
+Post cloud account ID connections to be removed from Guardium DSPM.
 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.CloudAccountsApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.CloudAccountsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -959,7 +967,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **accountIds** | [**List&lt;String&gt;**](String.md)|  | |
-| **serviceProvider** | [**ServiceProvider**](.md)|  | [enum: aws, gcp, azure, google-workspace, slack, office365, atlassian-jira, atlassian-confluence, salesforce] |
+| **serviceProvider** | [**ServiceProvider**](.md)|  | [enum: aws, gcp, azure, google-workspace, slack, office365, atlassian-jira, atlassian-confluence, salesforce, snowflake] |
 
 ### Return type
 
@@ -994,12 +1002,12 @@ Post cloud accounts IDs and get instructions to remove the accounts from the clo
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.CloudAccountsApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.CloudAccountsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1034,7 +1042,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **accountIds** | [**List&lt;String&gt;**](String.md)|  | |
-| **serviceProvider** | [**ServiceProvider**](.md)|  | [enum: aws, gcp, azure, google-workspace, slack, office365, atlassian-jira, atlassian-confluence, salesforce] |
+| **serviceProvider** | [**ServiceProvider**](.md)|  | [enum: aws, gcp, azure, google-workspace, slack, office365, atlassian-jira, atlassian-confluence, salesforce, snowflake] |
 
 ### Return type
 
@@ -1069,12 +1077,12 @@ Retrieve a service account ID to use it for Google Workspace authentication.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.CloudAccountsApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.CloudAccountsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1124,23 +1132,23 @@ This endpoint does not need any parameter.
 | **200** | success |  -  |
 | **400** | Bad Request |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
 
-<a id="setCompliances"></a>
-# **setCompliances**
-> Object setCompliances(compliance)
+<a id="snowflakeIntegrationScript"></a>
+# **snowflakeIntegrationScript**
+> Script snowflakeIntegrationScript()
 
-Set a list of selected compliances
+Generate Snowflake Integration Script
 
-Select one or more compliance frameworks.
+Generate Snowflake integration Script.
 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.CloudAccountsApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.CloudAccountsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1154,12 +1162,11 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     CloudAccountsApi apiInstance = new CloudAccountsApi(defaultClient);
-    List<Compliance> compliance = Arrays.asList(); // List<Compliance> | 
     try {
-      Object result = apiInstance.setCompliances(compliance);
+      Script result = apiInstance.snowflakeIntegrationScript();
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling CloudAccountsApi#setCompliances");
+      System.err.println("Exception when calling CloudAccountsApi#snowflakeIntegrationScript");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1170,14 +1177,11 @@ public class Example {
 ```
 
 ### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **compliance** | [**List&lt;Compliance&gt;**](Compliance.md)|  | |
+This endpoint does not need any parameter.
 
 ### Return type
 
-**Object**
+[**Script**](Script.md)
 
 ### Authorization
 
@@ -1185,7 +1189,7 @@ public class Example {
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 ### HTTP response details
@@ -1205,12 +1209,12 @@ Submit admin email for service account authorization and return service-account 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.CloudAccountsApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.CloudAccountsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1275,12 +1279,12 @@ Submit customer information for Microsoft 365 integration.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.CloudAccountsApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.CloudAccountsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1334,78 +1338,6 @@ public class Example {
 | **200** | success |  -  |
 | **400** | Bad Request |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
 
-<a id="submitSalesforceAuthCode"></a>
-# **submitSalesforceAuthCode**
-> submitSalesforceAuthCode(authCode)
-
-Submit Salesforce customer information
-
-Submit customer information for Salesforce integration.
-
-### Example
-```java
-// Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.CloudAccountsApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
-    
-    // Configure API key authorization: ApiKeyAuth
-    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
-    ApiKeyAuth.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //ApiKeyAuth.setApiKeyPrefix("Token");
-
-    CloudAccountsApi apiInstance = new CloudAccountsApi(defaultClient);
-    AuthCode authCode = new AuthCode(); // AuthCode | 
-    try {
-      apiInstance.submitSalesforceAuthCode(authCode);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling CloudAccountsApi#submitSalesforceAuthCode");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **authCode** | [**AuthCode**](AuthCode.md)|  | |
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | success |  -  |
-| **400** | Bad Request |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
-| **403** | Forbidden |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
-| **500** | Internal Server Error |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
-| **503** | Service Unavailable |  -  |
-
 <a id="submitSlackAuthCode"></a>
 # **submitSlackAuthCode**
 > Object submitSlackAuthCode(submitAuthCode)
@@ -1417,12 +1349,12 @@ Submit a Slack authentication code.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.CloudAccountsApi;
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.CloudAccountsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1475,4 +1407,76 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | success |  -  |
 | **400** | Bad Request |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+<a id="submitSnowflakeAuthCode"></a>
+# **submitSnowflakeAuthCode**
+> submitSnowflakeAuthCode(authInfo)
+
+Submit Snowflake oAuth code
+
+Storing code that is returned from Snowflake oAuth.
+
+### Example
+```java
+// Import classes:
+import com.ibm.gdsc.ApiClient;
+import com.ibm.gdsc.ApiException;
+import com.ibm.gdsc.Configuration;
+import com.ibm.gdsc.auth.*;
+import com.ibm.gdsc.models.*;
+import com.ibm.gdsc.sdk.CloudAccountsApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    CloudAccountsApi apiInstance = new CloudAccountsApi(defaultClient);
+    AuthInfo authInfo = new AuthInfo(); // AuthInfo | 
+    try {
+      apiInstance.submitSnowflakeAuthCode(authInfo);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling CloudAccountsApi#submitSnowflakeAuthCode");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **authInfo** | [**AuthInfo**](AuthInfo.md)|  | |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | success |  -  |
+| **400** | Bad Request |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+| **403** | Forbidden |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+| **500** | Internal Server Error |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+| **503** | Service Unavailable |  -  |
 

@@ -26,8 +26,8 @@ class AuthenticateRequest(BaseModel):
     """
     AuthenticateRequest
     """ # noqa: E501
-    username: StrictStr = Field(description="Name of the user to log in to Guardium Insights SaaS DSPM.")
-    password: StrictStr = Field(description="Password of the user to log in to Guardium Insights SaaS DSPM.")
+    username: StrictStr = Field(description="Name of the user to log in to Guardium DSPM.")
+    password: StrictStr = Field(description="Password of the user to log in to Guardium DSPM.")
     __properties: ClassVar[List[str]] = ["username", "password"]
 
     model_config = ConfigDict(

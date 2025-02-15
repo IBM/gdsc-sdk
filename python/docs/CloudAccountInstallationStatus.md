@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **discovery_permissions** | **bool** |  | 
+**is_install_complete** | **bool** |  | [optional] 
 
 ## Example
 

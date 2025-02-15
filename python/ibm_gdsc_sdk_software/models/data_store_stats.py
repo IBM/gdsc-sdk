@@ -32,9 +32,10 @@ class DataStoreStats(BaseModel):
     app_flows_count: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="appFlowsCount")
     config_flows_count: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="configFlowsCount")
     sensitivities_count: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="sensitivitiesCount")
+    user_access_count: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="number of users entitled to access the data store", alias="userAccessCount")
     sensitivities_summary: Optional[List[SensitivitySummary]] = Field(default=None, alias="sensitivitiesSummary")
     vulnerabilities_summary: Optional[List[VulnerabilitiesCriticalityCountInner]] = Field(default=None, alias="vulnerabilitiesSummary")
-    __properties: ClassVar[List[str]] = ["resourcesCount", "appFlowsCount", "configFlowsCount", "sensitivitiesCount", "sensitivitiesSummary", "vulnerabilitiesSummary"]
+    __properties: ClassVar[List[str]] = ["resourcesCount", "appFlowsCount", "configFlowsCount", "sensitivitiesCount", "userAccessCount", "sensitivitiesSummary", "vulnerabilitiesSummary"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -105,6 +106,7 @@ class DataStoreStats(BaseModel):
             "appFlowsCount": obj.get("appFlowsCount"),
             "configFlowsCount": obj.get("configFlowsCount"),
             "sensitivitiesCount": obj.get("sensitivitiesCount"),
+            "userAccessCount": obj.get("userAccessCount"),
             "sensitivitiesSummary": [SensitivitySummary.from_dict(_item) for _item in obj["sensitivitiesSummary"]] if obj.get("sensitivitiesSummary") is not None else None,
             "vulnerabilitiesSummary": [VulnerabilitiesCriticalityCountInner.from_dict(_item) for _item in obj["vulnerabilitiesSummary"]] if obj.get("vulnerabilitiesSummary") is not None else None
         })

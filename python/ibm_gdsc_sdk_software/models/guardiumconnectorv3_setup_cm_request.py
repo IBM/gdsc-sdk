@@ -25,7 +25,7 @@ from typing_extensions import Self
 
 class Guardiumconnectorv3SetupCMRequest(BaseModel):
     """
-    SetupCMRequest is the argument type used to register a GDP Central Manager to Guardium Insights.
+    SetupCMRequest is the argument type used to register a GDP Central Manager to Guardium.
     """ # noqa: E501
     attributes: Optional[List[Guardiumconnectorv3Attribute]] = Field(default=None, description="Attributes specific to the GDP Central Manager.")
     cm_gid: Optional[StrictStr] = Field(default=None, description="Central Manager GID.")
