@@ -37,7 +37,7 @@ with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ibm_gdsc_sdk_software.JumpboxServiceApi(api_client)
     # create an instance of Jumpboxv3User from a JSON string
-    json = '{"users":[{"distinguished_name":"uid=2J9097897,c=us,ou=bluepages,o=ibm.com","roles":["admin","default"]}]}'
+    json = '{"users":[{"distinguished_name":"uid=00000000,c=us,ou=bluepages,o=ibm.com","roles":["admin","default"]}]}'
     # create an instance of Jumpboxv3PostUsersBulkRequest from a JSON string
     jumpboxv3_post_users_bulk_request_instance = Jumpboxv3PostUsersBulkRequest.from_json(json)
  

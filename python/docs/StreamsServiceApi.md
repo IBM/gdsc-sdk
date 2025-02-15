@@ -22,7 +22,7 @@ Summary: Check AWS credentials Description: Service to verify AWS credentials.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.streamsv3_check_aws_credentials_request import Streamsv3CheckAWSCredentialsRequest
 from ibm_gdsc_sdk_software.models.streamsv3_check_aws_credentials_response import Streamsv3CheckAWSCredentialsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -108,7 +108,7 @@ Summary: Check Azure event hub Description: Service to check Azure event hub.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.streamsv3_check_azure_event_hub_request import Streamsv3CheckAzureEventHubRequest
 from ibm_gdsc_sdk_software.models.streamsv3_check_azure_event_hub_response import Streamsv3CheckAzureEventHubResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -193,7 +193,7 @@ Summary: Check Azure storage string Description: Service to verify Azure storage
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.streamsv3_check_azure_storage_string_request import Streamsv3CheckAzureStorageStringRequest
 from ibm_gdsc_sdk_software.models.streamsv3_check_azure_storage_string_response import Streamsv3CheckAzureStorageStringResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -273,7 +273,7 @@ Summary: Get AWS regions Description: Service to get AWS regions.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.streamsv3_get_aws_regions_response import Streamsv3GetAWSRegionsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -354,7 +354,7 @@ Summary: List AWS streams Description: Service to list AWS Kinesis streams.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.streamsv3_list_aws_streams_request import Streamsv3ListAWSStreamsRequest
 from ibm_gdsc_sdk_software.models.streamsv3_list_aws_streams_response import Streamsv3ListAWSStreamsResponse
 from ibm_gdsc_sdk_software.rest import ApiException

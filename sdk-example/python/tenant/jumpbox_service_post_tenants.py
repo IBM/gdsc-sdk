@@ -35,7 +35,7 @@ with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
     jumpboxv3_post_tenants_request = ibm_gdsc_sdk_software.Jumpboxv3PostTenantsRequest() # Jumpboxv3PostTenantsRequest | 
 
     # TODO update the JSON string below
-    json = '{"name": "Test01","uid": "minhui_yang@us.ibm.com"}'
+    json = '{"name": "Test01","uid": "joe@us.ibm.com"}'
     # create an instance of Jumpboxv3PostTenantsRequest from a JSON string
     jumpboxv3_post_tenants_request_instance = Jumpboxv3PostTenantsRequest.from_json(json)
     # print the JSON string representation of the object

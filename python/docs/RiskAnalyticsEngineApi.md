@@ -19,7 +19,7 @@ Summary: Get lead generator config Description: Retrieve the configuration of a 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.riskanalyticsenginev3_get_lead_generator_config_response import Riskanalyticsenginev3GetLeadGeneratorConfigResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -100,7 +100,7 @@ Summary: Update lead generator config Description: Update the configuration of a
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.riskanalyticsenginev3_update_lead_generator_config_request import Riskanalyticsenginev3UpdateLeadGeneratorConfigRequest
 from ibm_gdsc_sdk_software.models.riskanalyticsenginev3_update_lead_generator_config_response import Riskanalyticsenginev3UpdateLeadGeneratorConfigResponse
 from ibm_gdsc_sdk_software.rest import ApiException

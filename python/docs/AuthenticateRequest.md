@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**username** | **str** | Name of the user to log in to Guardium Insights SaaS DSPM. | 
-**password** | **str** | Password of the user to log in to Guardium Insights SaaS DSPM. | 
+**username** | **str** | Name of the user to log in to Guardium DSPM. | 
+**password** | **str** | Password of the user to log in to Guardium DSPM. | 
 
 ## Example
 

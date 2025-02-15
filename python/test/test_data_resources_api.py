@@ -57,7 +57,7 @@ class TestDataResourcesApi(unittest.TestCase):
     def test_remove_resource(self) -> None:
         """Test case for remove_resource
 
-        Remove resource from Guardium Insights SaaS DSPM
+        Remove resource from DSPM
         """
         pass
 

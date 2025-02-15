@@ -2,10 +2,10 @@
 name = "ibm_gdsc_sdk_software"
 version = "3.6.0"
 description = "IBM Guardium Data Security Center"
-authors = ["OpenAPI Generator Community <team@openapitools.org>"]
-license = "NoLicense"
+authors = ["c3cvp8ch@ca.ibm.com"]
+license = "Apache License Version 2.0"
 readme = "README.md"
-repository = "https://github.com/GIT_USER_ID/GIT_REPO_ID"
+repository = "https://github.com/IBM/gdsc-sdk"
 keywords = ["OpenAPI", "OpenAPI-Generator", "IBM Guardium Data Security Center"]
 include = ["ibm_gdsc_sdk_software/py.typed"]
 

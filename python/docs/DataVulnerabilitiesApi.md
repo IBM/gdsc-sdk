@@ -26,7 +26,7 @@ Add or update the status comment of a vulnerability status to keep track of the 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.add_comment_body import AddCommentBody
 from ibm_gdsc_sdk_software.models.vulnerability_status import VulnerabilityStatus
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -111,7 +111,7 @@ Get a summary of all the vulnerabilities. You can also filter the results of the
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.vulnerabilities_filter_options import VulnerabilitiesFilterOptions
 from ibm_gdsc_sdk_software.models.vulnerabilities_summary import VulnerabilitiesSummary
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -192,7 +192,7 @@ Get vulnerability details by providing its ID.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.vulnerability import Vulnerability
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -272,7 +272,7 @@ Get a list of data vulnerabilities based on a filter applied. You can filter by 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.list_vulnerabilities200_response import ListVulnerabilities200Response
 from ibm_gdsc_sdk_software.models.list_vulnerabilities_sort_parameter import ListVulnerabilitiesSortParameter
 from ibm_gdsc_sdk_software.models.vulnerabilities_filter_options import VulnerabilitiesFilterOptions
@@ -360,7 +360,7 @@ Get a list of all the vulnerabilities of data stores.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.list_vulnerabilities_by_data_store200_response import ListVulnerabilitiesByDataStore200Response
 from ibm_gdsc_sdk_software.models.list_vulnerabilities_by_data_store_sort_parameter import ListVulnerabilitiesByDataStoreSortParameter
 from ibm_gdsc_sdk_software.models.vulnerabilities_by_data_store_filter_options import VulnerabilitiesByDataStoreFilterOptions
@@ -448,7 +448,7 @@ Delete a status comment of a vulnerability status.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
 
@@ -529,7 +529,7 @@ Add or update the status of a vulnerability to track its progress.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.set_vulnerability_status_request import SetVulnerabilityStatusRequest
 from ibm_gdsc_sdk_software.models.vulnerability_status import VulnerabilityStatus
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -612,7 +612,7 @@ Set a vulnerability status of a vulnerability.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.update_comment_body import UpdateCommentBody
 from ibm_gdsc_sdk_software.models.vulnerability_status_comment import VulnerabilityStatusComment
 from ibm_gdsc_sdk_software.rest import ApiException

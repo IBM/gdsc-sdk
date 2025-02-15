@@ -57,7 +57,7 @@ class UniversalConnectorManagerApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> Universalconnectormanagerv3FileResponse:
-        """Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium Insights.
+        """Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium.
 
 
         :param _request_timeout: timeout setting for this request. If one
@@ -119,7 +119,7 @@ class UniversalConnectorManagerApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[Universalconnectormanagerv3FileResponse]:
-        """Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium Insights.
+        """Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium.
 
 
         :param _request_timeout: timeout setting for this request. If one
@@ -181,7 +181,7 @@ class UniversalConnectorManagerApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium Insights.
+        """Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium.
 
 
         :param _request_timeout: timeout setting for this request. If one

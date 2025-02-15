@@ -18,7 +18,7 @@ Summary: Reset the model to its default weights. Description: Load the initial m
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.riskanalyticsmlclassificationv3_reset_model_to_defaults_response import Riskanalyticsmlclassificationv3ResetModelToDefaultsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint

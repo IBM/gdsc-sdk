@@ -17,7 +17,7 @@ Summary: Delete a tenant resource Description: Delete tenant specific resources 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.pipelineconfigv3_delete_tenant_response import Pipelineconfigv3DeleteTenantResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint

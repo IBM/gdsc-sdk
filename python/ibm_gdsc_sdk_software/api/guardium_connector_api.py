@@ -5986,7 +5986,7 @@ class GuardiumConnectorApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> Guardiumconnectorv3GetLatestDMExtractionProfileResponse:
-        """Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for Guardium Insights.
+        """Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for Guardium.
 
 
         :param central_manager_id: Central Manager ID. (required)
@@ -6052,7 +6052,7 @@ class GuardiumConnectorApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[Guardiumconnectorv3GetLatestDMExtractionProfileResponse]:
-        """Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for Guardium Insights.
+        """Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for Guardium.
 
 
         :param central_manager_id: Central Manager ID. (required)
@@ -6118,7 +6118,7 @@ class GuardiumConnectorApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for Guardium Insights.
+        """Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for Guardium.
 
 
         :param central_manager_id: Central Manager ID. (required)
@@ -7586,7 +7586,7 @@ class GuardiumConnectorApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> Guardiumconnectorv3SetupCMResponse:
-        """Summary: Setup CM Description: Set up the registration between a GDP Central manager and Guardium Insights.
+        """Summary: Setup CM Description: Set up the registration between a GDP Central manager and Guardium.
 
 
         :param guardiumconnectorv3_setup_cm_request: (required)
@@ -7652,7 +7652,7 @@ class GuardiumConnectorApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[Guardiumconnectorv3SetupCMResponse]:
-        """Summary: Setup CM Description: Set up the registration between a GDP Central manager and Guardium Insights.
+        """Summary: Setup CM Description: Set up the registration between a GDP Central manager and Guardium.
 
 
         :param guardiumconnectorv3_setup_cm_request: (required)
@@ -7718,7 +7718,7 @@ class GuardiumConnectorApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Summary: Setup CM Description: Set up the registration between a GDP Central manager and Guardium Insights.
+        """Summary: Setup CM Description: Set up the registration between a GDP Central manager and Guardium.
 
 
         :param guardiumconnectorv3_setup_cm_request: (required)

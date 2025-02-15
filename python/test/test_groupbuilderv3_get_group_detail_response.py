@@ -52,6 +52,7 @@ class TestGroupbuilderv3GetGroupDetailResponse(unittest.TestCase):
                         filter = '', 
                         filter_scope = 56, 
                         import_limit = 56, 
+                        ldap_group_name = '', 
                         ldap_id = '', 
                         member_prefix = '', ), 
                     member_count = 56, 

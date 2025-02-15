@@ -34,7 +34,7 @@ Summary: Create API key Description: Create API Key.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.tenantuserv3_create_api_key_request import Tenantuserv3CreateApiKeyRequest
 from ibm_gdsc_sdk_software.models.tenantuserv3_create_api_key_response import Tenantuserv3CreateApiKeyResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -113,7 +113,7 @@ Summary: Delete API key Description: Delete APIKey Document based on the documen
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
 
@@ -191,7 +191,7 @@ Summary: Delete role Description: Delete a role.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
 
@@ -274,7 +274,7 @@ Summary: Get API keys Description: Get all APIKeys base on a tenant ID.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.tenantuserv3_get_api_keys_response import Tenantuserv3GetApiKeysResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -349,7 +349,7 @@ Summary: Get current user Description: Return the currently authenticated user.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.tenantuserv3_get_current_user_response import Tenantuserv3GetCurrentUserResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -430,7 +430,7 @@ Summary: Get privilege Description: Return privilege.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.tenantuserv3_get_privilege_response import Tenantuserv3GetPrivilegeResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -517,7 +517,7 @@ Summary: Get privileges Description: Return all available privileges (pages, res
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.tenantuserv3_get_privileges_response import Tenantuserv3GetPrivilegesResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -604,7 +604,7 @@ Summary: Get role Description: Return single role.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.tenantuserv3_role import Tenantuserv3Role
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -689,7 +689,7 @@ Summary: Get roles Description: Return all roles without privileges.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.tenantuserv3_get_roles_response import Tenantuserv3GetRolesResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -770,7 +770,7 @@ Summary: Get user Description: Return full user for specified user_id.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.tenantuserv3_get_user_response import Tenantuserv3GetUserResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -855,7 +855,7 @@ Summary: Get user names Description: Get user names.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.tenantuserv3_get_user_names_request import Tenantuserv3GetUserNamesRequest
 from ibm_gdsc_sdk_software.models.tenantuserv3_get_user_names_response import Tenantuserv3GetUserNamesResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -941,7 +941,7 @@ Summary: Get user tenant Description: Return the user plus tenant information.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.tenantuserv3_get_user_tenant_response import Tenantuserv3GetUserTenantResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1026,7 +1026,7 @@ Summary: Post privileges bulk Description: Perform bulk user add preivilege.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.tenantuserv3_post_privileges_bulk_request import Tenantuserv3PostPrivilegesBulkRequest
 from ibm_gdsc_sdk_software.models.tenantuserv3_post_privileges_bulk_response import Tenantuserv3PostPrivilegesBulkResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -1112,7 +1112,7 @@ Summary: Post role Description: Create a new role.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.tenantuserv3_post_role_request import Tenantuserv3PostRoleRequest
 from ibm_gdsc_sdk_software.models.tenantuserv3_post_role_response import Tenantuserv3PostRoleResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -1198,7 +1198,7 @@ Summary: Update privilege Description: Update privilege.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.tenantuserv3_update_privilege_request import Tenantuserv3UpdatePrivilegeRequest
 from ibm_gdsc_sdk_software.models.tenantuserv3_update_privilege_response import Tenantuserv3UpdatePrivilegeResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -1286,7 +1286,7 @@ Summary: Update privileges role bulk Description: Perform bulk user update role.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.tenantuserv3_update_privileges_bulk_request import Tenantuserv3UpdatePrivilegesBulkRequest
 from ibm_gdsc_sdk_software.models.tenantuserv3_update_privileges_bulk_response import Tenantuserv3UpdatePrivilegesBulkResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -1372,7 +1372,7 @@ Summary: Update role Description: Update single role.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.tenantuserv3_update_role_request import Tenantuserv3UpdateRoleRequest
 from ibm_gdsc_sdk_software.models.tenantuserv3_update_role_response import Tenantuserv3UpdateRoleResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -1460,7 +1460,7 @@ Summary: Update user role bulk Description: Perform bulk user add or remove role
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.tenantuserv3_update_user_role_bulk_request import Tenantuserv3UpdateUserRoleBulkRequest
 from ibm_gdsc_sdk_software.models.tenantuserv3_update_user_role_bulk_response import Tenantuserv3UpdateUserRoleBulkResponse
 from ibm_gdsc_sdk_software.rest import ApiException

@@ -1,8 +1,9 @@
 {
-  "name":"@guardium/ibm-gdsc-sdk-software",
+  "name":"@ibm-gdsc/ibm-gdsc-sdk-software",
   "version": "3.6.0",
-  "description": "OpenAPI client for ",
-  "author": "OpenAPI-Generator Contributors",
+  "description": "IBM Guardium Data Security Center SDK",
+  "author": "IBM Guardium Data Security Center SDK Contributors",
+"homepage": "https://github.com/IBM/gdsc-sdk/tree/release-v3.6.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/IBM/gdsc-sdk.git"
@@ -13,7 +14,7 @@
     "openapi-client",
     "openapi-generator"
   ],
-  "license": "Unlicense",
+  "license": "Apache License, Version 2.0",
   "main": "./dist/index.js",
   "type": "commonjs",
   "exports": {
@@ -35,9 +36,9 @@
   "devDependencies": {
     "typescript": "^4.0",
     "@types/url-parse": "1.4.4"
-  }
 ,
   "publishConfig": {
     "registry": "https://na.artifactory.swg-devops.com/artifactory/api/npm/sec-common-npm-local/"
+  }
   }
 }

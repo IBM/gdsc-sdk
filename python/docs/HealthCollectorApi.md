@@ -26,7 +26,7 @@ Summary: Get data warehouse usage info Description: Get information from Db2 rel
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.healthcollectorv3_get_data_warehouse_usage_response import Healthcollectorv3GetDataWarehouseUsageResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -115,7 +115,7 @@ Summary: Get GDP health info Description: Get information from MongoDB for Guard
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.healthcollectorv3_get_gdp_health_info_response import Healthcollectorv3GetGDPHealthInfoResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -196,7 +196,7 @@ Summary: Get historical health info Description: Retrieve historical s-tap relat
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.healthcollectorv3_get_historical_health_info_response import Healthcollectorv3GetHistoricalHealthInfoResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -287,7 +287,7 @@ Summary: Get object storage usage info Description: Get information from object 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.healthcollectorv3_get_object_storage_usage_response import Healthcollectorv3GetObjectStorageUsageResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -376,7 +376,7 @@ Summary: Get the pod restart information Description: Get information about the 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.healthcollectorv3_get_pod_restarts_response import Healthcollectorv3GetPodRestartsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -465,7 +465,7 @@ Summary: Get the PVC usage information Description: Get information about the PV
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.healthcollectorv3_get_pvc_usage_response import Healthcollectorv3GetPVCUsageResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -554,7 +554,7 @@ Summary: Get streams ingestion volume over a given time Description: Get informa
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.healthcollectorv3_get_streams_ingestion_response import Healthcollectorv3GetStreamsIngestionResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -643,7 +643,7 @@ Summary: Get the top GDP collectors which send data to GI Description: Get infor
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.healthcollectorv3_get_top_gdp_collectors_response import Healthcollectorv3GetTopGDPCollectorsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -732,7 +732,7 @@ Summary: Store health info Description: Store health info from GDP into GI. (Thi
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.healthcollectorv3_store_health_info_request import Healthcollectorv3StoreHealthInfoRequest
 from ibm_gdsc_sdk_software.models.healthcollectorv3_store_health_info_response import Healthcollectorv3StoreHealthInfoResponse
 from ibm_gdsc_sdk_software.rest import ApiException

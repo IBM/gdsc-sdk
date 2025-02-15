@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictStr
+from pydantic import BaseModel, ConfigDict, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_entity_new_schema import Qspmpluginmanagerv3EntityNewSchema
 from ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_validation_result import Qspmpluginmanagerv3ValidationResult
@@ -32,11 +32,12 @@ class Qspmpluginmanagerv3PluginRS(BaseModel):
     facts: Optional[List[Qspmpluginmanagerv3EntityNewSchema]] = None
     org_id: Optional[StrictStr] = None
     plugin_id: Optional[StrictStr] = None
+    run_for_all_scans: Optional[StrictBool] = None
     scan_desc: Optional[StrictStr] = None
     scan_id: Optional[StrictStr] = None
     user_email: Optional[StrictStr] = None
     validation_result: Optional[Qspmpluginmanagerv3ValidationResult] = None
-    __properties: ClassVar[List[str]] = ["dims", "facts", "org_id", "plugin_id", "scan_desc", "scan_id", "user_email", "validation_result"]
+    __properties: ClassVar[List[str]] = ["dims", "facts", "org_id", "plugin_id", "run_for_all_scans", "scan_desc", "scan_id", "user_email", "validation_result"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -110,6 +111,7 @@ class Qspmpluginmanagerv3PluginRS(BaseModel):
             "facts": [Qspmpluginmanagerv3EntityNewSchema.from_dict(_item) for _item in obj["facts"]] if obj.get("facts") is not None else None,
             "org_id": obj.get("org_id"),
             "plugin_id": obj.get("plugin_id"),
+            "run_for_all_scans": obj.get("run_for_all_scans"),
             "scan_desc": obj.get("scan_desc"),
             "scan_id": obj.get("scan_id"),
             "user_email": obj.get("user_email"),

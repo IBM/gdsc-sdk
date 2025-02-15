@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**universal_connector_manager_get_certificate**](UniversalConnectorManagerApi.md#universal_connector_manager_get_certificate) | **GET** /api/v3/certificates | Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium Insights.
+[**universal_connector_manager_get_certificate**](UniversalConnectorManagerApi.md#universal_connector_manager_get_certificate) | **GET** /api/v3/certificates | Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium.
 [**universal_connector_manager_get_connectors**](UniversalConnectorManagerApi.md#universal_connector_manager_get_connectors) | **GET** /api/v3/connectors | Summary: Get connectors Description: Get all the connectors Universal Connector can support. Includes a list of event pipelines (input--filter pairs), along with the supported data source types and platforms.
 [**universal_connector_manager_list_connections_summary**](UniversalConnectorManagerApi.md#universal_connector_manager_list_connections_summary) | **GET** /api/v3/universal_connections | Summary: List connections summary Description: List a summary of Universal Connector configured connections (AKA datasources).
 [**universal_connector_manager_plugins_list**](UniversalConnectorManagerApi.md#universal_connector_manager_plugins_list) | **GET** /api/v3/plugins | Summary: Plugins list Description: List of all universal connector plugins.
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 # **universal_connector_manager_get_certificate**
 > Universalconnectormanagerv3FileResponse universal_connector_manager_get_certificate()
 
-Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium Insights.
+Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium.
 
 ### Example
 
@@ -22,7 +22,7 @@ Summary: Get certificate Description: Get the certificate that allows secure com
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.universalconnectormanagerv3_file_response import Universalconnectormanagerv3FileResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -56,7 +56,7 @@ with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
     api_instance = ibm_gdsc_sdk_software.UniversalConnectorManagerApi(api_client)
 
     try:
-        # Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium Insights.
+        # Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium.
         api_response = api_instance.universal_connector_manager_get_certificate()
         print("The response of UniversalConnectorManagerApi->universal_connector_manager_get_certificate:\n")
         pprint(api_response)
@@ -103,7 +103,7 @@ Summary: Get connectors Description: Get all the connectors Universal Connector 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.universalconnectormanagerv3_get_connectors_response import Universalconnectormanagerv3GetConnectorsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -184,7 +184,7 @@ Summary: List connections summary Description: List a summary of Universal Conne
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.universalconnectormanagerv3_list_connections_response import Universalconnectormanagerv3ListConnectionsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -265,7 +265,7 @@ Summary: Plugins list Description: List of all universal connector plugins.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.universalconnectormanagerv3_plugins_list_response import Universalconnectormanagerv3PluginsListResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -346,7 +346,7 @@ Summary: Upload plugin Description: Upload a plugin-package for Universal Connec
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.rpc_status import RpcStatus
 from ibm_gdsc_sdk_software.models.universalconnectormanagerv3_upload_plugin_request import Universalconnectormanagerv3UploadPluginRequest
 from ibm_gdsc_sdk_software.rest import ApiException

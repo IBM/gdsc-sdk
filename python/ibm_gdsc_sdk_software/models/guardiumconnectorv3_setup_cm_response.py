@@ -25,7 +25,7 @@ from typing_extensions import Self
 
 class Guardiumconnectorv3SetupCMResponse(BaseModel):
     """
-    SetupCMResponse is the response after registering a GDP Central manager to Guardium insights.
+    SetupCMResponse is the response after registering a GDP Central manager to Guardium.
     """ # noqa: E501
     response: Optional[StrictStr] = Field(default=None, description="Response message.")
     response_code: Optional[StrictStr] = Field(default=None, description="Translatable reponse code or empty string if there is no response.")

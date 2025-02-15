@@ -33,9 +33,10 @@ class Groupbuilderv3LdapConfig(BaseModel):
     filter: Optional[StrictStr] = Field(default=None, description="LDAP search query to use to find objects.")
     filter_scope: Optional[StrictInt] = Field(default=None, description="Scope of LDAP search:  sub-tree vs immediate base DN children.")
     import_limit: Optional[StrictInt] = Field(default=None, description="Maximum number of objects to import.")
+    ldap_group_name: Optional[StrictStr] = Field(default=None, description="DN name of the LDAP group to get members from.  Alternative to explicit filter.")
     ldap_id: Optional[StrictStr] = Field(default=None, description="ID of the ICP LDAP definition from which to import.")
     member_prefix: Optional[StrictStr] = Field(default=None, description="Prefix that will be added to each imported member.")
-    __properties: ClassVar[List[str]] = ["attributes", "bind_group_id", "bind_password", "clear_group", "filter", "filter_scope", "import_limit", "ldap_id", "member_prefix"]
+    __properties: ClassVar[List[str]] = ["attributes", "bind_group_id", "bind_password", "clear_group", "filter", "filter_scope", "import_limit", "ldap_group_name", "ldap_id", "member_prefix"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -95,6 +96,7 @@ class Groupbuilderv3LdapConfig(BaseModel):
             "filter": obj.get("filter"),
             "filter_scope": obj.get("filter_scope"),
             "import_limit": obj.get("import_limit"),
+            "ldap_group_name": obj.get("ldap_group_name"),
             "ldap_id": obj.get("ldap_id"),
             "member_prefix": obj.get("member_prefix")
         })

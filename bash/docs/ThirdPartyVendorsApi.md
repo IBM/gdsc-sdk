@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 Get the summary of a third party vendor
 
-Get a list of all third party vendors associated to your cloud environments (relevant for the cloud environments connected to Guardium Insights SaaS DSPM only).
+Get a list of all third party vendors associated to your cloud environments (relevant for the cloud environments connected to Guardium DSPM only).
 
 ### Example
 
@@ -157,7 +157,7 @@ This endpoint does not need any parameter.
 
 Get a list of all the actual trusted assets
 
-Get a list of roles, buckets or service principles, and their entitled permissions associated to your cloud environments connected to Guardium Insights SaaS DSPM.
+Get a list of roles, buckets or service principles, and their entitled permissions associated to your cloud environments connected to Guardium DSPM.
 
 ### Example
 

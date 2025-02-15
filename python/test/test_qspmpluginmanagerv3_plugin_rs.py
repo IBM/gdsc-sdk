@@ -45,6 +45,7 @@ class TestQspmpluginmanagerv3PluginRS(unittest.TestCase):
                     ],
                 org_id = '',
                 plugin_id = '',
+                run_for_all_scans = True,
                 scan_desc = '',
                 scan_id = '',
                 user_email = '',

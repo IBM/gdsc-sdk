@@ -19,7 +19,7 @@ Summary: Delete cache key Description: Return delete key result message.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.analyticseventsv3_delete_cache_key_request import Analyticseventsv3DeleteCacheKeyRequest
 from ibm_gdsc_sdk_software.models.analyticseventsv3_delete_cache_key_response import Analyticseventsv3DeleteCacheKeyResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -107,7 +107,7 @@ Summary: For QS Advisor risk notification only Description: Sends QS Advisor ris
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.analyticseventsv3_post_qs_advisor_risk_request import Analyticseventsv3PostQSAdvisorRiskRequest
 from ibm_gdsc_sdk_software.models.analyticseventsv3_post_qs_advisor_risk_response import Analyticseventsv3PostQSAdvisorRiskResponse
 from ibm_gdsc_sdk_software.rest import ApiException

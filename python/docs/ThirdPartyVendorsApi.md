@@ -23,7 +23,7 @@ Get additional details of a specific third party vendor, such as, customer accou
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.vendor_summary import VendorSummary
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -106,7 +106,7 @@ Get details about a third party vendor.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.linked_vendor import LinkedVendor
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -186,7 +186,7 @@ Get a list of all the data stores that a third party vendor can access. Find out
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.list_linked_vendor_data_stores200_response import ListLinkedVendorDataStores200Response
 from ibm_gdsc_sdk_software.models.list_linked_vendor_data_stores_sort_parameter import ListLinkedVendorDataStoresSortParameter
 from ibm_gdsc_sdk_software.models.list_vendor_data_stores_filter_parameter import ListVendorDataStoresFilterParameter
@@ -269,14 +269,14 @@ Name | Type | Description  | Notes
 
 Get the summary of a third party vendor
 
-Get a list of all third party vendors associated to your cloud environments (relevant for the cloud environments connected to Guardium Insights SaaS DSPM only).
+Get a list of all third party vendors associated to your cloud environments (relevant for the cloud environments connected to Guardium DSPM only).
 
 ### Example
 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.linked_vendor import LinkedVendor
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -345,14 +345,14 @@ This endpoint does not need any parameter.
 
 Get a list of all the actual trusted assets
 
-Get a list of roles, buckets or service principles, and their entitled permissions associated to your cloud environments connected to Guardium Insights SaaS DSPM.
+Get a list of roles, buckets or service principles, and their entitled permissions associated to your cloud environments connected to Guardium DSPM.
 
 ### Example
 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.list_trustees_filter_parameter import ListTrusteesFilterParameter
 from ibm_gdsc_sdk_software.models.trustee import Trustee
 from ibm_gdsc_sdk_software.rest import ApiException

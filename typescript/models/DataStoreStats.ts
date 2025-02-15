@@ -19,6 +19,10 @@ export class DataStoreStats {
     'appFlowsCount'?: number;
     'configFlowsCount'?: number;
     'sensitivitiesCount'?: number;
+    /**
+    * number of users entitled to access the data store
+    */
+    'userAccessCount'?: number;
     'sensitivitiesSummary'?: Array<SensitivitySummary>;
     'vulnerabilitiesSummary'?: Array<VulnerabilitiesCriticalityCountInner>;
 
@@ -46,6 +50,12 @@ export class DataStoreStats {
         {
             "name": "sensitivitiesCount",
             "baseName": "sensitivitiesCount",
+            "type": "number",
+            "format": ""
+        },
+        {
+            "name": "userAccessCount",
+            "baseName": "userAccessCount",
             "type": "number",
             "format": ""
         },

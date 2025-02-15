@@ -1216,9 +1216,9 @@ class DataResourcesApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RemoveResource200Response:
-        """Remove resource from Guardium Insights SaaS DSPM
+        """Remove resource from DSPM
 
-        Removes a resource, with all its sensitivities, from Guardium Insights SaaS DSPM dashboard. This action does not remove the resource from the resource's source environment.
+        Removes a resource, with all its sensitivities, from Guardium DSPM dashboard. This action does not remove the resource from the resource's source environment.
 
         :param data_resource_id: Data resource ID (required)
         :type data_resource_id: str
@@ -1288,9 +1288,9 @@ class DataResourcesApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[RemoveResource200Response]:
-        """Remove resource from Guardium Insights SaaS DSPM
+        """Remove resource from DSPM
 
-        Removes a resource, with all its sensitivities, from Guardium Insights SaaS DSPM dashboard. This action does not remove the resource from the resource's source environment.
+        Removes a resource, with all its sensitivities, from Guardium DSPM dashboard. This action does not remove the resource from the resource's source environment.
 
         :param data_resource_id: Data resource ID (required)
         :type data_resource_id: str
@@ -1360,9 +1360,9 @@ class DataResourcesApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Remove resource from Guardium Insights SaaS DSPM
+        """Remove resource from DSPM
 
-        Removes a resource, with all its sensitivities, from Guardium Insights SaaS DSPM dashboard. This action does not remove the resource from the resource's source environment.
+        Removes a resource, with all its sensitivities, from Guardium DSPM dashboard. This action does not remove the resource from the resource's source environment.
 
         :param data_resource_id: Data resource ID (required)
         :type data_resource_id: str

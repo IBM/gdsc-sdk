@@ -12,6 +12,7 @@ PluginRQ is the request object for InvokePlugin,InvokeAppProv,InvokeExplorerV1,I
 |**orgId** | **String** |  |  [optional] |
 |**pluginId** | **String** |  |  [optional] |
 |**provisionId** | **String** |  |  [optional] |
+|**runForAllScans** | **Boolean** |  |  [optional] |
 |**scanDesc** | **String** |  |  [optional] |
 |**scanId** | **String** |  |  [optional] |
 |**scanType** | **String** |  |  [optional] |

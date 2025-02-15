@@ -14,7 +14,7 @@ import { Guardiumconnectorv3Attribute } from '../models/Guardiumconnectorv3Attri
 import { HttpFile } from '../http/http';
 
 /**
-* SetupCMRequest is the argument type used to register a GDP Central Manager to Guardium Insights.
+* SetupCMRequest is the argument type used to register a GDP Central Manager to Guardium.
 */
 export class Guardiumconnectorv3SetupCMRequest {
     /**

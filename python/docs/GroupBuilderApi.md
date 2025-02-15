@@ -34,7 +34,7 @@ Summary: Cancel import group Description: Cancel import refresh for selected gro
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.groupbuilderv3_cancel_group_import_response import Groupbuilderv3CancelGroupImportResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -119,7 +119,7 @@ Summary: Create group Description: Create new groups.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.groupbuilderv3_create_group_request import Groupbuilderv3CreateGroupRequest
 from ibm_gdsc_sdk_software.models.groupbuilderv3_create_group_response import Groupbuilderv3CreateGroupResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -205,7 +205,7 @@ Summary: Delete group Description: Delete specified groups if the group ID is no
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.groupbuilderv3_delete_group_response import Groupbuilderv3DeleteGroupResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -290,7 +290,7 @@ Summary: Edit group Description: Add or delete group members.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.groupbuilderv3_edit_group_request import Groupbuilderv3EditGroupRequest
 from ibm_gdsc_sdk_software.models.groupbuilderv3_edit_group_response import Groupbuilderv3EditGroupResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -378,7 +378,7 @@ Summary: Export group Description: Export group content to a file based on a gro
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.groupbuilderv3_get_export_group_request import Groupbuilderv3GetExportGroupRequest
 from ibm_gdsc_sdk_software.models.groupbuilderv3_get_export_group_response import Groupbuilderv3GetExportGroupResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -464,7 +464,7 @@ Summary: Get group details Description: Get details of group specified by group 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.groupbuilderv3_get_group_detail_response import Groupbuilderv3GetGroupDetailResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -553,7 +553,7 @@ Summary: Get group members Description: Get members of all the group ids provide
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.groupbuilderv3_get_group_members_request import Groupbuilderv3GetGroupMembersRequest
 from ibm_gdsc_sdk_software.models.groupbuilderv3_get_group_members_response import Groupbuilderv3GetGroupMembersResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -639,7 +639,7 @@ Summary: Get gdp to gi group mapping Description: Get insights to gdp group sync
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.groupbuilderv3_get_group_sync_mapping_response import Groupbuilderv3GetGroupSyncMappingResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -724,7 +724,7 @@ Summary: Get group type mapping Description: Get insights to gdp group types map
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.groupbuilderv3_get_group_type_mapping_response import Groupbuilderv3GetGroupTypeMappingResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -805,7 +805,7 @@ Summary: Get group types Description: Get a list of available group types.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.groupbuilderv3_get_group_types_response import Groupbuilderv3GetGroupTypesResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -886,7 +886,7 @@ Summary: Get groups Description: Get a list of imported group members.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.groupbuilderv3_get_groups_response import Groupbuilderv3GetGroupsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -975,7 +975,7 @@ Summary: Get import groups Description: Get unsynchronized groups from a central
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.groupbuilderv3_get_import_groups_response import Groupbuilderv3GetImportGroupsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1060,7 +1060,7 @@ Summary: Import group Description: Import selected groups from a central manager
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.groupbuilderv3_import_group_request import Groupbuilderv3ImportGroupRequest
 from ibm_gdsc_sdk_software.models.groupbuilderv3_import_group_response import Groupbuilderv3ImportGroupResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -1146,7 +1146,7 @@ Summary: Refresh groups Description: Refresh tenants selected imported groups.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.groupbuilderv3_refresh_groups_request import Groupbuilderv3RefreshGroupsRequest
 from ibm_gdsc_sdk_software.models.groupbuilderv3_refresh_groups_response import Groupbuilderv3RefreshGroupsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -1232,7 +1232,7 @@ Summary: Reset groups Description: Resets tenants selected predefined groups.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.groupbuilderv3_reset_groups_request import Groupbuilderv3ResetGroupsRequest
 from ibm_gdsc_sdk_software.models.groupbuilderv3_reset_groups_response import Groupbuilderv3ResetGroupsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -1318,7 +1318,7 @@ Summary: Store group members Gdp Description: Store GDP groups. (This API is cal
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.groupbuilderv3_store_group_members_gdp_request import Groupbuilderv3StoreGroupMembersGdpRequest
 from ibm_gdsc_sdk_software.models.groupbuilderv3_store_group_members_gdp_response import Groupbuilderv3StoreGroupMembersGdpResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -1406,7 +1406,7 @@ Summary: Store groups Gdp Description: Store GDP groups. (This API is called fro
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.groupbuilderv3_get_groups_request_gdp import Groupbuilderv3GetGroupsRequestGdp
 from ibm_gdsc_sdk_software.models.groupbuilderv3_get_groups_response_gdp import Groupbuilderv3GetGroupsResponseGdp
 from ibm_gdsc_sdk_software.rest import ApiException

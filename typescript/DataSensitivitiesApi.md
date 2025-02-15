@@ -12,7 +12,7 @@ Method | HTTP request | Description
 # **getSensitivitiesSummary**
 > SensitivitiesSummary getSensitivitiesSummary()
 
-Get a summarised information about all sensitivities classified by Guardium Insights SaaS DSPM.
+Get a summarised information about all sensitivities classified by Guardium DSPM.
 
 ### Example
 

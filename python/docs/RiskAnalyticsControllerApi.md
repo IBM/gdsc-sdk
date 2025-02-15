@@ -18,7 +18,7 @@ Method | HTTP request | Description
 [**risk_analytics_controller_get_user_ui_settings**](RiskAnalyticsControllerApi.md#risk_analytics_controller_get_user_ui_settings) | **GET** /api/v3/risk_events/user_ui_settings | Summary: Get user UI settings Description: Get the user settings by user id to display the risk in the UI.
 [**risk_analytics_controller_risk_event_tuning**](RiskAnalyticsControllerApi.md#risk_analytics_controller_risk_event_tuning) | **PUT** /api/v3/risk_events/tuning | Summary: Risk event tuning Description: Perform tuning risk event actions.
 [**risk_analytics_controller_set_risk_event_status**](RiskAnalyticsControllerApi.md#risk_analytics_controller_set_risk_event_status) | **PUT** /api/v3/risk_events/status | Summary: Set risk event status Description: Update the risk status and justification.
-[**risk_analytics_controller_set_user_ui_settings**](RiskAnalyticsControllerApi.md#risk_analytics_controller_set_user_ui_settings) | **PUT** /api/v3/risk_events/user_ui_settings | Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium Insights. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium Insights.
+[**risk_analytics_controller_set_user_ui_settings**](RiskAnalyticsControllerApi.md#risk_analytics_controller_set_user_ui_settings) | **PUT** /api/v3/risk_events/user_ui_settings | Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium.
 [**risk_analytics_controller_update_risk_feedback**](RiskAnalyticsControllerApi.md#risk_analytics_controller_update_risk_feedback) | **PUT** /api/v3/risk_events/feedback | Summary: Update risk feedback Description: Provide feedback for one or more risk events
 
 
@@ -33,7 +33,7 @@ Summary: Enable disable risk rvent feedback Description: Enable or disable the c
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_enable_disable_risk_event_feedback_request import Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest
 from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_enable_disable_risk_event_feedback_response import Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -119,7 +119,7 @@ Summary: Enable disable risk event process Description: Enable or disable the ri
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_enable_disable_risk_event_process_request import Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest
 from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_enable_disable_risk_event_process_response import Riskanalyticscontrollerv3EnableDisableRiskEventProcessResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -205,7 +205,7 @@ Summary: Get all classifications Description: Get all possible classifications f
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_get_all_classifications_list_response import Riskanalyticscontrollerv3GetAllClassificationsListResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -286,7 +286,7 @@ Summary: Get risk event classifications list Description: retrieves the Classifi
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_get_risk_event_classifications_list_response import Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -371,7 +371,7 @@ Summary: Get risk event data needed for summarization task Description: Retrieve
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_risk_event_summarization_data_response import Riskanalyticscontrollerv3RiskEventSummarizationDataResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -460,7 +460,7 @@ Summary: Get risk event details Description: Return the details of a risk event,
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_get_risk_event_details_response import Riskanalyticscontrollerv3GetRiskEventDetailsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -545,7 +545,7 @@ Summary: Get risk event process status Description: Get the risk event process s
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_get_risk_event_process_status_response import Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -626,7 +626,7 @@ Summary: Get risk event row Description: Return a list of risk events.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_get_risk_event_row_response import Riskanalyticscontrollerv3GetRiskEventRowResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -729,7 +729,7 @@ Summary: Get vulnerability assessment details for a given risk event Description
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_risk_event_vulnerability_assessment_details_response import Riskanalyticscontrollerv3RiskEventVulnerabilityAssessmentDetailsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -814,7 +814,7 @@ Summary: Get risk feedback Description: Get all feedbacks that are in status NEW
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_get_risk_feedback_response import Riskanalyticscontrollerv3GetRiskFeedbackResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -895,7 +895,7 @@ Summary: Get risk observation details Description: Return details of a single ri
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_get_risk_observation_details_response import Riskanalyticscontrollerv3GetRiskObservationDetailsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -982,7 +982,7 @@ Summary: Get user UI settings Description: Get the user settings by user id to d
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_get_user_ui_settings_response import Riskanalyticscontrollerv3GetUserUISettingsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1063,7 +1063,7 @@ Summary: Risk event tuning Description: Perform tuning risk event actions.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_risk_event_tuning_request import Riskanalyticscontrollerv3RiskEventTuningRequest
 from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_risk_event_tuning_response import Riskanalyticscontrollerv3RiskEventTuningResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -1149,7 +1149,7 @@ Summary: Set risk event status Description: Update the risk status and justifica
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_set_risk_event_status_request import Riskanalyticscontrollerv3SetRiskEventStatusRequest
 from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_set_risk_event_status_response import Riskanalyticscontrollerv3SetRiskEventStatusResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -1227,7 +1227,7 @@ Name | Type | Description  | Notes
 # **risk_analytics_controller_set_user_ui_settings**
 > Riskanalyticscontrollerv3SetUserUISettingsResponse risk_analytics_controller_set_user_ui_settings(riskanalyticscontrollerv3_set_user_ui_settings_request)
 
-Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium Insights. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium Insights.
+Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium.
 
 ### Example
 
@@ -1235,7 +1235,7 @@ Summary: Set user UI settings Description: Set the user settings by user id in t
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_set_user_ui_settings_request import Riskanalyticscontrollerv3SetUserUISettingsRequest
 from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_set_user_ui_settings_response import Riskanalyticscontrollerv3SetUserUISettingsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -1271,7 +1271,7 @@ with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
     riskanalyticscontrollerv3_set_user_ui_settings_request = ibm_gdsc_sdk_software.Riskanalyticscontrollerv3SetUserUISettingsRequest() # Riskanalyticscontrollerv3SetUserUISettingsRequest | 
 
     try:
-        # Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium Insights. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium Insights.
+        # Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium.
         api_response = api_instance.risk_analytics_controller_set_user_ui_settings(riskanalyticscontrollerv3_set_user_ui_settings_request)
         print("The response of RiskAnalyticsControllerApi->risk_analytics_controller_set_user_ui_settings:\n")
         pprint(api_response)
@@ -1321,7 +1321,7 @@ Summary: Update risk feedback Description: Provide feedback for one or more risk
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_update_risk_feedback_request import Riskanalyticscontrollerv3UpdateRiskFeedbackRequest
 from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_update_risk_feedback_response import Riskanalyticscontrollerv3UpdateRiskFeedbackResponse
 from ibm_gdsc_sdk_software.rest import ApiException

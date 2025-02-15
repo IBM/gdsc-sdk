@@ -23,5 +23,7 @@
 
 * `SALESFORCE` (value: `"salesforce"`)
 
+* `SNOWFLAKE` (value: `"snowflake"`)
+
 
 

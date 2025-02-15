@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 
 List data stores
 
-List all data stores discovered by Guardium Insights SaaS DSPM.
+List all data stores discovered by Guardium DSPM.
 
 ### Example
 

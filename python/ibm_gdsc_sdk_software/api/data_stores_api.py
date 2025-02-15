@@ -873,7 +873,7 @@ class DataStoresApi:
     ) -> ListDataStores200Response:
         """List data stores
 
-        List all data stores discovered by Guardium Insights SaaS DSPM.
+        List all data stores discovered by Guardium DSPM.
 
         :param filter:
         :type filter: ListDataStoresFilterParameter
@@ -953,7 +953,7 @@ class DataStoresApi:
     ) -> ApiResponse[ListDataStores200Response]:
         """List data stores
 
-        List all data stores discovered by Guardium Insights SaaS DSPM.
+        List all data stores discovered by Guardium DSPM.
 
         :param filter:
         :type filter: ListDataStoresFilterParameter
@@ -1033,7 +1033,7 @@ class DataStoresApi:
     ) -> RESTResponseType:
         """List data stores
 
-        List all data stores discovered by Guardium Insights SaaS DSPM.
+        List all data stores discovered by Guardium DSPM.
 
         :param filter:
         :type filter: ListDataStoresFilterParameter

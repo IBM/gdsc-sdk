@@ -24,7 +24,7 @@ Summary: Get source statistics Description: Return statistics regarding the inpu
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.outliersenginev3_get_source_statistics_response import Outliersenginev3GetSourceStatisticsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -115,7 +115,7 @@ Summary: Get statistics Description: Return statistics regarding number of outli
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.outliersenginev3_statistics_response import Outliersenginev3StatisticsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -196,7 +196,7 @@ Summary: Get working hours periods Description: Get a list of the working hours 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.outliersenginev3_get_working_hours_periods_response import Outliersenginev3GetWorkingHoursPeriodsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -277,7 +277,7 @@ Summary: Run simulator Description: Run outlier simulator.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.outliersenginev3_run_simulator_request import Outliersenginev3RunSimulatorRequest
 from ibm_gdsc_sdk_software.models.rpc_status import RpcStatus
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -363,7 +363,7 @@ Summary: Update working hours periods Description: Update the working hours peri
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.outliersenginev3_outlier_response import Outliersenginev3OutlierResponse
 from ibm_gdsc_sdk_software.models.outliersenginev3_update_working_hours_periods_request import Outliersenginev3UpdateWorkingHoursPeriodsRequest
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -449,7 +449,7 @@ Summary: Upload and analyze period Description: Run outliers detection on ready 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.rpc_status import RpcStatus
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -534,7 +534,7 @@ Summary: User clustering Description: Run user-clustering on current sources.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.rpc_status import RpcStatus
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint

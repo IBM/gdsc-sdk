@@ -1,6 +1,6 @@
 lazy val root = (project in file(".")).
   settings(
-    organization := "org.openapitools",
+    organization := "com.ibm.gdsc.sdk",
     name := "com.ibm.gdsc.sdk.software",
     version := "3.6.0",
     scalaVersion := "2.11.4",

@@ -26,7 +26,7 @@ Summary: Get running queries Description: Get queries that are running more than
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_active_queries_request import Reportsrunnerv3GetActiveQueriesRequest
 from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_active_queries_response import Reportsrunnerv3GetActiveQueriesResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -112,7 +112,7 @@ Summary: Get audit data count Description: Get audit data.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_audit_data_count_request import Reportsrunnerv3GetAuditDataCountRequest
 from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_report_data_count_response import Reportsrunnerv3GetReportDataCountResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -200,7 +200,7 @@ Summary: Get chart data Description: Get Chart data by chart ID or by specifying
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_chart_data_request import Reportsrunnerv3GetChartDataRequest
 from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_chart_data_response import Reportsrunnerv3GetChartDataResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -286,7 +286,7 @@ Name | Type | Description  | Notes
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_chart_data_requestv2 import Reportsrunnerv3GetChartDataRequestv2
 from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_chart_data_responsev2 import Reportsrunnerv3GetChartDataResponsev2
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -371,7 +371,7 @@ Summary: Get report column facet Description: Get counts that is group by values
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_report_column_facet_request import Reportsrunnerv3GetReportColumnFacetRequest
 from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_report_column_facet_response import Reportsrunnerv3GetReportColumnFacetResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -457,7 +457,7 @@ Summary: Get report data count Description: Get report data.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_report_data_count_request import Reportsrunnerv3GetReportDataCountRequest
 from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_report_data_count_response import Reportsrunnerv3GetReportDataCountResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -543,7 +543,7 @@ Summary: Run audit report Description: Run task report by SQL based ob report ID
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsrunnerv3_run_audit_report_request import Reportsrunnerv3RunAuditReportRequest
 from ibm_gdsc_sdk_software.models.stream_result_of_reportsrunnerv3_run_report_response import StreamResultOfReportsrunnerv3RunReportResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -631,7 +631,7 @@ Summary: Run report Description: Run report by report ID or by specifying report
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsrunnerv3_run_report_request import Reportsrunnerv3RunReportRequest
 from ibm_gdsc_sdk_software.models.stream_result_of_reportsrunnerv3_run_report_response import StreamResultOfReportsrunnerv3RunReportResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -717,7 +717,7 @@ Summary: Stop query Description: Stop a query based on the id
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsrunnerv3_stop_query_request import Reportsrunnerv3StopQueryRequest
 from ibm_gdsc_sdk_software.models.reportsrunnerv3_stop_query_response import Reportsrunnerv3StopQueryResponse
 from ibm_gdsc_sdk_software.rest import ApiException

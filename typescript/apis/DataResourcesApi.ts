@@ -220,8 +220,8 @@ export class DataResourcesApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Removes a resource, with all its sensitivities, from Guardium Insights SaaS DSPM dashboard. This action does not remove the resource from the resource\'s source environment.
-     * Remove resource from Guardium Insights SaaS DSPM
+     * Removes a resource, with all its sensitivities, from Guardium DSPM dashboard. This action does not remove the resource from the resource\'s source environment.
+     * Remove resource from DSPM
      * @param dataResourceId Data resource ID
      * @param dataStoreId Data store ID
      */

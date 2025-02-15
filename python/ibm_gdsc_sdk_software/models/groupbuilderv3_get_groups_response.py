@@ -26,7 +26,7 @@ from typing_extensions import Self
 
 class Groupbuilderv3GetGroupsResponse(BaseModel):
     """
-    GetGroupResponse returns the list of available groups on Guardium Insights for Db2 Warehouse.
+    GetGroupResponse returns the list of available groups on Guardium for Db2 Warehouse.
     """ # noqa: E501
     groups: Optional[List[Groupbuilderv3Group]] = Field(default=None, description="List of groups.")
     status: Optional[Groupbuilderv3StatusResponseBase] = None

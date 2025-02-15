@@ -18,7 +18,7 @@ import re  # noqa: F401
 import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool
-from typing import Any, ClassVar, Dict, List
+from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,7 +27,8 @@ class CloudAccountInstallationStatus(BaseModel):
     CloudAccountInstallationStatus
     """ # noqa: E501
     discovery_permissions: StrictBool = Field(alias="discoveryPermissions")
-    __properties: ClassVar[List[str]] = ["discoveryPermissions"]
+    is_install_complete: Optional[StrictBool] = Field(default=None, alias="isInstallComplete")
+    __properties: ClassVar[List[str]] = ["discoveryPermissions", "isInstallComplete"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -80,7 +81,8 @@ class CloudAccountInstallationStatus(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "discoveryPermissions": obj.get("discoveryPermissions")
+            "discoveryPermissions": obj.get("discoveryPermissions"),
+            "isInstallComplete": obj.get("isInstallComplete")
         })
         return _obj
 

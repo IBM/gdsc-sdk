@@ -61,7 +61,7 @@ class DataSensitivitiesApi:
     ) -> SensitivitiesSummary:
         """Get the summary of sensitivities
 
-        Get a summarised information about all sensitivities classified by Guardium Insights SaaS DSPM.
+        Get a summarised information about all sensitivities classified by Guardium DSPM.
 
         :param filter:
         :type filter: ListSensitivitiesFilterParameter
@@ -129,7 +129,7 @@ class DataSensitivitiesApi:
     ) -> ApiResponse[SensitivitiesSummary]:
         """Get the summary of sensitivities
 
-        Get a summarised information about all sensitivities classified by Guardium Insights SaaS DSPM.
+        Get a summarised information about all sensitivities classified by Guardium DSPM.
 
         :param filter:
         :type filter: ListSensitivitiesFilterParameter
@@ -197,7 +197,7 @@ class DataSensitivitiesApi:
     ) -> RESTResponseType:
         """Get the summary of sensitivities
 
-        Get a summarised information about all sensitivities classified by Guardium Insights SaaS DSPM.
+        Get a summarised information about all sensitivities classified by Guardium DSPM.
 
         :param filter:
         :type filter: ListSensitivitiesFilterParameter

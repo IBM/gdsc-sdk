@@ -1141,7 +1141,7 @@ export class GuardiumConnectorApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for Guardium Insights.
+     * Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for Guardium.
      * @param centralManagerId Central Manager ID.
      */
     public async guardiumConnectorGetLatestDMExtractionProfile(centralManagerId: string, _options?: Configuration): Promise<RequestContext> {
@@ -1424,7 +1424,7 @@ export class GuardiumConnectorApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Summary: Setup CM Description: Set up the registration between a GDP Central manager and Guardium Insights.
+     * Summary: Setup CM Description: Set up the registration between a GDP Central manager and Guardium.
      * @param guardiumconnectorv3SetupCMRequest 
      */
     public async guardiumConnectorSetupCM(guardiumconnectorv3SetupCMRequest: Guardiumconnectorv3SetupCMRequest, _options?: Configuration): Promise<RequestContext> {

@@ -29,7 +29,7 @@ Summary: Create integration Description: Create a set of new templates for a new
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.templatesv3_create_integration_request import Templatesv3CreateIntegrationRequest
 from ibm_gdsc_sdk_software.models.templatesv3_create_integration_response import Templatesv3CreateIntegrationResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -115,7 +115,7 @@ Summary: Create template Description: Create a new template.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.templatesv3_create_template_request import Templatesv3CreateTemplateRequest
 from ibm_gdsc_sdk_software.models.templatesv3_create_template_response import Templatesv3CreateTemplateResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -201,7 +201,7 @@ Summary: Delete integration Description: Delete all templates associated with an
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.templatesv3_delete_integration_response import Templatesv3DeleteIntegrationResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -286,7 +286,7 @@ Summary: Delete template Description: Delete a specific template.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.templatesv3_delete_template_response import Templatesv3DeleteTemplateResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -371,7 +371,7 @@ Summary: Get origin default content Description: Return the default content for 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.templatesv3_get_origin_default_content_response import Templatesv3GetOriginDefaultContentResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -460,7 +460,7 @@ Summary: Get origin fields Description: Return the fields available with a speci
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.templatesv3_get_origin_fields_response import Templatesv3GetOriginFieldsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -545,7 +545,7 @@ Summary: Get template Description: Return a specific template by id.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.templatesv3_get_template_response import Templatesv3GetTemplateResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -632,7 +632,7 @@ Summary: Get templates Description: Return all templates based on supplied filte
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.templatesv3_get_templates_response import Templatesv3GetTemplatesResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -729,7 +729,7 @@ Summary: Test template Description: Analyze a specified template to ensure will 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.templatesv3_test_template_request import Templatesv3TestTemplateRequest
 from ibm_gdsc_sdk_software.models.templatesv3_test_template_response import Templatesv3TestTemplateResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -815,7 +815,7 @@ Summary: Transform template Description: Process the specified template and retu
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.templatesv3_transform_template_request import Templatesv3TransformTemplateRequest
 from ibm_gdsc_sdk_software.models.templatesv3_transform_template_response import Templatesv3TransformTemplateResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -901,7 +901,7 @@ Summary: Transform template JSON Description: Process the specified template and
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.templatesv3_transform_template_json_request import Templatesv3TransformTemplateJSONRequest
 from ibm_gdsc_sdk_software.models.templatesv3_transform_template_json_response import Templatesv3TransformTemplateJSONResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -987,7 +987,7 @@ Summary: Update template Description: Update a single template.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.templatesv3_update_template_request import Templatesv3UpdateTemplateRequest
 from ibm_gdsc_sdk_software.models.templatesv3_update_template_response import Templatesv3UpdateTemplateResponse
 from ibm_gdsc_sdk_software.rest import ApiException

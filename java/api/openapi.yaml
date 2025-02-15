@@ -103,6 +103,9 @@ tags:
 - description: Third Party vendors that have access to your cloud environments
   name: Third party vendors
   x-displayName: Third party vendors
+- description: User entitlements
+  name: User Entitlements
+  x-displayName: User Entitlements
 paths:
   /api/v3/activity:
     get:
@@ -2236,7 +2239,7 @@ paths:
       - ApiKeyAuth: []
       summary: |-
         Summary: Setup CM
-        Description: Set up the registration between a GDP Central manager and Guardium Insights.
+        Description: Set up the registration between a GDP Central manager and Guardium.
       tags:
       - GuardiumConnector
       x-content-type: application/json
@@ -2497,7 +2500,7 @@ paths:
       - ApiKeyAuth: []
       summary: |-
         Summary: Get latest DM extraction profile
-        Description: Return the Datamart Extraction Profile for Guardium Insights.
+        Description: Return the Datamart Extraction Profile for Guardium.
       tags:
       - GuardiumConnector
       x-accepts:
@@ -3413,7 +3416,7 @@ paths:
       - ApiKeyAuth: []
       summary: |-
         Summary: Get certificate
-        Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium Insights.
+        Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium.
       tags:
       - UniversalConnectorManager
       x-accepts:
@@ -4877,108 +4880,6 @@ paths:
       x-content-type: application/json
       x-accepts:
       - application/json
-  /api/v3/datamanager/all/entities:
-    post:
-      operationId: QSDataManager_InsertAllEntities
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/qspmdatamanagerv3InsertEntitiesRequest'
-        required: true
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/qspmdatamanagerv3StandardEmptyResponse'
-          description: A successful response.
-        default:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/runtimeError'
-          description: An unexpected error response.
-      security:
-      - BasicAuth: []
-      - ApiKeyAuth: []
-      summary: |-
-        Summary: Insert Data
-        Description: Insert All Dimension and Fact tables data.
-      tags:
-      - QSDataManager
-      x-content-type: application/json
-      x-accepts:
-      - application/json
-  /api/v3/datamanager/application/{provision_id}/data:
-    get:
-      operationId: QSDataManager_GetAppDataForProvisionId
-      parameters:
-      - description: Identifier for the provision request
-        explode: false
-        in: path
-        name: provision_id
-        required: true
-        schema:
-          format: int64
-          type: string
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/qspmdatamanagerv3AppDataResponse'
-          description: A successful response.
-        default:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/runtimeError'
-          description: An unexpected error response.
-      security:
-      - BasicAuth: []
-      - ApiKeyAuth: []
-      summary: |-
-        Summary: Fetch Application Provisoning Details
-        Description: Fetch details from app dimension entity for given provision id.
-      tags:
-      - QSDataManager
-      x-accepts:
-      - application/json
-  /api/v3/datamanager/entity/search:
-    post:
-      operationId: QSDataManager_SearchEntityData
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/qspmdatamanagerv3SearchEntityDataRequest'
-        required: true
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/qspmdatamanagerv3SearchEntityDataResponse'
-          description: A successful response.
-        default:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/runtimeError'
-          description: An unexpected error response.
-      security:
-      - BasicAuth: []
-      - ApiKeyAuth: []
-      summary: |-
-        Summary: Retrieve Entity Data
-        Description:Retrieve Entity data for given parameters
-      tags:
-      - QSDataManager
-      x-content-type: application/json
-      x-accepts:
-      - application/json
   /api/v3/datamanager/master-data:
     get:
       operationId: QSDataManager_GetMasterData
@@ -5001,75 +4902,6 @@ paths:
       summary: |-
         Summary: master data for all entities
         Description: Retrieves All Dimension and Fact tables data.
-      tags:
-      - QSDataManager
-      x-accepts:
-      - application/json
-  /api/v3/datamanager/network:
-    put:
-      operationId: QSDataManager_UpdateNetLocation
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/qspmdatamanagerv3UpdateNetLocRequest'
-        required: true
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/qspmdatamanagerv3UpdateNetLocResponse'
-          description: A successful response.
-        default:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/runtimeError'
-          description: An unexpected error response.
-      security:
-      - BasicAuth: []
-      - ApiKeyAuth: []
-      summary: |-
-        Summary: Update Netlocation Details
-        Description: Update netloc dimension entity for agiven scanid.
-      tags:
-      - QSDataManager
-      x-content-type: application/json
-      x-accepts:
-      - application/json
-  /api/v3/datamanager/network/{scan_id}/data:
-    get:
-      operationId: QSDataManager_GetNetLocDimDataForScanId
-      parameters:
-      - description: Identifier for the scan to retrieve netloc data for
-        explode: false
-        in: path
-        name: scan_id
-        required: true
-        schema:
-          format: int64
-          type: string
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/qspmdatamanagerv3NetlocDataResponse'
-          description: A successful response.
-        default:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/runtimeError'
-          description: An unexpected error response.
-      security:
-      - BasicAuth: []
-      - ApiKeyAuth: []
-      summary: |-
-        Summary: Fetch Netlocation Details
-        Description: Fetch details from netloc dimension entity for a given scanid.
       tags:
       - QSDataManager
       x-accepts:
@@ -11234,7 +11066,7 @@ paths:
       - ApiKeyAuth: []
       summary: |-
         Summary: Set user UI settings
-        Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium Insights. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium Insights.
+        Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium.
       tags:
       - RiskAnalyticsController
       x-content-type: application/json
@@ -13473,8 +13305,8 @@ paths:
   /api/v1/dspm/linkedVendors:
     get:
       description: Get a list of all third party vendors associated to your cloud
-        environments (relevant for the cloud environments connected to Guardium Insights
-        SaaS DSPM only).
+        environments (relevant for the cloud environments connected to Guardium DSPM
+        only).
       operationId: listLinkedVendors
       responses:
         "200":
@@ -13819,7 +13651,7 @@ paths:
     get:
       description: "Get a list of roles, buckets or service principles, and their\
         \ entitled permissions associated to your cloud environments connected to\
-        \ Guardium Insights SaaS DSPM."
+        \ Guardium DSPM."
       operationId: listTrustedAssets
       parameters:
       - explode: true
@@ -13892,7 +13724,7 @@ paths:
   /api/v1/dspm/cloudAccounts/linkedAccounts:
     get:
       description: Get a list of all the connected cloud accounts monitored by Guardium
-        Insights SaaS DSPM.
+        DSPM.
       operationId: listLinkedAccounts
       responses:
         "200":
@@ -13943,7 +13775,7 @@ paths:
               style: simple
       security:
       - ApiKeyAuth: []
-      summary: List cloud accounts connected to Guardium Insights SaaS DSPM
+      summary: List cloud accounts connected to DSPM
       tags:
       - Cloud accounts
       x-amazon-apigateway-integration:
@@ -13956,8 +13788,7 @@ paths:
       - application/json
   /api/v1/dspm/cloudAccounts/removeAccounts:
     delete:
-      description: Post cloud account ID connections to be removed from Guardium Insights
-        SaaS DSPM.
+      description: Post cloud account ID connections to be removed from Guardium DSPM.
       operationId: removeAccounts
       parameters:
       - explode: true
@@ -14234,9 +14065,8 @@ paths:
     post:
       description: "You can add a single or multiple cloud account connections from\
         \ the same cloud provider.<BR>Adding these cloud account connections will\
-        \ trigger Guardium Insights SaaS DSPM for data store discovery.<BR>To enable\
-        \ data classification, run the 'Add a new region for data classification'\
-        \ API."
+        \ trigger Guardium DSPM for data store discovery.<BR>To enable data classification,\
+        \ run the 'Add a new region for data classification' API."
       operationId: addCloudAccounts
       requestBody:
         content:
@@ -14291,7 +14121,7 @@ paths:
               style: simple
       security:
       - ApiKeyAuth: []
-      summary: Add cloud account connections to Guardium Insights SaaS DSPM
+      summary: Add cloud account connections to DSPM
       tags:
       - Cloud accounts
       x-amazon-apigateway-integration:
@@ -14359,8 +14189,7 @@ paths:
       - application/json
   /api/v1/dspm/cloudAccounts/cloudProviders/analyzedRegions/status:
     get:
-      description: Get the installation status of Guardium Insights SaaS DSPM for
-        a region.
+      description: Get the installation status of Guardium DSPM for a region.
       operationId: getAnalyzedRegionStatus
       parameters:
       - description: The cloud provider for the cloud account
@@ -14966,10 +14795,14 @@ paths:
       x-content-type: application/json
       x-accepts:
       - application/json
-  /api/v1/dspm/cloudAccounts/saasApps/salesforce/generateAuthUrl:
-    get:
-      description: Generate an administrator consent URL for Salesforce integration.
-      operationId: generateSalesforceAuthUrl
+  /api/v1/dspm/cloudAccounts/saasApps/salesforce/generateAuthUrl: {}
+  /api/v1/dspm/cloudAccounts/saasApps/salesforce/submitAuthCodeInfo: {}
+  /api/v1/dspm/cloudAccounts/saasApps/snowflake/generateAuthUrl:
+    post:
+      description: Generate an administrator consent URL for Snowflake integration.
+      operationId: generateSnowflakeAuthUrl
+      requestBody:
+        $ref: '#/components/requestBodies/ClientInfo'
       responses:
         "200":
           content:
@@ -15001,7 +14834,63 @@ paths:
               style: simple
       security:
       - ApiKeyAuth: []
-      summary: Generate a Salesforce consent URL
+      summary: Validate and Generate a Snowflake OAuth URL
+      tags:
+      - Cloud accounts
+      x-amazon-apigateway-integration:
+        type: aws_proxy
+        uri: "arn:${AWS::Partition}:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:req-handler:ALIAS_REPLACE/invocations"
+        httpMethod: POST
+        passthroughBehavior: when_no_match
+        contentHandling: CONVERT_TO_TEXT
+      x-content-type: application/json
+      x-accepts:
+      - application/json
+  /api/v1/dspm/cloudAccounts/saasApps/snowflake/getRefreshTokenExpiry/{providerId}:
+    get:
+      description: Get Snowflake Refresh Token Expiry date.
+      operationId: getRefreshTokenExpiry
+      parameters:
+      - description: The ID of the provider
+        explode: false
+        in: path
+        name: providerId
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenExpiryInfo'
+          description: success
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/authenticate_400_response'
+          description: Bad Request
+          headers:
+            Access-Control-Allow-Origin:
+              explode: false
+              schema:
+                type: string
+              style: simple
+            Access-Control-Allow-Methods:
+              explode: false
+              schema:
+                type: string
+              style: simple
+            Access-Control-Allow-Headers:
+              explode: false
+              schema:
+                type: string
+              style: simple
+      security:
+      - ApiKeyAuth: []
+      summary: Get Snowflake Refresh Token Expiry date
       tags:
       - Cloud accounts
       x-amazon-apigateway-integration:
@@ -15012,12 +14901,58 @@ paths:
         contentHandling: CONVERT_TO_TEXT
       x-accepts:
       - application/json
-  /api/v1/dspm/cloudAccounts/saasApps/salesforce/submitAuthCodeInfo:
+  /api/v1/dspm/cloudAccounts/saasApps/snowflake/snowflakeIntegrationScript:
+    get:
+      description: Generate Snowflake integration Script.
+      operationId: snowflakeIntegrationScript
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Script'
+          description: success
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/authenticate_400_response'
+          description: Bad Request
+          headers:
+            Access-Control-Allow-Origin:
+              explode: false
+              schema:
+                type: string
+              style: simple
+            Access-Control-Allow-Methods:
+              explode: false
+              schema:
+                type: string
+              style: simple
+            Access-Control-Allow-Headers:
+              explode: false
+              schema:
+                type: string
+              style: simple
+      security:
+      - ApiKeyAuth: []
+      summary: Generate Snowflake Integration Script
+      tags:
+      - Cloud accounts
+      x-amazon-apigateway-integration:
+        type: aws_proxy
+        uri: "arn:${AWS::Partition}:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:req-handler:ALIAS_REPLACE/invocations"
+        httpMethod: POST
+        passthroughBehavior: when_no_match
+        contentHandling: CONVERT_TO_TEXT
+      x-accepts:
+      - application/json
+  /api/v1/dspm/cloudAccounts/saasApps/snowflake/submitAuthCode:
     post:
-      description: Submit customer information for Salesforce integration.
-      operationId: submitSalesforceAuthCode
+      description: Storing code that is returned from Snowflake oAuth.
+      operationId: submitSnowflakeAuthCode
       requestBody:
-        $ref: '#/components/requestBodies/SubmitAuthCodeInfo'
+        $ref: '#/components/requestBodies/SnowflakeAuthCodeInfo'
       responses:
         "200":
           description: success
@@ -15091,7 +15026,7 @@ paths:
           description: Service Unavailable
       security:
       - ApiKeyAuth: []
-      summary: Submit Salesforce customer information
+      summary: Submit Snowflake oAuth code
       tags:
       - Cloud accounts
       x-amazon-apigateway-integration:
@@ -15103,104 +15038,7 @@ paths:
       x-content-type: application/json
       x-accepts:
       - application/json
-  /api/v1/dspm/cloudAccounts/compliances:
-    get:
-      description: List the compliance frameworks selected.
-      operationId: getCompliances
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ComplianceArray'
-          description: success
-        "400":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/authenticate_400_response'
-          description: Bad Request
-          headers:
-            Access-Control-Allow-Origin:
-              explode: false
-              schema:
-                type: string
-              style: simple
-            Access-Control-Allow-Methods:
-              explode: false
-              schema:
-                type: string
-              style: simple
-            Access-Control-Allow-Headers:
-              explode: false
-              schema:
-                type: string
-              style: simple
-      security:
-      - ApiKeyAuth: []
-      summary: Get a list of selected compliances
-      tags:
-      - Cloud accounts
-      x-amazon-apigateway-integration:
-        type: aws_proxy
-        uri: "arn:${AWS::Partition}:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:req-handler:ALIAS_REPLACE/invocations"
-        httpMethod: POST
-        passthroughBehavior: when_no_match
-        contentHandling: CONVERT_TO_TEXT
-      x-accepts:
-      - application/json
-    post:
-      description: Select one or more compliance frameworks.
-      operationId: setCompliances
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ComplianceArray'
-        required: true
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                type: object
-          description: success
-        "400":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/authenticate_400_response'
-          description: Bad Request
-          headers:
-            Access-Control-Allow-Origin:
-              explode: false
-              schema:
-                type: string
-              style: simple
-            Access-Control-Allow-Methods:
-              explode: false
-              schema:
-                type: string
-              style: simple
-            Access-Control-Allow-Headers:
-              explode: false
-              schema:
-                type: string
-              style: simple
-      security:
-      - ApiKeyAuth: []
-      summary: Set a list of selected compliances
-      tags:
-      - Cloud accounts
-      x-amazon-apigateway-integration:
-        type: aws_proxy
-        uri: "arn:${AWS::Partition}:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:req-handler:ALIAS_REPLACE/invocations"
-        httpMethod: POST
-        passthroughBehavior: when_no_match
-        contentHandling: CONVERT_TO_TEXT
-      x-content-type: application/json
-      x-accepts:
-      - application/json
+  /api/v1/dspm/cloudAccounts/compliances: {}
   /api/v1/dspm/dataStores/{dataStoreId}:
     get:
       description: Get details of a specific data store by its ID.
@@ -15318,7 +15156,7 @@ paths:
       - application/json
   /api/v1/dspm/dataStores:
     get:
-      description: List all data stores discovered by Guardium Insights SaaS DSPM.
+      description: List all data stores discovered by Guardium DSPM.
       operationId: listDataStores
       parameters:
       - explode: true
@@ -16083,8 +15921,8 @@ paths:
   /api/v1/dspm/dataResources/{dataResourceId}/removeResource:
     delete:
       description: "Removes a resource, with all its sensitivities, from Guardium\
-        \ Insights SaaS DSPM dashboard. This action does not remove the resource from\
-        \ the resource's source environment."
+        \ DSPM dashboard. This action does not remove the resource from the resource's\
+        \ source environment."
       operationId: removeResource
       parameters:
       - description: Data resource ID
@@ -16136,7 +15974,7 @@ paths:
               style: simple
       security:
       - ApiKeyAuth: []
-      summary: Remove resource from Guardium Insights SaaS DSPM
+      summary: Remove resource from DSPM
       tags:
       - Data resources
       x-amazon-apigateway-integration:
@@ -16552,8 +16390,8 @@ paths:
       - application/json
   /api/v1/dspm/dataMovements/actualFlows/summary:
     get:
-      description: "Get a summary of all the actual flows discovered by Guardium Insights\
-        \ SaaS DSPM, that is, details about source and destination, and other information."
+      description: "Get a summary of all the actual flows discovered by Guardium DSPM,\
+        \ that is, details about source and destination, and other information."
       operationId: getActualFlowsSummary
       parameters:
       - explode: true
@@ -17348,7 +17186,7 @@ paths:
   /api/v1/dspm/sensitivities/summary:
     get:
       description: Get a summarised information about all sensitivities classified
-        by Guardium Insights SaaS DSPM.
+        by Guardium DSPM.
       operationId: getSensitivitiesSummary
       parameters:
       - explode: true
@@ -17454,8 +17292,10 @@ paths:
         contentHandling: CONVERT_TO_TEXT
       x-accepts:
       - application/json
+  /api/v1/dspm/userEntitlements: {}
   /api/v1/dspm/userEntitlements/userSensitiveCategories: {}
   /api/v1/dspm/userEntitlements/userStores: {}
+  /api/v1/dspm/userEntitlements/userPermissionsConfigurations: {}
 components:
   parameters:
     NextTokenQueryParam:
@@ -17562,6 +17402,44 @@ components:
       schema:
         $ref: '#/components/schemas/listActualFlowPaths_filter_parameter'
       style: form
+    UserIdFilterParam:
+      explode: true
+      in: query
+      name: userId
+      required: true
+      schema:
+        type: string
+      style: form
+    PermissionsFilterParam:
+      explode: true
+      in: query
+      name: permissions
+      required: false
+      schema:
+        items:
+          $ref: '#/components/schemas/AccessType'
+        type: array
+      style: form
+    ProvidersFilterParam:
+      explode: true
+      in: query
+      name: providers
+      required: false
+      schema:
+        items:
+          $ref: '#/components/schemas/ServiceProvider'
+        type: array
+      style: form
+    CategoriesFilterParam:
+      explode: true
+      in: query
+      name: categories
+      required: false
+      schema:
+        items:
+          type: string
+        type: array
+      style: form
   requestBodies:
     qspmpluginmanagerv3PluginRQ:
       content:
@@ -17604,6 +17482,18 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/AuthCode'
+      required: true
+    SnowflakeAuthCodeInfo:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/AuthInfo'
+      required: true
+    ClientInfo:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/clientInfo'
       required: true
   responses:
     "200":
@@ -28509,6 +28399,7 @@ components:
             attributes:
             - attributes
             - attributes
+            ldap_group_name: ldap_group_name
             clear_group: true
           members:
           - member_id: member_id
@@ -28574,6 +28465,7 @@ components:
             attributes:
             - attributes
             - attributes
+            ldap_group_name: ldap_group_name
             clear_group: true
           members:
           - member_id: member_id
@@ -28615,6 +28507,7 @@ components:
             attributes:
             - attributes
             - attributes
+            ldap_group_name: ldap_group_name
             clear_group: true
           members:
           - member_id: member_id
@@ -28713,7 +28606,7 @@ components:
       type: object
     groupbuilderv3GetGroupsResponse:
       description: GetGroupResponse returns the list of available groups on Guardium
-        Insights for Db2 Warehouse.
+        for Db2 Warehouse.
       example:
         groups:
         - nested_group_members:
@@ -28748,6 +28641,7 @@ components:
             attributes:
             - attributes
             - attributes
+            ldap_group_name: ldap_group_name
             clear_group: true
           members:
           - member_id: member_id
@@ -28789,6 +28683,7 @@ components:
             attributes:
             - attributes
             - attributes
+            ldap_group_name: ldap_group_name
             clear_group: true
           members:
           - member_id: member_id
@@ -28859,6 +28754,7 @@ components:
             attributes:
             - attributes
             - attributes
+            ldap_group_name: ldap_group_name
             clear_group: true
           members:
           - member_id: member_id
@@ -28900,6 +28796,7 @@ components:
             attributes:
             - attributes
             - attributes
+            ldap_group_name: ldap_group_name
             clear_group: true
           members:
           - member_id: member_id
@@ -28923,7 +28820,7 @@ components:
       type: object
     groupbuilderv3Group:
       description: Group imports groups from a Guradium Data Protection central manager
-        to Guardium Insights.
+        to Guardium.
       example:
         nested_group_members:
         - nested_member_id: 2
@@ -28957,6 +28854,7 @@ components:
           attributes:
           - attributes
           - attributes
+          ldap_group_name: ldap_group_name
           clear_group: true
         members:
         - member_id: member_id
@@ -29138,6 +29036,7 @@ components:
             attributes:
             - attributes
             - attributes
+            ldap_group_name: ldap_group_name
             clear_group: true
           members:
           - member_id: member_id
@@ -29179,6 +29078,7 @@ components:
             attributes:
             - attributes
             - attributes
+            ldap_group_name: ldap_group_name
             clear_group: true
           members:
           - member_id: member_id
@@ -29214,6 +29114,7 @@ components:
         attributes:
         - attributes
         - attributes
+        ldap_group_name: ldap_group_name
         clear_group: true
       properties:
         attributes:
@@ -29245,6 +29146,10 @@ components:
           description: Maximum number of objects to import.
           format: int32
           type: integer
+        ldap_group_name:
+          description: DN name of the LDAP group to get members from.  Alternative
+            to explicit filter.
+          type: string
         ldap_id:
           description: ID of the ICP LDAP definition from which to import.
           type: string
@@ -30070,7 +29975,7 @@ components:
           type: array
       type: object
     guardiumconnectorv3GetCMsConfigResponse:
-      description: Retrieves the list of Central Managers registered to Guardium Insights.
+      description: Retrieves the list of Central Managers registered to Guardium.
       example:
         cms:
         - max_supported_dm_version: max_supported_dm_version
@@ -31440,7 +31345,7 @@ components:
       type: object
     guardiumconnectorv3SetupCMRequest:
       description: SetupCMRequest is the argument type used to register a GDP Central
-        Manager to Guardium Insights.
+        Manager to Guardium.
       properties:
         attributes:
           description: Attributes specific to the GDP Central Manager.
@@ -31463,7 +31368,7 @@ components:
       type: object
     guardiumconnectorv3SetupCMResponse:
       description: SetupCMResponse is the response after registering a GDP Central
-        manager to Guardium insights.
+        manager to Guardium.
       example:
         response_code: response_code
         response: response
@@ -38527,15 +38432,6 @@ components:
       - NULL_VALUE
       type: string
     qspmdatamanagerv3AppData:
-      example:
-        app_end_time: 2000-01-23T04:56:07.000+00:00
-        app_name: app_name
-        app_generic_id: app_generic_id
-        app_uuid: app_uuid
-        app_start_time: 2000-01-23T04:56:07.000+00:00
-        app_ver: app_ver
-        app_owner_email: app_owner_email
-        app_client_specific: app_client_specific
       properties:
         app_client_specific:
           title: Client-specific details about the application
@@ -38569,54 +38465,12 @@ components:
     qspmdatamanagerv3AppDataResponse:
       description: AppDataResponse is the response object for GetAppDataForProvisionId
         API.
-      example:
-        appData:
-        - app_end_time: 2000-01-23T04:56:07.000+00:00
-          app_name: app_name
-          app_generic_id: app_generic_id
-          app_uuid: app_uuid
-          app_start_time: 2000-01-23T04:56:07.000+00:00
-          app_ver: app_ver
-          app_owner_email: app_owner_email
-          app_client_specific: app_client_specific
-        - app_end_time: 2000-01-23T04:56:07.000+00:00
-          app_name: app_name
-          app_generic_id: app_generic_id
-          app_uuid: app_uuid
-          app_start_time: 2000-01-23T04:56:07.000+00:00
-          app_ver: app_ver
-          app_owner_email: app_owner_email
-          app_client_specific: app_client_specific
       properties:
         appData:
           items:
             $ref: '#/components/schemas/qspmdatamanagerv3AppData'
           title: List of application data entries
           type: array
-      type: object
-    qspmdatamanagerv3InsertEntitiesRequest:
-      description: InsertEntitiesRequest is the request object for InsertAllEntities
-        API.
-      properties:
-        dims:
-          items:
-            type: object
-          title: List of dimension objects
-          type: array
-        facts:
-          items:
-            type: object
-          title: List of fact objects
-          type: array
-        policysqls:
-          items:
-            type: string
-          title: List of SQL policy strings
-          type: array
-        scan_id:
-          format: int64
-          title: Unique identifier for the scan
-          type: string
       type: object
     qspmdatamanagerv3MasterDataModel:
       example:
@@ -38703,16 +38557,6 @@ components:
           type: array
       type: object
     qspmdatamanagerv3NetlocData:
-      example:
-        netloc_uuid: netloc_uuid
-        netloc_country: netloc_country
-        netloc_state_prov: netloc_state_prov
-        netloc_region: netloc_region
-        netloc_host: netloc_host
-        netloc_city: netloc_city
-        netloc_dns: netloc_dns
-        netloc_data_center: netloc_data_center
-        netloc_port: netloc_port
       properties:
         netloc_city:
           title: City where the network location is located
@@ -38744,26 +38588,6 @@ components:
       title: Netloc dim model
       type: object
     qspmdatamanagerv3NetlocDataResponse:
-      example:
-        netlocData:
-        - netloc_uuid: netloc_uuid
-          netloc_country: netloc_country
-          netloc_state_prov: netloc_state_prov
-          netloc_region: netloc_region
-          netloc_host: netloc_host
-          netloc_city: netloc_city
-          netloc_dns: netloc_dns
-          netloc_data_center: netloc_data_center
-          netloc_port: netloc_port
-        - netloc_uuid: netloc_uuid
-          netloc_country: netloc_country
-          netloc_state_prov: netloc_state_prov
-          netloc_region: netloc_region
-          netloc_host: netloc_host
-          netloc_city: netloc_city
-          netloc_dns: netloc_dns
-          netloc_data_center: netloc_data_center
-          netloc_port: netloc_port
       properties:
         netlocData:
           items:
@@ -38774,9 +38598,6 @@ components:
         API
       type: object
     qspmdatamanagerv3Row:
-      example:
-        columns:
-          key: columns
       properties:
         columns:
           additionalProperties:
@@ -38883,35 +38704,9 @@ components:
           type: string
       title: Scan response
       type: object
-    qspmdatamanagerv3SearchEntityDataRequest:
-      description: SearchEntityDataRequest is the request object for SearchEntityData
-        API.
-      properties:
-        columns:
-          items:
-            type: string
-          title: List of column names to retrieve
-          type: array
-        filter:
-          title: "Optional filter condition (e.g., \"id > 10\")"
-          type: string
-        limit:
-          format: int64
-          title: Optional limit on the number of rows to return
-          type: string
-        table_name:
-          title: Name of the table to query
-          type: string
-      type: object
     qspmdatamanagerv3SearchEntityDataResponse:
       description: SearchEntityDataResponse is the response object for SearchEntityData
         API.
-      example:
-        rows:
-        - columns:
-            key: columns
-        - columns:
-            key: columns
       properties:
         rows:
           items:
@@ -38922,34 +38717,9 @@ components:
     qspmdatamanagerv3StandardEmptyResponse:
       description: StandardEmptyResponse - The standard empty request message.
       type: object
-    qspmdatamanagerv3UpdateNetLocRequest:
-      description: UpdateNetLocRequest is the request object for UpdateNetLocation
-        API.
-      properties:
-        netloc_city:
-          title: Updated city information for the network location
-          type: string
-        netloc_country:
-          title: Updated country information for the network location
-          type: string
-        netloc_data_center:
-          title: Updated data center information for the network location
-          type: string
-        netloc_region:
-          title: Updated region information within the country for the network location
-          type: string
-        netloc_state_prov:
-          title: Updated state or province information for the network location
-          type: string
-        netloc_uuid:
-          title: Unique identifier for the network location
-          type: string
-      type: object
     qspmdatamanagerv3UpdateNetLocResponse:
       description: UpdateNetLocResponse is the response object for UpdateNetLocation
         API.
-      example:
-        message: message
       properties:
         message:
           title: Response message indicating the result of the network location update
@@ -38986,6 +38756,9 @@ components:
           format: int64
           title: Identifier for the provision associated with the scan
           type: string
+        run_for_all_scans:
+          title: Flag indicating whether the plugin should run for all scans
+          type: boolean
         scan_desc:
           title: Description of the scan
           type: string
@@ -39014,6 +38787,7 @@ components:
         - ref_id: 0
         - ref_id: 0
         org_id: org_id
+        run_for_all_scans: true
         scan_id: scan_id
         facts:
         - ref_id: 0
@@ -39039,6 +38813,9 @@ components:
           format: int64
           title: Unique identifier for the plugin
           type: string
+        run_for_all_scans:
+          title: Flag indicating whether the plugin should run for all scans
+          type: boolean
         scan_desc:
           title: Description of the scan
           type: string
@@ -39071,9 +38848,6 @@ components:
           type: string
         run_for_all_scans:
           title: Flag indicating whether the plugin should run for all scans
-          type: boolean
-        run_for_given_scan:
-          title: Flag indicating whether the plugin should run for the given scan
           type: boolean
         scan_desc:
           title: Description of the scan
@@ -53315,6 +53089,29 @@ components:
         authUrl:
           type: string
       type: object
+    Script:
+      example:
+        script: script
+      properties:
+        script:
+          type: string
+      type: object
+    TokenExpiryInfo:
+      example:
+        authUrl: authUrl
+        expired: true
+        tokenExpiryDays: 0.8008281904610115
+        tokenExpiryTimestamp: 6.027456183070403
+      properties:
+        tokenExpiryDays:
+          type: number
+        tokenExpiryTimestamp:
+          type: number
+        authUrl:
+          type: string
+        expired:
+          type: boolean
+      type: object
     ServiceAccountClientId:
       example:
         serviceAccountClientId: "12345678910"
@@ -53344,11 +53141,11 @@ components:
       - tenantId
       type: object
     Username:
-      description: Name of the user to log in to Guardium Insights SaaS DSPM.
+      description: Name of the user to log in to Guardium DSPM.
       example: myUserName
       type: string
     Password:
-      description: Password of the user to log in to Guardium Insights SaaS DSPM.
+      description: Password of the user to log in to Guardium DSPM.
       example: myPassw0rd!
       type: string
     LinkedVendor:
@@ -53399,6 +53196,7 @@ components:
         cloudAccountId: "123456789101"
         installationStatus:
           discoveryPermissions: true
+          isInstallComplete: true
         serviceProvider: aws
         isMainCloudAccount: true
       properties:
@@ -53440,8 +53238,12 @@ components:
     InstallationStatus:
       example:
         discoveryPermissions: true
+        isInstallComplete: true
       properties:
         discoveryPermissions:
+          example: true
+          type: boolean
+        isInstallComplete:
           example: true
           type: boolean
       type: object
@@ -53564,6 +53366,7 @@ components:
             tag: BUSINESS_EMAIL_ADDRESS
             category: Personal
           configFlowsCount: 63
+          userAccessCount: 0.8008281904610115
           resourcesCount: 102
           vulnerabilitiesSummary:
           - criticality: HIGH
@@ -53658,6 +53461,7 @@ components:
           tag: BUSINESS_EMAIL_ADDRESS
           category: Personal
         configFlowsCount: 63
+        userAccessCount: 0.8008281904610115
         resourcesCount: 102
         vulnerabilitiesSummary:
         - criticality: HIGH
@@ -53677,6 +53481,9 @@ components:
           type: number
         sensitivitiesCount:
           example: 70
+          type: number
+        userAccessCount:
+          description: number of users entitled to access the data store
           type: number
         sensitivitiesSummary:
           items:
@@ -54572,8 +54379,11 @@ components:
     CloudAccountInstallationStatus:
       example:
         discoveryPermissions: true
+        isInstallComplete: true
       properties:
         discoveryPermissions:
+          type: boolean
+        isInstallComplete:
           type: boolean
       required:
       - discoveryPermissions
@@ -54679,6 +54489,7 @@ components:
       - atlassian-jira
       - atlassian-confluence
       - salesforce
+      - snowflake
       example: aws
       type: string
     ClassificationStatus:
@@ -55504,6 +55315,109 @@ components:
       - key
       - value
       type: object
+    UserSensitiveCategories:
+      properties:
+        accountIds:
+          items:
+            type: string
+          type: array
+        sensitiveCategories:
+          items:
+            $ref: '#/components/schemas/UserSensitiveCategories_sensitiveCategories_inner'
+          type: array
+      required:
+      - accountIds
+      - sensitiveCategories
+    AccessiblePermissionsConfigurations:
+      properties:
+        accessiblePermissionConfigurations:
+          type: number
+      required:
+      - accessiblePermissionConfigurations
+    AccessibleDataStores:
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        type:
+          type: string
+        cloudProvider:
+          $ref: '#/components/schemas/CloudServiceProvider'
+        cloudLocation:
+          example: us-east-1
+          type: string
+        permissions:
+          items:
+            $ref: '#/components/schemas/AccessType'
+          type: array
+        sensitivitiesSummary:
+          items:
+            $ref: '#/components/schemas/SensitivitySummary'
+          type: array
+      required:
+      - cloudLocation
+      - cloudProvider
+      - id
+      - name
+      - permissions
+      - sensitivitiesSummary
+      - type
+    UserEntitlementInfo:
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        type:
+          type: string
+        permissions:
+          items:
+            $ref: '#/components/schemas/AccessType'
+          type: array
+      required:
+      - id
+      - name
+      - permissions
+      - type
+    PermissionsConfigurations:
+      properties:
+        permissionsConfigurationsId:
+          type: string
+        permissionsConfigurationsName:
+          type: string
+        permissionsConfigurationsUrl:
+          type: string
+        permissionsConfigurationsType:
+          type: string
+        assignedViaId:
+          type: string
+        assignedViaName:
+          type: string
+        assignedViaUrl:
+          type: string
+        assignedViaType:
+          type: string
+        assignedTo:
+          type: number
+        cloudAccountDetails:
+          $ref: '#/components/schemas/CloudAccountDetails'
+        permissions:
+          items:
+            $ref: '#/components/schemas/AccessType'
+          type: array
+      required:
+      - assignedTo
+      - assignedViaId
+      - assignedViaName
+      - assignedViaType
+      - assignedViaUrl
+      - cloudAccountDetails
+      - permissions
+      - permissionsConfigurationsId
+      - permissionsConfigurationsName
+      - permissionsConfigurationsType
+      - permissionsConfigurationsUrl
     StringKeyValue:
       example:
         value: Testing
@@ -55660,66 +55574,14 @@ components:
       required:
       - operator
       - value
-    UserEntitlementsFilter:
-      properties:
-        userId:
-          type: string
-        permissions:
-          items:
-            $ref: '#/components/schemas/AccessType'
-          type: array
-      required:
-      - userId
-    UserSensitiveCategories:
-      properties:
-        accountIds:
-          items:
-            type: string
-          type: array
-        sensitiveCategories:
-          items:
-            $ref: '#/components/schemas/UserSensitiveCategories_sensitiveCategories_inner'
-          type: array
-      required:
-      - accountIds
-      - sensitiveCategories
-    AccessibleDataStores:
-      properties:
-        id:
-          type: string
-        name:
-          type: string
-        type:
-          type: string
-        cloudProvider:
-          $ref: '#/components/schemas/CloudServiceProvider'
-        cloudLocation:
-          example: us-east-1
-          type: string
-        permissions:
-          items:
-            $ref: '#/components/schemas/AccessType'
-          type: array
-        sensitivitiesSummary:
-          items:
-            $ref: '#/components/schemas/SensitivitySummary'
-          type: array
-      required:
-      - cloudLocation
-      - cloudProvider
-      - id
-      - name
-      - permissions
-      - sensitivitiesSummary
-      - type
     authenticate_request:
       properties:
         username:
-          description: Name of the user to log in to Guardium Insights SaaS DSPM.
+          description: Name of the user to log in to Guardium DSPM.
           example: myUserName
           type: string
         password:
-          description: Password of the user to log in to Guardium Insights SaaS DSPM.
+          description: Password of the user to log in to Guardium DSPM.
           example: myPassw0rd!
           type: string
       required:
@@ -56079,8 +55941,6 @@ components:
       title: TenantInfo
       type: object
     AuthCode:
-      example:
-        code: "1234"
       properties:
         code:
           example: "1234"
@@ -56088,6 +55948,36 @@ components:
       required:
       - code
       title: AuthCode
+      type: object
+    clientInfo:
+      properties:
+        clientId:
+          type: string
+        clientSecret:
+          type: string
+        authEndpoint:
+          type: string
+      required:
+      - authEndpoint
+      - clientId
+      - clientSecret
+      title: clientInfo
+      type: object
+    AuthInfo:
+      example:
+        code: "1234"
+        providerId: "1234"
+      properties:
+        code:
+          example: "1234"
+          type: string
+        providerId:
+          example: "1234"
+          type: string
+      required:
+      - code
+      - providerId
+      title: AuthInfo
       type: object
     setDataStoreLabel_request:
       properties:
@@ -56231,6 +56121,7 @@ components:
               tag: BUSINESS_EMAIL_ADDRESS
               category: Personal
             configFlowsCount: 63
+            userAccessCount: 0.8008281904610115
             resourcesCount: 102
             vulnerabilitiesSummary:
             - criticality: HIGH
@@ -56281,6 +56172,7 @@ components:
               tag: BUSINESS_EMAIL_ADDRESS
               category: Personal
             configFlowsCount: 63
+            userAccessCount: 0.8008281904610115
             resourcesCount: 102
             vulnerabilitiesSummary:
             - criticality: HIGH
@@ -57244,10 +57136,45 @@ components:
       - questionType
       title: SetQuestionBodyParams
       type: object
+    listUsersEntitlements_200_response_results_inner:
+      allOf:
+      - $ref: '#/components/schemas/UserEntitlementInfo'
+      - $ref: '#/components/schemas/UserSensitiveCategories'
+    listUsersEntitlements_200_response:
+      properties:
+        results:
+          items:
+            $ref: '#/components/schemas/listUsersEntitlements_200_response_results_inner'
+          type: array
+        nextToken:
+          nullable: true
+          type: string
+      required:
+      - nextToken
+      - results
+      type: object
+    userSensitiveCategories_200_response:
+      allOf:
+      - $ref: '#/components/schemas/UserEntitlementInfo'
+      - $ref: '#/components/schemas/UserSensitiveCategories'
+      - $ref: '#/components/schemas/AccessiblePermissionsConfigurations'
     _userEntitlements_userSensitiveCategories_options_userId_parameter:
       properties:
         userId:
           type: string
+      type: object
+    userStores_200_response:
+      properties:
+        results:
+          items:
+            $ref: '#/components/schemas/AccessibleDataStores'
+          type: array
+        nextToken:
+          nullable: true
+          type: string
+      required:
+      - nextToken
+      - results
       type: object
     DataStoresSummary_storeTypes_inner:
       example:
@@ -57775,4 +57702,5 @@ x-tagGroups:
   - Cloud accounts
   - Data vulnerabilities
   - Third party vendors
+  - User Entitlements
 

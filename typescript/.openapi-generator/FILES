@@ -97,6 +97,7 @@ middleware.ts
 models/AccessType.ts
 models/AccessTypeCountInner.ts
 models/AccessibleDataStores.ts
+models/AccessiblePermissionsConfigurations.ts
 models/ActualFlow.ts
 models/ActualFlowPath.ts
 models/ActualFlowsSummary.ts
@@ -228,6 +229,7 @@ models/Auditv3GetActivityRecordsResponse.ts
 models/Auditv3PutActivityRecordRequest.ts
 models/Auditv3PutActivityRecordResponse.ts
 models/AuthCode.ts
+models/AuthInfo.ts
 models/AuthUrl.ts
 models/Authenticate200Response.ts
 models/Authenticate400Response.ts
@@ -242,6 +244,7 @@ models/AuthserverGetUserResponse.ts
 models/AuthserverListOauthClientResponse.ts
 models/AuthserverOauthClient.ts
 models/ClassificationStatus.ts
+models/ClientInfo.ts
 models/CloudAccountCountInner.ts
 models/CloudAccountDetails.ts
 models/CloudAccountInstallationStatus.ts
@@ -642,6 +645,8 @@ models/ListPotentialFlowsPaths200Response.ts
 models/ListSensitivities200Response.ts
 models/ListSensitivitiesFilterParameter.ts
 models/ListTrusteesFilterParameter.ts
+models/ListUsersEntitlements200Response.ts
+models/ListUsersEntitlements200ResponseResultsInner.ts
 models/ListVendorDataStoresFilterParameter.ts
 models/ListVulnerabilities200Response.ts
 models/ListVulnerabilitiesByDataStore200Response.ts
@@ -689,6 +694,7 @@ models/Outliersenginev3SourcesStats.ts
 models/Outliersenginev3StatisticsResponse.ts
 models/Outliersenginev3UpdateWorkingHoursPeriodsRequest.ts
 models/Outliersenginev3WorkingHoursPeriod.ts
+models/PermissionsConfigurations.ts
 models/Pipelineconfigv3DeleteTenantResponse.ts
 models/Policybuilderv3Action.ts
 models/Policybuilderv3ActionMetadata.ts
@@ -757,7 +763,6 @@ models/ProtobufFieldMask.ts
 models/ProtobufNullValue.ts
 models/Qspmdatamanagerv3AppData.ts
 models/Qspmdatamanagerv3AppDataResponse.ts
-models/Qspmdatamanagerv3InsertEntitiesRequest.ts
 models/Qspmdatamanagerv3MasterDataModel.ts
 models/Qspmdatamanagerv3MasterDataResponse.ts
 models/Qspmdatamanagerv3NetlocData.ts
@@ -765,9 +770,7 @@ models/Qspmdatamanagerv3NetlocDataResponse.ts
 models/Qspmdatamanagerv3Row.ts
 models/Qspmdatamanagerv3ScanRequest.ts
 models/Qspmdatamanagerv3ScanResponse.ts
-models/Qspmdatamanagerv3SearchEntityDataRequest.ts
 models/Qspmdatamanagerv3SearchEntityDataResponse.ts
-models/Qspmdatamanagerv3UpdateNetLocRequest.ts
 models/Qspmdatamanagerv3UpdateNetLocResponse.ts
 models/Qspmpluginmanagerv3EntityNewSchema.ts
 models/Qspmpluginmanagerv3PluginRQ.ts
@@ -1062,6 +1065,7 @@ models/Schedulerv3TaskType.ts
 models/Schedulerv3UpdateScheduledJobRequest.ts
 models/Schedulerv3UpdateScheduledJobResponse.ts
 models/Schedulerv3WorkflowType.ts
+models/Script.ts
 models/SensitivitiesItemsInner.ts
 models/SensitivitiesSummary.ts
 models/Sensitivity.ts
@@ -1178,6 +1182,7 @@ models/Tenantuserv3UpdateUsersBulkResponse.ts
 models/Tenantuserv3User.ts
 models/Tenantuserv3UserState.ts
 models/Tenantuserv3UserTenant.ts
+models/TokenExpiryInfo.ts
 models/Trustee.ts
 models/TypesCountInner.ts
 models/Universalconnectormanagerv3ConnectionRoute.ts
@@ -1203,10 +1208,12 @@ models/UpdateCustodianBody.ts
 models/UpdateDatastoreCustodian200Response.ts
 models/UpdateResourceReviewBody.ts
 models/UpdateResourceReviewStatus200Response.ts
-models/UserEntitlementsFilter.ts
+models/UserEntitlementInfo.ts
 models/UserEntitlementsUserSensitiveCategoriesOptionsUserIdParameter.ts
 models/UserSensitiveCategories.ts
+models/UserSensitiveCategories200Response.ts
 models/UserSensitiveCategoriesSensitiveCategoriesInner.ts
+models/UserStores200Response.ts
 models/Vendor.ts
 models/VendorAccount.ts
 models/VendorCertificate.ts

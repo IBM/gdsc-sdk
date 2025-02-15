@@ -344,26 +344,26 @@ Description: Get registered Oauth client by clientId.]" \
 Description: Get user.]" \
             "authServerServiceListOauthClient[Summary: List Oauth client
 Description: List all registered Oauth client.]"             "addAnalyzedRegion[Add a new region for data classification]" \
-            "addCloudAccounts[Add cloud account connections to Guardium Insights SaaS DSPM]" \
+            "addCloudAccounts[Add cloud account connections to DSPM]" \
             "generateAtlassianConfluenceAuthUrl[Generate a Confluence authentication URL]" \
             "generateAtlassianJiraAuthUrl[Generate a JIRA authentication URL]" \
             "generateAzureAuthUrl[Generate azure authorization url]" \
             "generateOffice365AuthUrl[Generate a Microsoft 365 consent URL]" \
-            "generateSalesforceAuthUrl[Generate a Salesforce consent URL]" \
             "generateSlackAuthUrl[Generate a Slack authentication URL]" \
+            "generateSnowflakeAuthUrl[Validate and Generate a Snowflake OAuth URL]" \
             "getAnalyzedRegionStatus[Get the status of analyzer installation for a region]" \
             "getAzureAdminConsentStatus[Get Azure admin consent status]" \
             "getCloudAccountInstallationStatus[Get the installation status of a cloud account]" \
-            "getCompliances[Get a list of selected compliances]" \
-            "listLinkedAccounts[List cloud accounts connected to Guardium Insights SaaS DSPM]" \
+            "getRefreshTokenExpiry[Get Snowflake Refresh Token Expiry date]" \
+            "listLinkedAccounts[List cloud accounts connected to DSPM]" \
             "removeAccounts[Post cloud account ID connections to be removed]" \
             "removeAccountsInstructions[Post cloud account IDs and get instructions to remove the accounts]" \
             "retrieveServiceAccountId[Get Google Workspace authentication]" \
-            "setCompliances[Set a list of selected compliances]" \
+            "snowflakeIntegrationScript[Generate Snowflake Integration Script]" \
             "submitGoogleWorkspaceAdminEmail[Submit email for service account authorization]" \
             "submitOffice365TenantInfo[Submit Microsoft 365 customer information]" \
-            "submitSalesforceAuthCode[Submit Salesforce customer information]" \
-            "submitSlackAuthCode[Submit a Slack authentication code]"             "complianceAcceleratorCreateWorkspace[Summary: Create workspace
+            "submitSlackAuthCode[Submit a Slack authentication code]" \
+            "submitSnowflakeAuthCode[Submit Snowflake oAuth code]"             "complianceAcceleratorCreateWorkspace[Summary: Create workspace
 Description: Create a workspace.]" \
             "complianceAcceleratorDeleteComplianceWorkspaces[Summary: Delete compliance workspaces
 Description: Delete workspaces.]" \
@@ -441,7 +441,7 @@ Description: Update a dashboard.]"             "getActualFlow[Get actual flow by
             "getDataResourcesSummary[Data resources summary]" \
             "listDataResources[List data resources that match a given filter]" \
             "listDataResourcesNames[List names of data resources]" \
-            "removeResource[Remove resource from Guardium Insights SaaS DSPM]" \
+            "removeResource[Remove resource from DSPM]" \
             "updateResourceReviewStatus[Set review status of a data resource]"             "getSensitivitiesSummary[Get the summary of sensitivities]" \
             "getSensitivity[Get sensitivity details by providing its ID]" \
             "listSensitivities[List sensitivities]"             "getDataStore[Get a data store by its ID]" \
@@ -568,7 +568,7 @@ Description: returns the summaries of all policies on that central manager]" \
             "guardiumConnectorGetHealthInfo[Summary: Get gealth info
 Description: Get health information from Guardium Data Protection central mamangers.]" \
             "guardiumConnectorGetLatestDMExtractionProfile[Summary: Get latest DM extraction profile
-Description: Return the Datamart Extraction Profile for Guardium Insights.]" \
+Description: Return the Datamart Extraction Profile for Guardium.]" \
             "guardiumConnectorGetStreamingStatus[Summary: Get streaming status
 Description: Return the streaming configuration.]" \
             "guardiumConnectorGetSyncDMs[Summary: Get sync DMs
@@ -580,7 +580,7 @@ Description: Return the list of tasks from a central manager.]" \
             "guardiumConnectorRunGDPReport[Summary: Run GDP report
 Description: Run GDP report.]" \
             "guardiumConnectorSetupCM[Summary: Setup CM
-Description: Set up the registration between a GDP Central manager and Guardium Insights.]" \
+Description: Set up the registration between a GDP Central manager and Guardium.]" \
             "guardiumConnectorSetupDatamarts[Description: setup custom datamart execution mode]" \
             "guardiumConnectorTaskError[Summary: Task error
 Description: Log error messages from GDP task execution.]" \
@@ -699,22 +699,12 @@ Description: Get policy groups.]" \
             "policyBuilderRuleValidation[Summary: Rule validation
 Description: Validate a rule parameters and actions.]" \
             "policyBuilderStorePoliciesGdp[Summary: Store policies Gdp
-Description: Store policies.  (This API is called from GDP only)]"             "qSDataManagerGetAppDataForProvisionId[Summary: Fetch Application Provisoning Details
-Description: Fetch details from app dimension entity for given provision id.]" \
-            "qSDataManagerGetMasterData[Summary: master data for all entities
+Description: Store policies.  (This API is called from GDP only)]"             "qSDataManagerGetMasterData[Summary: master data for all entities
 Description: Retrieves All Dimension and Fact tables data.]" \
-            "qSDataManagerGetNetLocDimDataForScanId[Summary: Fetch Netlocation Details
-Description: Fetch details from netloc dimension entity for a given scanid.]" \
-            "qSDataManagerInsertAllEntities[Summary: Insert Data
-Description: Insert All Dimension and Fact tables data.]" \
             "qSDataManagerRegisterScan[Summary: Insert ScanDetails
 Description: Register new data into scan dimension table.]" \
             "qSDataManagerRetrieveScan[Summary: Fetch ScanDetails
-Description: Fetch details from scan dimension table.]" \
-            "qSDataManagerSearchEntityData[Summary: Retrieve Entity Data
-Description:Retrieve Entity data for given parameters]" \
-            "qSDataManagerUpdateNetLocation[Summary: Update Netlocation Details
-Description: Update netloc dimension entity for agiven scanid.]"             "qSPluginManagerInvokeAppProv[Summary: Invoke only application provisioning data plugin
+Description: Fetch details from scan dimension table.]"             "qSPluginManagerInvokeAppProv[Summary: Invoke only application provisioning data plugin
 Description:Parses app input file and triggers dataload]" \
             "qSPluginManagerInvokeExplorerV1[Summary: Invoke only explorer inventory data plugin
 Description:Parses explorer input file and triggers dataload]" \
@@ -857,7 +847,7 @@ Description: Perform tuning risk event actions.]" \
             "riskAnalyticsControllerSetRiskEventStatus[Summary: Set risk event status
 Description: Update the risk status and justification.]" \
             "riskAnalyticsControllerSetUserUISettings[Summary: Set user UI settings
-Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium Insights. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium Insights.]" \
+Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium.]" \
             "riskAnalyticsControllerUpdateRiskFeedback[Summary: Update risk feedback
 Description: Provide feedback for one or more risk events]"             "riskAnalyticsDataProcessorGetRiskContext[Summary: Get Risk Event Context
 Description: Retrieve the context of the given risk ID. This context will be used for LLM interactions.]" \
@@ -963,7 +953,7 @@ Description: Perform bulk user add or remove role.]"             "getLinkedVendo
             "listLinkedVendorDataStores[Get the data stores associated with a third party vendor]" \
             "listLinkedVendors[Get the summary of a third party vendor]" \
             "listTrustedAssets[Get a list of all the actual trusted assets]"             "universalConnectorManagerGetCertificate[Summary: Get certificate
-Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium Insights.]" \
+Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium.]" \
             "universalConnectorManagerGetConnectors[Summary: Get connectors
 Description: Get all the connectors Universal Connector can support. Includes a list of event pipelines (input--filter pairs), along with the supported data source types and platforms.]" \
             "universalConnectorManagerListConnectionsSummary[Summary: List connections summary
@@ -1322,13 +1312,13 @@ Description: Update multiple tasks for the same parent in one request.]" \
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      generateSalesforceAuthUrl)
+      generateSlackAuthUrl)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      generateSlackAuthUrl)
+      generateSnowflakeAuthUrl)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -1356,10 +1346,11 @@ Description: Update multiple tasks for the same parent in one request.]" \
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getCompliances)
+      getRefreshTokenExpiry)
         local -a _op_arguments
         _op_arguments=(
-                              )
+          "providerId=:[PATH] The ID of the provider"
+                    )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       listLinkedAccounts)
@@ -1390,7 +1381,7 @@ Description: Update multiple tasks for the same parent in one request.]" \
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      setCompliances)
+      snowflakeIntegrationScript)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -1408,13 +1399,13 @@ Description: Update multiple tasks for the same parent in one request.]" \
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      submitSalesforceAuthCode)
+      submitSlackAuthCode)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      submitSlackAuthCode)
+      submitSnowflakeAuthCode)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -2846,27 +2837,7 @@ Only returns records that include the specified names."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      qSDataManagerGetAppDataForProvisionId)
-        local -a _op_arguments
-        _op_arguments=(
-          "provision_id=:[PATH] Identifier for the provision request"
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
       qSDataManagerGetMasterData)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      qSDataManagerGetNetLocDimDataForScanId)
-        local -a _op_arguments
-        _op_arguments=(
-          "scan_id=:[PATH] Identifier for the scan to retrieve netloc data for"
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      qSDataManagerInsertAllEntities)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -2883,18 +2854,6 @@ Only returns records that include the specified names."
         _op_arguments=(
           "scan_id=:[PATH] "
                     )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      qSDataManagerSearchEntityData)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      qSDataManagerUpdateNetLocation)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       qSPluginManagerInvokeAppProv)

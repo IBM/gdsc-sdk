@@ -26,7 +26,7 @@ from typing_extensions import Self
 
 class Guardiumconnectorv3GetCMsConfigResponse(BaseModel):
     """
-    Retrieves the list of Central Managers registered to Guardium Insights.
+    Retrieves the list of Central Managers registered to Guardium.
     """ # noqa: E501
     cms: Optional[List[Guardiumconnectorv3CM]] = Field(default=None, description="List of Central Managers.")
     status: Optional[Guardiumconnectorv3StatusResponseBase] = None

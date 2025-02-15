@@ -31,7 +31,7 @@ Summary: Create case Description: Create single case.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.workflowv3_create_case_request import Workflowv3CreateCaseRequest
 from ibm_gdsc_sdk_software.models.workflowv3_create_case_response import Workflowv3CreateCaseResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -117,7 +117,7 @@ Summary: Create task Description: Create single task within a parent case.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.workflowv3_create_task_request import Workflowv3CreateTaskRequest
 from ibm_gdsc_sdk_software.models.workflowv3_create_task_response import Workflowv3CreateTaskResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -205,7 +205,7 @@ Summary: Get cases Description: Return all cases requested.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.workflowv3_case_list_response import Workflowv3CaseListResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -296,7 +296,7 @@ Summary: Get cases count Description: Get case count.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.workflowv3_get_cases_count_request import Workflowv3GetCasesCountRequest
 from ibm_gdsc_sdk_software.models.workflowv3_get_cases_count_response import Workflowv3GetCasesCountResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -382,7 +382,7 @@ Summary: Get filename Description: Return filename associated with the task refe
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.workflowv3_get_filename_response import Workflowv3GetFilenameResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -469,7 +469,7 @@ Summary: Get jobs count Description: Get jobs count.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.workflowv3_get_jobs_count_request import Workflowv3GetJobsCountRequest
 from ibm_gdsc_sdk_software.models.workflowv3_get_jobs_count_response import Workflowv3GetJobsCountResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -557,7 +557,7 @@ Summary: Get report result Description: Return a page of results.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.workflowv3_get_report_result_response import Workflowv3GetReportResultResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -648,7 +648,7 @@ Summary: Get tasks Description: Return all tasks requested.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.workflowv3_task_list_response import Workflowv3TaskListResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -735,7 +735,7 @@ Summary: Get cases count Description: Get case count.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.workflowv3_get_tasks_count_request import Workflowv3GetTasksCountRequest
 from ibm_gdsc_sdk_software.models.workflowv3_get_tasks_count_response import Workflowv3GetTasksCountResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -823,7 +823,7 @@ Summary: Search cases Description: Return a subset of cases.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.workflowv3_case_list_response import Workflowv3CaseListResponse
 from ibm_gdsc_sdk_software.models.workflowv3_search_cases_request import Workflowv3SearchCasesRequest
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -909,7 +909,7 @@ Summary: Get a list of report IDs Description: Returns a list of report IDs refe
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.workflowv3_search_cases_request import Workflowv3SearchCasesRequest
 from ibm_gdsc_sdk_software.models.workflowv3_search_reports_response import Workflowv3SearchReportsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -995,7 +995,7 @@ Summary: Search cases Description: Return a subset of cases.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.workflowv3_search_tasks_request import Workflowv3SearchTasksRequest
 from ibm_gdsc_sdk_software.models.workflowv3_task_list_response import Workflowv3TaskListResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -1083,7 +1083,7 @@ Summary: Update cases Description: Update multiple cases in one request.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.workflowv3_update_cases_request import Workflowv3UpdateCasesRequest
 from ibm_gdsc_sdk_software.models.workflowv3_update_cases_response import Workflowv3UpdateCasesResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -1169,7 +1169,7 @@ Summary: Update tasks Description: Update multiple tasks for the same parent in 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.workflowv3_update_tasks_request import Workflowv3UpdateTasksRequest
 from ibm_gdsc_sdk_software.models.workflowv3_update_tasks_response import Workflowv3UpdateTasksResponse
 from ibm_gdsc_sdk_software.rest import ApiException

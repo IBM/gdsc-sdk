@@ -27,7 +27,7 @@ Get a detailed information about an actual flow by providing its ID.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.actual_flow import ActualFlow
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -100,14 +100,14 @@ Name | Type | Description  | Notes
 
 Get summary of actual flows
 
-Get a summary of all the actual flows discovered by Guardium Insights SaaS DSPM, that is, details about source and destination, and other information.
+Get a summary of all the actual flows discovered by Guardium DSPM, that is, details about source and destination, and other information.
 
 ### Example
 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.actual_flows_summary import ActualFlowsSummary
 from ibm_gdsc_sdk_software.models.list_actual_flows_filter_parameter import ListActualFlowsFilterParameter
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -188,7 +188,7 @@ Get a detailed information about a potential flow by providing the flow ID.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.potential_flow import PotentialFlow
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -268,7 +268,7 @@ Get details of a specific potential flow of data by providing its ID.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.potential_flow_path import PotentialFlowPath
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -348,7 +348,7 @@ Get a summary of all the potential flows based on a filter applied.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.potential_flows_filter_options import PotentialFlowsFilterOptions
 from ibm_gdsc_sdk_software.models.potential_flows_summary import PotentialFlowsSummary
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -429,7 +429,7 @@ Get detailed information about the actual flows according to the filter applied.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.list_actual_flow_paths200_response import ListActualFlowPaths200Response
 from ibm_gdsc_sdk_software.models.list_actual_flow_paths_filter_parameter import ListActualFlowPathsFilterParameter
 from ibm_gdsc_sdk_software.models.list_actual_flow_paths_sort_parameter import ListActualFlowPathsSortParameter
@@ -517,7 +517,7 @@ List all the actual flows (based on logs) of users and services across your enti
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.list_actual_flows200_response import ListActualFlows200Response
 from ibm_gdsc_sdk_software.models.list_actual_flows_filter_parameter import ListActualFlowsFilterParameter
 from ibm_gdsc_sdk_software.models.list_actual_flows_sort_parameter import ListActualFlowsSortParameter
@@ -605,7 +605,7 @@ List all the potential flows of users and services across your entire cloud acco
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.list_potential_flows200_response import ListPotentialFlows200Response
 from ibm_gdsc_sdk_software.models.potential_flows_filter_options import PotentialFlowsFilterOptions
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -690,7 +690,7 @@ List all the potential flow paths based on an applied filter.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.list_potential_flows_paths200_response import ListPotentialFlowsPaths200Response
 from ibm_gdsc_sdk_software.models.potential_flows_paths_filter_options import PotentialFlowsPathsFilterOptions
 from ibm_gdsc_sdk_software.rest import ApiException

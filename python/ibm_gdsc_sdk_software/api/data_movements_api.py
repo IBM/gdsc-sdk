@@ -332,7 +332,7 @@ class DataMovementsApi:
     ) -> ActualFlowsSummary:
         """Get summary of actual flows
 
-        Get a summary of all the actual flows discovered by Guardium Insights SaaS DSPM, that is, details about source and destination, and other information.
+        Get a summary of all the actual flows discovered by Guardium DSPM, that is, details about source and destination, and other information.
 
         :param filter:
         :type filter: ListActualFlowsFilterParameter
@@ -400,7 +400,7 @@ class DataMovementsApi:
     ) -> ApiResponse[ActualFlowsSummary]:
         """Get summary of actual flows
 
-        Get a summary of all the actual flows discovered by Guardium Insights SaaS DSPM, that is, details about source and destination, and other information.
+        Get a summary of all the actual flows discovered by Guardium DSPM, that is, details about source and destination, and other information.
 
         :param filter:
         :type filter: ListActualFlowsFilterParameter
@@ -468,7 +468,7 @@ class DataMovementsApi:
     ) -> RESTResponseType:
         """Get summary of actual flows
 
-        Get a summary of all the actual flows discovered by Guardium Insights SaaS DSPM, that is, details about source and destination, and other information.
+        Get a summary of all the actual flows discovered by Guardium DSPM, that is, details about source and destination, and other information.
 
         :param filter:
         :type filter: ListActualFlowsFilterParameter

@@ -21,7 +21,7 @@ Summary: Delete feature Flag overrides Description: Delete feature Flag override
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.featureflagsv3_delete_feature_flag_overrides_response import Featureflagsv3DeleteFeatureFlagOverridesResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -108,7 +108,7 @@ Summary: Get feature Flag overrides Description: Get feature Flag overrides by F
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.featureflagsv3_get_feature_flag_overrides_response import Featureflagsv3GetFeatureFlagOverridesResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -195,7 +195,7 @@ Summary: Get feature flags Description: Get feature flags by Feature Flag Name.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.featureflagsv3_get_feature_flags_response import Featureflagsv3GetFeatureFlagsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -282,7 +282,7 @@ Summary: Update feature Flag overrides Description: Update feature Flag override
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.featureflagsv3_update_feature_flag_overrides_request import Featureflagsv3UpdateFeatureFlagOverridesRequest
 from ibm_gdsc_sdk_software.models.featureflagsv3_update_feature_flag_overrides_response import Featureflagsv3UpdateFeatureFlagOverridesResponse
 from ibm_gdsc_sdk_software.rest import ApiException

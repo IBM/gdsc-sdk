@@ -183,7 +183,7 @@ class TestGuardiumConnectorApi(unittest.TestCase):
     def test_guardium_connector_get_latest_dm_extraction_profile(self) -> None:
         """Test case for guardium_connector_get_latest_dm_extraction_profile
 
-        Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for Guardium Insights.
+        Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for Guardium.
         """
         pass
 
@@ -225,7 +225,7 @@ class TestGuardiumConnectorApi(unittest.TestCase):
     def test_guardium_connector_setup_cm(self) -> None:
         """Test case for guardium_connector_setup_cm
 
-        Summary: Setup CM Description: Set up the registration between a GDP Central manager and Guardium Insights.
+        Summary: Setup CM Description: Set up the registration between a GDP Central manager and Guardium.
         """
         pass
 

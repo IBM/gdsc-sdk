@@ -15,7 +15,7 @@ import { Groupbuilderv3StatusResponseBase } from '../models/Groupbuilderv3Status
 import { HttpFile } from '../http/http';
 
 /**
-* GetGroupResponse returns the list of available groups on Guardium Insights for Db2 Warehouse.
+* GetGroupResponse returns the list of available groups on Guardium for Db2 Warehouse.
 */
 export class Groupbuilderv3GetGroupsResponse {
     /**

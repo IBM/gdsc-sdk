@@ -29,7 +29,7 @@ class TestUniversalConnectorManagerApi(unittest.TestCase):
     def test_universal_connector_manager_get_certificate(self) -> None:
         """Test case for universal_connector_manager_get_certificate
 
-        Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium Insights.
+        Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium.
         """
         pass
 

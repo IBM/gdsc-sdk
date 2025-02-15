@@ -14,11 +14,11 @@ import { HttpFile } from '../http/http';
 
 export class AuthenticateRequest {
     /**
-    * Name of the user to log in to Guardium Insights SaaS DSPM.
+    * Name of the user to log in to Guardium DSPM.
     */
     'username': string;
     /**
-    * Password of the user to log in to Guardium Insights SaaS DSPM.
+    * Password of the user to log in to Guardium DSPM.
     */
     'password': string;
 

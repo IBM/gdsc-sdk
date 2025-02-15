@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 **orgUnderscoreid** | **string** | Unique identifier for the organization | [optional] [default to null]
 **pluginUnderscoreid** | **string** | Unique identifier for the plugin | [optional] [default to null]
 **runUnderscoreforUnderscoreallUnderscorescans** | **boolean** | Flag indicating whether the plugin should run for all scans | [optional] [default to null]
-**runUnderscoreforUnderscoregivenUnderscorescan** | **boolean** | Flag indicating whether the plugin should run for the given scan | [optional] [default to null]
 **scanUnderscoredesc** | **string** | Description of the scan | [optional] [default to null]
 **scanUnderscoreid** | **string** | Unique identifier for the scan | [optional] [default to null]
 **scanUnderscoretype** | **string** | Type of scan being requested | [optional] [default to null]

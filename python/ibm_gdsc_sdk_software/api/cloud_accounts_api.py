@@ -23,21 +23,23 @@ from ibm_gdsc_sdk_software.models.add_analyzed_region200_response import AddAnal
 from ibm_gdsc_sdk_software.models.add_analyzed_region_request import AddAnalyzedRegionRequest
 from ibm_gdsc_sdk_software.models.add_cloud_accounts200_response import AddCloudAccounts200Response
 from ibm_gdsc_sdk_software.models.add_cloud_accounts_request import AddCloudAccountsRequest
-from ibm_gdsc_sdk_software.models.auth_code import AuthCode
+from ibm_gdsc_sdk_software.models.auth_info import AuthInfo
 from ibm_gdsc_sdk_software.models.auth_url import AuthUrl
+from ibm_gdsc_sdk_software.models.client_info import ClientInfo
 from ibm_gdsc_sdk_software.models.cloud_account_installation_status import CloudAccountInstallationStatus
 from ibm_gdsc_sdk_software.models.cloud_service_provider import CloudServiceProvider
-from ibm_gdsc_sdk_software.models.compliance import Compliance
 from ibm_gdsc_sdk_software.models.get_analyzed_region_status200_response import GetAnalyzedRegionStatus200Response
 from ibm_gdsc_sdk_software.models.linked_accounts import LinkedAccounts
 from ibm_gdsc_sdk_software.models.office365_tenant_info import Office365TenantInfo
 from ibm_gdsc_sdk_software.models.remove_accounts_instructions200_response import RemoveAccountsInstructions200Response
+from ibm_gdsc_sdk_software.models.script import Script
 from ibm_gdsc_sdk_software.models.service_account_client_id import ServiceAccountClientId
 from ibm_gdsc_sdk_software.models.service_account_installation_status import ServiceAccountInstallationStatus
 from ibm_gdsc_sdk_software.models.service_provider import ServiceProvider
 from ibm_gdsc_sdk_software.models.submit_admin_email_params import SubmitAdminEmailParams
 from ibm_gdsc_sdk_software.models.submit_auth_code import SubmitAuthCode
 from ibm_gdsc_sdk_software.models.tenant_info import TenantInfo
+from ibm_gdsc_sdk_software.models.token_expiry_info import TokenExpiryInfo
 
 from ibm_gdsc_sdk_software.api_client import ApiClient, RequestSerialized
 from ibm_gdsc_sdk_software.api_response import ApiResponse
@@ -348,9 +350,9 @@ class CloudAccountsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AddCloudAccounts200Response:
-        """Add cloud account connections to Guardium Insights SaaS DSPM
+        """Add cloud account connections to DSPM
 
-        You can add a single or multiple cloud account connections from the same cloud provider.<BR>Adding these cloud account connections will trigger Guardium Insights SaaS DSPM for data store discovery.<BR>To enable data classification, run the 'Add a new region for data classification' API.
+        You can add a single or multiple cloud account connections from the same cloud provider.<BR>Adding these cloud account connections will trigger Guardium DSPM for data store discovery.<BR>To enable data classification, run the 'Add a new region for data classification' API.
 
         :param add_cloud_accounts_request: (required)
         :type add_cloud_accounts_request: AddCloudAccountsRequest
@@ -416,9 +418,9 @@ class CloudAccountsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AddCloudAccounts200Response]:
-        """Add cloud account connections to Guardium Insights SaaS DSPM
+        """Add cloud account connections to DSPM
 
-        You can add a single or multiple cloud account connections from the same cloud provider.<BR>Adding these cloud account connections will trigger Guardium Insights SaaS DSPM for data store discovery.<BR>To enable data classification, run the 'Add a new region for data classification' API.
+        You can add a single or multiple cloud account connections from the same cloud provider.<BR>Adding these cloud account connections will trigger Guardium DSPM for data store discovery.<BR>To enable data classification, run the 'Add a new region for data classification' API.
 
         :param add_cloud_accounts_request: (required)
         :type add_cloud_accounts_request: AddCloudAccountsRequest
@@ -484,9 +486,9 @@ class CloudAccountsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Add cloud account connections to Guardium Insights SaaS DSPM
+        """Add cloud account connections to DSPM
 
-        You can add a single or multiple cloud account connections from the same cloud provider.<BR>Adding these cloud account connections will trigger Guardium Insights SaaS DSPM for data store discovery.<BR>To enable data classification, run the 'Add a new region for data classification' API.
+        You can add a single or multiple cloud account connections from the same cloud provider.<BR>Adding these cloud account connections will trigger Guardium DSPM for data store discovery.<BR>To enable data classification, run the 'Add a new region for data classification' API.
 
         :param add_cloud_accounts_request: (required)
         :type add_cloud_accounts_request: AddCloudAccountsRequest
@@ -1607,252 +1609,6 @@ class CloudAccountsApi:
 
 
     @validate_call
-    def generate_salesforce_auth_url(
-        self,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AuthUrl:
-        """Generate a Salesforce consent URL
-
-        Generate an administrator consent URL for Salesforce integration.
-
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """ # noqa: E501
-
-        _param = self._generate_salesforce_auth_url_serialize(
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AuthUrl",
-            '400': "Authenticate400Response",
-        }
-        response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
-        response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        ).data
-
-
-    @validate_call
-    def generate_salesforce_auth_url_with_http_info(
-        self,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AuthUrl]:
-        """Generate a Salesforce consent URL
-
-        Generate an administrator consent URL for Salesforce integration.
-
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """ # noqa: E501
-
-        _param = self._generate_salesforce_auth_url_serialize(
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AuthUrl",
-            '400': "Authenticate400Response",
-        }
-        response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
-        response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        )
-
-
-    @validate_call
-    def generate_salesforce_auth_url_without_preload_content(
-        self,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> RESTResponseType:
-        """Generate a Salesforce consent URL
-
-        Generate an administrator consent URL for Salesforce integration.
-
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """ # noqa: E501
-
-        _param = self._generate_salesforce_auth_url_serialize(
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AuthUrl",
-            '400': "Authenticate400Response",
-        }
-        response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
-        return response_data.response
-
-
-    def _generate_salesforce_auth_url_serialize(
-        self,
-        _request_auth,
-        _content_type,
-        _headers,
-        _host_index,
-    ) -> RequestSerialized:
-
-        _host = None
-
-        _collection_formats: Dict[str, str] = {
-        }
-
-        _path_params: Dict[str, str] = {}
-        _query_params: List[Tuple[str, str]] = []
-        _header_params: Dict[str, Optional[str]] = _headers or {}
-        _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, Union[str, bytes]] = {}
-        _body_params: Optional[bytes] = None
-
-        # process the path parameters
-        # process the query parameters
-        # process the header parameters
-        # process the form parameters
-        # process the body parameter
-
-
-        # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
-
-
-        # authentication setting
-        _auth_settings: List[str] = [
-            'ApiKeyAuth'
-        ]
-
-        return self.api_client.param_serialize(
-            method='GET',
-            resource_path='/api/v1/dspm/cloudAccounts/saasApps/salesforce/generateAuthUrl',
-            path_params=_path_params,
-            query_params=_query_params,
-            header_params=_header_params,
-            body=_body_params,
-            post_params=_form_params,
-            files=_files,
-            auth_settings=_auth_settings,
-            collection_formats=_collection_formats,
-            _host=_host,
-            _request_auth=_request_auth
-        )
-
-
-
-
-    @validate_call
     def generate_slack_auth_url(
         self,
         _request_timeout: Union[
@@ -2099,6 +1855,280 @@ class CloudAccountsApi:
 
 
     @validate_call
+    def generate_snowflake_auth_url(
+        self,
+        client_info: ClientInfo,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> AuthUrl:
+        """Validate and Generate a Snowflake OAuth URL
+
+        Generate an administrator consent URL for Snowflake integration.
+
+        :param client_info: (required)
+        :type client_info: ClientInfo
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._generate_snowflake_auth_url_serialize(
+            client_info=client_info,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "AuthUrl",
+            '400': "Authenticate400Response",
+        }
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        ).data
+
+
+    @validate_call
+    def generate_snowflake_auth_url_with_http_info(
+        self,
+        client_info: ClientInfo,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> ApiResponse[AuthUrl]:
+        """Validate and Generate a Snowflake OAuth URL
+
+        Generate an administrator consent URL for Snowflake integration.
+
+        :param client_info: (required)
+        :type client_info: ClientInfo
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._generate_snowflake_auth_url_serialize(
+            client_info=client_info,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "AuthUrl",
+            '400': "Authenticate400Response",
+        }
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        )
+
+
+    @validate_call
+    def generate_snowflake_auth_url_without_preload_content(
+        self,
+        client_info: ClientInfo,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> RESTResponseType:
+        """Validate and Generate a Snowflake OAuth URL
+
+        Generate an administrator consent URL for Snowflake integration.
+
+        :param client_info: (required)
+        :type client_info: ClientInfo
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._generate_snowflake_auth_url_serialize(
+            client_info=client_info,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "AuthUrl",
+            '400': "Authenticate400Response",
+        }
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        return response_data.response
+
+
+    def _generate_snowflake_auth_url_serialize(
+        self,
+        client_info,
+        _request_auth,
+        _content_type,
+        _headers,
+        _host_index,
+    ) -> RequestSerialized:
+
+        _host = None
+
+        _collection_formats: Dict[str, str] = {
+        }
+
+        _path_params: Dict[str, str] = {}
+        _query_params: List[Tuple[str, str]] = []
+        _header_params: Dict[str, Optional[str]] = _headers or {}
+        _form_params: List[Tuple[str, str]] = []
+        _files: Dict[str, Union[str, bytes]] = {}
+        _body_params: Optional[bytes] = None
+
+        # process the path parameters
+        # process the query parameters
+        # process the header parameters
+        # process the form parameters
+        # process the body parameter
+        if client_info is not None:
+            _body_params = client_info
+
+
+        # set the HTTP header `Accept`
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            [
+                'application/json'
+            ]
+        )
+
+        # set the HTTP header `Content-Type`
+        if _content_type:
+            _header_params['Content-Type'] = _content_type
+        else:
+            _default_content_type = (
+                self.api_client.select_header_content_type(
+                    [
+                        'application/json'
+                    ]
+                )
+            )
+            if _default_content_type is not None:
+                _header_params['Content-Type'] = _default_content_type
+
+        # authentication setting
+        _auth_settings: List[str] = [
+            'ApiKeyAuth'
+        ]
+
+        return self.api_client.param_serialize(
+            method='POST',
+            resource_path='/api/v1/dspm/cloudAccounts/saasApps/snowflake/generateAuthUrl',
+            path_params=_path_params,
+            query_params=_query_params,
+            header_params=_header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            auth_settings=_auth_settings,
+            collection_formats=_collection_formats,
+            _host=_host,
+            _request_auth=_request_auth
+        )
+
+
+
+
+    @validate_call
     def get_analyzed_region_status(
         self,
         cloud_provider: Annotated[CloudServiceProvider, Field(description="The cloud provider for the cloud account")],
@@ -2118,7 +2148,7 @@ class CloudAccountsApi:
     ) -> GetAnalyzedRegionStatus200Response:
         """Get the status of analyzer installation for a region
 
-        Get the installation status of Guardium Insights SaaS DSPM for a region.
+        Get the installation status of Guardium DSPM for a region.
 
         :param cloud_provider: The cloud provider for the cloud account (required)
         :type cloud_provider: CloudServiceProvider
@@ -2190,7 +2220,7 @@ class CloudAccountsApi:
     ) -> ApiResponse[GetAnalyzedRegionStatus200Response]:
         """Get the status of analyzer installation for a region
 
-        Get the installation status of Guardium Insights SaaS DSPM for a region.
+        Get the installation status of Guardium DSPM for a region.
 
         :param cloud_provider: The cloud provider for the cloud account (required)
         :type cloud_provider: CloudServiceProvider
@@ -2262,7 +2292,7 @@ class CloudAccountsApi:
     ) -> RESTResponseType:
         """Get the status of analyzer installation for a region
 
-        Get the installation status of Guardium Insights SaaS DSPM for a region.
+        Get the installation status of Guardium DSPM for a region.
 
         :param cloud_provider: The cloud provider for the cloud account (required)
         :type cloud_provider: CloudServiceProvider
@@ -2901,8 +2931,9 @@ class CloudAccountsApi:
 
 
     @validate_call
-    def get_compliances(
+    def get_refresh_token_expiry(
         self,
+        provider_id: Annotated[StrictStr, Field(description="The ID of the provider")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2915,11 +2946,13 @@ class CloudAccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> List[Compliance]:
-        """Get a list of selected compliances
+    ) -> TokenExpiryInfo:
+        """Get Snowflake Refresh Token Expiry date
 
-        List the compliance frameworks selected.
+        Get Snowflake Refresh Token Expiry date.
 
+        :param provider_id: The ID of the provider (required)
+        :type provider_id: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -2942,7 +2975,8 @@ class CloudAccountsApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_compliances_serialize(
+        _param = self._get_refresh_token_expiry_serialize(
+            provider_id=provider_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2950,7 +2984,7 @@ class CloudAccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "List[Compliance]",
+            '200': "TokenExpiryInfo",
             '400': "Authenticate400Response",
         }
         response_data = self.api_client.call_api(
@@ -2965,8 +2999,9 @@ class CloudAccountsApi:
 
 
     @validate_call
-    def get_compliances_with_http_info(
+    def get_refresh_token_expiry_with_http_info(
         self,
+        provider_id: Annotated[StrictStr, Field(description="The ID of the provider")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2979,11 +3014,13 @@ class CloudAccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[List[Compliance]]:
-        """Get a list of selected compliances
+    ) -> ApiResponse[TokenExpiryInfo]:
+        """Get Snowflake Refresh Token Expiry date
 
-        List the compliance frameworks selected.
+        Get Snowflake Refresh Token Expiry date.
 
+        :param provider_id: The ID of the provider (required)
+        :type provider_id: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -3006,7 +3043,8 @@ class CloudAccountsApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_compliances_serialize(
+        _param = self._get_refresh_token_expiry_serialize(
+            provider_id=provider_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -3014,7 +3052,7 @@ class CloudAccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "List[Compliance]",
+            '200': "TokenExpiryInfo",
             '400': "Authenticate400Response",
         }
         response_data = self.api_client.call_api(
@@ -3029,8 +3067,9 @@ class CloudAccountsApi:
 
 
     @validate_call
-    def get_compliances_without_preload_content(
+    def get_refresh_token_expiry_without_preload_content(
         self,
+        provider_id: Annotated[StrictStr, Field(description="The ID of the provider")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3044,10 +3083,12 @@ class CloudAccountsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Get a list of selected compliances
+        """Get Snowflake Refresh Token Expiry date
 
-        List the compliance frameworks selected.
+        Get Snowflake Refresh Token Expiry date.
 
+        :param provider_id: The ID of the provider (required)
+        :type provider_id: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -3070,7 +3111,8 @@ class CloudAccountsApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_compliances_serialize(
+        _param = self._get_refresh_token_expiry_serialize(
+            provider_id=provider_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -3078,7 +3120,7 @@ class CloudAccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "List[Compliance]",
+            '200': "TokenExpiryInfo",
             '400': "Authenticate400Response",
         }
         response_data = self.api_client.call_api(
@@ -3088,8 +3130,9 @@ class CloudAccountsApi:
         return response_data.response
 
 
-    def _get_compliances_serialize(
+    def _get_refresh_token_expiry_serialize(
         self,
+        provider_id,
         _request_auth,
         _content_type,
         _headers,
@@ -3109,6 +3152,8 @@ class CloudAccountsApi:
         _body_params: Optional[bytes] = None
 
         # process the path parameters
+        if provider_id is not None:
+            _path_params['providerId'] = provider_id
         # process the query parameters
         # process the header parameters
         # process the form parameters
@@ -3130,7 +3175,7 @@ class CloudAccountsApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/cloudAccounts/compliances',
+            resource_path='/api/v1/dspm/cloudAccounts/saasApps/snowflake/getRefreshTokenExpiry/{providerId}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -3162,9 +3207,9 @@ class CloudAccountsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> List[LinkedAccounts]:
-        """List cloud accounts connected to Guardium Insights SaaS DSPM
+        """List cloud accounts connected to DSPM
 
-        Get a list of all the connected cloud accounts monitored by Guardium Insights SaaS DSPM.
+        Get a list of all the connected cloud accounts monitored by Guardium DSPM.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -3226,9 +3271,9 @@ class CloudAccountsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[List[LinkedAccounts]]:
-        """List cloud accounts connected to Guardium Insights SaaS DSPM
+        """List cloud accounts connected to DSPM
 
-        Get a list of all the connected cloud accounts monitored by Guardium Insights SaaS DSPM.
+        Get a list of all the connected cloud accounts monitored by Guardium DSPM.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -3290,9 +3335,9 @@ class CloudAccountsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """List cloud accounts connected to Guardium Insights SaaS DSPM
+        """List cloud accounts connected to DSPM
 
-        Get a list of all the connected cloud accounts monitored by Guardium Insights SaaS DSPM.
+        Get a list of all the connected cloud accounts monitored by Guardium DSPM.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -3412,7 +3457,7 @@ class CloudAccountsApi:
     ) -> None:
         """Post cloud account ID connections to be removed
 
-        Post cloud account ID connections to be removed from Guardium Insights SaaS DSPM.
+        Post cloud account ID connections to be removed from Guardium DSPM.
 
         :param account_ids: (required)
         :type account_ids: List[str]
@@ -3487,7 +3532,7 @@ class CloudAccountsApi:
     ) -> ApiResponse[None]:
         """Post cloud account ID connections to be removed
 
-        Post cloud account ID connections to be removed from Guardium Insights SaaS DSPM.
+        Post cloud account ID connections to be removed from Guardium DSPM.
 
         :param account_ids: (required)
         :type account_ids: List[str]
@@ -3562,7 +3607,7 @@ class CloudAccountsApi:
     ) -> RESTResponseType:
         """Post cloud account ID connections to be removed
 
-        Post cloud account ID connections to be removed from Guardium Insights SaaS DSPM.
+        Post cloud account ID connections to be removed from Guardium DSPM.
 
         :param account_ids: (required)
         :type account_ids: List[str]
@@ -4219,9 +4264,8 @@ class CloudAccountsApi:
 
 
     @validate_call
-    def set_compliances(
+    def snowflake_integration_script(
         self,
-        compliance: List[Compliance],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -4234,13 +4278,11 @@ class CloudAccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
-        """Set a list of selected compliances
+    ) -> Script:
+        """Generate Snowflake Integration Script
 
-        Select one or more compliance frameworks.
+        Generate Snowflake integration Script.
 
-        :param compliance: (required)
-        :type compliance: List[Compliance]
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -4263,8 +4305,7 @@ class CloudAccountsApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._set_compliances_serialize(
-            compliance=compliance,
+        _param = self._snowflake_integration_script_serialize(
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -4272,7 +4313,7 @@ class CloudAccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "Script",
             '400': "Authenticate400Response",
         }
         response_data = self.api_client.call_api(
@@ -4287,9 +4328,8 @@ class CloudAccountsApi:
 
 
     @validate_call
-    def set_compliances_with_http_info(
+    def snowflake_integration_script_with_http_info(
         self,
-        compliance: List[Compliance],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -4302,13 +4342,11 @@ class CloudAccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
-        """Set a list of selected compliances
+    ) -> ApiResponse[Script]:
+        """Generate Snowflake Integration Script
 
-        Select one or more compliance frameworks.
+        Generate Snowflake integration Script.
 
-        :param compliance: (required)
-        :type compliance: List[Compliance]
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -4331,8 +4369,7 @@ class CloudAccountsApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._set_compliances_serialize(
-            compliance=compliance,
+        _param = self._snowflake_integration_script_serialize(
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -4340,7 +4377,7 @@ class CloudAccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "Script",
             '400': "Authenticate400Response",
         }
         response_data = self.api_client.call_api(
@@ -4355,9 +4392,8 @@ class CloudAccountsApi:
 
 
     @validate_call
-    def set_compliances_without_preload_content(
+    def snowflake_integration_script_without_preload_content(
         self,
-        compliance: List[Compliance],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -4371,12 +4407,10 @@ class CloudAccountsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Set a list of selected compliances
+        """Generate Snowflake Integration Script
 
-        Select one or more compliance frameworks.
+        Generate Snowflake integration Script.
 
-        :param compliance: (required)
-        :type compliance: List[Compliance]
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -4399,8 +4433,7 @@ class CloudAccountsApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._set_compliances_serialize(
-            compliance=compliance,
+        _param = self._snowflake_integration_script_serialize(
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -4408,7 +4441,7 @@ class CloudAccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "Script",
             '400': "Authenticate400Response",
         }
         response_data = self.api_client.call_api(
@@ -4418,9 +4451,8 @@ class CloudAccountsApi:
         return response_data.response
 
 
-    def _set_compliances_serialize(
+    def _snowflake_integration_script_serialize(
         self,
-        compliance,
         _request_auth,
         _content_type,
         _headers,
@@ -4430,7 +4462,6 @@ class CloudAccountsApi:
         _host = None
 
         _collection_formats: Dict[str, str] = {
-            'Compliance': '',
         }
 
         _path_params: Dict[str, str] = {}
@@ -4445,8 +4476,6 @@ class CloudAccountsApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if compliance is not None:
-            _body_params = compliance
 
 
         # set the HTTP header `Accept`
@@ -4456,19 +4485,6 @@ class CloudAccountsApi:
             ]
         )
 
-        # set the HTTP header `Content-Type`
-        if _content_type:
-            _header_params['Content-Type'] = _content_type
-        else:
-            _default_content_type = (
-                self.api_client.select_header_content_type(
-                    [
-                        'application/json'
-                    ]
-                )
-            )
-            if _default_content_type is not None:
-                _header_params['Content-Type'] = _default_content_type
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -4476,8 +4492,8 @@ class CloudAccountsApi:
         ]
 
         return self.api_client.param_serialize(
-            method='POST',
-            resource_path='/api/v1/dspm/cloudAccounts/compliances',
+            method='GET',
+            resource_path='/api/v1/dspm/cloudAccounts/saasApps/snowflake/snowflakeIntegrationScript',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -5042,289 +5058,6 @@ class CloudAccountsApi:
 
 
     @validate_call
-    def submit_salesforce_auth_code(
-        self,
-        auth_code: AuthCode,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> None:
-        """Submit Salesforce customer information
-
-        Submit customer information for Salesforce integration.
-
-        :param auth_code: (required)
-        :type auth_code: AuthCode
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """ # noqa: E501
-
-        _param = self._submit_salesforce_auth_code_serialize(
-            auth_code=auth_code,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            '200': None,
-            '400': "Authenticate400Response",
-            '403': "Authenticate400Response",
-            '500': "Authenticate400Response",
-            '503': None,
-        }
-        response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
-        response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        ).data
-
-
-    @validate_call
-    def submit_salesforce_auth_code_with_http_info(
-        self,
-        auth_code: AuthCode,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[None]:
-        """Submit Salesforce customer information
-
-        Submit customer information for Salesforce integration.
-
-        :param auth_code: (required)
-        :type auth_code: AuthCode
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """ # noqa: E501
-
-        _param = self._submit_salesforce_auth_code_serialize(
-            auth_code=auth_code,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            '200': None,
-            '400': "Authenticate400Response",
-            '403': "Authenticate400Response",
-            '500': "Authenticate400Response",
-            '503': None,
-        }
-        response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
-        response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        )
-
-
-    @validate_call
-    def submit_salesforce_auth_code_without_preload_content(
-        self,
-        auth_code: AuthCode,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> RESTResponseType:
-        """Submit Salesforce customer information
-
-        Submit customer information for Salesforce integration.
-
-        :param auth_code: (required)
-        :type auth_code: AuthCode
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """ # noqa: E501
-
-        _param = self._submit_salesforce_auth_code_serialize(
-            auth_code=auth_code,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            '200': None,
-            '400': "Authenticate400Response",
-            '403': "Authenticate400Response",
-            '500': "Authenticate400Response",
-            '503': None,
-        }
-        response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
-        return response_data.response
-
-
-    def _submit_salesforce_auth_code_serialize(
-        self,
-        auth_code,
-        _request_auth,
-        _content_type,
-        _headers,
-        _host_index,
-    ) -> RequestSerialized:
-
-        _host = None
-
-        _collection_formats: Dict[str, str] = {
-        }
-
-        _path_params: Dict[str, str] = {}
-        _query_params: List[Tuple[str, str]] = []
-        _header_params: Dict[str, Optional[str]] = _headers or {}
-        _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, Union[str, bytes]] = {}
-        _body_params: Optional[bytes] = None
-
-        # process the path parameters
-        # process the query parameters
-        # process the header parameters
-        # process the form parameters
-        # process the body parameter
-        if auth_code is not None:
-            _body_params = auth_code
-
-
-        # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
-
-        # set the HTTP header `Content-Type`
-        if _content_type:
-            _header_params['Content-Type'] = _content_type
-        else:
-            _default_content_type = (
-                self.api_client.select_header_content_type(
-                    [
-                        'application/json'
-                    ]
-                )
-            )
-            if _default_content_type is not None:
-                _header_params['Content-Type'] = _default_content_type
-
-        # authentication setting
-        _auth_settings: List[str] = [
-            'ApiKeyAuth'
-        ]
-
-        return self.api_client.param_serialize(
-            method='POST',
-            resource_path='/api/v1/dspm/cloudAccounts/saasApps/salesforce/submitAuthCodeInfo',
-            path_params=_path_params,
-            query_params=_query_params,
-            header_params=_header_params,
-            body=_body_params,
-            post_params=_form_params,
-            files=_files,
-            auth_settings=_auth_settings,
-            collection_formats=_collection_formats,
-            _host=_host,
-            _request_auth=_request_auth
-        )
-
-
-
-
-    @validate_call
     def submit_slack_auth_code(
         self,
         submit_auth_code: SubmitAuthCode,
@@ -5583,6 +5316,289 @@ class CloudAccountsApi:
         return self.api_client.param_serialize(
             method='POST',
             resource_path='/api/v1/dspm/cloudAccounts/saasApps/slack/submitAuthCode',
+            path_params=_path_params,
+            query_params=_query_params,
+            header_params=_header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            auth_settings=_auth_settings,
+            collection_formats=_collection_formats,
+            _host=_host,
+            _request_auth=_request_auth
+        )
+
+
+
+
+    @validate_call
+    def submit_snowflake_auth_code(
+        self,
+        auth_info: AuthInfo,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> None:
+        """Submit Snowflake oAuth code
+
+        Storing code that is returned from Snowflake oAuth.
+
+        :param auth_info: (required)
+        :type auth_info: AuthInfo
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._submit_snowflake_auth_code_serialize(
+            auth_info=auth_info,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': None,
+            '400': "Authenticate400Response",
+            '403': "Authenticate400Response",
+            '500': "Authenticate400Response",
+            '503': None,
+        }
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        ).data
+
+
+    @validate_call
+    def submit_snowflake_auth_code_with_http_info(
+        self,
+        auth_info: AuthInfo,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> ApiResponse[None]:
+        """Submit Snowflake oAuth code
+
+        Storing code that is returned from Snowflake oAuth.
+
+        :param auth_info: (required)
+        :type auth_info: AuthInfo
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._submit_snowflake_auth_code_serialize(
+            auth_info=auth_info,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': None,
+            '400': "Authenticate400Response",
+            '403': "Authenticate400Response",
+            '500': "Authenticate400Response",
+            '503': None,
+        }
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        )
+
+
+    @validate_call
+    def submit_snowflake_auth_code_without_preload_content(
+        self,
+        auth_info: AuthInfo,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> RESTResponseType:
+        """Submit Snowflake oAuth code
+
+        Storing code that is returned from Snowflake oAuth.
+
+        :param auth_info: (required)
+        :type auth_info: AuthInfo
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._submit_snowflake_auth_code_serialize(
+            auth_info=auth_info,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': None,
+            '400': "Authenticate400Response",
+            '403': "Authenticate400Response",
+            '500': "Authenticate400Response",
+            '503': None,
+        }
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        return response_data.response
+
+
+    def _submit_snowflake_auth_code_serialize(
+        self,
+        auth_info,
+        _request_auth,
+        _content_type,
+        _headers,
+        _host_index,
+    ) -> RequestSerialized:
+
+        _host = None
+
+        _collection_formats: Dict[str, str] = {
+        }
+
+        _path_params: Dict[str, str] = {}
+        _query_params: List[Tuple[str, str]] = []
+        _header_params: Dict[str, Optional[str]] = _headers or {}
+        _form_params: List[Tuple[str, str]] = []
+        _files: Dict[str, Union[str, bytes]] = {}
+        _body_params: Optional[bytes] = None
+
+        # process the path parameters
+        # process the query parameters
+        # process the header parameters
+        # process the form parameters
+        # process the body parameter
+        if auth_info is not None:
+            _body_params = auth_info
+
+
+        # set the HTTP header `Accept`
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            [
+                'application/json'
+            ]
+        )
+
+        # set the HTTP header `Content-Type`
+        if _content_type:
+            _header_params['Content-Type'] = _content_type
+        else:
+            _default_content_type = (
+                self.api_client.select_header_content_type(
+                    [
+                        'application/json'
+                    ]
+                )
+            )
+            if _default_content_type is not None:
+                _header_params['Content-Type'] = _default_content_type
+
+        # authentication setting
+        _auth_settings: List[str] = [
+            'ApiKeyAuth'
+        ]
+
+        return self.api_client.param_serialize(
+            method='POST',
+            resource_path='/api/v1/dspm/cloudAccounts/saasApps/snowflake/submitAuthCode',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,

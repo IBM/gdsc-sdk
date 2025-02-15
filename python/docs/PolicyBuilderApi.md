@@ -35,7 +35,7 @@ Summary: Clone policy Description: Clone a policy.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.policybuilderv3_clone_policy_request import Policybuilderv3ClonePolicyRequest
 from ibm_gdsc_sdk_software.models.policybuilderv3_standard_crud_response import Policybuilderv3StandardCRUDResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -123,7 +123,7 @@ Summary: Create policy Description: Create Policy returns response code and mess
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.policybuilderv3_create_update_policy_request import Policybuilderv3CreateUpdatePolicyRequest
 from ibm_gdsc_sdk_software.models.policybuilderv3_create_update_policy_response import Policybuilderv3CreateUpdatePolicyResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -209,7 +209,7 @@ Summary: Delete GDP policy sync entry Description: Deletes GDP policy from sync 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.policybuilderv3_delete_gdp_policy_sync_response import Policybuilderv3DeleteGdpPolicySyncResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -294,7 +294,7 @@ Summary: Delete policies Description: Delete Policy returns response code and me
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.policybuilderv3_standard_crud_response import Policybuilderv3StandardCRUDResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -379,7 +379,7 @@ Summary: Get GDP policy summary information Description: Get GDP's CM's policy s
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.policybuilderv3_get_gdp_policy_meta_data_response import Policybuilderv3GetGdpPolicyMetaDataResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -460,7 +460,7 @@ Summary: Get policies Description: Return a list of policies to the caller.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.policybuilderv3_get_policies_response import Policybuilderv3GetPoliciesResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -541,7 +541,7 @@ Summary: Get policy details Description: Return a list of rules inside the polic
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.policybuilderv3_get_policy_details_response import Policybuilderv3GetPolicyDetailsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -626,7 +626,7 @@ Summary: GetPolicy names from rule IDs Description: Return a map where the key i
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.policybuilderv3_get_policy_names_from_rule_ids_request import Policybuilderv3GetPolicyNamesFromRuleIDsRequest
 from ibm_gdsc_sdk_software.models.policybuilderv3_get_policy_names_from_rule_ids_response import Policybuilderv3GetPolicyNamesFromRuleIDsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -712,7 +712,7 @@ Summary: Get list of synced polices Description: Returns the list and status of 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.policybuilderv3_get_policy_sync_list_response import Policybuilderv3GetPolicySyncListResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -793,7 +793,7 @@ Summary: Get receivers Description: Get all the receivers associated with action
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.policybuilderv3_get_receivers_response import Policybuilderv3GetReceiversResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -880,7 +880,7 @@ Summary: Get rule metadata Description: Return a list of rule parameters and act
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.policybuilderv3_rule_metadata_response import Policybuilderv3RuleMetadataResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -965,7 +965,7 @@ Summary: Insert GDP policy sync entry Description: Inserts GDP policy's name int
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.policybuilderv3_insert_gdp_policy_sync_request import Policybuilderv3InsertGdpPolicySyncRequest
 from ibm_gdsc_sdk_software.models.policybuilderv3_insert_gdp_policy_sync_response import Policybuilderv3InsertGdpPolicySyncResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -1051,7 +1051,7 @@ Summary: Insert gdp policy summaries Description: Inserts GDP's CM's policy summ
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.policybuilderv3_insert_gdp_policy_meta_data_request import Policybuilderv3InsertGdpPolicyMetaDataRequest
 from ibm_gdsc_sdk_software.models.policybuilderv3_insert_gdp_policy_meta_data_response import Policybuilderv3InsertGdpPolicyMetaDataResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -1139,7 +1139,7 @@ Summary: Install policies Description: Activate Policies request performs activa
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.policybuilderv3_install_policies_request import Policybuilderv3InstallPoliciesRequest
 from ibm_gdsc_sdk_software.models.policybuilderv3_status_response_base import Policybuilderv3StatusResponseBase
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -1225,7 +1225,7 @@ Summary: Integration check Description: Check if integration id is being used in
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.policybuilderv3_get_integration_check_response import Policybuilderv3GetIntegrationCheckResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1312,7 +1312,7 @@ Summary: Policies groups Description: Get policy groups.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.policybuilderv3_get_policies_groups_response import Policybuilderv3GetPoliciesGroupsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1397,7 +1397,7 @@ Summary: Rule validation Description: Validate a rule parameters and actions.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.policybuilderv3_get_rule_validation_request import Policybuilderv3GetRuleValidationRequest
 from ibm_gdsc_sdk_software.models.policybuilderv3_standard_crud_response import Policybuilderv3StandardCRUDResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -1483,7 +1483,7 @@ Summary: Store policies Gdp Description: Store policies.  (This API is called fr
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.policybuilderv3_store_policy_gdp_request import Policybuilderv3StorePolicyGdpRequest
 from ibm_gdsc_sdk_software.models.policybuilderv3_store_policy_gdp_response import Policybuilderv3StorePolicyGdpResponse
 from ibm_gdsc_sdk_software.rest import ApiException

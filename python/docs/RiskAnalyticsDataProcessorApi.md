@@ -19,7 +19,7 @@ Summary: Get Risk Event Context Description: Retrieve the context of the given r
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.riskanalyticsdataprocessorv3_get_risk_context_response import Riskanalyticsdataprocessorv3GetRiskContextResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -106,7 +106,7 @@ Summary: Get Risk Event Predefined Questions Description: Retrieve the Predefine
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.riskanalyticsdataprocessorv3_get_risk_predefined_questions_response import Riskanalyticsdataprocessorv3GetRiskPredefinedQuestionsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint

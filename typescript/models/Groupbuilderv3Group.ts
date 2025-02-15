@@ -16,7 +16,7 @@ import { Groupbuilderv3NestedGroupMember } from '../models/Groupbuilderv3NestedG
 import { HttpFile } from '../http/http';
 
 /**
-* Group imports groups from a Guradium Data Protection central manager to Guardium Insights.
+* Group imports groups from a Guradium Data Protection central manager to Guardium.
 */
 export class Groupbuilderv3Group {
     /**

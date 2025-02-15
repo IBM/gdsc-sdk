@@ -15,6 +15,7 @@ LdapConfig contains information about configuration for importing group members 
 |**filter** | **String** | LDAP search query to use to find objects. |  [optional] |
 |**filterScope** | **Integer** | Scope of LDAP search:  sub-tree vs immediate base DN children. |  [optional] |
 |**importLimit** | **Integer** | Maximum number of objects to import. |  [optional] |
+|**ldapGroupName** | **String** | DN name of the LDAP group to get members from.  Alternative to explicit filter. |  [optional] |
 |**ldapId** | **String** | ID of the ICP LDAP definition from which to import. |  [optional] |
 |**memberPrefix** | **String** | Prefix that will be added to each imported member. |  [optional] |
 

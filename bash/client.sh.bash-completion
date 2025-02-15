@@ -112,21 +112,21 @@ _()
     operations["generateAtlassianJiraAuthUrl"]=1
     operations["generateAzureAuthUrl"]=1
     operations["generateOffice365AuthUrl"]=1
-    operations["generateSalesforceAuthUrl"]=1
     operations["generateSlackAuthUrl"]=1
+    operations["generateSnowflakeAuthUrl"]=1
     operations["getAnalyzedRegionStatus"]=1
     operations["getAzureAdminConsentStatus"]=1
     operations["getCloudAccountInstallationStatus"]=1
-    operations["getCompliances"]=1
+    operations["getRefreshTokenExpiry"]=1
     operations["listLinkedAccounts"]=1
     operations["removeAccounts"]=1
     operations["removeAccountsInstructions"]=1
     operations["retrieveServiceAccountId"]=1
-    operations["setCompliances"]=1
+    operations["snowflakeIntegrationScript"]=1
     operations["submitGoogleWorkspaceAdminEmail"]=1
     operations["submitOffice365TenantInfo"]=1
-    operations["submitSalesforceAuthCode"]=1
     operations["submitSlackAuthCode"]=1
+    operations["submitSnowflakeAuthCode"]=1
     operations["complianceAcceleratorCreateWorkspace"]=1
     operations["complianceAcceleratorDeleteComplianceWorkspaces"]=1
     operations["complianceAcceleratorGetComplianceInfo"]=1
@@ -324,14 +324,9 @@ _()
     operations["policyBuilderPoliciesGroups"]=1
     operations["policyBuilderRuleValidation"]=1
     operations["policyBuilderStorePoliciesGdp"]=1
-    operations["qSDataManagerGetAppDataForProvisionId"]=1
     operations["qSDataManagerGetMasterData"]=1
-    operations["qSDataManagerGetNetLocDimDataForScanId"]=1
-    operations["qSDataManagerInsertAllEntities"]=1
     operations["qSDataManagerRegisterScan"]=1
     operations["qSDataManagerRetrieveScan"]=1
-    operations["qSDataManagerSearchEntityData"]=1
-    operations["qSDataManagerUpdateNetLocation"]=1
     operations["qSPluginManagerInvokeAppProv"]=1
     operations["qSPluginManagerInvokeExplorerV1"]=1
     operations["qSPluginManagerInvokeExplorerV2"]=1
@@ -533,21 +528,21 @@ _()
     operation_parameters["generateAtlassianJiraAuthUrl"]=""
     operation_parameters["generateAzureAuthUrl"]="tenantId= "
     operation_parameters["generateOffice365AuthUrl"]=""
-    operation_parameters["generateSalesforceAuthUrl"]=""
     operation_parameters["generateSlackAuthUrl"]=""
+    operation_parameters["generateSnowflakeAuthUrl"]=""
     operation_parameters["getAnalyzedRegionStatus"]="cloudProvider= region= "
     operation_parameters["getAzureAdminConsentStatus"]=""
     operation_parameters["getCloudAccountInstallationStatus"]="cloudProvider= cloudAccountId= "
-    operation_parameters["getCompliances"]=""
+    operation_parameters["getRefreshTokenExpiry"]="providerId= "
     operation_parameters["listLinkedAccounts"]=""
     operation_parameters["removeAccounts"]="accountIds= serviceProvider= "
     operation_parameters["removeAccountsInstructions"]="accountIds= serviceProvider= "
     operation_parameters["retrieveServiceAccountId"]=""
-    operation_parameters["setCompliances"]=""
+    operation_parameters["snowflakeIntegrationScript"]=""
     operation_parameters["submitGoogleWorkspaceAdminEmail"]=""
     operation_parameters["submitOffice365TenantInfo"]=""
-    operation_parameters["submitSalesforceAuthCode"]=""
     operation_parameters["submitSlackAuthCode"]=""
+    operation_parameters["submitSnowflakeAuthCode"]=""
     operation_parameters["complianceAcceleratorCreateWorkspace"]=""
     operation_parameters["complianceAcceleratorDeleteComplianceWorkspaces"]="regulations= deleteAll= "
     operation_parameters["complianceAcceleratorGetComplianceInfo"]=""
@@ -745,14 +740,9 @@ _()
     operation_parameters["policyBuilderPoliciesGroups"]="group_ids= "
     operation_parameters["policyBuilderRuleValidation"]=""
     operation_parameters["policyBuilderStorePoliciesGdp"]="central_manager_id= "
-    operation_parameters["qSDataManagerGetAppDataForProvisionId"]="provision_id= "
     operation_parameters["qSDataManagerGetMasterData"]=""
-    operation_parameters["qSDataManagerGetNetLocDimDataForScanId"]="scan_id= "
-    operation_parameters["qSDataManagerInsertAllEntities"]=""
     operation_parameters["qSDataManagerRegisterScan"]=""
     operation_parameters["qSDataManagerRetrieveScan"]="scan_id= "
-    operation_parameters["qSDataManagerSearchEntityData"]=""
-    operation_parameters["qSDataManagerUpdateNetLocation"]=""
     operation_parameters["qSPluginManagerInvokeAppProv"]="plugin_id= "
     operation_parameters["qSPluginManagerInvokeExplorerV1"]="plugin_id= "
     operation_parameters["qSPluginManagerInvokeExplorerV2"]="plugin_id= "

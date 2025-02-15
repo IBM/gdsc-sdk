@@ -21,7 +21,7 @@ import { Sensitivity } from '../models/Sensitivity';
 export class DataSensitivitiesApiRequestFactory extends BaseAPIRequestFactory {
 
     /**
-     * Get a summarised information about all sensitivities classified by Guardium Insights SaaS DSPM.
+     * Get a summarised information about all sensitivities classified by Guardium DSPM.
      * Get the summary of sensitivities
      * @param filter 
      */

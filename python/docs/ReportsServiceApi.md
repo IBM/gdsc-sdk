@@ -60,7 +60,7 @@ Summary: Create a category Description: Create a report category
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_create_category_request import Reportsv3CreateCategoryRequest
 from ibm_gdsc_sdk_software.models.reportsv3_create_category_response import Reportsv3CreateCategoryResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -146,7 +146,7 @@ Summary: Create chart Description: Create custom chart based on provided propert
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_create_chart_request import Reportsv3CreateChartRequest
 from ibm_gdsc_sdk_software.models.reportsv3_create_chart_response import Reportsv3CreateChartResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -232,7 +232,7 @@ Summary: Create chart template v2 Description: Create custom VEGA chart template
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_create_chart_templatev2_request import Reportsv3CreateChartTemplatev2Request
 from ibm_gdsc_sdk_software.models.reportsv3_create_chart_templatev2_response import Reportsv3CreateChartTemplatev2Response
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -318,7 +318,7 @@ Summary: Create chart v2 Description: Create custom VEGA chart based on provided
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_create_chartv2_request import Reportsv3CreateChartv2Request
 from ibm_gdsc_sdk_software.models.reportsv3_create_chartv2_response import Reportsv3CreateChartv2Response
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -404,7 +404,7 @@ Summary - Create fields by category Description: Cteate category fields based on
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_create_fields_by_category_request import Reportsv3CreateFieldsByCategoryRequest
 from ibm_gdsc_sdk_software.models.reportsv3_create_fields_by_category_response import Reportsv3CreateFieldsByCategoryResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -490,7 +490,7 @@ Summary: Create a join Description: Create a custom report join
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_create_join_request import Reportsv3CreateJoinRequest
 from ibm_gdsc_sdk_software.models.reportsv3_create_join_response import Reportsv3CreateJoinResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -576,7 +576,7 @@ Summary: Create report Description: Create custom report based on provided prope
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_create_report_request import Reportsv3CreateReportRequest
 from ibm_gdsc_sdk_software.models.reportsv3_create_report_response import Reportsv3CreateReportResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -662,7 +662,7 @@ Summary: Create a variant Description: Create a variant for reports
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_create_variant_request import Reportsv3CreateVariantRequest
 from ibm_gdsc_sdk_software.models.reportsv3_create_variant_response import Reportsv3CreateVariantResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -748,7 +748,7 @@ Summary: Delete a category Description: Delete a report category
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_delete_category_response import Reportsv3DeleteCategoryResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -835,7 +835,7 @@ Summary: Delete chart Description: Delete a custom chart.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_delete_chart_response import Reportsv3DeleteChartResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -920,7 +920,7 @@ Summary: Delete chart template v2 Description: Delete a custom VEGA chart templa
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_delete_chart_templatev2_response import Reportsv3DeleteChartTemplatev2Response
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1005,7 +1005,7 @@ Summary: Delete chart v2 Description: Delete a custom VEGA chart.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_delete_chartv2_response import Reportsv3DeleteChartv2Response
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1090,7 +1090,7 @@ Summary - Delete fields by category Description: Delete category fields based on
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_delete_fields_by_category_response import Reportsv3DeleteFieldsByCategoryResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1177,7 +1177,7 @@ Summary: Delete a join Description: Delete a custom join
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_delete_join_response import Reportsv3DeleteJoinResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1262,7 +1262,7 @@ Summary: Delete report Description: Delete a custom report.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_delete_report_response import Reportsv3DeleteReportResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1347,7 +1347,7 @@ Summary: Delete a variant Description: Delete a variant
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_delete_variant_response import Reportsv3DeleteVariantResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1432,7 +1432,7 @@ Summary:  Get all available report categories. Description: Get all category rel
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_get_categories_response import Reportsv3GetCategoriesResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1517,7 +1517,7 @@ Summary: Get chart settings Description: Get a custom chart based on provided re
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_get_chart_settings_response import Reportsv3GetChartSettingsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1604,7 +1604,7 @@ Summary: Get chart settings v2 Description: Get a custom VEGA chart based on pro
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_get_chart_settingsv2_response import Reportsv3GetChartSettingsv2Response
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1691,7 +1691,7 @@ Summary: Get chart template v2 Description: Get all custom VEGA chart templates.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_get_chart_templatesv2_response import Reportsv3GetChartTemplatesv2Response
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1772,7 +1772,7 @@ Summary: Get fields by categories Description: Get all category related fields o
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_get_fields_by_categories_response import Reportsv3GetFieldsByCategoriesResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1857,7 +1857,7 @@ Summary: Get fields by category Description: Get all category related fields or 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_get_fields_by_category_response import Reportsv3GetFieldsByCategoryResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -1946,7 +1946,7 @@ Summary: Get all joins Description: Get all custom joins.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_get_joins_response import Reportsv3GetJoinsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -2031,7 +2031,7 @@ Summary: Get query by report definition Description: Get query by report definit
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_get_query_by_report_definition_request import Reportsv3GetQueryByReportDefinitionRequest
 from ibm_gdsc_sdk_software.models.reportsv3_get_report_query_response import Reportsv3GetReportQueryResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -2117,7 +2117,7 @@ Summary: Get query by report ID Description: Get query by report ID.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_get_query_by_report_id_request import Reportsv3GetQueryByReportIDRequest
 from ibm_gdsc_sdk_software.models.reportsv3_get_report_query_response import Reportsv3GetReportQueryResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -2203,7 +2203,7 @@ Summary: Get report definition Description: Get report definition.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_get_report_definition_response import Reportsv3GetReportDefinitionResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -2288,7 +2288,7 @@ Summary: Get report groups Description: Get reports used by the provided groups.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_get_report_groups_response import Reportsv3GetReportGroupsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -2373,7 +2373,7 @@ Summary: Get report synopsis Description: Return BriefReport.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_get_report_synopsis_response import Reportsv3GetReportSynopsisResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -2458,7 +2458,7 @@ Summary: Get report timestamp header Description: Get where to take a report tim
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_get_report_timestamp_header_response import Reportsv3GetReportTimestampHeaderResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -2545,7 +2545,7 @@ Summary: Get reports Description: Get reports list.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_get_reports_response import Reportsv3GetReportsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -2632,7 +2632,7 @@ Summary: Get the reports that use a join Description: Get the reports that use a
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_get_reports_for_join_response import Reportsv3GetReportsForJoinResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -2717,7 +2717,7 @@ Summary: Get reports tags Description: Get all report distinct tags.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_get_reports_tags_response import Reportsv3GetReportsTagsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -2798,7 +2798,7 @@ Summary: Get a variant Description: Get a given variant
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_get_variant_response import Reportsv3GetVariantResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -2883,7 +2883,7 @@ Summary: Get all variants Description: Get all variants in reports
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_get_variants_response import Reportsv3GetVariantsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -2964,7 +2964,7 @@ Summary: Partial chart update Description: Update a custom chart with partial in
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_partial_chart_update_request import Reportsv3PartialChartUpdateRequest
 from ibm_gdsc_sdk_software.models.reportsv3_partial_chart_update_response import Reportsv3PartialChartUpdateResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -3052,7 +3052,7 @@ Summary: Partial report update Description: Update a custom report with partial 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_partial_report_update_request import Reportsv3PartialReportUpdateRequest
 from ibm_gdsc_sdk_software.models.reportsv3_partial_report_update_response import Reportsv3PartialReportUpdateResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -3140,7 +3140,7 @@ Summary: Run a variant Description: Run the operations in a variant
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_run_variant_operation_request import Reportsv3RunVariantOperationRequest
 from ibm_gdsc_sdk_software.models.reportsv3_run_variant_operation_response import Reportsv3RunVariantOperationResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -3226,7 +3226,7 @@ Summary: Transpose Description: Return the corresponding full sql data.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_run_report_response import Reportsv3RunReportResponse
 from ibm_gdsc_sdk_software.models.reportsv3_transpose_request import Reportsv3TransposeRequest
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -3312,7 +3312,7 @@ Summary: Update chart Description: Update a custom chart.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_update_chart_request import Reportsv3UpdateChartRequest
 from ibm_gdsc_sdk_software.models.reportsv3_update_chart_response import Reportsv3UpdateChartResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -3400,7 +3400,7 @@ Summary: Update chart v2 Description: Update a custom VEGA chart.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_update_chartv2_request import Reportsv3UpdateChartv2Request
 from ibm_gdsc_sdk_software.models.reportsv3_update_chartv2_response import Reportsv3UpdateChartv2Response
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -3488,7 +3488,7 @@ Summary: Update a join Description: Update a custom join
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_update_join_request import Reportsv3UpdateJoinRequest
 from ibm_gdsc_sdk_software.models.reportsv3_update_join_response import Reportsv3UpdateJoinResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -3576,7 +3576,7 @@ Summary: Update report Description: Update a custom report.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_update_report_request import Reportsv3UpdateReportRequest
 from ibm_gdsc_sdk_software.models.reportsv3_update_report_response import Reportsv3UpdateReportResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -3664,7 +3664,7 @@ Summary: Update a variant Description: Update a variant with a custom override
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.reportsv3_update_variant_override_request import Reportsv3UpdateVariantOverrideRequest
 from ibm_gdsc_sdk_software.models.reportsv3_update_variant_override_response import Reportsv3UpdateVariantOverrideResponse
 from ibm_gdsc_sdk_software.rest import ApiException

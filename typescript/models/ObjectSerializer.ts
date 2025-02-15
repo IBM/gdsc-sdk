@@ -1,6 +1,7 @@
 export * from '../models/AccessType';
 export * from '../models/AccessTypeCountInner';
 export * from '../models/AccessibleDataStores';
+export * from '../models/AccessiblePermissionsConfigurations';
 export * from '../models/ActualFlow';
 export * from '../models/ActualFlowPath';
 export * from '../models/ActualFlowsSummary';
@@ -132,6 +133,7 @@ export * from '../models/Auditv3GetActivityRecordsResponse';
 export * from '../models/Auditv3PutActivityRecordRequest';
 export * from '../models/Auditv3PutActivityRecordResponse';
 export * from '../models/AuthCode';
+export * from '../models/AuthInfo';
 export * from '../models/AuthUrl';
 export * from '../models/Authenticate200Response';
 export * from '../models/Authenticate400Response';
@@ -146,6 +148,7 @@ export * from '../models/AuthserverGetUserResponse';
 export * from '../models/AuthserverListOauthClientResponse';
 export * from '../models/AuthserverOauthClient';
 export * from '../models/ClassificationStatus';
+export * from '../models/ClientInfo';
 export * from '../models/CloudAccountCountInner';
 export * from '../models/CloudAccountDetails';
 export * from '../models/CloudAccountInstallationStatus';
@@ -546,6 +549,8 @@ export * from '../models/ListPotentialFlowsPaths200Response';
 export * from '../models/ListSensitivities200Response';
 export * from '../models/ListSensitivitiesFilterParameter';
 export * from '../models/ListTrusteesFilterParameter';
+export * from '../models/ListUsersEntitlements200Response';
+export * from '../models/ListUsersEntitlements200ResponseResultsInner';
 export * from '../models/ListVendorDataStoresFilterParameter';
 export * from '../models/ListVulnerabilities200Response';
 export * from '../models/ListVulnerabilitiesByDataStore200Response';
@@ -592,6 +597,7 @@ export * from '../models/Outliersenginev3SourcesStats';
 export * from '../models/Outliersenginev3StatisticsResponse';
 export * from '../models/Outliersenginev3UpdateWorkingHoursPeriodsRequest';
 export * from '../models/Outliersenginev3WorkingHoursPeriod';
+export * from '../models/PermissionsConfigurations';
 export * from '../models/Pipelineconfigv3DeleteTenantResponse';
 export * from '../models/Policybuilderv3Action';
 export * from '../models/Policybuilderv3ActionMetadata';
@@ -660,7 +666,6 @@ export * from '../models/ProtobufFieldMask';
 export * from '../models/ProtobufNullValue';
 export * from '../models/Qspmdatamanagerv3AppData';
 export * from '../models/Qspmdatamanagerv3AppDataResponse';
-export * from '../models/Qspmdatamanagerv3InsertEntitiesRequest';
 export * from '../models/Qspmdatamanagerv3MasterDataModel';
 export * from '../models/Qspmdatamanagerv3MasterDataResponse';
 export * from '../models/Qspmdatamanagerv3NetlocData';
@@ -668,9 +673,7 @@ export * from '../models/Qspmdatamanagerv3NetlocDataResponse';
 export * from '../models/Qspmdatamanagerv3Row';
 export * from '../models/Qspmdatamanagerv3ScanRequest';
 export * from '../models/Qspmdatamanagerv3ScanResponse';
-export * from '../models/Qspmdatamanagerv3SearchEntityDataRequest';
 export * from '../models/Qspmdatamanagerv3SearchEntityDataResponse';
-export * from '../models/Qspmdatamanagerv3UpdateNetLocRequest';
 export * from '../models/Qspmdatamanagerv3UpdateNetLocResponse';
 export * from '../models/Qspmpluginmanagerv3EntityNewSchema';
 export * from '../models/Qspmpluginmanagerv3PluginRQ';
@@ -965,6 +968,7 @@ export * from '../models/Schedulerv3TaskType';
 export * from '../models/Schedulerv3UpdateScheduledJobRequest';
 export * from '../models/Schedulerv3UpdateScheduledJobResponse';
 export * from '../models/Schedulerv3WorkflowType';
+export * from '../models/Script';
 export * from '../models/SensitivitiesItemsInner';
 export * from '../models/SensitivitiesSummary';
 export * from '../models/Sensitivity';
@@ -1081,6 +1085,7 @@ export * from '../models/Tenantuserv3UpdateUsersBulkResponse';
 export * from '../models/Tenantuserv3User';
 export * from '../models/Tenantuserv3UserState';
 export * from '../models/Tenantuserv3UserTenant';
+export * from '../models/TokenExpiryInfo';
 export * from '../models/Trustee';
 export * from '../models/TypesCountInner';
 export * from '../models/Universalconnectormanagerv3ConnectionRoute';
@@ -1106,10 +1111,12 @@ export * from '../models/UpdateCustodianBody';
 export * from '../models/UpdateDatastoreCustodian200Response';
 export * from '../models/UpdateResourceReviewBody';
 export * from '../models/UpdateResourceReviewStatus200Response';
-export * from '../models/UserEntitlementsFilter';
+export * from '../models/UserEntitlementInfo';
 export * from '../models/UserEntitlementsUserSensitiveCategoriesOptionsUserIdParameter';
 export * from '../models/UserSensitiveCategories';
+export * from '../models/UserSensitiveCategories200Response';
 export * from '../models/UserSensitiveCategoriesSensitiveCategoriesInner';
+export * from '../models/UserStores200Response';
 export * from '../models/Vendor';
 export * from '../models/VendorAccount';
 export * from '../models/VendorCertificate';
@@ -1190,6 +1197,7 @@ export * from '../models/Workflowv3UpdateTasksResponse';
 import { AccessType } from '../models/AccessType';
 import { AccessTypeCountInner   } from '../models/AccessTypeCountInner';
 import { AccessibleDataStores        } from '../models/AccessibleDataStores';
+import { AccessiblePermissionsConfigurations } from '../models/AccessiblePermissionsConfigurations';
 import { ActualFlow } from '../models/ActualFlow';
 import { ActualFlowPath           } from '../models/ActualFlowPath';
 import { ActualFlowsSummary } from '../models/ActualFlowsSummary';
@@ -1321,6 +1329,7 @@ import { Auditv3GetActivityRecordsResponse } from '../models/Auditv3GetActivityR
 import { Auditv3PutActivityRecordRequest } from '../models/Auditv3PutActivityRecordRequest';
 import { Auditv3PutActivityRecordResponse } from '../models/Auditv3PutActivityRecordResponse';
 import { AuthCode } from '../models/AuthCode';
+import { AuthInfo } from '../models/AuthInfo';
 import { AuthUrl } from '../models/AuthUrl';
 import { Authenticate200Response } from '../models/Authenticate200Response';
 import { Authenticate400Response } from '../models/Authenticate400Response';
@@ -1335,6 +1344,7 @@ import { AuthserverGetUserResponse } from '../models/AuthserverGetUserResponse';
 import { AuthserverListOauthClientResponse } from '../models/AuthserverListOauthClientResponse';
 import { AuthserverOauthClient } from '../models/AuthserverOauthClient';
 import { ClassificationStatus } from '../models/ClassificationStatus';
+import { ClientInfo } from '../models/ClientInfo';
 import { CloudAccountCountInner } from '../models/CloudAccountCountInner';
 import { CloudAccountDetails    } from '../models/CloudAccountDetails';
 import { CloudAccountInstallationStatus } from '../models/CloudAccountInstallationStatus';
@@ -1735,6 +1745,8 @@ import { ListPotentialFlowsPaths200Response } from '../models/ListPotentialFlows
 import { ListSensitivities200Response } from '../models/ListSensitivities200Response';
 import { ListSensitivitiesFilterParameter } from '../models/ListSensitivitiesFilterParameter';
 import { ListTrusteesFilterParameter } from '../models/ListTrusteesFilterParameter';
+import { ListUsersEntitlements200Response } from '../models/ListUsersEntitlements200Response';
+import { ListUsersEntitlements200ResponseResultsInner } from '../models/ListUsersEntitlements200ResponseResultsInner';
 import { ListVendorDataStoresFilterParameter       } from '../models/ListVendorDataStoresFilterParameter';
 import { ListVulnerabilities200Response } from '../models/ListVulnerabilities200Response';
 import { ListVulnerabilitiesByDataStore200Response } from '../models/ListVulnerabilitiesByDataStore200Response';
@@ -1781,6 +1793,7 @@ import { Outliersenginev3SourcesStats } from '../models/Outliersenginev3SourcesS
 import { Outliersenginev3StatisticsResponse } from '../models/Outliersenginev3StatisticsResponse';
 import { Outliersenginev3UpdateWorkingHoursPeriodsRequest } from '../models/Outliersenginev3UpdateWorkingHoursPeriodsRequest';
 import { Outliersenginev3WorkingHoursPeriod } from '../models/Outliersenginev3WorkingHoursPeriod';
+import { PermissionsConfigurations } from '../models/PermissionsConfigurations';
 import { Pipelineconfigv3DeleteTenantResponse } from '../models/Pipelineconfigv3DeleteTenantResponse';
 import { Policybuilderv3Action        } from '../models/Policybuilderv3Action';
 import { Policybuilderv3ActionMetadata      } from '../models/Policybuilderv3ActionMetadata';
@@ -1849,7 +1862,6 @@ import { ProtobufFieldMask } from '../models/ProtobufFieldMask';
 import { ProtobufNullValue } from '../models/ProtobufNullValue';
 import { Qspmdatamanagerv3AppData } from '../models/Qspmdatamanagerv3AppData';
 import { Qspmdatamanagerv3AppDataResponse } from '../models/Qspmdatamanagerv3AppDataResponse';
-import { Qspmdatamanagerv3InsertEntitiesRequest } from '../models/Qspmdatamanagerv3InsertEntitiesRequest';
 import { Qspmdatamanagerv3MasterDataModel } from '../models/Qspmdatamanagerv3MasterDataModel';
 import { Qspmdatamanagerv3MasterDataResponse } from '../models/Qspmdatamanagerv3MasterDataResponse';
 import { Qspmdatamanagerv3NetlocData } from '../models/Qspmdatamanagerv3NetlocData';
@@ -1857,9 +1869,7 @@ import { Qspmdatamanagerv3NetlocDataResponse } from '../models/Qspmdatamanagerv3
 import { Qspmdatamanagerv3Row } from '../models/Qspmdatamanagerv3Row';
 import { Qspmdatamanagerv3ScanRequest } from '../models/Qspmdatamanagerv3ScanRequest';
 import { Qspmdatamanagerv3ScanResponse } from '../models/Qspmdatamanagerv3ScanResponse';
-import { Qspmdatamanagerv3SearchEntityDataRequest } from '../models/Qspmdatamanagerv3SearchEntityDataRequest';
 import { Qspmdatamanagerv3SearchEntityDataResponse } from '../models/Qspmdatamanagerv3SearchEntityDataResponse';
-import { Qspmdatamanagerv3UpdateNetLocRequest } from '../models/Qspmdatamanagerv3UpdateNetLocRequest';
 import { Qspmdatamanagerv3UpdateNetLocResponse } from '../models/Qspmdatamanagerv3UpdateNetLocResponse';
 import { Qspmpluginmanagerv3EntityNewSchema } from '../models/Qspmpluginmanagerv3EntityNewSchema';
 import { Qspmpluginmanagerv3PluginRQ } from '../models/Qspmpluginmanagerv3PluginRQ';
@@ -2154,6 +2164,7 @@ import { Schedulerv3TaskType } from '../models/Schedulerv3TaskType';
 import { Schedulerv3UpdateScheduledJobRequest } from '../models/Schedulerv3UpdateScheduledJobRequest';
 import { Schedulerv3UpdateScheduledJobResponse } from '../models/Schedulerv3UpdateScheduledJobResponse';
 import { Schedulerv3WorkflowType } from '../models/Schedulerv3WorkflowType';
+import { Script } from '../models/Script';
 import { SensitivitiesItemsInner } from '../models/SensitivitiesItemsInner';
 import { SensitivitiesSummary } from '../models/SensitivitiesSummary';
 import { Sensitivity } from '../models/Sensitivity';
@@ -2270,6 +2281,7 @@ import { Tenantuserv3UpdateUsersBulkResponse } from '../models/Tenantuserv3Updat
 import { Tenantuserv3User             } from '../models/Tenantuserv3User';
 import { Tenantuserv3UserState } from '../models/Tenantuserv3UserState';
 import { Tenantuserv3UserTenant } from '../models/Tenantuserv3UserTenant';
+import { TokenExpiryInfo } from '../models/TokenExpiryInfo';
 import { Trustee } from '../models/Trustee';
 import { TypesCountInner } from '../models/TypesCountInner';
 import { Universalconnectormanagerv3ConnectionRoute } from '../models/Universalconnectormanagerv3ConnectionRoute';
@@ -2295,10 +2307,12 @@ import { UpdateCustodianBody } from '../models/UpdateCustodianBody';
 import { UpdateDatastoreCustodian200Response } from '../models/UpdateDatastoreCustodian200Response';
 import { UpdateResourceReviewBody } from '../models/UpdateResourceReviewBody';
 import { UpdateResourceReviewStatus200Response } from '../models/UpdateResourceReviewStatus200Response';
-import { UserEntitlementsFilter } from '../models/UserEntitlementsFilter';
+import { UserEntitlementInfo } from '../models/UserEntitlementInfo';
 import { UserEntitlementsUserSensitiveCategoriesOptionsUserIdParameter } from '../models/UserEntitlementsUserSensitiveCategoriesOptionsUserIdParameter';
 import { UserSensitiveCategories } from '../models/UserSensitiveCategories';
+import { UserSensitiveCategories200Response } from '../models/UserSensitiveCategories200Response';
 import { UserSensitiveCategoriesSensitiveCategoriesInner } from '../models/UserSensitiveCategoriesSensitiveCategoriesInner';
+import { UserStores200Response } from '../models/UserStores200Response';
 import { Vendor } from '../models/Vendor';
 import { VendorAccount    } from '../models/VendorAccount';
 import { VendorCertificate, VendorCertificateCertificateNameEnum   } from '../models/VendorCertificate';
@@ -2525,6 +2539,7 @@ let enumsMap: Set<string> = new Set<string>([
 let typeMap: {[index: string]: any} = {
     "AccessTypeCountInner": AccessTypeCountInner,
     "AccessibleDataStores": AccessibleDataStores,
+    "AccessiblePermissionsConfigurations": AccessiblePermissionsConfigurations,
     "ActualFlow": ActualFlow,
     "ActualFlowPath": ActualFlowPath,
     "ActualFlowsSummary": ActualFlowsSummary,
@@ -2650,6 +2665,7 @@ let typeMap: {[index: string]: any} = {
     "Auditv3PutActivityRecordRequest": Auditv3PutActivityRecordRequest,
     "Auditv3PutActivityRecordResponse": Auditv3PutActivityRecordResponse,
     "AuthCode": AuthCode,
+    "AuthInfo": AuthInfo,
     "AuthUrl": AuthUrl,
     "Authenticate200Response": Authenticate200Response,
     "Authenticate400Response": Authenticate400Response,
@@ -2663,6 +2679,7 @@ let typeMap: {[index: string]: any} = {
     "AuthserverGetUserResponse": AuthserverGetUserResponse,
     "AuthserverListOauthClientResponse": AuthserverListOauthClientResponse,
     "AuthserverOauthClient": AuthserverOauthClient,
+    "ClientInfo": ClientInfo,
     "CloudAccountCountInner": CloudAccountCountInner,
     "CloudAccountDetails": CloudAccountDetails,
     "CloudAccountInstallationStatus": CloudAccountInstallationStatus,
@@ -3041,6 +3058,8 @@ let typeMap: {[index: string]: any} = {
     "ListSensitivities200Response": ListSensitivities200Response,
     "ListSensitivitiesFilterParameter": ListSensitivitiesFilterParameter,
     "ListTrusteesFilterParameter": ListTrusteesFilterParameter,
+    "ListUsersEntitlements200Response": ListUsersEntitlements200Response,
+    "ListUsersEntitlements200ResponseResultsInner": ListUsersEntitlements200ResponseResultsInner,
     "ListVendorDataStoresFilterParameter": ListVendorDataStoresFilterParameter,
     "ListVulnerabilities200Response": ListVulnerabilities200Response,
     "ListVulnerabilitiesByDataStore200Response": ListVulnerabilitiesByDataStore200Response,
@@ -3082,6 +3101,7 @@ let typeMap: {[index: string]: any} = {
     "Outliersenginev3StatisticsResponse": Outliersenginev3StatisticsResponse,
     "Outliersenginev3UpdateWorkingHoursPeriodsRequest": Outliersenginev3UpdateWorkingHoursPeriodsRequest,
     "Outliersenginev3WorkingHoursPeriod": Outliersenginev3WorkingHoursPeriod,
+    "PermissionsConfigurations": PermissionsConfigurations,
     "Pipelineconfigv3DeleteTenantResponse": Pipelineconfigv3DeleteTenantResponse,
     "Policybuilderv3Action": Policybuilderv3Action,
     "Policybuilderv3ActionMetadata": Policybuilderv3ActionMetadata,
@@ -3138,7 +3158,6 @@ let typeMap: {[index: string]: any} = {
     "ProtobufFieldMask": ProtobufFieldMask,
     "Qspmdatamanagerv3AppData": Qspmdatamanagerv3AppData,
     "Qspmdatamanagerv3AppDataResponse": Qspmdatamanagerv3AppDataResponse,
-    "Qspmdatamanagerv3InsertEntitiesRequest": Qspmdatamanagerv3InsertEntitiesRequest,
     "Qspmdatamanagerv3MasterDataModel": Qspmdatamanagerv3MasterDataModel,
     "Qspmdatamanagerv3MasterDataResponse": Qspmdatamanagerv3MasterDataResponse,
     "Qspmdatamanagerv3NetlocData": Qspmdatamanagerv3NetlocData,
@@ -3146,9 +3165,7 @@ let typeMap: {[index: string]: any} = {
     "Qspmdatamanagerv3Row": Qspmdatamanagerv3Row,
     "Qspmdatamanagerv3ScanRequest": Qspmdatamanagerv3ScanRequest,
     "Qspmdatamanagerv3ScanResponse": Qspmdatamanagerv3ScanResponse,
-    "Qspmdatamanagerv3SearchEntityDataRequest": Qspmdatamanagerv3SearchEntityDataRequest,
     "Qspmdatamanagerv3SearchEntityDataResponse": Qspmdatamanagerv3SearchEntityDataResponse,
-    "Qspmdatamanagerv3UpdateNetLocRequest": Qspmdatamanagerv3UpdateNetLocRequest,
     "Qspmdatamanagerv3UpdateNetLocResponse": Qspmdatamanagerv3UpdateNetLocResponse,
     "Qspmpluginmanagerv3EntityNewSchema": Qspmpluginmanagerv3EntityNewSchema,
     "Qspmpluginmanagerv3PluginRQ": Qspmpluginmanagerv3PluginRQ,
@@ -3399,6 +3416,7 @@ let typeMap: {[index: string]: any} = {
     "Schedulerv3TaskParameter": Schedulerv3TaskParameter,
     "Schedulerv3UpdateScheduledJobRequest": Schedulerv3UpdateScheduledJobRequest,
     "Schedulerv3UpdateScheduledJobResponse": Schedulerv3UpdateScheduledJobResponse,
+    "Script": Script,
     "SensitivitiesItemsInner": SensitivitiesItemsInner,
     "SensitivitiesSummary": SensitivitiesSummary,
     "Sensitivity": Sensitivity,
@@ -3501,6 +3519,7 @@ let typeMap: {[index: string]: any} = {
     "Tenantuserv3UpdateUsersBulkResponse": Tenantuserv3UpdateUsersBulkResponse,
     "Tenantuserv3User": Tenantuserv3User,
     "Tenantuserv3UserTenant": Tenantuserv3UserTenant,
+    "TokenExpiryInfo": TokenExpiryInfo,
     "Trustee": Trustee,
     "TypesCountInner": TypesCountInner,
     "Universalconnectormanagerv3ConnectionRoute": Universalconnectormanagerv3ConnectionRoute,
@@ -3525,10 +3544,12 @@ let typeMap: {[index: string]: any} = {
     "UpdateDatastoreCustodian200Response": UpdateDatastoreCustodian200Response,
     "UpdateResourceReviewBody": UpdateResourceReviewBody,
     "UpdateResourceReviewStatus200Response": UpdateResourceReviewStatus200Response,
-    "UserEntitlementsFilter": UserEntitlementsFilter,
+    "UserEntitlementInfo": UserEntitlementInfo,
     "UserEntitlementsUserSensitiveCategoriesOptionsUserIdParameter": UserEntitlementsUserSensitiveCategoriesOptionsUserIdParameter,
     "UserSensitiveCategories": UserSensitiveCategories,
+    "UserSensitiveCategories200Response": UserSensitiveCategories200Response,
     "UserSensitiveCategoriesSensitiveCategoriesInner": UserSensitiveCategoriesSensitiveCategoriesInner,
+    "UserStores200Response": UserStores200Response,
     "Vendor": Vendor,
     "VendorAccount": VendorAccount,
     "VendorCertificate": VendorCertificate,

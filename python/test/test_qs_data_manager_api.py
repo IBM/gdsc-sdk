@@ -26,31 +26,10 @@ class TestQSDataManagerApi(unittest.TestCase):
     def tearDown(self) -> None:
         pass
 
-    def test_q_s_data_manager_get_app_data_for_provision_id(self) -> None:
-        """Test case for q_s_data_manager_get_app_data_for_provision_id
-
-        Summary: Fetch Application Provisoning Details Description: Fetch details from app dimension entity for given provision id.
-        """
-        pass
-
     def test_q_s_data_manager_get_master_data(self) -> None:
         """Test case for q_s_data_manager_get_master_data
 
         Summary: master data for all entities Description: Retrieves All Dimension and Fact tables data.
-        """
-        pass
-
-    def test_q_s_data_manager_get_net_loc_dim_data_for_scan_id(self) -> None:
-        """Test case for q_s_data_manager_get_net_loc_dim_data_for_scan_id
-
-        Summary: Fetch Netlocation Details Description: Fetch details from netloc dimension entity for a given scanid.
-        """
-        pass
-
-    def test_q_s_data_manager_insert_all_entities(self) -> None:
-        """Test case for q_s_data_manager_insert_all_entities
-
-        Summary: Insert Data Description: Insert All Dimension and Fact tables data.
         """
         pass
 
@@ -65,20 +44,6 @@ class TestQSDataManagerApi(unittest.TestCase):
         """Test case for q_s_data_manager_retrieve_scan
 
         Summary: Fetch ScanDetails Description: Fetch details from scan dimension table.
-        """
-        pass
-
-    def test_q_s_data_manager_search_entity_data(self) -> None:
-        """Test case for q_s_data_manager_search_entity_data
-
-        Summary: Retrieve Entity Data Description:Retrieve Entity data for given parameters
-        """
-        pass
-
-    def test_q_s_data_manager_update_net_location(self) -> None:
-        """Test case for q_s_data_manager_update_net_location
-
-        Summary: Update Netlocation Details Description: Update netloc dimension entity for agiven scanid.
         """
         pass
 

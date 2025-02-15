@@ -1,6 +1,6 @@
 # Groupbuilderv3GetGroupsResponse
 
-GetGroupResponse returns the list of available groups on Guardium Insights for Db2 Warehouse.
+GetGroupResponse returns the list of available groups on Guardium for Db2 Warehouse.
 
 ## Properties
 

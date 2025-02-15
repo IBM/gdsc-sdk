@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **facts** | [**List[Qspmpluginmanagerv3EntityNewSchema]**](Qspmpluginmanagerv3EntityNewSchema.md) |  | [optional] 
 **org_id** | **str** |  | [optional] 
 **plugin_id** | **str** |  | [optional] 
+**run_for_all_scans** | **bool** |  | [optional] 
 **scan_desc** | **str** |  | [optional] 
 **scan_id** | **str** |  | [optional] 
 **user_email** | **str** |  | [optional] 

@@ -19,7 +19,7 @@ Summary: Get activity records Description: Return activity records that match th
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.auditv3_get_activity_records_response import Auditv3GetActivityRecordsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -126,7 +126,7 @@ Summary: Put download activity record Description: Create an activity log record
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.auditv3_put_activity_record_request import Auditv3PutActivityRecordRequest
 from ibm_gdsc_sdk_software.models.auditv3_put_activity_record_response import Auditv3PutActivityRecordResponse
 from ibm_gdsc_sdk_software.rest import ApiException

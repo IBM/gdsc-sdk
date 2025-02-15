@@ -25,7 +25,7 @@ Summary: Create ticket Description: Create ticket based on information passed in
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.notificationsv3_create_ticket_request import Notificationsv3CreateTicketRequest
 from ibm_gdsc_sdk_software.models.notificationsv3_create_ticket_response import Notificationsv3CreateTicketResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -111,7 +111,7 @@ Summary: Get folders Description: Get folder for the integration connection prov
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.notificationsv3_get_folders_request import Notificationsv3GetFoldersRequest
 from ibm_gdsc_sdk_software.models.notificationsv3_get_folders_response import Notificationsv3GetFoldersResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -197,7 +197,7 @@ Summary: Get notification filename Description: Return filename associated with 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.notificationsv3_get_notification_filename_response import Notificationsv3GetNotificationFilenameResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -282,7 +282,7 @@ Summary: Get notification record Description: Return notifications record with t
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.notificationsv3_get_notification_record_response import Notificationsv3GetNotificationRecordResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -367,7 +367,7 @@ Summary: Get notification records Description: Return notifications records that
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.notificationsv3_get_notification_records_response import Notificationsv3GetNotificationRecordsResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -466,7 +466,7 @@ Summary: Get ticket status Description: Get the status of the given ticket
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.notificationsv3_get_ticket_status_response import Notificationsv3GetTicketStatusResponse
 from ibm_gdsc_sdk_software.rest import ApiException
 from pprint import pprint
@@ -553,7 +553,7 @@ Summary: Test integration Description: Test the integration connection with the 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.notificationsv3_test_integration_request import Notificationsv3TestIntegrationRequest
 from ibm_gdsc_sdk_software.models.notificationsv3_test_integration_response import Notificationsv3TestIntegrationResponse
 from ibm_gdsc_sdk_software.rest import ApiException
@@ -639,7 +639,7 @@ Summary: Update notification record Description: Update a notification record wi
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
+import ibm_gdsc_sdk_software,os
 from ibm_gdsc_sdk_software.models.notificationsv3_update_notification_record_request import Notificationsv3UpdateNotificationRecordRequest
 from ibm_gdsc_sdk_software.models.notificationsv3_update_notification_record_response import Notificationsv3UpdateNotificationRecordResponse
 from ibm_gdsc_sdk_software.rest import ApiException

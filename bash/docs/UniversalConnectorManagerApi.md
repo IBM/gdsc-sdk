@@ -5,7 +5,7 @@ All URIs are relative to **
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**universalConnectorManagerGetCertificate**](UniversalConnectorManagerApi.md#universalConnectorManagerGetCertificate) | **GET** /api/v3/certificates | Summary: Get certificate
-Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium Insights.
+Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium.
 [**universalConnectorManagerGetConnectors**](UniversalConnectorManagerApi.md#universalConnectorManagerGetConnectors) | **GET** /api/v3/connectors | Summary: Get connectors
 Description: Get all the connectors Universal Connector can support. Includes a list of event pipelines (input--filter pairs), along with the supported data source types and platforms.
 [**universalConnectorManagerListConnectionsSummary**](UniversalConnectorManagerApi.md#universalConnectorManagerListConnectionsSummary) | **GET** /api/v3/universal_connections | Summary: List connections summary
@@ -20,7 +20,7 @@ Description: Upload a plugin-package for Universal Connector.
 ## universalConnectorManagerGetCertificate
 
 Summary: Get certificate
-Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium Insights.
+Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium.
 
 ### Example
 
