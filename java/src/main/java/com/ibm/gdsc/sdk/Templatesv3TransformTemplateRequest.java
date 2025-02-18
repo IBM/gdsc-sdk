@@ -1,6 +1,6 @@
 /*
  * IBM Guardium Data Security Center
- * IBM Guardium Data Security Center simplifies your organization's Data Security architecture and enables access to long-term data security and compliance data. It provides security teams with risk-based views and alerts, as well as advanced analytics based on proprietary ML technology to uncover hidden threats. IBM Guardium Data Security Center gives security professionals the ability to quickly create data security and audit reports, monitor activity in on-prem and DBaaS sources, and take action from a central location.
+ * Use Guardium Data Security Center SDK (application programming interfaces) to interact with other applications, such as Guardium Data Protection, universal connectors, and Guardium Data Security Center reports.
  *
  * The version of the OpenAPI document: 3
  * 
@@ -54,7 +54,7 @@ import com.ibm.gdsc.JSON;
 /**
  * Transforms a template into a fully resolved version with data substitution.  The template is defined by the specified  template id or is dynamically located base on the supplied Integration, Origin and MIMEType.  The data supplied  must match the substitution fields associated with the evaluated template.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-15T03:58:58.617687Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
 public class Templatesv3TransformTemplateRequest {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)

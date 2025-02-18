@@ -64,6 +64,7 @@ Then manually install the following JARs:
 * `target/lib/*.jar`
 
 ## Getting Started
+  IBM Guardium Data Secruity center must be running. You need to get a API key or userID and password from there.
 
 Please follow the [installation](#installation) instruction and execute the following Java code:
 
