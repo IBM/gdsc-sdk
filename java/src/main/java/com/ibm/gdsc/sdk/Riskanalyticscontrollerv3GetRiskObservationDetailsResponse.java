@@ -50,7 +50,7 @@ import com.ibm.gdsc.JSON;
 /**
  * GetRiskObservationDetailsResponse is the response object for GetRiskObservationDetails API.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Riskanalyticscontrollerv3GetRiskObservationDetailsResponse {
   public static final String SERIALIZED_NAME_RISK_OBSERVATION_DETAILS = "riskObservationDetails";
   @SerializedName(SERIALIZED_NAME_RISK_OBSERVATION_DETAILS)

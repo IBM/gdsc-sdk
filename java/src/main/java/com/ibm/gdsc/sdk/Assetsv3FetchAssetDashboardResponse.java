@@ -59,7 +59,7 @@ import com.ibm.gdsc.JSON;
 /**
  * Assetsv3FetchAssetDashboardResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Assetsv3FetchAssetDashboardResponse {
   public static final String SERIALIZED_NAME_ASSETS_WITH_OPEN_VULNERABILITIES = "assets_with_open_vulnerabilities";
   @SerializedName(SERIALIZED_NAME_ASSETS_WITH_OPEN_VULNERABILITIES)

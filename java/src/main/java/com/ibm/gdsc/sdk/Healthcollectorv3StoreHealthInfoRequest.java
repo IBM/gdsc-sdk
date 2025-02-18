@@ -52,7 +52,7 @@ import com.ibm.gdsc.JSON;
 /**
  * Request from Gdp containing health info.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Healthcollectorv3StoreHealthInfoRequest {
   public static final String SERIALIZED_NAME_CENTRAL_MANAGER_ID = "central_manager_id";
   @SerializedName(SERIALIZED_NAME_CENTRAL_MANAGER_ID)

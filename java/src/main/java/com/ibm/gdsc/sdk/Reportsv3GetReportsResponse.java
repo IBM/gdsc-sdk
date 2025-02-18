@@ -53,7 +53,7 @@ import com.ibm.gdsc.JSON;
 /**
  * GetReportsResponse is the return type which encapsulates a list of reports from the GetReports() api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Reportsv3GetReportsResponse {
   public static final String SERIALIZED_NAME_IN_REPORT_CHILDREN_LIST = "in_report_children_list";
   @SerializedName(SERIALIZED_NAME_IN_REPORT_CHILDREN_LIST)

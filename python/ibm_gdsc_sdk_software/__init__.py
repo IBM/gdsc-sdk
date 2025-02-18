@@ -14,7 +14,7 @@
 """  # noqa: E501
 
 
-__version__ = "3.6.0"
+__version__ = "3.6.1"
 
 # import apis into sdk package
 from ibm_gdsc_sdk_software.api.analytics_events_service_api import AnalyticsEventsServiceApi

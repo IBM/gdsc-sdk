@@ -52,7 +52,7 @@ import com.ibm.gdsc.JSON;
 /**
  * GetReportsForJoinResponse - Returns a small amount of information for each report used by a join. Includes the join-imported headers used by the report. Warning: use sparingly as this function requires fetching every report in a category and traversing their trees - it can be slow.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Reportsv3GetReportsForJoinResponse {
   public static final String SERIALIZED_NAME_REPORTS_USED_IN_JOIN = "reports_used_in_join";
   @SerializedName(SERIALIZED_NAME_REPORTS_USED_IN_JOIN)

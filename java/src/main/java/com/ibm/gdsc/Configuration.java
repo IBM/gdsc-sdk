@@ -13,9 +13,9 @@
 
 package com.ibm.gdsc;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Configuration {
-    public static final String VERSION = "3.6.0";
+    public static final String VERSION = "3.6.1";
 
     private static ApiClient defaultApiClient = new ApiClient();
 

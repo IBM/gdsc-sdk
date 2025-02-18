@@ -52,7 +52,7 @@ import com.ibm.gdsc.JSON;
 /**
  * Dashboardsv3ReportGlobalFilter
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Dashboardsv3ReportGlobalFilter {
   public static final String SERIALIZED_NAME_CASE_INSENSITIVE = "case_insensitive";
   @SerializedName(SERIALIZED_NAME_CASE_INSENSITIVE)

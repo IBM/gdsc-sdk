@@ -50,7 +50,7 @@ import com.ibm.gdsc.JSON;
 /**
  * DataResourcesSummaryResourceTypesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class DataResourcesSummaryResourceTypesInner {
   public static final String SERIALIZED_NAME_RESOURCE_TYPE = "resourceType";
   @SerializedName(SERIALIZED_NAME_RESOURCE_TYPE)

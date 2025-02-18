@@ -49,7 +49,7 @@ import com.ibm.gdsc.JSON;
 /**
  * Details if inspection engine are present at start and end.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Healthcollectorv3InspectionEnginePresentDetails {
   public static final String SERIALIZED_NAME_INSPECTION_ENGINE = "inspection_engine";
   @SerializedName(SERIALIZED_NAME_INSPECTION_ENGINE)

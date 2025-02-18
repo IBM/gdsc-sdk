@@ -51,7 +51,7 @@ import com.ibm.gdsc.JSON;
 /**
  * AssetControl - Asset Overview - Control Health widget data.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Assetsv3AssetControl {
   public static final String SERIALIZED_NAME_ENCRYPTION = "encryption";
   @SerializedName(SERIALIZED_NAME_ENCRYPTION)

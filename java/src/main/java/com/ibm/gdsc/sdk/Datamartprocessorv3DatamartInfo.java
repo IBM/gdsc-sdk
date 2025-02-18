@@ -53,7 +53,7 @@ import com.ibm.gdsc.JSON;
 /**
  * DatamartInfo is the object containing all info of a datamart.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Datamartprocessorv3DatamartInfo {
   public static final String SERIALIZED_NAME_CURRENT_TS = "current_ts";
   @SerializedName(SERIALIZED_NAME_CURRENT_TS)

@@ -51,7 +51,7 @@ import com.ibm.gdsc.JSON;
 /**
  * Request object containing a list of rule ids.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Policybuilderv3GetPolicyNamesFromRuleIDsRequest {
   public static final String SERIALIZED_NAME_RULE_IDS_LIST = "rule_ids_list";
   @SerializedName(SERIALIZED_NAME_RULE_IDS_LIST)

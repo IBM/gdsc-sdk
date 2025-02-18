@@ -49,7 +49,7 @@ import com.ibm.gdsc.JSON;
 /**
  * Connectionsv3PluginRecord
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Connectionsv3PluginRecord {
   public static final String SERIALIZED_NAME_GUARD_RECORD_NAME = "guard_record_name";
   @SerializedName(SERIALIZED_NAME_GUARD_RECORD_NAME)

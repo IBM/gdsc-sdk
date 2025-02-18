@@ -49,7 +49,7 @@ import com.ibm.gdsc.JSON;
 /**
  * Describes how many data sources are incoming for outlier analytics compared to the overall data sources seen in GI.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Outliersenginev3DatasourcesCoverageStats {
   public static final String SERIALIZED_NAME_DATASOURCES_COVERAGE = "datasources_coverage";
   @SerializedName(SERIALIZED_NAME_DATASOURCES_COVERAGE)

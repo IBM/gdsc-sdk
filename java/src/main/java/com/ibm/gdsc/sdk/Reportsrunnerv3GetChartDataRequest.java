@@ -55,7 +55,7 @@ import com.ibm.gdsc.JSON;
 /**
  * GetChartDataRequest is the argument of GetChartData API.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Reportsrunnerv3GetChartDataRequest {
   public static final String SERIALIZED_NAME_CHART_ID = "chart_id";
   @SerializedName(SERIALIZED_NAME_CHART_ID)

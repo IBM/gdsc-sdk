@@ -1,8 +1,8 @@
-package com.ibm.guardiumsdk.java.example.user;
+package com.ibm.gdsc.sdk.example.user;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
-import org.openapitools.client.ApiException;
+import com.ibm.gdsc.sdk.client.ApiException;
 
 public class TenantuserGetRolesTest {
     @Test

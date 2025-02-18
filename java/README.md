@@ -30,7 +30,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ibm.gdsc.sdk</groupId>
   <artifactId>com.ibm.gdsc.sdk.software</artifactId>
-  <version>3.6.0</version>
+  <version>3.6.1</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -46,7 +46,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.ibm.gdsc.sdk:com.ibm.gdsc.sdk.software:3.6.0"
+     implementation "com.ibm.gdsc.sdk:com.ibm.gdsc.sdk.software:3.6.1"
   }
 ```
 
@@ -60,7 +60,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/com.ibm.gdsc.sdk.software-3.6.0.jar`
+* `target/com.ibm.gdsc.sdk.software-3.6.1.jar`
 * `target/lib/*.jar`
 
 ## Getting Started

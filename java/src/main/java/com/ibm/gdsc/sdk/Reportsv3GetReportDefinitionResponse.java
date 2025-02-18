@@ -51,7 +51,7 @@ import com.ibm.gdsc.JSON;
 /**
  * GetReportDefinitionResponse is the return type which encapsulates a report definition from the GetReportDefinition() api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Reportsv3GetReportDefinitionResponse {
   public static final String SERIALIZED_NAME_CHART_SETTINGS = "chart_settings";
   @SerializedName(SERIALIZED_NAME_CHART_SETTINGS)

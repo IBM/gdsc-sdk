@@ -51,7 +51,7 @@ import com.ibm.gdsc.JSON;
 /**
  * Tenantuserv3TenantCapabilityPartNumbers
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Tenantuserv3TenantCapabilityPartNumbers {
   public static final String SERIALIZED_NAME_ADDED_PART_NUMBERS = "added_part_numbers";
   @SerializedName(SERIALIZED_NAME_ADDED_PART_NUMBERS)

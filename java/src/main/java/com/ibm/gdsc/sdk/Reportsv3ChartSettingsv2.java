@@ -52,7 +52,7 @@ import com.ibm.gdsc.JSON;
 /**
  * ChartSettingsv2 encapsulates all data necessary for a VEGA chart object.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Reportsv3ChartSettingsv2 {
   public static final String SERIALIZED_NAME_CATEGORY_SEQUENCE_NUMBERS = "category_sequence_numbers";
   @SerializedName(SERIALIZED_NAME_CATEGORY_SEQUENCE_NUMBERS)

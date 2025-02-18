@@ -52,7 +52,7 @@ import com.ibm.gdsc.JSON;
 /**
  * GetCategoriesResponse is the return type which encapsulates a list of categories from the GetCategories() api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Reportsv3GetCategoriesResponse {
   public static final String SERIALIZED_NAME_CATEGORY_LIST = "category_list";
   @SerializedName(SERIALIZED_NAME_CATEGORY_LIST)

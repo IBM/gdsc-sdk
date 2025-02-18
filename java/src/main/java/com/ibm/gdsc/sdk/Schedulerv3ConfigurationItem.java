@@ -49,7 +49,7 @@ import com.ibm.gdsc.JSON;
 /**
  * Schedulerv3ConfigurationItem
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Schedulerv3ConfigurationItem {
   public static final String SERIALIZED_NAME_DISPLAY = "display";
   @SerializedName(SERIALIZED_NAME_DISPLAY)
