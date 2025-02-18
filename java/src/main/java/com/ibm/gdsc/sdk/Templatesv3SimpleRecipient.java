@@ -50,7 +50,7 @@ import com.ibm.gdsc.JSON;
 /**
  * SimpleRecipient is specified for integrations that require a default contact when one is not explicitly defined.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Templatesv3SimpleRecipient {
   public static final String SERIALIZED_NAME_RECIPIENT_TYPE = "recipient_type";
   @SerializedName(SERIALIZED_NAME_RECIPIENT_TYPE)

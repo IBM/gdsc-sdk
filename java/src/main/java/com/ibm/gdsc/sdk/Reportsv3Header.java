@@ -52,7 +52,7 @@ import com.ibm.gdsc.JSON;
 /**
  * Reportsv3Header
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Reportsv3Header {
   public static final String SERIALIZED_NAME_CAN_BE_USED_IN_CHART = "can_be_used_in_chart";
   @SerializedName(SERIALIZED_NAME_CAN_BE_USED_IN_CHART)

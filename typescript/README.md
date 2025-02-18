@@ -4,7 +4,7 @@ This SDK provides convenient access to the IBM Guardium Data Security Center API
 
 It is generated from the OpenAPI specification with OpenAPI code generator.
 
-To learn how to use the SDK, check out our [Examples](https://github.com/IBM/gdsc-sdk/tree/release-v3.6.0/sdk-example/typescript/src).
+To learn how to use the SDK, check out our [Examples](https://github.com/IBM/gdsc-sdk/tree/release-v3.6.1/sdk-example/typescript/src).
 
 ## Requirements
 
@@ -22,7 +22,7 @@ npm install @ibm-gdsc/ibm-gdsc-sdk-software
 
 ### Usage
 
-The full API of this library can be found in [sdk.md file](https://github.com/IBM/gdsc-sdk/blob/release-v3.6.0/typescript/sdk.md) along with many code [examples](https://github.com/IBM/gdsc-sdk/tree/REPLACE_VERSION_NUMBER/sdk-example/typescript/src). The code below shows how to get started using the JumboxServiceGetUsers.
+The full API of this library can be found in [sdk.md file](https://github.com/IBM/gdsc-sdk/blob/release-v3.6.1/typescript/sdk.md) along with many code [examples](https://github.com/IBM/gdsc-sdk/tree/REPLACE_VERSION_NUMBER/sdk-example/typescript/src). The code below shows how to get started using the JumboxServiceGetUsers.
 
 ```
 import { AuthMethodsConfiguration, ServerConfiguration, Middleware, RequestContext, ResponseContext, createConfiguration, JumpboxServiceApi} from '@ibm-gdsc/ibm-gdsc-sdk-software';

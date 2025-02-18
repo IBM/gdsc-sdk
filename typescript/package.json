@@ -1,9 +1,9 @@
 {
   "name":"@ibm-gdsc/ibm-gdsc-sdk-software",
-  "version": "3.6.0",
+  "version": "3.6.1",
   "description": "IBM Guardium Data Security Center SDK",
   "author": "IBM Guardium Data Security Center SDK Contributors",
-"homepage": "https://github.com/IBM/gdsc-sdk/tree/release-v3.6.0",
+"homepage": "https://github.com/IBM/gdsc-sdk/tree/release-v3.6.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/IBM/gdsc-sdk.git"

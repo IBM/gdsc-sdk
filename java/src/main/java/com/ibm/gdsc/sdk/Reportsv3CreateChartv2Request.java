@@ -50,7 +50,7 @@ import com.ibm.gdsc.JSON;
 /**
  * CreateChartv2Request is the argument for the CreateChartv2() api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Reportsv3CreateChartv2Request {
   public static final String SERIALIZED_NAME_CHART_SETTINGS_V2 = "chart_settings_v2";
   @SerializedName(SERIALIZED_NAME_CHART_SETTINGS_V2)

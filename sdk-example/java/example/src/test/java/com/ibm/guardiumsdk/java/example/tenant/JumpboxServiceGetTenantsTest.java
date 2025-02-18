@@ -1,8 +1,8 @@
-package com.ibm.guardiumsdk.java.example.tenant;
+package com.ibm.gdsc.sdk.example.tenant;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Disabled;
-import org.openapitools.client.ApiException;
+import com.ibm.gdsc.sdk.client.ApiException;
 
 public class JumpboxServiceGetTenantsTest {
     @Disabled

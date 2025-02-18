@@ -49,7 +49,7 @@ import com.ibm.gdsc.JSON;
 /**
  * UpdateLeadGeneratorConfigResponse is the response object for UpdateLeadGeneratorConfig API.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Riskanalyticsenginev3UpdateLeadGeneratorConfigResponse {
   public static final String SERIALIZED_NAME_RESULT_CODE = "result_code";
   @SerializedName(SERIALIZED_NAME_RESULT_CODE)

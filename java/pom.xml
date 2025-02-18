@@ -5,7 +5,7 @@
     <artifactId>com.ibm.gdsc.sdk.software</artifactId>
     <packaging>jar</packaging>
     <name>com.ibm.gdsc.sdk.software</name>
-    <version>3.6.0</version>
+    <version>3.6.1</version>
     <url>https://github.com/openapitools/openapi-generator</url>
     <description>OpenAPI Java</description>
     <scm>

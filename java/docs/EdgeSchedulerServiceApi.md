@@ -18,12 +18,12 @@ Summary: Get edge query status Description: Get the status of a queued edge quer
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.EdgeSchedulerServiceApi;
+import com.ibm.gdsc.sdk.ApiClient;
+import com.ibm.gdsc.sdk.ApiException;
+import com.ibm.gdsc.sdk.Configuration;
+import com.ibm.gdsc.sdk.auth.*;
+import com.ibm.gdsc.sdk.models.*;
+import com.ibm.gdsc.sdk.api.EdgeSchedulerServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -93,12 +93,12 @@ Summary: Create workspace Description: monitor edge query pending request
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.EdgeSchedulerServiceApi;
+import com.ibm.gdsc.sdk.ApiClient;
+import com.ibm.gdsc.sdk.ApiException;
+import com.ibm.gdsc.sdk.Configuration;
+import com.ibm.gdsc.sdk.auth.*;
+import com.ibm.gdsc.sdk.models.*;
+import com.ibm.gdsc.sdk.api.EdgeSchedulerServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -166,12 +166,12 @@ Summary: Schedule an edge query  Description: Schedule an edge query via db2 que
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.EdgeSchedulerServiceApi;
+import com.ibm.gdsc.sdk.ApiClient;
+import com.ibm.gdsc.sdk.ApiException;
+import com.ibm.gdsc.sdk.Configuration;
+import com.ibm.gdsc.sdk.auth.*;
+import com.ibm.gdsc.sdk.models.*;
+import com.ibm.gdsc.sdk.api.EdgeSchedulerServiceApi;
 
 public class Example {
   public static void main(String[] args) {

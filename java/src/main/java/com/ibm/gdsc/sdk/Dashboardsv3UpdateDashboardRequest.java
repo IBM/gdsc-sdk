@@ -51,7 +51,7 @@ import com.ibm.gdsc.JSON;
 /**
  * UpdateDashboardRequest is the argument type used to update a dashboard with the UpdateDashboard() api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Dashboardsv3UpdateDashboardRequest {
   public static final String SERIALIZED_NAME_DASHBOARD = "dashboard";
   @SerializedName(SERIALIZED_NAME_DASHBOARD)

@@ -50,7 +50,7 @@ import com.ibm.gdsc.JSON;
 /**
  * Connectionsv3GetBannerStateResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Connectionsv3GetBannerStateResponse {
   public static final String SERIALIZED_NAME_HIDE_OBJECT_VERB_BANNER = "hide_object_verb_banner";
   @SerializedName(SERIALIZED_NAME_HIDE_OBJECT_VERB_BANNER)

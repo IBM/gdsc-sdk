@@ -10,9 +10,9 @@ Python 3.7+
 If the python package is hosted on a repository, you can install directly using:
 
 ```sh
-pip install ibm-gdsc-sdk-software==3.6.0
+pip install ibm-gdsc-sdk-software==3.6.1
 ```
-(you may need to run `pip` with root permission: `sudo pip install ibm-gdsc-sdk-software==3.6.0`)
+(you may need to run `pip` with root permission: `sudo pip install ibm-gdsc-sdk-software==3.6.1`)
 
 Then import the package:
 ```python
@@ -1838,5 +1838,6 @@ Authentication schemes defined for the API:
 
 
 
+</details>
 </details>
 </details>

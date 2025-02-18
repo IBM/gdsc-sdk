@@ -52,7 +52,7 @@ import com.ibm.gdsc.JSON;
 /**
  * GenerateFeaturesForRisksGroupResponse is the response object for GenerateFeaturesForGroup API.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Riskanalyticsenginev3GenerateFeaturesForRisksGroupResponse {
   public static final String SERIALIZED_NAME_RISKS = "risks";
   @SerializedName(SERIALIZED_NAME_RISKS)

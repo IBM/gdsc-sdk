@@ -50,7 +50,7 @@ import com.ibm.gdsc.JSON;
 /**
  * Riskanalyticscontrollerv3FindingDetailsMap
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Riskanalyticscontrollerv3FindingDetailsMap {
   public static final String SERIALIZED_NAME_FINDING_DETAILS = "finding_details";
   @SerializedName(SERIALIZED_NAME_FINDING_DETAILS)

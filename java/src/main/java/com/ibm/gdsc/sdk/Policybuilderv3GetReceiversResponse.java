@@ -53,7 +53,7 @@ import com.ibm.gdsc.JSON;
 /**
  * Response message that gives back the reciever information.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Policybuilderv3GetReceiversResponse {
   public static final String SERIALIZED_NAME_ACTION_NOTIFICATION_OBJECT = "action_notification_object";
   @SerializedName(SERIALIZED_NAME_ACTION_NOTIFICATION_OBJECT)

@@ -23,7 +23,7 @@ from setuptools import setup, find_packages  # noqa: H301
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 NAME = "ibm-gdsc-sdk-software"
-VERSION = "3.6.0"
+VERSION = "3.6.1"
 PYTHON_REQUIRES = ">=3.7"
 REQUIRES = [
     "urllib3 >= 1.25.3, < 2.1.0",
@@ -47,7 +47,7 @@ setup(
     author="IBM GDSC Team",
     author_email="c3cvp8ch@ca.ibm.com",
     url="",
-    keywords=["OpenAPI", "OpenAPI-Generator", "IBM Guardium Data Security Center"],
+    keywords=["OpenAPI", "IBM Guardium Data Security Center"],
     install_requires=REQUIRES,
     packages=find_packages(exclude=["test", "tests"]),
     include_package_data=True,

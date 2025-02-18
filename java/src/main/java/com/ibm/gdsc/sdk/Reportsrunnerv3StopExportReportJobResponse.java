@@ -50,7 +50,7 @@ import com.ibm.gdsc.JSON;
 /**
  * StopExportReportJobResponse is the return type of StopExportReportJob API.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Reportsrunnerv3StopExportReportJobResponse {
   public static final String SERIALIZED_NAME_EXPORT_FILE_NAME = "export_file_name";
   @SerializedName(SERIALIZED_NAME_EXPORT_FILE_NAME)

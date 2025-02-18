@@ -50,7 +50,7 @@ import com.ibm.gdsc.JSON;
 /**
  * UpdateJoinRequest is the argument type used to update a custom join.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Reportsv3UpdateJoinRequest {
   public static final String SERIALIZED_NAME_JOIN_DEF = "join_def";
   @SerializedName(SERIALIZED_NAME_JOIN_DEF)

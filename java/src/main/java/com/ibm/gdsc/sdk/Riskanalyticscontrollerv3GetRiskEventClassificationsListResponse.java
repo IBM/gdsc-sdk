@@ -52,7 +52,7 @@ import com.ibm.gdsc.JSON;
 /**
  * GetRiskEventClassificationsListResponse message for the GetRiskEventClassificationsList API.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse {
   public static final String SERIALIZED_NAME_CLASSIFICATION_MATCH_DETAILS = "classification_match_details";
   @SerializedName(SERIALIZED_NAME_CLASSIFICATION_MATCH_DETAILS)

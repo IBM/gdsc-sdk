@@ -54,7 +54,7 @@ import com.ibm.gdsc.JSON;
 /**
  * StatisticsResponse is the message for the result from getStatistics.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T18:23:51.166908Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-18T20:02:04.461512Z[UTC]", comments = "Generator version: 7.6.0")
 public class Outliersenginev3StatisticsResponse {
   public static final String SERIALIZED_NAME_ANALYSIS_STATISTICS = "analysis_statistics";
   @SerializedName(SERIALIZED_NAME_ANALYSIS_STATISTICS)
