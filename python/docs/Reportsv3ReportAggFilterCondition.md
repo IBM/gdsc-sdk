@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.reportsv3_report_agg_filter_condition import Reportsv3ReportAggFilterCondition
+from ibm_gdsc_sdk_saas.models.reportsv3_report_agg_filter_condition import Reportsv3ReportAggFilterCondition
 
 # TODO update the JSON string below
 json = "{}"

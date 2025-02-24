@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.tenantuserv3_get_api_keys_response import Tenantuserv3GetApiKeysResponse
+from ibm_gdsc_sdk_saas.models.tenantuserv3_get_api_keys_response import Tenantuserv3GetApiKeysResponse
 
 # TODO update the JSON string below
 json = "{}"

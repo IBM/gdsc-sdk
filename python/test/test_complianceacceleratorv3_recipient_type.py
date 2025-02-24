@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.complianceacceleratorv3_recipient_type import Complianceacceleratorv3RecipientType
+from ibm_gdsc_sdk_saas.models.complianceacceleratorv3_recipient_type import Complianceacceleratorv3RecipientType
 
 class TestComplianceacceleratorv3RecipientType(unittest.TestCase):
     """Complianceacceleratorv3RecipientType unit test stubs"""

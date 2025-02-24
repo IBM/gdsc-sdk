@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.qs_policy_manager_api import QSPolicyManagerApi
+from ibm_gdsc_sdk_saas.api.qs_policy_manager_api import QSPolicyManagerApi
 
 
 class TestQSPolicyManagerApi(unittest.TestCase):
@@ -30,6 +30,13 @@ class TestQSPolicyManagerApi(unittest.TestCase):
         """Test case for q_s_policy_manager_batch_status_update
 
         BatchStatusUpdate - trigger the batch to update the status of the Ticket .
+        """
+        pass
+
+    def test_q_s_policy_manager_config_update(self) -> None:
+        """Test case for q_s_policy_manager_config_update
+
+        ConfigUpdate - this function update Crypto Risk Factor Weight in Db2 as well as Mongodb.
         """
         pass
 

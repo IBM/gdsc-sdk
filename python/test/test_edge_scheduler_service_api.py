@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.edge_scheduler_service_api import EdgeSchedulerServiceApi
+from ibm_gdsc_sdk_saas.api.edge_scheduler_service_api import EdgeSchedulerServiceApi
 
 
 class TestEdgeSchedulerServiceApi(unittest.TestCase):
@@ -36,14 +36,14 @@ class TestEdgeSchedulerServiceApi(unittest.TestCase):
     def test_edge_scheduler_service_monitoring_pending_request_for_edge_query(self) -> None:
         """Test case for edge_scheduler_service_monitoring_pending_request_for_edge_query
 
-        Summary: Create workspace Description: monitor edge query pending request
+        Summary: Monitor for a pending edge query request Description: monitor edge query pending request
         """
         pass
 
     def test_edge_scheduler_service_schedule_edge_query(self) -> None:
         """Test case for edge_scheduler_service_schedule_edge_query
 
-        Summary: Schedule an edge query  Description: Schedule an edge query via db2 queue
+        Summary: Schedule an edge query  Description: Schedule an edge query via data warehouse queue
         """
         pass
 

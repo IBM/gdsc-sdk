@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_internal_create_connection_config_response import Connectionsv3InternalCreateConnectionConfigResponse
+from ibm_gdsc_sdk_saas.models.connectionsv3_internal_create_connection_config_response import Connectionsv3InternalCreateConnectionConfigResponse
 
 class TestConnectionsv3InternalCreateConnectionConfigResponse(unittest.TestCase):
     """Connectionsv3InternalCreateConnectionConfigResponse unit test stubs"""

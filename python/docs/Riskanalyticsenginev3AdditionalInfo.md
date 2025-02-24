@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.riskanalyticsenginev3_additional_info import Riskanalyticsenginev3AdditionalInfo
+from ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_additional_info import Riskanalyticsenginev3AdditionalInfo
 
 # TODO update the JSON string below
 json = "{}"

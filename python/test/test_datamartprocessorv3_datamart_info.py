@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.datamartprocessorv3_datamart_info import Datamartprocessorv3DatamartInfo
+from ibm_gdsc_sdk_saas.models.datamartprocessorv3_datamart_info import Datamartprocessorv3DatamartInfo
 
 class TestDatamartprocessorv3DatamartInfo(unittest.TestCase):
     """Datamartprocessorv3DatamartInfo unit test stubs"""
@@ -42,7 +42,7 @@ class TestDatamartprocessorv3DatamartInfo(unittest.TestCase):
                 export_status = 56,
                 failure_file_count = 56,
                 files = [
-                    ibm_gdsc_sdk_software.models.datamartprocessorv3_datamart_file_info.datamartprocessorv3DatamartFileInfo(
+                    ibm_gdsc_sdk_saas.models.datamartprocessorv3_datamart_file_info.datamartprocessorv3DatamartFileInfo(
                         error = '', 
                         failed_state = True, 
                         file_name = '', 

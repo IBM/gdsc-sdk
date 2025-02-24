@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.auditv3_filter import Auditv3Filter
+from ibm_gdsc_sdk_saas.models.auditv3_filter import Auditv3Filter
 
 class TestAuditv3Filter(unittest.TestCase):
     """Auditv3Filter unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_get_integration_check_response import Policybuilderv3GetIntegrationCheckResponse
+from ibm_gdsc_sdk_saas.models.policybuilderv3_get_integration_check_response import Policybuilderv3GetIntegrationCheckResponse
 
 class TestPolicybuilderv3GetIntegrationCheckResponse(unittest.TestCase):
     """Policybuilderv3GetIntegrationCheckResponse unit test stubs"""
@@ -38,7 +38,7 @@ class TestPolicybuilderv3GetIntegrationCheckResponse(unittest.TestCase):
                 policy_names = [
                     ''
                     ],
-                status = ibm_gdsc_sdk_software.models.policybuilderv3_status_response_base.policybuilderv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.policybuilderv3_status_response_base.policybuilderv3StatusResponseBase(
                     message = '', 
                     status = '', )
             )

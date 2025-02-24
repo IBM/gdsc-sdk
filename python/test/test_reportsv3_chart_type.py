@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_chart_type import Reportsv3ChartType
+from ibm_gdsc_sdk_saas.models.reportsv3_chart_type import Reportsv3ChartType
 
 class TestReportsv3ChartType(unittest.TestCase):
     """Reportsv3ChartType unit test stubs"""

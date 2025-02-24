@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.tenantuserv3_update_role_request import Tenantuserv3UpdateRoleRequest
+from ibm_gdsc_sdk_saas.models.tenantuserv3_update_role_request import Tenantuserv3UpdateRoleRequest
 
 class TestTenantuserv3UpdateRoleRequest(unittest.TestCase):
     """Tenantuserv3UpdateRoleRequest unit test stubs"""

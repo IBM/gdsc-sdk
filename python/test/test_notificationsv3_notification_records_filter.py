@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.notificationsv3_notification_records_filter import Notificationsv3NotificationRecordsFilter
+from ibm_gdsc_sdk_saas.models.notificationsv3_notification_records_filter import Notificationsv3NotificationRecordsFilter
 
 class TestNotificationsv3NotificationRecordsFilter(unittest.TestCase):
     """Notificationsv3NotificationRecordsFilter unit test stubs"""
@@ -36,6 +36,7 @@ class TestNotificationsv3NotificationRecordsFilter(unittest.TestCase):
         if include_optional:
             return Notificationsv3NotificationRecordsFilter(
                 end_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
+                limit = 56,
                 origin_data = '',
                 origins = [
                     ''

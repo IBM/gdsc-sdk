@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.classification_status import ClassificationStatus
+from ibm_gdsc_sdk_saas.models.classification_status import ClassificationStatus
 
 class TestClassificationStatus(unittest.TestCase):
     """ClassificationStatus unit test stubs"""

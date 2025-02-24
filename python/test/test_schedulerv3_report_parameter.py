@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.schedulerv3_report_parameter import Schedulerv3ReportParameter
+from ibm_gdsc_sdk_saas.models.schedulerv3_report_parameter import Schedulerv3ReportParameter
 
 class TestSchedulerv3ReportParameter(unittest.TestCase):
     """Schedulerv3ReportParameter unit test stubs"""
@@ -39,7 +39,7 @@ class TestSchedulerv3ReportParameter(unittest.TestCase):
                 report_id = '',
                 report_name = '',
                 runtime_parameters = [
-                    ibm_gdsc_sdk_software.models.reportsv3_run_time_parameter.reportsv3RunTimeParameter(
+                    ibm_gdsc_sdk_saas.models.reportsv3_run_time_parameter.reportsv3RunTimeParameter(
                         key = '', 
                         label = '', 
                         operator_type = 'UNDEFINED_OPERATOR_TYPE', 
@@ -47,7 +47,8 @@ class TestSchedulerv3ReportParameter(unittest.TestCase):
                         runtime_parameter_type_length = 56, 
                         value = '', )
                     ],
-                sync_execution_date = True
+                sync_execution_date = True,
+                threshold = 56
             )
         else:
             return Schedulerv3ReportParameter(

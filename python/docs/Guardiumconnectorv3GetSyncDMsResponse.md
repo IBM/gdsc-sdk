@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_get_sync_dms_response import Guardiumconnectorv3GetSyncDMsResponse
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_get_sync_dms_response import Guardiumconnectorv3GetSyncDMsResponse
 
 # TODO update the JSON string below
 json = "{}"

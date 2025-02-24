@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.dashboardsv3_delete_dashboard_request import Dashboardsv3DeleteDashboardRequest
+from ibm_gdsc_sdk_saas.models.dashboardsv3_delete_dashboard_request import Dashboardsv3DeleteDashboardRequest
 
 class TestDashboardsv3DeleteDashboardRequest(unittest.TestCase):
     """Dashboardsv3DeleteDashboardRequest unit test stubs"""

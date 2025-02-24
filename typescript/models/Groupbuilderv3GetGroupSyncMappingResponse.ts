@@ -18,7 +18,7 @@ import { HttpFile } from '../http/http';
 */
 export class Groupbuilderv3GetGroupSyncMappingResponse {
     /**
-    * Map of gdp to gi group type mapping objects.
+    * Map of GDP to gi group type mapping objects.
     */
     'groupMap'?: { [key: string]: number; };
     'status'?: Groupbuilderv3StatusResponseBase;

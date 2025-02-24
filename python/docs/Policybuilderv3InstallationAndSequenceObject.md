@@ -6,6 +6,7 @@ Object indicating Installation and UI Sequence of the policies.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**edge_identifier** | **str** |  | [optional] 
 **installation_sequence** | **int** | Sequence in which the policy is to be installed. | [optional] 
 **policy_id** | **str** | Policy id to perform sequencing on. | [optional] 
 **ui_sequence** | **int** | Sequence of the policy in UI. | [optional] 
@@ -13,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.policybuilderv3_installation_and_sequence_object import Policybuilderv3InstallationAndSequenceObject
+from ibm_gdsc_sdk_saas.models.policybuilderv3_installation_and_sequence_object import Policybuilderv3InstallationAndSequenceObject
 
 # TODO update the JSON string below
 json = "{}"

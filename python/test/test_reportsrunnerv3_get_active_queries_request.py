@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_active_queries_request import Reportsrunnerv3GetActiveQueriesRequest
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_get_active_queries_request import Reportsrunnerv3GetActiveQueriesRequest
 
 class TestReportsrunnerv3GetActiveQueriesRequest(unittest.TestCase):
     """Reportsrunnerv3GetActiveQueriesRequest unit test stubs"""

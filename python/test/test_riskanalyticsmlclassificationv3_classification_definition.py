@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticsmlclassificationv3_classification_definition import Riskanalyticsmlclassificationv3ClassificationDefinition
+from ibm_gdsc_sdk_saas.models.riskanalyticsmlclassificationv3_classification_definition import Riskanalyticsmlclassificationv3ClassificationDefinition
 
 class TestRiskanalyticsmlclassificationv3ClassificationDefinition(unittest.TestCase):
     """Riskanalyticsmlclassificationv3ClassificationDefinition unit test stubs"""

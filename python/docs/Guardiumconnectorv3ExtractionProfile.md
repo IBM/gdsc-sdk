@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_extraction_profile import Guardiumconnectorv3ExtractionProfile
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_extraction_profile import Guardiumconnectorv3ExtractionProfile
 
 # TODO update the JSON string below
 json = "{}"

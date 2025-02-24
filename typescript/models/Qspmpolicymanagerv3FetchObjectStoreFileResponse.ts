@@ -10,32 +10,33 @@
  * Do not edit the class manually.
  */
 
+import { Qspmpolicymanagerv3FileName } from '../models/Qspmpolicymanagerv3FileName';
 import { HttpFile } from '../http/http';
 
 export class Qspmpolicymanagerv3FetchObjectStoreFileResponse {
     'bucketName'?: string;
+    'fileName'?: Qspmpolicymanagerv3FileName;
     'folderName'?: string;
-    'fileName'?: Array<string>;
 
     static readonly discriminator: string | undefined = undefined;
 
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "bucketName",
-            "baseName": "BucketName",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "folderName",
-            "baseName": "FolderName",
+            "baseName": "bucket_name",
             "type": "string",
             "format": ""
         },
         {
             "name": "fileName",
-            "baseName": "fileName",
-            "type": "Array<string>",
+            "baseName": "file_name",
+            "type": "Qspmpolicymanagerv3FileName",
+            "format": ""
+        },
+        {
+            "name": "folderName",
+            "baseName": "folder_name",
+            "type": "string",
             "format": ""
         }    ];
 

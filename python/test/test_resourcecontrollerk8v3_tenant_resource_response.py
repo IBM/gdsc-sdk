@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_tenant_resource_response import Resourcecontrollerk8v3TenantResourceResponse
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_tenant_resource_response import Resourcecontrollerk8v3TenantResourceResponse
 
 class TestResourcecontrollerk8v3TenantResourceResponse(unittest.TestCase):
     """Resourcecontrollerk8v3TenantResourceResponse unit test stubs"""
@@ -36,14 +36,14 @@ class TestResourcecontrollerk8v3TenantResourceResponse(unittest.TestCase):
         if include_optional:
             return Resourcecontrollerk8v3TenantResourceResponse(
                 message = '',
-                status = ibm_gdsc_sdk_software.models.the_`status`_type_defines_a_logical_error_model_that_is_suitable_for_different
+                status = ibm_gdsc_sdk_saas.models.the_`status`_type_defines_a_logical_error_model_that_is_suitable_for_different
 programming_environments,_including_rest_apis_and_rpc_apis/_it_is_used_by
 [g_rpc](https://github/com/grpc)/_the_error_model_is_designed_to_be:.The `Status` type defines a logical error model that is suitable for different
 programming environments, including REST APIs and RPC APIs. It is used by
 [gRPC](https://github.com/grpc). The error model is designed to be:(
                     code = 56, 
                     details = [
-                        ibm_gdsc_sdk_software.models.protobuf_any.protobufAny(
+                        ibm_gdsc_sdk_saas.models.protobuf_any.protobufAny(
                             type_url = '', 
                             value = 'YQ==', )
                         ], 

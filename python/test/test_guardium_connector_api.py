@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.guardium_connector_api import GuardiumConnectorApi
+from ibm_gdsc_sdk_saas.api.guardium_connector_api import GuardiumConnectorApi
 
 
 class TestGuardiumConnectorApi(unittest.TestCase):
@@ -36,7 +36,7 @@ class TestGuardiumConnectorApi(unittest.TestCase):
     def test_guardium_connector_add_datamarts(self) -> None:
         """Test case for guardium_connector_add_datamarts
 
-        Description: stores datamarts details from GDP
+        Description: stores datamarts details from GDP. (This API is called from GDP only)
         """
         pass
 
@@ -50,7 +50,7 @@ class TestGuardiumConnectorApi(unittest.TestCase):
     def test_guardium_connector_add_task(self) -> None:
         """Test case for guardium_connector_add_task
 
-        Summary: Add task Description: Add a task to be executed on GDP.
+        Summary: Add task Description: Add a task to be executed on GDP. (This API is called from GDP only)
         """
         pass
 
@@ -85,7 +85,7 @@ class TestGuardiumConnectorApi(unittest.TestCase):
     def test_guardium_connector_datamart_version_check(self) -> None:
         """Test case for guardium_connector_datamart_version_check
 
-        Description: validates if central manager has datamart support for event model
+        Description: validates if central manager has v5 datamart support. (This API is called from GDP only)
         """
         pass
 
@@ -106,14 +106,14 @@ class TestGuardiumConnectorApi(unittest.TestCase):
     def test_guardium_connector_delete_task(self) -> None:
         """Test case for guardium_connector_delete_task
 
-        Summary: Delete task Description: Delete a task by central manager id and task id.
+        Summary: Delete task Description: Delete a task by central manager id and task id. (This API is called from GDP only)
         """
         pass
 
     def test_guardium_connector_delete_tasks(self) -> None:
         """Test case for guardium_connector_delete_tasks
 
-        Summary: Delete tasks Description: Delete a central manager's tasks by central manager id.
+        Summary: Delete tasks Description: Delete a central manager's tasks by central manager id. (This API is called from GDP only)
         """
         pass
 
@@ -176,14 +176,14 @@ class TestGuardiumConnectorApi(unittest.TestCase):
     def test_guardium_connector_get_health_info(self) -> None:
         """Test case for guardium_connector_get_health_info
 
-        Summary: Get gealth info Description: Get health information from Guardium Data Protection central mamangers.
+        Summary: Get health info Description: Get health information from Guardium Data Protection central mamangers. (This API is for CMs registered in legacy pull mode. Supported on-premises only)
         """
         pass
 
     def test_guardium_connector_get_latest_dm_extraction_profile(self) -> None:
         """Test case for guardium_connector_get_latest_dm_extraction_profile
 
-        Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for Guardium.
+        Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for GDSC.
         """
         pass
 
@@ -197,7 +197,7 @@ class TestGuardiumConnectorApi(unittest.TestCase):
     def test_guardium_connector_get_sync_dms(self) -> None:
         """Test case for guardium_connector_get_sync_dms
 
-        Summary: Get sync DMs Description: Return the list of tasks from a central manager.
+        Summary: Get sync DMs Description: Return the list of tasks from a central manager. (This API is called from GDP only)
         """
         pass
 
@@ -211,21 +211,21 @@ class TestGuardiumConnectorApi(unittest.TestCase):
     def test_guardium_connector_get_tasks(self) -> None:
         """Test case for guardium_connector_get_tasks
 
-        Summary: Get tasks Description: Return the list of tasks from a central manager.
+        Summary: Get tasks Description: Return the list of tasks from a central manager. (This API is called from GDP only)
         """
         pass
 
     def test_guardium_connector_run_gdp_report(self) -> None:
         """Test case for guardium_connector_run_gdp_report
 
-        Summary: Run GDP report Description: Run GDP report.
+        Summary: Run GDP report Description: Run GDP report. (This API is for CMs registered in legacy pull mode. Supported on-premises only)
         """
         pass
 
     def test_guardium_connector_setup_cm(self) -> None:
         """Test case for guardium_connector_setup_cm
 
-        Summary: Setup CM Description: Set up the registration between a GDP Central manager and Guardium.
+        Summary: Setup CM Description: Set up the registration between a GDP Central manager and GDSC. (This API is called from GDP only)
         """
         pass
 
@@ -239,7 +239,7 @@ class TestGuardiumConnectorApi(unittest.TestCase):
     def test_guardium_connector_task_error(self) -> None:
         """Test case for guardium_connector_task_error
 
-        Summary: Task error Description: Log error messages from GDP task execution.
+        Summary: Task error Description: Log error messages from GDP task execution. (This API is called from GDP only)
         """
         pass
 
@@ -260,14 +260,14 @@ class TestGuardiumConnectorApi(unittest.TestCase):
     def test_guardium_connector_update_streaming(self) -> None:
         """Test case for guardium_connector_update_streaming
 
-        Summary: Update streaming Description: Update streaming status into GI.
+        Summary: Update streaming Description: Update streaming status into GI. (This API is called from GDP only)
         """
         pass
 
     def test_guardium_connector_update_task(self) -> None:
         """Test case for guardium_connector_update_task
 
-        Summary: Update task Description: Update a task that gets executed on GDP.
+        Summary: Update task Description: Update a task that gets executed on GDP. (This API is called from GDP only)
         """
         pass
 

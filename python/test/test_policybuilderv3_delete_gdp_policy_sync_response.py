@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_delete_gdp_policy_sync_response import Policybuilderv3DeleteGdpPolicySyncResponse
+from ibm_gdsc_sdk_saas.models.policybuilderv3_delete_gdp_policy_sync_response import Policybuilderv3DeleteGdpPolicySyncResponse
 
 class TestPolicybuilderv3DeleteGdpPolicySyncResponse(unittest.TestCase):
     """Policybuilderv3DeleteGdpPolicySyncResponse unit test stubs"""
@@ -35,7 +35,7 @@ class TestPolicybuilderv3DeleteGdpPolicySyncResponse(unittest.TestCase):
         model = Policybuilderv3DeleteGdpPolicySyncResponse()
         if include_optional:
             return Policybuilderv3DeleteGdpPolicySyncResponse(
-                status = ibm_gdsc_sdk_software.models.policybuilderv3_status_response_base.policybuilderv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.policybuilderv3_status_response_base.policybuilderv3StatusResponseBase(
                     message = '', 
                     status = '', )
             )

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.schedulerv3_get_tags_response import Schedulerv3GetTagsResponse
+from ibm_gdsc_sdk_saas.models.schedulerv3_get_tags_response import Schedulerv3GetTagsResponse
 
 class TestSchedulerv3GetTagsResponse(unittest.TestCase):
     """Schedulerv3GetTagsResponse unit test stubs"""

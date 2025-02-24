@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.list_trustees_filter_parameter import ListTrusteesFilterParameter
+from ibm_gdsc_sdk_saas.models.list_trustees_filter_parameter import ListTrusteesFilterParameter
 
 class TestListTrusteesFilterParameter(unittest.TestCase):
     """ListTrusteesFilterParameter unit test stubs"""

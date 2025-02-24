@@ -14,7 +14,6 @@
 |**scanDesc** | **String** |  |  [optional] |
 |**scanId** | **String** |  |  [optional] |
 |**scanStatus** | **String** |  |  [optional] |
-|**scanType** | **String** |  |  [optional] |
 |**userEmail** | **String** |  |  [optional] |
 
 

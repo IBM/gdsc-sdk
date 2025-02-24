@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_classification_scan_status import Assetsv3ClassificationScanStatus
+from ibm_gdsc_sdk_saas.models.assetsv3_classification_scan_status import Assetsv3ClassificationScanStatus
 
 class TestAssetsv3ClassificationScanStatus(unittest.TestCase):
     """Assetsv3ClassificationScanStatus unit test stubs"""

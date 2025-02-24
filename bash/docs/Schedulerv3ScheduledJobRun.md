@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **queryUnderscorefrom** | **string** | types: QueryFrom | [optional] [default to null]
 **queryUnderscoreto** | **string** | types: QueryTo | [optional] [default to null]
 **queueUnderscoretime** | **string** | types: QueueTime | [optional] [default to null]
+**resultUnderscoresize** | **integer** | if import or report, the number of rows in the result | [optional] [default to null]
 **runUnderscoredetail** | **string** | Reports-runner and Ecosystem detailed status | [optional] [default to null]
 **scheduleUnderscoreid** | **string** | Grand-parent schedule ID | [optional] [default to null]
 **startUnderscoretime** | **string** | types: StartTime | [optional] [default to null]

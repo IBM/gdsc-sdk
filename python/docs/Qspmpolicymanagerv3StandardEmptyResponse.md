@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.qspmpolicymanagerv3_standard_empty_response import Qspmpolicymanagerv3StandardEmptyResponse
+from ibm_gdsc_sdk_saas.models.qspmpolicymanagerv3_standard_empty_response import Qspmpolicymanagerv3StandardEmptyResponse
 
 # TODO update the JSON string below
 json = "{}"

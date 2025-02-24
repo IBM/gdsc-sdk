@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.add_comment_body import AddCommentBody
+from ibm_gdsc_sdk_saas.models.add_comment_body import AddCommentBody
 
 class TestAddCommentBody(unittest.TestCase):
     """AddCommentBody unit test stubs"""

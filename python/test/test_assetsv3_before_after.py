@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_before_after import Assetsv3BeforeAfter
+from ibm_gdsc_sdk_saas.models.assetsv3_before_after import Assetsv3BeforeAfter
 
 class TestAssetsv3BeforeAfter(unittest.TestCase):
     """Assetsv3BeforeAfter unit test stubs"""

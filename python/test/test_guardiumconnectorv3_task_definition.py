@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_task_definition import Guardiumconnectorv3TaskDefinition
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_task_definition import Guardiumconnectorv3TaskDefinition
 
 class TestGuardiumconnectorv3TaskDefinition(unittest.TestCase):
     """Guardiumconnectorv3TaskDefinition unit test stubs"""
@@ -37,7 +37,7 @@ class TestGuardiumconnectorv3TaskDefinition(unittest.TestCase):
             return Guardiumconnectorv3TaskDefinition(
                 task_id = '',
                 task_params = [
-                    ibm_gdsc_sdk_software.models.guardiumconnectorv3_task_params_object.guardiumconnectorv3TaskParamsObject(
+                    ibm_gdsc_sdk_saas.models.guardiumconnectorv3_task_params_object.guardiumconnectorv3TaskParamsObject(
                         arg_name = '', 
                         arg_value = '', )
                     ],

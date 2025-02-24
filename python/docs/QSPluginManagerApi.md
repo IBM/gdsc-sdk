@@ -1,4 +1,4 @@
-# ibm_gdsc_sdk_software.QSPluginManagerApi
+# ibm_gdsc_sdk_saas.QSPluginManagerApi
 
 All URIs are relative to *http://localhost*
 
@@ -22,15 +22,15 @@ Summary: Invoke only application provisioning data plugin Description:Parses app
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_plugin_rq import Qspmpluginmanagerv3PluginRQ
-from ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_plugin_rs import Qspmpluginmanagerv3PluginRS
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.qspmpluginmanagerv3_plugin_rq import Qspmpluginmanagerv3PluginRQ
+from ibm_gdsc_sdk_saas.models.qspmpluginmanagerv3_plugin_rs import Qspmpluginmanagerv3PluginRS
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -40,7 +40,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -52,11 +52,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.QSPluginManagerApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.QSPluginManagerApi(api_client)
     plugin_id = 'plugin_id_example' # str | Unique identifier for the plugin
-    qspmpluginmanagerv3_plugin_rq = ibm_gdsc_sdk_software.Qspmpluginmanagerv3PluginRQ() # Qspmpluginmanagerv3PluginRQ | 
+    qspmpluginmanagerv3_plugin_rq = ibm_gdsc_sdk_saas.Qspmpluginmanagerv3PluginRQ() # Qspmpluginmanagerv3PluginRQ | 
 
     try:
         # Summary: Invoke only application provisioning data plugin Description:Parses app input file and triggers dataload
@@ -110,15 +110,15 @@ Summary: Invoke only explorer inventory data plugin Description:Parses explorer 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_plugin_rq import Qspmpluginmanagerv3PluginRQ
-from ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_plugin_rs import Qspmpluginmanagerv3PluginRS
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.qspmpluginmanagerv3_plugin_rq import Qspmpluginmanagerv3PluginRQ
+from ibm_gdsc_sdk_saas.models.qspmpluginmanagerv3_plugin_rs import Qspmpluginmanagerv3PluginRS
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -128,7 +128,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -140,11 +140,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.QSPluginManagerApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.QSPluginManagerApi(api_client)
     plugin_id = 'plugin_id_example' # str | Unique identifier for the plugin
-    qspmpluginmanagerv3_plugin_rq = ibm_gdsc_sdk_software.Qspmpluginmanagerv3PluginRQ() # Qspmpluginmanagerv3PluginRQ | 
+    qspmpluginmanagerv3_plugin_rq = ibm_gdsc_sdk_saas.Qspmpluginmanagerv3PluginRQ() # Qspmpluginmanagerv3PluginRQ | 
 
     try:
         # Summary: Invoke only explorer inventory data plugin Description:Parses explorer input file and triggers dataload
@@ -198,15 +198,15 @@ Summary: Invoke only explorer analytics data plugin Description:Parses explorer 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_plugin_rq import Qspmpluginmanagerv3PluginRQ
-from ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_plugin_rs import Qspmpluginmanagerv3PluginRS
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.qspmpluginmanagerv3_plugin_rq import Qspmpluginmanagerv3PluginRQ
+from ibm_gdsc_sdk_saas.models.qspmpluginmanagerv3_plugin_rs import Qspmpluginmanagerv3PluginRS
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -216,7 +216,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -228,11 +228,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.QSPluginManagerApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.QSPluginManagerApi(api_client)
     plugin_id = 'plugin_id_example' # str | Unique identifier for the plugin
-    qspmpluginmanagerv3_plugin_rq = ibm_gdsc_sdk_software.Qspmpluginmanagerv3PluginRQ() # Qspmpluginmanagerv3PluginRQ | 
+    qspmpluginmanagerv3_plugin_rq = ibm_gdsc_sdk_saas.Qspmpluginmanagerv3PluginRQ() # Qspmpluginmanagerv3PluginRQ | 
 
     try:
         # Summary: Invoke only explorer analytics data plugin Description:Parses explorer input file and triggers dataload
@@ -286,15 +286,15 @@ Summary: Invoke consolidated or only network data plugin Description:Parses inpu
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_plugin_rq import Qspmpluginmanagerv3PluginRQ
-from ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_plugin_rs import Qspmpluginmanagerv3PluginRS
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.qspmpluginmanagerv3_plugin_rq import Qspmpluginmanagerv3PluginRQ
+from ibm_gdsc_sdk_saas.models.qspmpluginmanagerv3_plugin_rs import Qspmpluginmanagerv3PluginRS
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -304,7 +304,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -316,11 +316,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.QSPluginManagerApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.QSPluginManagerApi(api_client)
     plugin_id = 'plugin_id_example' # str | Unique identifier for the plugin
-    qspmpluginmanagerv3_plugin_rq = ibm_gdsc_sdk_software.Qspmpluginmanagerv3PluginRQ() # Qspmpluginmanagerv3PluginRQ | 
+    qspmpluginmanagerv3_plugin_rq = ibm_gdsc_sdk_saas.Qspmpluginmanagerv3PluginRQ() # Qspmpluginmanagerv3PluginRQ | 
 
     try:
         # Summary: Invoke consolidated or only network data plugin Description:Parses input files and triggers dataload
@@ -374,15 +374,15 @@ Summary: Invoke only policy data plugin Description:Parses policy input file and
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_policy_plugin_rq import Qspmpluginmanagerv3PolicyPluginRQ
-from ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_policy_plugin_rs import Qspmpluginmanagerv3PolicyPluginRS
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.qspmpluginmanagerv3_policy_plugin_rq import Qspmpluginmanagerv3PolicyPluginRQ
+from ibm_gdsc_sdk_saas.models.qspmpluginmanagerv3_policy_plugin_rs import Qspmpluginmanagerv3PolicyPluginRS
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -392,7 +392,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -404,11 +404,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.QSPluginManagerApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.QSPluginManagerApi(api_client)
     plugin_id = 'plugin_id_example' # str | Unique identifier for the plugin
-    qspmpluginmanagerv3_policy_plugin_rq = ibm_gdsc_sdk_software.Qspmpluginmanagerv3PolicyPluginRQ() # Qspmpluginmanagerv3PolicyPluginRQ | 
+    qspmpluginmanagerv3_policy_plugin_rq = ibm_gdsc_sdk_saas.Qspmpluginmanagerv3PolicyPluginRQ() # Qspmpluginmanagerv3PolicyPluginRQ | 
 
     try:
         # Summary: Invoke only policy data plugin Description:Parses policy input file and triggers dataload

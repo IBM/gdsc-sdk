@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **installed_flag** | **bool** | Flag to indicate whether policy is installed or not. | [optional] 
 **policy_import_issue** | [**Policybuilderv3ImportIssue**](Policybuilderv3ImportIssue.md) |  | [optional] 
 **policy_import_state** | [**Policybuilderv3ImportState**](Policybuilderv3ImportState.md) |  | [optional] 
+**policy_info** | [**Policybuilderv3Policy**](Policybuilderv3Policy.md) |  | [optional] 
 **policy_name** | **str** |  | [optional] 
 **rules** | [**List[Policybuilderv3Rule]**](Policybuilderv3Rule.md) | Rules contained by the policy. | [optional] 
 **status** | [**Policybuilderv3StatusResponseBase**](Policybuilderv3StatusResponseBase.md) |  | [optional] 
@@ -18,7 +19,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.policybuilderv3_get_policy_details_response import Policybuilderv3GetPolicyDetailsResponse
+from ibm_gdsc_sdk_saas.models.policybuilderv3_get_policy_details_response import Policybuilderv3GetPolicyDetailsResponse
 
 # TODO update the JSON string below
 json = "{}"

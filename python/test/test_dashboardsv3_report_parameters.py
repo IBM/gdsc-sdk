@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.dashboardsv3_report_parameters import Dashboardsv3ReportParameters
+from ibm_gdsc_sdk_saas.models.dashboardsv3_report_parameters import Dashboardsv3ReportParameters
 
 class TestDashboardsv3ReportParameters(unittest.TestCase):
     """Dashboardsv3ReportParameters unit test stubs"""
@@ -36,8 +36,11 @@ class TestDashboardsv3ReportParameters(unittest.TestCase):
         if include_optional:
             return Dashboardsv3ReportParameters(
                 end = '',
+                group_ids = [
+                    56
+                    ],
                 id = '',
-                local_time_filter = ibm_gdsc_sdk_software.models.dashboardsv3_time_range.dashboardsv3TimeRange(
+                local_time_filter = ibm_gdsc_sdk_saas.models.dashboardsv3_time_range.dashboardsv3TimeRange(
                     end = '', 
                     range = '', 
                     start = '', ),
@@ -47,7 +50,7 @@ class TestDashboardsv3ReportParameters(unittest.TestCase):
                 regulation = '',
                 start = '',
                 tags = [
-                    ibm_gdsc_sdk_software.models.reportsv3_report_tag.reportsv3ReportTag(
+                    ibm_gdsc_sdk_saas.models.reportsv3_report_tag.reportsv3ReportTag(
                         nls_key = '', 
                         nls_value = '', )
                     ],

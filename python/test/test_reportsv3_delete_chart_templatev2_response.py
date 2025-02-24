@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_delete_chart_templatev2_response import Reportsv3DeleteChartTemplatev2Response
+from ibm_gdsc_sdk_saas.models.reportsv3_delete_chart_templatev2_response import Reportsv3DeleteChartTemplatev2Response
 
 class TestReportsv3DeleteChartTemplatev2Response(unittest.TestCase):
     """Reportsv3DeleteChartTemplatev2Response unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_filter_sub_catagory import Assetsv3FilterSubCatagory
+from ibm_gdsc_sdk_saas.models.assetsv3_filter_sub_catagory import Assetsv3FilterSubCatagory
 
 class TestAssetsv3FilterSubCatagory(unittest.TestCase):
     """Assetsv3FilterSubCatagory unit test stubs"""
@@ -36,7 +36,7 @@ class TestAssetsv3FilterSubCatagory(unittest.TestCase):
         if include_optional:
             return Assetsv3FilterSubCatagory(
                 selected_children_list = [
-                    ibm_gdsc_sdk_software.models.filter_sub_catagory_child___child_values_under_filter_sub_category_of_a_filter_category_in_template.FilterSubCatagoryChild - child values under Filter Sub category of a Filter category in template(
+                    ibm_gdsc_sdk_saas.models.filter_sub_catagory_child___child_values_under_filter_sub_category_of_a_filter_category_in_template.FilterSubCatagoryChild - child values under Filter Sub category of a Filter category in template(
                         child_id = '', 
                         child_name = '', )
                     ],

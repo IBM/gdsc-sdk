@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.access_type_count_inner import AccessTypeCountInner
+from ibm_gdsc_sdk_saas.models.access_type_count_inner import AccessTypeCountInner
 
 # TODO update the JSON string below
 json = "{}"

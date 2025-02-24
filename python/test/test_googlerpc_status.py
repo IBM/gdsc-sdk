@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.googlerpc_status import GooglerpcStatus
+from ibm_gdsc_sdk_saas.models.googlerpc_status import GooglerpcStatus
 
 class TestGooglerpcStatus(unittest.TestCase):
     """GooglerpcStatus unit test stubs"""
@@ -37,7 +37,7 @@ class TestGooglerpcStatus(unittest.TestCase):
             return GooglerpcStatus(
                 code = 56,
                 details = [
-                    ibm_gdsc_sdk_software.models.protobuf_any.protobufAny(
+                    ibm_gdsc_sdk_saas.models.protobuf_any.protobufAny(
                         type_url = '', 
                         value = 'YQ==', )
                     ],

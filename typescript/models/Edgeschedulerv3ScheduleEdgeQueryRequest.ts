@@ -13,6 +13,7 @@
 import { HttpFile } from '../http/http';
 
 export class Edgeschedulerv3ScheduleEdgeQueryRequest {
+    'edgeId'?: string;
     /**
     * the upper bound of the UC query time range in format YYYY-MM-DDTHH:mm:ss.sssZ.
     */
@@ -21,29 +22,28 @@ export class Edgeschedulerv3ScheduleEdgeQueryRequest {
     * the lower bound of the UC query time range in format YYYY-MM-DDTHH:mm:ss.sssZ.
     */
     'edgeQueryStartTime'?: Date;
-    'edgeId'?: string;
     'edgeResultReportId'?: string;
 
     static readonly discriminator: string | undefined = undefined;
 
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
+            "name": "edgeId",
+            "baseName": "edge_id",
+            "type": "string",
+            "format": ""
+        },
+        {
             "name": "edgeQueryEndTime",
-            "baseName": "EdgeQueryEndTime",
+            "baseName": "edge_query_end_time",
             "type": "Date",
             "format": "date-time"
         },
         {
             "name": "edgeQueryStartTime",
-            "baseName": "EdgeQueryStartTime",
+            "baseName": "edge_query_start_time",
             "type": "Date",
             "format": "date-time"
-        },
-        {
-            "name": "edgeId",
-            "baseName": "edge_id",
-            "type": "string",
-            "format": ""
         },
         {
             "name": "edgeResultReportId",

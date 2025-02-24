@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.featureflagsv3_update_feature_flag_overrides_request import Featureflagsv3UpdateFeatureFlagOverridesRequest
+from ibm_gdsc_sdk_saas.models.featureflagsv3_update_feature_flag_overrides_request import Featureflagsv3UpdateFeatureFlagOverridesRequest
 
 class TestFeatureflagsv3UpdateFeatureFlagOverridesRequest(unittest.TestCase):
     """Featureflagsv3UpdateFeatureFlagOverridesRequest unit test stubs"""
@@ -35,7 +35,7 @@ class TestFeatureflagsv3UpdateFeatureFlagOverridesRequest(unittest.TestCase):
         model = Featureflagsv3UpdateFeatureFlagOverridesRequest()
         if include_optional:
             return Featureflagsv3UpdateFeatureFlagOverridesRequest(
-                feature_flag = ibm_gdsc_sdk_software.models.featureflagsv3_feature_flag.featureflagsv3FeatureFlag(
+                feature_flag = ibm_gdsc_sdk_saas.models.featureflagsv3_feature_flag.featureflagsv3FeatureFlag(
                     flag_name = '', 
                     is_enabled = True, 
                     value = '', ),

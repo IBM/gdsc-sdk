@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.authserver_check_permission_for_o_auth_token_response import AuthserverCheckPermissionForOAuthTokenResponse
+from ibm_gdsc_sdk_saas.models.authserver_check_permission_for_o_auth_token_response import AuthserverCheckPermissionForOAuthTokenResponse
 
 # TODO update the JSON string below
 json = "{}"

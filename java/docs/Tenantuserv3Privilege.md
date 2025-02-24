@@ -14,7 +14,7 @@
 |**nlsId** | **String** |  |  [optional] |
 |**privilegeId** | **String** | Permanent id of the privilege. |  [optional] |
 |**removable** | **Boolean** | All pre-defined privileges are not removable. |  [optional] |
-|**roles** | **List&lt;String&gt;** | The array of Insights roles that this privilege belongs to. |  [optional] |
+|**roles** | **List&lt;String&gt;** | The array of GDSC roles that this privilege belongs to. |  [optional] |
 |**type** | **String** | Type of privilege: report, classification, group, page, restapi, etc. |  [optional] |
 
 

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.jumpboxv3_post_users_bulk_request import Jumpboxv3PostUsersBulkRequest
+from ibm_gdsc_sdk_saas.models.jumpboxv3_post_users_bulk_request import Jumpboxv3PostUsersBulkRequest
 
 # TODO update the JSON string below
 json = "{}"

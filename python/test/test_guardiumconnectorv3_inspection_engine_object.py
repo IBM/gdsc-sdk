@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_inspection_engine_object import Guardiumconnectorv3InspectionEngineObject
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_inspection_engine_object import Guardiumconnectorv3InspectionEngineObject
 
 class TestGuardiumconnectorv3InspectionEngineObject(unittest.TestCase):
     """Guardiumconnectorv3InspectionEngineObject unit test stubs"""

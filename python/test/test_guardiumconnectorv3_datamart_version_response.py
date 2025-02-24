@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_datamart_version_response import Guardiumconnectorv3DatamartVersionResponse
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_datamart_version_response import Guardiumconnectorv3DatamartVersionResponse
 
 class TestGuardiumconnectorv3DatamartVersionResponse(unittest.TestCase):
     """Guardiumconnectorv3DatamartVersionResponse unit test stubs"""
@@ -35,7 +35,7 @@ class TestGuardiumconnectorv3DatamartVersionResponse(unittest.TestCase):
         model = Guardiumconnectorv3DatamartVersionResponse()
         if include_optional:
             return Guardiumconnectorv3DatamartVersionResponse(
-                status = ibm_gdsc_sdk_software.models.guardiumconnectorv3_status_response_base.guardiumconnectorv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.guardiumconnectorv3_status_response_base.guardiumconnectorv3StatusResponseBase(
                     message = '', 
                     status = '', )
             )

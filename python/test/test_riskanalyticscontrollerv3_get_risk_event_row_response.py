@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_get_risk_event_row_response import Riskanalyticscontrollerv3GetRiskEventRowResponse
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_get_risk_event_row_response import Riskanalyticscontrollerv3GetRiskEventRowResponse
 
 class TestRiskanalyticscontrollerv3GetRiskEventRowResponse(unittest.TestCase):
     """Riskanalyticscontrollerv3GetRiskEventRowResponse unit test stubs"""
@@ -37,7 +37,7 @@ class TestRiskanalyticscontrollerv3GetRiskEventRowResponse(unittest.TestCase):
             return Riskanalyticscontrollerv3GetRiskEventRowResponse(
                 limit_reached = True,
                 risk_event_rows = [
-                    ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_risk_event.riskanalyticscontrollerv3RiskEvent(
+                    ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_risk_event.riskanalyticscontrollerv3RiskEvent(
                         categorization_confidence = 1.337, 
                         categorization_modified = True, 
                         category_description = '', 
@@ -47,7 +47,7 @@ class TestRiskanalyticscontrollerv3GetRiskEventRowResponse(unittest.TestCase):
                         emerging_risk = True, 
                         from_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         justification = '', 
-                        pivot = ibm_gdsc_sdk_software.models.riskanalyticsenginev3_pivot.riskanalyticsenginev3Pivot(
+                        pivot = ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_pivot.riskanalyticsenginev3Pivot(
                             database = '', 
                             database_source_field = 'UNDEFINED', 
                             db_user = '', 
@@ -59,7 +59,7 @@ class TestRiskanalyticscontrollerv3GetRiskEventRowResponse(unittest.TestCase):
                         severity = 56, 
                         severity_level = 'UNDEFINED_SEVERITY_LEVEL', 
                         short_observations = [
-                            ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_short_observation.riskanalyticscontrollerv3ShortObservation(
+                            ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_short_observation.riskanalyticscontrollerv3ShortObservation(
                                 count = 56, )
                             ], 
                         status = 'UNDEFINED_STATUS', 

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.snifassistv3_stap_operation import Snifassistv3StapOperation
+from ibm_gdsc_sdk_saas.models.snifassistv3_stap_operation import Snifassistv3StapOperation
 
 class TestSnifassistv3StapOperation(unittest.TestCase):
     """Snifassistv3StapOperation unit test stubs"""

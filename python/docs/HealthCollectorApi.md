@@ -1,10 +1,10 @@
-# ibm_gdsc_sdk_software.HealthCollectorApi
+# ibm_gdsc_sdk_saas.HealthCollectorApi
 
 All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**health_collector_get_data_warehouse_usage**](HealthCollectorApi.md#health_collector_get_data_warehouse_usage) | **GET** /api/v3/metrics/warehouse/{type} | Summary: Get data warehouse usage info Description: Get information from Db2 related to usage
+[**health_collector_get_data_warehouse_usage**](HealthCollectorApi.md#health_collector_get_data_warehouse_usage) | **GET** /api/v3/metrics/warehouse/{type} | Summary: Get data warehouse usage info Description: Get information from data warehouse related to usage
 [**health_collector_get_gdp_health_info**](HealthCollectorApi.md#health_collector_get_gdp_health_info) | **GET** /api/v3/health | Summary: Get GDP health info Description: Get information from MongoDB for Guardium central managers using health-connector service.
 [**health_collector_get_historical_health_info**](HealthCollectorApi.md#health_collector_get_historical_health_info) | **GET** /api/v3/health/history | Summary: Get historical health info Description: Retrieve historical s-tap related statistics from health-collector service.
 [**health_collector_get_object_storage_usage**](HealthCollectorApi.md#health_collector_get_object_storage_usage) | **GET** /api/v3/metrics/object_storage/{type} | Summary: Get object storage usage info Description: Get information from object storage about tenant bucket usage
@@ -18,7 +18,7 @@ Method | HTTP request | Description
 # **health_collector_get_data_warehouse_usage**
 > Healthcollectorv3GetDataWarehouseUsageResponse health_collector_get_data_warehouse_usage(type, start_time=start_time, end_time=end_time)
 
-Summary: Get data warehouse usage info Description: Get information from Db2 related to usage
+Summary: Get data warehouse usage info Description: Get information from data warehouse related to usage
 
 ### Example
 
@@ -26,14 +26,14 @@ Summary: Get data warehouse usage info Description: Get information from Db2 rel
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.healthcollectorv3_get_data_warehouse_usage_response import Healthcollectorv3GetDataWarehouseUsageResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.healthcollectorv3_get_data_warehouse_usage_response import Healthcollectorv3GetDataWarehouseUsageResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -43,7 +43,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -55,15 +55,15 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.HealthCollectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.HealthCollectorApi(api_client)
     type = 'type_example' # str | The type of metric to retrieve
     start_time = '2013-10-20T19:20:30+01:00' # datetime | The start time from which the data needs to be calculated. (optional)
     end_time = '2013-10-20T19:20:30+01:00' # datetime | The end time from which the data needs to be calculated. (optional)
 
     try:
-        # Summary: Get data warehouse usage info Description: Get information from Db2 related to usage
+        # Summary: Get data warehouse usage info Description: Get information from data warehouse related to usage
         api_response = api_instance.health_collector_get_data_warehouse_usage(type, start_time=start_time, end_time=end_time)
         print("The response of HealthCollectorApi->health_collector_get_data_warehouse_usage:\n")
         pprint(api_response)
@@ -115,14 +115,14 @@ Summary: Get GDP health info Description: Get information from MongoDB for Guard
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.healthcollectorv3_get_gdp_health_info_response import Healthcollectorv3GetGDPHealthInfoResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.healthcollectorv3_get_gdp_health_info_response import Healthcollectorv3GetGDPHealthInfoResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -132,7 +132,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -144,9 +144,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.HealthCollectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.HealthCollectorApi(api_client)
 
     try:
         # Summary: Get GDP health info Description: Get information from MongoDB for Guardium central managers using health-connector service.
@@ -196,14 +196,14 @@ Summary: Get historical health info Description: Retrieve historical s-tap relat
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.healthcollectorv3_get_historical_health_info_response import Healthcollectorv3GetHistoricalHealthInfoResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.healthcollectorv3_get_historical_health_info_response import Healthcollectorv3GetHistoricalHealthInfoResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -213,7 +213,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -225,9 +225,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.HealthCollectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.HealthCollectorApi(api_client)
     unit = 'UNKNOWN_UNIT' # str | Type of unit for which data needs to be retrieved. (optional) (default to 'UNKNOWN_UNIT')
     cm_id = 'cm_id_example' # str | Optional value if the data is for a particular cm. If it is empty the data for all cms would be retrieved. (optional)
     start_time = '2013-10-20T19:20:30+01:00' # datetime | The start time from which the data needs to be calculated. (optional)
@@ -287,14 +287,14 @@ Summary: Get object storage usage info Description: Get information from object 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.healthcollectorv3_get_object_storage_usage_response import Healthcollectorv3GetObjectStorageUsageResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.healthcollectorv3_get_object_storage_usage_response import Healthcollectorv3GetObjectStorageUsageResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -304,7 +304,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -316,9 +316,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.HealthCollectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.HealthCollectorApi(api_client)
     type = 'type_example' # str | The type of metric to retrieve
     start_time = '2013-10-20T19:20:30+01:00' # datetime | The start time from which the data needs to be calculated. (optional)
     end_time = '2013-10-20T19:20:30+01:00' # datetime | The end time from which the data needs to be calculated. (optional)
@@ -376,14 +376,14 @@ Summary: Get the pod restart information Description: Get information about the 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.healthcollectorv3_get_pod_restarts_response import Healthcollectorv3GetPodRestartsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.healthcollectorv3_get_pod_restarts_response import Healthcollectorv3GetPodRestartsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -393,7 +393,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -405,9 +405,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.HealthCollectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.HealthCollectorApi(api_client)
     type = 'type_example' # str | The type of metric to retrieve
     start_time = '2013-10-20T19:20:30+01:00' # datetime | The start time from which the data needs to be calculated. (optional)
     end_time = '2013-10-20T19:20:30+01:00' # datetime | The end time from which the data needs to be calculated. (optional)
@@ -465,14 +465,14 @@ Summary: Get the PVC usage information Description: Get information about the PV
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.healthcollectorv3_get_pvc_usage_response import Healthcollectorv3GetPVCUsageResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.healthcollectorv3_get_pvc_usage_response import Healthcollectorv3GetPVCUsageResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -482,7 +482,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -494,9 +494,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.HealthCollectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.HealthCollectorApi(api_client)
     type = 'type_example' # str | The type of metric to retrieve
     start_time = '2013-10-20T19:20:30+01:00' # datetime | The start time from which the data needs to be calculated. (optional)
     end_time = '2013-10-20T19:20:30+01:00' # datetime | The end time from which the data needs to be calculated. (optional)
@@ -554,14 +554,14 @@ Summary: Get streams ingestion volume over a given time Description: Get informa
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.healthcollectorv3_get_streams_ingestion_response import Healthcollectorv3GetStreamsIngestionResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.healthcollectorv3_get_streams_ingestion_response import Healthcollectorv3GetStreamsIngestionResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -571,7 +571,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -583,9 +583,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.HealthCollectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.HealthCollectorApi(api_client)
     type = 'type_example' # str | The type of metric to retrieve
     start_time = '2013-10-20T19:20:30+01:00' # datetime | The start time from which the data needs to be calculated. (optional)
     end_time = '2013-10-20T19:20:30+01:00' # datetime | The end time from which the data needs to be calculated. (optional)
@@ -643,14 +643,14 @@ Summary: Get the top GDP collectors which send data to GI Description: Get infor
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.healthcollectorv3_get_top_gdp_collectors_response import Healthcollectorv3GetTopGDPCollectorsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.healthcollectorv3_get_top_gdp_collectors_response import Healthcollectorv3GetTopGDPCollectorsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -660,7 +660,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -672,9 +672,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.HealthCollectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.HealthCollectorApi(api_client)
     type = 'type_example' # str | The type of metric to retrieve
     start_time = '2013-10-20T19:20:30+01:00' # datetime | The start time from which the data needs to be calculated. (optional)
     end_time = '2013-10-20T19:20:30+01:00' # datetime | The end time from which the data needs to be calculated. (optional)
@@ -732,15 +732,15 @@ Summary: Store health info Description: Store health info from GDP into GI. (Thi
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.healthcollectorv3_store_health_info_request import Healthcollectorv3StoreHealthInfoRequest
-from ibm_gdsc_sdk_software.models.healthcollectorv3_store_health_info_response import Healthcollectorv3StoreHealthInfoResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.healthcollectorv3_store_health_info_request import Healthcollectorv3StoreHealthInfoRequest
+from ibm_gdsc_sdk_saas.models.healthcollectorv3_store_health_info_response import Healthcollectorv3StoreHealthInfoResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -750,7 +750,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -762,11 +762,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.HealthCollectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.HealthCollectorApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | ID of central manager.
-    healthcollectorv3_store_health_info_request = ibm_gdsc_sdk_software.Healthcollectorv3StoreHealthInfoRequest() # Healthcollectorv3StoreHealthInfoRequest | 
+    healthcollectorv3_store_health_info_request = ibm_gdsc_sdk_saas.Healthcollectorv3StoreHealthInfoRequest() # Healthcollectorv3StoreHealthInfoRequest | 
 
     try:
         # Summary: Store health info Description: Store health info from GDP into GI. (This API is called from GDP only)

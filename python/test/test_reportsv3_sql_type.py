@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_sql_type import Reportsv3SqlType
+from ibm_gdsc_sdk_saas.models.reportsv3_sql_type import Reportsv3SqlType
 
 class TestReportsv3SqlType(unittest.TestCase):
     """Reportsv3SqlType unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.data_resource_stats import DataResourceStats
+from ibm_gdsc_sdk_saas.models.data_resource_stats import DataResourceStats
 
 class TestDataResourceStats(unittest.TestCase):
     """DataResourceStats unit test stubs"""
@@ -37,7 +37,7 @@ class TestDataResourceStats(unittest.TestCase):
             return DataResourceStats(
                 sensitivities_count = 57,
                 sensitivities_summary = [
-                    ibm_gdsc_sdk_software.models.sensitivity_summary.SensitivitySummary(
+                    ibm_gdsc_sdk_saas.models.sensitivity_summary.SensitivitySummary(
                         tag = 'BUSINESS_EMAIL_ADDRESS', 
                         count = 230, 
                         category = 'Personal', )

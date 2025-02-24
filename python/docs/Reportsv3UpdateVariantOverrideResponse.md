@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.reportsv3_update_variant_override_response import Reportsv3UpdateVariantOverrideResponse
+from ibm_gdsc_sdk_saas.models.reportsv3_update_variant_override_response import Reportsv3UpdateVariantOverrideResponse
 
 # TODO update the JSON string below
 json = "{}"

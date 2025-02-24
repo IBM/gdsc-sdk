@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.outliersenginev3_datasources_coverage_stats import Outliersenginev3DatasourcesCoverageStats
+from ibm_gdsc_sdk_saas.models.outliersenginev3_datasources_coverage_stats import Outliersenginev3DatasourcesCoverageStats
 
 class TestOutliersenginev3DatasourcesCoverageStats(unittest.TestCase):
     """Outliersenginev3DatasourcesCoverageStats unit test stubs"""

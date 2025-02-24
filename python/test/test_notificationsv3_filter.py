@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.notificationsv3_filter import Notificationsv3Filter
+from ibm_gdsc_sdk_saas.models.notificationsv3_filter import Notificationsv3Filter
 
 class TestNotificationsv3Filter(unittest.TestCase):
     """Notificationsv3Filter unit test stubs"""

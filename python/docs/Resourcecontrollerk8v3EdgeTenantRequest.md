@@ -5,21 +5,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**edge_gateway_id** | **str** |  | [optional] 
-**edge_gateway_name** | **str** |  | [optional] 
+**edge_id** | **str** |  | [optional] 
+**edge_name** | **str** |  | [optional] 
 **edge_version** | **str** |  | [optional] 
 **hostname** | **str** |  | [optional] 
 **license_type** | **str** |  | [optional] 
 **rsyslog** | **str** |  | [optional] 
+**size** | **str** |  | [optional] 
 **storage_class_name** | **str** |  | [optional] 
 **storage_class_name_rwo** | **str** |  | [optional] 
 **tenant_id** | **str** |  | [optional] 
-**tnt_plan** | **str** |  | [optional] 
 
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_edge_tenant_request import Resourcecontrollerk8v3EdgeTenantRequest
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_edge_tenant_request import Resourcecontrollerk8v3EdgeTenantRequest
 
 # TODO update the JSON string below
 json = "{}"

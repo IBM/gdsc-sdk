@@ -11,7 +11,7 @@ DatamartInfo is the object containing all info of a datamart.
 |**currentTs** | **OffsetDateTime** | Timestamp in UTC when the entry was made. |  [optional] |
 |**dataType** | **String** | Type of datamart. |  [optional] |
 |**error** | **String** | Errors if any. |  [optional] |
-|**exportRecordCount** | **Integer** | Total records exported from gdp. |  [optional] |
+|**exportRecordCount** | **Integer** | Total records exported from GDP. |  [optional] |
 |**exportStatus** | **Integer** | Export status of datamart. |  [optional] |
 |**failureFileCount** | **Integer** | Total failed files in a datamart. |  [optional] |
 |**files** | [**List&lt;Datamartprocessorv3DatamartFileInfo&gt;**](Datamartprocessorv3DatamartFileInfo.md) | File info inside a datamart. |  [optional] |

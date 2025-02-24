@@ -69,8 +69,6 @@ _()
     # The list of available operation in the REST service
     # It's modelled as an associative array for efficient key lookup
     declare -A operations
-    operations["analyticsEventsServiceDeleteCacheKey"]=1
-    operations["analyticsEventsServicePostQSAdvisorRisk"]=1
     operations["assetsServiceAssetIngestion"]=1
     operations["assetsServiceAssetIngestionManualTrigger"]=1
     operations["assetsServiceClonePolicy"]=1
@@ -140,6 +138,7 @@ _()
     operations["connectionsServiceDeleteConnectionsConfigs"]=1
     operations["connectionsServiceDeleteConnector"]=1
     operations["connectionsServiceDeletePlugin"]=1
+    operations["connectionsServiceGeneratePackage"]=1
     operations["connectionsServiceGetBannerState"]=1
     operations["connectionsServiceGetConnectionsAccounts"]=1
     operations["connectionsServiceGetConnectionsConfigs"]=1
@@ -158,6 +157,7 @@ _()
     operations["connectionsServiceUpdateConnectors"]=1
     operations["connectionsServiceUpdatePlugin"]=1
     operations["connectionsServiceUpdateSettings"]=1
+    operations["connectionsServiceValidateAwsConnection"]=1
     operations["dashboardsServiceCreateDashboard"]=1
     operations["dashboardsServiceDeleteDashboard"]=1
     operations["dashboardsServiceGetDashboards"]=1
@@ -213,6 +213,10 @@ _()
     operations["ecosystemServiceGetDatasets"]=1
     operations["ecosystemServiceGetPurgableRows"]=1
     operations["ecosystemServicePurgeData"]=1
+    operations["ecosystemServiceTestIntegration"]=1
+    operations["edgeSchedulerServiceGetEdgeQueryStatus"]=1
+    operations["edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery"]=1
+    operations["edgeSchedulerServiceScheduleEdgeQuery"]=1
     operations["featureFlagsServiceDeleteFeatureFlagOverrides"]=1
     operations["featureFlagsServiceGetFeatureFlagOverrides"]=1
     operations["featureFlagsServiceGetFeatureFlags"]=1
@@ -296,6 +300,8 @@ _()
     operations["notificationsServiceGetNotificationRecord"]=1
     operations["notificationsServiceGetNotificationRecords"]=1
     operations["notificationsServiceGetTicketStatus"]=1
+    operations["notificationsServicePostNotificationRecord"]=1
+    operations["notificationsServiceSearchNotificationRecords"]=1
     operations["notificationsServiceTestIntegration"]=1
     operations["notificationsServiceUpdateNotificationRecord"]=1
     operations["outliersEngineGetSourceStatistics"]=1
@@ -324,7 +330,10 @@ _()
     operations["policyBuilderPoliciesGroups"]=1
     operations["policyBuilderRuleValidation"]=1
     operations["policyBuilderStorePoliciesGdp"]=1
+    operations["qSDataLoaderQSfileValidator"]=1
+    operations["qSDataLoaderUploadSyntheticDataLoader"]=1
     operations["qSDataManagerGetMasterData"]=1
+    operations["qSDataManagerGetPluginData"]=1
     operations["qSDataManagerRegisterScan"]=1
     operations["qSDataManagerRetrieveScan"]=1
     operations["qSPluginManagerInvokeAppProv"]=1
@@ -333,6 +342,7 @@ _()
     operations["qSPluginManagerInvokePlugin"]=1
     operations["qSPluginManagerInvokePolicy"]=1
     operations["qSPolicyManagerBatchStatusUpdate"]=1
+    operations["qSPolicyManagerConfigUpdate"]=1
     operations["qSPolicyManagerCreateTicket"]=1
     operations["qSPolicyManagerFetchFilesfromBuckets"]=1
     operations["qSPolicyManagerProcessPolicyDimentionRecords"]=1
@@ -389,6 +399,40 @@ _()
     operations["reportsServiceUpdateJoin"]=1
     operations["reportsServiceUpdateReport"]=1
     operations["reportsServiceUpdateVariantOverride"]=1
+    operations["resourceControllerK8ServiceCreateController"]=1
+    operations["resourceControllerK8ServiceCreateHeartBeat"]=1
+    operations["resourceControllerK8ServiceCreateHeartBeatEx"]=1
+    operations["resourceControllerK8ServiceCreateJob"]=1
+    operations["resourceControllerK8ServiceCreateJobExecution"]=1
+    operations["resourceControllerK8ServiceCreateKeypair"]=1
+    operations["resourceControllerK8ServiceDeleteController"]=1
+    operations["resourceControllerK8ServiceDeleteEdgeTenant"]=1
+    operations["resourceControllerK8ServiceDeleteEdgeTenantRequest"]=1
+    operations["resourceControllerK8ServiceDeleteJob"]=1
+    operations["resourceControllerK8ServiceDownloadControllerLogs"]=1
+    operations["resourceControllerK8ServiceGetControllerApps"]=1
+    operations["resourceControllerK8ServiceGetControllerCommands"]=1
+    operations["resourceControllerK8ServiceGetControllerJobs"]=1
+    operations["resourceControllerK8ServiceGetControllerStatus"]=1
+    operations["resourceControllerK8ServiceGetControllers"]=1
+    operations["resourceControllerK8ServiceGetControllersWithStatus"]=1
+    operations["resourceControllerK8ServiceGetJob"]=1
+    operations["resourceControllerK8ServiceGetJobExecution"]=1
+    operations["resourceControllerK8ServiceGetJobExecutions"]=1
+    operations["resourceControllerK8ServiceGetJobStatus"]=1
+    operations["resourceControllerK8ServiceGetTenantApp"]=1
+    operations["resourceControllerK8ServiceGetTenantApps"]=1
+    operations["resourceControllerK8ServiceGetTenantJobs"]=1
+    operations["resourceControllerK8ServiceGetVersion"]=1
+    operations["resourceControllerK8ServiceInstallEdgeTenantRequest"]=1
+    operations["resourceControllerK8ServiceQueryControllerLogs"]=1
+    operations["resourceControllerK8ServiceUpdateCommand"]=1
+    operations["resourceControllerK8ServiceUpdateController"]=1
+    operations["resourceControllerK8ServiceUpdateControllerStatus"]=1
+    operations["resourceControllerK8ServiceUpdateEdgeTenantRequest"]=1
+    operations["resourceControllerK8ServiceUpdateJob"]=1
+    operations["resourceControllerK8ServiceUpdateJobExecution"]=1
+    operations["resourceControllerK8ServiceUpdateJobStatus"]=1
     operations["riskAnalyticsControllerEnableDisableRiskEventFeedback"]=1
     operations["riskAnalyticsControllerEnableDisableRiskEventProcess"]=1
     operations["riskAnalyticsControllerGetAllClassificationsList"]=1
@@ -421,6 +465,9 @@ _()
     operations["schedulerServiceSearchScheduledJobs"]=1
     operations["schedulerServiceSearchScheduledTaskRuns"]=1
     operations["schedulerServiceUpdateScheduledJob"]=1
+    operations["snifAssistServiceGetSnifConfig"]=1
+    operations["snifAssistServiceGetSnifPolicy"]=1
+    operations["snifAssistServicePostSnifFeedback"]=1
     operations["snifAssistServiceTestRegex"]=1
     operations["streamsServiceCheckAWSCredentials"]=1
     operations["streamsServiceCheckAzureEventHub"]=1
@@ -435,6 +482,7 @@ _()
     operations["templatesServiceGetOriginFields"]=1
     operations["templatesServiceGetTemplate"]=1
     operations["templatesServiceGetTemplates"]=1
+    operations["templatesServiceGetTemplatesForEdge"]=1
     operations["templatesServiceTestTemplate"]=1
     operations["templatesServiceTransformTemplate"]=1
     operations["templatesServiceTransformTemplateJSON"]=1
@@ -464,15 +512,21 @@ _()
     operations["listTrustedAssets"]=1
     operations["universalConnectorManagerGetCertificate"]=1
     operations["universalConnectorManagerGetConnectors"]=1
+    operations["universalConnectorManagerGetUCSetup"]=1
     operations["universalConnectorManagerListConnectionsSummary"]=1
     operations["universalConnectorManagerPluginsList"]=1
     operations["universalConnectorManagerUploadPlugin"]=1
     operations["workflowCreateCase"]=1
+    operations["workflowCreateProductEntity"]=1
     operations["workflowCreateTask"]=1
+    operations["workflowCreateWorkflowEvent"]=1
+    operations["workflowDeleteProductEntity"]=1
     operations["workflowGetCases"]=1
     operations["workflowGetCasesCount"]=1
     operations["workflowGetFilename"]=1
     operations["workflowGetJobsCount"]=1
+    operations["workflowGetProductEntities"]=1
+    operations["workflowGetProductEntity"]=1
     operations["workflowGetReportResult"]=1
     operations["workflowGetTasks"]=1
     operations["workflowGetTasksCount"]=1
@@ -480,13 +534,12 @@ _()
     operations["workflowSearchReports"]=1
     operations["workflowSearchTasks"]=1
     operations["workflowUpdateCases"]=1
+    operations["workflowUpdateProductEntity"]=1
     operations["workflowUpdateTasks"]=1
 
     # An associative array of operations to their parameters
     # Only include path, query and header parameters
     declare -A operation_parameters
-    operation_parameters["analyticsEventsServiceDeleteCacheKey"]="cache_key= "
-    operation_parameters["analyticsEventsServicePostQSAdvisorRisk"]=""
     operation_parameters["assetsServiceAssetIngestion"]=""
     operation_parameters["assetsServiceAssetIngestionManualTrigger"]=""
     operation_parameters["assetsServiceClonePolicy"]="policy_id= "
@@ -545,7 +598,7 @@ _()
     operation_parameters["submitSnowflakeAuthCode"]=""
     operation_parameters["complianceAcceleratorCreateWorkspace"]=""
     operation_parameters["complianceAcceleratorDeleteComplianceWorkspaces"]="regulations= deleteAll= "
-    operation_parameters["complianceAcceleratorGetComplianceInfo"]=""
+    operation_parameters["complianceAcceleratorGetComplianceInfo"]="is_brief= "
     operation_parameters["complianceAcceleratorHydrateWorkspace"]=""
     operation_parameters["complianceAcceleratorStoreComplianceInfo"]=""
     operation_parameters["connectionsServiceCreateConnectionsAccounts"]=""
@@ -556,6 +609,7 @@ _()
     operation_parameters["connectionsServiceDeleteConnectionsConfigs"]="connection_id= "
     operation_parameters["connectionsServiceDeleteConnector"]="connection_id= "
     operation_parameters["connectionsServiceDeletePlugin"]="id= "
+    operation_parameters["connectionsServiceGeneratePackage"]="id= "
     operation_parameters["connectionsServiceGetBannerState"]=""
     operation_parameters["connectionsServiceGetConnectionsAccounts"]="account_id= access_key= "
     operation_parameters["connectionsServiceGetConnectionsConfigs"]="type= connection_id= "
@@ -574,6 +628,7 @@ _()
     operation_parameters["connectionsServiceUpdateConnectors"]=""
     operation_parameters["connectionsServiceUpdatePlugin"]="id= "
     operation_parameters["connectionsServiceUpdateSettings"]=""
+    operation_parameters["connectionsServiceValidateAwsConnection"]=""
     operation_parameters["dashboardsServiceCreateDashboard"]=""
     operation_parameters["dashboardsServiceDeleteDashboard"]="dashboard_id= "
     operation_parameters["dashboardsServiceGetDashboards"]=""
@@ -629,6 +684,10 @@ _()
     operation_parameters["ecosystemServiceGetDatasets"]="filter.start_time= filter.end_time= filter.dataset_names= offset= limit= include_filter_counts= "
     operation_parameters["ecosystemServiceGetPurgableRows"]=""
     operation_parameters["ecosystemServicePurgeData"]="dataset_names= "
+    operation_parameters["ecosystemServiceTestIntegration"]=""
+    operation_parameters["edgeSchedulerServiceGetEdgeQueryStatus"]="edge_id= edge_result_report_id= "
+    operation_parameters["edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery"]="client_id= "
+    operation_parameters["edgeSchedulerServiceScheduleEdgeQuery"]="edge_id= "
     operation_parameters["featureFlagsServiceDeleteFeatureFlagOverrides"]="flag_name= tenant_id= "
     operation_parameters["featureFlagsServiceGetFeatureFlagOverrides"]="tenant_id= flag_names= "
     operation_parameters["featureFlagsServiceGetFeatureFlags"]="tenant_id= flag_names= "
@@ -710,8 +769,10 @@ _()
     operation_parameters["notificationsServiceGetFolders"]=""
     operation_parameters["notificationsServiceGetNotificationFilename"]="notification_id= "
     operation_parameters["notificationsServiceGetNotificationRecord"]="notification_id= "
-    operation_parameters["notificationsServiceGetNotificationRecords"]="filter.start_time= filter.end_time= filter.state= filter.origins= filter.origin_data= offset= limit= include_filter_counts= "
+    operation_parameters["notificationsServiceGetNotificationRecords"]="filter.start_time= filter.end_time= filter.state= filter.origins= filter.origin_data= filter.limit= offset= limit= include_filter_counts= "
     operation_parameters["notificationsServiceGetTicketStatus"]="ticket_id= integration_id= "
+    operation_parameters["notificationsServicePostNotificationRecord"]=""
+    operation_parameters["notificationsServiceSearchNotificationRecords"]=""
     operation_parameters["notificationsServiceTestIntegration"]=""
     operation_parameters["notificationsServiceUpdateNotificationRecord"]=""
     operation_parameters["outliersEngineGetSourceStatistics"]="source.server_ip= source.database_name= source.db_user= attributes_limit= "
@@ -740,7 +801,10 @@ _()
     operation_parameters["policyBuilderPoliciesGroups"]="group_ids= "
     operation_parameters["policyBuilderRuleValidation"]=""
     operation_parameters["policyBuilderStorePoliciesGdp"]="central_manager_id= "
+    operation_parameters["qSDataLoaderQSfileValidator"]=""
+    operation_parameters["qSDataLoaderUploadSyntheticDataLoader"]=""
     operation_parameters["qSDataManagerGetMasterData"]=""
+    operation_parameters["qSDataManagerGetPluginData"]=""
     operation_parameters["qSDataManagerRegisterScan"]=""
     operation_parameters["qSDataManagerRetrieveScan"]="scan_id= "
     operation_parameters["qSPluginManagerInvokeAppProv"]="plugin_id= "
@@ -749,6 +813,7 @@ _()
     operation_parameters["qSPluginManagerInvokePlugin"]="plugin_id= "
     operation_parameters["qSPluginManagerInvokePolicy"]="plugin_id= "
     operation_parameters["qSPolicyManagerBatchStatusUpdate"]=""
+    operation_parameters["qSPolicyManagerConfigUpdate"]=""
     operation_parameters["qSPolicyManagerCreateTicket"]=""
     operation_parameters["qSPolicyManagerFetchFilesfromBuckets"]=""
     operation_parameters["qSPolicyManagerProcessPolicyDimentionRecords"]=""
@@ -805,6 +870,40 @@ _()
     operation_parameters["reportsServiceUpdateJoin"]="join_id= "
     operation_parameters["reportsServiceUpdateReport"]="report_id= "
     operation_parameters["reportsServiceUpdateVariantOverride"]="variant_id= "
+    operation_parameters["resourceControllerK8ServiceCreateController"]=""
+    operation_parameters["resourceControllerK8ServiceCreateHeartBeat"]="controller_id= "
+    operation_parameters["resourceControllerK8ServiceCreateHeartBeatEx"]="controller_id= "
+    operation_parameters["resourceControllerK8ServiceCreateJob"]=""
+    operation_parameters["resourceControllerK8ServiceCreateJobExecution"]=""
+    operation_parameters["resourceControllerK8ServiceCreateKeypair"]="controller_id= "
+    operation_parameters["resourceControllerK8ServiceDeleteController"]="controller_id= "
+    operation_parameters["resourceControllerK8ServiceDeleteEdgeTenant"]="tenant_id= "
+    operation_parameters["resourceControllerK8ServiceDeleteEdgeTenantRequest"]="tenant_id= edge_id= edge_name= "
+    operation_parameters["resourceControllerK8ServiceDeleteJob"]="job_id= "
+    operation_parameters["resourceControllerK8ServiceDownloadControllerLogs"]="controller_id= "
+    operation_parameters["resourceControllerK8ServiceGetControllerApps"]="controller_id= modified_since= "
+    operation_parameters["resourceControllerK8ServiceGetControllerCommands"]="controller_id= "
+    operation_parameters["resourceControllerK8ServiceGetControllerJobs"]="controller_id= modified_since= "
+    operation_parameters["resourceControllerK8ServiceGetControllerStatus"]="controller_id= "
+    operation_parameters["resourceControllerK8ServiceGetControllers"]="tenant_id= want_local= "
+    operation_parameters["resourceControllerK8ServiceGetControllersWithStatus"]="tenant_id= want_local= controller_id= "
+    operation_parameters["resourceControllerK8ServiceGetJob"]="job_id= want_secret_values= "
+    operation_parameters["resourceControllerK8ServiceGetJobExecution"]="jobexe_id= "
+    operation_parameters["resourceControllerK8ServiceGetJobExecutions"]="job_id= "
+    operation_parameters["resourceControllerK8ServiceGetJobStatus"]="job_id= "
+    operation_parameters["resourceControllerK8ServiceGetTenantApp"]="tenant_id= app_name= return_level= "
+    operation_parameters["resourceControllerK8ServiceGetTenantApps"]="tenant_id= return_level= "
+    operation_parameters["resourceControllerK8ServiceGetTenantJobs"]="tenant_id= "
+    operation_parameters["resourceControllerK8ServiceGetVersion"]=""
+    operation_parameters["resourceControllerK8ServiceInstallEdgeTenantRequest"]=""
+    operation_parameters["resourceControllerK8ServiceQueryControllerLogs"]="controller_id= "
+    operation_parameters["resourceControllerK8ServiceUpdateCommand"]="id= "
+    operation_parameters["resourceControllerK8ServiceUpdateController"]="id= "
+    operation_parameters["resourceControllerK8ServiceUpdateControllerStatus"]="id= "
+    operation_parameters["resourceControllerK8ServiceUpdateEdgeTenantRequest"]="edge_id= "
+    operation_parameters["resourceControllerK8ServiceUpdateJob"]="id= "
+    operation_parameters["resourceControllerK8ServiceUpdateJobExecution"]="id= "
+    operation_parameters["resourceControllerK8ServiceUpdateJobStatus"]="job_id= "
     operation_parameters["riskAnalyticsControllerEnableDisableRiskEventFeedback"]=""
     operation_parameters["riskAnalyticsControllerEnableDisableRiskEventProcess"]=""
     operation_parameters["riskAnalyticsControllerGetAllClassificationsList"]=""
@@ -837,6 +936,9 @@ _()
     operation_parameters["schedulerServiceSearchScheduledJobs"]=""
     operation_parameters["schedulerServiceSearchScheduledTaskRuns"]=""
     operation_parameters["schedulerServiceUpdateScheduledJob"]="schedule_id= "
+    operation_parameters["snifAssistServiceGetSnifConfig"]="tenant_id= edge_id= config_type= config_id= configuration_parameters_crc= "
+    operation_parameters["snifAssistServiceGetSnifPolicy"]="tenant_id= edge_id= policy_crc= "
+    operation_parameters["snifAssistServicePostSnifFeedback"]=""
     operation_parameters["snifAssistServiceTestRegex"]=""
     operation_parameters["streamsServiceCheckAWSCredentials"]=""
     operation_parameters["streamsServiceCheckAzureEventHub"]=""
@@ -851,6 +953,7 @@ _()
     operation_parameters["templatesServiceGetOriginFields"]="origin= "
     operation_parameters["templatesServiceGetTemplate"]="template_id= include_integration_name= "
     operation_parameters["templatesServiceGetTemplates"]="integration_id= filter_integration= filter_origin= filter_mime_type= filter_tags= filter_enabled_only= include_integration_name= "
+    operation_parameters["templatesServiceGetTemplatesForEdge"]="integration_id= filter_origin= filter_enabled_only= include_integration_name= transform_to_gdp_format= "
     operation_parameters["templatesServiceTestTemplate"]=""
     operation_parameters["templatesServiceTransformTemplate"]=""
     operation_parameters["templatesServiceTransformTemplateJSON"]=""
@@ -880,15 +983,21 @@ _()
     operation_parameters["listTrustedAssets"]="filter= "
     operation_parameters["universalConnectorManagerGetCertificate"]=""
     operation_parameters["universalConnectorManagerGetConnectors"]=""
+    operation_parameters["universalConnectorManagerGetUCSetup"]="plugin_id= "
     operation_parameters["universalConnectorManagerListConnectionsSummary"]=""
     operation_parameters["universalConnectorManagerPluginsList"]=""
     operation_parameters["universalConnectorManagerUploadPlugin"]=""
     operation_parameters["workflowCreateCase"]=""
+    operation_parameters["workflowCreateProductEntity"]=""
     operation_parameters["workflowCreateTask"]="case_id= "
+    operation_parameters["workflowCreateWorkflowEvent"]=""
+    operation_parameters["workflowDeleteProductEntity"]="entity_id= "
     operation_parameters["workflowGetCases"]="case_id= sort_by= offset= limit= "
     operation_parameters["workflowGetCasesCount"]=""
     operation_parameters["workflowGetFilename"]="case_id= task_id= "
     operation_parameters["workflowGetJobsCount"]="case_id= "
+    operation_parameters["workflowGetProductEntities"]="offset= limit= "
+    operation_parameters["workflowGetProductEntity"]="entity_id= "
     operation_parameters["workflowGetReportResult"]="case_id= task_id= offset= limit= "
     operation_parameters["workflowGetTasks"]="case_id= task_id= "
     operation_parameters["workflowGetTasksCount"]="case_id= "
@@ -896,6 +1005,7 @@ _()
     operation_parameters["workflowSearchReports"]=""
     operation_parameters["workflowSearchTasks"]="case_id= "
     operation_parameters["workflowUpdateCases"]=""
+    operation_parameters["workflowUpdateProductEntity"]="entity_id= "
     operation_parameters["workflowUpdateTasks"]="case_id= "
 
     # An associative array of possible values for enum parameters
@@ -917,6 +1027,7 @@ _()
     operation_parameters_enum_values["auditServiceGetActivityRecords::filter"]="true false"
     operation_parameters_enum_values["complianceAcceleratorDeleteComplianceWorkspaces::deleteAll"]="true false"
     operation_parameters_enum_values["complianceAcceleratorDeleteComplianceWorkspaces::deleteAll"]="true false"
+    operation_parameters_enum_values["complianceAcceleratorGetComplianceInfo::is_brief"]="true false"
     operation_parameters_enum_values["ecosystemServiceGetDatasetData::return_header"]="true false"
     operation_parameters_enum_values["ecosystemServiceGetDatasetData::return_header"]="true false"
     operation_parameters_enum_values["ecosystemServiceGetDatasetData::return_header"]="true false"
@@ -971,8 +1082,16 @@ _()
     operation_parameters_enum_values["notificationsServiceGetNotificationRecords::include_filter_counts"]="true false"
     operation_parameters_enum_values["notificationsServiceGetNotificationRecords::include_filter_counts"]="true false"
     operation_parameters_enum_values["notificationsServiceGetNotificationRecords::include_filter_counts"]="true false"
+    operation_parameters_enum_values["notificationsServiceGetNotificationRecords::include_filter_counts"]="true false"
     operation_parameters_enum_values["policyBuilderGetReceivers::validate_cache"]="true false"
     operation_parameters_enum_values["policyBuilderGetReceivers::validate_cache"]="true false"
+    operation_parameters_enum_values["resourceControllerK8ServiceGetControllers::want_local"]="true false"
+    operation_parameters_enum_values["resourceControllerK8ServiceGetControllers::want_local"]="true false"
+    operation_parameters_enum_values["resourceControllerK8ServiceGetControllersWithStatus::want_local"]="true false"
+    operation_parameters_enum_values["resourceControllerK8ServiceGetControllersWithStatus::want_local"]="true false"
+    operation_parameters_enum_values["resourceControllerK8ServiceGetControllersWithStatus::want_local"]="true false"
+    operation_parameters_enum_values["resourceControllerK8ServiceGetJob::want_secret_values"]="true false"
+    operation_parameters_enum_values["resourceControllerK8ServiceGetJob::want_secret_values"]="true false"
     operation_parameters_enum_values["riskAnalyticsControllerGetRiskEventDataForSummarization::include_indicators"]="true false"
     operation_parameters_enum_values["riskAnalyticsControllerGetRiskEventDataForSummarization::include_indicators"]="true false"
     operation_parameters_enum_values["riskAnalyticsControllerGetRiskEventDataForSummarization::include_indicators"]="true false"
@@ -996,6 +1115,21 @@ _()
     operation_parameters_enum_values["templatesServiceGetTemplates::include_integration_name"]="true false"
     operation_parameters_enum_values["templatesServiceGetTemplates::filter_enabled_only"]="true false"
     operation_parameters_enum_values["templatesServiceGetTemplates::include_integration_name"]="true false"
+    operation_parameters_enum_values["templatesServiceGetTemplatesForEdge::filter_enabled_only"]="true false"
+    operation_parameters_enum_values["templatesServiceGetTemplatesForEdge::include_integration_name"]="true false"
+    operation_parameters_enum_values["templatesServiceGetTemplatesForEdge::transform_to_gdp_format"]="true false"
+    operation_parameters_enum_values["templatesServiceGetTemplatesForEdge::filter_enabled_only"]="true false"
+    operation_parameters_enum_values["templatesServiceGetTemplatesForEdge::include_integration_name"]="true false"
+    operation_parameters_enum_values["templatesServiceGetTemplatesForEdge::transform_to_gdp_format"]="true false"
+    operation_parameters_enum_values["templatesServiceGetTemplatesForEdge::filter_enabled_only"]="true false"
+    operation_parameters_enum_values["templatesServiceGetTemplatesForEdge::include_integration_name"]="true false"
+    operation_parameters_enum_values["templatesServiceGetTemplatesForEdge::transform_to_gdp_format"]="true false"
+    operation_parameters_enum_values["templatesServiceGetTemplatesForEdge::filter_enabled_only"]="true false"
+    operation_parameters_enum_values["templatesServiceGetTemplatesForEdge::include_integration_name"]="true false"
+    operation_parameters_enum_values["templatesServiceGetTemplatesForEdge::transform_to_gdp_format"]="true false"
+    operation_parameters_enum_values["templatesServiceGetTemplatesForEdge::filter_enabled_only"]="true false"
+    operation_parameters_enum_values["templatesServiceGetTemplatesForEdge::include_integration_name"]="true false"
+    operation_parameters_enum_values["templatesServiceGetTemplatesForEdge::transform_to_gdp_format"]="true false"
 
     #
     # Check if this is OSX and use special __osx_init_completion function

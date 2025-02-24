@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.list_data_stores200_response import ListDataStores200Response
+from ibm_gdsc_sdk_saas.models.list_data_stores200_response import ListDataStores200Response
 
 class TestListDataStores200Response(unittest.TestCase):
     """ListDataStores200Response unit test stubs"""
@@ -36,11 +36,11 @@ class TestListDataStores200Response(unittest.TestCase):
         if include_optional:
             return ListDataStores200Response(
                 results = [
-                    ibm_gdsc_sdk_software.models.data_store.DataStore(
+                    ibm_gdsc_sdk_saas.models.data_store.DataStore(
                         data_store_id = 'arn:aws:s3::123456789101:mys3-prod', 
                         data_store_type = 'ec2-instance', 
                         data_store_name = 'i-04ecec8c06b901234', 
-                        cloud_account_details = ibm_gdsc_sdk_software.models.cloud_account_details.CloudAccountDetails(
+                        cloud_account_details = ibm_gdsc_sdk_saas.models.cloud_account_details.CloudAccountDetails(
                             cloud_account_id = '123456789101', 
                             cloud_account_name = 'corplex', 
                             service_provider = 'aws', ), 
@@ -49,38 +49,38 @@ class TestListDataStores200Response(unittest.TestCase):
                         classification_status = 'CLASSIFIED', 
                         encryption_status = 'CLOUD_PROVIDER', 
                         custom_data = [
-                            ibm_gdsc_sdk_software.models.string_key_value.StringKeyValue(
+                            ibm_gdsc_sdk_saas.models.string_key_value.StringKeyValue(
                                 key = 'Component', 
                                 value = 'Testing', )
                             ], 
                         label = 'test', 
                         data_custodian = 'Avi', 
                         cloud_tags = [
-                            ibm_gdsc_sdk_software.models.string_key_value.StringKeyValue(
+                            ibm_gdsc_sdk_saas.models.string_key_value.StringKeyValue(
                                 key = 'Component', 
                                 value = 'Testing', )
                             ], 
                         is_backed_up = False, 
                         managed = True, 
                         vpc_id = 'arn:aws:ec2:eu-west-3:123456789101:vpc/vpc-8629fcee', 
-                        stats = ibm_gdsc_sdk_software.models.data_store_stats.DataStoreStats(
+                        stats = ibm_gdsc_sdk_saas.models.data_store_stats.DataStoreStats(
                             resources_count = 102, 
                             app_flows_count = 3, 
                             config_flows_count = 63, 
                             sensitivities_count = 70, 
                             user_access_count = 1.337, 
                             sensitivities_summary = [
-                                ibm_gdsc_sdk_software.models.sensitivity_summary.SensitivitySummary(
+                                ibm_gdsc_sdk_saas.models.sensitivity_summary.SensitivitySummary(
                                     tag = 'BUSINESS_EMAIL_ADDRESS', 
                                     count = 230, 
                                     category = 'Personal', )
                                 ], 
                             vulnerabilities_summary = [
-                                ibm_gdsc_sdk_software.models.vulnerabilities_criticality_count_inner.VulnerabilitiesCriticalityCount_inner(
+                                ibm_gdsc_sdk_saas.models.vulnerabilities_criticality_count_inner.VulnerabilitiesCriticalityCount_inner(
                                     criticality = 'HIGH', 
                                     count = 5, )
                                 ], ), 
-                        source = ibm_gdsc_sdk_software.models.data_store_source.DataStoreSource(
+                        source = ibm_gdsc_sdk_saas.models.data_store_source.DataStoreSource(
                             id = '151193111234', 
                             name = 'corplex', ), 
                         data_store_url = 'https://console.aws.amazon.com/ec2/v2/home?region=eu-west-3#InstanceDetails:instanceId=i-04abcd123456788', 

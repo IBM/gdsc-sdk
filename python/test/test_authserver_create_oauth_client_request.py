@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.authserver_create_oauth_client_request import AuthserverCreateOauthClientRequest
+from ibm_gdsc_sdk_saas.models.authserver_create_oauth_client_request import AuthserverCreateOauthClientRequest
 
 class TestAuthserverCreateOauthClientRequest(unittest.TestCase):
     """AuthserverCreateOauthClientRequest unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticsdataprocessorv3_get_risk_predefined_questions_response import Riskanalyticsdataprocessorv3GetRiskPredefinedQuestionsResponse
+from ibm_gdsc_sdk_saas.models.riskanalyticsdataprocessorv3_get_risk_predefined_questions_response import Riskanalyticsdataprocessorv3GetRiskPredefinedQuestionsResponse
 
 class TestRiskanalyticsdataprocessorv3GetRiskPredefinedQuestionsResponse(unittest.TestCase):
     """Riskanalyticsdataprocessorv3GetRiskPredefinedQuestionsResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestRiskanalyticsdataprocessorv3GetRiskPredefinedQuestionsResponse(unittes
         if include_optional:
             return Riskanalyticsdataprocessorv3GetRiskPredefinedQuestionsResponse(
                 questions = [
-                    ibm_gdsc_sdk_software.models.riskanalyticsdataprocessorv3_question.riskanalyticsdataprocessorv3Question(
+                    ibm_gdsc_sdk_saas.models.riskanalyticsdataprocessorv3_question.riskanalyticsdataprocessorv3Question(
                         question = '', 
                         type = '', 
                         value_to_analyst = 56, )

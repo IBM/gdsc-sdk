@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.tenant_info import TenantInfo
+from ibm_gdsc_sdk_saas.models.tenant_info import TenantInfo
 
 class TestTenantInfo(unittest.TestCase):
     """TenantInfo unit test stubs"""

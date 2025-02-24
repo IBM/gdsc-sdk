@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.schedulerv3_search_scheduled_task_runs_request import Schedulerv3SearchScheduledTaskRunsRequest
+from ibm_gdsc_sdk_saas.models.schedulerv3_search_scheduled_task_runs_request import Schedulerv3SearchScheduledTaskRunsRequest
 
 class TestSchedulerv3SearchScheduledTaskRunsRequest(unittest.TestCase):
     """Schedulerv3SearchScheduledTaskRunsRequest unit test stubs"""

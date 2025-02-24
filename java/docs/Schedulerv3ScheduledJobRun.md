@@ -14,6 +14,7 @@
 |**queryFrom** | **String** |  |  [optional] |
 |**queryTo** | **String** |  |  [optional] |
 |**queueTime** | **OffsetDateTime** |  |  [optional] |
+|**resultSize** | **Long** |  |  [optional] |
 |**runDetail** | **String** |  |  [optional] |
 |**scheduleId** | **String** |  |  [optional] |
 |**startTime** | **OffsetDateTime** |  |  [optional] |

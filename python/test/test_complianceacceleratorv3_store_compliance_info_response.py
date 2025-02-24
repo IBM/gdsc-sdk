@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.complianceacceleratorv3_store_compliance_info_response import Complianceacceleratorv3StoreComplianceInfoResponse
+from ibm_gdsc_sdk_saas.models.complianceacceleratorv3_store_compliance_info_response import Complianceacceleratorv3StoreComplianceInfoResponse
 
 class TestComplianceacceleratorv3StoreComplianceInfoResponse(unittest.TestCase):
     """Complianceacceleratorv3StoreComplianceInfoResponse unit test stubs"""
@@ -35,7 +35,7 @@ class TestComplianceacceleratorv3StoreComplianceInfoResponse(unittest.TestCase):
         model = Complianceacceleratorv3StoreComplianceInfoResponse()
         if include_optional:
             return Complianceacceleratorv3StoreComplianceInfoResponse(
-                status = ibm_gdsc_sdk_software.models.complianceacceleratorv3_status_response_base.complianceacceleratorv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.complianceacceleratorv3_status_response_base.complianceacceleratorv3StatusResponseBase(
                     message = '', 
                     status = '', ),
                 workspace_id = ''

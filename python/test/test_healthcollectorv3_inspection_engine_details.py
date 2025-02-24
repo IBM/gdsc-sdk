@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.healthcollectorv3_inspection_engine_details import Healthcollectorv3InspectionEngineDetails
+from ibm_gdsc_sdk_saas.models.healthcollectorv3_inspection_engine_details import Healthcollectorv3InspectionEngineDetails
 
 class TestHealthcollectorv3InspectionEngineDetails(unittest.TestCase):
     """Healthcollectorv3InspectionEngineDetails unit test stubs"""

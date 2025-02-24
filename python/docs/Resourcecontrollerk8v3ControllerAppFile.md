@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_controller_app_file import Resourcecontrollerk8v3ControllerAppFile
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_controller_app_file import Resourcecontrollerk8v3ControllerAppFile
 
 # TODO update the JSON string below
 json = "{}"

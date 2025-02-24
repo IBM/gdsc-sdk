@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_controller_heartbeat import Resourcecontrollerk8v3ControllerHeartbeat
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_controller_heartbeat import Resourcecontrollerk8v3ControllerHeartbeat
 
 class TestResourcecontrollerk8v3ControllerHeartbeat(unittest.TestCase):
     """Resourcecontrollerk8v3ControllerHeartbeat unit test stubs"""
@@ -39,13 +39,13 @@ class TestResourcecontrollerk8v3ControllerHeartbeat(unittest.TestCase):
                     'key' : True
                     },
                 controller_id = '',
-                controller_version = ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_version.resourcecontrollerk8v3Version(
+                controller_version = ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_version.resourcecontrollerk8v3Version(
                     build = '', 
                     major = '', 
                     micro = '', 
                     minor = '', 
                     version = '', ),
-                resources = ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_controller_resources.resourcecontrollerk8v3ControllerResources(
+                resources = ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_controller_resources.resourcecontrollerk8v3ControllerResources(
                     allocatable = {
                         'key' : ''
                         }, 

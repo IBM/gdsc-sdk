@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.schedulerv3_configuration_item import Schedulerv3ConfigurationItem
+from ibm_gdsc_sdk_saas.models.schedulerv3_configuration_item import Schedulerv3ConfigurationItem
 
 class TestSchedulerv3ConfigurationItem(unittest.TestCase):
     """Schedulerv3ConfigurationItem unit test stubs"""

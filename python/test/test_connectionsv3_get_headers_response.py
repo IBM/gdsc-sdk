@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_get_headers_response import Connectionsv3GetHeadersResponse
+from ibm_gdsc_sdk_saas.models.connectionsv3_get_headers_response import Connectionsv3GetHeadersResponse
 
 class TestConnectionsv3GetHeadersResponse(unittest.TestCase):
     """Connectionsv3GetHeadersResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestConnectionsv3GetHeadersResponse(unittest.TestCase):
         if include_optional:
             return Connectionsv3GetHeadersResponse(
                 headers = [
-                    ibm_gdsc_sdk_software.models.connectionsv3_connector_header.connectionsv3ConnectorHeader(
+                    ibm_gdsc_sdk_saas.models.connectionsv3_connector_header.connectionsv3ConnectorHeader(
                         id = '', 
                         is_default = True, 
                         is_editable = True, 

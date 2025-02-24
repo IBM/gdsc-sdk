@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.add_jira_integration_parameters_request import AddJiraIntegrationParametersRequest
+from ibm_gdsc_sdk_saas.models.add_jira_integration_parameters_request import AddJiraIntegrationParametersRequest
 
 class TestAddJiraIntegrationParametersRequest(unittest.TestCase):
     """AddJiraIntegrationParametersRequest unit test stubs"""

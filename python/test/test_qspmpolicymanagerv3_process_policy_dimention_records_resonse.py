@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.qspmpolicymanagerv3_process_policy_dimention_records_resonse import Qspmpolicymanagerv3ProcessPolicyDimentionRecordsResonse
+from ibm_gdsc_sdk_saas.models.qspmpolicymanagerv3_process_policy_dimention_records_resonse import Qspmpolicymanagerv3ProcessPolicyDimentionRecordsResonse
 
 class TestQspmpolicymanagerv3ProcessPolicyDimentionRecordsResonse(unittest.TestCase):
     """Qspmpolicymanagerv3ProcessPolicyDimentionRecordsResonse unit test stubs"""

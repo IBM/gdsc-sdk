@@ -16,12 +16,12 @@ Summary: Load data Description: Load data for a tenant.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.DatabootstrapperServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.DatabootstrapperServiceApi;
 
 public class Example {
   public static void main(String[] args) {

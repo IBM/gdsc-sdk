@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.outliers_engine_api import OutliersEngineApi
+from ibm_gdsc_sdk_saas.api.outliers_engine_api import OutliersEngineApi
 
 
 class TestOutliersEngineApi(unittest.TestCase):

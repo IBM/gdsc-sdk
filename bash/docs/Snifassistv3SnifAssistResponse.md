@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**batchUnderscorenum** | **string** |  | [optional] [default to null]
 **data** | **string** |  | [optional] [default to null]
 **dataUnderscorecrc** | **integer** |  | [optional] [default to null]
 **stapUnderscoreid** | **string** |  | [optional] [default to null]

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_health_type import Assetsv3HealthType
+from ibm_gdsc_sdk_saas.models.assetsv3_health_type import Assetsv3HealthType
 
 class TestAssetsv3HealthType(unittest.TestCase):
     """Assetsv3HealthType unit test stubs"""

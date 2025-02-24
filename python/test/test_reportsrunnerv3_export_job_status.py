@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_export_job_status import Reportsrunnerv3ExportJobStatus
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_export_job_status import Reportsrunnerv3ExportJobStatus
 
 class TestReportsrunnerv3ExportJobStatus(unittest.TestCase):
     """Reportsrunnerv3ExportJobStatus unit test stubs"""

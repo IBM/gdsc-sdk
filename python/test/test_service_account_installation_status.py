@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.service_account_installation_status import ServiceAccountInstallationStatus
+from ibm_gdsc_sdk_saas.models.service_account_installation_status import ServiceAccountInstallationStatus
 
 class TestServiceAccountInstallationStatus(unittest.TestCase):
     """ServiceAccountInstallationStatus unit test stubs"""

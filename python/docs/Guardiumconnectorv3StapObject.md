@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_stap_object import Guardiumconnectorv3StapObject
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_stap_object import Guardiumconnectorv3StapObject
 
 # TODO update the JSON string below
 json = "{}"

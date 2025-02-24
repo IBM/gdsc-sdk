@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_get_receivers_response import Policybuilderv3GetReceiversResponse
+from ibm_gdsc_sdk_saas.models.policybuilderv3_get_receivers_response import Policybuilderv3GetReceiversResponse
 
 class TestPolicybuilderv3GetReceiversResponse(unittest.TestCase):
     """Policybuilderv3GetReceiversResponse unit test stubs"""
@@ -36,17 +36,17 @@ class TestPolicybuilderv3GetReceiversResponse(unittest.TestCase):
         if include_optional:
             return Policybuilderv3GetReceiversResponse(
                 action_notification_object = [
-                    ibm_gdsc_sdk_software.models.policybuilderv3_action_notification_object.policybuilderv3ActionNotificationObject(
+                    ibm_gdsc_sdk_saas.models.policybuilderv3_action_notification_object.policybuilderv3ActionNotificationObject(
                         action_id = '', 
                         receivers = [
-                            ibm_gdsc_sdk_software.models.policybuilderv3_target_receiver.policybuilderv3TargetReceiver(
+                            ibm_gdsc_sdk_saas.models.policybuilderv3_target_receiver.policybuilderv3TargetReceiver(
                                 integration_id = '', 
                                 template_id = '', 
                                 type = 'UNDEFINED_RECTYPE', 
                                 value = '', )
                             ], )
                     ],
-                status = ibm_gdsc_sdk_software.models.policybuilderv3_status_response_base.policybuilderv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.policybuilderv3_status_response_base.policybuilderv3StatusResponseBase(
                     message = '', 
                     status = '', )
             )

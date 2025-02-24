@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_create_variant_request import Reportsv3CreateVariantRequest
+from ibm_gdsc_sdk_saas.models.reportsv3_create_variant_request import Reportsv3CreateVariantRequest
 
 class TestReportsv3CreateVariantRequest(unittest.TestCase):
     """Reportsv3CreateVariantRequest unit test stubs"""
@@ -37,7 +37,7 @@ class TestReportsv3CreateVariantRequest(unittest.TestCase):
             return Reportsv3CreateVariantRequest(
                 header_id = '',
                 rules = [
-                    ibm_gdsc_sdk_software.models.variant_rule_describes_a_given_variant_rule.VariantRule describes a given variant rule(
+                    ibm_gdsc_sdk_saas.models.variant_rule_describes_a_given_variant_rule.VariantRule describes a given variant rule(
                         action_if_type = 'UNDEFINED_VARIANT_ACTION_IF', 
                         delimiter = '', 
                         extract_value = '', 

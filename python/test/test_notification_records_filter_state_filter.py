@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.notification_records_filter_state_filter import NotificationRecordsFilterStateFilter
+from ibm_gdsc_sdk_saas.models.notification_records_filter_state_filter import NotificationRecordsFilterStateFilter
 
 class TestNotificationRecordsFilterStateFilter(unittest.TestCase):
     """NotificationRecordsFilterStateFilter unit test stubs"""

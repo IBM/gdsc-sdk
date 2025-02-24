@@ -2,7 +2,7 @@
 
 # Guardiumconnectorv3SetupCMRequest
 
-SetupCMRequest is the argument type used to register a GDP Central Manager to Guardium.
+SetupCMRequest is the argument type used to register a GDP Central Manager to GDSC.
 
 ## Properties
 

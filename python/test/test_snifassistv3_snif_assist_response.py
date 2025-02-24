@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.snifassistv3_snif_assist_response import Snifassistv3SnifAssistResponse
+from ibm_gdsc_sdk_saas.models.snifassistv3_snif_assist_response import Snifassistv3SnifAssistResponse
 
 class TestSnifassistv3SnifAssistResponse(unittest.TestCase):
     """Snifassistv3SnifAssistResponse unit test stubs"""
@@ -35,6 +35,7 @@ class TestSnifassistv3SnifAssistResponse(unittest.TestCase):
         model = Snifassistv3SnifAssistResponse()
         if include_optional:
             return Snifassistv3SnifAssistResponse(
+                batch_num = '',
                 data = 'YQ==',
                 data_crc = 56,
                 stap_id = '',

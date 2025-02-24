@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.set_data_store_label_request import SetDataStoreLabelRequest
+from ibm_gdsc_sdk_saas.models.set_data_store_label_request import SetDataStoreLabelRequest
 
 class TestSetDataStoreLabelRequest(unittest.TestCase):
     """SetDataStoreLabelRequest unit test stubs"""

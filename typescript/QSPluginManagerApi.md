@@ -39,7 +39,6 @@ let body:.QSPluginManagerApiQSPluginManagerInvokeAppProvRequest = {
     runForAllScans: true,
     scanDesc: "scanDesc_example",
     scanId: "scanId_example",
-    scanType: "scanType_example",
     userEmail: "userEmail_example",
   },
 };
@@ -108,7 +107,6 @@ let body:.QSPluginManagerApiQSPluginManagerInvokeExplorerV1Request = {
     runForAllScans: true,
     scanDesc: "scanDesc_example",
     scanId: "scanId_example",
-    scanType: "scanType_example",
     userEmail: "userEmail_example",
   },
 };
@@ -177,7 +175,6 @@ let body:.QSPluginManagerApiQSPluginManagerInvokeExplorerV2Request = {
     runForAllScans: true,
     scanDesc: "scanDesc_example",
     scanId: "scanId_example",
-    scanType: "scanType_example",
     userEmail: "userEmail_example",
   },
 };
@@ -246,7 +243,6 @@ let body:.QSPluginManagerApiQSPluginManagerInvokePluginRequest = {
     runForAllScans: true,
     scanDesc: "scanDesc_example",
     scanId: "scanId_example",
-    scanType: "scanType_example",
     userEmail: "userEmail_example",
   },
 };
@@ -314,7 +310,6 @@ let body:.QSPluginManagerApiQSPluginManagerInvokePolicyRequest = {
     runForAllScans: true,
     scanDesc: "scanDesc_example",
     scanId: "scanId_example",
-    scanType: "scanType_example",
     userEmail: "userEmail_example",
   },
 };

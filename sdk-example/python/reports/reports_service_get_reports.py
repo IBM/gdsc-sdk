@@ -1,13 +1,13 @@
 import time
 import os
-import ibm_gdsc_sdk_software
-from ibm_gdsc_sdk_software.models.reportsv3_get_reports_response import Reportsv3GetReportsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas
+from ibm_gdsc_sdk_saas.models.reportsv3_get_reports_response import Reportsv3GetReportsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-# configuration = ibm_gdsc_sdk_software.Configuration(
+# configuration = ibm_gdsc_sdk_saas.Configuration(
 #     host = ""
 # )
 
@@ -18,7 +18,7 @@ from pprint import pprint
 # APIKEY=os.environ['APIKEY']
 # SECRET=os.environ['SECRET']
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = os.environ['URL'],
     username = os.environ['API_USERNAME'],
     password = os.environ['API_PASSWORD']
@@ -30,9 +30,9 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
     category_id = '000000000000000000000005' # str | Optional Category ID parameter. (optional)
     table_name = '' # str | Optional table name parameter. (optional)
 

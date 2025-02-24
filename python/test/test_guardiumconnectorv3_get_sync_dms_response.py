@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_get_sync_dms_response import Guardiumconnectorv3GetSyncDMsResponse
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_get_sync_dms_response import Guardiumconnectorv3GetSyncDMsResponse
 
 class TestGuardiumconnectorv3GetSyncDMsResponse(unittest.TestCase):
     """Guardiumconnectorv3GetSyncDMsResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestGuardiumconnectorv3GetSyncDMsResponse(unittest.TestCase):
         if include_optional:
             return Guardiumconnectorv3GetSyncDMsResponse(
                 params = [
-                    ibm_gdsc_sdk_software.models.guardiumconnectorv3_params.guardiumconnectorv3Params(
+                    ibm_gdsc_sdk_saas.models.guardiumconnectorv3_params.guardiumconnectorv3Params(
                         param_name = '', 
                         param_value = '', )
                     ]

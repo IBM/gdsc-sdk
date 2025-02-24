@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.workflowv3_filter import Workflowv3Filter
+from ibm_gdsc_sdk_saas.models.workflowv3_filter import Workflowv3Filter
 
 class TestWorkflowv3Filter(unittest.TestCase):
     """Workflowv3Filter unit test stubs"""
@@ -42,7 +42,7 @@ class TestWorkflowv3Filter(unittest.TestCase):
                 date_due = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 date_due_operator = 'IGNORE',
                 filter_columns = [
-                    ibm_gdsc_sdk_software.models.workflowv3_filter_column.workflowv3FilterColumn(
+                    ibm_gdsc_sdk_saas.models.workflowv3_filter_column.workflowv3FilterColumn(
                         header_name = '', 
                         operator_type = 'UNDEFINED_OPERATOR_TYPE', 
                         values = [

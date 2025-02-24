@@ -12,13 +12,13 @@ Name | Type | Description | Notes
 **nls_id** | **str** |  | [optional] 
 **privilege_id** | **str** | Permanent id of the privilege. | [optional] 
 **removable** | **bool** | All pre-defined privileges are not removable. | [optional] 
-**roles** | **List[str]** | The array of Insights roles that this privilege belongs to. | [optional] 
+**roles** | **List[str]** | The array of GDSC roles that this privilege belongs to. | [optional] 
 **type** | **str** | Type of privilege: report, classification, group, page, restapi, etc. | [optional] 
 
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.tenantuserv3_privilege import Tenantuserv3Privilege
+from ibm_gdsc_sdk_saas.models.tenantuserv3_privilege import Tenantuserv3Privilege
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_chart_settings import Reportsv3ChartSettings
+from ibm_gdsc_sdk_saas.models.reportsv3_chart_settings import Reportsv3ChartSettings
 
 class TestReportsv3ChartSettings(unittest.TestCase):
     """Reportsv3ChartSettings unit test stubs"""

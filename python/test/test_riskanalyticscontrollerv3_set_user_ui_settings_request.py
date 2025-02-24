@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_set_user_ui_settings_request import Riskanalyticscontrollerv3SetUserUISettingsRequest
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_set_user_ui_settings_request import Riskanalyticscontrollerv3SetUserUISettingsRequest
 
 class TestRiskanalyticscontrollerv3SetUserUISettingsRequest(unittest.TestCase):
     """Riskanalyticscontrollerv3SetUserUISettingsRequest unit test stubs"""
@@ -35,11 +35,11 @@ class TestRiskanalyticscontrollerv3SetUserUISettingsRequest(unittest.TestCase):
         model = Riskanalyticscontrollerv3SetUserUISettingsRequest()
         if include_optional:
             return Riskanalyticscontrollerv3SetUserUISettingsRequest(
-                user_ui_settings = ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_user_ui_settings.riskanalyticscontrollerv3UserUISettings(
+                user_ui_settings = ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_user_ui_settings.riskanalyticscontrollerv3UserUISettings(
                     card_settings = [
-                        ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_card_settings.riskanalyticscontrollerv3CardSettings(
+                        ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_card_settings.riskanalyticscontrollerv3CardSettings(
                             filters = [
-                                ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_filter.riskanalyticscontrollerv3Filter(
+                                ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_filter.riskanalyticscontrollerv3Filter(
                                     header_id = '', 
                                     values = [
                                         ''

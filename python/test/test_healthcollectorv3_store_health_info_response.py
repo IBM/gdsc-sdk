@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.healthcollectorv3_store_health_info_response import Healthcollectorv3StoreHealthInfoResponse
+from ibm_gdsc_sdk_saas.models.healthcollectorv3_store_health_info_response import Healthcollectorv3StoreHealthInfoResponse
 
 class TestHealthcollectorv3StoreHealthInfoResponse(unittest.TestCase):
     """Healthcollectorv3StoreHealthInfoResponse unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.schedulerv3_get_schedules_by_report_request import Schedulerv3GetSchedulesByReportRequest
+from ibm_gdsc_sdk_saas.models.schedulerv3_get_schedules_by_report_request import Schedulerv3GetSchedulesByReportRequest
 
 class TestSchedulerv3GetSchedulesByReportRequest(unittest.TestCase):
     """Schedulerv3GetSchedulesByReportRequest unit test stubs"""

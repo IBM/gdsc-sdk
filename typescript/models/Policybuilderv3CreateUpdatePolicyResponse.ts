@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { Policybuilderv3EdgeActivationObject } from '../models/Policybuilderv3EdgeActivationObject';
 import { Policybuilderv3Rule } from '../models/Policybuilderv3Rule';
 import { Policybuilderv3StatusResponseBase } from '../models/Policybuilderv3StatusResponseBase';
 import { HttpFile } from '../http/http';
@@ -22,6 +23,7 @@ export class Policybuilderv3CreateUpdatePolicyResponse {
     * activation_status identifier: 1001 -> install with no issues, 1002-> installed with issues, 1003 -> not installed.
     */
     'activationStatus'?: number;
+    'edgeActivationInfo'?: Policybuilderv3EdgeActivationObject;
     /**
     * Flag to indicate whether policy is installed or not.
     */
@@ -48,6 +50,12 @@ export class Policybuilderv3CreateUpdatePolicyResponse {
             "baseName": "activation_status",
             "type": "number",
             "format": "int32"
+        },
+        {
+            "name": "edgeActivationInfo",
+            "baseName": "edge_activation_info",
+            "type": "Policybuilderv3EdgeActivationObject",
+            "format": ""
         },
         {
             "name": "installedFlag",

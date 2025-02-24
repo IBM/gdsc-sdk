@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.groupbuilderv3_get_export_group_response import Groupbuilderv3GetExportGroupResponse
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_get_export_group_response import Groupbuilderv3GetExportGroupResponse
 
 class TestGroupbuilderv3GetExportGroupResponse(unittest.TestCase):
     """Groupbuilderv3GetExportGroupResponse unit test stubs"""
@@ -35,7 +35,7 @@ class TestGroupbuilderv3GetExportGroupResponse(unittest.TestCase):
         model = Groupbuilderv3GetExportGroupResponse()
         if include_optional:
             return Groupbuilderv3GetExportGroupResponse(
-                status = ibm_gdsc_sdk_software.models.groupbuilderv3_status_response_base.groupbuilderv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.groupbuilderv3_status_response_base.groupbuilderv3StatusResponseBase(
                     message = '', 
                     status = '', )
             )

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.universalconnectormanagerv3_datasource_type import Universalconnectormanagerv3DatasourceType
+from ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_datasource_type import Universalconnectormanagerv3DatasourceType
 
 class TestUniversalconnectormanagerv3DatasourceType(unittest.TestCase):
     """Universalconnectormanagerv3DatasourceType unit test stubs"""

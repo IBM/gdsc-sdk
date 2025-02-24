@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.templatesv3_default_content import Templatesv3DefaultContent
+from ibm_gdsc_sdk_saas.models.templatesv3_default_content import Templatesv3DefaultContent
 
 class TestTemplatesv3DefaultContent(unittest.TestCase):
     """Templatesv3DefaultContent unit test stubs"""

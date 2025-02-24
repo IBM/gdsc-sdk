@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.dashboardsv3_create_dashboard_response import Dashboardsv3CreateDashboardResponse
+from ibm_gdsc_sdk_saas.models.dashboardsv3_create_dashboard_response import Dashboardsv3CreateDashboardResponse
 
 class TestDashboardsv3CreateDashboardResponse(unittest.TestCase):
     """Dashboardsv3CreateDashboardResponse unit test stubs"""

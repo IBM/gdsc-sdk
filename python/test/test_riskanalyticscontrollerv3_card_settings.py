@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_card_settings import Riskanalyticscontrollerv3CardSettings
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_card_settings import Riskanalyticscontrollerv3CardSettings
 
 class TestRiskanalyticscontrollerv3CardSettings(unittest.TestCase):
     """Riskanalyticscontrollerv3CardSettings unit test stubs"""
@@ -36,7 +36,7 @@ class TestRiskanalyticscontrollerv3CardSettings(unittest.TestCase):
         if include_optional:
             return Riskanalyticscontrollerv3CardSettings(
                 filters = [
-                    ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_filter.riskanalyticscontrollerv3Filter(
+                    ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_filter.riskanalyticscontrollerv3Filter(
                         header_id = '', 
                         values = [
                             ''

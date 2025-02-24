@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.get_report_groups_response_report_groups import GetReportGroupsResponseReportGroups
+from ibm_gdsc_sdk_saas.models.get_report_groups_response_report_groups import GetReportGroupsResponseReportGroups
 
 class TestGetReportGroupsResponseReportGroups(unittest.TestCase):
     """GetReportGroupsResponseReportGroups unit test stubs"""
@@ -37,7 +37,7 @@ class TestGetReportGroupsResponseReportGroups(unittest.TestCase):
             return GetReportGroupsResponseReportGroups(
                 group_id = '',
                 reports = [
-                    ibm_gdsc_sdk_software.models.report_groups_report.ReportGroupsReport(
+                    ibm_gdsc_sdk_saas.models.report_groups_report.ReportGroupsReport(
                         report_id = '', 
                         report_name = '', )
                     ]

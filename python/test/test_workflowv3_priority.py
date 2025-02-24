@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.workflowv3_priority import Workflowv3Priority
+from ibm_gdsc_sdk_saas.models.workflowv3_priority import Workflowv3Priority
 
 class TestWorkflowv3Priority(unittest.TestCase):
     """Workflowv3Priority unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_controller_status import Resourcecontrollerk8v3ControllerStatus
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_controller_status import Resourcecontrollerk8v3ControllerStatus
 
 class TestResourcecontrollerk8v3ControllerStatus(unittest.TestCase):
     """Resourcecontrollerk8v3ControllerStatus unit test stubs"""
@@ -38,7 +38,7 @@ class TestResourcecontrollerk8v3ControllerStatus(unittest.TestCase):
                 id = '',
                 modified = '',
                 status = '',
-                version = ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_version.resourcecontrollerk8v3Version(
+                version = ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_version.resourcecontrollerk8v3Version(
                     build = '', 
                     major = '', 
                     micro = '', 

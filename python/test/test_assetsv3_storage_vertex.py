@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_storage_vertex import Assetsv3StorageVertex
+from ibm_gdsc_sdk_saas.models.assetsv3_storage_vertex import Assetsv3StorageVertex
 
 class TestAssetsv3StorageVertex(unittest.TestCase):
     """Assetsv3StorageVertex unit test stubs"""
@@ -41,7 +41,7 @@ class TestAssetsv3StorageVertex(unittest.TestCase):
                 data_center = '',
                 dns = '',
                 extended_properties = [
-                    ibm_gdsc_sdk_software.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
+                    ibm_gdsc_sdk_saas.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
                         data_type = '', 
                         key = '', 
                         value = '', )
@@ -56,26 +56,26 @@ class TestAssetsv3StorageVertex(unittest.TestCase):
                 size = '',
                 state = '',
                 storage_account = [
-                    ibm_gdsc_sdk_software.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
+                    ibm_gdsc_sdk_saas.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
                         identifier = '', )
                     ],
                 storage_host = [
-                    ibm_gdsc_sdk_software.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
+                    ibm_gdsc_sdk_saas.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
                         identifier = '', )
                     ],
                 storage_id = '',
                 storage_ip = [
-                    ibm_gdsc_sdk_software.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
+                    ibm_gdsc_sdk_saas.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
                         identifier = '', )
                     ],
                 storage_name = '',
                 storage_resources = [
-                    ibm_gdsc_sdk_software.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
+                    ibm_gdsc_sdk_saas.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
                         identifier = '', )
                     ],
                 storage_sub_type = '',
                 storage_subscription = [
-                    ibm_gdsc_sdk_software.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
+                    ibm_gdsc_sdk_saas.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
                         identifier = '', )
                     ],
                 storage_type = ''

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_install_policies_request import Policybuilderv3InstallPoliciesRequest
+from ibm_gdsc_sdk_saas.models.policybuilderv3_install_policies_request import Policybuilderv3InstallPoliciesRequest
 
 class TestPolicybuilderv3InstallPoliciesRequest(unittest.TestCase):
     """Policybuilderv3InstallPoliciesRequest unit test stubs"""
@@ -37,7 +37,8 @@ class TestPolicybuilderv3InstallPoliciesRequest(unittest.TestCase):
             return Policybuilderv3InstallPoliciesRequest(
                 perform_installation = True,
                 policy_list = [
-                    ibm_gdsc_sdk_software.models.policybuilderv3_installation_and_sequence_object.policybuilderv3InstallationAndSequenceObject(
+                    ibm_gdsc_sdk_saas.models.policybuilderv3_installation_and_sequence_object.policybuilderv3InstallationAndSequenceObject(
+                        edge_identifier = '', 
                         installation_sequence = 56, 
                         policy_id = '', 
                         ui_sequence = 56, )

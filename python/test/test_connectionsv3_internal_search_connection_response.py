@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_internal_search_connection_response import Connectionsv3InternalSearchConnectionResponse
+from ibm_gdsc_sdk_saas.models.connectionsv3_internal_search_connection_response import Connectionsv3InternalSearchConnectionResponse
 
 class TestConnectionsv3InternalSearchConnectionResponse(unittest.TestCase):
     """Connectionsv3InternalSearchConnectionResponse unit test stubs"""
@@ -37,9 +37,9 @@ class TestConnectionsv3InternalSearchConnectionResponse(unittest.TestCase):
             return Connectionsv3InternalSearchConnectionResponse(
                 status = 56,
                 connectors = [
-                    ibm_gdsc_sdk_software.models.connectionsv3_connector.connectionsv3Connector(
+                    ibm_gdsc_sdk_saas.models.connectionsv3_connector.connectionsv3Connector(
                         columns = [
-                            ibm_gdsc_sdk_software.models.connectionsv3_connector_column.connectionsv3ConnectorColumn(
+                            ibm_gdsc_sdk_saas.models.connectionsv3_connector_column.connectionsv3ConnectorColumn(
                                 id = '', 
                                 values = [
                                     ''

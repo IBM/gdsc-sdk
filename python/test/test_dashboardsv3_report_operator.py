@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.dashboardsv3_report_operator import Dashboardsv3ReportOperator
+from ibm_gdsc_sdk_saas.models.dashboardsv3_report_operator import Dashboardsv3ReportOperator
 
 class TestDashboardsv3ReportOperator(unittest.TestCase):
     """Dashboardsv3ReportOperator unit test stubs"""

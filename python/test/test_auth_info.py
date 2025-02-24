@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.auth_info import AuthInfo
+from ibm_gdsc_sdk_saas.models.auth_info import AuthInfo
 
 class TestAuthInfo(unittest.TestCase):
     """AuthInfo unit test stubs"""

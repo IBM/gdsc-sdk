@@ -21,12 +21,12 @@ Summary: Create Oauth client Description: Create/register new Oauth client.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.AuthServerServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.AuthServerServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -94,12 +94,12 @@ Summary: Delete Oauth client Description: Delete registered Oauth client by clie
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.AuthServerServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.AuthServerServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -167,12 +167,12 @@ Summary: Get access token Description: Get access token from passed clientId and
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.AuthServerServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.AuthServerServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -230,12 +230,12 @@ Summary: Get Oauth client Description: Get registered Oauth client by clientId.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.AuthServerServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.AuthServerServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -303,12 +303,12 @@ Summary: Get user Description: Get user.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.AuthServerServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.AuthServerServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -372,12 +372,12 @@ Summary: List Oauth client Description: List all registered Oauth client.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.AuthServerServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.AuthServerServiceApi;
 
 public class Example {
   public static void main(String[] args) {

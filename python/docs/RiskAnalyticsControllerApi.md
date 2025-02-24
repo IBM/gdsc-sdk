@@ -1,4 +1,4 @@
-# ibm_gdsc_sdk_software.RiskAnalyticsControllerApi
+# ibm_gdsc_sdk_saas.RiskAnalyticsControllerApi
 
 All URIs are relative to *http://localhost*
 
@@ -7,18 +7,18 @@ Method | HTTP request | Description
 [**risk_analytics_controller_enable_disable_risk_event_feedback**](RiskAnalyticsControllerApi.md#risk_analytics_controller_enable_disable_risk_event_feedback) | **PUT** /api/v3/risk_feedback/status | Summary: Enable disable risk rvent feedback Description: Enable or disable the collect feedback process.
 [**risk_analytics_controller_enable_disable_risk_event_process**](RiskAnalyticsControllerApi.md#risk_analytics_controller_enable_disable_risk_event_process) | **PUT** /api/v3/risk_process/status | Summary: Enable disable risk event process Description: Enable or disable the risk event process.
 [**risk_analytics_controller_get_all_classifications_list**](RiskAnalyticsControllerApi.md#risk_analytics_controller_get_all_classifications_list) | **GET** /api/v3/risk_events/classifications | Summary: Get all classifications Description: Get all possible classifications for a risk event.
-[**risk_analytics_controller_get_risk_event_classifications_list**](RiskAnalyticsControllerApi.md#risk_analytics_controller_get_risk_event_classifications_list) | **GET** /api/v3/risk_events/feedback/{risk_id} | Summary: Get risk event classifications list Description: retrieves the ClassificationMatchDetails for a given risk id – classification that did not matched will be with class_value 0.
-[**risk_analytics_controller_get_risk_event_data_for_summarization**](RiskAnalyticsControllerApi.md#risk_analytics_controller_get_risk_event_data_for_summarization) | **GET** /api/v3/risk_events/summarization/data/{risk_id} | Summary: Get risk event data needed for summarization task Description: Retrieve the full information about this risk event including all findings data
-[**risk_analytics_controller_get_risk_event_details**](RiskAnalyticsControllerApi.md#risk_analytics_controller_get_risk_event_details) | **GET** /api/v3/risk_events/details/{risk_id} | Summary: Get risk event details Description: Return the details of a risk event, including risk general info and a list of observations.
+[**risk_analytics_controller_get_risk_event_classifications_list**](RiskAnalyticsControllerApi.md#risk_analytics_controller_get_risk_event_classifications_list) | **GET** /api/v3/risk_events/{risk_id}/feedback | Summary: Get risk event classifications list Description: retrieves the ClassificationMatchDetails for a given risk id; classification that did not matched will be with class_value 0.
+[**risk_analytics_controller_get_risk_event_data_for_summarization**](RiskAnalyticsControllerApi.md#risk_analytics_controller_get_risk_event_data_for_summarization) | **GET** /api/v3/risk_events/{risk_id}/summarization/data | Summary: Get risk event data needed for summarization task Description: Retrieve the full information about this risk event including all findings data
+[**risk_analytics_controller_get_risk_event_details**](RiskAnalyticsControllerApi.md#risk_analytics_controller_get_risk_event_details) | **GET** /api/v3/risk_events/{risk_id}/details | Summary: Get risk event details Description: Return the details of a risk event, including risk general info and a list of observations.
 [**risk_analytics_controller_get_risk_event_process_status**](RiskAnalyticsControllerApi.md#risk_analytics_controller_get_risk_event_process_status) | **GET** /api/v3/risk_process/status | Summary: Get risk event process status Description: Get the risk event process status.
 [**risk_analytics_controller_get_risk_event_row**](RiskAnalyticsControllerApi.md#risk_analytics_controller_get_risk_event_row) | **GET** /api/v3/risk_events | Summary: Get risk event row Description: Return a list of risk events.
-[**risk_analytics_controller_get_risk_event_vulnerability_assessment_details**](RiskAnalyticsControllerApi.md#risk_analytics_controller_get_risk_event_vulnerability_assessment_details) | **PUT** /api/v3/risk_events/va/{risk_id} | Summary: Get vulnerability assessment details for a given risk event Description: Retrieve the information about failed VA tests for assets database and db user
+[**risk_analytics_controller_get_risk_event_vulnerability_assessment_details**](RiskAnalyticsControllerApi.md#risk_analytics_controller_get_risk_event_vulnerability_assessment_details) | **PUT** /api/v3/risk_events/{risk_id}/va | Summary: Get vulnerability assessment details for a given risk event Description: Retrieve the information about failed VA tests for assets database and db user
 [**risk_analytics_controller_get_risk_feedback**](RiskAnalyticsControllerApi.md#risk_analytics_controller_get_risk_feedback) | **GET** /api/v3/risk_events/feedback | Summary: Get risk feedback Description: Get all feedbacks that are in status NEW/WIP and change them to status WIP.
 [**risk_analytics_controller_get_risk_observation_details**](RiskAnalyticsControllerApi.md#risk_analytics_controller_get_risk_observation_details) | **GET** /api/v3/risk_events/observations | Summary: Get risk observation details Description: Return details of a single risk observation.
 [**risk_analytics_controller_get_user_ui_settings**](RiskAnalyticsControllerApi.md#risk_analytics_controller_get_user_ui_settings) | **GET** /api/v3/risk_events/user_ui_settings | Summary: Get user UI settings Description: Get the user settings by user id to display the risk in the UI.
 [**risk_analytics_controller_risk_event_tuning**](RiskAnalyticsControllerApi.md#risk_analytics_controller_risk_event_tuning) | **PUT** /api/v3/risk_events/tuning | Summary: Risk event tuning Description: Perform tuning risk event actions.
 [**risk_analytics_controller_set_risk_event_status**](RiskAnalyticsControllerApi.md#risk_analytics_controller_set_risk_event_status) | **PUT** /api/v3/risk_events/status | Summary: Set risk event status Description: Update the risk status and justification.
-[**risk_analytics_controller_set_user_ui_settings**](RiskAnalyticsControllerApi.md#risk_analytics_controller_set_user_ui_settings) | **PUT** /api/v3/risk_events/user_ui_settings | Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium.
+[**risk_analytics_controller_set_user_ui_settings**](RiskAnalyticsControllerApi.md#risk_analytics_controller_set_user_ui_settings) | **PUT** /api/v3/risk_events/user_ui_settings | Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to GDSC. Using this API to change a user settings may prevent the user from using the Risk Event function within GDSC.
 [**risk_analytics_controller_update_risk_feedback**](RiskAnalyticsControllerApi.md#risk_analytics_controller_update_risk_feedback) | **PUT** /api/v3/risk_events/feedback | Summary: Update risk feedback Description: Provide feedback for one or more risk events
 
 
@@ -33,15 +33,15 @@ Summary: Enable disable risk rvent feedback Description: Enable or disable the c
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_enable_disable_risk_event_feedback_request import Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_enable_disable_risk_event_feedback_response import Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_enable_disable_risk_event_feedback_request import Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_enable_disable_risk_event_feedback_response import Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -51,7 +51,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -63,10 +63,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.RiskAnalyticsControllerApi(api_client)
-    riskanalyticscontrollerv3_enable_disable_risk_event_feedback_request = ibm_gdsc_sdk_software.Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest() # Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest | 
+    api_instance = ibm_gdsc_sdk_saas.RiskAnalyticsControllerApi(api_client)
+    riskanalyticscontrollerv3_enable_disable_risk_event_feedback_request = ibm_gdsc_sdk_saas.Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest() # Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest | 
 
     try:
         # Summary: Enable disable risk rvent feedback Description: Enable or disable the collect feedback process.
@@ -119,15 +119,15 @@ Summary: Enable disable risk event process Description: Enable or disable the ri
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_enable_disable_risk_event_process_request import Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_enable_disable_risk_event_process_response import Riskanalyticscontrollerv3EnableDisableRiskEventProcessResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_enable_disable_risk_event_process_request import Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_enable_disable_risk_event_process_response import Riskanalyticscontrollerv3EnableDisableRiskEventProcessResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -137,7 +137,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -149,10 +149,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.RiskAnalyticsControllerApi(api_client)
-    riskanalyticscontrollerv3_enable_disable_risk_event_process_request = ibm_gdsc_sdk_software.Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest() # Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest | 
+    api_instance = ibm_gdsc_sdk_saas.RiskAnalyticsControllerApi(api_client)
+    riskanalyticscontrollerv3_enable_disable_risk_event_process_request = ibm_gdsc_sdk_saas.Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest() # Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest | 
 
     try:
         # Summary: Enable disable risk event process Description: Enable or disable the risk event process.
@@ -205,14 +205,14 @@ Summary: Get all classifications Description: Get all possible classifications f
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_get_all_classifications_list_response import Riskanalyticscontrollerv3GetAllClassificationsListResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_get_all_classifications_list_response import Riskanalyticscontrollerv3GetAllClassificationsListResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -222,7 +222,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -234,9 +234,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.RiskAnalyticsControllerApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.RiskAnalyticsControllerApi(api_client)
 
     try:
         # Summary: Get all classifications Description: Get all possible classifications for a risk event.
@@ -278,7 +278,7 @@ This endpoint does not need any parameter.
 # **risk_analytics_controller_get_risk_event_classifications_list**
 > Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse risk_analytics_controller_get_risk_event_classifications_list(risk_id)
 
-Summary: Get risk event classifications list Description: retrieves the ClassificationMatchDetails for a given risk id – classification that did not matched will be with class_value 0.
+Summary: Get risk event classifications list Description: retrieves the ClassificationMatchDetails for a given risk id; classification that did not matched will be with class_value 0.
 
 ### Example
 
@@ -286,14 +286,14 @@ Summary: Get risk event classifications list Description: retrieves the Classifi
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_get_risk_event_classifications_list_response import Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_get_risk_event_classifications_list_response import Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -303,7 +303,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -315,13 +315,13 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.RiskAnalyticsControllerApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.RiskAnalyticsControllerApi(api_client)
     risk_id = 56 # int | Risk id
 
     try:
-        # Summary: Get risk event classifications list Description: retrieves the ClassificationMatchDetails for a given risk id – classification that did not matched will be with class_value 0.
+        # Summary: Get risk event classifications list Description: retrieves the ClassificationMatchDetails for a given risk id; classification that did not matched will be with class_value 0.
         api_response = api_instance.risk_analytics_controller_get_risk_event_classifications_list(risk_id)
         print("The response of RiskAnalyticsControllerApi->risk_analytics_controller_get_risk_event_classifications_list:\n")
         pprint(api_response)
@@ -371,14 +371,14 @@ Summary: Get risk event data needed for summarization task Description: Retrieve
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_risk_event_summarization_data_response import Riskanalyticscontrollerv3RiskEventSummarizationDataResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_risk_event_summarization_data_response import Riskanalyticscontrollerv3RiskEventSummarizationDataResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -388,7 +388,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -400,9 +400,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.RiskAnalyticsControllerApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.RiskAnalyticsControllerApi(api_client)
     risk_id = 56 # int | Risk ID
     include_indicators = True # bool | Indicates whether to include indicators in the response or not. (optional)
     num_findings_limit = 56 # int | Max number of hours to get for the risk. (optional)
@@ -460,14 +460,14 @@ Summary: Get risk event details Description: Return the details of a risk event,
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_get_risk_event_details_response import Riskanalyticscontrollerv3GetRiskEventDetailsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_get_risk_event_details_response import Riskanalyticscontrollerv3GetRiskEventDetailsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -477,7 +477,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -489,9 +489,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.RiskAnalyticsControllerApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.RiskAnalyticsControllerApi(api_client)
     risk_id = 56 # int | Risk id.
 
     try:
@@ -545,14 +545,14 @@ Summary: Get risk event process status Description: Get the risk event process s
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_get_risk_event_process_status_response import Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_get_risk_event_process_status_response import Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -562,7 +562,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -574,9 +574,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.RiskAnalyticsControllerApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.RiskAnalyticsControllerApi(api_client)
 
     try:
         # Summary: Get risk event process status Description: Get the risk event process status.
@@ -626,14 +626,14 @@ Summary: Get risk event row Description: Return a list of risk events.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_get_risk_event_row_response import Riskanalyticscontrollerv3GetRiskEventRowResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_get_risk_event_row_response import Riskanalyticscontrollerv3GetRiskEventRowResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -643,7 +643,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -655,9 +655,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.RiskAnalyticsControllerApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.RiskAnalyticsControllerApi(api_client)
     status = 'UNDEFINED_STATUS' # str | Status to retrieve only the status events, blank to retrieve all. (optional) (default to 'UNDEFINED_STATUS')
     date_from = '2013-10-20T19:20:30+01:00' # datetime | The API retrieves risk events that were open in a time range. date_from defines the start of this time range. format YYYY-MM-DDTHH:mm:ssZ. (optional)
     date_to = '2013-10-20T19:20:30+01:00' # datetime | The API retrieves risk events that were open in a time range. date_to defines the end of this time range. format YYYY-MM-DDTHH:mm:ssZ. (optional)
@@ -729,14 +729,14 @@ Summary: Get vulnerability assessment details for a given risk event Description
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_risk_event_vulnerability_assessment_details_response import Riskanalyticscontrollerv3RiskEventVulnerabilityAssessmentDetailsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_risk_event_vulnerability_assessment_details_response import Riskanalyticscontrollerv3RiskEventVulnerabilityAssessmentDetailsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -746,7 +746,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -758,9 +758,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.RiskAnalyticsControllerApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.RiskAnalyticsControllerApi(api_client)
     risk_id = 56 # int | Risk ID
 
     try:
@@ -814,14 +814,14 @@ Summary: Get risk feedback Description: Get all feedbacks that are in status NEW
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_get_risk_feedback_response import Riskanalyticscontrollerv3GetRiskFeedbackResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_get_risk_feedback_response import Riskanalyticscontrollerv3GetRiskFeedbackResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -831,7 +831,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -843,9 +843,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.RiskAnalyticsControllerApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.RiskAnalyticsControllerApi(api_client)
 
     try:
         # Summary: Get risk feedback Description: Get all feedbacks that are in status NEW/WIP and change them to status WIP.
@@ -895,14 +895,14 @@ Summary: Get risk observation details Description: Return details of a single ri
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_get_risk_observation_details_response import Riskanalyticscontrollerv3GetRiskObservationDetailsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_get_risk_observation_details_response import Riskanalyticscontrollerv3GetRiskObservationDetailsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -912,7 +912,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -924,9 +924,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.RiskAnalyticsControllerApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.RiskAnalyticsControllerApi(api_client)
     lead_feature_id = 56 # int | Lead feature id. (optional)
     observation_type = 'UNDEFINED_OBSERVATION_TYPE' # str | Observation type. (optional) (default to 'UNDEFINED_OBSERVATION_TYPE')
 
@@ -982,14 +982,14 @@ Summary: Get user UI settings Description: Get the user settings by user id to d
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_get_user_ui_settings_response import Riskanalyticscontrollerv3GetUserUISettingsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_get_user_ui_settings_response import Riskanalyticscontrollerv3GetUserUISettingsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -999,7 +999,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1011,9 +1011,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.RiskAnalyticsControllerApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.RiskAnalyticsControllerApi(api_client)
 
     try:
         # Summary: Get user UI settings Description: Get the user settings by user id to display the risk in the UI.
@@ -1063,15 +1063,15 @@ Summary: Risk event tuning Description: Perform tuning risk event actions.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_risk_event_tuning_request import Riskanalyticscontrollerv3RiskEventTuningRequest
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_risk_event_tuning_response import Riskanalyticscontrollerv3RiskEventTuningResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_risk_event_tuning_request import Riskanalyticscontrollerv3RiskEventTuningRequest
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_risk_event_tuning_response import Riskanalyticscontrollerv3RiskEventTuningResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1081,7 +1081,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1093,10 +1093,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.RiskAnalyticsControllerApi(api_client)
-    riskanalyticscontrollerv3_risk_event_tuning_request = ibm_gdsc_sdk_software.Riskanalyticscontrollerv3RiskEventTuningRequest() # Riskanalyticscontrollerv3RiskEventTuningRequest | 
+    api_instance = ibm_gdsc_sdk_saas.RiskAnalyticsControllerApi(api_client)
+    riskanalyticscontrollerv3_risk_event_tuning_request = ibm_gdsc_sdk_saas.Riskanalyticscontrollerv3RiskEventTuningRequest() # Riskanalyticscontrollerv3RiskEventTuningRequest | 
 
     try:
         # Summary: Risk event tuning Description: Perform tuning risk event actions.
@@ -1149,15 +1149,15 @@ Summary: Set risk event status Description: Update the risk status and justifica
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_set_risk_event_status_request import Riskanalyticscontrollerv3SetRiskEventStatusRequest
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_set_risk_event_status_response import Riskanalyticscontrollerv3SetRiskEventStatusResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_set_risk_event_status_request import Riskanalyticscontrollerv3SetRiskEventStatusRequest
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_set_risk_event_status_response import Riskanalyticscontrollerv3SetRiskEventStatusResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1167,7 +1167,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1179,10 +1179,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.RiskAnalyticsControllerApi(api_client)
-    riskanalyticscontrollerv3_set_risk_event_status_request = ibm_gdsc_sdk_software.Riskanalyticscontrollerv3SetRiskEventStatusRequest() # Riskanalyticscontrollerv3SetRiskEventStatusRequest | 
+    api_instance = ibm_gdsc_sdk_saas.RiskAnalyticsControllerApi(api_client)
+    riskanalyticscontrollerv3_set_risk_event_status_request = ibm_gdsc_sdk_saas.Riskanalyticscontrollerv3SetRiskEventStatusRequest() # Riskanalyticscontrollerv3SetRiskEventStatusRequest | 
 
     try:
         # Summary: Set risk event status Description: Update the risk status and justification.
@@ -1227,7 +1227,7 @@ Name | Type | Description  | Notes
 # **risk_analytics_controller_set_user_ui_settings**
 > Riskanalyticscontrollerv3SetUserUISettingsResponse risk_analytics_controller_set_user_ui_settings(riskanalyticscontrollerv3_set_user_ui_settings_request)
 
-Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium.
+Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to GDSC. Using this API to change a user settings may prevent the user from using the Risk Event function within GDSC.
 
 ### Example
 
@@ -1235,15 +1235,15 @@ Summary: Set user UI settings Description: Set the user settings by user id in t
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_set_user_ui_settings_request import Riskanalyticscontrollerv3SetUserUISettingsRequest
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_set_user_ui_settings_response import Riskanalyticscontrollerv3SetUserUISettingsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_set_user_ui_settings_request import Riskanalyticscontrollerv3SetUserUISettingsRequest
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_set_user_ui_settings_response import Riskanalyticscontrollerv3SetUserUISettingsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1253,7 +1253,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1265,13 +1265,13 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.RiskAnalyticsControllerApi(api_client)
-    riskanalyticscontrollerv3_set_user_ui_settings_request = ibm_gdsc_sdk_software.Riskanalyticscontrollerv3SetUserUISettingsRequest() # Riskanalyticscontrollerv3SetUserUISettingsRequest | 
+    api_instance = ibm_gdsc_sdk_saas.RiskAnalyticsControllerApi(api_client)
+    riskanalyticscontrollerv3_set_user_ui_settings_request = ibm_gdsc_sdk_saas.Riskanalyticscontrollerv3SetUserUISettingsRequest() # Riskanalyticscontrollerv3SetUserUISettingsRequest | 
 
     try:
-        # Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium.
+        # Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to GDSC. Using this API to change a user settings may prevent the user from using the Risk Event function within GDSC.
         api_response = api_instance.risk_analytics_controller_set_user_ui_settings(riskanalyticscontrollerv3_set_user_ui_settings_request)
         print("The response of RiskAnalyticsControllerApi->risk_analytics_controller_set_user_ui_settings:\n")
         pprint(api_response)
@@ -1321,15 +1321,15 @@ Summary: Update risk feedback Description: Provide feedback for one or more risk
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_update_risk_feedback_request import Riskanalyticscontrollerv3UpdateRiskFeedbackRequest
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_update_risk_feedback_response import Riskanalyticscontrollerv3UpdateRiskFeedbackResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_update_risk_feedback_request import Riskanalyticscontrollerv3UpdateRiskFeedbackRequest
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_update_risk_feedback_response import Riskanalyticscontrollerv3UpdateRiskFeedbackResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1339,7 +1339,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1351,10 +1351,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.RiskAnalyticsControllerApi(api_client)
-    riskanalyticscontrollerv3_update_risk_feedback_request = ibm_gdsc_sdk_software.Riskanalyticscontrollerv3UpdateRiskFeedbackRequest() # Riskanalyticscontrollerv3UpdateRiskFeedbackRequest | 
+    api_instance = ibm_gdsc_sdk_saas.RiskAnalyticsControllerApi(api_client)
+    riskanalyticscontrollerv3_update_risk_feedback_request = ibm_gdsc_sdk_saas.Riskanalyticscontrollerv3UpdateRiskFeedbackRequest() # Riskanalyticscontrollerv3UpdateRiskFeedbackRequest | 
 
     try:
         # Summary: Update risk feedback Description: Provide feedback for one or more risk events

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.tenantuserv3_create_api_key_response import Tenantuserv3CreateApiKeyResponse
+from ibm_gdsc_sdk_saas.models.tenantuserv3_create_api_key_response import Tenantuserv3CreateApiKeyResponse
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.featureflagsv3_feature_flag_value import Featureflagsv3FeatureFlagValue
+from ibm_gdsc_sdk_saas.models.featureflagsv3_feature_flag_value import Featureflagsv3FeatureFlagValue
 
 class TestFeatureflagsv3FeatureFlagValue(unittest.TestCase):
     """Featureflagsv3FeatureFlagValue unit test stubs"""

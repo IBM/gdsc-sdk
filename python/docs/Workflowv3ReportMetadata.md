@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.workflowv3_report_metadata import Workflowv3ReportMetadata
+from ibm_gdsc_sdk_saas.models.workflowv3_report_metadata import Workflowv3ReportMetadata
 
 # TODO update the JSON string below
 json = "{}"

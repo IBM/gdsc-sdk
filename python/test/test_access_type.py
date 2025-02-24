@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.access_type import AccessType
+from ibm_gdsc_sdk_saas.models.access_type import AccessType
 
 class TestAccessType(unittest.TestCase):
     """AccessType unit test stubs"""

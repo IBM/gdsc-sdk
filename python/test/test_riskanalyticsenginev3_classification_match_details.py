@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticsenginev3_classification_match_details import Riskanalyticsenginev3ClassificationMatchDetails
+from ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_classification_match_details import Riskanalyticsenginev3ClassificationMatchDetails
 
 class TestRiskanalyticsenginev3ClassificationMatchDetails(unittest.TestCase):
     """Riskanalyticsenginev3ClassificationMatchDetails unit test stubs"""

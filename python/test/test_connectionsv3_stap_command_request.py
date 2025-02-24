@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_stap_command_request import Connectionsv3StapCommandRequest
+from ibm_gdsc_sdk_saas.models.connectionsv3_stap_command_request import Connectionsv3StapCommandRequest
 
 class TestConnectionsv3StapCommandRequest(unittest.TestCase):
     """Connectionsv3StapCommandRequest unit test stubs"""

@@ -66,7 +66,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/controllers';
+        const localVarPath = '/api/v3/edge_manager/controllers';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
@@ -125,7 +125,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/controllers/{controller_id}/heartbeat'
+        const localVarPath = '/api/v3/edge_manager/controllers/{controller_id}/heartbeat'
             .replace('{' + 'controller_id' + '}', encodeURIComponent(String(controllerId)));
 
         // Make Request Context
@@ -185,7 +185,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/controllers/{controller_id}/heartbeat_ex'
+        const localVarPath = '/api/v3/edge_manager/controllers/{controller_id}/heartbeat_ex'
             .replace('{' + 'controller_id' + '}', encodeURIComponent(String(controllerId)));
 
         // Make Request Context
@@ -238,7 +238,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/jobs';
+        const localVarPath = '/api/v3/edge_manager/jobs';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
@@ -290,7 +290,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/job_executions';
+        const localVarPath = '/api/v3/edge_manager/job_executions';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
@@ -349,7 +349,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/controllers/{controller_id}/keypair'
+        const localVarPath = '/api/v3/edge_manager/controllers/{controller_id}/keypair'
             .replace('{' + 'controller_id' + '}', encodeURIComponent(String(controllerId)));
 
         // Make Request Context
@@ -409,7 +409,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/controllers/{controller_id}'
+        const localVarPath = '/api/v3/edge_manager/controllers/{controller_id}'
             .replace('{' + 'controller_id' + '}', encodeURIComponent(String(controllerId)));
 
         // Make Request Context
@@ -469,7 +469,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/tenants/{tenant_id}'
+        const localVarPath = '/api/v3/edge_manager/tenants/{tenant_id}'
             .replace('{' + 'tenant_id' + '}', encodeURIComponent(String(tenantId)));
 
         // Make Request Context
@@ -510,43 +510,38 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
     /**
      * DeleteEdgeTenantRequest to deletes gi and tnt CR on edge
-     * @param tenantId Tenant ID for the redge request
-     * @param resourcecontrollerk8v3EdgeTenantRequest 
+     * @param tenantId Tenant ID for the redge request.
+     * @param edgeId ID of the edge system.
+     * @param edgeName Edge gateway ID.
      */
-    public async resourceControllerK8ServiceDeleteEdgeTenantRequest(tenantId: string, resourcecontrollerk8v3EdgeTenantRequest: Resourcecontrollerk8v3EdgeTenantRequest, _options?: Configuration): Promise<RequestContext> {
+    public async resourceControllerK8ServiceDeleteEdgeTenantRequest(tenantId?: string, edgeId?: string, edgeName?: string, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
-        // verify required parameter 'tenantId' is not null or undefined
-        if (tenantId === null || tenantId === undefined) {
-            throw new RequiredError("ResourceControllerK8ServiceApi", "resourceControllerK8ServiceDeleteEdgeTenantRequest", "tenantId");
-        }
 
-
-        // verify required parameter 'resourcecontrollerk8v3EdgeTenantRequest' is not null or undefined
-        if (resourcecontrollerk8v3EdgeTenantRequest === null || resourcecontrollerk8v3EdgeTenantRequest === undefined) {
-            throw new RequiredError("ResourceControllerK8ServiceApi", "resourceControllerK8ServiceDeleteEdgeTenantRequest", "resourcecontrollerk8v3EdgeTenantRequest");
-        }
 
 
         // Path Params
-        const localVarPath = '/api/v3/edgegateways/{tenant_id}'
-            .replace('{' + 'tenant_id' + '}', encodeURIComponent(String(tenantId)));
+        const localVarPath = '/api/v3/edges';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.DELETE);
         requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
 
+        // Query Params
+        if (tenantId !== undefined) {
+            requestContext.setQueryParam("tenant_id", ObjectSerializer.serialize(tenantId, "string", ""));
+        }
 
-        // Body Params
-        const contentType = ObjectSerializer.getPreferredMediaType([
-            "application/json"
-        ]);
-        requestContext.setHeaderParam("Content-Type", contentType);
-        const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(resourcecontrollerk8v3EdgeTenantRequest, "Resourcecontrollerk8v3EdgeTenantRequest", ""),
-            contentType
-        );
-        requestContext.setBody(serializedBody);
+        // Query Params
+        if (edgeId !== undefined) {
+            requestContext.setQueryParam("edge_id", ObjectSerializer.serialize(edgeId, "string", ""));
+        }
+
+        // Query Params
+        if (edgeName !== undefined) {
+            requestContext.setQueryParam("edge_name", ObjectSerializer.serialize(edgeName, "string", ""));
+        }
+
 
         let authMethod: SecurityAuthentication | undefined;
         // Apply auth methods
@@ -584,7 +579,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/jobs/{job_id}'
+        const localVarPath = '/api/v3/edge_manager/jobs/{job_id}'
             .replace('{' + 'job_id' + '}', encodeURIComponent(String(jobId)));
 
         // Make Request Context
@@ -644,7 +639,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/controllers/{controller_id}/logs'
+        const localVarPath = '/api/v3/edge_manager/controllers/{controller_id}/logs'
             .replace('{' + 'controller_id' + '}', encodeURIComponent(String(controllerId)));
 
         // Make Request Context
@@ -699,7 +694,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/controllers/{controller_id}/apps'
+        const localVarPath = '/api/v3/edge_manager/controllers/{controller_id}/apps'
             .replace('{' + 'controller_id' + '}', encodeURIComponent(String(controllerId)));
 
         // Make Request Context
@@ -746,7 +741,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/controllers/{controller_id}/commands'
+        const localVarPath = '/api/v3/edge_manager/controllers/{controller_id}/commands'
             .replace('{' + 'controller_id' + '}', encodeURIComponent(String(controllerId)));
 
         // Make Request Context
@@ -790,7 +785,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/controllers/{controller_id}/jobs'
+        const localVarPath = '/api/v3/edge_manager/controllers/{controller_id}/jobs'
             .replace('{' + 'controller_id' + '}', encodeURIComponent(String(controllerId)));
 
         // Make Request Context
@@ -837,7 +832,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/controllers/{controller_id}/status'
+        const localVarPath = '/api/v3/edge_manager/controllers/{controller_id}/status'
             .replace('{' + 'controller_id' + '}', encodeURIComponent(String(controllerId)));
 
         // Make Request Context
@@ -881,7 +876,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/tenants/{tenant_id}/controllers'
+        const localVarPath = '/api/v3/edge_manager/tenants/{tenant_id}/controllers'
             .replace('{' + 'tenant_id' + '}', encodeURIComponent(String(tenantId)));
 
         // Make Request Context
@@ -932,7 +927,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/tenants/{tenant_id}/controller_status'
+        const localVarPath = '/api/v3/edge_manager/tenants/{tenant_id}/controller_status'
             .replace('{' + 'tenant_id' + '}', encodeURIComponent(String(tenantId)));
 
         // Make Request Context
@@ -986,7 +981,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/jobs/{job_id}'
+        const localVarPath = '/api/v3/edge_manager/jobs/{job_id}'
             .replace('{' + 'job_id' + '}', encodeURIComponent(String(jobId)));
 
         // Make Request Context
@@ -1033,7 +1028,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/job_executions/{jobexe_id}'
+        const localVarPath = '/api/v3/edge_manager/job_executions/{jobexe_id}'
             .replace('{' + 'jobexe_id' + '}', encodeURIComponent(String(jobexeId)));
 
         // Make Request Context
@@ -1075,7 +1070,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/jobs/{job_id}/executions'
+        const localVarPath = '/api/v3/edge_manager/jobs/{job_id}/executions'
             .replace('{' + 'job_id' + '}', encodeURIComponent(String(jobId)));
 
         // Make Request Context
@@ -1117,7 +1112,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/jobs/{job_id}/status'
+        const localVarPath = '/api/v3/edge_manager/jobs/{job_id}/status'
             .replace('{' + 'job_id' + '}', encodeURIComponent(String(jobId)));
 
         // Make Request Context
@@ -1168,7 +1163,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/tenants/{tenant_id}/apps/{app_name}'
+        const localVarPath = '/api/v3/edge_manager/tenants/{tenant_id}/apps/{app_name}'
             .replace('{' + 'tenant_id' + '}', encodeURIComponent(String(tenantId)))
             .replace('{' + 'app_name' + '}', encodeURIComponent(String(appName)));
 
@@ -1178,7 +1173,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
         // Query Params
         if (returnLevel !== undefined) {
-            requestContext.setQueryParam("returnLevel", ObjectSerializer.serialize(returnLevel, "string", ""));
+            requestContext.setQueryParam("return_level", ObjectSerializer.serialize(returnLevel, "string", ""));
         }
 
 
@@ -1218,7 +1213,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/tenants/{tenant_id}/apps'
+        const localVarPath = '/api/v3/edge_manager/tenants/{tenant_id}/apps'
             .replace('{' + 'tenant_id' + '}', encodeURIComponent(String(tenantId)));
 
         // Make Request Context
@@ -1227,7 +1222,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
         // Query Params
         if (returnLevel !== undefined) {
-            requestContext.setQueryParam("returnLevel", ObjectSerializer.serialize(returnLevel, "string", ""));
+            requestContext.setQueryParam("return_level", ObjectSerializer.serialize(returnLevel, "string", ""));
         }
 
 
@@ -1265,7 +1260,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/tenants/{tenant_id}/jobs'
+        const localVarPath = '/api/v3/edge_manager/tenants/{tenant_id}/jobs'
             .replace('{' + 'tenant_id' + '}', encodeURIComponent(String(tenantId)));
 
         // Make Request Context
@@ -1300,7 +1295,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
         let _config = _options || this.configuration;
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/system/version';
+        const localVarPath = '/api/v3/edge_manager/system/version';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -1328,7 +1323,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
     }
 
     /**
-     * InstallEdgeTenantRequest to Create/update gi and tnt CRs on edge
+     * InstallEdgeTenantRequest to Create gi and tnt CRs on edge
      * @param resourcecontrollerk8v3EdgeTenantRequest 
      */
     public async resourceControllerK8ServiceInstallEdgeTenantRequest(resourcecontrollerk8v3EdgeTenantRequest: Resourcecontrollerk8v3EdgeTenantRequest, _options?: Configuration): Promise<RequestContext> {
@@ -1341,7 +1336,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/edgegateways';
+        const localVarPath = '/api/v3/edges';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
@@ -1395,7 +1390,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/controllers/{controller_id}/logs/query'
+        const localVarPath = '/api/v3/edge_manager/controllers/{controller_id}/logs/query'
             .replace('{' + 'controller_id' + '}', encodeURIComponent(String(controllerId)));
 
         // Make Request Context
@@ -1455,7 +1450,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/commands/{id}'
+        const localVarPath = '/api/v3/edge_manager/commands/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
 
         // Make Request Context
@@ -1515,7 +1510,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/controllers/{id}'
+        const localVarPath = '/api/v3/edge_manager/controllers/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
 
         // Make Request Context
@@ -1575,7 +1570,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/controllers/{id}/status'
+        const localVarPath = '/api/v3/edge_manager/controllers/{id}/status'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
 
         // Make Request Context
@@ -1615,6 +1610,61 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
     }
 
     /**
+     * UpdateEdgeTenantRequest to update gi and tnt CRs on edge
+     * @param edgeId ID of the edge system
+     * @param resourcecontrollerk8v3EdgeTenantRequest 
+     */
+    public async resourceControllerK8ServiceUpdateEdgeTenantRequest(edgeId: string, resourcecontrollerk8v3EdgeTenantRequest: Resourcecontrollerk8v3EdgeTenantRequest, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'edgeId' is not null or undefined
+        if (edgeId === null || edgeId === undefined) {
+            throw new RequiredError("ResourceControllerK8ServiceApi", "resourceControllerK8ServiceUpdateEdgeTenantRequest", "edgeId");
+        }
+
+
+        // verify required parameter 'resourcecontrollerk8v3EdgeTenantRequest' is not null or undefined
+        if (resourcecontrollerk8v3EdgeTenantRequest === null || resourcecontrollerk8v3EdgeTenantRequest === undefined) {
+            throw new RequiredError("ResourceControllerK8ServiceApi", "resourceControllerK8ServiceUpdateEdgeTenantRequest", "resourcecontrollerk8v3EdgeTenantRequest");
+        }
+
+
+        // Path Params
+        const localVarPath = '/api/v3/edges/{edge_id}'
+            .replace('{' + 'edge_id' + '}', encodeURIComponent(String(edgeId)));
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.PATCH);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        // Body Params
+        const contentType = ObjectSerializer.getPreferredMediaType([
+            "application/json"
+        ]);
+        requestContext.setHeaderParam("Content-Type", contentType);
+        const serializedBody = ObjectSerializer.stringify(
+            ObjectSerializer.serialize(resourcecontrollerk8v3EdgeTenantRequest, "Resourcecontrollerk8v3EdgeTenantRequest", ""),
+            contentType
+        );
+        requestContext.setBody(serializedBody);
+
+        let authMethod: SecurityAuthentication | undefined;
+        // Apply auth methods
+        authMethod = _config.authMethods["ApiKeyAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
      * UpdateJob - Update a job.
      * @param id The ID of the job.
      * @param resourcecontrollerk8v3Job 
@@ -1635,7 +1685,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/jobs/{id}'
+        const localVarPath = '/api/v3/edge_manager/jobs/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
 
         // Make Request Context
@@ -1695,7 +1745,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/job_executions/{id}'
+        const localVarPath = '/api/v3/edge_manager/job_executions/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
 
         // Make Request Context
@@ -1755,7 +1805,7 @@ export class ResourceControllerK8ServiceApiRequestFactory extends BaseAPIRequest
 
 
         // Path Params
-        const localVarPath = '/api/v3/app_manager/jobs/{job_id}/status'
+        const localVarPath = '/api/v3/edge_manager/jobs/{job_id}/status'
             .replace('{' + 'job_id' + '}', encodeURIComponent(String(jobId)));
 
         // Make Request Context
@@ -2872,6 +2922,42 @@ export class ResourceControllerK8ServiceApiResponseProcessor {
                 ObjectSerializer.parse(await response.body.text(), contentType),
                 "Resourcecontrollerk8v3ControllerStatus", ""
             ) as Resourcecontrollerk8v3ControllerStatus;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to resourceControllerK8ServiceUpdateEdgeTenantRequest
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async resourceControllerK8ServiceUpdateEdgeTenantRequestWithHttpInfo(response: ResponseContext): Promise<HttpInfo<Resourcecontrollerk8v3EdgeResourceResponse >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: Resourcecontrollerk8v3EdgeResourceResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Resourcecontrollerk8v3EdgeResourceResponse", ""
+            ) as Resourcecontrollerk8v3EdgeResourceResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("0", response.httpStatusCode)) {
+            const body: RuntimeError = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RuntimeError", ""
+            ) as RuntimeError;
+            throw new ApiException<RuntimeError>(response.httpStatusCode, "An unexpected error response.", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: Resourcecontrollerk8v3EdgeResourceResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Resourcecontrollerk8v3EdgeResourceResponse", ""
+            ) as Resourcecontrollerk8v3EdgeResourceResponse;
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
         }
 

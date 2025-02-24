@@ -1,4 +1,4 @@
-# ibm_gdsc_sdk_software.DataStoresApi
+# ibm_gdsc_sdk_saas.DataStoresApi
 
 All URIs are relative to *http://localhost*
 
@@ -28,14 +28,14 @@ Get details of a specific data store by its ID.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.data_store import DataStore
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.data_store import DataStore
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -51,9 +51,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.DataStoresApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.DataStoresApi(api_client)
     data_store_id = 'arn:aws:s3::123456789101:mys3-prod' # str | ID of the data store
 
     try:
@@ -108,15 +108,15 @@ Get a summary of all the data stores, that is, name of data resources, types of 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.data_stores_summary import DataStoresSummary
-from ibm_gdsc_sdk_software.models.list_data_stores_filter_parameter import ListDataStoresFilterParameter
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.data_stores_summary import DataStoresSummary
+from ibm_gdsc_sdk_saas.models.list_data_stores_filter_parameter import ListDataStoresFilterParameter
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -132,10 +132,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.DataStoresApi(api_client)
-    filter = ibm_gdsc_sdk_software.ListDataStoresFilterParameter() # ListDataStoresFilterParameter |  (optional)
+    api_instance = ibm_gdsc_sdk_saas.DataStoresApi(api_client)
+    filter = ibm_gdsc_sdk_saas.ListDataStoresFilterParameter() # ListDataStoresFilterParameter |  (optional)
 
     try:
         # Get summary of data stores
@@ -189,13 +189,13 @@ Get a list of all the labels of custom data stores.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -211,9 +211,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.DataStoresApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.DataStoresApi(api_client)
     prefix = 'test' # str | Prefix of data store label (optional)
     max_results = 10 # float |  (optional)
 
@@ -270,16 +270,16 @@ List all data stores discovered by Guardium DSPM.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.list_data_stores200_response import ListDataStores200Response
-from ibm_gdsc_sdk_software.models.list_data_stores_filter_parameter import ListDataStoresFilterParameter
-from ibm_gdsc_sdk_software.models.list_data_stores_sort_parameter import ListDataStoresSortParameter
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.list_data_stores200_response import ListDataStores200Response
+from ibm_gdsc_sdk_saas.models.list_data_stores_filter_parameter import ListDataStoresFilterParameter
+from ibm_gdsc_sdk_saas.models.list_data_stores_sort_parameter import ListDataStoresSortParameter
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -295,11 +295,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.DataStoresApi(api_client)
-    filter = ibm_gdsc_sdk_software.ListDataStoresFilterParameter() # ListDataStoresFilterParameter |  (optional)
-    sort = ibm_gdsc_sdk_software.ListDataStoresSortParameter() # ListDataStoresSortParameter |  (optional)
+    api_instance = ibm_gdsc_sdk_saas.DataStoresApi(api_client)
+    filter = ibm_gdsc_sdk_saas.ListDataStoresFilterParameter() # ListDataStoresFilterParameter |  (optional)
+    sort = ibm_gdsc_sdk_saas.ListDataStoresSortParameter() # ListDataStoresSortParameter |  (optional)
     page_size = 3.4 # float |  (optional)
     next_token = 'next_token_example' # str |  (optional)
 
@@ -358,13 +358,13 @@ Get a list of the available cloud tag keys of data stores that can be filtered o
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -380,9 +380,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.DataStoresApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.DataStoresApi(api_client)
     prefix = 'environment' # str | Prefix of cloud tag key
     max_results = 10 # float |  (optional)
 
@@ -439,13 +439,13 @@ Get a list of the available cloud tag values of data stores that can be filtered
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -461,9 +461,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.DataStoresApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.DataStoresApi(api_client)
     prefix = 'comp' # str | Prefix of cloud tag value
     tag_key = 'Production' # str | 
     max_results = 10 # float |  (optional)
@@ -522,13 +522,13 @@ Lists the data stores that can be filtered or classified.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -544,9 +544,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.DataStoresApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.DataStoresApi(api_client)
     prefix = 'polar' # str | Prefix of data store name
 
     try:
@@ -601,14 +601,14 @@ Post the request for a data store rescan.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.rescan_data_store_request import RescanDataStoreRequest
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.rescan_data_store_request import RescanDataStoreRequest
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -624,10 +624,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.DataStoresApi(api_client)
-    rescan_data_store_request = ibm_gdsc_sdk_software.RescanDataStoreRequest() # RescanDataStoreRequest | 
+    api_instance = ibm_gdsc_sdk_saas.DataStoresApi(api_client)
+    rescan_data_store_request = ibm_gdsc_sdk_saas.RescanDataStoreRequest() # RescanDataStoreRequest | 
 
     try:
         # Post data store rescan request
@@ -679,14 +679,14 @@ Add or update a custom label for a data store.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.set_data_store_label_request import SetDataStoreLabelRequest
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.set_data_store_label_request import SetDataStoreLabelRequest
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -702,11 +702,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.DataStoresApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.DataStoresApi(api_client)
     data_store_id = 'arn:aws:s3::123456789101:mys3-prod' # str | Data store ID
-    set_data_store_label_request = ibm_gdsc_sdk_software.SetDataStoreLabelRequest() # SetDataStoreLabelRequest | 
+    set_data_store_label_request = ibm_gdsc_sdk_saas.SetDataStoreLabelRequest() # SetDataStoreLabelRequest | 
 
     try:
         # Label a data store with an existing or new label
@@ -759,15 +759,15 @@ Add or update the name of a specific data store.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.update_custodian_body import UpdateCustodianBody
-from ibm_gdsc_sdk_software.models.update_datastore_custodian200_response import UpdateDatastoreCustodian200Response
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.update_custodian_body import UpdateCustodianBody
+from ibm_gdsc_sdk_saas.models.update_datastore_custodian200_response import UpdateDatastoreCustodian200Response
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -783,10 +783,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.DataStoresApi(api_client)
-    update_custodian_body = ibm_gdsc_sdk_software.UpdateCustodianBody() # UpdateCustodianBody | 
+    api_instance = ibm_gdsc_sdk_saas.DataStoresApi(api_client)
+    update_custodian_body = ibm_gdsc_sdk_saas.UpdateCustodianBody() # UpdateCustodianBody | 
 
     try:
         # Update the name of a Data store custodian

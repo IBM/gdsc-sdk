@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.qspmdatamanagerv3_netloc_data_response import Qspmdatamanagerv3NetlocDataResponse
+from ibm_gdsc_sdk_saas.models.qspmdatamanagerv3_netloc_data_response import Qspmdatamanagerv3NetlocDataResponse
 
 class TestQspmdatamanagerv3NetlocDataResponse(unittest.TestCase):
     """Qspmdatamanagerv3NetlocDataResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestQspmdatamanagerv3NetlocDataResponse(unittest.TestCase):
         if include_optional:
             return Qspmdatamanagerv3NetlocDataResponse(
                 netloc_data = [
-                    ibm_gdsc_sdk_software.models.netloc_dim_model.Netloc dim model(
+                    ibm_gdsc_sdk_saas.models.netloc_dim_model.Netloc dim model(
                         netloc_city = '', 
                         netloc_country = '', 
                         netloc_data_center = '', 

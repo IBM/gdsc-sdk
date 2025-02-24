@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_variant_details import Reportsv3VariantDetails
+from ibm_gdsc_sdk_saas.models.reportsv3_variant_details import Reportsv3VariantDetails
 
 class TestReportsv3VariantDetails(unittest.TestCase):
     """Reportsv3VariantDetails unit test stubs"""
@@ -39,7 +39,7 @@ class TestReportsv3VariantDetails(unittest.TestCase):
                 last_run = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 last_run_error = '',
                 rules = [
-                    ibm_gdsc_sdk_software.models.variant_rule_describes_a_given_variant_rule.VariantRule describes a given variant rule(
+                    ibm_gdsc_sdk_saas.models.variant_rule_describes_a_given_variant_rule.VariantRule describes a given variant rule(
                         action_if_type = 'UNDEFINED_VARIANT_ACTION_IF', 
                         delimiter = '', 
                         extract_value = '', 

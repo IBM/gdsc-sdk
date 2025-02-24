@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticsdataprocessorv3_get_risk_context_response import Riskanalyticsdataprocessorv3GetRiskContextResponse
+from ibm_gdsc_sdk_saas.models.riskanalyticsdataprocessorv3_get_risk_context_response import Riskanalyticsdataprocessorv3GetRiskContextResponse
 
 class TestRiskanalyticsdataprocessorv3GetRiskContextResponse(unittest.TestCase):
     """Riskanalyticsdataprocessorv3GetRiskContextResponse unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_asset_open_risk_event import Assetsv3AssetOpenRiskEvent
+from ibm_gdsc_sdk_saas.models.assetsv3_asset_open_risk_event import Assetsv3AssetOpenRiskEvent
 
 class TestAssetsv3AssetOpenRiskEvent(unittest.TestCase):
     """Assetsv3AssetOpenRiskEvent unit test stubs"""

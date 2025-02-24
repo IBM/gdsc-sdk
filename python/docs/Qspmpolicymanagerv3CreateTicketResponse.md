@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.qspmpolicymanagerv3_create_ticket_response import Qspmpolicymanagerv3CreateTicketResponse
+from ibm_gdsc_sdk_saas.models.qspmpolicymanagerv3_create_ticket_response import Qspmpolicymanagerv3CreateTicketResponse
 
 # TODO update the JSON string below
 json = "{}"

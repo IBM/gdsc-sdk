@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_stop_query_request import Reportsrunnerv3StopQueryRequest
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_stop_query_request import Reportsrunnerv3StopQueryRequest
 
 class TestReportsrunnerv3StopQueryRequest(unittest.TestCase):
     """Reportsrunnerv3StopQueryRequest unit test stubs"""

@@ -1,30 +1,30 @@
-# ibm_gdsc_sdk_software.PipelineconfigServiceApi
+# ibm_gdsc_sdk_saas.PipelineconfigServiceApi
 
 All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**pipelineconfig_service_delete_tenant_resources**](PipelineconfigServiceApi.md#pipelineconfig_service_delete_tenant_resources) | **DELETE** /api/v3/resources/{tenant_id}/{resource} | Summary: Delete a tenant resource Description: Delete tenant specific resources such as db2, mongo, postgres and s3.
+[**pipelineconfig_service_delete_tenant_resources**](PipelineconfigServiceApi.md#pipelineconfig_service_delete_tenant_resources) | **DELETE** /api/v3/resources/{tenant_id}/{resource} | Summary: Delete a tenant resource Description: Delete tenant specific resources such as data warehouse, mongo, postgres and s3.
 
 
 # **pipelineconfig_service_delete_tenant_resources**
 > Pipelineconfigv3DeleteTenantResponse pipelineconfig_service_delete_tenant_resources(tenant_id, resource)
 
-Summary: Delete a tenant resource Description: Delete tenant specific resources such as db2, mongo, postgres and s3.
+Summary: Delete a tenant resource Description: Delete tenant specific resources such as data warehouse, mongo, postgres and s3.
 
 ### Example
 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.pipelineconfigv3_delete_tenant_response import Pipelineconfigv3DeleteTenantResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.pipelineconfigv3_delete_tenant_response import Pipelineconfigv3DeleteTenantResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -40,14 +40,14 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.PipelineconfigServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.PipelineconfigServiceApi(api_client)
     tenant_id = 'tenant_id_example' # str | unique tenant ID
     resource = 'resource_example' # str | resource specifies the specific resource to delete
 
     try:
-        # Summary: Delete a tenant resource Description: Delete tenant specific resources such as db2, mongo, postgres and s3.
+        # Summary: Delete a tenant resource Description: Delete tenant specific resources such as data warehouse, mongo, postgres and s3.
         api_response = api_instance.pipelineconfig_service_delete_tenant_resources(tenant_id, resource)
         print("The response of PipelineconfigServiceApi->pipelineconfig_service_delete_tenant_resources:\n")
         pprint(api_response)

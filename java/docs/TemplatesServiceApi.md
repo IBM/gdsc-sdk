@@ -12,6 +12,7 @@ All URIs are relative to *http://localhost*
 | [**templatesServiceGetOriginFields**](TemplatesServiceApi.md#templatesServiceGetOriginFields) | **GET** /api/v3/templates/origins/{origin}/fields | Summary: Get origin fields Description: Return the fields available with a specific origin. |
 | [**templatesServiceGetTemplate**](TemplatesServiceApi.md#templatesServiceGetTemplate) | **GET** /api/v3/templates/{template_id} | Summary: Get template Description: Return a specific template by id. |
 | [**templatesServiceGetTemplates**](TemplatesServiceApi.md#templatesServiceGetTemplates) | **GET** /api/v3/templates | Summary: Get templates Description: Return all templates based on supplied filters. |
+| [**templatesServiceGetTemplatesForEdge**](TemplatesServiceApi.md#templatesServiceGetTemplatesForEdge) | **GET** /api/v3/templates/edge | Summary: Get templates for edge Description: Return all templates based on supplied filters. |
 | [**templatesServiceTestTemplate**](TemplatesServiceApi.md#templatesServiceTestTemplate) | **POST** /api/v3/templates/test | Summary: Test template Description: Analyze a specified template to ensure will function correctly when utilized. |
 | [**templatesServiceTransformTemplate**](TemplatesServiceApi.md#templatesServiceTransformTemplate) | **POST** /api/v3/templates/transform | Summary: Transform template Description: Process the specified template and returns the Title and Content based on supplied data. |
 | [**templatesServiceTransformTemplateJSON**](TemplatesServiceApi.md#templatesServiceTransformTemplateJSON) | **POST** /api/v3/templates/transformjson | Summary: Transform template JSON Description: Process the specified template and returns the Title and Content based on supplied json data string. |
@@ -27,12 +28,12 @@ Summary: Create integration Description: Create a set of new templates for a new
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.TemplatesServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.TemplatesServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -100,12 +101,12 @@ Summary: Create template Description: Create a new template.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.TemplatesServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.TemplatesServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -173,12 +174,12 @@ Summary: Delete integration Description: Delete all templates associated with an
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.TemplatesServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.TemplatesServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -246,12 +247,12 @@ Summary: Delete template Description: Delete a specific template.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.TemplatesServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.TemplatesServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -319,12 +320,12 @@ Summary: Get origin default content Description: Return the default content for 
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.TemplatesServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.TemplatesServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -396,12 +397,12 @@ Summary: Get origin fields Description: Return the fields available with a speci
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.TemplatesServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.TemplatesServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -469,12 +470,12 @@ Summary: Get template Description: Return a specific template by id.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.TemplatesServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.TemplatesServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -544,12 +545,12 @@ Summary: Get templates Description: Return all templates based on supplied filte
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.TemplatesServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.TemplatesServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -620,6 +621,87 @@ public class Example {
 | **200** | A successful response. |  -  |
 | **0** | An unexpected error response. |  -  |
 
+<a id="templatesServiceGetTemplatesForEdge"></a>
+# **templatesServiceGetTemplatesForEdge**
+> Templatesv3GetTemplatesForEdgeResponse templatesServiceGetTemplatesForEdge(integrationId, filterOrigin, filterEnabledOnly, includeIntegrationName, transformToGdpFormat)
+
+Summary: Get templates for edge Description: Return all templates based on supplied filters.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.TemplatesServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    TemplatesServiceApi apiInstance = new TemplatesServiceApi(defaultClient);
+    String integrationId = "integrationId_example"; // String | Templates associated with a specific integration.
+    List<String> filterOrigin = Arrays.asList(); // List<String> | Filter on a specific set of data origins; ignored if empty.
+    Boolean filterEnabledOnly = true; // Boolean | Filter on all templates instead of just the enabled templates.
+    Boolean includeIntegrationName = true; // Boolean | Include the Integration name in the returned templates.
+    Boolean transformToGdpFormat = true; // Boolean | Tranform template format to GDP style format.
+    try {
+      Templatesv3GetTemplatesForEdgeResponse result = apiInstance.templatesServiceGetTemplatesForEdge(integrationId, filterOrigin, filterEnabledOnly, includeIntegrationName, transformToGdpFormat);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling TemplatesServiceApi#templatesServiceGetTemplatesForEdge");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **String**| Templates associated with a specific integration. | [optional] |
+| **filterOrigin** | [**List&lt;String&gt;**](String.md)| Filter on a specific set of data origins; ignored if empty. | [optional] [enum: UNDEFINED_ORIGIN, GENERAL_NOTIFICATION, ANOMALY_NOTIFICATION, DATAMART_NOTIFICATION, FETCH_NOTIFICATION, POLICY_ALERT_NOTIFICATION, RECOMMENDATION_NOTIFICATION, REPORTS_NOTIFICATION, SCHEDULED_REPORT_NOTIFICATION, SCHEDULED_AUDIT_NOTIFICATION, WELCOME_NOTIFICATION, EMAIL_HEADER_AND_FOOTER, RISK_NOTIFICATION, SCHEDULED_JOB_SUMMARY, INCIDENT_NOTIFICATION, MAINTENANCE_NOTIFICATION, QSPM_RISK, POLICY_IMPORT_NOTIFICATION] |
+| **filterEnabledOnly** | **Boolean**| Filter on all templates instead of just the enabled templates. | [optional] |
+| **includeIntegrationName** | **Boolean**| Include the Integration name in the returned templates. | [optional] |
+| **transformToGdpFormat** | **Boolean**| Tranform template format to GDP style format. | [optional] |
+
+### Return type
+
+[**Templatesv3GetTemplatesForEdgeResponse**](Templatesv3GetTemplatesForEdgeResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
 <a id="templatesServiceTestTemplate"></a>
 # **templatesServiceTestTemplate**
 > Templatesv3TestTemplateResponse templatesServiceTestTemplate(templatesv3TestTemplateRequest)
@@ -629,12 +711,12 @@ Summary: Test template Description: Analyze a specified template to ensure will 
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.TemplatesServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.TemplatesServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -702,12 +784,12 @@ Summary: Transform template Description: Process the specified template and retu
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.TemplatesServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.TemplatesServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -775,12 +857,12 @@ Summary: Transform template JSON Description: Process the specified template and
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.TemplatesServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.TemplatesServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -848,12 +930,12 @@ Summary: Update template Description: Update a single template.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.TemplatesServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.TemplatesServiceApi;
 
 public class Example {
   public static void main(String[] args) {

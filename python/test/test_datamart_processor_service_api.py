@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.datamart_processor_service_api import DatamartProcessorServiceApi
+from ibm_gdsc_sdk_saas.api.datamart_processor_service_api import DatamartProcessorServiceApi
 
 
 class TestDatamartProcessorServiceApi(unittest.TestCase):

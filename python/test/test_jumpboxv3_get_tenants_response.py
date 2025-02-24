@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.jumpboxv3_get_tenants_response import Jumpboxv3GetTenantsResponse
+from ibm_gdsc_sdk_saas.models.jumpboxv3_get_tenants_response import Jumpboxv3GetTenantsResponse
 
 class TestJumpboxv3GetTenantsResponse(unittest.TestCase):
     """Jumpboxv3GetTenantsResponse unit test stubs"""
@@ -36,13 +36,13 @@ class TestJumpboxv3GetTenantsResponse(unittest.TestCase):
         if include_optional:
             return Jumpboxv3GetTenantsResponse(
                 tenants = [
-                    ibm_gdsc_sdk_software.models.jumpboxv3_tenant.jumpboxv3Tenant(
+                    ibm_gdsc_sdk_saas.models.jumpboxv3_tenant.jumpboxv3Tenant(
                         activation_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         external_id = '', 
                         external_metadata = {
-                            'key' : ibm_gdsc_sdk_software.models.tenantuserv3_external_metadata.tenantuserv3ExternalMetadata(
+                            'key' : ibm_gdsc_sdk_saas.models.tenantuserv3_external_metadata.tenantuserv3ExternalMetadata(
                                 add_ons = {
-                                    'key' : ibm_gdsc_sdk_software.models.tenantuserv3_prometheus.tenantuserv3Prometheus(
+                                    'key' : ibm_gdsc_sdk_saas.models.tenantuserv3_prometheus.tenantuserv3Prometheus(
                                         unit = '', 
                                         value = '', )
                                     }, 

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.groupbuilderv3_reset_groups_request import Groupbuilderv3ResetGroupsRequest
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_reset_groups_request import Groupbuilderv3ResetGroupsRequest
 
 class TestGroupbuilderv3ResetGroupsRequest(unittest.TestCase):
     """Groupbuilderv3ResetGroupsRequest unit test stubs"""

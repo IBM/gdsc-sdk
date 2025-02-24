@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_insert_gdp_policy_meta_data_request import Policybuilderv3InsertGdpPolicyMetaDataRequest
+from ibm_gdsc_sdk_saas.models.policybuilderv3_insert_gdp_policy_meta_data_request import Policybuilderv3InsertGdpPolicyMetaDataRequest
 
 class TestPolicybuilderv3InsertGdpPolicyMetaDataRequest(unittest.TestCase):
     """Policybuilderv3InsertGdpPolicyMetaDataRequest unit test stubs"""
@@ -37,7 +37,7 @@ class TestPolicybuilderv3InsertGdpPolicyMetaDataRequest(unittest.TestCase):
             return Policybuilderv3InsertGdpPolicyMetaDataRequest(
                 central_manager_id = '',
                 data = [
-                    ibm_gdsc_sdk_software.models.gdp_policy_object_used_for_summaries_for_insertion.Gdp Policy Object used for summaries for insertion(
+                    ibm_gdsc_sdk_saas.models.gdp_policy_object_used_for_summaries_for_insertion.Gdp Policy Object used for summaries for insertion(
                         id = 56, 
                         policy_description = '', 
                         policy_rules_count = '', 

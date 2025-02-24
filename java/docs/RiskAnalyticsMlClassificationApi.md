@@ -16,12 +16,12 @@ Summary: Reset the model to its default weights. Description: Load the initial m
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.RiskAnalyticsMlClassificationApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.RiskAnalyticsMlClassificationApi;
 
 public class Example {
   public static void main(String[] args) {

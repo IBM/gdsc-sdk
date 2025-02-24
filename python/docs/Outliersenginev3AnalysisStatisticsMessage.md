@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.outliersenginev3_analysis_statistics_message import Outliersenginev3AnalysisStatisticsMessage
+from ibm_gdsc_sdk_saas.models.outliersenginev3_analysis_statistics_message import Outliersenginev3AnalysisStatisticsMessage
 
 # TODO update the JSON string below
 json = "{}"

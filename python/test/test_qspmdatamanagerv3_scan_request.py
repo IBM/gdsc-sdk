@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.qspmdatamanagerv3_scan_request import Qspmdatamanagerv3ScanRequest
+from ibm_gdsc_sdk_saas.models.qspmdatamanagerv3_scan_request import Qspmdatamanagerv3ScanRequest
 
 class TestQspmdatamanagerv3ScanRequest(unittest.TestCase):
     """Qspmdatamanagerv3ScanRequest unit test stubs"""
@@ -42,7 +42,6 @@ class TestQspmdatamanagerv3ScanRequest(unittest.TestCase):
                 scan_desc = '',
                 scan_id = '',
                 scan_status = '',
-                scan_type = '',
                 user_email = ''
             )
         else:

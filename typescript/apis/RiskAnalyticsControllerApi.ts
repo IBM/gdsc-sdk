@@ -176,7 +176,7 @@ export class RiskAnalyticsControllerApiRequestFactory extends BaseAPIRequestFact
     }
 
     /**
-     * Summary: Get risk event classifications list Description: retrieves the ClassificationMatchDetails for a given risk id – classification that did not matched will be with class_value 0.
+     * Summary: Get risk event classifications list Description: retrieves the ClassificationMatchDetails for a given risk id; classification that did not matched will be with class_value 0.
      * @param riskId Risk id
      */
     public async riskAnalyticsControllerGetRiskEventClassificationsList(riskId: number, _options?: Configuration): Promise<RequestContext> {
@@ -189,7 +189,7 @@ export class RiskAnalyticsControllerApiRequestFactory extends BaseAPIRequestFact
 
 
         // Path Params
-        const localVarPath = '/api/v3/risk_events/feedback/{risk_id}'
+        const localVarPath = '/api/v3/risk_events/{risk_id}/feedback'
             .replace('{' + 'risk_id' + '}', encodeURIComponent(String(riskId)));
 
         // Make Request Context
@@ -235,7 +235,7 @@ export class RiskAnalyticsControllerApiRequestFactory extends BaseAPIRequestFact
 
 
         // Path Params
-        const localVarPath = '/api/v3/risk_events/summarization/data/{risk_id}'
+        const localVarPath = '/api/v3/risk_events/{risk_id}/summarization/data'
             .replace('{' + 'risk_id' + '}', encodeURIComponent(String(riskId)));
 
         // Make Request Context
@@ -287,7 +287,7 @@ export class RiskAnalyticsControllerApiRequestFactory extends BaseAPIRequestFact
 
 
         // Path Params
-        const localVarPath = '/api/v3/risk_events/details/{risk_id}'
+        const localVarPath = '/api/v3/risk_events/{risk_id}/details'
             .replace('{' + 'risk_id' + '}', encodeURIComponent(String(riskId)));
 
         // Make Request Context
@@ -467,7 +467,7 @@ export class RiskAnalyticsControllerApiRequestFactory extends BaseAPIRequestFact
 
 
         // Path Params
-        const localVarPath = '/api/v3/risk_events/va/{risk_id}'
+        const localVarPath = '/api/v3/risk_events/{risk_id}/va'
             .replace('{' + 'risk_id' + '}', encodeURIComponent(String(riskId)));
 
         // Make Request Context
@@ -716,7 +716,7 @@ export class RiskAnalyticsControllerApiRequestFactory extends BaseAPIRequestFact
     }
 
     /**
-     * Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium.
+     * Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to GDSC. Using this API to change a user settings may prevent the user from using the Risk Event function within GDSC.
      * @param riskanalyticscontrollerv3SetUserUISettingsRequest 
      */
     public async riskAnalyticsControllerSetUserUISettings(riskanalyticscontrollerv3SetUserUISettingsRequest: Riskanalyticscontrollerv3SetUserUISettingsRequest, _options?: Configuration): Promise<RequestContext> {

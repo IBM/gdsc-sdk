@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_app_secret import Resourcecontrollerk8v3AppSecret
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_app_secret import Resourcecontrollerk8v3AppSecret
 
 class TestResourcecontrollerk8v3AppSecret(unittest.TestCase):
     """Resourcecontrollerk8v3AppSecret unit test stubs"""

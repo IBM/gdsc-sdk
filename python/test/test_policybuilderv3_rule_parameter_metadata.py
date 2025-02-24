@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_rule_parameter_metadata import Policybuilderv3RuleParameterMetadata
+from ibm_gdsc_sdk_saas.models.policybuilderv3_rule_parameter_metadata import Policybuilderv3RuleParameterMetadata
 
 class TestPolicybuilderv3RuleParameterMetadata(unittest.TestCase):
     """Policybuilderv3RuleParameterMetadata unit test stubs"""
@@ -45,12 +45,12 @@ class TestPolicybuilderv3RuleParameterMetadata(unittest.TestCase):
                 mandatory = True,
                 parameter_name = '',
                 possible_values = [
-                    ibm_gdsc_sdk_software.models.policybuilderv3_possible_value_obj.policybuilderv3PossibleValueObj(
+                    ibm_gdsc_sdk_saas.models.policybuilderv3_possible_value_obj.policybuilderv3PossibleValueObj(
                         descrption = '', 
                         value = '', )
                     ],
                 relationships = [
-                    ibm_gdsc_sdk_software.models.policybuilderv3_parameter_relation_ship.policybuilderv3ParameterRelationShip(
+                    ibm_gdsc_sdk_saas.models.policybuilderv3_parameter_relation_ship.policybuilderv3ParameterRelationShip(
                         parameter_name = '', 
                         relationship = '', )
                     ],

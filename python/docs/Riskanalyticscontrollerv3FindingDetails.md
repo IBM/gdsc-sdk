@@ -5,13 +5,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**counts** | [**List[Riskanalyticscontrollerv3DetailToCount]**](Riskanalyticscontrollerv3DetailToCount.md) | Finding details counts (for violation, exception) - Optional. | [optional] 
-**finding_examples** | **List[str]** | Finding examples (for outlier, activity) - Optional. | [optional] 
+**counts** | [**List[Riskanalyticscontrollerv3DetailToCount]**](Riskanalyticscontrollerv3DetailToCount.md) |  | [optional] 
+**finding_examples** | **List[str]** |  | [optional] 
+**finding_references** | [**List[Riskanalyticscontrollerv3FindingReferenceLink]**](Riskanalyticscontrollerv3FindingReferenceLink.md) | Finding links/references; used outlier with high volume type, and in policy violations; each reference contains a deep link filters to the report. | [optional] 
 
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_finding_details import Riskanalyticscontrollerv3FindingDetails
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_finding_details import Riskanalyticscontrollerv3FindingDetails
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_operator_type import Reportsv3OperatorType
+from ibm_gdsc_sdk_saas.models.reportsv3_operator_type import Reportsv3OperatorType
 
 class TestReportsv3OperatorType(unittest.TestCase):
     """Reportsv3OperatorType unit test stubs"""

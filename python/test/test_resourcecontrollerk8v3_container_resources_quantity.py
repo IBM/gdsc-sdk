@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_container_resources_quantity import Resourcecontrollerk8v3ContainerResourcesQuantity
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_container_resources_quantity import Resourcecontrollerk8v3ContainerResourcesQuantity
 
 class TestResourcecontrollerk8v3ContainerResourcesQuantity(unittest.TestCase):
     """Resourcecontrollerk8v3ContainerResourcesQuantity unit test stubs"""

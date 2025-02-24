@@ -11,6 +11,7 @@
  */
 
 import { Riskanalyticscontrollerv3EmergingRiskDetails } from '../models/Riskanalyticscontrollerv3EmergingRiskDetails';
+import { Riskanalyticscontrollerv3Finding } from '../models/Riskanalyticscontrollerv3Finding';
 import { Riskanalyticscontrollerv3ObservationReportFilter } from '../models/Riskanalyticscontrollerv3ObservationReportFilter';
 import { Riskanalyticsenginev3Feature } from '../models/Riskanalyticsenginev3Feature';
 import { HttpFile } from '../http/http';
@@ -34,6 +35,7 @@ export class Riskanalyticscontrollerv3RiskObservationDetails {
     * Features list based on the requested lead_feature_id.
     */
     'features'?: Array<Riskanalyticsenginev3Feature>;
+    'finding'?: Riskanalyticscontrollerv3Finding;
     /**
     * List of headers and values for filtering the report based on pivot information.
     */
@@ -80,6 +82,12 @@ export class Riskanalyticscontrollerv3RiskObservationDetails {
             "name": "features",
             "baseName": "features",
             "type": "Array<Riskanalyticsenginev3Feature>",
+            "format": ""
+        },
+        {
+            "name": "finding",
+            "baseName": "finding",
+            "type": "Riskanalyticscontrollerv3Finding",
             "format": ""
         },
         {

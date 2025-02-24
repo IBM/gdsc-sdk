@@ -1,4 +1,4 @@
-# ibm_gdsc_sdk_software.ConnectionsServiceApi
+# ibm_gdsc_sdk_saas.ConnectionsServiceApi
 
 All URIs are relative to *http://localhost*
 
@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**connections_service_delete_connections_configs**](ConnectionsServiceApi.md#connections_service_delete_connections_configs) | **DELETE** /api/v3/connections/configs/{connection_id} | Summary: Delete connections configs Description: Delete Connection config by connection id.
 [**connections_service_delete_connector**](ConnectionsServiceApi.md#connections_service_delete_connector) | **DELETE** /api/v3/connections/{connection_id} | Summary: Delete connector Description: Delete a Connection.
 [**connections_service_delete_plugin**](ConnectionsServiceApi.md#connections_service_delete_plugin) | **DELETE** /api/v3/connections/plugins/{id} | Summary: Delete plugin. Description: Delete plugin.
+[**connections_service_generate_package**](ConnectionsServiceApi.md#connections_service_generate_package) | **PUT** /api/v3/connections/plugins/{id}/package | Summary: Generate package. Description: Generate package.
 [**connections_service_get_banner_state**](ConnectionsServiceApi.md#connections_service_get_banner_state) | **GET** /api/v3/connections/banner | Summary: Get banner state for object verb page.  Description: Get banner state for object verb page.
 [**connections_service_get_connections_accounts**](ConnectionsServiceApi.md#connections_service_get_connections_accounts) | **GET** /api/v3/connections/accounts | Summary: Get Connections accounts Description: Get Connections acccounts.
 [**connections_service_get_connections_configs**](ConnectionsServiceApi.md#connections_service_get_connections_configs) | **GET** /api/v3/connections/configs | Summary: Get connections configs Description: Get Connection config by connection type.
@@ -30,6 +31,7 @@ Method | HTTP request | Description
 [**connections_service_update_connectors**](ConnectionsServiceApi.md#connections_service_update_connectors) | **PUT** /api/v3/connections | Summary: Update connectors Description: Update a list of Connectors.
 [**connections_service_update_plugin**](ConnectionsServiceApi.md#connections_service_update_plugin) | **PUT** /api/v3/connections/plugins/{id} | Summary: Update plugin. Description: Update plugin.
 [**connections_service_update_settings**](ConnectionsServiceApi.md#connections_service_update_settings) | **PUT** /api/v3/connections/settings | Summary: Update settings Description: Update Settings.
+[**connections_service_validate_aws_connection**](ConnectionsServiceApi.md#connections_service_validate_aws_connection) | **POST** /api/v3/connections/validate/aws | Summary: Validate an AWS connection. Description: Validate an AWS connection.
 
 
 # **connections_service_create_connections_accounts**
@@ -43,15 +45,15 @@ Summary: Create Connections accounts Description: Create Connections acccounts.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.connectionsv3_create_connections_accounts_request import Connectionsv3CreateConnectionsAccountsRequest
-from ibm_gdsc_sdk_software.models.connectionsv3_create_connections_accounts_response import Connectionsv3CreateConnectionsAccountsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.connectionsv3_create_connections_accounts_request import Connectionsv3CreateConnectionsAccountsRequest
+from ibm_gdsc_sdk_saas.models.connectionsv3_create_connections_accounts_response import Connectionsv3CreateConnectionsAccountsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -61,7 +63,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -73,10 +75,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ConnectionsServiceApi(api_client)
-    connectionsv3_create_connections_accounts_request = ibm_gdsc_sdk_software.Connectionsv3CreateConnectionsAccountsRequest() # Connectionsv3CreateConnectionsAccountsRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ConnectionsServiceApi(api_client)
+    connectionsv3_create_connections_accounts_request = ibm_gdsc_sdk_saas.Connectionsv3CreateConnectionsAccountsRequest() # Connectionsv3CreateConnectionsAccountsRequest | 
 
     try:
         # Summary: Create Connections accounts Description: Create Connections acccounts.
@@ -129,15 +131,15 @@ Summary: Create connections configs Description: Create Connection config by con
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.connectionsv3_create_connections_configs_request import Connectionsv3CreateConnectionsConfigsRequest
-from ibm_gdsc_sdk_software.models.connectionsv3_create_connections_configs_response import Connectionsv3CreateConnectionsConfigsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.connectionsv3_create_connections_configs_request import Connectionsv3CreateConnectionsConfigsRequest
+from ibm_gdsc_sdk_saas.models.connectionsv3_create_connections_configs_response import Connectionsv3CreateConnectionsConfigsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -147,7 +149,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -159,10 +161,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ConnectionsServiceApi(api_client)
-    connectionsv3_create_connections_configs_request = ibm_gdsc_sdk_software.Connectionsv3CreateConnectionsConfigsRequest() # Connectionsv3CreateConnectionsConfigsRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ConnectionsServiceApi(api_client)
+    connectionsv3_create_connections_configs_request = ibm_gdsc_sdk_saas.Connectionsv3CreateConnectionsConfigsRequest() # Connectionsv3CreateConnectionsConfigsRequest | 
 
     try:
         # Summary: Create connections configs Description: Create Connection config by connection type.
@@ -215,15 +217,15 @@ Summary: Create plugin Description: Create UC generic plugin
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.connectionsv3_create_plugin_request import Connectionsv3CreatePluginRequest
-from ibm_gdsc_sdk_software.models.connectionsv3_create_plugin_response import Connectionsv3CreatePluginResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.connectionsv3_create_plugin_request import Connectionsv3CreatePluginRequest
+from ibm_gdsc_sdk_saas.models.connectionsv3_create_plugin_response import Connectionsv3CreatePluginResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -233,7 +235,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -245,10 +247,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ConnectionsServiceApi(api_client)
-    connectionsv3_create_plugin_request = ibm_gdsc_sdk_software.Connectionsv3CreatePluginRequest() # Connectionsv3CreatePluginRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ConnectionsServiceApi(api_client)
+    connectionsv3_create_plugin_request = ibm_gdsc_sdk_saas.Connectionsv3CreatePluginRequest() # Connectionsv3CreatePluginRequest | 
 
     try:
         # Summary: Create plugin Description: Create UC generic plugin
@@ -301,14 +303,14 @@ Summary: Create settings Description: Create Settings.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.connectionsv3_create_settings_request import Connectionsv3CreateSettingsRequest
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.connectionsv3_create_settings_request import Connectionsv3CreateSettingsRequest
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -318,7 +320,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -330,10 +332,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ConnectionsServiceApi(api_client)
-    connectionsv3_create_settings_request = ibm_gdsc_sdk_software.Connectionsv3CreateSettingsRequest() # Connectionsv3CreateSettingsRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ConnectionsServiceApi(api_client)
+    connectionsv3_create_settings_request = ibm_gdsc_sdk_saas.Connectionsv3CreateSettingsRequest() # Connectionsv3CreateSettingsRequest | 
 
     try:
         # Summary: Create settings Description: Create Settings.
@@ -386,14 +388,14 @@ Summary: Delete Connections accounts Description: Delete Connections acccounts.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.connectionsv3_delete_connections_accounts_response import Connectionsv3DeleteConnectionsAccountsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.connectionsv3_delete_connections_accounts_response import Connectionsv3DeleteConnectionsAccountsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -403,7 +405,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -415,9 +417,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ConnectionsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ConnectionsServiceApi(api_client)
     account_id = 'account_id_example' # str | Account id.
 
     try:
@@ -471,14 +473,14 @@ Summary: Delete connections configs Description: Delete Connection config by con
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.connectionsv3_delete_connections_configs_response import Connectionsv3DeleteConnectionsConfigsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.connectionsv3_delete_connections_configs_response import Connectionsv3DeleteConnectionsConfigsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -488,7 +490,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -500,9 +502,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ConnectionsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ConnectionsServiceApi(api_client)
     connection_id = 'connection_id_example' # str | Connection id.
 
     try:
@@ -556,13 +558,13 @@ Summary: Delete connector Description: Delete a Connection.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -572,7 +574,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -584,9 +586,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ConnectionsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ConnectionsServiceApi(api_client)
     connection_id = 'connection_id_example' # str | The connection id
 
     try:
@@ -640,14 +642,14 @@ Summary: Delete plugin. Description: Delete plugin.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.connectionsv3_delete_plugin_response import Connectionsv3DeletePluginResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.connectionsv3_delete_plugin_response import Connectionsv3DeletePluginResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -657,7 +659,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -669,9 +671,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ConnectionsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ConnectionsServiceApi(api_client)
     id = 'id_example' # str | plugin id
 
     try:
@@ -714,10 +716,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **connections_service_get_banner_state**
-> Connectionsv3GetBannerStateResponse connections_service_get_banner_state()
+# **connections_service_generate_package**
+> Connectionsv3GeneratePackageResponse connections_service_generate_package(id, connectionsv3_generate_package_request)
 
-Summary: Get banner state for object verb page.  Description: Get banner state for object verb page.
+Summary: Generate package. Description: Generate package.
 
 ### Example
 
@@ -725,14 +727,15 @@ Summary: Get banner state for object verb page.  Description: Get banner state f
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.connectionsv3_get_banner_state_response import Connectionsv3GetBannerStateResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.connectionsv3_generate_package_request import Connectionsv3GeneratePackageRequest
+from ibm_gdsc_sdk_saas.models.connectionsv3_generate_package_response import Connectionsv3GeneratePackageResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -742,7 +745,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -754,9 +757,96 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ConnectionsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ConnectionsServiceApi(api_client)
+    id = 'id_example' # str | id
+    connectionsv3_generate_package_request = ibm_gdsc_sdk_saas.Connectionsv3GeneratePackageRequest() # Connectionsv3GeneratePackageRequest | 
+
+    try:
+        # Summary: Generate package. Description: Generate package.
+        api_response = api_instance.connections_service_generate_package(id, connectionsv3_generate_package_request)
+        print("The response of ConnectionsServiceApi->connections_service_generate_package:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ConnectionsServiceApi->connections_service_generate_package: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**| id | 
+ **connectionsv3_generate_package_request** | [**Connectionsv3GeneratePackageRequest**](Connectionsv3GeneratePackageRequest.md)|  | 
+
+### Return type
+
+[**Connectionsv3GeneratePackageResponse**](Connectionsv3GeneratePackageResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **connections_service_get_banner_state**
+> Connectionsv3GetBannerStateResponse connections_service_get_banner_state()
+
+Summary: Get banner state for object verb page.  Description: Get banner state for object verb page.
+
+### Example
+
+* Basic Authentication (BasicAuth):
+* Api Key Authentication (ApiKeyAuth):
+
+```python
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.connectionsv3_get_banner_state_response import Connectionsv3GetBannerStateResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ibm_gdsc_sdk_saas.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure HTTP basic authorization: BasicAuth
+configuration = ibm_gdsc_sdk_saas.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ibm_gdsc_sdk_saas.ConnectionsServiceApi(api_client)
 
     try:
         # Summary: Get banner state for object verb page.  Description: Get banner state for object verb page.
@@ -806,14 +896,14 @@ Summary: Get Connections accounts Description: Get Connections acccounts.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.connectionsv3_get_connections_accounts_response import Connectionsv3GetConnectionsAccountsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.connectionsv3_get_connections_accounts_response import Connectionsv3GetConnectionsAccountsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -823,7 +913,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -835,9 +925,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ConnectionsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ConnectionsServiceApi(api_client)
     account_id = 'account_id_example' # str | Optional: account id. (optional)
     access_key = 'access_key_example' # str | Optional: acccount access key. (optional)
 
@@ -893,14 +983,14 @@ Summary: Get connections configs Description: Get Connection config by connectio
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.connectionsv3_get_connections_configs_response import Connectionsv3GetConnectionsConfigsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.connectionsv3_get_connections_configs_response import Connectionsv3GetConnectionsConfigsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -910,7 +1000,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -922,9 +1012,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ConnectionsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ConnectionsServiceApi(api_client)
     type = 'UNDEFINED_TYPE' # str | The type of connector. (optional) (default to 'UNDEFINED_TYPE')
     connection_id = 'connection_id_example' # str | Optional: if connection id did not provide then return all connections. (optional)
 
@@ -980,15 +1070,15 @@ Summary: Get connections with filters Description: Get connections with filters.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.connectionsv3_get_connections_with_filters_request import Connectionsv3GetConnectionsWithFiltersRequest
-from ibm_gdsc_sdk_software.models.connectionsv3_get_connections_with_filters_response import Connectionsv3GetConnectionsWithFiltersResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.connectionsv3_get_connections_with_filters_request import Connectionsv3GetConnectionsWithFiltersRequest
+from ibm_gdsc_sdk_saas.models.connectionsv3_get_connections_with_filters_response import Connectionsv3GetConnectionsWithFiltersResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -998,7 +1088,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1010,10 +1100,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ConnectionsServiceApi(api_client)
-    connectionsv3_get_connections_with_filters_request = ibm_gdsc_sdk_software.Connectionsv3GetConnectionsWithFiltersRequest() # Connectionsv3GetConnectionsWithFiltersRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ConnectionsServiceApi(api_client)
+    connectionsv3_get_connections_with_filters_request = ibm_gdsc_sdk_saas.Connectionsv3GetConnectionsWithFiltersRequest() # Connectionsv3GetConnectionsWithFiltersRequest | 
 
     try:
         # Summary: Get connections with filters Description: Get connections with filters.
@@ -1066,14 +1156,14 @@ Summary: Get connectors summary Description: Get a summary of Connectors.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.connectionsv3_get_connectors_summary_response import Connectionsv3GetConnectorsSummaryResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.connectionsv3_get_connectors_summary_response import Connectionsv3GetConnectorsSummaryResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1083,7 +1173,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1095,9 +1185,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ConnectionsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ConnectionsServiceApi(api_client)
 
     try:
         # Summary: Get connectors summary Description: Get a summary of Connectors.
@@ -1147,14 +1237,14 @@ Summary: Get data sources Description: Get a list of data sources.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.connectionsv3_get_data_sources_response import Connectionsv3GetDataSourcesResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.connectionsv3_get_data_sources_response import Connectionsv3GetDataSourcesResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1164,7 +1254,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1176,9 +1266,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ConnectionsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ConnectionsServiceApi(api_client)
 
     try:
         # Summary: Get data sources Description: Get a list of data sources.
@@ -1228,14 +1318,14 @@ Summary: Get list of guard record fields.  Description: Get list of guard record
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.connectionsv3_get_guard_record_fields_response import Connectionsv3GetGuardRecordFieldsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.connectionsv3_get_guard_record_fields_response import Connectionsv3GetGuardRecordFieldsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1245,7 +1335,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1257,9 +1347,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ConnectionsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ConnectionsServiceApi(api_client)
 
     try:
         # Summary: Get list of guard record fields.  Description: Get list of guard record fields.
@@ -1309,14 +1399,14 @@ Summary: Get headers Description: Get a list of Headers.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.connectionsv3_get_headers_response import Connectionsv3GetHeadersResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.connectionsv3_get_headers_response import Connectionsv3GetHeadersResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1326,7 +1416,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1338,9 +1428,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ConnectionsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ConnectionsServiceApi(api_client)
 
     try:
         # Summary: Get headers Description: Get a list of Headers.
@@ -1390,14 +1480,14 @@ Summary: Get plugins  Description: Get custom universal connector plugins
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.connectionsv3_get_plugins_response import Connectionsv3GetPluginsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.connectionsv3_get_plugins_response import Connectionsv3GetPluginsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1407,7 +1497,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1419,9 +1509,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ConnectionsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ConnectionsServiceApi(api_client)
     id = 'id_example' # str | Optional: if no plug-in id is provided, returns list of all plug-ins. (optional)
 
     try:
@@ -1475,14 +1565,14 @@ Summary: Get settings Description: Get a list of Settings.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.connectionsv3_get_settings_response import Connectionsv3GetSettingsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.connectionsv3_get_settings_response import Connectionsv3GetSettingsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1492,7 +1582,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1504,9 +1594,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ConnectionsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ConnectionsServiceApi(api_client)
 
     try:
         # Summary: Get settings Description: Get a list of Settings.
@@ -1556,15 +1646,15 @@ Summary: Partial update connectors Description: Partial update of Connectors.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.connectionsv3_partial_update_connectors_request import Connectionsv3PartialUpdateConnectorsRequest
-from ibm_gdsc_sdk_software.models.connectionsv3_partial_update_connectors_response import Connectionsv3PartialUpdateConnectorsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.connectionsv3_partial_update_connectors_request import Connectionsv3PartialUpdateConnectorsRequest
+from ibm_gdsc_sdk_saas.models.connectionsv3_partial_update_connectors_response import Connectionsv3PartialUpdateConnectorsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1574,7 +1664,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1586,10 +1676,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ConnectionsServiceApi(api_client)
-    connectionsv3_partial_update_connectors_request = ibm_gdsc_sdk_software.Connectionsv3PartialUpdateConnectorsRequest() # Connectionsv3PartialUpdateConnectorsRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ConnectionsServiceApi(api_client)
+    connectionsv3_partial_update_connectors_request = ibm_gdsc_sdk_saas.Connectionsv3PartialUpdateConnectorsRequest() # Connectionsv3PartialUpdateConnectorsRequest | 
 
     try:
         # Summary: Partial update connectors Description: Partial update of Connectors.
@@ -1642,15 +1732,15 @@ Summary: Post stap command Description: Send a STAP command down to kafka for sn
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.connectionsv3_stap_command_request import Connectionsv3StapCommandRequest
-from ibm_gdsc_sdk_software.models.connectionsv3_status_response_base import Connectionsv3StatusResponseBase
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.connectionsv3_stap_command_request import Connectionsv3StapCommandRequest
+from ibm_gdsc_sdk_saas.models.connectionsv3_status_response_base import Connectionsv3StatusResponseBase
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1660,7 +1750,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1672,10 +1762,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ConnectionsServiceApi(api_client)
-    connectionsv3_stap_command_request = ibm_gdsc_sdk_software.Connectionsv3StapCommandRequest() # Connectionsv3StapCommandRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ConnectionsServiceApi(api_client)
+    connectionsv3_stap_command_request = ibm_gdsc_sdk_saas.Connectionsv3StapCommandRequest() # Connectionsv3StapCommandRequest | 
 
     try:
         # Summary: Post stap command Description: Send a STAP command down to kafka for snif-assist.
@@ -1728,15 +1818,15 @@ Summary: Update banner state for object verb page.  Description: Update banner s
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.connectionsv3_update_banner_state_request import Connectionsv3UpdateBannerStateRequest
-from ibm_gdsc_sdk_software.models.connectionsv3_update_banner_state_response import Connectionsv3UpdateBannerStateResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.connectionsv3_update_banner_state_request import Connectionsv3UpdateBannerStateRequest
+from ibm_gdsc_sdk_saas.models.connectionsv3_update_banner_state_response import Connectionsv3UpdateBannerStateResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1746,7 +1836,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1758,10 +1848,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ConnectionsServiceApi(api_client)
-    connectionsv3_update_banner_state_request = ibm_gdsc_sdk_software.Connectionsv3UpdateBannerStateRequest() # Connectionsv3UpdateBannerStateRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ConnectionsServiceApi(api_client)
+    connectionsv3_update_banner_state_request = ibm_gdsc_sdk_saas.Connectionsv3UpdateBannerStateRequest() # Connectionsv3UpdateBannerStateRequest | 
 
     try:
         # Summary: Update banner state for object verb page.  Description: Update banner state for object verb page.
@@ -1814,15 +1904,15 @@ Summary: Update Connections accounts Description: Update Connections acccounts.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.connectionsv3_update_connections_accounts_request import Connectionsv3UpdateConnectionsAccountsRequest
-from ibm_gdsc_sdk_software.models.connectionsv3_update_connections_accounts_response import Connectionsv3UpdateConnectionsAccountsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.connectionsv3_update_connections_accounts_request import Connectionsv3UpdateConnectionsAccountsRequest
+from ibm_gdsc_sdk_saas.models.connectionsv3_update_connections_accounts_response import Connectionsv3UpdateConnectionsAccountsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1832,7 +1922,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1844,10 +1934,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ConnectionsServiceApi(api_client)
-    connectionsv3_update_connections_accounts_request = ibm_gdsc_sdk_software.Connectionsv3UpdateConnectionsAccountsRequest() # Connectionsv3UpdateConnectionsAccountsRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ConnectionsServiceApi(api_client)
+    connectionsv3_update_connections_accounts_request = ibm_gdsc_sdk_saas.Connectionsv3UpdateConnectionsAccountsRequest() # Connectionsv3UpdateConnectionsAccountsRequest | 
 
     try:
         # Summary: Update Connections accounts Description: Update Connections acccounts.
@@ -1900,15 +1990,15 @@ Summary: Update connections configs Description: Update Connection config by con
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.connectionsv3_update_connections_configs_request import Connectionsv3UpdateConnectionsConfigsRequest
-from ibm_gdsc_sdk_software.models.connectionsv3_update_connections_configs_response import Connectionsv3UpdateConnectionsConfigsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.connectionsv3_update_connections_configs_request import Connectionsv3UpdateConnectionsConfigsRequest
+from ibm_gdsc_sdk_saas.models.connectionsv3_update_connections_configs_response import Connectionsv3UpdateConnectionsConfigsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1918,7 +2008,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1930,10 +2020,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ConnectionsServiceApi(api_client)
-    connectionsv3_update_connections_configs_request = ibm_gdsc_sdk_software.Connectionsv3UpdateConnectionsConfigsRequest() # Connectionsv3UpdateConnectionsConfigsRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ConnectionsServiceApi(api_client)
+    connectionsv3_update_connections_configs_request = ibm_gdsc_sdk_saas.Connectionsv3UpdateConnectionsConfigsRequest() # Connectionsv3UpdateConnectionsConfigsRequest | 
 
     try:
         # Summary: Update connections configs Description: Update Connection config by connection id.
@@ -1986,14 +2076,14 @@ Summary: Update connectors Description: Update a list of Connectors.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.connectionsv3_update_connectors_request import Connectionsv3UpdateConnectorsRequest
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.connectionsv3_update_connectors_request import Connectionsv3UpdateConnectorsRequest
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2003,7 +2093,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -2015,10 +2105,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ConnectionsServiceApi(api_client)
-    connectionsv3_update_connectors_request = ibm_gdsc_sdk_software.Connectionsv3UpdateConnectorsRequest() # Connectionsv3UpdateConnectorsRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ConnectionsServiceApi(api_client)
+    connectionsv3_update_connectors_request = ibm_gdsc_sdk_saas.Connectionsv3UpdateConnectorsRequest() # Connectionsv3UpdateConnectorsRequest | 
 
     try:
         # Summary: Update connectors Description: Update a list of Connectors.
@@ -2071,15 +2161,15 @@ Summary: Update plugin. Description: Update plugin.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.connectionsv3_update_plugin_request import Connectionsv3UpdatePluginRequest
-from ibm_gdsc_sdk_software.models.connectionsv3_update_plugin_response import Connectionsv3UpdatePluginResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.connectionsv3_update_plugin_request import Connectionsv3UpdatePluginRequest
+from ibm_gdsc_sdk_saas.models.connectionsv3_update_plugin_response import Connectionsv3UpdatePluginResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2089,7 +2179,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -2101,11 +2191,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ConnectionsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ConnectionsServiceApi(api_client)
     id = 'id_example' # str | id
-    connectionsv3_update_plugin_request = ibm_gdsc_sdk_software.Connectionsv3UpdatePluginRequest() # Connectionsv3UpdatePluginRequest | 
+    connectionsv3_update_plugin_request = ibm_gdsc_sdk_saas.Connectionsv3UpdatePluginRequest() # Connectionsv3UpdatePluginRequest | 
 
     try:
         # Summary: Update plugin. Description: Update plugin.
@@ -2159,14 +2249,14 @@ Summary: Update settings Description: Update Settings.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.connectionsv3_update_settings_request import Connectionsv3UpdateSettingsRequest
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.connectionsv3_update_settings_request import Connectionsv3UpdateSettingsRequest
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2176,7 +2266,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -2188,10 +2278,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ConnectionsServiceApi(api_client)
-    connectionsv3_update_settings_request = ibm_gdsc_sdk_software.Connectionsv3UpdateSettingsRequest() # Connectionsv3UpdateSettingsRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ConnectionsServiceApi(api_client)
+    connectionsv3_update_settings_request = ibm_gdsc_sdk_saas.Connectionsv3UpdateSettingsRequest() # Connectionsv3UpdateSettingsRequest | 
 
     try:
         # Summary: Update settings Description: Update Settings.
@@ -2214,6 +2304,92 @@ Name | Type | Description  | Notes
 ### Return type
 
 **object**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **connections_service_validate_aws_connection**
+> Connectionsv3ValidateConnectionResponse connections_service_validate_aws_connection(connectionsv3_validate_aws_connection_request)
+
+Summary: Validate an AWS connection. Description: Validate an AWS connection.
+
+### Example
+
+* Basic Authentication (BasicAuth):
+* Api Key Authentication (ApiKeyAuth):
+
+```python
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.connectionsv3_validate_aws_connection_request import Connectionsv3ValidateAwsConnectionRequest
+from ibm_gdsc_sdk_saas.models.connectionsv3_validate_connection_response import Connectionsv3ValidateConnectionResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ibm_gdsc_sdk_saas.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure HTTP basic authorization: BasicAuth
+configuration = ibm_gdsc_sdk_saas.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ibm_gdsc_sdk_saas.ConnectionsServiceApi(api_client)
+    connectionsv3_validate_aws_connection_request = ibm_gdsc_sdk_saas.Connectionsv3ValidateAwsConnectionRequest() # Connectionsv3ValidateAwsConnectionRequest | 
+
+    try:
+        # Summary: Validate an AWS connection. Description: Validate an AWS connection.
+        api_response = api_instance.connections_service_validate_aws_connection(connectionsv3_validate_aws_connection_request)
+        print("The response of ConnectionsServiceApi->connections_service_validate_aws_connection:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ConnectionsServiceApi->connections_service_validate_aws_connection: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **connectionsv3_validate_aws_connection_request** | [**Connectionsv3ValidateAwsConnectionRequest**](Connectionsv3ValidateAwsConnectionRequest.md)|  | 
+
+### Return type
+
+[**Connectionsv3ValidateConnectionResponse**](Connectionsv3ValidateConnectionResponse.md)
 
 ### Authorization
 

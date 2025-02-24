@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.list_data_stores_sort_parameter import ListDataStoresSortParameter
+from ibm_gdsc_sdk_saas.models.list_data_stores_sort_parameter import ListDataStoresSortParameter
 
 # TODO update the JSON string below
 json = "{}"

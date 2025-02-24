@@ -27,12 +27,12 @@ Summary: Authorize Description: Authenticate a user and return a JWT.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.JumpboxServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.JumpboxServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -100,12 +100,12 @@ Summary: Delete tenant Description: Delete a tenant.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.JumpboxServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.JumpboxServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -172,12 +172,12 @@ Summary: Delete user Description: Delete the user.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.JumpboxServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.JumpboxServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -245,12 +245,12 @@ Summary: Get tenant Description: Get a tenant.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.JumpboxServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.JumpboxServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -317,12 +317,12 @@ Summary: Get tenants Description: Get all tenant base on UID.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.JumpboxServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.JumpboxServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -396,12 +396,12 @@ Summary: Get users Description: Get all users base on a tenantID.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.JumpboxServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.JumpboxServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -469,12 +469,12 @@ Summary: Post tenants Description: Create a tenant.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.JumpboxServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.JumpboxServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -542,12 +542,12 @@ Summary: Post users Description: Create users.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.JumpboxServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.JumpboxServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -615,12 +615,12 @@ Summary: Search users Description: Search for all users matching the provided st
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.JumpboxServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.JumpboxServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -688,12 +688,12 @@ Summary: Test user Description: Test a user lookup to a given LDAP.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.JumpboxServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.JumpboxServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -761,12 +761,12 @@ Summary: Update tenant Description: Update a tenant.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.JumpboxServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.JumpboxServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -831,12 +831,12 @@ Summary: Update users Description: Update an array of users.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.JumpboxServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.JumpboxServiceApi;
 
 public class Example {
   public static void main(String[] args) {

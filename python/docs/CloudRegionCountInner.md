@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.cloud_region_count_inner import CloudRegionCountInner
+from ibm_gdsc_sdk_saas.models.cloud_region_count_inner import CloudRegionCountInner
 
 # TODO update the JSON string below
 json = "{}"

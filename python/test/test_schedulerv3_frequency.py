@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.schedulerv3_frequency import Schedulerv3Frequency
+from ibm_gdsc_sdk_saas.models.schedulerv3_frequency import Schedulerv3Frequency
 
 class TestSchedulerv3Frequency(unittest.TestCase):
     """Schedulerv3Frequency unit test stubs"""

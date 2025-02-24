@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_connector import Connectionsv3Connector
+from ibm_gdsc_sdk_saas.models.connectionsv3_connector import Connectionsv3Connector
 
 class TestConnectionsv3Connector(unittest.TestCase):
     """Connectionsv3Connector unit test stubs"""
@@ -36,7 +36,7 @@ class TestConnectionsv3Connector(unittest.TestCase):
         if include_optional:
             return Connectionsv3Connector(
                 columns = [
-                    ibm_gdsc_sdk_software.models.connectionsv3_connector_column.connectionsv3ConnectorColumn(
+                    ibm_gdsc_sdk_saas.models.connectionsv3_connector_column.connectionsv3ConnectorColumn(
                         id = '', 
                         values = [
                             ''

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_assets_with_open_vulnerabilities import Assetsv3AssetsWithOpenVulnerabilities
+from ibm_gdsc_sdk_saas.models.assetsv3_assets_with_open_vulnerabilities import Assetsv3AssetsWithOpenVulnerabilities
 
 class TestAssetsv3AssetsWithOpenVulnerabilities(unittest.TestCase):
     """Assetsv3AssetsWithOpenVulnerabilities unit test stubs"""

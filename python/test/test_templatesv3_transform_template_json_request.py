@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.templatesv3_transform_template_json_request import Templatesv3TransformTemplateJSONRequest
+from ibm_gdsc_sdk_saas.models.templatesv3_transform_template_json_request import Templatesv3TransformTemplateJSONRequest
 
 class TestTemplatesv3TransformTemplateJSONRequest(unittest.TestCase):
     """Templatesv3TransformTemplateJSONRequest unit test stubs"""

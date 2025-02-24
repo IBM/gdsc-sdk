@@ -4,8 +4,9 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**universalConnectorManagerGetCertificate**](UniversalConnectorManagerApi.md#universalConnectorManagerGetCertificate) | **GET** /api/v3/certificates | Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium. |
+| [**universalConnectorManagerGetCertificate**](UniversalConnectorManagerApi.md#universalConnectorManagerGetCertificate) | **GET** /api/v3/certificates | Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in GDSC. |
 | [**universalConnectorManagerGetConnectors**](UniversalConnectorManagerApi.md#universalConnectorManagerGetConnectors) | **GET** /api/v3/connectors | Summary: Get connectors Description: Get all the connectors Universal Connector can support. Includes a list of event pipelines (input--filter pairs), along with the supported data source types and platforms. |
+| [**universalConnectorManagerGetUCSetup**](UniversalConnectorManagerApi.md#universalConnectorManagerGetUCSetup) | **GET** /api/v3/universal_connections/configurations/{plugin_id} | Gets information to setup the new Universal connection. |
 | [**universalConnectorManagerListConnectionsSummary**](UniversalConnectorManagerApi.md#universalConnectorManagerListConnectionsSummary) | **GET** /api/v3/universal_connections | Summary: List connections summary Description: List a summary of Universal Connector configured connections (AKA datasources). |
 | [**universalConnectorManagerPluginsList**](UniversalConnectorManagerApi.md#universalConnectorManagerPluginsList) | **GET** /api/v3/plugins | Summary: Plugins list Description: List of all universal connector plugins. |
 | [**universalConnectorManagerUploadPlugin**](UniversalConnectorManagerApi.md#universalConnectorManagerUploadPlugin) | **POST** /api/v3/plugins | Summary: Upload plugin Description: Upload a plugin-package for Universal Connector. |
@@ -15,17 +16,17 @@ All URIs are relative to *http://localhost*
 # **universalConnectorManagerGetCertificate**
 > Universalconnectormanagerv3FileResponse universalConnectorManagerGetCertificate()
 
-Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium.
+Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in GDSC.
 
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.UniversalConnectorManagerApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.UniversalConnectorManagerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -89,12 +90,12 @@ Summary: Get connectors Description: Get all the connectors Universal Connector 
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.UniversalConnectorManagerApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.UniversalConnectorManagerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -149,6 +150,79 @@ This endpoint does not need any parameter.
 | **200** | A successful response. |  -  |
 | **0** | An unexpected error response. |  -  |
 
+<a id="universalConnectorManagerGetUCSetup"></a>
+# **universalConnectorManagerGetUCSetup**
+> Universalconnectormanagerv3GetUCSetupResponse universalConnectorManagerGetUCSetup(pluginId)
+
+Gets information to setup the new Universal connection.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.UniversalConnectorManagerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    UniversalConnectorManagerApi apiInstance = new UniversalConnectorManagerApi(defaultClient);
+    Integer pluginId = 56; // Integer | UC plugin id.
+    try {
+      Universalconnectormanagerv3GetUCSetupResponse result = apiInstance.universalConnectorManagerGetUCSetup(pluginId);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UniversalConnectorManagerApi#universalConnectorManagerGetUCSetup");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pluginId** | **Integer**| UC plugin id. | |
+
+### Return type
+
+[**Universalconnectormanagerv3GetUCSetupResponse**](Universalconnectormanagerv3GetUCSetupResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
 <a id="universalConnectorManagerListConnectionsSummary"></a>
 # **universalConnectorManagerListConnectionsSummary**
 > Universalconnectormanagerv3ListConnectionsResponse universalConnectorManagerListConnectionsSummary()
@@ -158,12 +232,12 @@ Summary: List connections summary Description: List a summary of Universal Conne
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.UniversalConnectorManagerApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.UniversalConnectorManagerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -227,12 +301,12 @@ Summary: Plugins list Description: List of all universal connector plugins.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.UniversalConnectorManagerApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.UniversalConnectorManagerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -296,12 +370,12 @@ Summary: Upload plugin Description: Upload a plugin-package for Universal Connec
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.UniversalConnectorManagerApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.UniversalConnectorManagerApi;
 
 public class Example {
   public static void main(String[] args) {

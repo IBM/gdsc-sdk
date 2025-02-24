@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.tenantuserv3_apikey import Tenantuserv3Apikey
+from ibm_gdsc_sdk_saas.models.tenantuserv3_apikey import Tenantuserv3Apikey
 
 # TODO update the JSON string below
 json = "{}"

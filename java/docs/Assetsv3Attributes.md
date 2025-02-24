@@ -12,6 +12,7 @@ Attributes - Entity data.
 |**entityId** | **String** |  |  [optional] |
 |**entityName** | **String** |  |  [optional] |
 |**grouperId** | **String** |  |  [optional] |
+|**hasTrainingData** | **Boolean** |  |  [optional] |
 |**majorVulnerabilityCount** | **String** |  |  [optional] |
 |**sensitiveDataCount** | **String** |  |  [optional] |
 |**statusType** | **Assetsv3StatusType** |  |  [optional] |

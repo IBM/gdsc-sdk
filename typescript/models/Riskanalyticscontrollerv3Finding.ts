@@ -14,6 +14,9 @@ import { Riskanalyticscontrollerv3FindingDetailsMap } from '../models/Riskanalyt
 import { Riskanalyticscontrollerv3ObservationType } from '../models/Riskanalyticscontrollerv3ObservationType';
 import { HttpFile } from '../http/http';
 
+/**
+* A finding (AKA observation); details the evidence found in a Risk event hourly observation; may contain multiple finding maps.
+*/
 export class Riskanalyticscontrollerv3Finding {
     /**
     * Finding description.

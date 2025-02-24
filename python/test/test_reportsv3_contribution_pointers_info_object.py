@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_contribution_pointers_info_object import Reportsv3ContributionPointersInfoObject
+from ibm_gdsc_sdk_saas.models.reportsv3_contribution_pointers_info_object import Reportsv3ContributionPointersInfoObject
 
 class TestReportsv3ContributionPointersInfoObject(unittest.TestCase):
     """Reportsv3ContributionPointersInfoObject unit test stubs"""

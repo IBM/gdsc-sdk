@@ -42,6 +42,9 @@ let body:.DashboardsServiceApiDashboardsServiceCreateDashboardRequest = {
         ],
         reportParameters: {
           end: "end_example",
+          groupIds: [
+            1,
+          ],
           id: "id_example",
           localTimeFilter: {
             end: "end_example",
@@ -271,6 +274,9 @@ let body:.DashboardsServiceApiDashboardsServiceUpdateDashboardRequest = {
           ],
           reportParameters: {
             end: "end_example",
+            groupIds: [
+              1,
+            ],
             id: "id_example",
             localTimeFilter: {
               end: "end_example",

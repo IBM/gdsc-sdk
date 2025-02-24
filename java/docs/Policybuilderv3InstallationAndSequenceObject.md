@@ -8,6 +8,7 @@ Object indicating Installation and UI Sequence of the policies.
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+|**edgeIdentifier** | **String** |  |  [optional] |
 |**installationSequence** | **Integer** | Sequence in which the policy is to be installed. |  [optional] |
 |**policyId** | **String** | Policy id to perform sequencing on. |  [optional] |
 |**uiSequence** | **Integer** | Sequence of the policy in UI. |  [optional] |

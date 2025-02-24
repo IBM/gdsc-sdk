@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_transpose_request import Reportsv3TransposeRequest
+from ibm_gdsc_sdk_saas.models.reportsv3_transpose_request import Reportsv3TransposeRequest
 
 class TestReportsv3TransposeRequest(unittest.TestCase):
     """Reportsv3TransposeRequest unit test stubs"""
@@ -40,7 +40,7 @@ class TestReportsv3TransposeRequest(unittest.TestCase):
                     ],
                 contribution_indicators = '',
                 contribution_pointers = [
-                    ibm_gdsc_sdk_software.models.reportsv3_contribution_pointers_info_object.reportsv3ContributionPointersInfoObject(
+                    ibm_gdsc_sdk_saas.models.reportsv3_contribution_pointers_info_object.reportsv3ContributionPointersInfoObject(
                         column = '', 
                         operator = '', 
                         value = '', )

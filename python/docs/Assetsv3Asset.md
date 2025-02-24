@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 **host_port** | **str** |  | [optional] 
 **ip** | **str** |  | [optional] 
 **ip_port** | **str** |  | [optional] 
+**is_splittable** | **bool** |  | [optional] 
 **mac_address** | **str** |  | [optional] 
 **model_name** | **str** |  | [optional] 
 **monitoring** | [**Assetsv3StatusType**](Assetsv3StatusType.md) |  | [optional] 
@@ -41,11 +42,12 @@ Name | Type | Description | Notes
 **traffic** | [**Assetsv3HealthType**](Assetsv3HealthType.md) |  | [optional] 
 **type** | **str** |  | [optional] 
 **user_accounts** | **List[str]** |  | [optional] 
+**vertex_id** | **str** |  | [optional] 
 
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.assetsv3_asset import Assetsv3Asset
+from ibm_gdsc_sdk_saas.models.assetsv3_asset import Assetsv3Asset
 
 # TODO update the JSON string below
 json = "{}"

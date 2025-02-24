@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.workflowv3_get_cases_count_response import Workflowv3GetCasesCountResponse
+from ibm_gdsc_sdk_saas.models.workflowv3_get_cases_count_response import Workflowv3GetCasesCountResponse
 
 class TestWorkflowv3GetCasesCountResponse(unittest.TestCase):
     """Workflowv3GetCasesCountResponse unit test stubs"""

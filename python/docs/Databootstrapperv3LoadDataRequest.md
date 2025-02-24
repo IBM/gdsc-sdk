@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.databootstrapperv3_load_data_request import Databootstrapperv3LoadDataRequest
+from ibm_gdsc_sdk_saas.models.databootstrapperv3_load_data_request import Databootstrapperv3LoadDataRequest
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.templatesv3_mime_type import Templatesv3MIMEType
+from ibm_gdsc_sdk_saas.models.templatesv3_mime_type import Templatesv3MIMEType
 
 class TestTemplatesv3MIMEType(unittest.TestCase):
     """Templatesv3MIMEType unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.healthcollectorv3_stap_object import Healthcollectorv3StapObject
+from ibm_gdsc_sdk_saas.models.healthcollectorv3_stap_object import Healthcollectorv3StapObject
 
 class TestHealthcollectorv3StapObject(unittest.TestCase):
     """Healthcollectorv3StapObject unit test stubs"""
@@ -37,15 +37,15 @@ class TestHealthcollectorv3StapObject(unittest.TestCase):
             return Healthcollectorv3StapObject(
                 collector_hostname = '',
                 connectivity = 56,
-                details = ibm_gdsc_sdk_software.models.healthcollectorv3_stap_details_object.healthcollectorv3StapDetailsObject(
-                    connectivity_details = ibm_gdsc_sdk_software.models.healthcollectorv3_general_details_object.healthcollectorv3GeneralDetailsObject(
+                details = ibm_gdsc_sdk_saas.models.healthcollectorv3_stap_details_object.healthcollectorv3StapDetailsObject(
+                    connectivity_details = ibm_gdsc_sdk_saas.models.healthcollectorv3_general_details_object.healthcollectorv3GeneralDetailsObject(
                         err_messages = '', ), 
                     general_err_messages = [
                         ''
                         ], 
-                    ktap_details = ibm_gdsc_sdk_software.models.healthcollectorv3_general_details_object.healthcollectorv3GeneralDetailsObject(
+                    ktap_details = ibm_gdsc_sdk_saas.models.healthcollectorv3_general_details_object.healthcollectorv3GeneralDetailsObject(
                         err_messages = '', ), 
-                    stap_liveliness_information = ibm_gdsc_sdk_software.models.healthcollectorv3_stap_live_info_object.healthcollectorv3StapLiveInfoObject(
+                    stap_liveliness_information = ibm_gdsc_sdk_saas.models.healthcollectorv3_stap_live_info_object.healthcollectorv3StapLiveInfoObject(
                         has_event = True, 
                         health_status = 56, 
                         liveliness_state = '', 
@@ -53,7 +53,7 @@ class TestHealthcollectorv3StapObject(unittest.TestCase):
                     traffic_details = , ),
                 ie_count = 56,
                 ie_details = [
-                    ibm_gdsc_sdk_software.models.healthcollectorv3_inspection_engine_details.healthcollectorv3InspectionEngineDetails(
+                    ibm_gdsc_sdk_saas.models.healthcollectorv3_inspection_engine_details.healthcollectorv3InspectionEngineDetails(
                         ie = '', 
                         port = '', 
                         protocol = '', 

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.ecosystemv3_get_dataset_detail_response import Ecosystemv3GetDatasetDetailResponse
+from ibm_gdsc_sdk_saas.models.ecosystemv3_get_dataset_detail_response import Ecosystemv3GetDatasetDetailResponse
 
 class TestEcosystemv3GetDatasetDetailResponse(unittest.TestCase):
     """Ecosystemv3GetDatasetDetailResponse unit test stubs"""
@@ -35,9 +35,9 @@ class TestEcosystemv3GetDatasetDetailResponse(unittest.TestCase):
         model = Ecosystemv3GetDatasetDetailResponse()
         if include_optional:
             return Ecosystemv3GetDatasetDetailResponse(
-                detail = ibm_gdsc_sdk_software.models.ecosystemv3_dataset_detail.ecosystemv3DatasetDetail(
+                detail = ibm_gdsc_sdk_saas.models.ecosystemv3_dataset_detail.ecosystemv3DatasetDetail(
                     columns = [
-                        ibm_gdsc_sdk_software.models.ecosystemv3_column_definition.ecosystemv3ColumnDefinition(
+                        ibm_gdsc_sdk_saas.models.ecosystemv3_column_definition.ecosystemv3ColumnDefinition(
                             allow_null = True, 
                             column_id = 56, 
                             column_name = '', 
@@ -49,14 +49,14 @@ class TestEcosystemv3GetDatasetDetailResponse(unittest.TestCase):
                     dataset_name = '', 
                     description = '', 
                     editable = True, ),
-                status = ibm_gdsc_sdk_software.models.the_`status`_type_defines_a_logical_error_model_that_is_suitable_for_different
+                status = ibm_gdsc_sdk_saas.models.the_`status`_type_defines_a_logical_error_model_that_is_suitable_for_different
 programming_environments,_including_rest_apis_and_rpc_apis/_it_is_used_by
 [g_rpc](https://github/com/grpc)/_the_error_model_is_designed_to_be:.The `Status` type defines a logical error model that is suitable for different
 programming environments, including REST APIs and RPC APIs. It is used by
 [gRPC](https://github.com/grpc). The error model is designed to be:(
                     code = 56, 
                     details = [
-                        ibm_gdsc_sdk_software.models.protobuf_any.protobufAny(
+                        ibm_gdsc_sdk_saas.models.protobuf_any.protobufAny(
                             type_url = '', 
                             value = 'YQ==', )
                         ], 

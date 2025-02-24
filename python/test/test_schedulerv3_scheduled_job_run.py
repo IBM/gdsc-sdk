@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.schedulerv3_scheduled_job_run import Schedulerv3ScheduledJobRun
+from ibm_gdsc_sdk_saas.models.schedulerv3_scheduled_job_run import Schedulerv3ScheduledJobRun
 
 class TestSchedulerv3ScheduledJobRun(unittest.TestCase):
     """Schedulerv3ScheduledJobRun unit test stubs"""
@@ -42,6 +42,7 @@ class TestSchedulerv3ScheduledJobRun(unittest.TestCase):
                 query_from = '',
                 query_to = '',
                 queue_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
+                result_size = 56,
                 run_detail = '',
                 schedule_id = '',
                 start_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_report_used_in_join import Reportsv3ReportUsedInJoin
+from ibm_gdsc_sdk_saas.models.reportsv3_report_used_in_join import Reportsv3ReportUsedInJoin
 
 class TestReportsv3ReportUsedInJoin(unittest.TestCase):
     """Reportsv3ReportUsedInJoin unit test stubs"""

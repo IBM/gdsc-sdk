@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticsenginev3_update_lead_generator_config_response import Riskanalyticsenginev3UpdateLeadGeneratorConfigResponse
+from ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_update_lead_generator_config_response import Riskanalyticsenginev3UpdateLeadGeneratorConfigResponse
 
 class TestRiskanalyticsenginev3UpdateLeadGeneratorConfigResponse(unittest.TestCase):
     """Riskanalyticsenginev3UpdateLeadGeneratorConfigResponse unit test stubs"""

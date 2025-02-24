@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_partial_report_update_response import Reportsv3PartialReportUpdateResponse
+from ibm_gdsc_sdk_saas.models.reportsv3_partial_report_update_response import Reportsv3PartialReportUpdateResponse
 
 class TestReportsv3PartialReportUpdateResponse(unittest.TestCase):
     """Reportsv3PartialReportUpdateResponse unit test stubs"""

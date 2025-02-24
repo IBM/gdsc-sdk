@@ -7,6 +7,7 @@ NotificationRecordsFilter includes all fields used to filter the set of desired 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **end_time** | **datetime** | Return records created before this time (&lt;). | [optional] 
+**limit** | **int** | The max amount of rows to return for this single query. | [optional] 
 **origin_data** | **str** | Only return record that with the specified origin_data. | [optional] 
 **origins** | **List[str]** | Only return record that includes the specified origins. | [optional] 
 **start_time** | **datetime** | Return records created at this time or later (&gt;&#x3D;). | [optional] 
@@ -15,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.notificationsv3_notification_records_filter import Notificationsv3NotificationRecordsFilter
+from ibm_gdsc_sdk_saas.models.notificationsv3_notification_records_filter import Notificationsv3NotificationRecordsFilter
 
 # TODO update the JSON string below
 json = "{}"

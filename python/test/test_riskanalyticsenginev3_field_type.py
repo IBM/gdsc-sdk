@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticsenginev3_field_type import Riskanalyticsenginev3FieldType
+from ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_field_type import Riskanalyticsenginev3FieldType
 
 class TestRiskanalyticsenginev3FieldType(unittest.TestCase):
     """Riskanalyticsenginev3FieldType unit test stubs"""

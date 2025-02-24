@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.workflowv3_get_jobs_count_request import Workflowv3GetJobsCountRequest
+from ibm_gdsc_sdk_saas.models.workflowv3_get_jobs_count_request import Workflowv3GetJobsCountRequest
 
 # TODO update the JSON string below
 json = "{}"

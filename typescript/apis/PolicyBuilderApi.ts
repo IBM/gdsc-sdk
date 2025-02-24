@@ -571,7 +571,7 @@ export class PolicyBuilderApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Summary: Insert gdp policy summaries Description: Inserts GDP\'s CM\'s policy summary information into mogodb. (This API is called from GDP only)
+     * Summary: Insert GDP policy summaries Description: Inserts GDP\'s CM\'s policy summary information into mogodb. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param policybuilderv3InsertGdpPolicyMetaDataRequest 
      */

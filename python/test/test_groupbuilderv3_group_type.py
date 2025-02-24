@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.groupbuilderv3_group_type import Groupbuilderv3GroupType
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_group_type import Groupbuilderv3GroupType
 
 class TestGroupbuilderv3GroupType(unittest.TestCase):
     """Groupbuilderv3GroupType unit test stubs"""

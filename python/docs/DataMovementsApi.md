@@ -1,4 +1,4 @@
-# ibm_gdsc_sdk_software.DataMovementsApi
+# ibm_gdsc_sdk_saas.DataMovementsApi
 
 All URIs are relative to *http://localhost*
 
@@ -27,14 +27,14 @@ Get a detailed information about an actual flow by providing its ID.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.actual_flow import ActualFlow
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.actual_flow import ActualFlow
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -50,9 +50,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.DataMovementsApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.DataMovementsApi(api_client)
     id = 'id_example' # str | 
 
     try:
@@ -107,15 +107,15 @@ Get a summary of all the actual flows discovered by Guardium DSPM, that is, deta
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.actual_flows_summary import ActualFlowsSummary
-from ibm_gdsc_sdk_software.models.list_actual_flows_filter_parameter import ListActualFlowsFilterParameter
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.actual_flows_summary import ActualFlowsSummary
+from ibm_gdsc_sdk_saas.models.list_actual_flows_filter_parameter import ListActualFlowsFilterParameter
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -131,10 +131,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.DataMovementsApi(api_client)
-    filter = ibm_gdsc_sdk_software.ListActualFlowsFilterParameter() # ListActualFlowsFilterParameter |  (optional)
+    api_instance = ibm_gdsc_sdk_saas.DataMovementsApi(api_client)
+    filter = ibm_gdsc_sdk_saas.ListActualFlowsFilterParameter() # ListActualFlowsFilterParameter |  (optional)
 
     try:
         # Get summary of actual flows
@@ -188,14 +188,14 @@ Get a detailed information about a potential flow by providing the flow ID.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.potential_flow import PotentialFlow
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.potential_flow import PotentialFlow
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -211,9 +211,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.DataMovementsApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.DataMovementsApi(api_client)
     flow_id = 'ff2b4abe-89f4-62b8-061e-1232456789' # str | 
 
     try:
@@ -268,14 +268,14 @@ Get details of a specific potential flow of data by providing its ID.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.potential_flow_path import PotentialFlowPath
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.potential_flow_path import PotentialFlowPath
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -291,9 +291,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.DataMovementsApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.DataMovementsApi(api_client)
     flow_path_id = 'ff2b4abe-89f4-62b8-061e-12345678910' # str | 
 
     try:
@@ -348,15 +348,15 @@ Get a summary of all the potential flows based on a filter applied.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.potential_flows_filter_options import PotentialFlowsFilterOptions
-from ibm_gdsc_sdk_software.models.potential_flows_summary import PotentialFlowsSummary
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.potential_flows_filter_options import PotentialFlowsFilterOptions
+from ibm_gdsc_sdk_saas.models.potential_flows_summary import PotentialFlowsSummary
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -372,10 +372,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.DataMovementsApi(api_client)
-    filter = ibm_gdsc_sdk_software.PotentialFlowsFilterOptions() # PotentialFlowsFilterOptions |  (optional)
+    api_instance = ibm_gdsc_sdk_saas.DataMovementsApi(api_client)
+    filter = ibm_gdsc_sdk_saas.PotentialFlowsFilterOptions() # PotentialFlowsFilterOptions |  (optional)
 
     try:
         # Get summary of potential flows according to the filter applied
@@ -429,16 +429,16 @@ Get detailed information about the actual flows according to the filter applied.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.list_actual_flow_paths200_response import ListActualFlowPaths200Response
-from ibm_gdsc_sdk_software.models.list_actual_flow_paths_filter_parameter import ListActualFlowPathsFilterParameter
-from ibm_gdsc_sdk_software.models.list_actual_flow_paths_sort_parameter import ListActualFlowPathsSortParameter
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.list_actual_flow_paths200_response import ListActualFlowPaths200Response
+from ibm_gdsc_sdk_saas.models.list_actual_flow_paths_filter_parameter import ListActualFlowPathsFilterParameter
+from ibm_gdsc_sdk_saas.models.list_actual_flow_paths_sort_parameter import ListActualFlowPathsSortParameter
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -454,11 +454,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.DataMovementsApi(api_client)
-    sort = ibm_gdsc_sdk_software.ListActualFlowPathsSortParameter() # ListActualFlowPathsSortParameter |  (optional)
-    filter = ibm_gdsc_sdk_software.ListActualFlowPathsFilterParameter() # ListActualFlowPathsFilterParameter |  (optional)
+    api_instance = ibm_gdsc_sdk_saas.DataMovementsApi(api_client)
+    sort = ibm_gdsc_sdk_saas.ListActualFlowPathsSortParameter() # ListActualFlowPathsSortParameter |  (optional)
+    filter = ibm_gdsc_sdk_saas.ListActualFlowPathsFilterParameter() # ListActualFlowPathsFilterParameter |  (optional)
     page_size = 3.4 # float |  (optional)
     next_token = 'next_token_example' # str |  (optional)
 
@@ -517,16 +517,16 @@ List all the actual flows (based on logs) of users and services across your enti
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.list_actual_flows200_response import ListActualFlows200Response
-from ibm_gdsc_sdk_software.models.list_actual_flows_filter_parameter import ListActualFlowsFilterParameter
-from ibm_gdsc_sdk_software.models.list_actual_flows_sort_parameter import ListActualFlowsSortParameter
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.list_actual_flows200_response import ListActualFlows200Response
+from ibm_gdsc_sdk_saas.models.list_actual_flows_filter_parameter import ListActualFlowsFilterParameter
+from ibm_gdsc_sdk_saas.models.list_actual_flows_sort_parameter import ListActualFlowsSortParameter
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -542,11 +542,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.DataMovementsApi(api_client)
-    sort = ibm_gdsc_sdk_software.ListActualFlowsSortParameter() # ListActualFlowsSortParameter |  (optional)
-    filter = ibm_gdsc_sdk_software.ListActualFlowsFilterParameter() # ListActualFlowsFilterParameter |  (optional)
+    api_instance = ibm_gdsc_sdk_saas.DataMovementsApi(api_client)
+    sort = ibm_gdsc_sdk_saas.ListActualFlowsSortParameter() # ListActualFlowsSortParameter |  (optional)
+    filter = ibm_gdsc_sdk_saas.ListActualFlowsFilterParameter() # ListActualFlowsFilterParameter |  (optional)
     page_size = 3.4 # float |  (optional)
     next_token = 'next_token_example' # str |  (optional)
 
@@ -605,15 +605,15 @@ List all the potential flows of users and services across your entire cloud acco
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.list_potential_flows200_response import ListPotentialFlows200Response
-from ibm_gdsc_sdk_software.models.potential_flows_filter_options import PotentialFlowsFilterOptions
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.list_potential_flows200_response import ListPotentialFlows200Response
+from ibm_gdsc_sdk_saas.models.potential_flows_filter_options import PotentialFlowsFilterOptions
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -629,10 +629,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.DataMovementsApi(api_client)
-    filter = ibm_gdsc_sdk_software.PotentialFlowsFilterOptions() # PotentialFlowsFilterOptions |  (optional)
+    api_instance = ibm_gdsc_sdk_saas.DataMovementsApi(api_client)
+    filter = ibm_gdsc_sdk_saas.PotentialFlowsFilterOptions() # PotentialFlowsFilterOptions |  (optional)
     page_size = 3.4 # float |  (optional)
     next_token = 'next_token_example' # str |  (optional)
 
@@ -690,15 +690,15 @@ List all the potential flow paths based on an applied filter.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.list_potential_flows_paths200_response import ListPotentialFlowsPaths200Response
-from ibm_gdsc_sdk_software.models.potential_flows_paths_filter_options import PotentialFlowsPathsFilterOptions
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.list_potential_flows_paths200_response import ListPotentialFlowsPaths200Response
+from ibm_gdsc_sdk_saas.models.potential_flows_paths_filter_options import PotentialFlowsPathsFilterOptions
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -714,10 +714,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.DataMovementsApi(api_client)
-    filter = ibm_gdsc_sdk_software.PotentialFlowsPathsFilterOptions() # PotentialFlowsPathsFilterOptions |  (optional)
+    api_instance = ibm_gdsc_sdk_saas.DataMovementsApi(api_client)
+    filter = ibm_gdsc_sdk_saas.PotentialFlowsPathsFilterOptions() # PotentialFlowsPathsFilterOptions |  (optional)
     page_size = 3.4 # float |  (optional)
     next_token = 'next_token_example' # str |  (optional)
 

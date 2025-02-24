@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.featureflagsv3_delete_feature_flag_overrides_response import Featureflagsv3DeleteFeatureFlagOverridesResponse
+from ibm_gdsc_sdk_saas.models.featureflagsv3_delete_feature_flag_overrides_response import Featureflagsv3DeleteFeatureFlagOverridesResponse
 
 class TestFeatureflagsv3DeleteFeatureFlagOverridesResponse(unittest.TestCase):
     """Featureflagsv3DeleteFeatureFlagOverridesResponse unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_get_connections_with_filters_response import Connectionsv3GetConnectionsWithFiltersResponse
+from ibm_gdsc_sdk_saas.models.connectionsv3_get_connections_with_filters_response import Connectionsv3GetConnectionsWithFiltersResponse
 
 class TestConnectionsv3GetConnectionsWithFiltersResponse(unittest.TestCase):
     """Connectionsv3GetConnectionsWithFiltersResponse unit test stubs"""
@@ -36,9 +36,9 @@ class TestConnectionsv3GetConnectionsWithFiltersResponse(unittest.TestCase):
         if include_optional:
             return Connectionsv3GetConnectionsWithFiltersResponse(
                 connectors = [
-                    ibm_gdsc_sdk_software.models.connectionsv3_connector.connectionsv3Connector(
+                    ibm_gdsc_sdk_saas.models.connectionsv3_connector.connectionsv3Connector(
                         columns = [
-                            ibm_gdsc_sdk_software.models.connectionsv3_connector_column.connectionsv3ConnectorColumn(
+                            ibm_gdsc_sdk_saas.models.connectionsv3_connector_column.connectionsv3ConnectorColumn(
                                 id = '', 
                                 values = [
                                     ''
@@ -51,16 +51,16 @@ class TestConnectionsv3GetConnectionsWithFiltersResponse(unittest.TestCase):
                         type = 'UNDEFINED_TYPE', )
                     ],
                 facets = [
-                    ibm_gdsc_sdk_software.models.connectionsv3_connector_filter_header.connectionsv3ConnectorFilterHeader(
+                    ibm_gdsc_sdk_saas.models.connectionsv3_connector_filter_header.connectionsv3ConnectorFilterHeader(
                         filters = [
-                            ibm_gdsc_sdk_software.models.connectionsv3_connector_filter.connectionsv3ConnectorFilter(
+                            ibm_gdsc_sdk_saas.models.connectionsv3_connector_filter.connectionsv3ConnectorFilter(
                                 count = 56, 
                                 value = '', )
                             ], 
                         header = '', )
                     ],
                 preset_stats = [
-                    ibm_gdsc_sdk_software.models.connectionsv3_connector_setting_stat.connectionsv3ConnectorSettingStat(
+                    ibm_gdsc_sdk_saas.models.connectionsv3_connector_setting_stat.connectionsv3ConnectorSettingStat(
                         count = 56, 
                         has_unhealthy = True, 
                         id = '', )

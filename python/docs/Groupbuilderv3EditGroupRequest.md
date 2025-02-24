@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.groupbuilderv3_edit_group_request import Groupbuilderv3EditGroupRequest
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_edit_group_request import Groupbuilderv3EditGroupRequest
 
 # TODO update the JSON string below
 json = "{}"

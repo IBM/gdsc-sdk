@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.groupbuilderv3_get_group_type_mapping_response import Groupbuilderv3GetGroupTypeMappingResponse
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_get_group_type_mapping_response import Groupbuilderv3GetGroupTypeMappingResponse
 
 class TestGroupbuilderv3GetGroupTypeMappingResponse(unittest.TestCase):
     """Groupbuilderv3GetGroupTypeMappingResponse unit test stubs"""
@@ -35,7 +35,7 @@ class TestGroupbuilderv3GetGroupTypeMappingResponse(unittest.TestCase):
         model = Groupbuilderv3GetGroupTypeMappingResponse()
         if include_optional:
             return Groupbuilderv3GetGroupTypeMappingResponse(
-                status = ibm_gdsc_sdk_software.models.groupbuilderv3_status_response_base.groupbuilderv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.groupbuilderv3_status_response_base.groupbuilderv3StatusResponseBase(
                     message = '', 
                     status = '', ),
                 type_map = {

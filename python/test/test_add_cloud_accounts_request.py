@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.add_cloud_accounts_request import AddCloudAccountsRequest
+from ibm_gdsc_sdk_saas.models.add_cloud_accounts_request import AddCloudAccountsRequest
 
 class TestAddCloudAccountsRequest(unittest.TestCase):
     """AddCloudAccountsRequest unit test stubs"""
@@ -37,7 +37,7 @@ class TestAddCloudAccountsRequest(unittest.TestCase):
             return AddCloudAccountsRequest(
                 cloud_provider = 'aws',
                 cloud_accounts = [
-                    ibm_gdsc_sdk_software.models.add_cloud_accounts_request_cloud_accounts_inner.addCloudAccounts_request_cloudAccounts_inner(
+                    ibm_gdsc_sdk_saas.models.add_cloud_accounts_request_cloud_accounts_inner.addCloudAccounts_request_cloudAccounts_inner(
                         cloud_account_id = '123456789101', 
                         cloud_account_name = 'my cloud account name', 
                         environment = 'development', )
@@ -48,7 +48,7 @@ class TestAddCloudAccountsRequest(unittest.TestCase):
             return AddCloudAccountsRequest(
                 cloud_provider = 'aws',
                 cloud_accounts = [
-                    ibm_gdsc_sdk_software.models.add_cloud_accounts_request_cloud_accounts_inner.addCloudAccounts_request_cloudAccounts_inner(
+                    ibm_gdsc_sdk_saas.models.add_cloud_accounts_request_cloud_accounts_inner.addCloudAccounts_request_cloudAccounts_inner(
                         cloud_account_id = '123456789101', 
                         cloud_account_name = 'my cloud account name', 
                         environment = 'development', )

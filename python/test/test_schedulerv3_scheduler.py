@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.schedulerv3_scheduler import Schedulerv3Scheduler
+from ibm_gdsc_sdk_saas.models.schedulerv3_scheduler import Schedulerv3Scheduler
 
 class TestSchedulerv3Scheduler(unittest.TestCase):
     """Schedulerv3Scheduler unit test stubs"""
@@ -50,11 +50,11 @@ class TestSchedulerv3Scheduler(unittest.TestCase):
                     ],
                 never_end = True,
                 repeat = 56,
-                repeat_begin = ibm_gdsc_sdk_software.models.schedulerv3_repeat_begin.schedulerv3RepeatBegin(
+                repeat_begin = ibm_gdsc_sdk_saas.models.schedulerv3_repeat_begin.schedulerv3RepeatBegin(
                     hour = 56, 
                     minute = 56, 
                     timezone = '', ),
-                repeat_end = ibm_gdsc_sdk_software.models.schedulerv3_repeat_end.schedulerv3RepeatEnd(
+                repeat_end = ibm_gdsc_sdk_saas.models.schedulerv3_repeat_end.schedulerv3RepeatEnd(
                     hour = 56, 
                     minute = 56, 
                     timezone = '', ),

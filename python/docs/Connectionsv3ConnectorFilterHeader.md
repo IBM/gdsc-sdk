@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.connectionsv3_connector_filter_header import Connectionsv3ConnectorFilterHeader
+from ibm_gdsc_sdk_saas.models.connectionsv3_connector_filter_header import Connectionsv3ConnectorFilterHeader
 
 # TODO update the JSON string below
 json = "{}"

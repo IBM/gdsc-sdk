@@ -297,10 +297,7 @@ case $state in
   ops)
     # Operations
     _values "Operations" \
-            "analyticsEventsServiceDeleteCacheKey[Summary: Delete cache key
-Description: Return delete key result message.]" \
-            "analyticsEventsServicePostQSAdvisorRisk[Summary: For QS Advisor risk notification only
-Description: Sends QS Advisor risk notification with recipients and returns a status]"             "assetsServiceAssetIngestion[AssetIngestion - Asset Ingestion Api to ingest assets from different applications including asset extensibility assets.]" \
+            "assetsServiceAssetIngestion[AssetIngestion - Asset Ingestion Api to ingest assets from different applications including asset extensibility assets.]" \
             "assetsServiceAssetIngestionManualTrigger[AssetIngestionManualTrigger - Manual trigger for Scheduled Asset Ingestion of databases.]" \
             "assetsServiceClonePolicy[ClonePolicy - Clone a policy.]" \
             "assetsServiceCreateUpdatePolicy[CreateUpdatePolicy - Create/update new Policy.]" \
@@ -387,6 +384,8 @@ Description: Delete Connection config by connection id.]" \
 Description: Delete a Connection.]" \
             "connectionsServiceDeletePlugin[Summary: Delete plugin.
 Description: Delete plugin.]" \
+            "connectionsServiceGeneratePackage[Summary: Generate package.
+Description: Generate package.]" \
             "connectionsServiceGetBannerState[Summary: Get banner state for object verb page. 
 Description: Get banner state for object verb page.]" \
             "connectionsServiceGetConnectionsAccounts[Summary: Get Connections accounts
@@ -422,7 +421,9 @@ Description: Update a list of Connectors.]" \
             "connectionsServiceUpdatePlugin[Summary: Update plugin.
 Description: Update plugin.]" \
             "connectionsServiceUpdateSettings[Summary: Update settings
-Description: Update Settings.]"             "dashboardsServiceCreateDashboard[Summary: Create dashboard
+Description: Update Settings.]" \
+            "connectionsServiceValidateAwsConnection[Summary: Validate an AWS connection.
+Description: Validate an AWS connection.]"             "dashboardsServiceCreateDashboard[Summary: Create dashboard
 Description: Create a unique dashboard.]" \
             "dashboardsServiceDeleteDashboard[Summary: Delete dashboard
 Description: Delete a unique dashboard.]" \
@@ -486,7 +487,16 @@ Description: Return dataset list that matches the specified filter.]" \
             "ecosystemServiceGetPurgableRows[Summary: Get purgable rows
 Description: Check the number of rows that can be purged.]" \
             "ecosystemServicePurgeData[Summary: Purge data
-Description: Purge data.]"             "featureFlagsServiceDeleteFeatureFlagOverrides[Summary: Delete feature Flag overrides
+Description: Purge data.]" \
+            "ecosystemServiceTestIntegration[Summary: Test integration
+Description: Test the integration connection with the arguments passed in the TestIntegrationRequest.  When possible
+a test message is sent to the integration to ensure it is functional.
+Currently this API only supports API_IMPORT type integrations]"             "edgeSchedulerServiceGetEdgeQueryStatus[Summary: Get edge query status
+Description: Get the status of a queued edge query]" \
+            "edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery[Summary: Monitor for a pending edge query request
+Description: monitor edge query pending request]" \
+            "edgeSchedulerServiceScheduleEdgeQuery[Summary: Schedule an edge query 
+Description: Schedule an edge query via data warehouse queue]"             "featureFlagsServiceDeleteFeatureFlagOverrides[Summary: Delete feature Flag overrides
 Description: Delete feature Flag overrides from database.]" \
             "featureFlagsServiceGetFeatureFlagOverrides[Summary: Get feature Flag overrides
 Description: Get feature Flag overrides by Feature Flag Name.]" \
@@ -507,10 +517,10 @@ Description: Export group content to a file based on a group ID.]" \
 Description: Get details of group specified by group ID.]" \
             "groupBuilderGetGroupMembers[Summary: Get group members
 Description: Get members of all the group ids provided in the request. To be consumed by policy builder ms.]" \
-            "groupBuilderGetGroupSyncMapping[Summary: Get gdp to gi group mapping
-Description: Get insights to gdp group sync mapping.]" \
+            "groupBuilderGetGroupSyncMapping[Summary: Get GDP to gi group mapping
+Description: Get GDSC to GDP group sync mapping.]" \
             "groupBuilderGetGroupTypeMapping[Summary: Get group type mapping
-Description: Get insights to gdp group types mapping.]" \
+Description: Get GDSC to GDP group types mapping.]" \
             "groupBuilderGetGroupTypes[Summary: Get group types
 Description: Get a list of available group types.]" \
             "groupBuilderGetGroups[Summary: Get groups
@@ -528,11 +538,11 @@ Description: Store GDP groups. (This API is called from GDP only)]" \
             "groupBuilderStoreGroupsGdp[Summary: Store groups Gdp
 Description: Store GDP groups. (This API is called from GDP only)]"             "guardiumConnectorAddCM[Summary: Add CM
 Description: Add a Central Manager to the tenant database.]" \
-            "guardiumConnectorAddDatamarts[Description: stores datamarts details from GDP]" \
+            "guardiumConnectorAddDatamarts[Description: stores datamarts details from GDP. (This API is called from GDP only)]" \
             "guardiumConnectorAddDmExclusion[Summary: Add DM exclusion
 Description: Add datamart to exclusion list.]" \
             "guardiumConnectorAddTask[Summary: Add task
-Description: Add a task to be executed on GDP.]" \
+Description: Add a task to be executed on GDP. (This API is called from GDP only)]" \
             "guardiumConnectorBlockUser[Summary: Block user
 Description: Block a database user on Guardium Data Protection or on a supported Database as a Service instance.]" \
             "guardiumConnectorConfigureAggregatorExport[Summary: Configure aggregator export
@@ -541,15 +551,15 @@ Description: Configure datamart export from the Aggregators to GI.]" \
 Description: Schedule export historical data for collectors.]" \
             "guardiumConnectorConfigureStreaming[Summary: Configure streaming
 Description: Enable or disable streaming.]" \
-            "guardiumConnectorDatamartVersionCheck[Description: validates if central manager has datamart support for event model]" \
+            "guardiumConnectorDatamartVersionCheck[Description: validates if central manager has v5 datamart support. (This API is called from GDP only)]" \
             "guardiumConnectorDeleteCM[Summary: Delete CM
 Description: Delete a Central Manager by ID (Name, Hostname or IP).]" \
             "guardiumConnectorDeleteDmExclusion[Summary: Delete DM exclusion
 Description: Delete a datamart from exclusion list.]" \
             "guardiumConnectorDeleteTask[Summary: Delete task
-Description: Delete a task by central manager id and task id.]" \
+Description: Delete a task by central manager id and task id. (This API is called from GDP only)]" \
             "guardiumConnectorDeleteTasks[Summary: Delete tasks
-Description: Delete a central manager's tasks by central manager id.]" \
+Description: Delete a central manager's tasks by central manager id. (This API is called from GDP only)]" \
             "guardiumConnectorGetAggregatorsConfig[Summary: Get aggregators config
 Description: Return a list of managed units from the config collection in tenant database.]" \
             "guardiumConnectorGetCMs[Summary: Get CMs
@@ -565,34 +575,34 @@ Description: Return datamarts in the exclusion list.]" \
 Description: returns the policy definition on the cm]" \
             "guardiumConnectorGetGdpPolicySummaries[Summary: Get guardium policy summary
 Description: returns the summaries of all policies on that central manager]" \
-            "guardiumConnectorGetHealthInfo[Summary: Get gealth info
-Description: Get health information from Guardium Data Protection central mamangers.]" \
+            "guardiumConnectorGetHealthInfo[Summary: Get health info
+Description: Get health information from Guardium Data Protection central mamangers. (This API is for CMs registered in legacy pull mode. Supported on-premises only)]" \
             "guardiumConnectorGetLatestDMExtractionProfile[Summary: Get latest DM extraction profile
-Description: Return the Datamart Extraction Profile for Guardium.]" \
+Description: Return the Datamart Extraction Profile for GDSC.]" \
             "guardiumConnectorGetStreamingStatus[Summary: Get streaming status
 Description: Return the streaming configuration.]" \
             "guardiumConnectorGetSyncDMs[Summary: Get sync DMs
-Description: Return the list of tasks from a central manager.]" \
+Description: Return the list of tasks from a central manager. (This API is called from GDP only)]" \
             "guardiumConnectorGetTaskTypes[Summary: Get task types
 Description: Return the list of supported task types.]" \
             "guardiumConnectorGetTasks[Summary: Get tasks
-Description: Return the list of tasks from a central manager.]" \
+Description: Return the list of tasks from a central manager. (This API is called from GDP only)]" \
             "guardiumConnectorRunGDPReport[Summary: Run GDP report
-Description: Run GDP report.]" \
+Description: Run GDP report. (This API is for CMs registered in legacy pull mode. Supported on-premises only)]" \
             "guardiumConnectorSetupCM[Summary: Setup CM
-Description: Set up the registration between a GDP Central manager and Guardium.]" \
+Description: Set up the registration between a GDP Central manager and GDSC. (This API is called from GDP only)]" \
             "guardiumConnectorSetupDatamarts[Description: setup custom datamart execution mode]" \
             "guardiumConnectorTaskError[Summary: Task error
-Description: Log error messages from GDP task execution.]" \
+Description: Log error messages from GDP task execution. (This API is called from GDP only)]" \
             "guardiumConnectorTestDatabaseConnection[Summary: Test database connection
 Description: Return database connection results.]" \
             "guardiumConnectorUpdateDmExclusion[Summary: Update DM exclusion
 Description: Update the atamart exclusion list.]" \
             "guardiumConnectorUpdateStreaming[Summary: Update streaming
-Description: Update streaming status into GI.]" \
+Description: Update streaming status into GI. (This API is called from GDP only)]" \
             "guardiumConnectorUpdateTask[Summary: Update task
-Description: Update a task that gets executed on GDP.]"             "healthCollectorGetDataWarehouseUsage[Summary: Get data warehouse usage info
-Description: Get information from Db2 related to usage]" \
+Description: Update a task that gets executed on GDP. (This API is called from GDP only)]"             "healthCollectorGetDataWarehouseUsage[Summary: Get data warehouse usage info
+Description: Get information from data warehouse related to usage]" \
             "healthCollectorGetGDPHealthInfo[Summary: Get GDP health info
 Description: Get information from MongoDB for Guardium central managers using health-connector service.]" \
             "healthCollectorGetHistoricalHealthInfo[Summary: Get historical health info
@@ -644,6 +654,10 @@ Description: Return notifications record with the specified ID.]" \
 Description: Return notifications records that match the specified filter.]" \
             "notificationsServiceGetTicketStatus[Summary: Get ticket status
 Description: Get the status of the given ticket]" \
+            "notificationsServicePostNotificationRecord[Summary: For PostNotificationRecord notification only
+Description: Sends notification with recipients and returns a status]" \
+            "notificationsServiceSearchNotificationRecords[Summary: Search notification records
+Description: Return notification records using pipeline of filters]" \
             "notificationsServiceTestIntegration[Summary: Test integration
 Description: Test the integration connection with the arguments passed in the TestIntegrationRequest.  When possible
 a test message is sent to the integration to ensure it is functional.]" \
@@ -664,7 +678,7 @@ Description: Update the working hours periods values.]" \
 Description: Run outliers detection on ready periods.]" \
             "outliersEngineUserClustering[Summary: User clustering
 Description: Run user-clustering on current sources.]"             "pipelineconfigServiceDeleteTenantResources[Summary: Delete a tenant resource
-Description: Delete tenant specific resources such as db2, mongo, postgres and s3.]"             "policyBuilderClonePolicy[Summary: Clone policy
+Description: Delete tenant specific resources such as data warehouse, mongo, postgres and s3.]"             "policyBuilderClonePolicy[Summary: Clone policy
 Description: Clone a policy.]" \
             "policyBuilderCreatePolicy[Summary: Create policy
 Description: Create Policy returns response code and message.]" \
@@ -688,7 +702,7 @@ Description: Get all the receivers associated with actions.]" \
 Description: Return a list of rule parameters and actions to the caller.]" \
             "policyBuilderInsertGdpPolicy[Summary: Insert GDP policy sync entry
 Description: Inserts GDP policy's name into sync collection]" \
-            "policyBuilderInsertGdpPolicyMetaData[Summary: Insert gdp policy summaries
+            "policyBuilderInsertGdpPolicyMetaData[Summary: Insert GDP policy summaries
 Description: Inserts GDP's CM's policy summary information into mogodb. (This API is called from GDP only)]" \
             "policyBuilderInstallPolicies[Summary: Install policies
 Description: Activate Policies request performs activations.]" \
@@ -699,8 +713,11 @@ Description: Get policy groups.]" \
             "policyBuilderRuleValidation[Summary: Rule validation
 Description: Validate a rule parameters and actions.]" \
             "policyBuilderStorePoliciesGdp[Summary: Store policies Gdp
-Description: Store policies.  (This API is called from GDP only)]"             "qSDataManagerGetMasterData[Summary: master data for all entities
+Description: Store policies.  (This API is called from GDP only)]"             "qSDataLoaderQSfileValidator[QSfileValidator - validate the files before insert happend .]" \
+            "qSDataLoaderUploadSyntheticDataLoader[UploadSyntheticDataLoader - Insert data into Db after read from .sql file .]"             "qSDataManagerGetMasterData[Summary: master data for all entities
 Description: Retrieves All Dimension and Fact tables data.]" \
+            "qSDataManagerGetPluginData[Summary: Plugins Details
+Description: Retrieves All plugins information.]" \
             "qSDataManagerRegisterScan[Summary: Insert ScanDetails
 Description: Register new data into scan dimension table.]" \
             "qSDataManagerRetrieveScan[Summary: Fetch ScanDetails
@@ -714,6 +731,7 @@ Description:Parses explorer input file and triggers dataload]" \
 Description:Parses input files and triggers dataload]" \
             "qSPluginManagerInvokePolicy[Summary: Invoke only policy data plugin
 Description:Parses policy input file and triggers dataload]"             "qSPolicyManagerBatchStatusUpdate[BatchStatusUpdate - trigger the batch to update the status of the Ticket .]" \
+            "qSPolicyManagerConfigUpdate[ConfigUpdate - this function update Crypto Risk Factor Weight in Db2 as well as Mongodb.]" \
             "qSPolicyManagerCreateTicket[CreateTicket - Create a new Incident .]" \
             "qSPolicyManagerFetchFilesfromBuckets[FetchFilesfromBuckets - fetch the file(s) from bucket of the object storage]" \
             "qSPolicyManagerProcessPolicyDimentionRecords[ProcessPolicyDimentionRecords - fetch the records from Policy Dimention and update Policy Fact table]" \
@@ -818,14 +836,49 @@ Description: Update a custom join]" \
             "reportsServiceUpdateReport[Summary: Update report
 Description: Update a custom report.]" \
             "reportsServiceUpdateVariantOverride[Summary: Update a variant
-Description: Update a variant with a custom override]"             "riskAnalyticsControllerEnableDisableRiskEventFeedback[Summary: Enable disable risk rvent feedback
+Description: Update a variant with a custom override]"             "resourceControllerK8ServiceCreateController[CreateController - Add a new controller.]" \
+            "resourceControllerK8ServiceCreateHeartBeat[CreateHeartBeat - Create a heartbeat for the controller.]" \
+            "resourceControllerK8ServiceCreateHeartBeatEx[CreateHeartBeatEx - Create a heartbeat for the controller with extended information.]" \
+            "resourceControllerK8ServiceCreateJob[////////////////////////////////////////////////////////////////
+Interface to the controllers and apps api in the App-Manager microservice
+CreateJob - Create a job definition. Files and secrets contained within will also be created.]" \
+            "resourceControllerK8ServiceCreateJobExecution[CreateJobExecution - Create a job execution.]" \
+            "resourceControllerK8ServiceCreateKeypair[CreateKeypair - Create a new keypair for the controller.]" \
+            "resourceControllerK8ServiceDeleteController[DeleteController - Delete a controller.]" \
+            "resourceControllerK8ServiceDeleteEdgeTenant[DeleteEdgeTenant - deletes an edge tenant providing edge tenant id]" \
+            "resourceControllerK8ServiceDeleteEdgeTenantRequest[DeleteEdgeTenantRequest to deletes gi and tnt CR on edge]" \
+            "resourceControllerK8ServiceDeleteJob[DeleteJob - Delete a job.]" \
+            "resourceControllerK8ServiceDownloadControllerLogs[DownloadControllerLogs - Download the controller logs for a running controller.]" \
+            "resourceControllerK8ServiceGetControllerApps[GetControllerApps - Get the apps for the given controller.]" \
+            "resourceControllerK8ServiceGetControllerCommands[GetControllerCommands - Get the commands for the controller to execute.]" \
+            "resourceControllerK8ServiceGetControllerJobs[GetControllerJobs - Get the jobs for the controller to execute.]" \
+            "resourceControllerK8ServiceGetControllerStatus[GetControllerStatus - Get the status for the given controller.]" \
+            "resourceControllerK8ServiceGetControllers[GetControllers - Get the controllers for the given tenant.]" \
+            "resourceControllerK8ServiceGetControllersWithStatus[GetControllersWithStatus - Get the controllers for the given tenant with computed status.]" \
+            "resourceControllerK8ServiceGetJob[GetJob - Get the job.]" \
+            "resourceControllerK8ServiceGetJobExecution[GetJobExecution - Get a job execution.]" \
+            "resourceControllerK8ServiceGetJobExecutions[GetJobExecutions - Get the job executions.]" \
+            "resourceControllerK8ServiceGetJobStatus[GetJobStatus - Get the job's status.]" \
+            "resourceControllerK8ServiceGetTenantApp[GetTenantApp - Get a specific app for the given tenant.]" \
+            "resourceControllerK8ServiceGetTenantApps[GetTenantApps - Get the apps for the given tenant.]" \
+            "resourceControllerK8ServiceGetTenantJobs[GetTenantJobs - Get jobs for the given tenant.]" \
+            "resourceControllerK8ServiceGetVersion[GetVersion - Get the system version information for the service.]" \
+            "resourceControllerK8ServiceInstallEdgeTenantRequest[InstallEdgeTenantRequest to Create gi and tnt CRs on edge]" \
+            "resourceControllerK8ServiceQueryControllerLogs[QueryControllerLogs - Query for the controller logs for a running controller.]" \
+            "resourceControllerK8ServiceUpdateCommand[UpdateCommand - Update the command.]" \
+            "resourceControllerK8ServiceUpdateController[UpdateController - Update an existing controller.]" \
+            "resourceControllerK8ServiceUpdateControllerStatus[UpdateControllerStatus - Updates the status for the given controller.]" \
+            "resourceControllerK8ServiceUpdateEdgeTenantRequest[UpdateEdgeTenantRequest to update gi and tnt CRs on edge]" \
+            "resourceControllerK8ServiceUpdateJob[UpdateJob - Update a job.]" \
+            "resourceControllerK8ServiceUpdateJobExecution[UpdateJobExecution - Update a job execution.]" \
+            "resourceControllerK8ServiceUpdateJobStatus[UpdateJobStatus - Updates the status for the given Job.]"             "riskAnalyticsControllerEnableDisableRiskEventFeedback[Summary: Enable disable risk rvent feedback
 Description: Enable or disable the collect feedback process.]" \
             "riskAnalyticsControllerEnableDisableRiskEventProcess[Summary: Enable disable risk event process
 Description: Enable or disable the risk event process.]" \
             "riskAnalyticsControllerGetAllClassificationsList[Summary: Get all classifications
 Description: Get all possible classifications for a risk event.]" \
             "riskAnalyticsControllerGetRiskEventClassificationsList[Summary: Get risk event classifications list
-Description: retrieves the ClassificationMatchDetails for a given risk id – classification that did not matched will be with class_value 0.]" \
+Description: retrieves the ClassificationMatchDetails for a given risk id; classification that did not matched will be with class_value 0.]" \
             "riskAnalyticsControllerGetRiskEventDataForSummarization[Summary: Get risk event data needed for summarization task
 Description: Retrieve the full information about this risk event including all findings data]" \
             "riskAnalyticsControllerGetRiskEventDetails[Summary: Get risk event details
@@ -847,7 +900,7 @@ Description: Perform tuning risk event actions.]" \
             "riskAnalyticsControllerSetRiskEventStatus[Summary: Set risk event status
 Description: Update the risk status and justification.]" \
             "riskAnalyticsControllerSetUserUISettings[Summary: Set user UI settings
-Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium.]" \
+Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to GDSC. Using this API to change a user settings may prevent the user from using the Risk Event function within GDSC.]" \
             "riskAnalyticsControllerUpdateRiskFeedback[Summary: Update risk feedback
 Description: Provide feedback for one or more risk events]"             "riskAnalyticsDataProcessorGetRiskContext[Summary: Get Risk Event Context
 Description: Retrieve the context of the given risk ID. This context will be used for LLM interactions.]" \
@@ -878,7 +931,13 @@ Description: Return a filtered list of scheduled jobs and the linked tasks.]" \
             "schedulerServiceSearchScheduledTaskRuns[Summary: Search scheduled task runs
 Description: Return a list of scheduled task run, start date, end date, status]" \
             "schedulerServiceUpdateScheduledJob[Summary: Update scheduled job
-Description: Update a single schedule job.]"             "snifAssistServiceTestRegex[Summary: Test regex
+Description: Update a single schedule job.]"             "snifAssistServiceGetSnifConfig[Summary: Get sniffer configuration parameters
+Description: Get edge sniffer configuration parameters from GI-mothership.]" \
+            "snifAssistServiceGetSnifPolicy[Summary: Get sniffer policy
+Description: Get edge sniffer policy from GI-mothership.]" \
+            "snifAssistServicePostSnifFeedback[Summary: Post sniffer feedback
+Description: Post policy installation feedback to policy-builder service.]" \
+            "snifAssistServiceTestRegex[Summary: Test regex
 Description: Match a text string with a regular expression using the same sniffer 
 code used in production to match a regex.]"             "streamsServiceCheckAWSCredentials[Summary: Check AWS credentials
 Description: Service to verify AWS credentials.]" \
@@ -904,6 +963,8 @@ Description: Return the fields available with a specific origin.]" \
             "templatesServiceGetTemplate[Summary: Get template
 Description: Return a specific template by id.]" \
             "templatesServiceGetTemplates[Summary: Get templates
+Description: Return all templates based on supplied filters.]" \
+            "templatesServiceGetTemplatesForEdge[Summary: Get templates for edge
 Description: Return all templates based on supplied filters.]" \
             "templatesServiceTestTemplate[Summary: Test template
 Description: Analyze a specified template to ensure will function correctly when utilized.]" \
@@ -953,9 +1014,10 @@ Description: Perform bulk user add or remove role.]"             "getLinkedVendo
             "listLinkedVendorDataStores[Get the data stores associated with a third party vendor]" \
             "listLinkedVendors[Get the summary of a third party vendor]" \
             "listTrustedAssets[Get a list of all the actual trusted assets]"             "universalConnectorManagerGetCertificate[Summary: Get certificate
-Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium.]" \
+Description: Get the certificate that allows secure communication between data sources and universal connections in GDSC.]" \
             "universalConnectorManagerGetConnectors[Summary: Get connectors
 Description: Get all the connectors Universal Connector can support. Includes a list of event pipelines (input--filter pairs), along with the supported data source types and platforms.]" \
+            "universalConnectorManagerGetUCSetup[Gets information to setup the new Universal connection.]" \
             "universalConnectorManagerListConnectionsSummary[Summary: List connections summary
 Description: List a summary of Universal Connector configured connections (AKA datasources).]" \
             "universalConnectorManagerPluginsList[Summary: Plugins list
@@ -963,8 +1025,14 @@ Description: List of all universal connector plugins.]" \
             "universalConnectorManagerUploadPlugin[Summary: Upload plugin
 Description: Upload a plugin-package for Universal Connector.]"             "workflowCreateCase[Summary: Create case
 Description: Create single case.]" \
+            "workflowCreateProductEntity[Summary: Create product entity
+Description: Create single product entity.]" \
             "workflowCreateTask[Summary: Create task
 Description: Create single task within a parent case.]" \
+            "workflowCreateWorkflowEvent[Summary: Post event for processing by workflow rules
+Description: Find matching workflow rule and run it]" \
+            "workflowDeleteProductEntity[Summary: Delete a product entity
+Description: Delete a single product entity.]" \
             "workflowGetCases[Summary: Get cases
 Description: Return all cases requested.]" \
             "workflowGetCasesCount[Summary: Get cases count
@@ -973,6 +1041,10 @@ Description: Get case count.]" \
 Description: Return filename associated with the task referenced in the associated context record.]" \
             "workflowGetJobsCount[Summary: Get jobs count
 Description: Get jobs count.]" \
+            "workflowGetProductEntities[Summary: Get products and their associated event entities
+Description: Return a list of integrated products and their associated event entities]" \
+            "workflowGetProductEntity[Summary: Get event entity field names, field labels, and field data types
+Description: Return a list of fields similar to report headers]" \
             "workflowGetReportResult[Summary: Get report result
 Description: Return a page of results.]" \
             "workflowGetTasks[Summary: Get tasks
@@ -987,6 +1059,8 @@ Description: Returns a list of report IDs referenced in all cases and tasks]" \
 Description: Return a subset of cases.]" \
             "workflowUpdateCases[Summary: Update cases
 Description: Update multiple cases in one request.]" \
+            "workflowUpdateProductEntity[Summary: Update a product entity
+Description: Update a single product entity.]" \
             "workflowUpdateTasks[Summary: Update tasks
 Description: Update multiple tasks for the same parent in one request.]" \
 
@@ -996,19 +1070,6 @@ Description: Update multiple tasks for the same parent in one request.]" \
     ;;
   args)
     case $line[1] in
-      analyticsEventsServiceDeleteCacheKey)
-        local -a _op_arguments
-        _op_arguments=(
-          "cache_key=:[PATH] The cache key to delete."
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      analyticsEventsServicePostQSAdvisorRisk)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
       assetsServiceAssetIngestion)
         local -a _op_arguments
         _op_arguments=(
@@ -1429,7 +1490,9 @@ Description: Update multiple tasks for the same parent in one request.]" \
       complianceAcceleratorGetComplianceInfo)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "is_brief=true:[QUERY] gives compliance workspace data without reaching out to other services - meant to be quicker for dashboards."
+          "is_brief=false:[QUERY] gives compliance workspace data without reaching out to other services - meant to be quicker for dashboards."
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       complianceAcceleratorHydrateWorkspace)
@@ -1493,6 +1556,13 @@ Description: Update multiple tasks for the same parent in one request.]" \
         local -a _op_arguments
         _op_arguments=(
           "id=:[PATH] plugin id"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      connectionsServiceGeneratePackage)
+        local -a _op_arguments
+        _op_arguments=(
+          "id=:[PATH] id"
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -1605,6 +1675,12 @@ Description: Update multiple tasks for the same parent in one request.]" \
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       connectionsServiceUpdateSettings)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      connectionsServiceValidateAwsConnection)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -2039,6 +2115,34 @@ Only returns records that include the specified names."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      ecosystemServiceTestIntegration)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      edgeSchedulerServiceGetEdgeQueryStatus)
+        local -a _op_arguments
+        _op_arguments=(
+          "edge_id=:[PATH] the id of the edge"
+          "edge_result_report_id=:[QUERY] the id of the UC report being queried for."
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery)
+        local -a _op_arguments
+        _op_arguments=(
+                    "client_id=:[QUERY] edge client id to monitor edge query requests for."
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      edgeSchedulerServiceScheduleEdgeQuery)
+        local -a _op_arguments
+        _op_arguments=(
+          "edge_id=:[PATH] the id of the edge"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       featureFlagsServiceDeleteFeatureFlagOverrides)
         local -a _op_arguments
         _op_arguments=(
@@ -2337,8 +2441,8 @@ Only returns records that include the specified names."
         local -a _op_arguments
         _op_arguments=(
           "central_manager_id=:[PATH] Central Manager ID."
-          "use_fallback=true:[QUERY] Flag indicating if the older gdp api is to be called in case it doesn&#39;t support new api."
-          "use_fallback=false:[QUERY] Flag indicating if the older gdp api is to be called in case it doesn&#39;t support new api."
+          "use_fallback=true:[QUERY] Flag indicating if the older GDP api is to be called in case it doesn&#39;t support new api."
+          "use_fallback=false:[QUERY] Flag indicating if the older GDP api is to be called in case it doesn&#39;t support new api."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -2635,6 +2739,7 @@ Only returns records that include the specified names."
 "filter.state=:[QUERY] Only return record that include the specified state."
 "filter.origins=:[QUERY] Only return record that includes the specified origins."
 "filter.origin_data=:[QUERY] Only return record that with the specified origin_data."
+"filter.limit=:[QUERY] The max amount of rows to return for this single query."
 "offset=:[QUERY] The amount to offset the rows by for pagination."
 "limit=:[QUERY] The max amount of rows to return for pagination."
 "include_filter_counts=true:[QUERY] Computing the filter counts is relatively expensive, only compute when needed."
@@ -2648,6 +2753,18 @@ Only returns records that include the specified names."
                     "ticket_id=:[QUERY] The ID of the ticket to fetch."
 "integration_id=:[QUERY] The ID of the ticketing integration."
           )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      notificationsServicePostNotificationRecord)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      notificationsServiceSearchNotificationRecords)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       notificationsServiceTestIntegration)
@@ -2837,7 +2954,25 @@ Only returns records that include the specified names."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      qSDataLoaderQSfileValidator)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      qSDataLoaderUploadSyntheticDataLoader)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       qSDataManagerGetMasterData)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      qSDataManagerGetPluginData)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -2892,6 +3027,12 @@ Only returns records that include the specified names."
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       qSPolicyManagerBatchStatusUpdate)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      qSPolicyManagerConfigUpdate)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -3271,6 +3412,253 @@ Only returns records that include the specified names."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      resourceControllerK8ServiceCreateController)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceCreateHeartBeat)
+        local -a _op_arguments
+        _op_arguments=(
+          "controller_id=:[PATH] The ID of the controller to invoke a heartbeat on."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceCreateHeartBeatEx)
+        local -a _op_arguments
+        _op_arguments=(
+          "controller_id=:[PATH] Optional: controller id"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceCreateJob)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceCreateJobExecution)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceCreateKeypair)
+        local -a _op_arguments
+        _op_arguments=(
+          "controller_id=:[PATH] The ID of the controller to get app tests for."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceDeleteController)
+        local -a _op_arguments
+        _op_arguments=(
+          "controller_id=:[PATH] The ID of the controller to get the status."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceDeleteEdgeTenant)
+        local -a _op_arguments
+        _op_arguments=(
+          "tenant_id=:[PATH] ID of the tenant to delete"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceDeleteEdgeTenantRequest)
+        local -a _op_arguments
+        _op_arguments=(
+                    "tenant_id=:[QUERY] Tenant ID for the redge request."
+"edge_id=:[QUERY] ID of the edge system."
+"edge_name=:[QUERY] Edge gateway ID."
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceDeleteJob)
+        local -a _op_arguments
+        _op_arguments=(
+          "job_id=:[PATH] ID of the job that needs to be deleted."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceDownloadControllerLogs)
+        local -a _op_arguments
+        _op_arguments=(
+          "controller_id=:[PATH] The ID of the controller to download logs for."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceGetControllerApps)
+        local -a _op_arguments
+        _op_arguments=(
+          "controller_id=:[PATH] The ID of the controller to get apps for."
+          "modified_since=:[QUERY] Only get the apps if any were modified since the given date."
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceGetControllerCommands)
+        local -a _op_arguments
+        _op_arguments=(
+          "controller_id=:[PATH] The ID of the controller to get commands for."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceGetControllerJobs)
+        local -a _op_arguments
+        _op_arguments=(
+          "controller_id=:[PATH] The ID of the controller to get jobs for."
+          "modified_since=:[QUERY] Optional: Only get the jobs if any were modified since the given date."
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceGetControllerStatus)
+        local -a _op_arguments
+        _op_arguments=(
+          "controller_id=:[PATH] The ID of the controller to get the status."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceGetControllers)
+        local -a _op_arguments
+        _op_arguments=(
+          "tenant_id=:[PATH] The ID of the tenant to get controllers for."
+          "want_local=true:[QUERY] Used to indicate the caller wants the local controller."
+          "want_local=false:[QUERY] Used to indicate the caller wants the local controller."
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceGetControllersWithStatus)
+        local -a _op_arguments
+        _op_arguments=(
+          "tenant_id=:[PATH] The ID of the tenant to get controllers for."
+          "want_local=true:[QUERY] Used to indicate the caller wants the local controller."
+          "want_local=false:[QUERY] Used to indicate the caller wants the local controller."
+"controller_id=:[QUERY] \&quot;ALL\&quot;: for getting all controllers; &lt;controller_id&gt;: for getting single controller."
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceGetJob)
+        local -a _op_arguments
+        _op_arguments=(
+          "job_id=:[PATH] The ID of the job to get."
+          "want_secret_values=true:[QUERY] Optional: True to return secret values, false otherwise."
+          "want_secret_values=false:[QUERY] Optional: True to return secret values, false otherwise."
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceGetJobExecution)
+        local -a _op_arguments
+        _op_arguments=(
+          "jobexe_id=:[PATH] The ID of the job execution to get."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceGetJobExecutions)
+        local -a _op_arguments
+        _op_arguments=(
+          "job_id=:[PATH] The ID of the job to get status."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceGetJobStatus)
+        local -a _op_arguments
+        _op_arguments=(
+          "job_id=:[PATH] The ID of the job to get status."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceGetTenantApp)
+        local -a _op_arguments
+        _op_arguments=(
+          "tenant_id=:[PATH] The ID of the tenant to get apps for."
+"app_name=:[PATH] The name of the app to get."
+          "return_level=:[QUERY] Optional: specify a return level for the data. This will control the amount of data returned."
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceGetTenantApps)
+        local -a _op_arguments
+        _op_arguments=(
+          "tenant_id=:[PATH] The ID of the tenant to get apps for."
+          "return_level=:[QUERY] Optional: specify a return level for the data. This will control the amount of data returned."
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceGetTenantJobs)
+        local -a _op_arguments
+        _op_arguments=(
+          "tenant_id=:[PATH] The ID of the tenant to get jobs for."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceGetVersion)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceInstallEdgeTenantRequest)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceQueryControllerLogs)
+        local -a _op_arguments
+        _op_arguments=(
+          "controller_id=:[PATH] The ID of the controller to get logs for."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceUpdateCommand)
+        local -a _op_arguments
+        _op_arguments=(
+          "id=:[PATH] The ID of the command."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceUpdateController)
+        local -a _op_arguments
+        _op_arguments=(
+          "id=:[PATH] Optional: The internal ID of the controller."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceUpdateControllerStatus)
+        local -a _op_arguments
+        _op_arguments=(
+          "id=:[PATH] The internal ID of the controller."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceUpdateEdgeTenantRequest)
+        local -a _op_arguments
+        _op_arguments=(
+          "edge_id=:[PATH] ID of the edge system"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceUpdateJob)
+        local -a _op_arguments
+        _op_arguments=(
+          "id=:[PATH] The ID of the job."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceUpdateJobExecution)
+        local -a _op_arguments
+        _op_arguments=(
+          "id=:[PATH] The ID of the job execution to update."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resourceControllerK8ServiceUpdateJobStatus)
+        local -a _op_arguments
+        _op_arguments=(
+          "job_id=:[PATH] The ID of the job to get status."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       riskAnalyticsControllerEnableDisableRiskEventFeedback)
         local -a _op_arguments
         _op_arguments=(
@@ -3492,6 +3880,32 @@ Only returns records that include the specified names."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      snifAssistServiceGetSnifConfig)
+        local -a _op_arguments
+        _op_arguments=(
+                    "tenant_id=:[QUERY] Provide tenant_id."
+"edge_id=:[QUERY] Provide edge_id."
+"config_type=:[QUERY] Provide configuration type."
+"config_id=:[QUERY] Specify config_id provided by configuration service."
+"configuration_parameters_crc=:[QUERY] Provide CRC value of configuration parameters that sniffer is currently using."
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      snifAssistServiceGetSnifPolicy)
+        local -a _op_arguments
+        _op_arguments=(
+                    "tenant_id=:[QUERY] Specify tenant_id."
+"edge_id=:[QUERY] Specify edge_id if known."
+"policy_crc=:[QUERY] Provide CRC value of installed policy that sniffer is currently using."
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      snifAssistServicePostSnifFeedback)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       snifAssistServiceTestRegex)
         local -a _op_arguments
         _op_arguments=(
@@ -3591,6 +4005,20 @@ Only returns records that include the specified names."
           "filter_enabled_only=false:[QUERY] Filter on all templates instead of just the enabled templates."
 "include_integration_name=true:[QUERY] Include the Integration name in the returned templates."
           "include_integration_name=false:[QUERY] Include the Integration name in the returned templates."
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      templatesServiceGetTemplatesForEdge)
+        local -a _op_arguments
+        _op_arguments=(
+                    "integration_id=:[QUERY] Templates associated with a specific integration."
+"filter_origin=:[QUERY] Filter on a specific set of data origins; ignored if empty."
+"filter_enabled_only=true:[QUERY] Filter on all templates instead of just the enabled templates."
+          "filter_enabled_only=false:[QUERY] Filter on all templates instead of just the enabled templates."
+"include_integration_name=true:[QUERY] Include the Integration name in the returned templates."
+          "include_integration_name=false:[QUERY] Include the Integration name in the returned templates."
+"transform_to_gdp_format=true:[QUERY] Tranform template format to GDP style format."
+          "transform_to_gdp_format=false:[QUERY] Tranform template format to GDP style format."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -3788,6 +4216,13 @@ Only returns records that include the specified names."
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      universalConnectorManagerGetUCSetup)
+        local -a _op_arguments
+        _op_arguments=(
+          "plugin_id=:[PATH] UC plugin id."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       universalConnectorManagerListConnectionsSummary)
         local -a _op_arguments
         _op_arguments=(
@@ -3812,10 +4247,29 @@ Only returns records that include the specified names."
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      workflowCreateProductEntity)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       workflowCreateTask)
         local -a _op_arguments
         _op_arguments=(
           "case_id=:[PATH] Create tasks with common parent."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      workflowCreateWorkflowEvent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      workflowDeleteProductEntity)
+        local -a _op_arguments
+        _op_arguments=(
+          "entity_id=:[PATH] Unique id for the product entity"
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -3847,6 +4301,21 @@ Only returns records that include the specified names."
         local -a _op_arguments
         _op_arguments=(
           "case_id=:[PATH] Case ID - can be * for all"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      workflowGetProductEntities)
+        local -a _op_arguments
+        _op_arguments=(
+                    "offset=:[QUERY] Optional starting point for the page of data."
+"limit=:[QUERY] Optional page size."
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      workflowGetProductEntity)
+        local -a _op_arguments
+        _op_arguments=(
+          "entity_id=:[PATH] Unique id for the product entity"
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -3898,6 +4367,13 @@ Only returns records that include the specified names."
         local -a _op_arguments
         _op_arguments=(
                               )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      workflowUpdateProductEntity)
+        local -a _op_arguments
+        _op_arguments=(
+          "entity_id=:[PATH] Unique Entity id, required for update."
+                    )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       workflowUpdateTasks)

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_account_config import Connectionsv3AccountConfig
+from ibm_gdsc_sdk_saas.models.connectionsv3_account_config import Connectionsv3AccountConfig
 
 class TestConnectionsv3AccountConfig(unittest.TestCase):
     """Connectionsv3AccountConfig unit test stubs"""
@@ -35,7 +35,7 @@ class TestConnectionsv3AccountConfig(unittest.TestCase):
         model = Connectionsv3AccountConfig()
         if include_optional:
             return Connectionsv3AccountConfig(
-                account = ibm_gdsc_sdk_software.models.connectionsv3_account.connectionsv3Account(
+                account = ibm_gdsc_sdk_saas.models.connectionsv3_account.connectionsv3Account(
                     access_key = '', 
                     authentication_type = '', 
                     connection_type = '', 

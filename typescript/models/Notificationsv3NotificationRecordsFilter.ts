@@ -22,6 +22,10 @@ export class Notificationsv3NotificationRecordsFilter {
     */
     'endTime'?: Date;
     /**
+    * The max amount of rows to return for this single query.
+    */
+    'limit'?: number;
+    /**
     * Only return record that with the specified origin_data.
     */
     'originData'?: string;
@@ -43,6 +47,12 @@ export class Notificationsv3NotificationRecordsFilter {
             "baseName": "end_time",
             "type": "Date",
             "format": "date-time"
+        },
+        {
+            "name": "limit",
+            "baseName": "limit",
+            "type": "number",
+            "format": "int64"
         },
         {
             "name": "originData",

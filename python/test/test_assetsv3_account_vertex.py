@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_account_vertex import Assetsv3AccountVertex
+from ibm_gdsc_sdk_saas.models.assetsv3_account_vertex import Assetsv3AccountVertex
 
 class TestAssetsv3AccountVertex(unittest.TestCase):
     """Assetsv3AccountVertex unit test stubs"""
@@ -38,7 +38,7 @@ class TestAssetsv3AccountVertex(unittest.TestCase):
                 account_type = '',
                 description = '',
                 extended_properties = [
-                    ibm_gdsc_sdk_software.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
+                    ibm_gdsc_sdk_saas.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
                         data_type = '', 
                         key = '', 
                         value = '', )

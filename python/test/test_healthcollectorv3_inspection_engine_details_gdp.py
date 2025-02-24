@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.healthcollectorv3_inspection_engine_details_gdp import Healthcollectorv3InspectionEngineDetailsGdp
+from ibm_gdsc_sdk_saas.models.healthcollectorv3_inspection_engine_details_gdp import Healthcollectorv3InspectionEngineDetailsGdp
 
 class TestHealthcollectorv3InspectionEngineDetailsGdp(unittest.TestCase):
     """Healthcollectorv3InspectionEngineDetailsGdp unit test stubs"""

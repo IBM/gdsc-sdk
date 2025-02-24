@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.health_collector_api import HealthCollectorApi
+from ibm_gdsc_sdk_saas.api.health_collector_api import HealthCollectorApi
 
 
 class TestHealthCollectorApi(unittest.TestCase):
@@ -29,7 +29,7 @@ class TestHealthCollectorApi(unittest.TestCase):
     def test_health_collector_get_data_warehouse_usage(self) -> None:
         """Test case for health_collector_get_data_warehouse_usage
 
-        Summary: Get data warehouse usage info Description: Get information from Db2 related to usage
+        Summary: Get data warehouse usage info Description: Get information from data warehouse related to usage
         """
         pass
 

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.tenantuserv3_prometheus import Tenantuserv3Prometheus
+from ibm_gdsc_sdk_saas.models.tenantuserv3_prometheus import Tenantuserv3Prometheus
 
 # TODO update the JSON string below
 json = "{}"

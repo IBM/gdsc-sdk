@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.universalconnectormanagerv3_upload_plugin_request import Universalconnectormanagerv3UploadPluginRequest
+from ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_upload_plugin_request import Universalconnectormanagerv3UploadPluginRequest
 
 class TestUniversalconnectormanagerv3UploadPluginRequest(unittest.TestCase):
     """Universalconnectormanagerv3UploadPluginRequest unit test stubs"""

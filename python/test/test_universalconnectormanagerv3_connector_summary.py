@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.universalconnectormanagerv3_connector_summary import Universalconnectormanagerv3ConnectorSummary
+from ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_connector_summary import Universalconnectormanagerv3ConnectorSummary
 
 class TestUniversalconnectormanagerv3ConnectorSummary(unittest.TestCase):
     """Universalconnectormanagerv3ConnectorSummary unit test stubs"""
@@ -39,7 +39,8 @@ class TestUniversalconnectormanagerv3ConnectorSummary(unittest.TestCase):
                 combined_configuration_strings = '',
                 connector_name = '',
                 developer = '',
-                filter_plugin = ibm_gdsc_sdk_software.models.universalconnectormanagerv3_plugin_definition.universalconnectormanagerv3PluginDefinition(
+                filter_plugin = ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_plugin_definition.universalconnectormanagerv3PluginDefinition(
+                    plugin_jdbc_driver_required = True, 
                     plugin_alias = '', 
                     plugin_configuration_notes = '', 
                     plugin_description = '', 
@@ -54,7 +55,7 @@ class TestUniversalconnectormanagerv3ConnectorSummary(unittest.TestCase):
                         ''
                         ], 
                     supported_datasources = [
-                        ibm_gdsc_sdk_software.models.universalconnectormanagerv3_datasource_type.universalconnectormanagerv3DatasourceType(
+                        ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_datasource_type.universalconnectormanagerv3DatasourceType(
                             supported_versions = [
                                 ''
                                 ], 
@@ -63,7 +64,8 @@ class TestUniversalconnectormanagerv3ConnectorSummary(unittest.TestCase):
                     upload_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     upload_user = '', ),
                 filter_plugin_name = '',
-                input_plugin = ibm_gdsc_sdk_software.models.universalconnectormanagerv3_plugin_definition.universalconnectormanagerv3PluginDefinition(
+                input_plugin = ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_plugin_definition.universalconnectormanagerv3PluginDefinition(
+                    plugin_jdbc_driver_required = True, 
                     plugin_alias = '', 
                     plugin_configuration_notes = '', 
                     plugin_description = '', 
@@ -78,7 +80,7 @@ class TestUniversalconnectormanagerv3ConnectorSummary(unittest.TestCase):
                         ''
                         ], 
                     supported_datasources = [
-                        ibm_gdsc_sdk_software.models.universalconnectormanagerv3_datasource_type.universalconnectormanagerv3DatasourceType(
+                        ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_datasource_type.universalconnectormanagerv3DatasourceType(
                             supported_versions = [
                                 ''
                                 ], 
@@ -88,7 +90,7 @@ class TestUniversalconnectormanagerv3ConnectorSummary(unittest.TestCase):
                     upload_user = '', ),
                 input_plugin_name = '',
                 supported_datasources = [
-                    ibm_gdsc_sdk_software.models.universalconnectormanagerv3_datasource_type.universalconnectormanagerv3DatasourceType(
+                    ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_datasource_type.universalconnectormanagerv3DatasourceType(
                         supported_versions = [
                             ''
                             ], 

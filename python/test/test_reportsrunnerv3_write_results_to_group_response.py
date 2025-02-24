@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_write_results_to_group_response import Reportsrunnerv3WriteResultsToGroupResponse
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_write_results_to_group_response import Reportsrunnerv3WriteResultsToGroupResponse
 
 class TestReportsrunnerv3WriteResultsToGroupResponse(unittest.TestCase):
     """Reportsrunnerv3WriteResultsToGroupResponse unit test stubs"""

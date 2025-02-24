@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_plugin_rq import Qspmpluginmanagerv3PluginRQ
+from ibm_gdsc_sdk_saas.models.qspmpluginmanagerv3_plugin_rq import Qspmpluginmanagerv3PluginRQ
 
 class TestQspmpluginmanagerv3PluginRQ(unittest.TestCase):
     """Qspmpluginmanagerv3PluginRQ unit test stubs"""
@@ -44,7 +44,6 @@ class TestQspmpluginmanagerv3PluginRQ(unittest.TestCase):
                 run_for_all_scans = True,
                 scan_desc = '',
                 scan_id = '',
-                scan_type = '',
                 user_email = ''
             )
         else:

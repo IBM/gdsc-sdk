@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticsdataprocessorv3_question import Riskanalyticsdataprocessorv3Question
+from ibm_gdsc_sdk_saas.models.riskanalyticsdataprocessorv3_question import Riskanalyticsdataprocessorv3Question
 
 class TestRiskanalyticsdataprocessorv3Question(unittest.TestCase):
     """Riskanalyticsdataprocessorv3Question unit test stubs"""

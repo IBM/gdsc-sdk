@@ -1,4 +1,4 @@
-# ibm_gdsc_sdk_software.AuthServerServiceApi
+# ibm_gdsc_sdk_saas.AuthServerServiceApi
 
 All URIs are relative to *http://localhost*
 
@@ -23,15 +23,15 @@ Summary: Create Oauth client Description: Create/register new Oauth client.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.authserver_create_oauth_client_request import AuthserverCreateOauthClientRequest
-from ibm_gdsc_sdk_software.models.authserver_create_oauth_client_response import AuthserverCreateOauthClientResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.authserver_create_oauth_client_request import AuthserverCreateOauthClientRequest
+from ibm_gdsc_sdk_saas.models.authserver_create_oauth_client_response import AuthserverCreateOauthClientResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -41,7 +41,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -53,10 +53,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AuthServerServiceApi(api_client)
-    authserver_create_oauth_client_request = ibm_gdsc_sdk_software.AuthserverCreateOauthClientRequest() # AuthserverCreateOauthClientRequest | 
+    api_instance = ibm_gdsc_sdk_saas.AuthServerServiceApi(api_client)
+    authserver_create_oauth_client_request = ibm_gdsc_sdk_saas.AuthserverCreateOauthClientRequest() # AuthserverCreateOauthClientRequest | 
 
     try:
         # Summary: Create Oauth client Description: Create/register new Oauth client.
@@ -109,13 +109,13 @@ Summary: Delete Oauth client Description: Delete registered Oauth client by clie
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -125,7 +125,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -137,9 +137,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AuthServerServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.AuthServerServiceApi(api_client)
     client_id = 'client_id_example' # str | ClientID of registered OAuth.
 
     try:
@@ -192,14 +192,14 @@ Summary: Get access token Description: Get access token from passed clientId and
 * Basic Authentication (BasicAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.authserver_get_access_token_response import AuthserverGetAccessTokenResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.authserver_get_access_token_response import AuthserverGetAccessTokenResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -209,15 +209,15 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AuthServerServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.AuthServerServiceApi(api_client)
 
     try:
         # Summary: Get access token Description: Get access token from passed clientId and secret.
@@ -267,14 +267,14 @@ Summary: Get Oauth client Description: Get registered Oauth client by clientId.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.authserver_get_oauth_client_response import AuthserverGetOauthClientResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.authserver_get_oauth_client_response import AuthserverGetOauthClientResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -284,7 +284,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -296,9 +296,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AuthServerServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.AuthServerServiceApi(api_client)
     client_id = 'client_id_example' # str | ClientID of registered OAuth.
 
     try:
@@ -352,14 +352,14 @@ Summary: Get user Description: Get user.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.authserver_get_user_response import AuthserverGetUserResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.authserver_get_user_response import AuthserverGetUserResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -369,7 +369,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -381,9 +381,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AuthServerServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.AuthServerServiceApi(api_client)
 
     try:
         # Summary: Get user Description: Get user.
@@ -433,14 +433,14 @@ Summary: List Oauth client Description: List all registered Oauth client.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.authserver_list_oauth_client_response import AuthserverListOauthClientResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.authserver_list_oauth_client_response import AuthserverListOauthClientResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -450,7 +450,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -462,9 +462,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AuthServerServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.AuthServerServiceApi(api_client)
 
     try:
         # Summary: List Oauth client Description: List all registered Oauth client.

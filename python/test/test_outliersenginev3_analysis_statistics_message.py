@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.outliersenginev3_analysis_statistics_message import Outliersenginev3AnalysisStatisticsMessage
+from ibm_gdsc_sdk_saas.models.outliersenginev3_analysis_statistics_message import Outliersenginev3AnalysisStatisticsMessage
 
 class TestOutliersenginev3AnalysisStatisticsMessage(unittest.TestCase):
     """Outliersenginev3AnalysisStatisticsMessage unit test stubs"""
@@ -41,19 +41,19 @@ class TestOutliersenginev3AnalysisStatisticsMessage(unittest.TestCase):
                 errors_1h = 56,
                 errors_24h = 56,
                 errors_72h = 56,
-                performance_1h = ibm_gdsc_sdk_software.models.outliersenginev3_analysis_performance_stats.outliersenginev3AnalysisPerformanceStats(
+                performance_1h = ibm_gdsc_sdk_saas.models.outliersenginev3_analysis_performance_stats.outliersenginev3AnalysisPerformanceStats(
                     duration_seconds = 56, 
                     events_analyzed = 56, 
                     events_per_second = 1.337, ),
-                performance_24h = ibm_gdsc_sdk_software.models.outliersenginev3_analysis_performance_stats.outliersenginev3AnalysisPerformanceStats(
+                performance_24h = ibm_gdsc_sdk_saas.models.outliersenginev3_analysis_performance_stats.outliersenginev3AnalysisPerformanceStats(
                     duration_seconds = 56, 
                     events_analyzed = 56, 
                     events_per_second = 1.337, ),
-                performance_3h = ibm_gdsc_sdk_software.models.outliersenginev3_analysis_performance_stats.outliersenginev3AnalysisPerformanceStats(
+                performance_3h = ibm_gdsc_sdk_saas.models.outliersenginev3_analysis_performance_stats.outliersenginev3AnalysisPerformanceStats(
                     duration_seconds = 56, 
                     events_analyzed = 56, 
                     events_per_second = 1.337, ),
-                performance_72h = ibm_gdsc_sdk_software.models.outliersenginev3_analysis_performance_stats.outliersenginev3AnalysisPerformanceStats(
+                performance_72h = ibm_gdsc_sdk_saas.models.outliersenginev3_analysis_performance_stats.outliersenginev3AnalysisPerformanceStats(
                     duration_seconds = 56, 
                     events_analyzed = 56, 
                     events_per_second = 1.337, )

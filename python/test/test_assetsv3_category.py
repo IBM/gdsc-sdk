@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_category import Assetsv3Category
+from ibm_gdsc_sdk_saas.models.assetsv3_category import Assetsv3Category
 
 class TestAssetsv3Category(unittest.TestCase):
     """Assetsv3Category unit test stubs"""
@@ -40,9 +40,9 @@ class TestAssetsv3Category(unittest.TestCase):
                 name = '',
                 show_timeline_filter = True,
                 sub_category = [
-                    ibm_gdsc_sdk_software.models.assetsv3_sub_category.assetsv3SubCategory(
+                    ibm_gdsc_sdk_saas.models.assetsv3_sub_category.assetsv3SubCategory(
                         children_category = [
-                            ibm_gdsc_sdk_software.models.assetsv3_child_category.assetsv3ChildCategory(
+                            ibm_gdsc_sdk_saas.models.assetsv3_child_category.assetsv3ChildCategory(
                                 child_id = '', 
                                 child_name = '', )
                             ], 

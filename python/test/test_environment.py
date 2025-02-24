@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.environment import Environment
+from ibm_gdsc_sdk_saas.models.environment import Environment
 
 class TestEnvironment(unittest.TestCase):
     """Environment unit test stubs"""

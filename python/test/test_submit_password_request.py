@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.submit_password_request import SubmitPasswordRequest
+from ibm_gdsc_sdk_saas.models.submit_password_request import SubmitPasswordRequest
 
 class TestSubmitPasswordRequest(unittest.TestCase):
     """SubmitPasswordRequest unit test stubs"""

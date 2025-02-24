@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.tenantuserv3_create_api_key_response import Tenantuserv3CreateApiKeyResponse
+from ibm_gdsc_sdk_saas.models.tenantuserv3_create_api_key_response import Tenantuserv3CreateApiKeyResponse
 
 class TestTenantuserv3CreateApiKeyResponse(unittest.TestCase):
     """Tenantuserv3CreateApiKeyResponse unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.featureflagsv3_feature_flag_overrides import Featureflagsv3FeatureFlagOverrides
+from ibm_gdsc_sdk_saas.models.featureflagsv3_feature_flag_overrides import Featureflagsv3FeatureFlagOverrides
 
 class TestFeatureflagsv3FeatureFlagOverrides(unittest.TestCase):
     """Featureflagsv3FeatureFlagOverrides unit test stubs"""

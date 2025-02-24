@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_task_error_request import Guardiumconnectorv3TaskErrorRequest
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_task_error_request import Guardiumconnectorv3TaskErrorRequest
 
 class TestGuardiumconnectorv3TaskErrorRequest(unittest.TestCase):
     """Guardiumconnectorv3TaskErrorRequest unit test stubs"""
@@ -38,10 +38,10 @@ class TestGuardiumconnectorv3TaskErrorRequest(unittest.TestCase):
                 central_manager_id = '',
                 error_code = '',
                 error_description = '',
-                task = ibm_gdsc_sdk_software.models.guardiumconnectorv3_task_definition.guardiumconnectorv3TaskDefinition(
+                task = ibm_gdsc_sdk_saas.models.guardiumconnectorv3_task_definition.guardiumconnectorv3TaskDefinition(
                     task_id = '', 
                     task_params = [
-                        ibm_gdsc_sdk_software.models.guardiumconnectorv3_task_params_object.guardiumconnectorv3TaskParamsObject(
+                        ibm_gdsc_sdk_saas.models.guardiumconnectorv3_task_params_object.guardiumconnectorv3TaskParamsObject(
                             arg_name = '', 
                             arg_value = '', )
                         ], 

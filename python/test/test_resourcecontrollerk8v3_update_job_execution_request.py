@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_update_job_execution_request import Resourcecontrollerk8v3UpdateJobExecutionRequest
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_update_job_execution_request import Resourcecontrollerk8v3UpdateJobExecutionRequest
 
 class TestResourcecontrollerk8v3UpdateJobExecutionRequest(unittest.TestCase):
     """Resourcecontrollerk8v3UpdateJobExecutionRequest unit test stubs"""

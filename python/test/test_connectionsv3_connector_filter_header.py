@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_connector_filter_header import Connectionsv3ConnectorFilterHeader
+from ibm_gdsc_sdk_saas.models.connectionsv3_connector_filter_header import Connectionsv3ConnectorFilterHeader
 
 class TestConnectionsv3ConnectorFilterHeader(unittest.TestCase):
     """Connectionsv3ConnectorFilterHeader unit test stubs"""
@@ -36,7 +36,7 @@ class TestConnectionsv3ConnectorFilterHeader(unittest.TestCase):
         if include_optional:
             return Connectionsv3ConnectorFilterHeader(
                 filters = [
-                    ibm_gdsc_sdk_software.models.connectionsv3_connector_filter.connectionsv3ConnectorFilter(
+                    ibm_gdsc_sdk_saas.models.connectionsv3_connector_filter.connectionsv3ConnectorFilter(
                         count = 56, 
                         value = '', )
                     ],

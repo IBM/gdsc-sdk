@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.schedulerv3_day_of_week import Schedulerv3DayOfWeek
+from ibm_gdsc_sdk_saas.models.schedulerv3_day_of_week import Schedulerv3DayOfWeek
 
 class TestSchedulerv3DayOfWeek(unittest.TestCase):
     """Schedulerv3DayOfWeek unit test stubs"""

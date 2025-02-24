@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.dashboardsv3_time_range import Dashboardsv3TimeRange
+from ibm_gdsc_sdk_saas.models.dashboardsv3_time_range import Dashboardsv3TimeRange
 
 # TODO update the JSON string below
 json = "{}"

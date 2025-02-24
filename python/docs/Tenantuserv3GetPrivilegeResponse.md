@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.tenantuserv3_get_privilege_response import Tenantuserv3GetPrivilegeResponse
+from ibm_gdsc_sdk_saas.models.tenantuserv3_get_privilege_response import Tenantuserv3GetPrivilegeResponse
 
 # TODO update the JSON string below
 json = "{}"

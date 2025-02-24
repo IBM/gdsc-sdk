@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.outliersenginev3_queue_statistics_message import Outliersenginev3QueueStatisticsMessage
+from ibm_gdsc_sdk_saas.models.outliersenginev3_queue_statistics_message import Outliersenginev3QueueStatisticsMessage
 
 class TestOutliersenginev3QueueStatisticsMessage(unittest.TestCase):
     """Outliersenginev3QueueStatisticsMessage unit test stubs"""
@@ -35,15 +35,15 @@ class TestOutliersenginev3QueueStatisticsMessage(unittest.TestCase):
         model = Outliersenginev3QueueStatisticsMessage()
         if include_optional:
             return Outliersenginev3QueueStatisticsMessage(
-                coverage_1h = ibm_gdsc_sdk_software.models.outliersenginev3_datasources_coverage_stats.outliersenginev3DatasourcesCoverageStats(
+                coverage_1h = ibm_gdsc_sdk_saas.models.outliersenginev3_datasources_coverage_stats.outliersenginev3DatasourcesCoverageStats(
                     datasources_coverage = '', 
                     datasources_in_gi = 56, 
                     datasources_in_queue = 56, ),
-                coverage_24h = ibm_gdsc_sdk_software.models.outliersenginev3_datasources_coverage_stats.outliersenginev3DatasourcesCoverageStats(
+                coverage_24h = ibm_gdsc_sdk_saas.models.outliersenginev3_datasources_coverage_stats.outliersenginev3DatasourcesCoverageStats(
                     datasources_coverage = '', 
                     datasources_in_gi = 56, 
                     datasources_in_queue = 56, ),
-                coverage_72h = ibm_gdsc_sdk_software.models.outliersenginev3_datasources_coverage_stats.outliersenginev3DatasourcesCoverageStats(
+                coverage_72h = ibm_gdsc_sdk_saas.models.outliersenginev3_datasources_coverage_stats.outliersenginev3DatasourcesCoverageStats(
                     datasources_coverage = '', 
                     datasources_in_gi = 56, 
                     datasources_in_queue = 56, ),

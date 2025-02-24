@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.outliersenginev3_get_source_statistics_response import Outliersenginev3GetSourceStatisticsResponse
+from ibm_gdsc_sdk_saas.models.outliersenginev3_get_source_statistics_response import Outliersenginev3GetSourceStatisticsResponse
 
 class TestOutliersenginev3GetSourceStatisticsResponse(unittest.TestCase):
     """Outliersenginev3GetSourceStatisticsResponse unit test stubs"""
@@ -36,9 +36,9 @@ class TestOutliersenginev3GetSourceStatisticsResponse(unittest.TestCase):
         if include_optional:
             return Outliersenginev3GetSourceStatisticsResponse(
                 source_statistics = [
-                    ibm_gdsc_sdk_software.models.outliersenginev3_source_attributes_statistics.outliersenginev3SourceAttributesStatistics(
+                    ibm_gdsc_sdk_saas.models.outliersenginev3_source_attributes_statistics.outliersenginev3SourceAttributesStatistics(
                         statistics = [
-                            ibm_gdsc_sdk_software.models.outliersenginev3_attribute_statistics.outliersenginev3AttributeStatistics(
+                            ibm_gdsc_sdk_saas.models.outliersenginev3_attribute_statistics.outliersenginev3AttributeStatistics(
                                 attribute = '', 
                                 hourly_average_activity = 1.337, 
                                 seen_since = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), )

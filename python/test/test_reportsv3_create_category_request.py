@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_create_category_request import Reportsv3CreateCategoryRequest
+from ibm_gdsc_sdk_saas.models.reportsv3_create_category_request import Reportsv3CreateCategoryRequest
 
 class TestReportsv3CreateCategoryRequest(unittest.TestCase):
     """Reportsv3CreateCategoryRequest unit test stubs"""
@@ -35,14 +35,14 @@ class TestReportsv3CreateCategoryRequest(unittest.TestCase):
         model = Reportsv3CreateCategoryRequest()
         if include_optional:
             return Reportsv3CreateCategoryRequest(
-                category = ibm_gdsc_sdk_software.models.category_that_have_the_category_id,_the_category_name_translated_value,_tables_and_timestamp.Category that have the category ID, the category name translated value, tables and timestamp(
+                category = ibm_gdsc_sdk_saas.models.category_that_have_the_category_id,_the_category_name_translated_value,_tables_and_timestamp.Category that have the category ID, the category name translated value, tables and timestamp(
                     category_description = '', 
                     category_name = '', 
                     category_tables = [
                         ''
                         ], 
                     timestamp_mapping = [
-                        ibm_gdsc_sdk_software.models.reportsv3_timestamp_mapping.reportsv3TimestampMapping(
+                        ibm_gdsc_sdk_saas.models.reportsv3_timestamp_mapping.reportsv3TimestampMapping(
                             level = 56, 
                             table_name = '', 
                             timestamp_header_id = '', 

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.tags import Tags
+from ibm_gdsc_sdk_saas.models.tags import Tags
 
 # TODO update the JSON string below
 json = "{}"

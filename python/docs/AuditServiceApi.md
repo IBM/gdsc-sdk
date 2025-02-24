@@ -1,4 +1,4 @@
-# ibm_gdsc_sdk_software.AuditServiceApi
+# ibm_gdsc_sdk_saas.AuditServiceApi
 
 All URIs are relative to *http://localhost*
 
@@ -19,14 +19,14 @@ Summary: Get activity records Description: Return activity records that match th
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.auditv3_get_activity_records_response import Auditv3GetActivityRecordsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.auditv3_get_activity_records_response import Auditv3GetActivityRecordsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -36,7 +36,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -48,9 +48,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AuditServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.AuditServiceApi(api_client)
     start_time = '2013-10-20T19:20:30+01:00' # datetime | Return records starting at this time (>=). (optional)
     end_time = '2013-10-20T19:20:30+01:00' # datetime | Return records ending before this time (<). (optional)
     uid = 'uid_example' # str | Return records with this service/collection id. (optional)
@@ -126,15 +126,15 @@ Summary: Put download activity record Description: Create an activity log record
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.auditv3_put_activity_record_request import Auditv3PutActivityRecordRequest
-from ibm_gdsc_sdk_software.models.auditv3_put_activity_record_response import Auditv3PutActivityRecordResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.auditv3_put_activity_record_request import Auditv3PutActivityRecordRequest
+from ibm_gdsc_sdk_saas.models.auditv3_put_activity_record_response import Auditv3PutActivityRecordResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -144,7 +144,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -156,10 +156,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AuditServiceApi(api_client)
-    auditv3_put_activity_record_request = ibm_gdsc_sdk_software.Auditv3PutActivityRecordRequest() # Auditv3PutActivityRecordRequest | 
+    api_instance = ibm_gdsc_sdk_saas.AuditServiceApi(api_client)
+    auditv3_put_activity_record_request = ibm_gdsc_sdk_saas.Auditv3PutActivityRecordRequest() # Auditv3PutActivityRecordRequest | 
 
     try:
         # Summary: Put download activity record Description: Create an activity log record with the arguments passed in the request.

@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.vulnerabilities_filter_options import VulnerabilitiesFilterOptions
+from ibm_gdsc_sdk_saas.models.vulnerabilities_filter_options import VulnerabilitiesFilterOptions
 
 # TODO update the JSON string below
 json = "{}"

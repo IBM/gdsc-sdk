@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_create_keypair_request import Resourcecontrollerk8v3CreateKeypairRequest
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_create_keypair_request import Resourcecontrollerk8v3CreateKeypairRequest
 
 class TestResourcecontrollerk8v3CreateKeypairRequest(unittest.TestCase):
     """Resourcecontrollerk8v3CreateKeypairRequest unit test stubs"""

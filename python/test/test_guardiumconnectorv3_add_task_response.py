@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_add_task_response import Guardiumconnectorv3AddTaskResponse
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_add_task_response import Guardiumconnectorv3AddTaskResponse
 
 class TestGuardiumconnectorv3AddTaskResponse(unittest.TestCase):
     """Guardiumconnectorv3AddTaskResponse unit test stubs"""
@@ -35,7 +35,7 @@ class TestGuardiumconnectorv3AddTaskResponse(unittest.TestCase):
         model = Guardiumconnectorv3AddTaskResponse()
         if include_optional:
             return Guardiumconnectorv3AddTaskResponse(
-                status = ibm_gdsc_sdk_software.models.guardiumconnectorv3_status_response_base.guardiumconnectorv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.guardiumconnectorv3_status_response_base.guardiumconnectorv3StatusResponseBase(
                     message = '', 
                     status = '', )
             )

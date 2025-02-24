@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_edge_deployment_server import Connectionsv3EdgeDeploymentServer
+from ibm_gdsc_sdk_saas.models.connectionsv3_edge_deployment_server import Connectionsv3EdgeDeploymentServer
 
 class TestConnectionsv3EdgeDeploymentServer(unittest.TestCase):
     """Connectionsv3EdgeDeploymentServer unit test stubs"""

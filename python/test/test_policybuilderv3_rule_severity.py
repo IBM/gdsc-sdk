@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_rule_severity import Policybuilderv3RuleSeverity
+from ibm_gdsc_sdk_saas.models.policybuilderv3_rule_severity import Policybuilderv3RuleSeverity
 
 class TestPolicybuilderv3RuleSeverity(unittest.TestCase):
     """Policybuilderv3RuleSeverity unit test stubs"""

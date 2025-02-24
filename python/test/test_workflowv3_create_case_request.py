@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.workflowv3_create_case_request import Workflowv3CreateCaseRequest
+from ibm_gdsc_sdk_saas.models.workflowv3_create_case_request import Workflowv3CreateCaseRequest
 
 class TestWorkflowv3CreateCaseRequest(unittest.TestCase):
     """Workflowv3CreateCaseRequest unit test stubs"""
@@ -35,12 +35,12 @@ class TestWorkflowv3CreateCaseRequest(unittest.TestCase):
         model = Workflowv3CreateCaseRequest()
         if include_optional:
             return Workflowv3CreateCaseRequest(
-                case = ibm_gdsc_sdk_software.models.editiable_fields_of_a_case.Editiable fields of a case(
+                case = ibm_gdsc_sdk_saas.models.editiable_fields_of_a_case.Editiable fields of a case(
                     artifacts = [
                         ''
                         ], 
                     assignments = [
-                        ibm_gdsc_sdk_software.models.workflowv3_entity.workflowv3Entity(
+                        ibm_gdsc_sdk_saas.models.workflowv3_entity.workflowv3Entity(
                             label = '', 
                             template_id = '', 
                             type = 'UNDEFINED_ENTITY_TYPE', 

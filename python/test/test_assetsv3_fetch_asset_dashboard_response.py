@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_fetch_asset_dashboard_response import Assetsv3FetchAssetDashboardResponse
+from ibm_gdsc_sdk_saas.models.assetsv3_fetch_asset_dashboard_response import Assetsv3FetchAssetDashboardResponse
 
 class TestAssetsv3FetchAssetDashboardResponse(unittest.TestCase):
     """Assetsv3FetchAssetDashboardResponse unit test stubs"""
@@ -36,13 +36,13 @@ class TestAssetsv3FetchAssetDashboardResponse(unittest.TestCase):
         if include_optional:
             return Assetsv3FetchAssetDashboardResponse(
                 assets_with_open_vulnerabilities = [
-                    ibm_gdsc_sdk_software.models.assets_with_open_vulnerabilities_card_for_asset_dashboard.Assets With Open Vulnerabilities Card for Asset Dashboard(
+                    ibm_gdsc_sdk_saas.models.assets_with_open_vulnerabilities_card_for_asset_dashboard.Assets With Open Vulnerabilities Card for Asset Dashboard(
                         asset_type = '', 
                         total_assets = '', 
                         vulnerability_group = '', )
                     ],
                 classification_scan_status = [
-                    ibm_gdsc_sdk_software.models.classification_scan_status_for_asset_dashboard_card.Classification Scan Status for Asset Dashboard Card(
+                    ibm_gdsc_sdk_saas.models.classification_scan_status_for_asset_dashboard_card.Classification Scan Status for Asset Dashboard Card(
                         count = '', 
                         key = '', 
                         tag_category = '', 
@@ -51,7 +51,7 @@ class TestAssetsv3FetchAssetDashboardResponse(unittest.TestCase):
                     ],
                 count = '',
                 highest_asset_tag_counts = [
-                    ibm_gdsc_sdk_software.models.highest_asset_tag_counts_for_asset_dashboard_card.Highest Asset Tag Counts for Asset Dashboard Card(
+                    ibm_gdsc_sdk_saas.models.highest_asset_tag_counts_for_asset_dashboard_card.Highest Asset Tag Counts for Asset Dashboard Card(
                         tag_category = '', 
                         tag_category_id = '', 
                         tag_id = '', 
@@ -59,9 +59,9 @@ class TestAssetsv3FetchAssetDashboardResponse(unittest.TestCase):
                         total_assets = '', )
                     ],
                 selected_filters = [
-                    ibm_gdsc_sdk_software.models.filter_catagory___seleted_filter_catagory_details_for_appliying_on_assets_list_saved_in_template.FilterCatagory - Seleted Filter Catagory details for appliying on assets list saved in template(
+                    ibm_gdsc_sdk_saas.models.filter_catagory___seleted_filter_catagory_details_for_appliying_on_assets_list_saved_in_template.FilterCatagory - Seleted Filter Catagory details for appliying on assets list saved in template(
                         catagory_id = '', 
-                        date_range = ibm_gdsc_sdk_software.models.timeline_date_range___timel_line_data_range_object_for_ui_widget_for_appliying_on_assets_list.TimelineDateRange - Timel Line Data Range object for ui widget for appliying on assets list(
+                        date_range = ibm_gdsc_sdk_saas.models.timeline_date_range___timel_line_data_range_object_for_ui_widget_for_appliying_on_assets_list.TimelineDateRange - Timel Line Data Range object for ui widget for appliying on assets list(
                             end = '', 
                             end_number = 56, 
                             end_unit = '', 
@@ -72,9 +72,9 @@ class TestAssetsv3FetchAssetDashboardResponse(unittest.TestCase):
                             start_unit = '', 
                             type = '', ), 
                         selected_sub_catagory_list = [
-                            ibm_gdsc_sdk_software.models.filter_sub_query___filter_sub_query_of_a_filter_query_saved_in_template.FilterSubQuery - Filter Sub Query of a Filter Query saved in template(
+                            ibm_gdsc_sdk_saas.models.filter_sub_query___filter_sub_query_of_a_filter_query_saved_in_template.FilterSubQuery - Filter Sub Query of a Filter Query saved in template(
                                 selected_children_list = [
-                                    ibm_gdsc_sdk_software.models.filter_sub_catagory_child___child_values_under_filter_sub_category_of_a_filter_category_in_template.FilterSubCatagoryChild - child values under Filter Sub category of a Filter category in template(
+                                    ibm_gdsc_sdk_saas.models.filter_sub_catagory_child___child_values_under_filter_sub_category_of_a_filter_category_in_template.FilterSubCatagoryChild - child values under Filter Sub category of a Filter category in template(
                                         child_id = '', 
                                         child_name = '', )
                                     ], 
@@ -90,28 +90,28 @@ class TestAssetsv3FetchAssetDashboardResponse(unittest.TestCase):
                         timeline_value_selected = '', )
                     ],
                 tag_categories_data = [
-                    ibm_gdsc_sdk_software.models.tag_categories_and_their_ids.Tag Categories and their IDs(
+                    ibm_gdsc_sdk_saas.models.tag_categories_and_their_ids.Tag Categories and their IDs(
                         tag_category_id = '', 
                         tag_category_name = '', )
                     ],
                 tags_filter_data = [
-                    ibm_gdsc_sdk_software.models.tags_and_their_data.Tags and their data(
+                    ibm_gdsc_sdk_saas.models.tags_and_their_data.Tags and their data(
                         tag_category = '', 
                         tag_category_id = '', 
                         tags_data = [
-                            ibm_gdsc_sdk_software.models.tags_data.Tags Data(
+                            ibm_gdsc_sdk_saas.models.tags_data.Tags Data(
                                 tag_id = '', 
                                 tag_name = '', )
                             ], )
                     ],
                 template_id = '',
                 vulnerability_scan_status = [
-                    ibm_gdsc_sdk_software.models.vulnerability_scan_status_card.Vulnerability Scan Status Card(
+                    ibm_gdsc_sdk_saas.models.vulnerability_scan_status_card.Vulnerability Scan Status Card(
                         asset_type = '', 
                         scanned_assets_percentage = '', )
                     ],
                 vulnerability_trend = [
-                    ibm_gdsc_sdk_software.models.vulnerability_trend_on_assets_in_last_one_month_for_asset_dashboard_card.Vulnerability Trend on Assets in last one month for Asset Dashboard Card(
+                    ibm_gdsc_sdk_saas.models.vulnerability_trend_on_assets_in_last_one_month_for_asset_dashboard_card.Vulnerability Trend on Assets in last one month for Asset Dashboard Card(
                         count = '', 
                         date = '', 
                         vulnerabilty_group = '', )

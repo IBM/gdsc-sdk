@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.authenticate_request import AuthenticateRequest
+from ibm_gdsc_sdk_saas.models.authenticate_request import AuthenticateRequest
 
 # TODO update the JSON string below
 json = "{}"

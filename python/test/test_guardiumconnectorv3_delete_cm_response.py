@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_delete_cm_response import Guardiumconnectorv3DeleteCMResponse
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_delete_cm_response import Guardiumconnectorv3DeleteCMResponse
 
 class TestGuardiumconnectorv3DeleteCMResponse(unittest.TestCase):
     """Guardiumconnectorv3DeleteCMResponse unit test stubs"""
@@ -35,7 +35,7 @@ class TestGuardiumconnectorv3DeleteCMResponse(unittest.TestCase):
         model = Guardiumconnectorv3DeleteCMResponse()
         if include_optional:
             return Guardiumconnectorv3DeleteCMResponse(
-                status = ibm_gdsc_sdk_software.models.guardiumconnectorv3_status_response_base.guardiumconnectorv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.guardiumconnectorv3_status_response_base.guardiumconnectorv3StatusResponseBase(
                     message = '', 
                     status = '', )
             )

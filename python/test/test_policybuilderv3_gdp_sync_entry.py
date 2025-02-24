@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_gdp_sync_entry import Policybuilderv3GDPSyncEntry
+from ibm_gdsc_sdk_saas.models.policybuilderv3_gdp_sync_entry import Policybuilderv3GDPSyncEntry
 
 class TestPolicybuilderv3GDPSyncEntry(unittest.TestCase):
     """Policybuilderv3GDPSyncEntry unit test stubs"""

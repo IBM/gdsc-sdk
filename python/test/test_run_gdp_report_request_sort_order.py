@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.run_gdp_report_request_sort_order import RunGDPReportRequestSortOrder
+from ibm_gdsc_sdk_saas.models.run_gdp_report_request_sort_order import RunGDPReportRequestSortOrder
 
 class TestRunGDPReportRequestSortOrder(unittest.TestCase):
     """RunGDPReportRequestSortOrder unit test stubs"""

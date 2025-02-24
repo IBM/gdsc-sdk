@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.protobuf_any import ProtobufAny
+from ibm_gdsc_sdk_saas.models.protobuf_any import ProtobufAny
 
 class TestProtobufAny(unittest.TestCase):
     """ProtobufAny unit test stubs"""

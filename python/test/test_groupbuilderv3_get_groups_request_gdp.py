@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.groupbuilderv3_get_groups_request_gdp import Groupbuilderv3GetGroupsRequestGdp
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_get_groups_request_gdp import Groupbuilderv3GetGroupsRequestGdp
 
 class TestGroupbuilderv3GetGroupsRequestGdp(unittest.TestCase):
     """Groupbuilderv3GetGroupsRequestGdp unit test stubs"""
@@ -37,7 +37,7 @@ class TestGroupbuilderv3GetGroupsRequestGdp(unittest.TestCase):
             return Groupbuilderv3GetGroupsRequestGdp(
                 central_manager_id = '',
                 data = [
-                    ibm_gdsc_sdk_software.models.groupbuilderv3_gdp_group.groupbuilderv3GdpGroup(
+                    ibm_gdsc_sdk_saas.models.groupbuilderv3_gdp_group.groupbuilderv3GdpGroup(
                         application = '', 
                         description = '', 
                         hierarchical = True, 

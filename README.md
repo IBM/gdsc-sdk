@@ -5,8 +5,8 @@ IBM® Guardium® Data Security Center offers five modules to help you manage the
 
 ## Links 
 
-[Creating API keys](https://www.ibm.com/docs/en/gdsc/3.x?topic=data-api-keys)
-[IBM GDSC Docs](https://www.ibm.com/docs/en/gdsc/3.x)
+[Creating API keys](https://www.ibm.com/docs/en/gdsc/saas?topic=data-api-keys)
+[IBM GDSC Docs](https://www.ibm.com/docs/en/gdsc/saas)
 
 This SDK provides comprehensive libraries and tools to interact with IBM Guardium Data Security Center's APIs and is available in the following languages:
 

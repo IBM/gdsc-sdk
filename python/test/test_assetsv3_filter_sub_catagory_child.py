@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_filter_sub_catagory_child import Assetsv3FilterSubCatagoryChild
+from ibm_gdsc_sdk_saas.models.assetsv3_filter_sub_catagory_child import Assetsv3FilterSubCatagoryChild
 
 class TestAssetsv3FilterSubCatagoryChild(unittest.TestCase):
     """Assetsv3FilterSubCatagoryChild unit test stubs"""

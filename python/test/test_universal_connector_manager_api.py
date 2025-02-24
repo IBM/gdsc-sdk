@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.universal_connector_manager_api import UniversalConnectorManagerApi
+from ibm_gdsc_sdk_saas.api.universal_connector_manager_api import UniversalConnectorManagerApi
 
 
 class TestUniversalConnectorManagerApi(unittest.TestCase):
@@ -29,7 +29,7 @@ class TestUniversalConnectorManagerApi(unittest.TestCase):
     def test_universal_connector_manager_get_certificate(self) -> None:
         """Test case for universal_connector_manager_get_certificate
 
-        Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium.
+        Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in GDSC.
         """
         pass
 
@@ -37,6 +37,13 @@ class TestUniversalConnectorManagerApi(unittest.TestCase):
         """Test case for universal_connector_manager_get_connectors
 
         Summary: Get connectors Description: Get all the connectors Universal Connector can support. Includes a list of event pipelines (input--filter pairs), along with the supported data source types and platforms.
+        """
+        pass
+
+    def test_universal_connector_manager_get_uc_setup(self) -> None:
+        """Test case for universal_connector_manager_get_uc_setup
+
+        Gets information to setup the new Universal connection.
         """
         pass
 

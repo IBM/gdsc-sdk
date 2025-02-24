@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.authserver_create_oauth_client_request import AuthserverCreateOauthClientRequest
+from ibm_gdsc_sdk_saas.models.authserver_create_oauth_client_request import AuthserverCreateOauthClientRequest
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.ecosystemv3_data_entry import Ecosystemv3DataEntry
+from ibm_gdsc_sdk_saas.models.ecosystemv3_data_entry import Ecosystemv3DataEntry
 
 class TestEcosystemv3DataEntry(unittest.TestCase):
     """Ecosystemv3DataEntry unit test stubs"""

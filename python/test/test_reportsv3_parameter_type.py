@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_parameter_type import Reportsv3ParameterType
+from ibm_gdsc_sdk_saas.models.reportsv3_parameter_type import Reportsv3ParameterType
 
 class TestReportsv3ParameterType(unittest.TestCase):
     """Reportsv3ParameterType unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_mapped_entities import Assetsv3MappedEntities
+from ibm_gdsc_sdk_saas.models.assetsv3_mapped_entities import Assetsv3MappedEntities
 
 class TestAssetsv3MappedEntities(unittest.TestCase):
     """Assetsv3MappedEntities unit test stubs"""
@@ -35,28 +35,30 @@ class TestAssetsv3MappedEntities(unittest.TestCase):
         model = Assetsv3MappedEntities()
         if include_optional:
             return Assetsv3MappedEntities(
-                attributes = ibm_gdsc_sdk_software.models.assetsv3_attributes.assetsv3Attributes(
+                attributes = ibm_gdsc_sdk_saas.models.assetsv3_attributes.assetsv3Attributes(
                     critical_vulnerability_count = '', 
                     entity_id = '', 
                     entity_name = '', 
                     grouper_id = '', 
+                    has_training_data = True, 
                     major_vulnerability_count = '', 
                     sensitive_data_count = '', 
                     status_type = 'NA', 
                     type = '', ),
                 children = [
-                    ibm_gdsc_sdk_software.models.assetsv3_mapped_entities.assetsv3MappedEntities(
-                        attributes = ibm_gdsc_sdk_software.models.assetsv3_attributes.assetsv3Attributes(
+                    ibm_gdsc_sdk_saas.models.assetsv3_mapped_entities.assetsv3MappedEntities(
+                        attributes = ibm_gdsc_sdk_saas.models.assetsv3_attributes.assetsv3Attributes(
                             critical_vulnerability_count = '', 
                             entity_id = '', 
                             entity_name = '', 
                             grouper_id = '', 
+                            has_training_data = True, 
                             major_vulnerability_count = '', 
                             sensitive_data_count = '', 
                             status_type = 'NA', 
                             type = '', ), 
                         children = [
-                            ibm_gdsc_sdk_software.models.assetsv3_mapped_entities.assetsv3MappedEntities(
+                            ibm_gdsc_sdk_saas.models.assetsv3_mapped_entities.assetsv3MappedEntities(
                                 children = , 
                                 name = '', 
                                 parent_child_count = '', 

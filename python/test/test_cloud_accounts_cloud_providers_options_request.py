@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.cloud_accounts_cloud_providers_options_request import CloudAccountsCloudProvidersOptionsRequest
+from ibm_gdsc_sdk_saas.models.cloud_accounts_cloud_providers_options_request import CloudAccountsCloudProvidersOptionsRequest
 
 class TestCloudAccountsCloudProvidersOptionsRequest(unittest.TestCase):
     """CloudAccountsCloudProvidersOptionsRequest unit test stubs"""
@@ -37,7 +37,7 @@ class TestCloudAccountsCloudProvidersOptionsRequest(unittest.TestCase):
             return CloudAccountsCloudProvidersOptionsRequest(
                 cloud_provider = 'aws',
                 cloud_accounts = [
-                    ibm_gdsc_sdk_software.models._cloud_accounts_cloud_providers_options_request_cloud_accounts_inner._cloudAccounts_cloudProviders_options_request_cloudAccounts_inner(
+                    ibm_gdsc_sdk_saas.models._cloud_accounts_cloud_providers_options_request_cloud_accounts_inner._cloudAccounts_cloudProviders_options_request_cloudAccounts_inner(
                         cloud_account_id = '', 
                         cloud_account_name = 'My cloud account name', 
                         environment = 'development', )
@@ -47,7 +47,7 @@ class TestCloudAccountsCloudProvidersOptionsRequest(unittest.TestCase):
             return CloudAccountsCloudProvidersOptionsRequest(
                 cloud_provider = 'aws',
                 cloud_accounts = [
-                    ibm_gdsc_sdk_software.models._cloud_accounts_cloud_providers_options_request_cloud_accounts_inner._cloudAccounts_cloudProviders_options_request_cloudAccounts_inner(
+                    ibm_gdsc_sdk_saas.models._cloud_accounts_cloud_providers_options_request_cloud_accounts_inner._cloudAccounts_cloudProviders_options_request_cloudAccounts_inner(
                         cloud_account_id = '', 
                         cloud_account_name = 'My cloud account name', 
                         environment = 'development', )

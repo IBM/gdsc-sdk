@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_partial_connector import Connectionsv3PartialConnector
+from ibm_gdsc_sdk_saas.models.connectionsv3_partial_connector import Connectionsv3PartialConnector
 
 class TestConnectionsv3PartialConnector(unittest.TestCase):
     """Connectionsv3PartialConnector unit test stubs"""
@@ -36,7 +36,7 @@ class TestConnectionsv3PartialConnector(unittest.TestCase):
         if include_optional:
             return Connectionsv3PartialConnector(
                 columns = [
-                    ibm_gdsc_sdk_software.models.connectionsv3_connector_column.connectionsv3ConnectorColumn(
+                    ibm_gdsc_sdk_saas.models.connectionsv3_connector_column.connectionsv3ConnectorColumn(
                         id = '', 
                         values = [
                             ''

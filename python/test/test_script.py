@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.script import Script
+from ibm_gdsc_sdk_saas.models.script import Script
 
 class TestScript(unittest.TestCase):
     """Script unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.schedulerv3_dependency import Schedulerv3Dependency
+from ibm_gdsc_sdk_saas.models.schedulerv3_dependency import Schedulerv3Dependency
 
 class TestSchedulerv3Dependency(unittest.TestCase):
     """Schedulerv3Dependency unit test stubs"""

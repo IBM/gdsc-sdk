@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.workflowv3_delete_tasks_response import Workflowv3DeleteTasksResponse
+from ibm_gdsc_sdk_saas.models.workflowv3_delete_tasks_response import Workflowv3DeleteTasksResponse
 
 # TODO update the JSON string below
 json = "{}"

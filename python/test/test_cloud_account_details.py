@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.cloud_account_details import CloudAccountDetails
+from ibm_gdsc_sdk_saas.models.cloud_account_details import CloudAccountDetails
 
 class TestCloudAccountDetails(unittest.TestCase):
     """CloudAccountDetails unit test stubs"""

@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **end** | **string** |  | [optional] [default to null]
+**groupUnderscoreids** | **array[integer]** | Groups data | [optional] [default to null]
 **id** | **string** |  | [optional] [default to null]
 **localUnderscoretimeUnderscorefilter** | [**Dashboardsv3TimeRange**](Dashboardsv3TimeRange.md) |  | [optional] [default to null]
 **menuUnderscoreitem** | **string** |  | [optional] [default to null]

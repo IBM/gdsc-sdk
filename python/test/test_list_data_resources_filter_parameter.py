@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.list_data_resources_filter_parameter import ListDataResourcesFilterParameter
+from ibm_gdsc_sdk_saas.models.list_data_resources_filter_parameter import ListDataResourcesFilterParameter
 
 class TestListDataResourcesFilterParameter(unittest.TestCase):
     """ListDataResourcesFilterParameter unit test stubs"""

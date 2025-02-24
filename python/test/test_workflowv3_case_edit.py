@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.workflowv3_case_edit import Workflowv3CaseEdit
+from ibm_gdsc_sdk_saas.models.workflowv3_case_edit import Workflowv3CaseEdit
 
 class TestWorkflowv3CaseEdit(unittest.TestCase):
     """Workflowv3CaseEdit unit test stubs"""
@@ -39,7 +39,7 @@ class TestWorkflowv3CaseEdit(unittest.TestCase):
                     ''
                     ],
                 assignments = [
-                    ibm_gdsc_sdk_software.models.workflowv3_entity.workflowv3Entity(
+                    ibm_gdsc_sdk_saas.models.workflowv3_entity.workflowv3Entity(
                         label = '', 
                         template_id = '', 
                         type = 'UNDEFINED_ENTITY_TYPE', 

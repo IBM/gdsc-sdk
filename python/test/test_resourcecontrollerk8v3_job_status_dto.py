@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_job_status_dto import Resourcecontrollerk8v3JobStatusDTO
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_job_status_dto import Resourcecontrollerk8v3JobStatusDTO
 
 class TestResourcecontrollerk8v3JobStatusDTO(unittest.TestCase):
     """Resourcecontrollerk8v3JobStatusDTO unit test stubs"""

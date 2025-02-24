@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.schedulerv3_delivery_method import Schedulerv3DeliveryMethod
+from ibm_gdsc_sdk_saas.models.schedulerv3_delivery_method import Schedulerv3DeliveryMethod
 
 class TestSchedulerv3DeliveryMethod(unittest.TestCase):
     """Schedulerv3DeliveryMethod unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.workflowv3_report_result import Workflowv3ReportResult
+from ibm_gdsc_sdk_saas.models.workflowv3_report_result import Workflowv3ReportResult
 
 class TestWorkflowv3ReportResult(unittest.TestCase):
     """Workflowv3ReportResult unit test stubs"""
@@ -36,12 +36,12 @@ class TestWorkflowv3ReportResult(unittest.TestCase):
         if include_optional:
             return Workflowv3ReportResult(
                 headers = [
-                    ibm_gdsc_sdk_software.models.workflowv3_report_result_header.workflowv3ReportResultHeader(
+                    ibm_gdsc_sdk_saas.models.workflowv3_report_result_header.workflowv3ReportResultHeader(
                         header = '', 
                         key = '', )
                     ],
                 rows = [
-                    ibm_gdsc_sdk_software.models.workflowv3_report_result_row.workflowv3ReportResultRow(
+                    ibm_gdsc_sdk_saas.models.workflowv3_report_result_row.workflowv3ReportResultRow(
                         row = {
                             'key' : ''
                             }, )

@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.complianceacceleratorv3_audit_config import Complianceacceleratorv3AuditConfig
+from ibm_gdsc_sdk_saas.models.complianceacceleratorv3_audit_config import Complianceacceleratorv3AuditConfig
 
 # TODO update the JSON string below
 json = "{}"

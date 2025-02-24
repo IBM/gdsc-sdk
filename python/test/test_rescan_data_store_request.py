@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.rescan_data_store_request import RescanDataStoreRequest
+from ibm_gdsc_sdk_saas.models.rescan_data_store_request import RescanDataStoreRequest
 
 class TestRescanDataStoreRequest(unittest.TestCase):
     """RescanDataStoreRequest unit test stubs"""

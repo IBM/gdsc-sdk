@@ -5,11 +5,16 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**workflowCreateCase**](WorkflowApi.md#workflowCreateCase) | **POST** /api/v3/cases | Summary: Create case Description: Create single case.
+[**workflowCreateProductEntity**](WorkflowApi.md#workflowCreateProductEntity) | **POST** /api/v3/workflow/productentities | Summary: Create product entity Description: Create single product entity.
 [**workflowCreateTask**](WorkflowApi.md#workflowCreateTask) | **POST** /api/v3/cases/{case_id}/tasks | Summary: Create task Description: Create single task within a parent case.
+[**workflowCreateWorkflowEvent**](WorkflowApi.md#workflowCreateWorkflowEvent) | **POST** /api/v3/workflow/event | Summary: Post event for processing by workflow rules Description: Find matching workflow rule and run it
+[**workflowDeleteProductEntity**](WorkflowApi.md#workflowDeleteProductEntity) | **DELETE** /api/v3/workflow/productentities/{entity_id} | Summary: Delete a product entity Description: Delete a single product entity.
 [**workflowGetCases**](WorkflowApi.md#workflowGetCases) | **GET** /api/v3/cases | Summary: Get cases Description: Return all cases requested.
 [**workflowGetCasesCount**](WorkflowApi.md#workflowGetCasesCount) | **POST** /api/v3/cases/count | Summary: Get cases count Description: Get case count.
 [**workflowGetFilename**](WorkflowApi.md#workflowGetFilename) | **GET** /api/v3/cases/{case_id}/tasks/{task_id}/filename | Summary: Get filename Description: Return filename associated with the task referenced in the associated context record.
 [**workflowGetJobsCount**](WorkflowApi.md#workflowGetJobsCount) | **POST** /api/v3/cases/{case_id}/jobs/count | Summary: Get jobs count Description: Get jobs count.
+[**workflowGetProductEntities**](WorkflowApi.md#workflowGetProductEntities) | **GET** /api/v3/workflow/productentities | Summary: Get products and their associated event entities Description: Return a list of integrated products and their associated event entities
+[**workflowGetProductEntity**](WorkflowApi.md#workflowGetProductEntity) | **GET** /api/v3/workflow/productentities/{entity_id} | Summary: Get event entity field names, field labels, and field data types Description: Return a list of fields similar to report headers
 [**workflowGetReportResult**](WorkflowApi.md#workflowGetReportResult) | **GET** /api/v3/cases/{case_id}/tasks/{task_id}/result | Summary: Get report result Description: Return a page of results.
 [**workflowGetTasks**](WorkflowApi.md#workflowGetTasks) | **GET** /api/v3/cases/{case_id}/tasks | Summary: Get tasks Description: Return all tasks requested.
 [**workflowGetTasksCount**](WorkflowApi.md#workflowGetTasksCount) | **POST** /api/v3/cases/{case_id}/tasks/count | Summary: Get cases count Description: Get case count.
@@ -17,6 +22,7 @@ Method | HTTP request | Description
 [**workflowSearchReports**](WorkflowApi.md#workflowSearchReports) | **POST** /api/v3/cases/reports | Summary: Get a list of report IDs Description: Returns a list of report IDs referenced in all cases and tasks
 [**workflowSearchTasks**](WorkflowApi.md#workflowSearchTasks) | **POST** /api/v3/cases/{case_id}/tasks/search | Summary: Search cases Description: Return a subset of cases.
 [**workflowUpdateCases**](WorkflowApi.md#workflowUpdateCases) | **PUT** /api/v3/cases | Summary: Update cases Description: Update multiple cases in one request.
+[**workflowUpdateProductEntity**](WorkflowApi.md#workflowUpdateProductEntity) | **PUT** /api/v3/workflow/productentities/{entity_id} | Summary: Update a product entity Description: Update a single product entity.
 [**workflowUpdateTasks**](WorkflowApi.md#workflowUpdateTasks) | **PUT** /api/v3/cases/{case_id}/tasks | Summary: Update tasks Description: Update multiple tasks for the same parent in one request.
 
 
@@ -76,6 +82,110 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Workflowv3CreateCaseResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **workflowCreateProductEntity**
+> Workflowv3CreateProductEntityResponse workflowCreateProductEntity(workflowv3ProductEntity)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .WorkflowApi(configuration);
+
+let body:.WorkflowApiWorkflowCreateProductEntityRequest = {
+  // Workflowv3ProductEntity
+  workflowv3ProductEntity: {
+    entity: {
+      disabled: true,
+      entityId: "entityId_example",
+      entityLabel: "entityLabel_example",
+      featureFlag: "featureFlag_example",
+      preventDelete: true,
+      privilegeId: "privilegeId_example",
+      privilegeType: "privilegeType_example",
+      productId: "productId_example",
+      productLabel: "productLabel_example",
+      templateOrigin: "templateOrigin_example",
+      workflow: {
+        auditType: "UNDEFINED_TYPE",
+        configTypes: [
+          "configTypes_example",
+        ],
+        workflowInvestigationLinks: [
+          {
+            display: "display_example",
+            id: "id_example",
+            type: "type_example",
+          },
+        ],
+        workflowResponseTemplate: {
+          display: "display_example",
+          id: "id_example",
+          type: "type_example",
+        },
+        workflowUniqueFields: [
+          "workflowUniqueFields_example",
+        ],
+      },
+    },
+    headers: [
+      {
+        choices: [
+          {
+            disabled: true,
+            label: "label_example",
+            name: "name_example",
+          },
+        ],
+        groupTypeId: 1,
+        hideFromView: true,
+        key: "key_example",
+        type: "STRING",
+        value: "value_example",
+      },
+    ],
+  },
+};
+
+apiInstance.workflowCreateProductEntity(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **workflowv3ProductEntity** | **Workflowv3ProductEntity**|  |
+
+
+### Return type
+
+**Workflowv3CreateProductEntityResponse**
 
 ### Authorization
 
@@ -201,6 +311,123 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **workflowCreateWorkflowEvent**
+> Workflowv3WorkflowEventResponse workflowCreateWorkflowEvent(workflowv3WorkflowEvent)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .WorkflowApi(configuration);
+
+let body:.WorkflowApiWorkflowCreateWorkflowEventRequest = {
+  // Workflowv3WorkflowEvent
+  workflowv3WorkflowEvent: {
+    data: {
+      "key": "key_example",
+    },
+    entityId: "entityId_example",
+    href: "href_example",
+    severity: "UNDEFINED_PRIORITY",
+    tenantId: "tenantId_example",
+    title: "title_example",
+  },
+};
+
+apiInstance.workflowCreateWorkflowEvent(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **workflowv3WorkflowEvent** | **Workflowv3WorkflowEvent**|  |
+
+
+### Return type
+
+**Workflowv3WorkflowEventResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **workflowDeleteProductEntity**
+> Workflowv3DeleteProductEntityResponse workflowDeleteProductEntity()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .WorkflowApi(configuration);
+
+let body:.WorkflowApiWorkflowDeleteProductEntityRequest = {
+  // string | Unique id for the product entity
+  entityId: "entity_id_example",
+};
+
+apiInstance.workflowDeleteProductEntity(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **entityId** | [**string**] | Unique id for the product entity | defaults to undefined
+
+
+### Return type
+
+**Workflowv3DeleteProductEntityResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 
@@ -497,6 +724,117 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **workflowGetProductEntities**
+> Workflowv3GetProductEntitiesResponse workflowGetProductEntities()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .WorkflowApi(configuration);
+
+let body:.WorkflowApiWorkflowGetProductEntitiesRequest = {
+  // number | Optional starting point for the page of data. (optional)
+  offset: 1,
+  // number | Optional page size. (optional)
+  limit: 1,
+};
+
+apiInstance.workflowGetProductEntities(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **offset** | [**number**] | Optional starting point for the page of data. | (optional) defaults to undefined
+ **limit** | [**number**] | Optional page size. | (optional) defaults to undefined
+
+
+### Return type
+
+**Workflowv3GetProductEntitiesResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **workflowGetProductEntity**
+> Workflowv3ProductEntity workflowGetProductEntity()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .WorkflowApi(configuration);
+
+let body:.WorkflowApiWorkflowGetProductEntityRequest = {
+  // string | Unique id for the product entity
+  entityId: "entity_id_example",
+};
+
+apiInstance.workflowGetProductEntity(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **entityId** | [**string**] | Unique id for the product entity | defaults to undefined
+
+
+### Return type
+
+**Workflowv3ProductEntity**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 
@@ -1052,6 +1390,116 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Workflowv3UpdateCasesResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **workflowUpdateProductEntity**
+> Workflowv3UpdateProductEntityResponse workflowUpdateProductEntity(workflowv3UpdateProductEntityRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .WorkflowApi(configuration);
+
+let body:.WorkflowApiWorkflowUpdateProductEntityRequest = {
+  // string | Unique Entity id, required for update.
+  entityId: "entity_id_example",
+  // Workflowv3UpdateProductEntityRequest
+  workflowv3UpdateProductEntityRequest: {
+    entityId: "entityId_example",
+    productEntity: {
+      entity: {
+        disabled: true,
+        entityId: "entityId_example",
+        entityLabel: "entityLabel_example",
+        featureFlag: "featureFlag_example",
+        preventDelete: true,
+        privilegeId: "privilegeId_example",
+        privilegeType: "privilegeType_example",
+        productId: "productId_example",
+        productLabel: "productLabel_example",
+        templateOrigin: "templateOrigin_example",
+        workflow: {
+          auditType: "UNDEFINED_TYPE",
+          configTypes: [
+            "configTypes_example",
+          ],
+          workflowInvestigationLinks: [
+            {
+              display: "display_example",
+              id: "id_example",
+              type: "type_example",
+            },
+          ],
+          workflowResponseTemplate: {
+            display: "display_example",
+            id: "id_example",
+            type: "type_example",
+          },
+          workflowUniqueFields: [
+            "workflowUniqueFields_example",
+          ],
+        },
+      },
+      headers: [
+        {
+          choices: [
+            {
+              disabled: true,
+              label: "label_example",
+              name: "name_example",
+            },
+          ],
+          groupTypeId: 1,
+          hideFromView: true,
+          key: "key_example",
+          type: "STRING",
+          value: "value_example",
+        },
+      ],
+    },
+  },
+};
+
+apiInstance.workflowUpdateProductEntity(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **workflowv3UpdateProductEntityRequest** | **Workflowv3UpdateProductEntityRequest**|  |
+ **entityId** | [**string**] | Unique Entity id, required for update. | defaults to undefined
+
+
+### Return type
+
+**Workflowv3UpdateProductEntityResponse**
 
 ### Authorization
 

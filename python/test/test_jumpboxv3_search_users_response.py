@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.jumpboxv3_search_users_response import Jumpboxv3SearchUsersResponse
+from ibm_gdsc_sdk_saas.models.jumpboxv3_search_users_response import Jumpboxv3SearchUsersResponse
 
 class TestJumpboxv3SearchUsersResponse(unittest.TestCase):
     """Jumpboxv3SearchUsersResponse unit test stubs"""
@@ -37,7 +37,7 @@ class TestJumpboxv3SearchUsersResponse(unittest.TestCase):
             return Jumpboxv3SearchUsersResponse(
                 message = '',
                 users = [
-                    ibm_gdsc_sdk_software.models.jumpboxv3_directory_entry.jumpboxv3DirectoryEntry(
+                    ibm_gdsc_sdk_saas.models.jumpboxv3_directory_entry.jumpboxv3DirectoryEntry(
                         directory_id = '', 
                         display_name = '', 
                         distinguished_name = '', 

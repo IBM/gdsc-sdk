@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.flow_node import FlowNode
+from ibm_gdsc_sdk_saas.models.flow_node import FlowNode
 
 class TestFlowNode(unittest.TestCase):
     """FlowNode unit test stubs"""
@@ -41,7 +41,7 @@ class TestFlowNode(unittest.TestCase):
                 cloud_account_id = '151193111234',
                 cloud_region = 'us-east-1',
                 cloud_provider = 'aws',
-                resource = ibm_gdsc_sdk_software.models.flow_node_resource.FlowNode_resource(
+                resource = ibm_gdsc_sdk_saas.models.flow_node_resource.FlowNode_resource(
                     name = 'polar-corplex', ),
                 vendor_id = 'abcd1234-ab12-ab12-ab12-1234123abcabc'
             )

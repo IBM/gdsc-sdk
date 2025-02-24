@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_delete_controller_request import Resourcecontrollerk8v3DeleteControllerRequest
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_delete_controller_request import Resourcecontrollerk8v3DeleteControllerRequest
 
 class TestResourcecontrollerk8v3DeleteControllerRequest(unittest.TestCase):
     """Resourcecontrollerk8v3DeleteControllerRequest unit test stubs"""

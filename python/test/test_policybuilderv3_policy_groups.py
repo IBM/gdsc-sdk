@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_policy_groups import Policybuilderv3PolicyGroups
+from ibm_gdsc_sdk_saas.models.policybuilderv3_policy_groups import Policybuilderv3PolicyGroups
 
 class TestPolicybuilderv3PolicyGroups(unittest.TestCase):
     """Policybuilderv3PolicyGroups unit test stubs"""
@@ -37,7 +37,7 @@ class TestPolicybuilderv3PolicyGroups(unittest.TestCase):
             return Policybuilderv3PolicyGroups(
                 group_id = '',
                 policies = [
-                    ibm_gdsc_sdk_software.models.policybuilderv3_policy_details_for_groups.policybuilderv3PolicyDetailsForGroups(
+                    ibm_gdsc_sdk_saas.models.policybuilderv3_policy_details_for_groups.policybuilderv3PolicyDetailsForGroups(
                         policy_id = '', 
                         policy_name = '', )
                     ]

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.data_stores_summary_cloud_locations_inner import DataStoresSummaryCloudLocationsInner
+from ibm_gdsc_sdk_saas.models.data_stores_summary_cloud_locations_inner import DataStoresSummaryCloudLocationsInner
 
 class TestDataStoresSummaryCloudLocationsInner(unittest.TestCase):
     """DataStoresSummaryCloudLocationsInner unit test stubs"""

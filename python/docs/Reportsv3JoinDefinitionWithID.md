@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.reportsv3_join_definition_with_id import Reportsv3JoinDefinitionWithID
+from ibm_gdsc_sdk_saas.models.reportsv3_join_definition_with_id import Reportsv3JoinDefinitionWithID
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.dashboardsv3_card_type import Dashboardsv3CardType
+from ibm_gdsc_sdk_saas.models.dashboardsv3_card_type import Dashboardsv3CardType
 
 class TestDashboardsv3CardType(unittest.TestCase):
     """Dashboardsv3CardType unit test stubs"""

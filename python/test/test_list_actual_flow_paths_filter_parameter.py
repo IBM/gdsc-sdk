@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.list_actual_flow_paths_filter_parameter import ListActualFlowPathsFilterParameter
+from ibm_gdsc_sdk_saas.models.list_actual_flow_paths_filter_parameter import ListActualFlowPathsFilterParameter
 
 class TestListActualFlowPathsFilterParameter(unittest.TestCase):
     """ListActualFlowPathsFilterParameter unit test stubs"""
@@ -55,10 +55,10 @@ class TestListActualFlowPathsFilterParameter(unittest.TestCase):
                     ],
                 usernames = ["polar.security"],
                 trustee_ids = ["arn:aws:iam::123456789101:role/polar-helpers"],
-                last_seen = ibm_gdsc_sdk_software.models.comparator.Comparator(
+                last_seen = ibm_gdsc_sdk_saas.models.comparator.Comparator(
                     value = 1.337, 
                     operator = 'gt', ),
-                first_seen = ibm_gdsc_sdk_software.models.comparator.Comparator(
+                first_seen = ibm_gdsc_sdk_saas.models.comparator.Comparator(
                     value = 1.337, 
                     operator = 'gt', )
             )

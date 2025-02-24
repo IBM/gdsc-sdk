@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.workflowv3_task import Workflowv3Task
+from ibm_gdsc_sdk_saas.models.workflowv3_task import Workflowv3Task
 
 class TestWorkflowv3Task(unittest.TestCase):
     """Workflowv3Task unit test stubs"""
@@ -37,7 +37,7 @@ class TestWorkflowv3Task(unittest.TestCase):
             return Workflowv3Task(
                 alt_id = '',
                 assignments = [
-                    ibm_gdsc_sdk_software.models.workflowv3_entity.workflowv3Entity(
+                    ibm_gdsc_sdk_saas.models.workflowv3_entity.workflowv3Entity(
                         label = '', 
                         template_id = '', 
                         type = 'UNDEFINED_ENTITY_TYPE', 
@@ -45,7 +45,7 @@ class TestWorkflowv3Task(unittest.TestCase):
                     ],
                 case_id = '',
                 comments = [
-                    ibm_gdsc_sdk_software.models.workflowv3_comment.workflowv3Comment(
+                    ibm_gdsc_sdk_saas.models.workflowv3_comment.workflowv3Comment(
                         what = '', 
                         when = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         who = '', )
@@ -58,7 +58,7 @@ class TestWorkflowv3Task(unittest.TestCase):
                     ],
                 description = '',
                 investigation_links = [
-                    ibm_gdsc_sdk_software.models.generic_configuration_item_reference.Generic configuration item reference(
+                    ibm_gdsc_sdk_saas.models.generic_configuration_item_reference.Generic configuration item reference(
                         display = '', 
                         id = '', 
                         type = '', )
@@ -66,40 +66,40 @@ class TestWorkflowv3Task(unittest.TestCase):
                 justification = '',
                 number = '',
                 priority = 'UNDEFINED_PRIORITY',
-                report_result = ibm_gdsc_sdk_software.models.workflowv3_report_result.workflowv3ReportResult(
+                report_result = ibm_gdsc_sdk_saas.models.workflowv3_report_result.workflowv3ReportResult(
                     headers = [
-                        ibm_gdsc_sdk_software.models.workflowv3_report_result_header.workflowv3ReportResultHeader(
+                        ibm_gdsc_sdk_saas.models.workflowv3_report_result_header.workflowv3ReportResultHeader(
                             header = '', 
                             key = '', )
                         ], 
                     rows = [
-                        ibm_gdsc_sdk_software.models.workflowv3_report_result_row.workflowv3ReportResultRow(
+                        ibm_gdsc_sdk_saas.models.workflowv3_report_result_row.workflowv3ReportResultRow(
                             row = {
                                 'key' : ''
                                 }, )
                         ], ),
-                response_template = ibm_gdsc_sdk_software.models.generic_configuration_item_reference.Generic configuration item reference(
+                response_template = ibm_gdsc_sdk_saas.models.generic_configuration_item_reference.Generic configuration item reference(
                     display = '', 
                     id = '', 
                     type = '', ),
                 review_action = '',
-                run = ibm_gdsc_sdk_software.models.workflowv3_report_run.workflowv3ReportRun(
+                run = ibm_gdsc_sdk_saas.models.workflowv3_report_run.workflowv3ReportRun(
                     date_end = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     date_start = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     detail = '', 
                     query_from = '', 
                     query_to = '', 
-                    report_filters = ibm_gdsc_sdk_software.models.reportsv3_report_filter_brackets.reportsv3ReportFilterBrackets(
+                    report_filters = ibm_gdsc_sdk_saas.models.reportsv3_report_filter_brackets.reportsv3ReportFilterBrackets(
                         brackets_id = 56, 
                         filter_name = '', 
                         filters_array = [
-                            ibm_gdsc_sdk_software.models.reportsv3_report_filter.reportsv3ReportFilter(
-                                brackets = ibm_gdsc_sdk_software.models.reportsv3_report_filter_brackets.reportsv3ReportFilterBrackets(
+                            ibm_gdsc_sdk_saas.models.reportsv3_report_filter.reportsv3ReportFilter(
+                                brackets = ibm_gdsc_sdk_saas.models.reportsv3_report_filter_brackets.reportsv3ReportFilterBrackets(
                                     brackets_id = 56, 
                                     filter_name = '', 
                                     having_array = [
-                                        ibm_gdsc_sdk_software.models.report_agg_filter_represents_a_report_aggregate_filter.ReportAggFilter represents a report aggregate filter(
-                                            condition = ibm_gdsc_sdk_software.models.reportsv3_report_agg_filter_condition.reportsv3ReportAggFilterCondition(
+                                        ibm_gdsc_sdk_saas.models.report_agg_filter_represents_a_report_aggregate_filter.ReportAggFilter represents a report aggregate filter(
+                                            condition = ibm_gdsc_sdk_saas.models.reportsv3_report_agg_filter_condition.reportsv3ReportAggFilterCondition(
                                                 aggregation_type = 'UNDEFINED_AGG_TYPE', 
                                                 header_id = '', 
                                                 header_name = '', 
@@ -110,14 +110,15 @@ class TestWorkflowv3Task(unittest.TestCase):
                                     is_custom = True, 
                                     option_type = 'UNDEFINED_OPTION_TYPE', 
                                     sequence = 56, ), 
-                                condition = ibm_gdsc_sdk_software.models.reportsv3_report_filter_condition.reportsv3ReportFilterCondition(
+                                condition = ibm_gdsc_sdk_saas.models.reportsv3_report_filter_condition.reportsv3ReportFilterCondition(
                                     case_insensitive = True, 
                                     field_nls_translation_key = '', 
                                     filter_id = 56, 
+                                    group_type_id = 56, 
                                     header_id = '', 
                                     header_name = '', 
                                     header_type = 'UNDEFINED_TYPE', 
-                                    in_report_date_range = ibm_gdsc_sdk_software.models.reportsv3_date_range.reportsv3DateRange(
+                                    in_report_date_range = ibm_gdsc_sdk_saas.models.reportsv3_date_range.reportsv3DateRange(
                                         end_date = '', 
                                         end_number = 56, 
                                         end_unit = 'UNDEFINED_UINT_TYPE', 
@@ -131,16 +132,18 @@ class TestWorkflowv3Task(unittest.TestCase):
                                     in_report_id = '', 
                                     in_report_name = '', 
                                     in_report_table_name = '', 
+                                    is_tuple = True, 
                                     parameter_type = 'UNDEFINED_PARAM_TYPE', 
                                     schema_name = '', 
                                     sequence = 56, 
                                     table_name = '', 
+                                    tuple_type = '', 
                                     values = [
                                         ''
                                         ], ), )
                             ], 
                         having_array = [
-                            ibm_gdsc_sdk_software.models.report_agg_filter_represents_a_report_aggregate_filter.ReportAggFilter represents a report aggregate filter()
+                            ibm_gdsc_sdk_saas.models.report_agg_filter_represents_a_report_aggregate_filter.ReportAggFilter represents a report aggregate filter()
                             ], 
                         is_custom = True, 
                         option_type = 'UNDEFINED_OPTION_TYPE', 

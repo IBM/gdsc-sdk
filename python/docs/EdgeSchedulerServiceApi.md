@@ -1,16 +1,16 @@
-# ibm_gdsc_sdk_software.EdgeSchedulerServiceApi
+# ibm_gdsc_sdk_saas.EdgeSchedulerServiceApi
 
 All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**edge_scheduler_service_get_edge_query_status**](EdgeSchedulerServiceApi.md#edge_scheduler_service_get_edge_query_status) | **GET** /api/v3/edge/query/status | Summary: Get edge query status Description: Get the status of a queued edge query
-[**edge_scheduler_service_monitoring_pending_request_for_edge_query**](EdgeSchedulerServiceApi.md#edge_scheduler_service_monitoring_pending_request_for_edge_query) | **POST** /api/v3/edge/query | Summary: Create workspace Description: monitor edge query pending request
-[**edge_scheduler_service_schedule_edge_query**](EdgeSchedulerServiceApi.md#edge_scheduler_service_schedule_edge_query) | **POST** /api/v3/edge/query/schedule | Summary: Schedule an edge query  Description: Schedule an edge query via db2 queue
+[**edge_scheduler_service_get_edge_query_status**](EdgeSchedulerServiceApi.md#edge_scheduler_service_get_edge_query_status) | **GET** /api/v3/edges/{edge_id}/query/status | Summary: Get edge query status Description: Get the status of a queued edge query
+[**edge_scheduler_service_monitoring_pending_request_for_edge_query**](EdgeSchedulerServiceApi.md#edge_scheduler_service_monitoring_pending_request_for_edge_query) | **GET** /api/v3/edges/query | Summary: Monitor for a pending edge query request Description: monitor edge query pending request
+[**edge_scheduler_service_schedule_edge_query**](EdgeSchedulerServiceApi.md#edge_scheduler_service_schedule_edge_query) | **POST** /api/v3/edges/{edge_id}/query/schedule | Summary: Schedule an edge query  Description: Schedule an edge query via data warehouse queue
 
 
 # **edge_scheduler_service_get_edge_query_status**
-> Edgeschedulerv3GetEdgeQueryStatusResponse edge_scheduler_service_get_edge_query_status(edge_id=edge_id, edge_result_report_id=edge_result_report_id)
+> Edgeschedulerv3GetEdgeQueryStatusResponse edge_scheduler_service_get_edge_query_status(edge_id, edge_result_report_id=edge_result_report_id)
 
 Summary: Get edge query status Description: Get the status of a queued edge query
 
@@ -20,14 +20,14 @@ Summary: Get edge query status Description: Get the status of a queued edge quer
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
-from ibm_gdsc_sdk_software.models.edgeschedulerv3_get_edge_query_status_response import Edgeschedulerv3GetEdgeQueryStatusResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.edgeschedulerv3_get_edge_query_status_response import Edgeschedulerv3GetEdgeQueryStatusResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -37,7 +37,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -49,15 +49,15 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.EdgeSchedulerServiceApi(api_client)
-    edge_id = 'edge_id_example' # str | the id of the edge. (optional)
+    api_instance = ibm_gdsc_sdk_saas.EdgeSchedulerServiceApi(api_client)
+    edge_id = 'edge_id_example' # str | the id of the edge
     edge_result_report_id = 'edge_result_report_id_example' # str | the id of the UC report being queried for. (optional)
 
     try:
         # Summary: Get edge query status Description: Get the status of a queued edge query
-        api_response = api_instance.edge_scheduler_service_get_edge_query_status(edge_id=edge_id, edge_result_report_id=edge_result_report_id)
+        api_response = api_instance.edge_scheduler_service_get_edge_query_status(edge_id, edge_result_report_id=edge_result_report_id)
         print("The response of EdgeSchedulerServiceApi->edge_scheduler_service_get_edge_query_status:\n")
         pprint(api_response)
     except Exception as e:
@@ -71,7 +71,7 @@ with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_id** | **str**| the id of the edge. | [optional] 
+ **edge_id** | **str**| the id of the edge | 
  **edge_result_report_id** | **str**| the id of the UC report being queried for. | [optional] 
 
 ### Return type
@@ -97,9 +97,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **edge_scheduler_service_monitoring_pending_request_for_edge_query**
-> StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse edge_scheduler_service_monitoring_pending_request_for_edge_query(edgeschedulerv3_monitoring_pending_request_for_edge_query_request)
+> StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse edge_scheduler_service_monitoring_pending_request_for_edge_query(client_id=client_id)
 
-Summary: Create workspace Description: monitor edge query pending request
+Summary: Monitor for a pending edge query request Description: monitor edge query pending request
 
 ### Example
 
@@ -107,15 +107,14 @@ Summary: Create workspace Description: monitor edge query pending request
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
-from ibm_gdsc_sdk_software.models.edgeschedulerv3_monitoring_pending_request_for_edge_query_request import Edgeschedulerv3MonitoringPendingRequestForEdgeQueryRequest
-from ibm_gdsc_sdk_software.models.stream_result_of_edgeschedulerv3_monitoring_pending_request_for_edge_query_response import StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.stream_result_of_edgeschedulerv3_monitoring_pending_request_for_edge_query_response import StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -125,7 +124,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -137,14 +136,14 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.EdgeSchedulerServiceApi(api_client)
-    edgeschedulerv3_monitoring_pending_request_for_edge_query_request = ibm_gdsc_sdk_software.Edgeschedulerv3MonitoringPendingRequestForEdgeQueryRequest() # Edgeschedulerv3MonitoringPendingRequestForEdgeQueryRequest | 
+    api_instance = ibm_gdsc_sdk_saas.EdgeSchedulerServiceApi(api_client)
+    client_id = 'client_id_example' # str | edge client id to monitor edge query requests for. (optional)
 
     try:
-        # Summary: Create workspace Description: monitor edge query pending request
-        api_response = api_instance.edge_scheduler_service_monitoring_pending_request_for_edge_query(edgeschedulerv3_monitoring_pending_request_for_edge_query_request)
+        # Summary: Monitor for a pending edge query request Description: monitor edge query pending request
+        api_response = api_instance.edge_scheduler_service_monitoring_pending_request_for_edge_query(client_id=client_id)
         print("The response of EdgeSchedulerServiceApi->edge_scheduler_service_monitoring_pending_request_for_edge_query:\n")
         pprint(api_response)
     except Exception as e:
@@ -158,7 +157,7 @@ with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edgeschedulerv3_monitoring_pending_request_for_edge_query_request** | [**Edgeschedulerv3MonitoringPendingRequestForEdgeQueryRequest**](Edgeschedulerv3MonitoringPendingRequestForEdgeQueryRequest.md)|  | 
+ **client_id** | **str**| edge client id to monitor edge query requests for. | [optional] 
 
 ### Return type
 
@@ -170,7 +169,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 ### HTTP response details
@@ -183,9 +182,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **edge_scheduler_service_schedule_edge_query**
-> Edgeschedulerv3ScheduleEdgeQueryResponse edge_scheduler_service_schedule_edge_query(edgeschedulerv3_schedule_edge_query_request)
+> Edgeschedulerv3ScheduleEdgeQueryResponse edge_scheduler_service_schedule_edge_query(edge_id, edgeschedulerv3_schedule_edge_query_request)
 
-Summary: Schedule an edge query  Description: Schedule an edge query via db2 queue
+Summary: Schedule an edge query  Description: Schedule an edge query via data warehouse queue
 
 ### Example
 
@@ -193,15 +192,15 @@ Summary: Schedule an edge query  Description: Schedule an edge query via db2 que
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software
-from ibm_gdsc_sdk_software.models.edgeschedulerv3_schedule_edge_query_request import Edgeschedulerv3ScheduleEdgeQueryRequest
-from ibm_gdsc_sdk_software.models.edgeschedulerv3_schedule_edge_query_response import Edgeschedulerv3ScheduleEdgeQueryResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.edgeschedulerv3_schedule_edge_query_request import Edgeschedulerv3ScheduleEdgeQueryRequest
+from ibm_gdsc_sdk_saas.models.edgeschedulerv3_schedule_edge_query_response import Edgeschedulerv3ScheduleEdgeQueryResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -211,7 +210,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -223,14 +222,15 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.EdgeSchedulerServiceApi(api_client)
-    edgeschedulerv3_schedule_edge_query_request = ibm_gdsc_sdk_software.Edgeschedulerv3ScheduleEdgeQueryRequest() # Edgeschedulerv3ScheduleEdgeQueryRequest | 
+    api_instance = ibm_gdsc_sdk_saas.EdgeSchedulerServiceApi(api_client)
+    edge_id = 'edge_id_example' # str | the id of the edge
+    edgeschedulerv3_schedule_edge_query_request = ibm_gdsc_sdk_saas.Edgeschedulerv3ScheduleEdgeQueryRequest() # Edgeschedulerv3ScheduleEdgeQueryRequest | 
 
     try:
-        # Summary: Schedule an edge query  Description: Schedule an edge query via db2 queue
-        api_response = api_instance.edge_scheduler_service_schedule_edge_query(edgeschedulerv3_schedule_edge_query_request)
+        # Summary: Schedule an edge query  Description: Schedule an edge query via data warehouse queue
+        api_response = api_instance.edge_scheduler_service_schedule_edge_query(edge_id, edgeschedulerv3_schedule_edge_query_request)
         print("The response of EdgeSchedulerServiceApi->edge_scheduler_service_schedule_edge_query:\n")
         pprint(api_response)
     except Exception as e:
@@ -244,6 +244,7 @@ with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **edge_id** | **str**| the id of the edge | 
  **edgeschedulerv3_schedule_edge_query_request** | [**Edgeschedulerv3ScheduleEdgeQueryRequest**](Edgeschedulerv3ScheduleEdgeQueryRequest.md)|  | 
 
 ### Return type

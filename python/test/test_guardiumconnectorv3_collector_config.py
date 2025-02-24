@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_collector_config import Guardiumconnectorv3CollectorConfig
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_collector_config import Guardiumconnectorv3CollectorConfig
 
 class TestGuardiumconnectorv3CollectorConfig(unittest.TestCase):
     """Guardiumconnectorv3CollectorConfig unit test stubs"""

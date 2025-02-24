@@ -17,13 +17,14 @@ Name | Type | Description | Notes
 **entityUnderscoreid** | **string** |  | [optional] [default to null]
 **entityUnderscoretype** | **string** | entity type of an asset | [optional] [default to null]
 **extendedUnderscoreproperties** | [**array[Assetsv3ExtendedProp]**](Assetsv3ExtendedProp.md) | extended properties for an asset | [optional] [default to null]
-**gdpUnderscoredataUnderscoresources** | **string** | gdp datasource names of the assets | [optional] [default to null]
+**gdpUnderscoredataUnderscoresources** | **string** | GDP datasource names of the assets | [optional] [default to null]
 **grouperUnderscoreid** | **integer** |  | [optional] [default to null]
 **host** | **string** | host of the assets | [optional] [default to null]
 **hostUnderscoreid** | **string** | host ids of assets | [optional] [default to null]
 **hostUnderscoreport** | **string** | host and port of the assets | [optional] [default to null]
 **ip** | **string** | ip of the assets | [optional] [default to null]
 **ipUnderscoreport** | **string** | ip and port of the assets | [optional] [default to null]
+**isUnderscoresplittable** | **boolean** | can the asset be split | [optional] [default to null]
 **macUnderscoreaddress** | **string** | macaddress of an endpoint asset | [optional] [default to null]
 **modelUnderscorename** | **string** | name of model asset | [optional] [default to null]
 **monitoring** | [**Assetsv3StatusType**](Assetsv3StatusType.md) |  | [optional] [default to null]
@@ -39,6 +40,7 @@ Name | Type | Description | Notes
 **traffic** | [**Assetsv3HealthType**](Assetsv3HealthType.md) |  | [optional] [default to null]
 **type** | **string** | database type of the assets | [optional] [default to null]
 **userUnderscoreaccounts** | **array[string]** | associated user accounts of assets | [optional] [default to null]
+**vertexUnderscoreid** | **string** | vertex-ID based on assetEntityType | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

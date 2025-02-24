@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.workflowv3_get_cases_count_request import Workflowv3GetCasesCountRequest
+from ibm_gdsc_sdk_saas.models.workflowv3_get_cases_count_request import Workflowv3GetCasesCountRequest
 
 class TestWorkflowv3GetCasesCountRequest(unittest.TestCase):
     """Workflowv3GetCasesCountRequest unit test stubs"""
@@ -35,7 +35,7 @@ class TestWorkflowv3GetCasesCountRequest(unittest.TestCase):
         model = Workflowv3GetCasesCountRequest()
         if include_optional:
             return Workflowv3GetCasesCountRequest(
-                filter = ibm_gdsc_sdk_software.models.workflowv3_filter.workflowv3Filter(
+                filter = ibm_gdsc_sdk_saas.models.workflowv3_filter.workflowv3Filter(
                     assigned_to_me = True, 
                     assigned_to_my_roles = True, 
                     date_created = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
@@ -43,7 +43,7 @@ class TestWorkflowv3GetCasesCountRequest(unittest.TestCase):
                     date_due = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     date_due_operator = 'IGNORE', 
                     filter_columns = [
-                        ibm_gdsc_sdk_software.models.workflowv3_filter_column.workflowv3FilterColumn(
+                        ibm_gdsc_sdk_saas.models.workflowv3_filter_column.workflowv3FilterColumn(
                             header_name = '', 
                             operator_type = 'UNDEFINED_OPERATOR_TYPE', 
                             values = [

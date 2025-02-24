@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticsmlclassificationv3_rule_set_list import Riskanalyticsmlclassificationv3RuleSetList
+from ibm_gdsc_sdk_saas.models.riskanalyticsmlclassificationv3_rule_set_list import Riskanalyticsmlclassificationv3RuleSetList
 
 class TestRiskanalyticsmlclassificationv3RuleSetList(unittest.TestCase):
     """Riskanalyticsmlclassificationv3RuleSetList unit test stubs"""
@@ -36,7 +36,7 @@ class TestRiskanalyticsmlclassificationv3RuleSetList(unittest.TestCase):
         if include_optional:
             return Riskanalyticsmlclassificationv3RuleSetList(
                 rule_set_list = [
-                    ibm_gdsc_sdk_software.models.a_rule_of_classification_model.A rule of classification model(
+                    ibm_gdsc_sdk_saas.models.a_rule_of_classification_model.A rule of classification model(
                         feature_name = '', 
                         operator = '', 
                         value = 1.337, )

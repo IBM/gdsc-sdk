@@ -16,6 +16,7 @@ import { HttpFile } from '../http/http';
 export class Connectionsv3UpdatePluginRequest {
     'datasourceType'?: string;
     'developerName'?: string;
+    'documentLink'?: string;
     'id'?: string;
     'logfile'?: string;
     'name'?: string;
@@ -23,6 +24,8 @@ export class Connectionsv3UpdatePluginRequest {
     'records'?: Array<Connectionsv3PluginRecord>;
     'state'?: string;
     'supportedInputs'?: Array<string>;
+    'version'?: string;
+    'versionTested'?: string;
 
     static readonly discriminator: string | undefined = undefined;
 
@@ -36,6 +39,12 @@ export class Connectionsv3UpdatePluginRequest {
         {
             "name": "developerName",
             "baseName": "developer_name",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "documentLink",
+            "baseName": "document_link",
             "type": "string",
             "format": ""
         },
@@ -79,6 +88,18 @@ export class Connectionsv3UpdatePluginRequest {
             "name": "supportedInputs",
             "baseName": "supported_inputs",
             "type": "Array<string>",
+            "format": ""
+        },
+        {
+            "name": "version",
+            "baseName": "version",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "versionTested",
+            "baseName": "version_tested",
+            "type": "string",
             "format": ""
         }    ];
 

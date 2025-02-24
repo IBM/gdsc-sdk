@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.snifassistv3_feedback import Snifassistv3Feedback
+from ibm_gdsc_sdk_saas.models.snifassistv3_feedback import Snifassistv3Feedback
 
 class TestSnifassistv3Feedback(unittest.TestCase):
     """Snifassistv3Feedback unit test stubs"""

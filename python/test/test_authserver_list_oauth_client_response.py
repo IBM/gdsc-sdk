@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.authserver_list_oauth_client_response import AuthserverListOauthClientResponse
+from ibm_gdsc_sdk_saas.models.authserver_list_oauth_client_response import AuthserverListOauthClientResponse
 
 class TestAuthserverListOauthClientResponse(unittest.TestCase):
     """AuthserverListOauthClientResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestAuthserverListOauthClientResponse(unittest.TestCase):
         if include_optional:
             return AuthserverListOauthClientResponse(
                 oauth_clients = [
-                    ibm_gdsc_sdk_software.models.authserver_oauth_client.authserverOauthClient(
+                    ibm_gdsc_sdk_saas.models.authserver_oauth_client.authserverOauthClient(
                         client_id = '', 
                         client_secret = '', 
                         description = '', 

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.tenantuserv3_update_tenant_response import Tenantuserv3UpdateTenantResponse
+from ibm_gdsc_sdk_saas.models.tenantuserv3_update_tenant_response import Tenantuserv3UpdateTenantResponse
 
 class TestTenantuserv3UpdateTenantResponse(unittest.TestCase):
     """Tenantuserv3UpdateTenantResponse unit test stubs"""

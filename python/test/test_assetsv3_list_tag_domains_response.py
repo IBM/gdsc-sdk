@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_list_tag_domains_response import Assetsv3ListTagDomainsResponse
+from ibm_gdsc_sdk_saas.models.assetsv3_list_tag_domains_response import Assetsv3ListTagDomainsResponse
 
 class TestAssetsv3ListTagDomainsResponse(unittest.TestCase):
     """Assetsv3ListTagDomainsResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestAssetsv3ListTagDomainsResponse(unittest.TestCase):
         if include_optional:
             return Assetsv3ListTagDomainsResponse(
                 categories = [
-                    ibm_gdsc_sdk_software.models.assetsv3_tag_category.assetsv3TagCategory(
+                    ibm_gdsc_sdk_saas.models.assetsv3_tag_category.assetsv3TagCategory(
                         creation_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         creation_time_utc = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         description = '', 
@@ -48,7 +48,7 @@ class TestAssetsv3ListTagDomainsResponse(unittest.TestCase):
                         properties = '', 
                         purpose = '', 
                         tags = [
-                            ibm_gdsc_sdk_software.models.base_tag_concept_object.Base Tag concept object(
+                            ibm_gdsc_sdk_saas.models.base_tag_concept_object.Base Tag concept object(
                                 creation_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                                 creation_time_utc = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                                 description = '', 

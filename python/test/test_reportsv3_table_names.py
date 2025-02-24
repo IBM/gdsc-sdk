@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_table_names import Reportsv3TableNames
+from ibm_gdsc_sdk_saas.models.reportsv3_table_names import Reportsv3TableNames
 
 class TestReportsv3TableNames(unittest.TestCase):
     """Reportsv3TableNames unit test stubs"""

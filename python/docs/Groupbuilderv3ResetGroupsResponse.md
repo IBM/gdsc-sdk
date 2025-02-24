@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.groupbuilderv3_reset_groups_response import Groupbuilderv3ResetGroupsResponse
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_reset_groups_response import Groupbuilderv3ResetGroupsResponse
 
 # TODO update the JSON string below
 json = "{}"

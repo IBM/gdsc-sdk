@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.reportsv3_custom_chart_templatev2 import Reportsv3CustomChartTemplatev2
+from ibm_gdsc_sdk_saas.models.reportsv3_custom_chart_templatev2 import Reportsv3CustomChartTemplatev2
 
 # TODO update the JSON string below
 json = "{}"

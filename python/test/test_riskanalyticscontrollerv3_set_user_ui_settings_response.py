@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_set_user_ui_settings_response import Riskanalyticscontrollerv3SetUserUISettingsResponse
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_set_user_ui_settings_response import Riskanalyticscontrollerv3SetUserUISettingsResponse
 
 class TestRiskanalyticscontrollerv3SetUserUISettingsResponse(unittest.TestCase):
     """Riskanalyticscontrollerv3SetUserUISettingsResponse unit test stubs"""

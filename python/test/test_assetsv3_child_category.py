@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_child_category import Assetsv3ChildCategory
+from ibm_gdsc_sdk_saas.models.assetsv3_child_category import Assetsv3ChildCategory
 
 class TestAssetsv3ChildCategory(unittest.TestCase):
     """Assetsv3ChildCategory unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_get_job_executions_response import Resourcecontrollerk8v3GetJobExecutionsResponse
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_get_job_executions_response import Resourcecontrollerk8v3GetJobExecutionsResponse
 
 class TestResourcecontrollerk8v3GetJobExecutionsResponse(unittest.TestCase):
     """Resourcecontrollerk8v3GetJobExecutionsResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestResourcecontrollerk8v3GetJobExecutionsResponse(unittest.TestCase):
         if include_optional:
             return Resourcecontrollerk8v3GetJobExecutionsResponse(
                 executions = [
-                    ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_job_execution.resourcecontrollerk8v3JobExecution(
+                    ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_job_execution.resourcecontrollerk8v3JobExecution(
                         details = '', 
                         ended = '', 
                         id = '', 

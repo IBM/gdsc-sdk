@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_rule_log import Assetsv3RuleLog
+from ibm_gdsc_sdk_saas.models.assetsv3_rule_log import Assetsv3RuleLog
 
 class TestAssetsv3RuleLog(unittest.TestCase):
     """Assetsv3RuleLog unit test stubs"""

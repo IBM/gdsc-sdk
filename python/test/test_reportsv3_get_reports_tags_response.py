@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_get_reports_tags_response import Reportsv3GetReportsTagsResponse
+from ibm_gdsc_sdk_saas.models.reportsv3_get_reports_tags_response import Reportsv3GetReportsTagsResponse
 
 class TestReportsv3GetReportsTagsResponse(unittest.TestCase):
     """Reportsv3GetReportsTagsResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestReportsv3GetReportsTagsResponse(unittest.TestCase):
         if include_optional:
             return Reportsv3GetReportsTagsResponse(
                 report_tags = [
-                    ibm_gdsc_sdk_software.models.reportsv3_report_tag.reportsv3ReportTag(
+                    ibm_gdsc_sdk_saas.models.reportsv3_report_tag.reportsv3ReportTag(
                         nls_key = '', 
                         nls_value = '', )
                     ]

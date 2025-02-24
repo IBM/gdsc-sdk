@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.linked_accounts import LinkedAccounts
+from ibm_gdsc_sdk_saas.models.linked_accounts import LinkedAccounts
 
 # TODO update the JSON string below
 json = "{}"

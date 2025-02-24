@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.stream_result_of_complianceacceleratorv3_create_workspace_response import StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse
+from ibm_gdsc_sdk_saas.models.stream_result_of_complianceacceleratorv3_create_workspace_response import StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse
 
 class TestStreamResultOfComplianceacceleratorv3CreateWorkspaceResponse(unittest.TestCase):
     """StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse unit test stubs"""
@@ -35,9 +35,9 @@ class TestStreamResultOfComplianceacceleratorv3CreateWorkspaceResponse(unittest.
         model = StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse()
         if include_optional:
             return StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse(
-                error = ibm_gdsc_sdk_software.models.runtime_stream_error.runtimeStreamError(
+                error = ibm_gdsc_sdk_saas.models.runtime_stream_error.runtimeStreamError(
                     details = [
-                        ibm_gdsc_sdk_software.models.protobuf_any.protobufAny(
+                        ibm_gdsc_sdk_saas.models.protobuf_any.protobufAny(
                             type_url = '', 
                             value = 'YQ==', )
                         ], 
@@ -45,7 +45,7 @@ class TestStreamResultOfComplianceacceleratorv3CreateWorkspaceResponse(unittest.
                     http_code = 56, 
                     http_status = '', 
                     message = '', ),
-                result = ibm_gdsc_sdk_software.models.complianceacceleratorv3_create_workspace_response.complianceacceleratorv3CreateWorkspaceResponse(
+                result = ibm_gdsc_sdk_saas.models.complianceacceleratorv3_create_workspace_response.complianceacceleratorv3CreateWorkspaceResponse(
                     status = 'NO_ACTION', 
                     title = '', 
                     workspace_id = '', )

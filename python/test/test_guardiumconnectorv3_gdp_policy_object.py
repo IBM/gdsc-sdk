@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_gdp_policy_object import Guardiumconnectorv3GdpPolicyObject
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_gdp_policy_object import Guardiumconnectorv3GdpPolicyObject
 
 class TestGuardiumconnectorv3GdpPolicyObject(unittest.TestCase):
     """Guardiumconnectorv3GdpPolicyObject unit test stubs"""

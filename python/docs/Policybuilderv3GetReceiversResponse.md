@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.policybuilderv3_get_receivers_response import Policybuilderv3GetReceiversResponse
+from ibm_gdsc_sdk_saas.models.policybuilderv3_get_receivers_response import Policybuilderv3GetReceiversResponse
 
 # TODO update the JSON string below
 json = "{}"

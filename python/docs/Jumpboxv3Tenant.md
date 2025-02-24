@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.jumpboxv3_tenant import Jumpboxv3Tenant
+from ibm_gdsc_sdk_saas.models.jumpboxv3_tenant import Jumpboxv3Tenant
 
 # TODO update the JSON string below
 json = "{}"

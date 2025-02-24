@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticsenginev3_database_source_field import Riskanalyticsenginev3DatabaseSourceField
+from ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_database_source_field import Riskanalyticsenginev3DatabaseSourceField
 
 class TestRiskanalyticsenginev3DatabaseSourceField(unittest.TestCase):
     """Riskanalyticsenginev3DatabaseSourceField unit test stubs"""

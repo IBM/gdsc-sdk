@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.templates_service_api import TemplatesServiceApi
+from ibm_gdsc_sdk_saas.api.templates_service_api import TemplatesServiceApi
 
 
 class TestTemplatesServiceApi(unittest.TestCase):
@@ -79,6 +79,13 @@ class TestTemplatesServiceApi(unittest.TestCase):
         """Test case for templates_service_get_templates
 
         Summary: Get templates Description: Return all templates based on supplied filters.
+        """
+        pass
+
+    def test_templates_service_get_templates_for_edge(self) -> None:
+        """Test case for templates_service_get_templates_for_edge
+
+        Summary: Get templates for edge Description: Return all templates based on supplied filters.
         """
         pass
 

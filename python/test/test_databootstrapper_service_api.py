@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.databootstrapper_service_api import DatabootstrapperServiceApi
+from ibm_gdsc_sdk_saas.api.databootstrapper_service_api import DatabootstrapperServiceApi
 
 
 class TestDatabootstrapperServiceApi(unittest.TestCase):

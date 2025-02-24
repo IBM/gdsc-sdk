@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.data_resources_api import DataResourcesApi
+from ibm_gdsc_sdk_saas.api.data_resources_api import DataResourcesApi
 
 
 class TestDataResourcesApi(unittest.TestCase):

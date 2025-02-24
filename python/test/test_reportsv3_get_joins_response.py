@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_get_joins_response import Reportsv3GetJoinsResponse
+from ibm_gdsc_sdk_saas.models.reportsv3_get_joins_response import Reportsv3GetJoinsResponse
 
 class TestReportsv3GetJoinsResponse(unittest.TestCase):
     """Reportsv3GetJoinsResponse unit test stubs"""
@@ -36,10 +36,10 @@ class TestReportsv3GetJoinsResponse(unittest.TestCase):
         if include_optional:
             return Reportsv3GetJoinsResponse(
                 join_defs = [
-                    ibm_gdsc_sdk_software.models.reportsv3_join_definition_with_id.reportsv3JoinDefinitionWithID(
+                    ibm_gdsc_sdk_saas.models.reportsv3_join_definition_with_id.reportsv3JoinDefinitionWithID(
                         category_id = '', 
                         header_pair_list = [
-                            ibm_gdsc_sdk_software.models.header_pair___pair_of_source_and_target_report_headers_being_joined_on.HeaderPair - pair of source and target report headers being joined on(
+                            ibm_gdsc_sdk_saas.models.header_pair___pair_of_source_and_target_report_headers_being_joined_on.HeaderPair - pair of source and target report headers being joined on(
                                 source_header_id = '', 
                                 target_header_id = '', )
                             ], 

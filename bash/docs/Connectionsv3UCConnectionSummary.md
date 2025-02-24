@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **alias** | **string** |  | [optional] [default to null]
 **configUnderscoreid** | **string** |  | [optional] [default to null]
 **datasourceUnderscoretype** | **string** |  | [optional] [default to null]
+**edgeUnderscoredeploymentUnderscoreserver** | [**Connectionsv3EdgeDeploymentServer**](Connectionsv3EdgeDeploymentServer.md) |  | [optional] [default to null]
 **filterUnderscorealias** | **string** |  | [optional] [default to null]
 **host** | **string** |  | [optional] [default to null]
 **inputUnderscorealias** | **string** |  | [optional] [default to null]

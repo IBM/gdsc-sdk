@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **date_range** | [**Reportsv3DateRange**](Reportsv3DateRange.md) |  | [optional] 
 **model_type** | [**Reportsv3ModelType**](Reportsv3ModelType.md) |  | [optional] 
+**query_id** | **str** | Optional: query_id is used to uniquely identify a query. It can be later used to stop the same query. | [optional] 
 **report_definition** | [**Reportsv3ReportDefinition**](Reportsv3ReportDefinition.md) |  | [optional] 
 **report_id** | **str** | Optional: the ID of the Report we wish to run (e.g. 000000000000000000000905). | [optional] 
 **runtime_parameter_list** | [**List[Reportsv3RunTimeParameter]**](Reportsv3RunTimeParameter.md) | List of runtime parameter if needed. | [optional] 
@@ -16,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_report_data_count_request import Reportsrunnerv3GetReportDataCountRequest
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_get_report_data_count_request import Reportsrunnerv3GetReportDataCountRequest
 
 # TODO update the JSON string below
 json = "{}"

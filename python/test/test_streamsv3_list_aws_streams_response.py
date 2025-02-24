@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.streamsv3_list_aws_streams_response import Streamsv3ListAWSStreamsResponse
+from ibm_gdsc_sdk_saas.models.streamsv3_list_aws_streams_response import Streamsv3ListAWSStreamsResponse
 
 class TestStreamsv3ListAWSStreamsResponse(unittest.TestCase):
     """Streamsv3ListAWSStreamsResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestStreamsv3ListAWSStreamsResponse(unittest.TestCase):
         if include_optional:
             return Streamsv3ListAWSStreamsResponse(
                 streams_by_region = {
-                    'key' : ibm_gdsc_sdk_software.models.streamsv3_stream_by_region.streamsv3StreamByRegion(
+                    'key' : ibm_gdsc_sdk_saas.models.streamsv3_stream_by_region.streamsv3StreamByRegion(
                         stream = [
                             ''
                             ], )

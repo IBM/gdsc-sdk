@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_get_attributes_response import Connectionsv3GetAttributesResponse
+from ibm_gdsc_sdk_saas.models.connectionsv3_get_attributes_response import Connectionsv3GetAttributesResponse
 
 class TestConnectionsv3GetAttributesResponse(unittest.TestCase):
     """Connectionsv3GetAttributesResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestConnectionsv3GetAttributesResponse(unittest.TestCase):
         if include_optional:
             return Connectionsv3GetAttributesResponse(
                 attributes = [
-                    ibm_gdsc_sdk_software.models.connectionsv3_connector_attribute.connectionsv3ConnectorAttribute(
+                    ibm_gdsc_sdk_saas.models.connectionsv3_connector_attribute.connectionsv3ConnectorAttribute(
                         id = '', 
                         tags = [
                             ''

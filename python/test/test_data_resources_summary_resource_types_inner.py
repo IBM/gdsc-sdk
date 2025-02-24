@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.data_resources_summary_resource_types_inner import DataResourcesSummaryResourceTypesInner
+from ibm_gdsc_sdk_saas.models.data_resources_summary_resource_types_inner import DataResourcesSummaryResourceTypesInner
 
 class TestDataResourcesSummaryResourceTypesInner(unittest.TestCase):
     """DataResourcesSummaryResourceTypesInner unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.get_sso_details200_response import GetSSODetails200Response
+from ibm_gdsc_sdk_saas.models.get_sso_details200_response import GetSSODetails200Response
 
 class TestGetSSODetails200Response(unittest.TestCase):
     """GetSSODetails200Response unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_delete_fields_by_category_response import Reportsv3DeleteFieldsByCategoryResponse
+from ibm_gdsc_sdk_saas.models.reportsv3_delete_fields_by_category_response import Reportsv3DeleteFieldsByCategoryResponse
 
 class TestReportsv3DeleteFieldsByCategoryResponse(unittest.TestCase):
     """Reportsv3DeleteFieldsByCategoryResponse unit test stubs"""

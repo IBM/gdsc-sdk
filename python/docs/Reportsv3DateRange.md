@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.reportsv3_date_range import Reportsv3DateRange
+from ibm_gdsc_sdk_saas.models.reportsv3_date_range import Reportsv3DateRange
 
 # TODO update the JSON string below
 json = "{}"

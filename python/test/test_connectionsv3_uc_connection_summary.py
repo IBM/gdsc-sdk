@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_uc_connection_summary import Connectionsv3UCConnectionSummary
+from ibm_gdsc_sdk_saas.models.connectionsv3_uc_connection_summary import Connectionsv3UCConnectionSummary
 
 class TestConnectionsv3UCConnectionSummary(unittest.TestCase):
     """Connectionsv3UCConnectionSummary unit test stubs"""
@@ -38,6 +38,9 @@ class TestConnectionsv3UCConnectionSummary(unittest.TestCase):
                 alias = '',
                 config_id = '',
                 datasource_type = '',
+                edge_deployment_server = ibm_gdsc_sdk_saas.models.edge_deployment_server_type.Edge deployment server type(
+                    id = '', 
+                    name = '', ),
                 filter_alias = '',
                 host = '',
                 input_alias = '',

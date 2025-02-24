@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.trustee import Trustee
+from ibm_gdsc_sdk_saas.models.trustee import Trustee
 
 class TestTrustee(unittest.TestCase):
     """Trustee unit test stubs"""
@@ -42,7 +42,7 @@ class TestTrustee(unittest.TestCase):
                 permissions = [
                     'READ'
                     ],
-                cloud_account_details = ibm_gdsc_sdk_software.models.cloud_account_details.CloudAccountDetails(
+                cloud_account_details = ibm_gdsc_sdk_saas.models.cloud_account_details.CloudAccountDetails(
                     cloud_account_id = '123456789101', 
                     cloud_account_name = 'corplex', 
                     service_provider = 'aws', )
@@ -53,7 +53,7 @@ class TestTrustee(unittest.TestCase):
                 name = '123456789101',
                 asset_type = '',
                 link = '',
-                cloud_account_details = ibm_gdsc_sdk_software.models.cloud_account_details.CloudAccountDetails(
+                cloud_account_details = ibm_gdsc_sdk_saas.models.cloud_account_details.CloudAccountDetails(
                     cloud_account_id = '123456789101', 
                     cloud_account_name = 'corplex', 
                     service_provider = 'aws', ),

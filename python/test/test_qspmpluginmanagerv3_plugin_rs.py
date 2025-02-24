@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_plugin_rs import Qspmpluginmanagerv3PluginRS
+from ibm_gdsc_sdk_saas.models.qspmpluginmanagerv3_plugin_rs import Qspmpluginmanagerv3PluginRS
 
 class TestQspmpluginmanagerv3PluginRS(unittest.TestCase):
     """Qspmpluginmanagerv3PluginRS unit test stubs"""
@@ -36,20 +36,19 @@ class TestQspmpluginmanagerv3PluginRS(unittest.TestCase):
         if include_optional:
             return Qspmpluginmanagerv3PluginRS(
                 dims = [
-                    ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_entity_new_schema.qspmpluginmanagerv3EntityNewSchema(
+                    ibm_gdsc_sdk_saas.models.qspmpluginmanagerv3_entity_new_schema.qspmpluginmanagerv3EntityNewSchema(
                         ref_id = 56, )
                     ],
                 facts = [
-                    ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_entity_new_schema.qspmpluginmanagerv3EntityNewSchema(
+                    ibm_gdsc_sdk_saas.models.qspmpluginmanagerv3_entity_new_schema.qspmpluginmanagerv3EntityNewSchema(
                         ref_id = 56, )
                     ],
                 org_id = '',
                 plugin_id = '',
-                run_for_all_scans = True,
                 scan_desc = '',
                 scan_id = '',
                 user_email = '',
-                validation_result = ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_validation_result.qspmpluginmanagerv3ValidationResult(
+                validation_result = ibm_gdsc_sdk_saas.models.qspmpluginmanagerv3_validation_result.qspmpluginmanagerv3ValidationResult(
                     errors = {
                         'key' : ''
                         }, 

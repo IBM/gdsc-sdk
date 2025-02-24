@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.tenantuserv3_update_privileges_bulk_request import Tenantuserv3UpdatePrivilegesBulkRequest
+from ibm_gdsc_sdk_saas.models.tenantuserv3_update_privileges_bulk_request import Tenantuserv3UpdatePrivilegesBulkRequest
 
 class TestTenantuserv3UpdatePrivilegesBulkRequest(unittest.TestCase):
     """Tenantuserv3UpdatePrivilegesBulkRequest unit test stubs"""
@@ -36,7 +36,7 @@ class TestTenantuserv3UpdatePrivilegesBulkRequest(unittest.TestCase):
         if include_optional:
             return Tenantuserv3UpdatePrivilegesBulkRequest(
                 privilege = [
-                    ibm_gdsc_sdk_software.models.tenantuserv3_basic_privilege.tenantuserv3BasicPrivilege(
+                    ibm_gdsc_sdk_saas.models.tenantuserv3_basic_privilege.tenantuserv3BasicPrivilege(
                         privilege_id = '', 
                         roles = [
                             ''

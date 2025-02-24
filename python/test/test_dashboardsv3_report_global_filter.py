@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.dashboardsv3_report_global_filter import Dashboardsv3ReportGlobalFilter
+from ibm_gdsc_sdk_saas.models.dashboardsv3_report_global_filter import Dashboardsv3ReportGlobalFilter
 
 class TestDashboardsv3ReportGlobalFilter(unittest.TestCase):
     """Dashboardsv3ReportGlobalFilter unit test stubs"""
@@ -45,7 +45,7 @@ class TestDashboardsv3ReportGlobalFilter(unittest.TestCase):
                 operator = '',
                 operator_key = '',
                 report_operator = [
-                    ibm_gdsc_sdk_software.models.report_global_filter_operator_types.Report global filter operator types(
+                    ibm_gdsc_sdk_saas.models.report_global_filter_operator_types.Report global filter operator types(
                         key = '', 
                         label = '', 
                         value = '', )

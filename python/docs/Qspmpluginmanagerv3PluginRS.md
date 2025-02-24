@@ -10,7 +10,6 @@ Name | Type | Description | Notes
 **facts** | [**List[Qspmpluginmanagerv3EntityNewSchema]**](Qspmpluginmanagerv3EntityNewSchema.md) |  | [optional] 
 **org_id** | **str** |  | [optional] 
 **plugin_id** | **str** |  | [optional] 
-**run_for_all_scans** | **bool** |  | [optional] 
 **scan_desc** | **str** |  | [optional] 
 **scan_id** | **str** |  | [optional] 
 **user_email** | **str** |  | [optional] 
@@ -19,7 +18,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_plugin_rs import Qspmpluginmanagerv3PluginRS
+from ibm_gdsc_sdk_saas.models.qspmpluginmanagerv3_plugin_rs import Qspmpluginmanagerv3PluginRS
 
 # TODO update the JSON string below
 json = "{}"

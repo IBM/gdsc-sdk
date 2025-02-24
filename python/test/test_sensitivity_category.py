@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.sensitivity_category import SensitivityCategory
+from ibm_gdsc_sdk_saas.models.sensitivity_category import SensitivityCategory
 
 class TestSensitivityCategory(unittest.TestCase):
     """SensitivityCategory unit test stubs"""

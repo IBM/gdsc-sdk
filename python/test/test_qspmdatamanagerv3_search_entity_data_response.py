@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.qspmdatamanagerv3_search_entity_data_response import Qspmdatamanagerv3SearchEntityDataResponse
+from ibm_gdsc_sdk_saas.models.qspmdatamanagerv3_search_entity_data_response import Qspmdatamanagerv3SearchEntityDataResponse
 
 class TestQspmdatamanagerv3SearchEntityDataResponse(unittest.TestCase):
     """Qspmdatamanagerv3SearchEntityDataResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestQspmdatamanagerv3SearchEntityDataResponse(unittest.TestCase):
         if include_optional:
             return Qspmdatamanagerv3SearchEntityDataResponse(
                 rows = [
-                    ibm_gdsc_sdk_software.models.row_of_data.Row of data(
+                    ibm_gdsc_sdk_saas.models.row_of_data.Row of data(
                         columns = {
                             'key' : ''
                             }, )

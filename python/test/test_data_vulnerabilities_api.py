@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.data_vulnerabilities_api import DataVulnerabilitiesApi
+from ibm_gdsc_sdk_saas.api.data_vulnerabilities_api import DataVulnerabilitiesApi
 
 
 class TestDataVulnerabilitiesApi(unittest.TestCase):

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.workflowv3_operator_type import Workflowv3OperatorType
+from ibm_gdsc_sdk_saas.models.workflowv3_operator_type import Workflowv3OperatorType
 
 class TestWorkflowv3OperatorType(unittest.TestCase):
     """Workflowv3OperatorType unit test stubs"""

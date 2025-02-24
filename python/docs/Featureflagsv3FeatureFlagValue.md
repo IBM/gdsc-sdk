@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.featureflagsv3_feature_flag_value import Featureflagsv3FeatureFlagValue
+from ibm_gdsc_sdk_saas.models.featureflagsv3_feature_flag_value import Featureflagsv3FeatureFlagValue
 
 # TODO update the JSON string below
 json = "{}"

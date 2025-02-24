@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.notificationsv3_test_integration_request import Notificationsv3TestIntegrationRequest
+from ibm_gdsc_sdk_saas.models.notificationsv3_test_integration_request import Notificationsv3TestIntegrationRequest
 
 class TestNotificationsv3TestIntegrationRequest(unittest.TestCase):
     """Notificationsv3TestIntegrationRequest unit test stubs"""

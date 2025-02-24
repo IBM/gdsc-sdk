@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.connectionsv3_partial_connector import Connectionsv3PartialConnector
+from ibm_gdsc_sdk_saas.models.connectionsv3_partial_connector import Connectionsv3PartialConnector
 
 # TODO update the JSON string below
 json = "{}"

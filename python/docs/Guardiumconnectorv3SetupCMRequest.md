@@ -1,6 +1,6 @@
 # Guardiumconnectorv3SetupCMRequest
 
-SetupCMRequest is the argument type used to register a GDP Central Manager to Guardium.
+SetupCMRequest is the argument type used to register a GDP Central Manager to GDSC.
 
 ## Properties
 
@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_setup_cm_request import Guardiumconnectorv3SetupCMRequest
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_setup_cm_request import Guardiumconnectorv3SetupCMRequest
 
 # TODO update the JSON string below
 json = "{}"

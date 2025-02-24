@@ -26,6 +26,7 @@ export class Reportsv3ReportFilterCondition {
     'caseInsensitive'?: boolean;
     'fieldNlsTranslationKey'?: string;
     'filterId'?: number;
+    'groupTypeId'?: number;
     'headerId'?: string;
     'headerName'?: string;
     'headerType'?: Reportsv3HeaderType;
@@ -36,11 +37,13 @@ export class Reportsv3ReportFilterCondition {
     'inReportId'?: string;
     'inReportName'?: string;
     'inReportTableName'?: string;
+    'isTuple'?: boolean;
     'operatorType'?: Reportsv3OperatorType;
     'parameterType'?: Reportsv3ParameterType;
     'schemaName'?: string;
     'sequence'?: number;
     'tableName'?: string;
+    'tupleType'?: string;
     'values'?: Array<string>;
 
     static readonly discriminator: string | undefined = undefined;
@@ -61,6 +64,12 @@ export class Reportsv3ReportFilterCondition {
         {
             "name": "filterId",
             "baseName": "filter_id",
+            "type": "number",
+            "format": "int32"
+        },
+        {
+            "name": "groupTypeId",
+            "baseName": "group_type_id",
             "type": "number",
             "format": "int32"
         },
@@ -125,6 +134,12 @@ export class Reportsv3ReportFilterCondition {
             "format": ""
         },
         {
+            "name": "isTuple",
+            "baseName": "is_tuple",
+            "type": "boolean",
+            "format": ""
+        },
+        {
             "name": "operatorType",
             "baseName": "operator_type",
             "type": "Reportsv3OperatorType",
@@ -151,6 +166,12 @@ export class Reportsv3ReportFilterCondition {
         {
             "name": "tableName",
             "baseName": "table_name",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "tupleType",
+            "baseName": "tuple_type",
             "type": "string",
             "format": ""
         },

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.dashboards_service_api import DashboardsServiceApi
+from ibm_gdsc_sdk_saas.api.dashboards_service_api import DashboardsServiceApi
 
 
 class TestDashboardsServiceApi(unittest.TestCase):

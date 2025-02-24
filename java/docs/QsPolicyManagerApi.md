@@ -5,6 +5,7 @@ All URIs are relative to *http://localhost*
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
 | [**qSPolicyManagerBatchStatusUpdate**](QsPolicyManagerApi.md#qSPolicyManagerBatchStatusUpdate) | **PUT** /api/v3/policy_manager/tickets/status | BatchStatusUpdate - trigger the batch to update the status of the Ticket . |
+| [**qSPolicyManagerConfigUpdate**](QsPolicyManagerApi.md#qSPolicyManagerConfigUpdate) | **PATCH** /api/v3/policy_manager/configs | ConfigUpdate - this function update Crypto Risk Factor Weight in Db2 as well as Mongodb. |
 | [**qSPolicyManagerCreateTicket**](QsPolicyManagerApi.md#qSPolicyManagerCreateTicket) | **POST** /api/v3/policy_manager/ticket | CreateTicket - Create a new Incident . |
 | [**qSPolicyManagerFetchFilesfromBuckets**](QsPolicyManagerApi.md#qSPolicyManagerFetchFilesfromBuckets) | **GET** /api/v3/policy_manager/os-files | FetchFilesfromBuckets - fetch the file(s) from bucket of the object storage |
 | [**qSPolicyManagerProcessPolicyDimentionRecords**](QsPolicyManagerApi.md#qSPolicyManagerProcessPolicyDimentionRecords) | **POST** /api/v3/policy_manager/policy/process | ProcessPolicyDimentionRecords - fetch the records from Policy Dimention and update Policy Fact table |
@@ -20,12 +21,12 @@ BatchStatusUpdate - trigger the batch to update the status of the Ticket .
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.QsPolicyManagerApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.QsPolicyManagerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -84,6 +85,79 @@ public class Example {
 | **200** | A successful response. |  -  |
 | **0** | An unexpected error response. |  -  |
 
+<a id="qSPolicyManagerConfigUpdate"></a>
+# **qSPolicyManagerConfigUpdate**
+> Qspmpolicymanagerv3APIResonse qSPolicyManagerConfigUpdate(qspmpolicymanagerv3UpdateConfigsRequest)
+
+ConfigUpdate - this function update Crypto Risk Factor Weight in Db2 as well as Mongodb.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.QsPolicyManagerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    QsPolicyManagerApi apiInstance = new QsPolicyManagerApi(defaultClient);
+    Qspmpolicymanagerv3UpdateConfigsRequest qspmpolicymanagerv3UpdateConfigsRequest = new Qspmpolicymanagerv3UpdateConfigsRequest(); // Qspmpolicymanagerv3UpdateConfigsRequest | 
+    try {
+      Qspmpolicymanagerv3APIResonse result = apiInstance.qSPolicyManagerConfigUpdate(qspmpolicymanagerv3UpdateConfigsRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling QsPolicyManagerApi#qSPolicyManagerConfigUpdate");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **qspmpolicymanagerv3UpdateConfigsRequest** | [**Qspmpolicymanagerv3UpdateConfigsRequest**](Qspmpolicymanagerv3UpdateConfigsRequest.md)|  | |
+
+### Return type
+
+[**Qspmpolicymanagerv3APIResonse**](Qspmpolicymanagerv3APIResonse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
 <a id="qSPolicyManagerCreateTicket"></a>
 # **qSPolicyManagerCreateTicket**
 > Qspmpolicymanagerv3CreateTicketResponse qSPolicyManagerCreateTicket(qspmpolicymanagerv3CreateTicketRequest)
@@ -93,12 +167,12 @@ CreateTicket - Create a new Incident .
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.QsPolicyManagerApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.QsPolicyManagerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -166,12 +240,12 @@ FetchFilesfromBuckets - fetch the file(s) from bucket of the object storage
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.QsPolicyManagerApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.QsPolicyManagerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -235,12 +309,12 @@ ProcessPolicyDimentionRecords - fetch the records from Policy Dimention and upda
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.QsPolicyManagerApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.QsPolicyManagerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -308,12 +382,12 @@ UpdateTicketStatus - Update the ticket status based on the IntegrationId and Tic
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.QsPolicyManagerApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.QsPolicyManagerApi;
 
 public class Example {
   public static void main(String[] args) {

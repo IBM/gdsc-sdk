@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_stream_connection import Connectionsv3StreamConnection
+from ibm_gdsc_sdk_saas.models.connectionsv3_stream_connection import Connectionsv3StreamConnection
 
 class TestConnectionsv3StreamConnection(unittest.TestCase):
     """Connectionsv3StreamConnection unit test stubs"""

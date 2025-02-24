@@ -17,7 +17,6 @@
 |**scanPercentageCompletion** | **String** |  |  [optional] |
 |**scanRegTs** | **OffsetDateTime** |  |  [optional] |
 |**scanStatus** | **String** |  |  [optional] |
-|**scanType** | **String** |  |  [optional] |
 |**userEmail** | **String** |  |  [optional] |
 
 

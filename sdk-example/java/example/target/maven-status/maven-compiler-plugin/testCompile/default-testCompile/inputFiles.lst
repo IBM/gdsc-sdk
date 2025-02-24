@@ -1,0 +1,10 @@
+/home/travis/build/Activity-Insights/gdsc-sdk/sdk-example/java/example/src/test/java/com/ibm/security/guardium/example/report/ReportServiceGetCategoriesTest.java
+/home/travis/build/Activity-Insights/gdsc-sdk/sdk-example/java/example/src/test/java/com/ibm/security/guardium/example/report/ReportServiceGetReportsTest.java
+/home/travis/build/Activity-Insights/gdsc-sdk/sdk-example/java/example/src/test/java/com/ibm/security/guardium/example/report/ReportServiceRunReportTest.java
+/home/travis/build/Activity-Insights/gdsc-sdk/sdk-example/java/example/src/test/java/com/ibm/security/guardium/example/tenant/JumpboxServiceGetTenantTest.java
+/home/travis/build/Activity-Insights/gdsc-sdk/sdk-example/java/example/src/test/java/com/ibm/security/guardium/example/tenant/JumpboxServiceGetTenantsTest.java
+/home/travis/build/Activity-Insights/gdsc-sdk/sdk-example/java/example/src/test/java/com/ibm/security/guardium/example/tenant/JumpboxServicePostTenantsTest.java
+/home/travis/build/Activity-Insights/gdsc-sdk/sdk-example/java/example/src/test/java/com/ibm/security/guardium/example/user/JumpboxServiceGetSingleUserTest.java
+/home/travis/build/Activity-Insights/gdsc-sdk/sdk-example/java/example/src/test/java/com/ibm/security/guardium/example/user/JumpboxServiceGetUsersTest.java
+/home/travis/build/Activity-Insights/gdsc-sdk/sdk-example/java/example/src/test/java/com/ibm/security/guardium/example/user/JumpboxServicePostUsersTest.java
+/home/travis/build/Activity-Insights/gdsc-sdk/sdk-example/java/example/src/test/java/com/ibm/security/guardium/example/user/TenantuserGetRolesTest.java

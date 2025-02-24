@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.ecosystemv3_get_dataset_data_response import Ecosystemv3GetDatasetDataResponse
+from ibm_gdsc_sdk_saas.models.ecosystemv3_get_dataset_data_response import Ecosystemv3GetDatasetDataResponse
 
 class TestEcosystemv3GetDatasetDataResponse(unittest.TestCase):
     """Ecosystemv3GetDatasetDataResponse unit test stubs"""
@@ -36,14 +36,14 @@ class TestEcosystemv3GetDatasetDataResponse(unittest.TestCase):
         if include_optional:
             return Ecosystemv3GetDatasetDataResponse(
                 record_count = 56,
-                report_result = ibm_gdsc_sdk_software.models.workflowv3_report_result.workflowv3ReportResult(
+                report_result = ibm_gdsc_sdk_saas.models.workflowv3_report_result.workflowv3ReportResult(
                     headers = [
-                        ibm_gdsc_sdk_software.models.workflowv3_report_result_header.workflowv3ReportResultHeader(
+                        ibm_gdsc_sdk_saas.models.workflowv3_report_result_header.workflowv3ReportResultHeader(
                             header = '', 
                             key = '', )
                         ], 
                     rows = [
-                        ibm_gdsc_sdk_software.models.workflowv3_report_result_row.workflowv3ReportResultRow(
+                        ibm_gdsc_sdk_saas.models.workflowv3_report_result_row.workflowv3ReportResultRow(
                             row = {
                                 'key' : ''
                                 }, )

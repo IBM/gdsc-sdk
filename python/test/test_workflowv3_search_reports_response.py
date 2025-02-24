@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.workflowv3_search_reports_response import Workflowv3SearchReportsResponse
+from ibm_gdsc_sdk_saas.models.workflowv3_search_reports_response import Workflowv3SearchReportsResponse
 
 class TestWorkflowv3SearchReportsResponse(unittest.TestCase):
     """Workflowv3SearchReportsResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestWorkflowv3SearchReportsResponse(unittest.TestCase):
         if include_optional:
             return Workflowv3SearchReportsResponse(
                 reports = [
-                    ibm_gdsc_sdk_software.models.report_name_and_id.Report name and id(
+                    ibm_gdsc_sdk_saas.models.report_name_and_id.Report name and id(
                         id = '', 
                         name = '', )
                     ]

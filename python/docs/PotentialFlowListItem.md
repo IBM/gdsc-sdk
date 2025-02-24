@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.potential_flow_list_item import PotentialFlowListItem
+from ibm_gdsc_sdk_saas.models.potential_flow_list_item import PotentialFlowListItem
 
 # TODO update the JSON string below
 json = "{}"

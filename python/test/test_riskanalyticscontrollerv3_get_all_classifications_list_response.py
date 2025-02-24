@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_get_all_classifications_list_response import Riskanalyticscontrollerv3GetAllClassificationsListResponse
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_get_all_classifications_list_response import Riskanalyticscontrollerv3GetAllClassificationsListResponse
 
 class TestRiskanalyticscontrollerv3GetAllClassificationsListResponse(unittest.TestCase):
     """Riskanalyticscontrollerv3GetAllClassificationsListResponse unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_stap_object import Guardiumconnectorv3StapObject
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_stap_object import Guardiumconnectorv3StapObject
 
 class TestGuardiumconnectorv3StapObject(unittest.TestCase):
     """Guardiumconnectorv3StapObject unit test stubs"""
@@ -37,21 +37,21 @@ class TestGuardiumconnectorv3StapObject(unittest.TestCase):
             return Guardiumconnectorv3StapObject(
                 collector_hostname = '',
                 connectivity = 56,
-                details = ibm_gdsc_sdk_software.models.guardiumconnectorv3_stap_details_object.guardiumconnectorv3StapDetailsObject(
-                    connectivity_details = ibm_gdsc_sdk_software.models.guardiumconnectorv3_general_details_object.guardiumconnectorv3GeneralDetailsObject(
+                details = ibm_gdsc_sdk_saas.models.guardiumconnectorv3_stap_details_object.guardiumconnectorv3StapDetailsObject(
+                    connectivity_details = ibm_gdsc_sdk_saas.models.guardiumconnectorv3_general_details_object.guardiumconnectorv3GeneralDetailsObject(
                         err_messages = '', ), 
                     general_err_messages = [
                         ''
                         ], 
-                    ktap_details = ibm_gdsc_sdk_software.models.guardiumconnectorv3_general_details_object.guardiumconnectorv3GeneralDetailsObject(
+                    ktap_details = ibm_gdsc_sdk_saas.models.guardiumconnectorv3_general_details_object.guardiumconnectorv3GeneralDetailsObject(
                         err_messages = '', ), 
-                    stap_liveliness_info = ibm_gdsc_sdk_software.models.guardiumconnectorv3_stap_live_info_object.guardiumconnectorv3StapLiveInfoObject(
+                    stap_liveliness_info = ibm_gdsc_sdk_saas.models.guardiumconnectorv3_stap_live_info_object.guardiumconnectorv3StapLiveInfoObject(
                         has_event = True, 
                         health_status = 56, 
                         liveliness_state = '', 
                         stap = '', ), 
                     stap_ver_info_list = [
-                        ibm_gdsc_sdk_software.models.guardiumconnectorv3_inspection_engine_details.guardiumconnectorv3InspectionEngineDetails(
+                        ibm_gdsc_sdk_saas.models.guardiumconnectorv3_inspection_engine_details.guardiumconnectorv3InspectionEngineDetails(
                             ie = '', 
                             port = '', 
                             protocol = '', 
@@ -64,7 +64,7 @@ class TestGuardiumconnectorv3StapObject(unittest.TestCase):
                     traffic_details = , ),
                 ie_status = 56,
                 ie_list = [
-                    ibm_gdsc_sdk_software.models.guardiumconnectorv3_inspection_engine_object.guardiumconnectorv3InspectionEngineObject(
+                    ibm_gdsc_sdk_saas.models.guardiumconnectorv3_inspection_engine_object.guardiumconnectorv3InspectionEngineObject(
                         ie_status = 56, 
                         inspection_engine = '', )
                     ],

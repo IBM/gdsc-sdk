@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_managed_unit_object import Guardiumconnectorv3ManagedUnitObject
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_managed_unit_object import Guardiumconnectorv3ManagedUnitObject
 
 class TestGuardiumconnectorv3ManagedUnitObject(unittest.TestCase):
     """Guardiumconnectorv3ManagedUnitObject unit test stubs"""
@@ -37,21 +37,21 @@ class TestGuardiumconnectorv3ManagedUnitObject(unittest.TestCase):
             return Guardiumconnectorv3ManagedUnitObject(
                 agg_health_status = 56,
                 connectivity = 56,
-                details = ibm_gdsc_sdk_software.models.guardiumconnectorv3_mu_details_obj.guardiumconnectorv3MUDetailsObj(
+                details = ibm_gdsc_sdk_saas.models.guardiumconnectorv3_mu_details_obj.guardiumconnectorv3MUDetailsObj(
                     agg_health_view_list = [
-                        ibm_gdsc_sdk_software.models.guardiumconnectorv3_aggregation_view_list_object.guardiumconnectorv3AggregationViewListObject(
+                        ibm_gdsc_sdk_saas.models.guardiumconnectorv3_aggregation_view_list_object.guardiumconnectorv3AggregationViewListObject(
                             agg_action_error = '', 
                             agg_action_health_status = 56, 
                             agg_type = '', 
                             error = 56, 
                             unit = '', )
                         ], 
-                    connectivity_details = ibm_gdsc_sdk_software.models.guardiumconnectorv3_general_details_object.guardiumconnectorv3GeneralDetailsObject(
+                    connectivity_details = ibm_gdsc_sdk_saas.models.guardiumconnectorv3_general_details_object.guardiumconnectorv3GeneralDetailsObject(
                         err_messages = '', ), 
                     general_err_messages = [
                         ''
                         ], 
-                    utilization_scheme = ibm_gdsc_sdk_software.models.guardiumconnectorv3_utilization_parameter_object.guardiumconnectorv3UtilizationParameterObject(
+                    utilization_scheme = ibm_gdsc_sdk_saas.models.guardiumconnectorv3_utilization_parameter_object.guardiumconnectorv3UtilizationParameterObject(
                         analyzer_queue_value = 56, 
                         detailed_err_message = '', 
                         error = 56, 

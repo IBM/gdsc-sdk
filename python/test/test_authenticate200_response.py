@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.authenticate200_response import Authenticate200Response
+from ibm_gdsc_sdk_saas.models.authenticate200_response import Authenticate200Response
 
 class TestAuthenticate200Response(unittest.TestCase):
     """Authenticate200Response unit test stubs"""

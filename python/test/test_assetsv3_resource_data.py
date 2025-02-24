@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_resource_data import Assetsv3ResourceData
+from ibm_gdsc_sdk_saas.models.assetsv3_resource_data import Assetsv3ResourceData
 
 class TestAssetsv3ResourceData(unittest.TestCase):
     """Assetsv3ResourceData unit test stubs"""

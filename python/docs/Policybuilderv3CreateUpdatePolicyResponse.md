@@ -7,6 +7,7 @@ Return object for creating or updating a policy.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **activation_status** | **int** | activation_status identifier: 1001 -&gt; install with no issues, 1002-&gt; installed with issues, 1003 -&gt; not installed. | [optional] 
+**edge_activation_info** | [**Policybuilderv3EdgeActivationObject**](Policybuilderv3EdgeActivationObject.md) |  | [optional] 
 **installed_flag** | **bool** | Flag to indicate whether policy is installed or not. | [optional] 
 **policy_id** | **str** | Policy id of the created or updated policy. | [optional] 
 **policy_name** | **str** | Policy Name for the created or updated policy. | [optional] 
@@ -16,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.policybuilderv3_create_update_policy_response import Policybuilderv3CreateUpdatePolicyResponse
+from ibm_gdsc_sdk_saas.models.policybuilderv3_create_update_policy_response import Policybuilderv3CreateUpdatePolicyResponse
 
 # TODO update the JSON string below
 json = "{}"

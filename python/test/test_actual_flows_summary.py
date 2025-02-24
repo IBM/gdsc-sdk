@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.actual_flows_summary import ActualFlowsSummary
+from ibm_gdsc_sdk_saas.models.actual_flows_summary import ActualFlowsSummary
 
 class TestActualFlowsSummary(unittest.TestCase):
     """ActualFlowsSummary unit test stubs"""
@@ -36,40 +36,40 @@ class TestActualFlowsSummary(unittest.TestCase):
         if include_optional:
             return ActualFlowsSummary(
                 flows_count = 30,
-                sources_summary = ibm_gdsc_sdk_software.models.flow_node_summary.FlowNodeSummary(
+                sources_summary = ibm_gdsc_sdk_saas.models.flow_node_summary.FlowNodeSummary(
                     types_count = [
-                        ibm_gdsc_sdk_software.models.types_count_inner.TypesCount_inner(
+                        ibm_gdsc_sdk_saas.models.types_count_inner.TypesCount_inner(
                             type = 'compute', 
                             count = 43, )
                         ], 
                     cloud_accounts_count = [
-                        ibm_gdsc_sdk_software.models.cloud_account_count_inner.CloudAccountCount_inner(
+                        ibm_gdsc_sdk_saas.models.cloud_account_count_inner.CloudAccountCount_inner(
                             cloud_account_id = '12345678910', 
                             count = 10, )
                         ], 
                     cloud_regions_count = [
-                        ibm_gdsc_sdk_software.models.cloud_region_count_inner.CloudRegionCount_inner(
+                        ibm_gdsc_sdk_saas.models.cloud_region_count_inner.CloudRegionCount_inner(
                             cloud_region = 'eu-west-3', 
                             count = 7, )
                         ], ),
-                destinations_summary = ibm_gdsc_sdk_software.models.flow_node_summary.FlowNodeSummary(
+                destinations_summary = ibm_gdsc_sdk_saas.models.flow_node_summary.FlowNodeSummary(
                     types_count = [
-                        ibm_gdsc_sdk_software.models.types_count_inner.TypesCount_inner(
+                        ibm_gdsc_sdk_saas.models.types_count_inner.TypesCount_inner(
                             type = 'compute', 
                             count = 43, )
                         ], 
                     cloud_accounts_count = [
-                        ibm_gdsc_sdk_software.models.cloud_account_count_inner.CloudAccountCount_inner(
+                        ibm_gdsc_sdk_saas.models.cloud_account_count_inner.CloudAccountCount_inner(
                             cloud_account_id = '12345678910', 
                             count = 10, )
                         ], 
                     cloud_regions_count = [
-                        ibm_gdsc_sdk_software.models.cloud_region_count_inner.CloudRegionCount_inner(
+                        ibm_gdsc_sdk_saas.models.cloud_region_count_inner.CloudRegionCount_inner(
                             cloud_region = 'eu-west-3', 
                             count = 7, )
                         ], ),
                 access_types_count = [
-                    ibm_gdsc_sdk_software.models.access_type_count_inner.AccessTypeCount_inner(
+                    ibm_gdsc_sdk_saas.models.access_type_count_inner.AccessTypeCount_inner(
                         access_type = 'READ', 
                         count = 3, )
                     ]
@@ -77,40 +77,40 @@ class TestActualFlowsSummary(unittest.TestCase):
         else:
             return ActualFlowsSummary(
                 flows_count = 30,
-                sources_summary = ibm_gdsc_sdk_software.models.flow_node_summary.FlowNodeSummary(
+                sources_summary = ibm_gdsc_sdk_saas.models.flow_node_summary.FlowNodeSummary(
                     types_count = [
-                        ibm_gdsc_sdk_software.models.types_count_inner.TypesCount_inner(
+                        ibm_gdsc_sdk_saas.models.types_count_inner.TypesCount_inner(
                             type = 'compute', 
                             count = 43, )
                         ], 
                     cloud_accounts_count = [
-                        ibm_gdsc_sdk_software.models.cloud_account_count_inner.CloudAccountCount_inner(
+                        ibm_gdsc_sdk_saas.models.cloud_account_count_inner.CloudAccountCount_inner(
                             cloud_account_id = '12345678910', 
                             count = 10, )
                         ], 
                     cloud_regions_count = [
-                        ibm_gdsc_sdk_software.models.cloud_region_count_inner.CloudRegionCount_inner(
+                        ibm_gdsc_sdk_saas.models.cloud_region_count_inner.CloudRegionCount_inner(
                             cloud_region = 'eu-west-3', 
                             count = 7, )
                         ], ),
-                destinations_summary = ibm_gdsc_sdk_software.models.flow_node_summary.FlowNodeSummary(
+                destinations_summary = ibm_gdsc_sdk_saas.models.flow_node_summary.FlowNodeSummary(
                     types_count = [
-                        ibm_gdsc_sdk_software.models.types_count_inner.TypesCount_inner(
+                        ibm_gdsc_sdk_saas.models.types_count_inner.TypesCount_inner(
                             type = 'compute', 
                             count = 43, )
                         ], 
                     cloud_accounts_count = [
-                        ibm_gdsc_sdk_software.models.cloud_account_count_inner.CloudAccountCount_inner(
+                        ibm_gdsc_sdk_saas.models.cloud_account_count_inner.CloudAccountCount_inner(
                             cloud_account_id = '12345678910', 
                             count = 10, )
                         ], 
                     cloud_regions_count = [
-                        ibm_gdsc_sdk_software.models.cloud_region_count_inner.CloudRegionCount_inner(
+                        ibm_gdsc_sdk_saas.models.cloud_region_count_inner.CloudRegionCount_inner(
                             cloud_region = 'eu-west-3', 
                             count = 7, )
                         ], ),
                 access_types_count = [
-                    ibm_gdsc_sdk_software.models.access_type_count_inner.AccessTypeCount_inner(
+                    ibm_gdsc_sdk_saas.models.access_type_count_inner.AccessTypeCount_inner(
                         access_type = 'READ', 
                         count = 3, )
                     ],

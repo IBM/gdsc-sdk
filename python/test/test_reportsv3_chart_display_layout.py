@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_chart_display_layout import Reportsv3ChartDisplayLayout
+from ibm_gdsc_sdk_saas.models.reportsv3_chart_display_layout import Reportsv3ChartDisplayLayout
 
 class TestReportsv3ChartDisplayLayout(unittest.TestCase):
     """Reportsv3ChartDisplayLayout unit test stubs"""
@@ -36,12 +36,12 @@ class TestReportsv3ChartDisplayLayout(unittest.TestCase):
         if include_optional:
             return Reportsv3ChartDisplayLayout(
                 chart_headers = [
-                    ibm_gdsc_sdk_software.models.reportsv3_display_header.reportsv3DisplayHeader(
-                        field_name = ibm_gdsc_sdk_software.models.reportsv3_field_name.reportsv3FieldName(
+                    ibm_gdsc_sdk_saas.models.reportsv3_display_header.reportsv3DisplayHeader(
+                        field_name = ibm_gdsc_sdk_saas.models.reportsv3_field_name.reportsv3FieldName(
                             customized_value = '', 
                             nls_key = '', 
                             nls_value = '', ), 
-                        header_description = ibm_gdsc_sdk_software.models.reportsv3_header_description.reportsv3HeaderDescription(
+                        header_description = ibm_gdsc_sdk_saas.models.reportsv3_header_description.reportsv3HeaderDescription(
                             nls_key = '', 
                             nls_value = '', ), 
                         header_id = '', 

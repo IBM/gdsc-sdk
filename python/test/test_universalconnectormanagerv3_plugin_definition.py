@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.universalconnectormanagerv3_plugin_definition import Universalconnectormanagerv3PluginDefinition
+from ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_plugin_definition import Universalconnectormanagerv3PluginDefinition
 
 class TestUniversalconnectormanagerv3PluginDefinition(unittest.TestCase):
     """Universalconnectormanagerv3PluginDefinition unit test stubs"""
@@ -35,6 +35,7 @@ class TestUniversalconnectormanagerv3PluginDefinition(unittest.TestCase):
         model = Universalconnectormanagerv3PluginDefinition()
         if include_optional:
             return Universalconnectormanagerv3PluginDefinition(
+                plugin_jdbc_driver_required = True,
                 plugin_alias = '',
                 plugin_configuration_notes = '',
                 plugin_description = '',
@@ -49,7 +50,7 @@ class TestUniversalconnectormanagerv3PluginDefinition(unittest.TestCase):
                     ''
                     ],
                 supported_datasources = [
-                    ibm_gdsc_sdk_software.models.universalconnectormanagerv3_datasource_type.universalconnectormanagerv3DatasourceType(
+                    ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_datasource_type.universalconnectormanagerv3DatasourceType(
                         supported_versions = [
                             ''
                             ], 

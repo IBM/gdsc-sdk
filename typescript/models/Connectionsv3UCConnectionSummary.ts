@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { Connectionsv3EdgeDeploymentServer } from '../models/Connectionsv3EdgeDeploymentServer';
 import { Connectionsv3Status } from '../models/Connectionsv3Status';
 import { HttpFile } from '../http/http';
 
@@ -29,6 +30,7 @@ export class Connectionsv3UCConnectionSummary {
     * Datasource type.
     */
     'datasourceType'?: string;
+    'edgeDeploymentServer'?: Connectionsv3EdgeDeploymentServer;
     /**
     * Connector filter plugin alias (datasource, usually, like \"MongoDB\").
     */
@@ -78,6 +80,12 @@ export class Connectionsv3UCConnectionSummary {
             "name": "datasourceType",
             "baseName": "datasource_type",
             "type": "string",
+            "format": ""
+        },
+        {
+            "name": "edgeDeploymentServer",
+            "baseName": "edge_deployment_server",
+            "type": "Connectionsv3EdgeDeploymentServer",
             "format": ""
         },
         {

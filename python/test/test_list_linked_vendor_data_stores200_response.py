@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.list_linked_vendor_data_stores200_response import ListLinkedVendorDataStores200Response
+from ibm_gdsc_sdk_saas.models.list_linked_vendor_data_stores200_response import ListLinkedVendorDataStores200Response
 
 class TestListLinkedVendorDataStores200Response(unittest.TestCase):
     """ListLinkedVendorDataStores200Response unit test stubs"""
@@ -36,13 +36,13 @@ class TestListLinkedVendorDataStores200Response(unittest.TestCase):
         if include_optional:
             return ListLinkedVendorDataStores200Response(
                 results = [
-                    ibm_gdsc_sdk_software.models.vendor_data_store.VendorDataStore(
+                    ibm_gdsc_sdk_saas.models.vendor_data_store.VendorDataStore(
                         data_store_id = '', 
                         data_store_type = '', 
                         data_store_name = '', 
                         cloud_region = '', 
                         sensitivities_summary = [
-                            ibm_gdsc_sdk_software.models.sensitivity_summary.SensitivitySummary(
+                            ibm_gdsc_sdk_saas.models.sensitivity_summary.SensitivitySummary(
                                 tag = 'BUSINESS_EMAIL_ADDRESS', 
                                 count = 230, 
                                 category = 'Personal', )

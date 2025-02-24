@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_task_params_object import Guardiumconnectorv3TaskParamsObject
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_task_params_object import Guardiumconnectorv3TaskParamsObject
 
 # TODO update the JSON string below
 json = "{}"

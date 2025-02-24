@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.jumpboxv3_post_users_bulk_response import Jumpboxv3PostUsersBulkResponse
+from ibm_gdsc_sdk_saas.models.jumpboxv3_post_users_bulk_response import Jumpboxv3PostUsersBulkResponse
 
 class TestJumpboxv3PostUsersBulkResponse(unittest.TestCase):
     """Jumpboxv3PostUsersBulkResponse unit test stubs"""

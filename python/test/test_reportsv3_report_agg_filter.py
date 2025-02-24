@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_report_agg_filter import Reportsv3ReportAggFilter
+from ibm_gdsc_sdk_saas.models.reportsv3_report_agg_filter import Reportsv3ReportAggFilter
 
 class TestReportsv3ReportAggFilter(unittest.TestCase):
     """Reportsv3ReportAggFilter unit test stubs"""
@@ -35,7 +35,7 @@ class TestReportsv3ReportAggFilter(unittest.TestCase):
         model = Reportsv3ReportAggFilter()
         if include_optional:
             return Reportsv3ReportAggFilter(
-                condition = ibm_gdsc_sdk_software.models.reportsv3_report_agg_filter_condition.reportsv3ReportAggFilterCondition(
+                condition = ibm_gdsc_sdk_saas.models.reportsv3_report_agg_filter_condition.reportsv3ReportAggFilterCondition(
                     aggregation_type = 'UNDEFINED_AGG_TYPE', 
                     header_id = '', 
                     header_name = '', 

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_stap_live_info_object import Guardiumconnectorv3StapLiveInfoObject
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_stap_live_info_object import Guardiumconnectorv3StapLiveInfoObject
 
 class TestGuardiumconnectorv3StapLiveInfoObject(unittest.TestCase):
     """Guardiumconnectorv3StapLiveInfoObject unit test stubs"""

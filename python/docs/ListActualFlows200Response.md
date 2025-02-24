@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.list_actual_flows200_response import ListActualFlows200Response
+from ibm_gdsc_sdk_saas.models.list_actual_flows200_response import ListActualFlows200Response
 
 # TODO update the JSON string below
 json = "{}"

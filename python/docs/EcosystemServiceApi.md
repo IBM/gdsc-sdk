@@ -1,4 +1,4 @@
-# ibm_gdsc_sdk_software.EcosystemServiceApi
+# ibm_gdsc_sdk_saas.EcosystemServiceApi
 
 All URIs are relative to *http://localhost*
 
@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**ecosystem_service_get_datasets**](EcosystemServiceApi.md#ecosystem_service_get_datasets) | **GET** /api/v3/integrations/datasets | Summary: Get datasets Description: Return dataset list that matches the specified filter.
 [**ecosystem_service_get_purgable_rows**](EcosystemServiceApi.md#ecosystem_service_get_purgable_rows) | **POST** /api/v3/integrations/purge | Summary: Get purgable rows Description: Check the number of rows that can be purged.
 [**ecosystem_service_purge_data**](EcosystemServiceApi.md#ecosystem_service_purge_data) | **DELETE** /api/v3/integrations/datasets/data | Summary: Purge data Description: Purge data.
+[**ecosystem_service_test_integration**](EcosystemServiceApi.md#ecosystem_service_test_integration) | **POST** /api/v3/integrations/setup/test | Summary: Test integration Description: Test the integration connection with the arguments passed in the TestIntegrationRequest.  When possible a test message is sent to the integration to ensure it is functional. Currently this API only supports API_IMPORT type integrations
 
 
 # **ecosystem_service_create_dataset**
@@ -25,15 +26,15 @@ Summary: Create dataset Description: Save a definition in the database.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.ecosystemv3_create_dataset_request import Ecosystemv3CreateDatasetRequest
-from ibm_gdsc_sdk_software.models.ecosystemv3_create_dataset_response import Ecosystemv3CreateDatasetResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.ecosystemv3_create_dataset_request import Ecosystemv3CreateDatasetRequest
+from ibm_gdsc_sdk_saas.models.ecosystemv3_create_dataset_response import Ecosystemv3CreateDatasetResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -43,7 +44,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -55,10 +56,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.EcosystemServiceApi(api_client)
-    ecosystemv3_create_dataset_request = ibm_gdsc_sdk_software.Ecosystemv3CreateDatasetRequest() # Ecosystemv3CreateDatasetRequest | 
+    api_instance = ibm_gdsc_sdk_saas.EcosystemServiceApi(api_client)
+    ecosystemv3_create_dataset_request = ibm_gdsc_sdk_saas.Ecosystemv3CreateDatasetRequest() # Ecosystemv3CreateDatasetRequest | 
 
     try:
         # Summary: Create dataset Description: Save a definition in the database.
@@ -111,15 +112,15 @@ Summary: Data insert Description: Process Data received from webhook API and ins
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.ecosystemv3_data_insert_request import Ecosystemv3DataInsertRequest
-from ibm_gdsc_sdk_software.models.ecosystemv3_data_insert_response import Ecosystemv3DataInsertResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.ecosystemv3_data_insert_request import Ecosystemv3DataInsertRequest
+from ibm_gdsc_sdk_saas.models.ecosystemv3_data_insert_response import Ecosystemv3DataInsertResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -129,7 +130,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -141,11 +142,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.EcosystemServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.EcosystemServiceApi(api_client)
     dataset_name = 'dataset_name_example' # str | Data set target name.
-    ecosystemv3_data_insert_request = ibm_gdsc_sdk_software.Ecosystemv3DataInsertRequest() # Ecosystemv3DataInsertRequest | 
+    ecosystemv3_data_insert_request = ibm_gdsc_sdk_saas.Ecosystemv3DataInsertRequest() # Ecosystemv3DataInsertRequest | 
 
     try:
         # Summary: Data insert Description: Process Data received from webhook API and insert.
@@ -199,14 +200,14 @@ Summary: Delete datasets Description: Delete an array of datasets.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.ecosystemv3_delete_datasets_response import Ecosystemv3DeleteDatasetsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.ecosystemv3_delete_datasets_response import Ecosystemv3DeleteDatasetsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -216,7 +217,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -228,9 +229,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.EcosystemServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.EcosystemServiceApi(api_client)
     dataset_names = ['dataset_names_example'] # List[str] | Name of the dataset, required field. (optional)
 
     try:
@@ -284,14 +285,14 @@ Summary: Get dataset data Description: Return data report for a given dataset.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.ecosystemv3_get_dataset_data_response import Ecosystemv3GetDatasetDataResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.ecosystemv3_get_dataset_data_response import Ecosystemv3GetDatasetDataResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -301,7 +302,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -313,9 +314,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.EcosystemServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.EcosystemServiceApi(api_client)
     dataset_name = 'dataset_name_example' # str | Name of the dataset.
     offset = 56 # int | The amount to offset the rows by for pagination. (optional)
     limit = 56 # int | The max amount of rows to return for pagination. (optional)
@@ -383,14 +384,14 @@ Summary: Get dataset detail Description: Return detail on a dataset definition.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.ecosystemv3_get_dataset_detail_response import Ecosystemv3GetDatasetDetailResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.ecosystemv3_get_dataset_detail_response import Ecosystemv3GetDatasetDetailResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -400,7 +401,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -412,9 +413,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.EcosystemServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.EcosystemServiceApi(api_client)
     dataset_name = 'dataset_name_example' # str | Name of the dataset.
 
     try:
@@ -468,14 +469,14 @@ Summary: Get datasets Description: Return dataset list that matches the specifie
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.ecosystemv3_get_datasets_response import Ecosystemv3GetDatasetsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.ecosystemv3_get_datasets_response import Ecosystemv3GetDatasetsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -485,7 +486,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -497,9 +498,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.EcosystemServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.EcosystemServiceApi(api_client)
     filter_start_time = '2013-10-20T19:20:30+01:00' # datetime | Return datasets created at this time or later (>=). (optional)
     filter_end_time = '2013-10-20T19:20:30+01:00' # datetime | Return datasets created before this time (<). (optional)
     filter_dataset_names = ['filter_dataset_names_example'] # List[str] | The state filter groups commonly paired states. Only returns records that include the specified names. (optional)
@@ -563,15 +564,15 @@ Summary: Get purgable rows Description: Check the number of rows that can be pur
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.ecosystemv3_get_purgable_rows_request import Ecosystemv3GetPurgableRowsRequest
-from ibm_gdsc_sdk_software.models.ecosystemv3_get_purgable_rows_response import Ecosystemv3GetPurgableRowsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.ecosystemv3_get_purgable_rows_request import Ecosystemv3GetPurgableRowsRequest
+from ibm_gdsc_sdk_saas.models.ecosystemv3_get_purgable_rows_response import Ecosystemv3GetPurgableRowsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -581,7 +582,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -593,10 +594,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.EcosystemServiceApi(api_client)
-    ecosystemv3_get_purgable_rows_request = ibm_gdsc_sdk_software.Ecosystemv3GetPurgableRowsRequest() # Ecosystemv3GetPurgableRowsRequest | 
+    api_instance = ibm_gdsc_sdk_saas.EcosystemServiceApi(api_client)
+    ecosystemv3_get_purgable_rows_request = ibm_gdsc_sdk_saas.Ecosystemv3GetPurgableRowsRequest() # Ecosystemv3GetPurgableRowsRequest | 
 
     try:
         # Summary: Get purgable rows Description: Check the number of rows that can be purged.
@@ -649,14 +650,14 @@ Summary: Purge data Description: Purge data.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.ecosystemv3_purge_data_response import Ecosystemv3PurgeDataResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.ecosystemv3_purge_data_response import Ecosystemv3PurgeDataResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -666,7 +667,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -678,9 +679,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.EcosystemServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.EcosystemServiceApi(api_client)
     dataset_names = ['dataset_names_example'] # List[str] | Name of the datasets, required field. (optional)
 
     try:
@@ -712,6 +713,92 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ecosystem_service_test_integration**
+> Ecosystemv3TestIntegrationResponse ecosystem_service_test_integration(ecosystemv3_test_integration_request)
+
+Summary: Test integration Description: Test the integration connection with the arguments passed in the TestIntegrationRequest.  When possible a test message is sent to the integration to ensure it is functional. Currently this API only supports API_IMPORT type integrations
+
+### Example
+
+* Basic Authentication (BasicAuth):
+* Api Key Authentication (ApiKeyAuth):
+
+```python
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.ecosystemv3_test_integration_request import Ecosystemv3TestIntegrationRequest
+from ibm_gdsc_sdk_saas.models.ecosystemv3_test_integration_response import Ecosystemv3TestIntegrationResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ibm_gdsc_sdk_saas.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure HTTP basic authorization: BasicAuth
+configuration = ibm_gdsc_sdk_saas.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ibm_gdsc_sdk_saas.EcosystemServiceApi(api_client)
+    ecosystemv3_test_integration_request = ibm_gdsc_sdk_saas.Ecosystemv3TestIntegrationRequest() # Ecosystemv3TestIntegrationRequest | 
+
+    try:
+        # Summary: Test integration Description: Test the integration connection with the arguments passed in the TestIntegrationRequest.  When possible a test message is sent to the integration to ensure it is functional. Currently this API only supports API_IMPORT type integrations
+        api_response = api_instance.ecosystem_service_test_integration(ecosystemv3_test_integration_request)
+        print("The response of EcosystemServiceApi->ecosystem_service_test_integration:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling EcosystemServiceApi->ecosystem_service_test_integration: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ecosystemv3_test_integration_request** | [**Ecosystemv3TestIntegrationRequest**](Ecosystemv3TestIntegrationRequest.md)|  | 
+
+### Return type
+
+[**Ecosystemv3TestIntegrationResponse**](Ecosystemv3TestIntegrationResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.vulnerabilities_summary_status_type_count_inner import VulnerabilitiesSummaryStatusTypeCountInner
+from ibm_gdsc_sdk_saas.models.vulnerabilities_summary_status_type_count_inner import VulnerabilitiesSummaryStatusTypeCountInner
 
 class TestVulnerabilitiesSummaryStatusTypeCountInner(unittest.TestCase):
     """VulnerabilitiesSummaryStatusTypeCountInner unit test stubs"""

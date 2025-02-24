@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.cloud_service_provider import CloudServiceProvider
+from ibm_gdsc_sdk_saas.models.cloud_service_provider import CloudServiceProvider
 
 class TestCloudServiceProvider(unittest.TestCase):
     """CloudServiceProvider unit test stubs"""

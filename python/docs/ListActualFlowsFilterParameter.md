@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.list_actual_flows_filter_parameter import ListActualFlowsFilterParameter
+from ibm_gdsc_sdk_saas.models.list_actual_flows_filter_parameter import ListActualFlowsFilterParameter
 
 # TODO update the JSON string below
 json = "{}"

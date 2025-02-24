@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.jumpboxv3_update_tenant_response import Jumpboxv3UpdateTenantResponse
+from ibm_gdsc_sdk_saas.models.jumpboxv3_update_tenant_response import Jumpboxv3UpdateTenantResponse
 
 class TestJumpboxv3UpdateTenantResponse(unittest.TestCase):
     """Jumpboxv3UpdateTenantResponse unit test stubs"""

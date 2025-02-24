@@ -1,6 +1,6 @@
 # Workflowv3EntityType
 
-Assignment type.   - UNDEFINED_ENTITY_TYPE: Undefined.  - EMAIL: External e-mail.  - USER: Insights user.  - ROLE: Insights role.  - DISTRIBUTION: Insights distribution rule.
+Assignment type.   - UNDEFINED_ENTITY_TYPE: Undefined.  - EMAIL: External e-mail.  - USER: GDSC user.  - ROLE: GDSC role.  - DISTRIBUTION: GDSC distribution rule.
 
 ## Properties
 

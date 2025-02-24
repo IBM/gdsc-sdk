@@ -33,7 +33,7 @@ export class RiskAnalyticsDataProcessorApiRequestFactory extends BaseAPIRequestF
 
 
         // Path Params
-        const localVarPath = '/api/v3/risk_events/context/{risk_id}'
+        const localVarPath = '/api/v3/risk_events/{risk_id}/context'
             .replace('{' + 'risk_id' + '}', encodeURIComponent(String(riskId)));
 
         // Make Request Context

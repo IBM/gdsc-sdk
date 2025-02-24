@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.schedulerv3_get_schedules_by_report_request import Schedulerv3GetSchedulesByReportRequest
+from ibm_gdsc_sdk_saas.models.schedulerv3_get_schedules_by_report_request import Schedulerv3GetSchedulesByReportRequest
 
 # TODO update the JSON string below
 json = "{}"

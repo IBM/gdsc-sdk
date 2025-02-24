@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.universalconnectormanagerv3_connection_route import Universalconnectormanagerv3ConnectionRoute
+from ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_connection_route import Universalconnectormanagerv3ConnectionRoute
 
 # TODO update the JSON string below
 json = "{}"

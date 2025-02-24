@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_extended_prop import Assetsv3ExtendedProp
+from ibm_gdsc_sdk_saas.models.assetsv3_extended_prop import Assetsv3ExtendedProp
 
 class TestAssetsv3ExtendedProp(unittest.TestCase):
     """Assetsv3ExtendedProp unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.ecosystemv3_data_insert_request import Ecosystemv3DataInsertRequest
+from ibm_gdsc_sdk_saas.models.ecosystemv3_data_insert_request import Ecosystemv3DataInsertRequest
 
 class TestEcosystemv3DataInsertRequest(unittest.TestCase):
     """Ecosystemv3DataInsertRequest unit test stubs"""
@@ -37,7 +37,7 @@ class TestEcosystemv3DataInsertRequest(unittest.TestCase):
             return Ecosystemv3DataInsertRequest(
                 dataset_name = '',
                 entries = [
-                    ibm_gdsc_sdk_software.models.ecosystemv3_data_entry.ecosystemv3DataEntry(
+                    ibm_gdsc_sdk_saas.models.ecosystemv3_data_entry.ecosystemv3DataEntry(
                         entry = {
                             'key' : ''
                             }, )

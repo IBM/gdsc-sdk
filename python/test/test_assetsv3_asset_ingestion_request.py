@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_asset_ingestion_request import Assetsv3AssetIngestionRequest
+from ibm_gdsc_sdk_saas.models.assetsv3_asset_ingestion_request import Assetsv3AssetIngestionRequest
 
 class TestAssetsv3AssetIngestionRequest(unittest.TestCase):
     """Assetsv3AssetIngestionRequest unit test stubs"""
@@ -36,11 +36,11 @@ class TestAssetsv3AssetIngestionRequest(unittest.TestCase):
         if include_optional:
             return Assetsv3AssetIngestionRequest(
                 accounts = [
-                    ibm_gdsc_sdk_software.models.account_vertex___account_vertex_with_information_about_account_and_its_connected_vertices.AccountVertex - Account Vertex with information about account and its connected vertices(
+                    ibm_gdsc_sdk_saas.models.account_vertex___account_vertex_with_information_about_account_and_its_connected_vertices.AccountVertex - Account Vertex with information about account and its connected vertices(
                         account_type = '', 
                         description = '', 
                         extended_properties = [
-                            ibm_gdsc_sdk_software.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
+                            ibm_gdsc_sdk_saas.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
                                 data_type = '', 
                                 key = '', 
                                 value = '', )
@@ -49,14 +49,14 @@ class TestAssetsv3AssetIngestionRequest(unittest.TestCase):
                         resolution_key = '', )
                     ],
                 applications = [
-                    ibm_gdsc_sdk_software.models.application_vertex___application_vertex_with_information_about_application_and_its_connected_vertices.ApplicationVertex - Application Vertex with information about application and its connected vertices(
+                    ibm_gdsc_sdk_saas.models.application_vertex___application_vertex_with_information_about_application_and_its_connected_vertices.ApplicationVertex - Application Vertex with information about application and its connected vertices(
                         app_id = '', 
                         application_database = [
-                            ibm_gdsc_sdk_software.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
+                            ibm_gdsc_sdk_saas.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
                                 identifier = '', )
                             ], 
                         application_endpoint = [
-                            ibm_gdsc_sdk_software.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
+                            ibm_gdsc_sdk_saas.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
                                 identifier = '', )
                             ], 
                         application_host = [
@@ -77,7 +77,7 @@ class TestAssetsv3AssetIngestionRequest(unittest.TestCase):
                         category = '', 
                         criticality = 'LEVEL_UNKNOWN', 
                         extended_properties = [
-                            ibm_gdsc_sdk_software.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
+                            ibm_gdsc_sdk_saas.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
                                 data_type = '', 
                                 key = '', 
                                 value = '', )
@@ -93,15 +93,15 @@ class TestAssetsv3AssetIngestionRequest(unittest.TestCase):
                         version = '', )
                     ],
                 databases = [
-                    ibm_gdsc_sdk_software.models.database_vertex___database_vertex_with_information_about_database_and_its_connected_vertices.DatabaseVertex - Database Vertex with information about database and its connected vertices(
+                    ibm_gdsc_sdk_saas.models.database_vertex___database_vertex_with_information_about_database_and_its_connected_vertices.DatabaseVertex - Database Vertex with information about database and its connected vertices(
                         catalog = '', 
                         criticality = 'LEVEL_UNKNOWN', 
                         database_host = [
-                            ibm_gdsc_sdk_software.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
+                            ibm_gdsc_sdk_saas.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
                                 identifier = '', )
                             ], 
                         database_ip = [
-                            ibm_gdsc_sdk_software.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
+                            ibm_gdsc_sdk_saas.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
                                 identifier = '', )
                             ], 
                         database_name = '', 
@@ -112,7 +112,7 @@ class TestAssetsv3AssetIngestionRequest(unittest.TestCase):
                         database_type = '', 
                         description = '', 
                         extended_properties = [
-                            ibm_gdsc_sdk_software.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
+                            ibm_gdsc_sdk_saas.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
                                 data_type = '', 
                                 key = '', 
                                 value = '', )
@@ -126,24 +126,24 @@ class TestAssetsv3AssetIngestionRequest(unittest.TestCase):
                         service_name = '', )
                     ],
                 deployments = [
-                    ibm_gdsc_sdk_software.models.deployment_vertex___deployment_vertex_with_information_about_deployment_and_its_connected_vertices.DeploymentVertex - Deployment Vertex with information about deployment and its connected vertices(
+                    ibm_gdsc_sdk_saas.models.deployment_vertex___deployment_vertex_with_information_about_deployment_and_its_connected_vertices.DeploymentVertex - Deployment Vertex with information about deployment and its connected vertices(
                         city = '', 
                         country = '', 
                         criticality = 'LEVEL_UNKNOWN', 
                         data_center = '', 
                         deployment_account = [
-                            ibm_gdsc_sdk_software.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
+                            ibm_gdsc_sdk_saas.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
                                 identifier = '', )
                             ], 
                         deployment_id = '', 
                         deployment_subscription = [
-                            ibm_gdsc_sdk_software.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
+                            ibm_gdsc_sdk_saas.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
                                 identifier = '', )
                             ], 
                         dns = '', 
                         environment = '', 
                         extended_properties = [
-                            ibm_gdsc_sdk_software.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
+                            ibm_gdsc_sdk_saas.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
                                 data_type = '', 
                                 key = '', 
                                 value = '', )
@@ -157,21 +157,21 @@ class TestAssetsv3AssetIngestionRequest(unittest.TestCase):
                         type = '', )
                     ],
                 endpoints = [
-                    ibm_gdsc_sdk_software.models.endpoint_vertex___endpoint_vertex_with_information_about_endpoint_and_its_connected_vertices.EndpointVertex - Endpoint Vertex with information about endpoint and its connected vertices(
+                    ibm_gdsc_sdk_saas.models.endpoint_vertex___endpoint_vertex_with_information_about_endpoint_and_its_connected_vertices.EndpointVertex - Endpoint Vertex with information about endpoint and its connected vertices(
                         criticality = 'LEVEL_UNKNOWN', 
                         endpoint_host = [
-                            ibm_gdsc_sdk_software.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
+                            ibm_gdsc_sdk_saas.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
                                 identifier = '', )
                             ], 
                         endpoint_ip = [
-                            ibm_gdsc_sdk_software.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
+                            ibm_gdsc_sdk_saas.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
                                 identifier = '', )
                             ], 
                         endpoint_name = '', 
                         endpoint_sub_type = '', 
                         endpoint_type = '', 
                         extended_properties = [
-                            ibm_gdsc_sdk_software.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
+                            ibm_gdsc_sdk_saas.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
                                 data_type = '', 
                                 key = '', 
                                 value = '', )
@@ -185,25 +185,25 @@ class TestAssetsv3AssetIngestionRequest(unittest.TestCase):
                         risk_level = 'LEVEL_UNKNOWN', )
                     ],
                 hosts = [
-                    ibm_gdsc_sdk_software.models.host_vertex___host_vertex_with_information_about_host_and_its_connected_vertices.HostVertex - Host Vertex with information about host and its connected vertices(
+                    ibm_gdsc_sdk_saas.models.host_vertex___host_vertex_with_information_about_host_and_its_connected_vertices.HostVertex - Host Vertex with information about host and its connected vertices(
                         city = '', 
                         country = '', 
                         data_center = '', 
                         description = '', 
                         dns = '', 
                         extended_properties = [
-                            ibm_gdsc_sdk_software.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
+                            ibm_gdsc_sdk_saas.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
                                 data_type = '', 
                                 key = '', 
                                 value = '', )
                             ], 
                         host_ip = [
-                            ibm_gdsc_sdk_software.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
+                            ibm_gdsc_sdk_saas.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
                                 identifier = '', )
                             ], 
                         host_name = '', 
                         host_port = [
-                            ibm_gdsc_sdk_software.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
+                            ibm_gdsc_sdk_saas.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
                                 identifier = '', )
                             ], 
                         region = '', 
@@ -211,21 +211,21 @@ class TestAssetsv3AssetIngestionRequest(unittest.TestCase):
                         state = '', )
                     ],
                 ips = [
-                    ibm_gdsc_sdk_software.models.ip_vertex___ip_vertex_with_information_about_ip_and_its_connected_vertices.IPVertex - IP Vertex with information about ip and its connected vertices(
+                    ibm_gdsc_sdk_saas.models.ip_vertex___ip_vertex_with_information_about_ip_and_its_connected_vertices.IPVertex - IP Vertex with information about ip and its connected vertices(
                         city = '', 
                         country = '', 
                         data_center = '', 
                         description = '', 
                         dns = '', 
                         extended_properties = [
-                            ibm_gdsc_sdk_software.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
+                            ibm_gdsc_sdk_saas.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
                                 data_type = '', 
                                 key = '', 
                                 value = '', )
                             ], 
                         ip_address = '', 
                         ip_port = [
-                            ibm_gdsc_sdk_software.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
+                            ibm_gdsc_sdk_saas.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
                                 identifier = '', )
                             ], 
                         mac_address = '', 
@@ -235,10 +235,10 @@ class TestAssetsv3AssetIngestionRequest(unittest.TestCase):
                         version = '', )
                     ],
                 models = [
-                    ibm_gdsc_sdk_software.models.model_vertex___model_vertex_with_information_about_model_and_its_connected_vertices.ModelVertex - Model Vertex with information about model and its connected vertices(
+                    ibm_gdsc_sdk_saas.models.model_vertex___model_vertex_with_information_about_model_and_its_connected_vertices.ModelVertex - Model Vertex with information about model and its connected vertices(
                         criticality = 'LEVEL_UNKNOWN', 
                         extended_properties = [
-                            ibm_gdsc_sdk_software.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
+                            ibm_gdsc_sdk_saas.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
                                 data_type = '', 
                                 key = '', 
                                 value = '', )
@@ -246,11 +246,11 @@ class TestAssetsv3AssetIngestionRequest(unittest.TestCase):
                         has_training_data = True, 
                         last_trained = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         model_application = [
-                            ibm_gdsc_sdk_software.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
+                            ibm_gdsc_sdk_saas.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
                                 identifier = '', )
                             ], 
                         model_deployment = [
-                            ibm_gdsc_sdk_software.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
+                            ibm_gdsc_sdk_saas.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
                                 identifier = '', )
                             ], 
                         model_id = '', 
@@ -267,10 +267,10 @@ class TestAssetsv3AssetIngestionRequest(unittest.TestCase):
                     ],
                 origin = '',
                 ports = [
-                    ibm_gdsc_sdk_software.models.port_vertex___port_vertex_with_information_about_port_and_its_connected_vertices.PortVertex - Port Vertex with information about port and its connected vertices(
+                    ibm_gdsc_sdk_saas.models.port_vertex___port_vertex_with_information_about_port_and_its_connected_vertices.PortVertex - Port Vertex with information about port and its connected vertices(
                         description = '', 
                         extended_properties = [
-                            ibm_gdsc_sdk_software.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
+                            ibm_gdsc_sdk_saas.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
                                 data_type = '', 
                                 key = '', 
                                 value = '', )
@@ -281,10 +281,10 @@ class TestAssetsv3AssetIngestionRequest(unittest.TestCase):
                         resolution_key = '', )
                     ],
                 resources = [
-                    ibm_gdsc_sdk_software.models.resources_vertex___resource_vertex_with_information_about_resource_and_its_connected_vertices.ResourcesVertex - Resource Vertex with information about resource and its connected vertices(
+                    ibm_gdsc_sdk_saas.models.resources_vertex___resource_vertex_with_information_about_resource_and_its_connected_vertices.ResourcesVertex - Resource Vertex with information about resource and its connected vertices(
                         creation_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         extended_properties = [
-                            ibm_gdsc_sdk_software.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
+                            ibm_gdsc_sdk_saas.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
                                 data_type = '', 
                                 key = '', 
                                 value = '', )
@@ -293,11 +293,11 @@ class TestAssetsv3AssetIngestionRequest(unittest.TestCase):
                         name = '', 
                         resolution_key = '', 
                         resources_account = [
-                            ibm_gdsc_sdk_software.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
+                            ibm_gdsc_sdk_saas.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
                                 identifier = '', )
                             ], 
                         sensitivities = [
-                            ibm_gdsc_sdk_software.models.sensitivity_info___sensitivity_details_for_a_resource,_with_its_category,_name_and_count.SensitivityInfo - Sensitivity details for a resource, with its category, name and count(
+                            ibm_gdsc_sdk_saas.models.sensitivity_info___sensitivity_details_for_a_resource,_with_its_category,_name_and_count.SensitivityInfo - Sensitivity details for a resource, with its category, name and count(
                                 category = '', 
                                 count = 56, 
                                 name = '', )
@@ -306,14 +306,14 @@ class TestAssetsv3AssetIngestionRequest(unittest.TestCase):
                         type = '', )
                     ],
                 storages = [
-                    ibm_gdsc_sdk_software.models.storage_vertex___storage_vertex_with_information_about_storage_and_its_connected_vertices.StorageVertex - Storage Vertex with information about storage and its connected vertices(
+                    ibm_gdsc_sdk_saas.models.storage_vertex___storage_vertex_with_information_about_storage_and_its_connected_vertices.StorageVertex - Storage Vertex with information about storage and its connected vertices(
                         city = '', 
                         country = '', 
                         criticality = 'LEVEL_UNKNOWN', 
                         data_center = '', 
                         dns = '', 
                         extended_properties = [
-                            ibm_gdsc_sdk_software.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
+                            ibm_gdsc_sdk_saas.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
                                 data_type = '', 
                                 key = '', 
                                 value = '', )
@@ -328,11 +328,11 @@ class TestAssetsv3AssetIngestionRequest(unittest.TestCase):
                         size = '', 
                         state = '', 
                         storage_account = [
-                            ibm_gdsc_sdk_software.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
+                            ibm_gdsc_sdk_saas.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
                                 identifier = '', )
                             ], 
                         storage_host = [
-                            ibm_gdsc_sdk_software.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
+                            ibm_gdsc_sdk_saas.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
                                 identifier = '', )
                             ], 
                         storage_id = '', 
@@ -350,11 +350,11 @@ class TestAssetsv3AssetIngestionRequest(unittest.TestCase):
                         storage_type = '', )
                     ],
                 subscriptions = [
-                    ibm_gdsc_sdk_software.models.subscription_vertex___subscription_vertex_with_information_about_subscription_and_its_connected_vertices.SubscriptionVertex - Subscription Vertex with information about subscription and its connected vertices(
+                    ibm_gdsc_sdk_saas.models.subscription_vertex___subscription_vertex_with_information_about_subscription_and_its_connected_vertices.SubscriptionVertex - Subscription Vertex with information about subscription and its connected vertices(
                         duration = '', 
                         end_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         extended_properties = [
-                            ibm_gdsc_sdk_software.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
+                            ibm_gdsc_sdk_saas.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
                                 data_type = '', 
                                 key = '', 
                                 value = '', )
@@ -363,7 +363,7 @@ class TestAssetsv3AssetIngestionRequest(unittest.TestCase):
                         resolution_key = '', 
                         start_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         subscription_account = [
-                            ibm_gdsc_sdk_software.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
+                            ibm_gdsc_sdk_saas.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
                                 identifier = '', )
                             ], 
                         subscription_id = '', 

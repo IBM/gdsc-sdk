@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.risk_analytics_engine_api import RiskAnalyticsEngineApi
+from ibm_gdsc_sdk_saas.api.risk_analytics_engine_api import RiskAnalyticsEngineApi
 
 
 class TestRiskAnalyticsEngineApi(unittest.TestCase):

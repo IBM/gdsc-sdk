@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_get_risk_feedback_response import Riskanalyticscontrollerv3GetRiskFeedbackResponse
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_get_risk_feedback_response import Riskanalyticscontrollerv3GetRiskFeedbackResponse
 
 class TestRiskanalyticscontrollerv3GetRiskFeedbackResponse(unittest.TestCase):
     """Riskanalyticscontrollerv3GetRiskFeedbackResponse unit test stubs"""
@@ -36,11 +36,11 @@ class TestRiskanalyticscontrollerv3GetRiskFeedbackResponse(unittest.TestCase):
         if include_optional:
             return Riskanalyticscontrollerv3GetRiskFeedbackResponse(
                 risk_feedbacks = [
-                    ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_risk_feedback.riskanalyticscontrollerv3RiskFeedback(
+                    ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_risk_feedback.riskanalyticscontrollerv3RiskFeedback(
                         comments = '', 
                         creation_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         features = [
-                            ibm_gdsc_sdk_software.models.riskanalyticsenginev3_feature.riskanalyticsenginev3Feature(
+                            ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_feature.riskanalyticsenginev3Feature(
                                 feature_nls = '', 
                                 is_observation = True, 
                                 is_zero = True, 

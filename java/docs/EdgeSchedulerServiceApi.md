@@ -4,9 +4,9 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**edgeSchedulerServiceGetEdgeQueryStatus**](EdgeSchedulerServiceApi.md#edgeSchedulerServiceGetEdgeQueryStatus) | **GET** /api/v3/edge/query/status | Summary: Get edge query status Description: Get the status of a queued edge query |
-| [**edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery**](EdgeSchedulerServiceApi.md#edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery) | **POST** /api/v3/edge/query | Summary: Create workspace Description: monitor edge query pending request |
-| [**edgeSchedulerServiceScheduleEdgeQuery**](EdgeSchedulerServiceApi.md#edgeSchedulerServiceScheduleEdgeQuery) | **POST** /api/v3/edge/query/schedule | Summary: Schedule an edge query  Description: Schedule an edge query via db2 queue |
+| [**edgeSchedulerServiceGetEdgeQueryStatus**](EdgeSchedulerServiceApi.md#edgeSchedulerServiceGetEdgeQueryStatus) | **GET** /api/v3/edges/{edge_id}/query/status | Summary: Get edge query status Description: Get the status of a queued edge query |
+| [**edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery**](EdgeSchedulerServiceApi.md#edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery) | **GET** /api/v3/edges/query | Summary: Monitor for a pending edge query request Description: monitor edge query pending request |
+| [**edgeSchedulerServiceScheduleEdgeQuery**](EdgeSchedulerServiceApi.md#edgeSchedulerServiceScheduleEdgeQuery) | **POST** /api/v3/edges/{edge_id}/query/schedule | Summary: Schedule an edge query  Description: Schedule an edge query via data warehouse queue |
 
 
 <a id="edgeSchedulerServiceGetEdgeQueryStatus"></a>
@@ -18,12 +18,12 @@ Summary: Get edge query status Description: Get the status of a queued edge quer
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.EdgeSchedulerServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.EdgeSchedulerServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -42,7 +42,7 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     EdgeSchedulerServiceApi apiInstance = new EdgeSchedulerServiceApi(defaultClient);
-    String edgeId = "edgeId_example"; // String | the id of the edge.
+    String edgeId = "edgeId_example"; // String | the id of the edge
     String edgeResultReportId = "edgeResultReportId_example"; // String | the id of the UC report being queried for.
     try {
       Edgeschedulerv3GetEdgeQueryStatusResponse result = apiInstance.edgeSchedulerServiceGetEdgeQueryStatus(edgeId, edgeResultReportId);
@@ -62,7 +62,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **edgeId** | **String**| the id of the edge. | [optional] |
+| **edgeId** | **String**| the id of the edge | |
 | **edgeResultReportId** | **String**| the id of the UC report being queried for. | [optional] |
 
 ### Return type
@@ -86,19 +86,19 @@ public class Example {
 
 <a id="edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery"></a>
 # **edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery**
-> StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery(edgeschedulerv3MonitoringPendingRequestForEdgeQueryRequest)
+> StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery(clientId)
 
-Summary: Create workspace Description: monitor edge query pending request
+Summary: Monitor for a pending edge query request Description: monitor edge query pending request
 
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.EdgeSchedulerServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.EdgeSchedulerServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -117,9 +117,9 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     EdgeSchedulerServiceApi apiInstance = new EdgeSchedulerServiceApi(defaultClient);
-    Edgeschedulerv3MonitoringPendingRequestForEdgeQueryRequest edgeschedulerv3MonitoringPendingRequestForEdgeQueryRequest = new Edgeschedulerv3MonitoringPendingRequestForEdgeQueryRequest(); // Edgeschedulerv3MonitoringPendingRequestForEdgeQueryRequest | 
+    String clientId = "clientId_example"; // String | edge client id to monitor edge query requests for.
     try {
-      StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse result = apiInstance.edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery(edgeschedulerv3MonitoringPendingRequestForEdgeQueryRequest);
+      StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse result = apiInstance.edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery(clientId);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling EdgeSchedulerServiceApi#edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery");
@@ -136,7 +136,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **edgeschedulerv3MonitoringPendingRequestForEdgeQueryRequest** | [**Edgeschedulerv3MonitoringPendingRequestForEdgeQueryRequest**](Edgeschedulerv3MonitoringPendingRequestForEdgeQueryRequest.md)|  | |
+| **clientId** | **String**| edge client id to monitor edge query requests for. | [optional] |
 
 ### Return type
 
@@ -148,7 +148,7 @@ public class Example {
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 ### HTTP response details
@@ -159,19 +159,19 @@ public class Example {
 
 <a id="edgeSchedulerServiceScheduleEdgeQuery"></a>
 # **edgeSchedulerServiceScheduleEdgeQuery**
-> Edgeschedulerv3ScheduleEdgeQueryResponse edgeSchedulerServiceScheduleEdgeQuery(edgeschedulerv3ScheduleEdgeQueryRequest)
+> Edgeschedulerv3ScheduleEdgeQueryResponse edgeSchedulerServiceScheduleEdgeQuery(edgeId, edgeschedulerv3ScheduleEdgeQueryRequest)
 
-Summary: Schedule an edge query  Description: Schedule an edge query via db2 queue
+Summary: Schedule an edge query  Description: Schedule an edge query via data warehouse queue
 
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.EdgeSchedulerServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.EdgeSchedulerServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -190,9 +190,10 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     EdgeSchedulerServiceApi apiInstance = new EdgeSchedulerServiceApi(defaultClient);
+    String edgeId = "edgeId_example"; // String | the id of the edge
     Edgeschedulerv3ScheduleEdgeQueryRequest edgeschedulerv3ScheduleEdgeQueryRequest = new Edgeschedulerv3ScheduleEdgeQueryRequest(); // Edgeschedulerv3ScheduleEdgeQueryRequest | 
     try {
-      Edgeschedulerv3ScheduleEdgeQueryResponse result = apiInstance.edgeSchedulerServiceScheduleEdgeQuery(edgeschedulerv3ScheduleEdgeQueryRequest);
+      Edgeschedulerv3ScheduleEdgeQueryResponse result = apiInstance.edgeSchedulerServiceScheduleEdgeQuery(edgeId, edgeschedulerv3ScheduleEdgeQueryRequest);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling EdgeSchedulerServiceApi#edgeSchedulerServiceScheduleEdgeQuery");
@@ -209,6 +210,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **edgeId** | **String**| the id of the edge | |
 | **edgeschedulerv3ScheduleEdgeQueryRequest** | [**Edgeschedulerv3ScheduleEdgeQueryRequest**](Edgeschedulerv3ScheduleEdgeQueryRequest.md)|  | |
 
 ### Return type

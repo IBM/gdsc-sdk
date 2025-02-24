@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.notificationsv3_get_notification_filename_response import Notificationsv3GetNotificationFilenameResponse
+from ibm_gdsc_sdk_saas.models.notificationsv3_get_notification_filename_response import Notificationsv3GetNotificationFilenameResponse
 
 class TestNotificationsv3GetNotificationFilenameResponse(unittest.TestCase):
     """Notificationsv3GetNotificationFilenameResponse unit test stubs"""

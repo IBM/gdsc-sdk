@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_get_risk_event_classifications_list_response import Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_get_risk_event_classifications_list_response import Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse
 
 class TestRiskanalyticscontrollerv3GetRiskEventClassificationsListResponse(unittest.TestCase):
     """Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestRiskanalyticscontrollerv3GetRiskEventClassificationsListResponse(unitt
         if include_optional:
             return Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse(
                 classification_match_details = [
-                    ibm_gdsc_sdk_software.models.riskanalyticsenginev3_classification_match_details.riskanalyticsenginev3ClassificationMatchDetails(
+                    ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_classification_match_details.riskanalyticsenginev3ClassificationMatchDetails(
                         class_key = '', 
                         class_value = 1.337, 
                         classification_confidence = 1.337, 

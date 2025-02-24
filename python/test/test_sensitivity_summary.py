@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.sensitivity_summary import SensitivitySummary
+from ibm_gdsc_sdk_saas.models.sensitivity_summary import SensitivitySummary
 
 class TestSensitivitySummary(unittest.TestCase):
     """SensitivitySummary unit test stubs"""

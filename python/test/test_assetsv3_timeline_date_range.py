@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_timeline_date_range import Assetsv3TimelineDateRange
+from ibm_gdsc_sdk_saas.models.assetsv3_timeline_date_range import Assetsv3TimelineDateRange
 
 class TestAssetsv3TimelineDateRange(unittest.TestCase):
     """Assetsv3TimelineDateRange unit test stubs"""

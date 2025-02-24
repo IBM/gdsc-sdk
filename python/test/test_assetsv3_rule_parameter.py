@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_rule_parameter import Assetsv3RuleParameter
+from ibm_gdsc_sdk_saas.models.assetsv3_rule_parameter import Assetsv3RuleParameter
 
 class TestAssetsv3RuleParameter(unittest.TestCase):
     """Assetsv3RuleParameter unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.outliersenginev3_working_hours_period import Outliersenginev3WorkingHoursPeriod
+from ibm_gdsc_sdk_saas.models.outliersenginev3_working_hours_period import Outliersenginev3WorkingHoursPeriod
 
 class TestOutliersenginev3WorkingHoursPeriod(unittest.TestCase):
     """Outliersenginev3WorkingHoursPeriod unit test stubs"""

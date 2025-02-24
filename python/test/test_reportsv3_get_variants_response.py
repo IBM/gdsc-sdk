@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_get_variants_response import Reportsv3GetVariantsResponse
+from ibm_gdsc_sdk_saas.models.reportsv3_get_variants_response import Reportsv3GetVariantsResponse
 
 class TestReportsv3GetVariantsResponse(unittest.TestCase):
     """Reportsv3GetVariantsResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestReportsv3GetVariantsResponse(unittest.TestCase):
         if include_optional:
             return Reportsv3GetVariantsResponse(
                 variants = [
-                    ibm_gdsc_sdk_software.models.variant_is_the_object_that_describes_a_variant.Variant is the object that describes a variant(
+                    ibm_gdsc_sdk_saas.models.variant_is_the_object_that_describes_a_variant.Variant is the object that describes a variant(
                         header_id = '', 
                         last_run = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         last_run_error = '', 

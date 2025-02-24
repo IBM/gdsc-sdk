@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_status import Riskanalyticscontrollerv3Status
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_status import Riskanalyticscontrollerv3Status
 
 class TestRiskanalyticscontrollerv3Status(unittest.TestCase):
     """Riskanalyticscontrollerv3Status unit test stubs"""

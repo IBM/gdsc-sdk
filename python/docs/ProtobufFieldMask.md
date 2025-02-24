@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.protobuf_field_mask import ProtobufFieldMask
+from ibm_gdsc_sdk_saas.models.protobuf_field_mask import ProtobufFieldMask
 
 # TODO update the JSON string below
 json = "{}"

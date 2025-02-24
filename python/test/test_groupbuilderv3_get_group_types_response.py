@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.groupbuilderv3_get_group_types_response import Groupbuilderv3GetGroupTypesResponse
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_get_group_types_response import Groupbuilderv3GetGroupTypesResponse
 
 class TestGroupbuilderv3GetGroupTypesResponse(unittest.TestCase):
     """Groupbuilderv3GetGroupTypesResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestGroupbuilderv3GetGroupTypesResponse(unittest.TestCase):
         if include_optional:
             return Groupbuilderv3GetGroupTypesResponse(
                 group_types = [
-                    ibm_gdsc_sdk_software.models.groupbuilderv3_group_type.groupbuilderv3GroupType(
+                    ibm_gdsc_sdk_saas.models.groupbuilderv3_group_type.groupbuilderv3GroupType(
                         group_type_id = 56, 
                         name = '', 
                         tuple_count = 56, 
@@ -44,7 +44,7 @@ class TestGroupbuilderv3GetGroupTypesResponse(unittest.TestCase):
                             ''
                             ], )
                     ],
-                status = ibm_gdsc_sdk_software.models.groupbuilderv3_status_response_base.groupbuilderv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.groupbuilderv3_status_response_base.groupbuilderv3StatusResponseBase(
                     message = '', 
                     status = '', )
             )

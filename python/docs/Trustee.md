@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.trustee import Trustee
+from ibm_gdsc_sdk_saas.models.trustee import Trustee
 
 # TODO update the JSON string below
 json = "{}"

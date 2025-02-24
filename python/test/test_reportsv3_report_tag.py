@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_report_tag import Reportsv3ReportTag
+from ibm_gdsc_sdk_saas.models.reportsv3_report_tag import Reportsv3ReportTag
 
 class TestReportsv3ReportTag(unittest.TestCase):
     """Reportsv3ReportTag unit test stubs"""

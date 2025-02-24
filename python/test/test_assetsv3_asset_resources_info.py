@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_asset_resources_info import Assetsv3AssetResourcesInfo
+from ibm_gdsc_sdk_saas.models.assetsv3_asset_resources_info import Assetsv3AssetResourcesInfo
 
 class TestAssetsv3AssetResourcesInfo(unittest.TestCase):
     """Assetsv3AssetResourcesInfo unit test stubs"""
@@ -36,7 +36,7 @@ class TestAssetsv3AssetResourcesInfo(unittest.TestCase):
         if include_optional:
             return Assetsv3AssetResourcesInfo(
                 resource = [
-                    ibm_gdsc_sdk_software.models.resource_data___resource_related_info_for_the_storage_type_asset.ResourceData - resource related info for the Storage type asset(
+                    ibm_gdsc_sdk_saas.models.resource_data___resource_related_info_for_the_storage_type_asset.ResourceData - resource related info for the Storage type asset(
                         creation_date = '', 
                         location = '', 
                         sensitivities = '', 

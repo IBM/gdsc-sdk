@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_report_result import Reportsv3ReportResult
+from ibm_gdsc_sdk_saas.models.reportsv3_report_result import Reportsv3ReportResult
 
 class TestReportsv3ReportResult(unittest.TestCase):
     """Reportsv3ReportResult unit test stubs"""

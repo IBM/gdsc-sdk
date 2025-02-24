@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_configure_aggregator_export_response import Guardiumconnectorv3ConfigureAggregatorExportResponse
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_configure_aggregator_export_response import Guardiumconnectorv3ConfigureAggregatorExportResponse
 
 class TestGuardiumconnectorv3ConfigureAggregatorExportResponse(unittest.TestCase):
     """Guardiumconnectorv3ConfigureAggregatorExportResponse unit test stubs"""
@@ -35,7 +35,7 @@ class TestGuardiumconnectorv3ConfigureAggregatorExportResponse(unittest.TestCase
         model = Guardiumconnectorv3ConfigureAggregatorExportResponse()
         if include_optional:
             return Guardiumconnectorv3ConfigureAggregatorExportResponse(
-                status = ibm_gdsc_sdk_software.models.guardiumconnectorv3_status_response_base.guardiumconnectorv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.guardiumconnectorv3_status_response_base.guardiumconnectorv3StatusResponseBase(
                     message = '', 
                     status = '', )
             )

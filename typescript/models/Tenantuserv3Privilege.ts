@@ -39,7 +39,7 @@ export class Tenantuserv3Privilege {
     */
     'removable'?: boolean;
     /**
-    * The array of Insights roles that this privilege belongs to.
+    * The array of GDSC roles that this privilege belongs to.
     */
     'roles'?: Array<string>;
     /**

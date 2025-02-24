@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_get_connections_with_filters_request import Connectionsv3GetConnectionsWithFiltersRequest
+from ibm_gdsc_sdk_saas.models.connectionsv3_get_connections_with_filters_request import Connectionsv3GetConnectionsWithFiltersRequest
 
 class TestConnectionsv3GetConnectionsWithFiltersRequest(unittest.TestCase):
     """Connectionsv3GetConnectionsWithFiltersRequest unit test stubs"""
@@ -40,7 +40,7 @@ class TestConnectionsv3GetConnectionsWithFiltersRequest(unittest.TestCase):
                 calculate_total = True,
                 fetch_size = 56,
                 filters = [
-                    ibm_gdsc_sdk_software.models.connectionsv3_header_filter.connectionsv3HeaderFilter(
+                    ibm_gdsc_sdk_saas.models.connectionsv3_header_filter.connectionsv3HeaderFilter(
                         id = '', 
                         values = [
                             ''

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_assets_for_merge_split_response import Assetsv3AssetsForMergeSplitResponse
+from ibm_gdsc_sdk_saas.models.assetsv3_assets_for_merge_split_response import Assetsv3AssetsForMergeSplitResponse
 
 class TestAssetsv3AssetsForMergeSplitResponse(unittest.TestCase):
     """Assetsv3AssetsForMergeSplitResponse unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.auth_url import AuthUrl
+from ibm_gdsc_sdk_saas.models.auth_url import AuthUrl
 
 class TestAuthUrl(unittest.TestCase):
     """AuthUrl unit test stubs"""

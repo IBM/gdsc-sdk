@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_order_type import Connectionsv3OrderType
+from ibm_gdsc_sdk_saas.models.connectionsv3_order_type import Connectionsv3OrderType
 
 class TestConnectionsv3OrderType(unittest.TestCase):
     """Connectionsv3OrderType unit test stubs"""

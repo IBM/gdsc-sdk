@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.vendor_certificate import VendorCertificate
+from ibm_gdsc_sdk_saas.models.vendor_certificate import VendorCertificate
 
 class TestVendorCertificate(unittest.TestCase):
     """VendorCertificate unit test stubs"""

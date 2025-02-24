@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.user_sensitive_categories import UserSensitiveCategories
+from ibm_gdsc_sdk_saas.models.user_sensitive_categories import UserSensitiveCategories
 
 class TestUserSensitiveCategories(unittest.TestCase):
     """UserSensitiveCategories unit test stubs"""
@@ -39,7 +39,7 @@ class TestUserSensitiveCategories(unittest.TestCase):
                     ''
                     ],
                 sensitive_categories = [
-                    ibm_gdsc_sdk_software.models.user_sensitive_categories_sensitive_categories_inner.UserSensitiveCategories_sensitiveCategories_inner(
+                    ibm_gdsc_sdk_saas.models.user_sensitive_categories_sensitive_categories_inner.UserSensitiveCategories_sensitiveCategories_inner(
                         count = 1.337, 
                         category = '', )
                     ]
@@ -50,7 +50,7 @@ class TestUserSensitiveCategories(unittest.TestCase):
                     ''
                     ],
                 sensitive_categories = [
-                    ibm_gdsc_sdk_software.models.user_sensitive_categories_sensitive_categories_inner.UserSensitiveCategories_sensitiveCategories_inner(
+                    ibm_gdsc_sdk_saas.models.user_sensitive_categories_sensitive_categories_inner.UserSensitiveCategories_sensitiveCategories_inner(
                         count = 1.337, 
                         category = '', )
                     ],

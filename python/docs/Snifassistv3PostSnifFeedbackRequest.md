@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.snifassistv3_post_snif_feedback_request import Snifassistv3PostSnifFeedbackRequest
+from ibm_gdsc_sdk_saas.models.snifassistv3_post_snif_feedback_request import Snifassistv3PostSnifFeedbackRequest
 
 # TODO update the JSON string below
 json = "{}"

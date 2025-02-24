@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_query_logs import Resourcecontrollerk8v3QueryLogs
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_query_logs import Resourcecontrollerk8v3QueryLogs
 
 class TestResourcecontrollerk8v3QueryLogs(unittest.TestCase):
     """Resourcecontrollerk8v3QueryLogs unit test stubs"""

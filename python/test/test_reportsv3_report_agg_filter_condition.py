@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_report_agg_filter_condition import Reportsv3ReportAggFilterCondition
+from ibm_gdsc_sdk_saas.models.reportsv3_report_agg_filter_condition import Reportsv3ReportAggFilterCondition
 
 class TestReportsv3ReportAggFilterCondition(unittest.TestCase):
     """Reportsv3ReportAggFilterCondition unit test stubs"""

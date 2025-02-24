@@ -21,6 +21,7 @@ export class Assetsv3Attributes {
     'entityId'?: string;
     'entityName'?: string;
     'grouperId'?: string;
+    'hasTrainingData'?: boolean;
     'majorVulnerabilityCount'?: string;
     'sensitiveDataCount'?: string;
     'statusType'?: Assetsv3StatusType;
@@ -51,6 +52,12 @@ export class Assetsv3Attributes {
             "name": "grouperId",
             "baseName": "grouper_id",
             "type": "string",
+            "format": ""
+        },
+        {
+            "name": "hasTrainingData",
+            "baseName": "has_training_data",
+            "type": "boolean",
             "format": ""
         },
         {

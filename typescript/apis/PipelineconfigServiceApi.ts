@@ -17,7 +17,7 @@ import { RuntimeError } from '../models/RuntimeError';
 export class PipelineconfigServiceApiRequestFactory extends BaseAPIRequestFactory {
 
     /**
-     * Summary: Delete a tenant resource Description: Delete tenant specific resources such as db2, mongo, postgres and s3.
+     * Summary: Delete a tenant resource Description: Delete tenant specific resources such as data warehouse, mongo, postgres and s3.
      * @param tenantId unique tenant ID
      * @param resource resource specifies the specific resource to delete
      */

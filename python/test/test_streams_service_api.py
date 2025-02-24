@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.streams_service_api import StreamsServiceApi
+from ibm_gdsc_sdk_saas.api.streams_service_api import StreamsServiceApi
 
 
 class TestStreamsServiceApi(unittest.TestCase):

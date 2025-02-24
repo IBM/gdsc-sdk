@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.runtime_error import RuntimeError
+from ibm_gdsc_sdk_saas.models.runtime_error import RuntimeError
 
 # TODO update the JSON string below
 json = "{}"

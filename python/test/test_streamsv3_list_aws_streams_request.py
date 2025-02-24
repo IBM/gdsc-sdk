@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.streamsv3_list_aws_streams_request import Streamsv3ListAWSStreamsRequest
+from ibm_gdsc_sdk_saas.models.streamsv3_list_aws_streams_request import Streamsv3ListAWSStreamsRequest
 
 class TestStreamsv3ListAWSStreamsRequest(unittest.TestCase):
     """Streamsv3ListAWSStreamsRequest unit test stubs"""

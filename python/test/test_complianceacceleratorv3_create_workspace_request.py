@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.complianceacceleratorv3_create_workspace_request import Complianceacceleratorv3CreateWorkspaceRequest
+from ibm_gdsc_sdk_saas.models.complianceacceleratorv3_create_workspace_request import Complianceacceleratorv3CreateWorkspaceRequest
 
 class TestComplianceacceleratorv3CreateWorkspaceRequest(unittest.TestCase):
     """Complianceacceleratorv3CreateWorkspaceRequest unit test stubs"""
@@ -35,18 +35,31 @@ class TestComplianceacceleratorv3CreateWorkspaceRequest(unittest.TestCase):
         model = Complianceacceleratorv3CreateWorkspaceRequest()
         if include_optional:
             return Complianceacceleratorv3CreateWorkspaceRequest(
-                compliance_info = ibm_gdsc_sdk_software.models.complianceacceleratorv3_compliance_info.complianceacceleratorv3ComplianceInfo(
-                    options = ibm_gdsc_sdk_software.models.complianceacceleratorv3_options.complianceacceleratorv3Options(
-                        email_config = ibm_gdsc_sdk_software.models.complianceacceleratorv3_email_config.complianceacceleratorv3EmailConfig(
+                compliance_info = ibm_gdsc_sdk_saas.models.complianceacceleratorv3_compliance_info.complianceacceleratorv3ComplianceInfo(
+                    options = ibm_gdsc_sdk_saas.models.complianceacceleratorv3_options.complianceacceleratorv3Options(
+                        email_config = ibm_gdsc_sdk_saas.models.complianceacceleratorv3_email_config.complianceacceleratorv3EmailConfig(
                             integration_id = '', 
                             template_id = '', ), 
                         parent_groups = {
-                            'key' : ibm_gdsc_sdk_software.models.complianceacceleratorv3_group.complianceacceleratorv3Group(
+                            'key' : ibm_gdsc_sdk_saas.models.complianceacceleratorv3_group.complianceacceleratorv3Group(
                                 desc = '', 
                                 group_type_id = 56, 
                                 id = 56, 
+                                ldap_config = ibm_gdsc_sdk_saas.models.groupbuilderv3_ldap_config.groupbuilderv3LdapConfig(
+                                    attributes = [
+                                        ''
+                                        ], 
+                                    bind_group_id = 56, 
+                                    bind_password = '', 
+                                    clear_group = True, 
+                                    filter = '', 
+                                    filter_scope = 56, 
+                                    import_limit = 56, 
+                                    ldap_group_name = '', 
+                                    ldap_id = '', 
+                                    member_prefix = '', ), 
                                 members = [
-                                    ibm_gdsc_sdk_software.models.complianceacceleratorv3_group_member.complianceacceleratorv3GroupMember(
+                                    ibm_gdsc_sdk_saas.models.groupbuilderv3_group_member.groupbuilderv3GroupMember(
                                         member_id = '', 
                                         name = '', )
                                     ], 
@@ -54,7 +67,7 @@ class TestComplianceacceleratorv3CreateWorkspaceRequest(unittest.TestCase):
                                     ''
                                     ], 
                                 members_to_delete = [
-                                    ibm_gdsc_sdk_software.models.complianceacceleratorv3_group_member.complianceacceleratorv3GroupMember(
+                                    ibm_gdsc_sdk_saas.models.groupbuilderv3_group_member.groupbuilderv3GroupMember(
                                         member_id = '', 
                                         name = '', )
                                     ], 
@@ -63,9 +76,9 @@ class TestComplianceacceleratorv3CreateWorkspaceRequest(unittest.TestCase):
                             }, 
                         policy_id = '', 
                         rules = {
-                            'key' : ibm_gdsc_sdk_software.models.complianceacceleratorv3_rule_and_action.complianceacceleratorv3RuleAndAction(
+                            'key' : ibm_gdsc_sdk_saas.models.complianceacceleratorv3_rule_and_action.complianceacceleratorv3RuleAndAction(
                                 actions = {
-                                    'key' : ibm_gdsc_sdk_software.models.complianceacceleratorv3_action.complianceacceleratorv3Action(
+                                    'key' : ibm_gdsc_sdk_saas.models.complianceacceleratorv3_action.complianceacceleratorv3Action(
                                         notification_type = 'UNDEFINED_RECTYPE', 
                                         user_ids = [
                                             ''
@@ -73,7 +86,7 @@ class TestComplianceacceleratorv3CreateWorkspaceRequest(unittest.TestCase):
                                     }, 
                                 rule_id = '', )
                             }, 
-                        syslog_config = ibm_gdsc_sdk_software.models.complianceacceleratorv3_syslog_config.complianceacceleratorv3SyslogConfig(
+                        syslog_config = ibm_gdsc_sdk_saas.models.complianceacceleratorv3_syslog_config.complianceacceleratorv3SyslogConfig(
                             host = '', 
                             include_q_radar = True, 
                             is_deletion = True, 
@@ -86,22 +99,22 @@ class TestComplianceacceleratorv3CreateWorkspaceRequest(unittest.TestCase):
                             'key' : 'UNDEFINED'
                             }, ), 
                     workspaces = {
-                        'key' : ibm_gdsc_sdk_software.models.complianceacceleratorv3_workspace.complianceacceleratorv3Workspace(
-                            audit_info = ibm_gdsc_sdk_software.models.complianceacceleratorv3_audit_config.complianceacceleratorv3AuditConfig(
+                        'key' : ibm_gdsc_sdk_saas.models.complianceacceleratorv3_workspace.complianceacceleratorv3Workspace(
+                            audit_info = ibm_gdsc_sdk_saas.models.complianceacceleratorv3_audit_config.complianceacceleratorv3AuditConfig(
                                 description = '', 
                                 enabled = True, 
                                 id = '', 
                                 instructions = '', 
                                 is_deletion = True, 
                                 name = '', 
-                                owner = ibm_gdsc_sdk_software.models.schedulerv3_recipient.schedulerv3Recipient(
+                                owner = ibm_gdsc_sdk_saas.models.schedulerv3_recipient.schedulerv3Recipient(
                                     integration_id = '', 
                                     label = '', 
                                     template_id = '', 
                                     type = 'UNDEFINED_RECTYPE', 
                                     value = '', ), 
                                 recipients = [
-                                    ibm_gdsc_sdk_software.models.schedulerv3_recipient.schedulerv3Recipient(
+                                    ibm_gdsc_sdk_saas.models.schedulerv3_recipient.schedulerv3Recipient(
                                         integration_id = '', 
                                         label = '', 
                                         template_id = '', 
@@ -109,7 +122,7 @@ class TestComplianceacceleratorv3CreateWorkspaceRequest(unittest.TestCase):
                                     ], 
                                 report_key = '', 
                                 run_once_now = True, 
-                                scheduler = ibm_gdsc_sdk_software.models.complianceacceleratorv3_audit_scheduler.complianceacceleratorv3AuditScheduler(
+                                scheduler = ibm_gdsc_sdk_saas.models.complianceacceleratorv3_audit_scheduler.complianceacceleratorv3AuditScheduler(
                                     begin_schedule = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                                     by_day_of_month = True, 
                                     day_of_month = '', 
@@ -125,21 +138,21 @@ class TestComplianceacceleratorv3CreateWorkspaceRequest(unittest.TestCase):
                                         ], 
                                     never_end = True, 
                                     repeat = 56, 
-                                    repeat_begin = ibm_gdsc_sdk_software.models.schedulerv3_repeat_begin.schedulerv3RepeatBegin(
+                                    repeat_begin = ibm_gdsc_sdk_saas.models.schedulerv3_repeat_begin.schedulerv3RepeatBegin(
                                         hour = 56, 
                                         minute = 56, 
                                         timezone = '', ), 
-                                    repeat_end = ibm_gdsc_sdk_software.models.schedulerv3_repeat_end.schedulerv3RepeatEnd(
+                                    repeat_end = ibm_gdsc_sdk_saas.models.schedulerv3_repeat_end.schedulerv3RepeatEnd(
                                         hour = 56, 
                                         minute = 56, 
                                         timezone = '', ), ), ), 
                             dashboards = [
-                                ibm_gdsc_sdk_software.models.complianceacceleratorv3_dashboard_object.complianceacceleratorv3DashboardObject(
+                                ibm_gdsc_sdk_saas.models.complianceacceleratorv3_dashboard_object.complianceacceleratorv3DashboardObject(
                                     id = '', 
                                     type = 'UNDEFINED_DASH', )
                                 ], 
                             groups = {
-                                'key' : ibm_gdsc_sdk_software.models.complianceacceleratorv3_group.complianceacceleratorv3Group(
+                                'key' : ibm_gdsc_sdk_saas.models.complianceacceleratorv3_group.complianceacceleratorv3Group(
                                     desc = '', 
                                     group_type_id = 56, 
                                     id = 56, 
@@ -147,9 +160,9 @@ class TestComplianceacceleratorv3CreateWorkspaceRequest(unittest.TestCase):
                                     parent = True, )
                                 }, 
                             reports_map = {
-                                'key' : ibm_gdsc_sdk_software.models.complianceacceleratorv3_reports.complianceacceleratorv3Reports(
+                                'key' : ibm_gdsc_sdk_saas.models.complianceacceleratorv3_reports.complianceacceleratorv3Reports(
                                     reports = [
-                                        ibm_gdsc_sdk_software.models.complianceacceleratorv3_report.complianceacceleratorv3Report(
+                                        ibm_gdsc_sdk_saas.models.complianceacceleratorv3_report.complianceacceleratorv3Report(
                                             description = '', 
                                             groups_needed = [
                                                 
@@ -159,7 +172,7 @@ class TestComplianceacceleratorv3CreateWorkspaceRequest(unittest.TestCase):
                                                 ], 
                                             report_id = '', 
                                             report_tags = [
-                                                ibm_gdsc_sdk_software.models.reportsv3_report_tag.reportsv3ReportTag(
+                                                ibm_gdsc_sdk_saas.models.reportsv3_report_tag.reportsv3ReportTag(
                                                     nls_key = '', 
                                                     nls_value = '', )
                                                 ], 

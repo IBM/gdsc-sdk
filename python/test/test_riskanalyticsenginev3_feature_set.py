@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticsenginev3_feature_set import Riskanalyticsenginev3FeatureSet
+from ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_feature_set import Riskanalyticsenginev3FeatureSet
 
 class TestRiskanalyticsenginev3FeatureSet(unittest.TestCase):
     """Riskanalyticsenginev3FeatureSet unit test stubs"""
@@ -36,7 +36,7 @@ class TestRiskanalyticsenginev3FeatureSet(unittest.TestCase):
         if include_optional:
             return Riskanalyticsenginev3FeatureSet(
                 features = [
-                    ibm_gdsc_sdk_software.models.riskanalyticsenginev3_feature.riskanalyticsenginev3Feature(
+                    ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_feature.riskanalyticsenginev3Feature(
                         feature_nls = '', 
                         is_observation = True, 
                         is_zero = True, 

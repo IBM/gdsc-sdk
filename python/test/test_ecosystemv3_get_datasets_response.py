@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.ecosystemv3_get_datasets_response import Ecosystemv3GetDatasetsResponse
+from ibm_gdsc_sdk_saas.models.ecosystemv3_get_datasets_response import Ecosystemv3GetDatasetsResponse
 
 class TestEcosystemv3GetDatasetsResponse(unittest.TestCase):
     """Ecosystemv3GetDatasetsResponse unit test stubs"""
@@ -36,9 +36,9 @@ class TestEcosystemv3GetDatasetsResponse(unittest.TestCase):
         if include_optional:
             return Ecosystemv3GetDatasetsResponse(
                 filters = [
-                    ibm_gdsc_sdk_software.models.ecosystemv3_filter_field.ecosystemv3FilterField(
+                    ibm_gdsc_sdk_saas.models.ecosystemv3_filter_field.ecosystemv3FilterField(
                         filters = [
-                            ibm_gdsc_sdk_software.models.ecosystemv3_filter.ecosystemv3Filter(
+                            ibm_gdsc_sdk_saas.models.ecosystemv3_filter.ecosystemv3Filter(
                                 count = 56, 
                                 value = '', )
                             ], 
@@ -46,7 +46,7 @@ class TestEcosystemv3GetDatasetsResponse(unittest.TestCase):
                     ],
                 record_count = 56,
                 records = [
-                    ibm_gdsc_sdk_software.models.ecosystemv3_dataset_record.ecosystemv3DatasetRecord(
+                    ibm_gdsc_sdk_saas.models.ecosystemv3_dataset_record.ecosystemv3DatasetRecord(
                         creation_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         data_count = 56, 
                         dataset_name = '', 

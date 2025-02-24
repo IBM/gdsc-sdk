@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_database_connection_string_request import Guardiumconnectorv3DatabaseConnectionStringRequest
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_database_connection_string_request import Guardiumconnectorv3DatabaseConnectionStringRequest
 
 class TestGuardiumconnectorv3DatabaseConnectionStringRequest(unittest.TestCase):
     """Guardiumconnectorv3DatabaseConnectionStringRequest unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.auditv3_get_activity_records_response import Auditv3GetActivityRecordsResponse
+from ibm_gdsc_sdk_saas.models.auditv3_get_activity_records_response import Auditv3GetActivityRecordsResponse
 
 class TestAuditv3GetActivityRecordsResponse(unittest.TestCase):
     """Auditv3GetActivityRecordsResponse unit test stubs"""
@@ -36,16 +36,16 @@ class TestAuditv3GetActivityRecordsResponse(unittest.TestCase):
         if include_optional:
             return Auditv3GetActivityRecordsResponse(
                 filters = [
-                    ibm_gdsc_sdk_software.models.auditv3_filter_field.auditv3FilterField(
+                    ibm_gdsc_sdk_saas.models.auditv3_filter_field.auditv3FilterField(
                         filters = [
-                            ibm_gdsc_sdk_software.models.auditv3_filter.auditv3Filter(
+                            ibm_gdsc_sdk_saas.models.auditv3_filter.auditv3Filter(
                                 count = 56, 
                                 value = '', )
                             ], 
                         name = '', )
                     ],
                 records = [
-                    ibm_gdsc_sdk_software.models.auditv3_activity_record.auditv3ActivityRecord(
+                    ibm_gdsc_sdk_saas.models.auditv3_activity_record.auditv3ActivityRecord(
                         action_taken = '', 
                         changes_made = '', 
                         context = '', 

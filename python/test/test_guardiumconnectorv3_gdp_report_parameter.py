@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_gdp_report_parameter import Guardiumconnectorv3GDPReportParameter
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_gdp_report_parameter import Guardiumconnectorv3GDPReportParameter
 
 class TestGuardiumconnectorv3GDPReportParameter(unittest.TestCase):
     """Guardiumconnectorv3GDPReportParameter unit test stubs"""

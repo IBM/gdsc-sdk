@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.assetsv3_ip_vertex import Assetsv3IPVertex
+from ibm_gdsc_sdk_saas.models.assetsv3_ip_vertex import Assetsv3IPVertex
 
 # TODO update the JSON string below
 json = "{}"

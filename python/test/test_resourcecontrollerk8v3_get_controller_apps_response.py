@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_get_controller_apps_response import Resourcecontrollerk8v3GetControllerAppsResponse
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_get_controller_apps_response import Resourcecontrollerk8v3GetControllerAppsResponse
 
 class TestResourcecontrollerk8v3GetControllerAppsResponse(unittest.TestCase):
     """Resourcecontrollerk8v3GetControllerAppsResponse unit test stubs"""
@@ -36,18 +36,18 @@ class TestResourcecontrollerk8v3GetControllerAppsResponse(unittest.TestCase):
         if include_optional:
             return Resourcecontrollerk8v3GetControllerAppsResponse(
                 apps = [
-                    ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_controller_app.resourcecontrollerk8v3ControllerApp(
-                        container = ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_container.resourcecontrollerk8v3Container(
+                    ibm_gdsc_sdk_saas.models.controller_app___controller_app_struct.ControllerApp - controller app struct(
+                        container = ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_container.resourcecontrollerk8v3Container(
                             image = '', 
                             image_fully_qualified = True, 
-                            resources = ibm_gdsc_sdk_software.models.container_resources_contains_the_resource_requirements_of_container.ContainerResources contains the resource requirements of container(
-                                limits = ibm_gdsc_sdk_software.models.container_resources_quantity_contains_the_resource_quantities_of_container.ContainerResourcesQuantity contains the resource quantities of container(
+                            resources = ibm_gdsc_sdk_saas.models.container_resources_contains_the_resource_requirements_of_container.ContainerResources contains the resource requirements of container(
+                                limits = ibm_gdsc_sdk_saas.models.container_resources_quantity_contains_the_resource_quantities_of_container.ContainerResourcesQuantity contains the resource quantities of container(
                                     cpu = '', 
                                     memory = '', ), 
-                                requests = ibm_gdsc_sdk_software.models.container_resources_quantity_contains_the_resource_quantities_of_container.ContainerResourcesQuantity contains the resource quantities of container(
+                                requests = ibm_gdsc_sdk_saas.models.container_resources_quantity_contains_the_resource_quantities_of_container.ContainerResourcesQuantity contains the resource quantities of container(
                                     cpu = '', 
                                     memory = '', ), ), ), 
-                        deployment = ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_app_deployment.resourcecontrollerk8v3AppDeployment(
+                        deployment = ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_app_deployment.resourcecontrollerk8v3AppDeployment(
                             controller_id = '', 
                             details = '', 
                             modified = '', 
@@ -55,20 +55,20 @@ class TestResourcecontrollerk8v3GetControllerAppsResponse(unittest.TestCase):
                             status = '', ), 
                         empty_dir = '', 
                         files = [
-                            ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_controller_app_file.resourcecontrollerk8v3ControllerAppFile(
+                            ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_controller_app_file.resourcecontrollerk8v3ControllerAppFile(
                                 content = '', 
                                 id = '', 
                                 modified = '', 
                                 name = '', 
                                 path = '', )
                             ], 
-                        hpa = ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_app_hpa.resourcecontrollerk8v3AppHpa(
+                        hpa = ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_app_hpa.resourcecontrollerk8v3AppHpa(
                             max_replicas = '', 
                             min_replicas = '', 
                             target_cpu_utilization_percentage = '', ), 
                         id = '', 
                         init_containers = [
-                            ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_init_container.resourcecontrollerk8v3InitContainer(
+                            ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_init_container.resourcecontrollerk8v3InitContainer(
                                 command = [
                                     ''
                                     ], 
@@ -79,7 +79,7 @@ class TestResourcecontrollerk8v3GetControllerAppsResponse(unittest.TestCase):
                         name = '', 
                         secret_key = '', 
                         secrets = [
-                            ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_controller_app_secret.resourcecontrollerk8v3ControllerAppSecret(
+                            ibm_gdsc_sdk_saas.models.controller_app_secret___controller_app_secret.ControllerAppSecret - controller app secret(
                                 created = '', 
                                 id = '', 
                                 modified = '', 

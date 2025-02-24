@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.universalconnectormanagerv3_connection_route import Universalconnectormanagerv3ConnectionRoute
+from ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_connection_route import Universalconnectormanagerv3ConnectionRoute
 
 class TestUniversalconnectormanagerv3ConnectionRoute(unittest.TestCase):
     """Universalconnectormanagerv3ConnectionRoute unit test stubs"""

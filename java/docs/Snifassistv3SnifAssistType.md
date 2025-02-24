@@ -27,5 +27,7 @@
 
 * `STAP_COMMAND` (value: `"STAP_COMMAND"`)
 
+* `SNIF_FEEDBACK` (value: `"SNIF_FEEDBACK"`)
+
 
 

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.jumpboxv3_update_users_bulk_request import Jumpboxv3UpdateUsersBulkRequest
+from ibm_gdsc_sdk_saas.models.jumpboxv3_update_users_bulk_request import Jumpboxv3UpdateUsersBulkRequest
 
 class TestJumpboxv3UpdateUsersBulkRequest(unittest.TestCase):
     """Jumpboxv3UpdateUsersBulkRequest unit test stubs"""
@@ -38,7 +38,7 @@ class TestJumpboxv3UpdateUsersBulkRequest(unittest.TestCase):
                 action = '',
                 metadata_only = True,
                 users = [
-                    ibm_gdsc_sdk_software.models.jumpboxv3_user.jumpboxv3User(
+                    ibm_gdsc_sdk_saas.models.jumpboxv3_user.jumpboxv3User(
                         activation_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         directory_id = '', 
                         disabled = True, 

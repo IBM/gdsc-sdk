@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_delete_edge_tenant_request_apphost import Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_delete_edge_tenant_request_apphost import Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost
 
 class TestResourcecontrollerk8v3DeleteEdgeTenantRequestApphost(unittest.TestCase):
     """Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost unit test stubs"""

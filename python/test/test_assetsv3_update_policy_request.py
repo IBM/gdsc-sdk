@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_update_policy_request import Assetsv3UpdatePolicyRequest
+from ibm_gdsc_sdk_saas.models.assetsv3_update_policy_request import Assetsv3UpdatePolicyRequest
 
 class TestAssetsv3UpdatePolicyRequest(unittest.TestCase):
     """Assetsv3UpdatePolicyRequest unit test stubs"""

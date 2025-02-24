@@ -10,8 +10,10 @@ All URIs are relative to *http://localhost*
 | [**notificationsServiceGetNotificationRecord**](NotificationsServiceApi.md#notificationsServiceGetNotificationRecord) | **GET** /api/v3/notifications/details/{notification_id} | Summary: Get notification record Description: Return notifications record with the specified ID. |
 | [**notificationsServiceGetNotificationRecords**](NotificationsServiceApi.md#notificationsServiceGetNotificationRecords) | **GET** /api/v3/notifications | Summary: Get notification records Description: Return notifications records that match the specified filter. |
 | [**notificationsServiceGetTicketStatus**](NotificationsServiceApi.md#notificationsServiceGetTicketStatus) | **GET** /api/v3/integrations/ticket/status | Summary: Get ticket status Description: Get the status of the given ticket |
+| [**notificationsServicePostNotificationRecord**](NotificationsServiceApi.md#notificationsServicePostNotificationRecord) | **POST** /api/v3/notifications | Summary: For PostNotificationRecord notification only Description: Sends notification with recipients and returns a status |
+| [**notificationsServiceSearchNotificationRecords**](NotificationsServiceApi.md#notificationsServiceSearchNotificationRecords) | **POST** /api/v3/notifications/search | Summary: Search notification records Description: Return notification records using pipeline of filters |
 | [**notificationsServiceTestIntegration**](NotificationsServiceApi.md#notificationsServiceTestIntegration) | **POST** /api/v3/integrations/test | Summary: Test integration Description: Test the integration connection with the arguments passed in the TestIntegrationRequest.  When possible a test message is sent to the integration to ensure it is functional. |
-| [**notificationsServiceUpdateNotificationRecord**](NotificationsServiceApi.md#notificationsServiceUpdateNotificationRecord) | **POST** /api/v3/notifications | Summary: Update notification record Description: Update a notification record with the specified values.  The ID field is required and must match an existing notification. All fields other than the ID are optional. Creation timestamp, user and other administrative fields can not updated. |
+| [**notificationsServiceUpdateNotificationRecord**](NotificationsServiceApi.md#notificationsServiceUpdateNotificationRecord) | **PUT** /api/v3/notifications | Summary: Update notification record Description: Update a notification record with the specified values.  The ID field is required and must match an existing notification. All fields other than the ID are optional. Creation timestamp, user and other administrative fields can not updated. |
 
 
 <a id="notificationsServiceCreateTicket"></a>
@@ -23,12 +25,12 @@ Summary: Create ticket Description: Create ticket based on information passed in
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.NotificationsServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.NotificationsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -96,12 +98,12 @@ Summary: Get folders Description: Get folder for the integration connection prov
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.NotificationsServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.NotificationsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -169,12 +171,12 @@ Summary: Get notification filename Description: Return filename associated with 
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.NotificationsServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.NotificationsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -242,12 +244,12 @@ Summary: Get notification record Description: Return notifications record with t
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.NotificationsServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.NotificationsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -308,19 +310,19 @@ public class Example {
 
 <a id="notificationsServiceGetNotificationRecords"></a>
 # **notificationsServiceGetNotificationRecords**
-> Notificationsv3GetNotificationRecordsResponse notificationsServiceGetNotificationRecords(filterStartTime, filterEndTime, filterState, filterOrigins, filterOriginData, offset, limit, includeFilterCounts)
+> Notificationsv3GetNotificationRecordsResponse notificationsServiceGetNotificationRecords(filterStartTime, filterEndTime, filterState, filterOrigins, filterOriginData, filterLimit, offset, limit, includeFilterCounts)
 
 Summary: Get notification records Description: Return notifications records that match the specified filter.
 
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.NotificationsServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.NotificationsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -344,11 +346,12 @@ public class Example {
     String filterState = "INCLUDE_ALL"; // String | Only return record that include the specified state.
     List<String> filterOrigins = Arrays.asList(); // List<String> | Only return record that includes the specified origins.
     String filterOriginData = "filterOriginData_example"; // String | Only return record that with the specified origin_data.
+    Long filterLimit = 56L; // Long | The max amount of rows to return for this single query.
     Long offset = 56L; // Long | The amount to offset the rows by for pagination.
     Long limit = 56L; // Long | The max amount of rows to return for pagination.
     Boolean includeFilterCounts = true; // Boolean | Computing the filter counts is relatively expensive, only compute when needed.
     try {
-      Notificationsv3GetNotificationRecordsResponse result = apiInstance.notificationsServiceGetNotificationRecords(filterStartTime, filterEndTime, filterState, filterOrigins, filterOriginData, offset, limit, includeFilterCounts);
+      Notificationsv3GetNotificationRecordsResponse result = apiInstance.notificationsServiceGetNotificationRecords(filterStartTime, filterEndTime, filterState, filterOrigins, filterOriginData, filterLimit, offset, limit, includeFilterCounts);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NotificationsServiceApi#notificationsServiceGetNotificationRecords");
@@ -370,6 +373,7 @@ public class Example {
 | **filterState** | **String**| Only return record that include the specified state. | [optional] [default to INCLUDE_ALL] [enum: INCLUDE_ALL, UNREAD_ONLY, READ_ONLY, COMPLETE_ONLY, NOT_COMPLETE] |
 | **filterOrigins** | [**List&lt;String&gt;**](String.md)| Only return record that includes the specified origins. | [optional] |
 | **filterOriginData** | **String**| Only return record that with the specified origin_data. | [optional] |
+| **filterLimit** | **Long**| The max amount of rows to return for this single query. | [optional] |
 | **offset** | **Long**| The amount to offset the rows by for pagination. | [optional] |
 | **limit** | **Long**| The max amount of rows to return for pagination. | [optional] |
 | **includeFilterCounts** | **Boolean**| Computing the filter counts is relatively expensive, only compute when needed. | [optional] |
@@ -402,12 +406,12 @@ Summary: Get ticket status Description: Get the status of the given ticket
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.NotificationsServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.NotificationsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -468,6 +472,152 @@ public class Example {
 | **200** | A successful response. |  -  |
 | **0** | An unexpected error response. |  -  |
 
+<a id="notificationsServicePostNotificationRecord"></a>
+# **notificationsServicePostNotificationRecord**
+> Notificationsv3PostNotificationRecordResponse notificationsServicePostNotificationRecord(notificationsv3PostNotificationRecordRequest)
+
+Summary: For PostNotificationRecord notification only Description: Sends notification with recipients and returns a status
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.NotificationsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    NotificationsServiceApi apiInstance = new NotificationsServiceApi(defaultClient);
+    Notificationsv3PostNotificationRecordRequest notificationsv3PostNotificationRecordRequest = new Notificationsv3PostNotificationRecordRequest(); // Notificationsv3PostNotificationRecordRequest | 
+    try {
+      Notificationsv3PostNotificationRecordResponse result = apiInstance.notificationsServicePostNotificationRecord(notificationsv3PostNotificationRecordRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling NotificationsServiceApi#notificationsServicePostNotificationRecord");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **notificationsv3PostNotificationRecordRequest** | [**Notificationsv3PostNotificationRecordRequest**](Notificationsv3PostNotificationRecordRequest.md)|  | |
+
+### Return type
+
+[**Notificationsv3PostNotificationRecordResponse**](Notificationsv3PostNotificationRecordResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
+<a id="notificationsServiceSearchNotificationRecords"></a>
+# **notificationsServiceSearchNotificationRecords**
+> Notificationsv3SearchNotificationRecordsResponse notificationsServiceSearchNotificationRecords(notificationsv3SearchNotificationRecordsRequest)
+
+Summary: Search notification records Description: Return notification records using pipeline of filters
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.NotificationsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    NotificationsServiceApi apiInstance = new NotificationsServiceApi(defaultClient);
+    Notificationsv3SearchNotificationRecordsRequest notificationsv3SearchNotificationRecordsRequest = new Notificationsv3SearchNotificationRecordsRequest(); // Notificationsv3SearchNotificationRecordsRequest | 
+    try {
+      Notificationsv3SearchNotificationRecordsResponse result = apiInstance.notificationsServiceSearchNotificationRecords(notificationsv3SearchNotificationRecordsRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling NotificationsServiceApi#notificationsServiceSearchNotificationRecords");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **notificationsv3SearchNotificationRecordsRequest** | [**Notificationsv3SearchNotificationRecordsRequest**](Notificationsv3SearchNotificationRecordsRequest.md)|  | |
+
+### Return type
+
+[**Notificationsv3SearchNotificationRecordsResponse**](Notificationsv3SearchNotificationRecordsResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
 <a id="notificationsServiceTestIntegration"></a>
 # **notificationsServiceTestIntegration**
 > Notificationsv3TestIntegrationResponse notificationsServiceTestIntegration(notificationsv3TestIntegrationRequest)
@@ -477,12 +627,12 @@ Summary: Test integration Description: Test the integration connection with the 
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.NotificationsServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.NotificationsServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -550,12 +700,12 @@ Summary: Update notification record Description: Update a notification record wi
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.NotificationsServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.NotificationsServiceApi;
 
 public class Example {
   public static void main(String[] args) {

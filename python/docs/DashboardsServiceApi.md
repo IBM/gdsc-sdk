@@ -1,4 +1,4 @@
-# ibm_gdsc_sdk_software.DashboardsServiceApi
+# ibm_gdsc_sdk_saas.DashboardsServiceApi
 
 All URIs are relative to *http://localhost*
 
@@ -21,15 +21,15 @@ Summary: Create dashboard Description: Create a unique dashboard.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.dashboardsv3_create_dashboard_response import Dashboardsv3CreateDashboardResponse
-from ibm_gdsc_sdk_software.models.dashboardsv3_dashboard import Dashboardsv3Dashboard
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.dashboardsv3_create_dashboard_response import Dashboardsv3CreateDashboardResponse
+from ibm_gdsc_sdk_saas.models.dashboardsv3_dashboard import Dashboardsv3Dashboard
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -39,7 +39,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -51,10 +51,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.DashboardsServiceApi(api_client)
-    dashboardsv3_dashboard = ibm_gdsc_sdk_software.Dashboardsv3Dashboard() # Dashboardsv3Dashboard | Unique dashboard.
+    api_instance = ibm_gdsc_sdk_saas.DashboardsServiceApi(api_client)
+    dashboardsv3_dashboard = ibm_gdsc_sdk_saas.Dashboardsv3Dashboard() # Dashboardsv3Dashboard | Unique dashboard.
 
     try:
         # Summary: Create dashboard Description: Create a unique dashboard.
@@ -107,15 +107,15 @@ Summary: Delete dashboard Description: Delete a unique dashboard.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.dashboardsv3_delete_dashboard_request import Dashboardsv3DeleteDashboardRequest
-from ibm_gdsc_sdk_software.models.dashboardsv3_delete_dashboard_response import Dashboardsv3DeleteDashboardResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.dashboardsv3_delete_dashboard_request import Dashboardsv3DeleteDashboardRequest
+from ibm_gdsc_sdk_saas.models.dashboardsv3_delete_dashboard_response import Dashboardsv3DeleteDashboardResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -125,7 +125,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -137,11 +137,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.DashboardsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.DashboardsServiceApi(api_client)
     dashboard_id = 'dashboard_id_example' # str | The id of the dashboard to be deleted.
-    dashboardsv3_delete_dashboard_request = ibm_gdsc_sdk_software.Dashboardsv3DeleteDashboardRequest() # Dashboardsv3DeleteDashboardRequest | 
+    dashboardsv3_delete_dashboard_request = ibm_gdsc_sdk_saas.Dashboardsv3DeleteDashboardRequest() # Dashboardsv3DeleteDashboardRequest | 
 
     try:
         # Summary: Delete dashboard Description: Delete a unique dashboard.
@@ -195,14 +195,14 @@ Summary: Get dashboards Description: Get a list of dashboards with all data.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.dashboardsv3_get_dashboards_response import Dashboardsv3GetDashboardsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.dashboardsv3_get_dashboards_response import Dashboardsv3GetDashboardsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -212,7 +212,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -224,9 +224,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.DashboardsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.DashboardsServiceApi(api_client)
 
     try:
         # Summary: Get dashboards Description: Get a list of dashboards with all data.
@@ -276,15 +276,15 @@ Summary: Update dashboard Description: Update a dashboard.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.dashboardsv3_update_dashboard_request import Dashboardsv3UpdateDashboardRequest
-from ibm_gdsc_sdk_software.models.dashboardsv3_update_dashboard_response import Dashboardsv3UpdateDashboardResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.dashboardsv3_update_dashboard_request import Dashboardsv3UpdateDashboardRequest
+from ibm_gdsc_sdk_saas.models.dashboardsv3_update_dashboard_response import Dashboardsv3UpdateDashboardResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -294,7 +294,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -306,11 +306,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.DashboardsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.DashboardsServiceApi(api_client)
     dashboard_id = 'dashboard_id_example' # str | The id of the dashboard that was updated.
-    dashboardsv3_update_dashboard_request = ibm_gdsc_sdk_software.Dashboardsv3UpdateDashboardRequest() # Dashboardsv3UpdateDashboardRequest | 
+    dashboardsv3_update_dashboard_request = ibm_gdsc_sdk_saas.Dashboardsv3UpdateDashboardRequest() # Dashboardsv3UpdateDashboardRequest | 
 
     try:
         # Summary: Update dashboard Description: Update a dashboard.

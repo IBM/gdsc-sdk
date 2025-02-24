@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.linked_accounts import LinkedAccounts
+from ibm_gdsc_sdk_saas.models.linked_accounts import LinkedAccounts
 
 class TestLinkedAccounts(unittest.TestCase):
     """LinkedAccounts unit test stubs"""
@@ -38,7 +38,7 @@ class TestLinkedAccounts(unittest.TestCase):
                 cloud_account_id = '123456789101',
                 cloud_account_name = '123456789101',
                 is_main_cloud_account = True,
-                installation_status = ibm_gdsc_sdk_software.models.installation_status.InstallationStatus(
+                installation_status = ibm_gdsc_sdk_saas.models.installation_status.InstallationStatus(
                     discovery_permissions = True, 
                     is_install_complete = True, ),
                 service_provider = 'aws',
@@ -46,7 +46,7 @@ class TestLinkedAccounts(unittest.TestCase):
                     'key' : True
                     },
                 regions = [
-                    ibm_gdsc_sdk_software.models.analyzed_region.AnalyzedRegion(
+                    ibm_gdsc_sdk_saas.models.analyzed_region.AnalyzedRegion(
                         name = 'France', 
                         is_analyzed = True, )
                     ],
@@ -58,12 +58,12 @@ class TestLinkedAccounts(unittest.TestCase):
                 cloud_account_id = '123456789101',
                 cloud_account_name = '123456789101',
                 is_main_cloud_account = True,
-                installation_status = ibm_gdsc_sdk_software.models.installation_status.InstallationStatus(
+                installation_status = ibm_gdsc_sdk_saas.models.installation_status.InstallationStatus(
                     discovery_permissions = True, 
                     is_install_complete = True, ),
                 service_provider = 'aws',
                 regions = [
-                    ibm_gdsc_sdk_software.models.analyzed_region.AnalyzedRegion(
+                    ibm_gdsc_sdk_saas.models.analyzed_region.AnalyzedRegion(
                         name = 'France', 
                         is_analyzed = True, )
                     ],

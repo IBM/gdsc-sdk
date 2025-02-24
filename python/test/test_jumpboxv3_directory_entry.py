@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.jumpboxv3_directory_entry import Jumpboxv3DirectoryEntry
+from ibm_gdsc_sdk_saas.models.jumpboxv3_directory_entry import Jumpboxv3DirectoryEntry
 
 class TestJumpboxv3DirectoryEntry(unittest.TestCase):
     """Jumpboxv3DirectoryEntry unit test stubs"""

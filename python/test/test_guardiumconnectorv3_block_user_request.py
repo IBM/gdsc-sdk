@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_block_user_request import Guardiumconnectorv3BlockUserRequest
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_block_user_request import Guardiumconnectorv3BlockUserRequest
 
 class TestGuardiumconnectorv3BlockUserRequest(unittest.TestCase):
     """Guardiumconnectorv3BlockUserRequest unit test stubs"""
@@ -35,10 +35,10 @@ class TestGuardiumconnectorv3BlockUserRequest(unittest.TestCase):
         model = Guardiumconnectorv3BlockUserRequest()
         if include_optional:
             return Guardiumconnectorv3BlockUserRequest(
-                destination = ibm_gdsc_sdk_software.models.guardiumconnectorv3_block_where.guardiumconnectorv3BlockWhere(
+                destination = ibm_gdsc_sdk_saas.models.guardiumconnectorv3_block_where.guardiumconnectorv3BlockWhere(
                     config_id = '', 
                     guardium_id = '', ),
-                details = ibm_gdsc_sdk_software.models.guardiumconnectorv3_block_what.guardiumconnectorv3BlockWhat(
+                details = ibm_gdsc_sdk_saas.models.guardiumconnectorv3_block_what.guardiumconnectorv3BlockWhat(
                     bdbname = '', 
                     bip = '', 
                     bport = '', 

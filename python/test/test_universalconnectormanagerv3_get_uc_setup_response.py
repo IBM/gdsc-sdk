@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.universalconnectormanagerv3_get_uc_setup_response import Universalconnectormanagerv3GetUCSetupResponse
+from ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_get_uc_setup_response import Universalconnectormanagerv3GetUCSetupResponse
 
 class TestUniversalconnectormanagerv3GetUCSetupResponse(unittest.TestCase):
     """Universalconnectormanagerv3GetUCSetupResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestUniversalconnectormanagerv3GetUCSetupResponse(unittest.TestCase):
         if include_optional:
             return Universalconnectormanagerv3GetUCSetupResponse(
                 binaries = [
-                    ibm_gdsc_sdk_software.models.universalconnectormanagerv3_file.universalconnectormanagerv3File(
+                    ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_file.universalconnectormanagerv3File(
                         content = 'YQ==', 
                         name = '', 
                         path = '', )
@@ -45,7 +45,7 @@ class TestUniversalconnectormanagerv3GetUCSetupResponse(unittest.TestCase):
                     'key' : ''
                     },
                 configurations = [
-                    ibm_gdsc_sdk_software.models.universalconnectormanagerv3_file.universalconnectormanagerv3File(
+                    ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_file.universalconnectormanagerv3File(
                         content = 'YQ==', 
                         name = '', 
                         path = '', )
@@ -54,7 +54,7 @@ class TestUniversalconnectormanagerv3GetUCSetupResponse(unittest.TestCase):
                     'key' : ''
                     },
                 offline_packages = [
-                    ibm_gdsc_sdk_software.models.universalconnectormanagerv3_file.universalconnectormanagerv3File(
+                    ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_file.universalconnectormanagerv3File(
                         content = 'YQ==', 
                         name = '', 
                         path = '', )

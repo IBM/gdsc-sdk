@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.data_resources_summary_resource_owners_inner import DataResourcesSummaryResourceOwnersInner
+from ibm_gdsc_sdk_saas.models.data_resources_summary_resource_owners_inner import DataResourcesSummaryResourceOwnersInner
 
 class TestDataResourcesSummaryResourceOwnersInner(unittest.TestCase):
     """DataResourcesSummaryResourceOwnersInner unit test stubs"""

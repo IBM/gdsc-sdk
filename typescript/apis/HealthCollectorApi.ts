@@ -26,7 +26,7 @@ import { RuntimeError } from '../models/RuntimeError';
 export class HealthCollectorApiRequestFactory extends BaseAPIRequestFactory {
 
     /**
-     * Summary: Get data warehouse usage info Description: Get information from Db2 related to usage
+     * Summary: Get data warehouse usage info Description: Get information from data warehouse related to usage
      * @param type The type of metric to retrieve
      * @param startTime The start time from which the data needs to be calculated.
      * @param endTime The end time from which the data needs to be calculated.

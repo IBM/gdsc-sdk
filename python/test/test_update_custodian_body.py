@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.update_custodian_body import UpdateCustodianBody
+from ibm_gdsc_sdk_saas.models.update_custodian_body import UpdateCustodianBody
 
 class TestUpdateCustodianBody(unittest.TestCase):
     """UpdateCustodianBody unit test stubs"""

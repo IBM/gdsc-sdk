@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_risk_event_tuning_response import Riskanalyticscontrollerv3RiskEventTuningResponse
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_risk_event_tuning_response import Riskanalyticscontrollerv3RiskEventTuningResponse
 
 class TestRiskanalyticscontrollerv3RiskEventTuningResponse(unittest.TestCase):
     """Riskanalyticscontrollerv3RiskEventTuningResponse unit test stubs"""

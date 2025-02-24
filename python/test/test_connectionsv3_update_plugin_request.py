@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_update_plugin_request import Connectionsv3UpdatePluginRequest
+from ibm_gdsc_sdk_saas.models.connectionsv3_update_plugin_request import Connectionsv3UpdatePluginRequest
 
 class TestConnectionsv3UpdatePluginRequest(unittest.TestCase):
     """Connectionsv3UpdatePluginRequest unit test stubs"""
@@ -37,19 +37,22 @@ class TestConnectionsv3UpdatePluginRequest(unittest.TestCase):
             return Connectionsv3UpdatePluginRequest(
                 datasource_type = '',
                 developer_name = '',
+                document_link = '',
                 id = '',
                 logfile = '',
                 name = '',
                 readme = '',
                 records = [
-                    ibm_gdsc_sdk_software.models.name_and_value_for_each_plugin_record.name and value for each plugin record(
+                    ibm_gdsc_sdk_saas.models.name_and_value_for_each_plugin_record.name and value for each plugin record(
                         guard_record_name = '', 
                         value = '', )
                     ],
                 state = '',
                 supported_inputs = [
                     ''
-                    ]
+                    ],
+                version = '',
+                version_tested = ''
             )
         else:
             return Connectionsv3UpdatePluginRequest(

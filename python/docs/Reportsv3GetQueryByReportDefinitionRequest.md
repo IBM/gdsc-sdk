@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.reportsv3_get_query_by_report_definition_request import Reportsv3GetQueryByReportDefinitionRequest
+from ibm_gdsc_sdk_saas.models.reportsv3_get_query_by_report_definition_request import Reportsv3GetQueryByReportDefinitionRequest
 
 # TODO update the JSON string below
 json = "{}"

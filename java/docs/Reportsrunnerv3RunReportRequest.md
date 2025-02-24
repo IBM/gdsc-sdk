@@ -15,6 +15,7 @@ RunReportRequest is the argument of RunReport API.
 |**jobType** | **Reportsrunnerv3JobType** |  |  [optional] |
 |**modelType** | **Reportsv3ModelType** |  |  [optional] |
 |**offset** | **Integer** | The amount to offset the rows by for pagination. Required if report query uses offset and fetch_size parameters. |  [optional] |
+|**queryId** | **String** | Optional: query_id is used to uniquely identify a query. It can be later used to stop the same query. |  [optional] |
 |**reportDefinition** | [**Reportsv3ReportDefinition**](Reportsv3ReportDefinition.md) |  |  [optional] |
 |**reportId** | **String** | Optional: the ID of the Report we wish to run (e.g. 000000000000000000000905). |  [optional] |
 |**runtimeParameterList** | [**List&lt;Reportsv3RunTimeParameter&gt;**](Reportsv3RunTimeParameter.md) | List of runtime parameter if needed. |  [optional] |

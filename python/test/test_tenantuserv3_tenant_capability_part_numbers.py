@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.tenantuserv3_tenant_capability_part_numbers import Tenantuserv3TenantCapabilityPartNumbers
+from ibm_gdsc_sdk_saas.models.tenantuserv3_tenant_capability_part_numbers import Tenantuserv3TenantCapabilityPartNumbers
 
 class TestTenantuserv3TenantCapabilityPartNumbers(unittest.TestCase):
     """Tenantuserv3TenantCapabilityPartNumbers unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.qspmdatamanagerv3_app_data_response import Qspmdatamanagerv3AppDataResponse
+from ibm_gdsc_sdk_saas.models.qspmdatamanagerv3_app_data_response import Qspmdatamanagerv3AppDataResponse
 
 class TestQspmdatamanagerv3AppDataResponse(unittest.TestCase):
     """Qspmdatamanagerv3AppDataResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestQspmdatamanagerv3AppDataResponse(unittest.TestCase):
         if include_optional:
             return Qspmdatamanagerv3AppDataResponse(
                 app_data = [
-                    ibm_gdsc_sdk_software.models.application_dim_model.Application dim model(
+                    ibm_gdsc_sdk_saas.models.application_dim_model.Application dim model(
                         app_client_specific = '', 
                         app_end_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         app_generic_id = '', 

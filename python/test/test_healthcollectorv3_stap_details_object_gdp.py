@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.healthcollectorv3_stap_details_object_gdp import Healthcollectorv3StapDetailsObjectGdp
+from ibm_gdsc_sdk_saas.models.healthcollectorv3_stap_details_object_gdp import Healthcollectorv3StapDetailsObjectGdp
 
 class TestHealthcollectorv3StapDetailsObjectGdp(unittest.TestCase):
     """Healthcollectorv3StapDetailsObjectGdp unit test stubs"""
@@ -35,20 +35,20 @@ class TestHealthcollectorv3StapDetailsObjectGdp(unittest.TestCase):
         model = Healthcollectorv3StapDetailsObjectGdp()
         if include_optional:
             return Healthcollectorv3StapDetailsObjectGdp(
-                connectivity_details = ibm_gdsc_sdk_software.models.healthcollectorv3_general_details_object.healthcollectorv3GeneralDetailsObject(
+                connectivity_details = ibm_gdsc_sdk_saas.models.healthcollectorv3_general_details_object.healthcollectorv3GeneralDetailsObject(
                     err_messages = '', ),
                 general_err_messages = [
                     ''
                     ],
-                ktap_details = ibm_gdsc_sdk_software.models.healthcollectorv3_general_details_object.healthcollectorv3GeneralDetailsObject(
+                ktap_details = ibm_gdsc_sdk_saas.models.healthcollectorv3_general_details_object.healthcollectorv3GeneralDetailsObject(
                     err_messages = '', ),
-                stap_liveliness_info = ibm_gdsc_sdk_software.models.healthcollectorv3_stap_live_info_object.healthcollectorv3StapLiveInfoObject(
+                stap_liveliness_info = ibm_gdsc_sdk_saas.models.healthcollectorv3_stap_live_info_object.healthcollectorv3StapLiveInfoObject(
                     has_event = True, 
                     health_status = 56, 
                     liveliness_state = '', 
                     stap = '', ),
                 stap_ver_info_list = [
-                    ibm_gdsc_sdk_software.models.healthcollectorv3_inspection_engine_details_gdp.healthcollectorv3InspectionEngineDetailsGdp(
+                    ibm_gdsc_sdk_saas.models.healthcollectorv3_inspection_engine_details_gdp.healthcollectorv3InspectionEngineDetailsGdp(
                         ie = '', 
                         port = '', 
                         protocol = '', 
@@ -58,7 +58,7 @@ class TestHealthcollectorv3StapDetailsObjectGdp(unittest.TestCase):
                         verification_state = '', 
                         version = '', )
                     ],
-                traffic_details = ibm_gdsc_sdk_software.models.healthcollectorv3_general_details_object.healthcollectorv3GeneralDetailsObject(
+                traffic_details = ibm_gdsc_sdk_saas.models.healthcollectorv3_general_details_object.healthcollectorv3GeneralDetailsObject(
                     err_messages = '', )
             )
         else:

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.tenantuserv3_get_roles_response import Tenantuserv3GetRolesResponse
+from ibm_gdsc_sdk_saas.models.tenantuserv3_get_roles_response import Tenantuserv3GetRolesResponse
 
 class TestTenantuserv3GetRolesResponse(unittest.TestCase):
     """Tenantuserv3GetRolesResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestTenantuserv3GetRolesResponse(unittest.TestCase):
         if include_optional:
             return Tenantuserv3GetRolesResponse(
                 roles = [
-                    ibm_gdsc_sdk_software.models.tenantuserv3_role.tenantuserv3Role(
+                    ibm_gdsc_sdk_saas.models.tenantuserv3_role.tenantuserv3Role(
                         description = '', 
                         icp_roles = [
                             ''

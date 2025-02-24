@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_level import Assetsv3Level
+from ibm_gdsc_sdk_saas.models.assetsv3_level import Assetsv3Level
 
 class TestAssetsv3Level(unittest.TestCase):
     """Assetsv3Level unit test stubs"""

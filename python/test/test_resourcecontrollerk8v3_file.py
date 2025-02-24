@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_file import Resourcecontrollerk8v3File
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_file import Resourcecontrollerk8v3File
 
 class TestResourcecontrollerk8v3File(unittest.TestCase):
     """Resourcecontrollerk8v3File unit test stubs"""
@@ -37,7 +37,7 @@ class TestResourcecontrollerk8v3File(unittest.TestCase):
             return Resourcecontrollerk8v3File(
                 content = '',
                 created = '',
-                description = ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_text_content.resourcecontrollerk8v3TextContent(
+                description = ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_text_content.resourcecontrollerk8v3TextContent(
                     content = '', 
                     format = '', ),
                 id = '',

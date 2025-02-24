@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.connectionsv3_guard_record_field import Connectionsv3GuardRecordField
+from ibm_gdsc_sdk_saas.models.connectionsv3_guard_record_field import Connectionsv3GuardRecordField
 
 # TODO update the JSON string below
 json = "{}"

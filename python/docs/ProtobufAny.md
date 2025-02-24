@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.protobuf_any import ProtobufAny
+from ibm_gdsc_sdk_saas.models.protobuf_any import ProtobufAny
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.tenantuserv3_basic_privilege import Tenantuserv3BasicPrivilege
+from ibm_gdsc_sdk_saas.models.tenantuserv3_basic_privilege import Tenantuserv3BasicPrivilege
 
 class TestTenantuserv3BasicPrivilege(unittest.TestCase):
     """Tenantuserv3BasicPrivilege unit test stubs"""

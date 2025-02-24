@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**connectionsServiceDeleteConnectionsConfigs**](ConnectionsServiceApi.md#connectionsServiceDeleteConnectionsConfigs) | **DELETE** /api/v3/connections/configs/{connection_id} | Summary: Delete connections configs Description: Delete Connection config by connection id.
 [**connectionsServiceDeleteConnector**](ConnectionsServiceApi.md#connectionsServiceDeleteConnector) | **DELETE** /api/v3/connections/{connection_id} | Summary: Delete connector Description: Delete a Connection.
 [**connectionsServiceDeletePlugin**](ConnectionsServiceApi.md#connectionsServiceDeletePlugin) | **DELETE** /api/v3/connections/plugins/{id} | Summary: Delete plugin. Description: Delete plugin.
+[**connectionsServiceGeneratePackage**](ConnectionsServiceApi.md#connectionsServiceGeneratePackage) | **PUT** /api/v3/connections/plugins/{id}/package | Summary: Generate package. Description: Generate package.
 [**connectionsServiceGetBannerState**](ConnectionsServiceApi.md#connectionsServiceGetBannerState) | **GET** /api/v3/connections/banner | Summary: Get banner state for object verb page.  Description: Get banner state for object verb page.
 [**connectionsServiceGetConnectionsAccounts**](ConnectionsServiceApi.md#connectionsServiceGetConnectionsAccounts) | **GET** /api/v3/connections/accounts | Summary: Get Connections accounts Description: Get Connections acccounts.
 [**connectionsServiceGetConnectionsConfigs**](ConnectionsServiceApi.md#connectionsServiceGetConnectionsConfigs) | **GET** /api/v3/connections/configs | Summary: Get connections configs Description: Get Connection config by connection type.
@@ -30,6 +31,7 @@ Method | HTTP request | Description
 [**connectionsServiceUpdateConnectors**](ConnectionsServiceApi.md#connectionsServiceUpdateConnectors) | **PUT** /api/v3/connections | Summary: Update connectors Description: Update a list of Connectors.
 [**connectionsServiceUpdatePlugin**](ConnectionsServiceApi.md#connectionsServiceUpdatePlugin) | **PUT** /api/v3/connections/plugins/{id} | Summary: Update plugin. Description: Update plugin.
 [**connectionsServiceUpdateSettings**](ConnectionsServiceApi.md#connectionsServiceUpdateSettings) | **PUT** /api/v3/connections/settings | Summary: Update settings Description: Update Settings.
+[**connectionsServiceValidateAwsConnection**](ConnectionsServiceApi.md#connectionsServiceValidateAwsConnection) | **POST** /api/v3/connections/validate/aws | Summary: Validate an AWS connection. Description: Validate an AWS connection.
 
 
 # **connectionsServiceCreateConnectionsAccounts**
@@ -140,6 +142,10 @@ let body:.ConnectionsServiceApiConnectionsServiceCreateConnectionsConfigsRequest
       alias: "alias_example",
       configId: "configId_example",
       datasourceType: "datasourceType_example",
+      edgeDeploymentServer: {
+        id: "id_example",
+        name: "name_example",
+      },
       filterAlias: "filterAlias_example",
       host: "host_example",
       inputAlias: "inputAlias_example",
@@ -206,6 +212,7 @@ let body:.ConnectionsServiceApiConnectionsServiceCreatePluginRequest = {
   connectionsv3CreatePluginRequest: {
     datasourceType: "datasourceType_example",
     developerName: "developerName_example",
+    documentLink: "documentLink_example",
     logfile: "logfile_example",
     name: "name_example",
     readme: "readme_example",
@@ -218,6 +225,8 @@ let body:.ConnectionsServiceApiConnectionsServiceCreatePluginRequest = {
     supportedInputs: [
       "supportedInputs_example",
     ],
+    version: "version_example",
+    versionTested: "versionTested_example",
   },
 };
 
@@ -536,6 +545,83 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **connectionsServiceGeneratePackage**
+> Connectionsv3GeneratePackageResponse connectionsServiceGeneratePackage(connectionsv3GeneratePackageRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ConnectionsServiceApi(configuration);
+
+let body:.ConnectionsServiceApiConnectionsServiceGeneratePackageRequest = {
+  // string | id
+  id: "id_example",
+  // Connectionsv3GeneratePackageRequest
+  connectionsv3GeneratePackageRequest: {
+    datasourceType: "datasourceType_example",
+    developerName: "developerName_example",
+    documentLink: "documentLink_example",
+    id: "id_example",
+    logfile: "logfile_example",
+    name: "name_example",
+    readme: "readme_example",
+    records: [
+      {
+        guardRecordName: "guardRecordName_example",
+        value: "value_example",
+      },
+    ],
+    state: "state_example",
+    supportedInputs: [
+      "supportedInputs_example",
+    ],
+    version: "version_example",
+    versionTested: "versionTested_example",
+  },
+};
+
+apiInstance.connectionsServiceGeneratePackage(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **connectionsv3GeneratePackageRequest** | **Connectionsv3GeneratePackageRequest**|  |
+ **id** | [**string**] | id | defaults to undefined
+
+
+### Return type
+
+**Connectionsv3GeneratePackageResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -1378,6 +1464,10 @@ let body:.ConnectionsServiceApiConnectionsServiceUpdateConnectionsConfigsRequest
           alias: "alias_example",
           configId: "configId_example",
           datasourceType: "datasourceType_example",
+          edgeDeploymentServer: {
+            id: "id_example",
+            name: "name_example",
+          },
           filterAlias: "filterAlias_example",
           host: "host_example",
           inputAlias: "inputAlias_example",
@@ -1520,6 +1610,7 @@ let body:.ConnectionsServiceApiConnectionsServiceUpdatePluginRequest = {
   connectionsv3UpdatePluginRequest: {
     datasourceType: "datasourceType_example",
     developerName: "developerName_example",
+    documentLink: "documentLink_example",
     id: "id_example",
     logfile: "logfile_example",
     name: "name_example",
@@ -1534,6 +1625,8 @@ let body:.ConnectionsServiceApiConnectionsServiceUpdatePluginRequest = {
     supportedInputs: [
       "supportedInputs_example",
     ],
+    version: "version_example",
+    versionTested: "versionTested_example",
   },
 };
 
@@ -1629,6 +1722,68 @@ Name | Type | Description  | Notes
 ### Return type
 
 **any**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **connectionsServiceValidateAwsConnection**
+> Connectionsv3ValidateConnectionResponse connectionsServiceValidateAwsConnection(connectionsv3ValidateAwsConnectionRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ConnectionsServiceApi(configuration);
+
+let body:.ConnectionsServiceApiConnectionsServiceValidateAwsConnectionRequest = {
+  // Connectionsv3ValidateAwsConnectionRequest
+  connectionsv3ValidateAwsConnectionRequest: {
+    accessKey: "accessKey_example",
+    groupName: "groupName_example",
+    inputPluginType: "inputPluginType_example",
+    logStream: "logStream_example",
+    queueUrl: "queueUrl_example",
+    region: "region_example",
+    secretKey: "secretKey_example",
+  },
+};
+
+apiInstance.connectionsServiceValidateAwsConnection(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **connectionsv3ValidateAwsConnectionRequest** | **Connectionsv3ValidateAwsConnectionRequest**|  |
+
+
+### Return type
+
+**Connectionsv3ValidateConnectionResponse**
 
 ### Authorization
 

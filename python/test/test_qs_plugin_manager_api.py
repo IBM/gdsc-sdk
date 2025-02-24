@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.qs_plugin_manager_api import QSPluginManagerApi
+from ibm_gdsc_sdk_saas.api.qs_plugin_manager_api import QSPluginManagerApi
 
 
 class TestQSPluginManagerApi(unittest.TestCase):

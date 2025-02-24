@@ -12,6 +12,9 @@
 
 import { HttpFile } from '../http/http';
 
+/**
+* [deprecated] pairs with a count. Use Statistics, instead.
+*/
 export class Riskanalyticscontrollerv3DetailToCount {
     'count'?: number;
     'desc'?: string;

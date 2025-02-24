@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.qspmdatamanagerv3_master_data_response import Qspmdatamanagerv3MasterDataResponse
+from ibm_gdsc_sdk_saas.models.qspmdatamanagerv3_master_data_response import Qspmdatamanagerv3MasterDataResponse
 
 class TestQspmdatamanagerv3MasterDataResponse(unittest.TestCase):
     """Qspmdatamanagerv3MasterDataResponse unit test stubs"""
@@ -36,13 +36,13 @@ class TestQspmdatamanagerv3MasterDataResponse(unittest.TestCase):
         if include_optional:
             return Qspmdatamanagerv3MasterDataResponse(
                 masterdata = [
-                    ibm_gdsc_sdk_software.models.master_data_model.MasterData model(
+                    ibm_gdsc_sdk_saas.models.master_data_model.MasterData model(
                         creation_ts = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         ref_desc = '', 
                         ref_has_schema = True, 
                         ref_id = '', 
                         ref_name = '', 
-                        ref_schema = ibm_gdsc_sdk_software.models.protobuf_any.protobufAny(
+                        ref_schema = ibm_gdsc_sdk_saas.models.protobuf_any.protobufAny(
                             type_url = '', 
                             value = 'YQ==', ), 
                         ref_type = '', 

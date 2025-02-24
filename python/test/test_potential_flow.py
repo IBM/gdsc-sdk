@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.potential_flow import PotentialFlow
+from ibm_gdsc_sdk_saas.models.potential_flow import PotentialFlow
 
 class TestPotentialFlow(unittest.TestCase):
     """PotentialFlow unit test stubs"""
@@ -37,24 +37,24 @@ class TestPotentialFlow(unittest.TestCase):
             return PotentialFlow(
                 id = 'aaede660-6090-479a-b54f-d1b7aa6e1234',
                 type = 'compute',
-                source = ibm_gdsc_sdk_software.models.flow_node.FlowNode(
+                source = ibm_gdsc_sdk_saas.models.flow_node.FlowNode(
                     id = 'arn:aws:ec2:us-east-1:1511931112324:instance/i-097079e7b15331234', 
                     name = 'instance/i-097079e7b15331234', 
                     type = 'ec2-instance', 
                     cloud_account_id = '151193111234', 
                     cloud_region = 'us-east-1', 
                     cloud_provider = 'aws', 
-                    resource = ibm_gdsc_sdk_software.models.flow_node_resource.FlowNode_resource(
+                    resource = ibm_gdsc_sdk_saas.models.flow_node_resource.FlowNode_resource(
                         name = 'polar-corplex', ), 
                     vendor_id = 'abcd1234-ab12-ab12-ab12-1234123abcabc', ),
-                destination = ibm_gdsc_sdk_software.models.flow_node.FlowNode(
+                destination = ibm_gdsc_sdk_saas.models.flow_node.FlowNode(
                     id = 'arn:aws:ec2:us-east-1:1511931112324:instance/i-097079e7b15331234', 
                     name = 'instance/i-097079e7b15331234', 
                     type = 'ec2-instance', 
                     cloud_account_id = '151193111234', 
                     cloud_region = 'us-east-1', 
                     cloud_provider = 'aws', 
-                    resource = ibm_gdsc_sdk_software.models.flow_node_resource.FlowNode_resource(
+                    resource = ibm_gdsc_sdk_saas.models.flow_node_resource.FlowNode_resource(
                         name = 'polar-corplex', ), 
                     vendor_id = 'abcd1234-ab12-ab12-ab12-1234123abcabc', ),
                 access_types = [
@@ -69,24 +69,24 @@ class TestPotentialFlow(unittest.TestCase):
             return PotentialFlow(
                 id = 'aaede660-6090-479a-b54f-d1b7aa6e1234',
                 type = 'compute',
-                source = ibm_gdsc_sdk_software.models.flow_node.FlowNode(
+                source = ibm_gdsc_sdk_saas.models.flow_node.FlowNode(
                     id = 'arn:aws:ec2:us-east-1:1511931112324:instance/i-097079e7b15331234', 
                     name = 'instance/i-097079e7b15331234', 
                     type = 'ec2-instance', 
                     cloud_account_id = '151193111234', 
                     cloud_region = 'us-east-1', 
                     cloud_provider = 'aws', 
-                    resource = ibm_gdsc_sdk_software.models.flow_node_resource.FlowNode_resource(
+                    resource = ibm_gdsc_sdk_saas.models.flow_node_resource.FlowNode_resource(
                         name = 'polar-corplex', ), 
                     vendor_id = 'abcd1234-ab12-ab12-ab12-1234123abcabc', ),
-                destination = ibm_gdsc_sdk_software.models.flow_node.FlowNode(
+                destination = ibm_gdsc_sdk_saas.models.flow_node.FlowNode(
                     id = 'arn:aws:ec2:us-east-1:1511931112324:instance/i-097079e7b15331234', 
                     name = 'instance/i-097079e7b15331234', 
                     type = 'ec2-instance', 
                     cloud_account_id = '151193111234', 
                     cloud_region = 'us-east-1', 
                     cloud_provider = 'aws', 
-                    resource = ibm_gdsc_sdk_software.models.flow_node_resource.FlowNode_resource(
+                    resource = ibm_gdsc_sdk_saas.models.flow_node_resource.FlowNode_resource(
                         name = 'polar-corplex', ), 
                     vendor_id = 'abcd1234-ab12-ab12-ab12-1234123abcabc', ),
                 access_types = [

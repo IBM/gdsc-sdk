@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.notificationsv3_get_notification_record_response import Notificationsv3GetNotificationRecordResponse
+from ibm_gdsc_sdk_saas.models.notificationsv3_get_notification_record_response import Notificationsv3GetNotificationRecordResponse
 
 class TestNotificationsv3GetNotificationRecordResponse(unittest.TestCase):
     """Notificationsv3GetNotificationRecordResponse unit test stubs"""
@@ -35,7 +35,7 @@ class TestNotificationsv3GetNotificationRecordResponse(unittest.TestCase):
         model = Notificationsv3GetNotificationRecordResponse()
         if include_optional:
             return Notificationsv3GetNotificationRecordResponse(
-                record = ibm_gdsc_sdk_software.models.notificationsv3_notification_record.notificationsv3NotificationRecord(
+                record = ibm_gdsc_sdk_saas.models.notificationsv3_notification_record.notificationsv3NotificationRecord(
                     creation_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     event_end_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     event_start_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
@@ -53,14 +53,14 @@ class TestNotificationsv3GetNotificationRecordResponse(unittest.TestCase):
                     type = '', 
                     user_id = '', ),
                 result = '',
-                status = ibm_gdsc_sdk_software.models.the_`status`_type_defines_a_logical_error_model_that_is_suitable_for_different
+                status = ibm_gdsc_sdk_saas.models.the_`status`_type_defines_a_logical_error_model_that_is_suitable_for_different
 programming_environments,_including_rest_apis_and_rpc_apis/_it_is_used_by
 [g_rpc](https://github/com/grpc)/_the_error_model_is_designed_to_be:.The `Status` type defines a logical error model that is suitable for different
 programming environments, including REST APIs and RPC APIs. It is used by
 [gRPC](https://github.com/grpc). The error model is designed to be:(
                     code = 56, 
                     details = [
-                        ibm_gdsc_sdk_software.models.protobuf_any.protobufAny(
+                        ibm_gdsc_sdk_saas.models.protobuf_any.protobufAny(
                             type_url = '', 
                             value = 'YQ==', )
                         ], 

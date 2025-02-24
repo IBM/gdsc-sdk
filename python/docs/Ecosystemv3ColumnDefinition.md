@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.ecosystemv3_column_definition import Ecosystemv3ColumnDefinition
+from ibm_gdsc_sdk_saas.models.ecosystemv3_column_definition import Ecosystemv3ColumnDefinition
 
 # TODO update the JSON string below
 json = "{}"

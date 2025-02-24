@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.reportsv3_get_query_by_report_id_request import Reportsv3GetQueryByReportIDRequest
+from ibm_gdsc_sdk_saas.models.reportsv3_get_query_by_report_id_request import Reportsv3GetQueryByReportIDRequest
 
 # TODO update the JSON string below
 json = "{}"

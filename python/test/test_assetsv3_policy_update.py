@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_policy_update import Assetsv3PolicyUpdate
+from ibm_gdsc_sdk_saas.models.assetsv3_policy_update import Assetsv3PolicyUpdate
 
 class TestAssetsv3PolicyUpdate(unittest.TestCase):
     """Assetsv3PolicyUpdate unit test stubs"""
@@ -46,16 +46,16 @@ class TestAssetsv3PolicyUpdate(unittest.TestCase):
                 policy_name = '',
                 policy_sequence = 56,
                 rules = [
-                    ibm_gdsc_sdk_software.models.assetsv3_rule.assetsv3Rule(
+                    ibm_gdsc_sdk_saas.models.assetsv3_rule.assetsv3Rule(
                         actions = [
-                            ibm_gdsc_sdk_software.models.action___action_associated_with_a_rule.Action - Action associated with a rule(
+                            ibm_gdsc_sdk_saas.models.action___action_associated_with_a_rule.Action - Action associated with a rule(
                                 dest_category = '', 
                                 dest_type = '', 
                                 dest_value = '', )
                             ], 
                         is_delete = 56, 
                         parameters = [
-                            ibm_gdsc_sdk_software.models.rule_parameter___parameters_for_a_rule.RuleParameter - Parameters for a rule(
+                            ibm_gdsc_sdk_saas.models.rule_parameter___parameters_for_a_rule.RuleParameter - Parameters for a rule(
                                 asset_attribute = '', 
                                 attribute_enum = '', 
                                 condition = '', 

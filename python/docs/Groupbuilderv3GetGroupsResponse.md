@@ -1,6 +1,6 @@
 # Groupbuilderv3GetGroupsResponse
 
-GetGroupResponse returns the list of available groups on Guardium for Db2 Warehouse.
+GetGroupResponse returns the list of available groups on GDSC for dat warehouse.
 
 ## Properties
 
@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.groupbuilderv3_get_groups_response import Groupbuilderv3GetGroupsResponse
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_get_groups_response import Groupbuilderv3GetGroupsResponse
 
 # TODO update the JSON string below
 json = "{}"

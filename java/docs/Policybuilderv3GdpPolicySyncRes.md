@@ -10,7 +10,7 @@
 |**centralManager** | **String** |  |  [optional] |
 |**createdPolicyId** | **String** |  |  [optional] |
 |**gdpSyncedId** | **String** | Sync id of the created or updated sync policy. |  [optional] |
-|**importName** | **String** | Name for imported gdp policy. |  [optional] |
+|**importName** | **String** | Name for imported GDP policy. |  [optional] |
 |**lastStateChange** | **String** |  |  [optional] |
 |**policyImportIssue** | **Policybuilderv3ImportIssue** |  |  [optional] |
 |**policyImportState** | **Policybuilderv3ImportState** |  |  [optional] |

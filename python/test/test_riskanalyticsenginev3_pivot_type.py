@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticsenginev3_pivot_type import Riskanalyticsenginev3PivotType
+from ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_pivot_type import Riskanalyticsenginev3PivotType
 
 class TestRiskanalyticsenginev3PivotType(unittest.TestCase):
     """Riskanalyticsenginev3PivotType unit test stubs"""

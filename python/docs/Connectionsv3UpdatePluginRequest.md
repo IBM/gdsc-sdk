@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **datasource_type** | **str** |  | [optional] 
 **developer_name** | **str** |  | [optional] 
+**document_link** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **logfile** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
@@ -14,11 +15,13 @@ Name | Type | Description | Notes
 **records** | [**List[Connectionsv3PluginRecord]**](Connectionsv3PluginRecord.md) |  | [optional] 
 **state** | **str** |  | [optional] 
 **supported_inputs** | **List[str]** |  | [optional] 
+**version** | **str** |  | [optional] 
+**version_tested** | **str** |  | [optional] 
 
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.connectionsv3_update_plugin_request import Connectionsv3UpdatePluginRequest
+from ibm_gdsc_sdk_saas.models.connectionsv3_update_plugin_request import Connectionsv3UpdatePluginRequest
 
 # TODO update the JSON string below
 json = "{}"

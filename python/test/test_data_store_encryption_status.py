@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.data_store_encryption_status import DataStoreEncryptionStatus
+from ibm_gdsc_sdk_saas.models.data_store_encryption_status import DataStoreEncryptionStatus
 
 class TestDataStoreEncryptionStatus(unittest.TestCase):
     """DataStoreEncryptionStatus unit test stubs"""

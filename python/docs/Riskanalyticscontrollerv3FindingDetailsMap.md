@@ -1,5 +1,6 @@
 # Riskanalyticscontrollerv3FindingDetailsMap
 
+Contains a list of examples, reference links, in a finding category. If outlier finding, it could be HIGH_VOLUME, ERROR, NEW, and so on.
 
 ## Properties
 
@@ -7,11 +8,13 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **finding_details** | [**Riskanalyticscontrollerv3FindingDetails**](Riskanalyticscontrollerv3FindingDetails.md) |  | [optional] 
 **finding_details_type** | **str** |  | [optional] 
+**finding_reference** | [**Riskanalyticscontrollerv3FindingReferenceLink**](Riskanalyticscontrollerv3FindingReferenceLink.md) |  | [optional] 
+**report** | **str** |  | [optional] 
 
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_finding_details_map import Riskanalyticscontrollerv3FindingDetailsMap
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_finding_details_map import Riskanalyticscontrollerv3FindingDetailsMap
 
 # TODO update the JSON string below
 json = "{}"

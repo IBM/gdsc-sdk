@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_text_content import Resourcecontrollerk8v3TextContent
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_text_content import Resourcecontrollerk8v3TextContent
 
 class TestResourcecontrollerk8v3TextContent(unittest.TestCase):
     """Resourcecontrollerk8v3TextContent unit test stubs"""

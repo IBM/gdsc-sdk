@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.schedulerv3_day_order import Schedulerv3DayOrder
+from ibm_gdsc_sdk_saas.models.schedulerv3_day_order import Schedulerv3DayOrder
 
 class TestSchedulerv3DayOrder(unittest.TestCase):
     """Schedulerv3DayOrder unit test stubs"""

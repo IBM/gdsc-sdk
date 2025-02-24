@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.last_seen_sort_schema import LastSeenSortSchema
+from ibm_gdsc_sdk_saas.models.last_seen_sort_schema import LastSeenSortSchema
 
 # TODO update the JSON string below
 json = "{}"

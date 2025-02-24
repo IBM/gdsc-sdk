@@ -7,6 +7,7 @@ ReportParameters - distinguishing features of a report card.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **end** | **str** | End. | [optional] 
+**group_ids** | **List[int]** |  | [optional] 
 **id** | **str** | Parameters id. | [optional] 
 **local_time_filter** | [**Dashboardsv3TimeRange**](Dashboardsv3TimeRange.md) |  | [optional] 
 **menu_item** | **str** | Menu Item. | [optional] 
@@ -20,7 +21,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.dashboardsv3_report_parameters import Dashboardsv3ReportParameters
+from ibm_gdsc_sdk_saas.models.dashboardsv3_report_parameters import Dashboardsv3ReportParameters
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.qspmdatamanagerv3_update_net_loc_response import Qspmdatamanagerv3UpdateNetLocResponse
+from ibm_gdsc_sdk_saas.models.qspmdatamanagerv3_update_net_loc_response import Qspmdatamanagerv3UpdateNetLocResponse
 
 class TestQspmdatamanagerv3UpdateNetLocResponse(unittest.TestCase):
     """Qspmdatamanagerv3UpdateNetLocResponse unit test stubs"""

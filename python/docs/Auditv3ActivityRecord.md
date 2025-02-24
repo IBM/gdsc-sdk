@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.auditv3_activity_record import Auditv3ActivityRecord
+from ibm_gdsc_sdk_saas.models.auditv3_activity_record import Auditv3ActivityRecord
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.linked_vendor import LinkedVendor
+from ibm_gdsc_sdk_saas.models.linked_vendor import LinkedVendor
 
 class TestLinkedVendor(unittest.TestCase):
     """LinkedVendor unit test stubs"""
@@ -35,19 +35,19 @@ class TestLinkedVendor(unittest.TestCase):
         model = LinkedVendor()
         if include_optional:
             return LinkedVendor(
-                vendor = ibm_gdsc_sdk_software.models.vendor.Vendor(
+                vendor = ibm_gdsc_sdk_saas.models.vendor.Vendor(
                     vendor_id = '123456789101', 
                     vendor_name = 'Polar Security', 
                     vendor_url = 'https://www.polar.security/', 
                     description = 'Polar.Security', 
                     accounts = [
-                        ibm_gdsc_sdk_software.models.vendor_account.VendorAccount(
+                        ibm_gdsc_sdk_saas.models.vendor_account.VendorAccount(
                             vendor_account_id = '123456789101', 
                             vendor_account_name = 'Polar Security', 
                             cloud_provider = 'aws', )
                         ], 
                     certificates = [
-                        ibm_gdsc_sdk_software.models.vendor_certificate.VendorCertificate(
+                        ibm_gdsc_sdk_saas.models.vendor_certificate.VendorCertificate(
                             certificate_name = 'PCI', )
                         ], ),
                 total_accounts = 11,
@@ -55,19 +55,19 @@ class TestLinkedVendor(unittest.TestCase):
             )
         else:
             return LinkedVendor(
-                vendor = ibm_gdsc_sdk_software.models.vendor.Vendor(
+                vendor = ibm_gdsc_sdk_saas.models.vendor.Vendor(
                     vendor_id = '123456789101', 
                     vendor_name = 'Polar Security', 
                     vendor_url = 'https://www.polar.security/', 
                     description = 'Polar.Security', 
                     accounts = [
-                        ibm_gdsc_sdk_software.models.vendor_account.VendorAccount(
+                        ibm_gdsc_sdk_saas.models.vendor_account.VendorAccount(
                             vendor_account_id = '123456789101', 
                             vendor_account_name = 'Polar Security', 
                             cloud_provider = 'aws', )
                         ], 
                     certificates = [
-                        ibm_gdsc_sdk_software.models.vendor_certificate.VendorCertificate(
+                        ibm_gdsc_sdk_saas.models.vendor_certificate.VendorCertificate(
                             certificate_name = 'PCI', )
                         ], ),
                 total_accounts = 11,

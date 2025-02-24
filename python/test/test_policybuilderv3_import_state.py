@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_import_state import Policybuilderv3ImportState
+from ibm_gdsc_sdk_saas.models.policybuilderv3_import_state import Policybuilderv3ImportState
 
 class TestPolicybuilderv3ImportState(unittest.TestCase):
     """Policybuilderv3ImportState unit test stubs"""

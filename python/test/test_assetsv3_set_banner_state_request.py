@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_set_banner_state_request import Assetsv3SetBannerStateRequest
+from ibm_gdsc_sdk_saas.models.assetsv3_set_banner_state_request import Assetsv3SetBannerStateRequest
 
 class TestAssetsv3SetBannerStateRequest(unittest.TestCase):
     """Assetsv3SetBannerStateRequest unit test stubs"""

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.assetsv3_save_tag_domain_data_request import Assetsv3SaveTagDomainDataRequest
+from ibm_gdsc_sdk_saas.models.assetsv3_save_tag_domain_data_request import Assetsv3SaveTagDomainDataRequest
 
 # TODO update the JSON string below
 json = "{}"

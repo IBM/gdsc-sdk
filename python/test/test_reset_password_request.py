@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reset_password_request import ResetPasswordRequest
+from ibm_gdsc_sdk_saas.models.reset_password_request import ResetPasswordRequest
 
 class TestResetPasswordRequest(unittest.TestCase):
     """ResetPasswordRequest unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.authserver_get_privileges_response import AuthserverGetPrivilegesResponse
+from ibm_gdsc_sdk_saas.models.authserver_get_privileges_response import AuthserverGetPrivilegesResponse
 
 class TestAuthserverGetPrivilegesResponse(unittest.TestCase):
     """AuthserverGetPrivilegesResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestAuthserverGetPrivilegesResponse(unittest.TestCase):
         if include_optional:
             return AuthserverGetPrivilegesResponse(
                 feature_flags = {
-                    'key' : ibm_gdsc_sdk_software.models.featureflagsv3_feature_flag_value.featureflagsv3FeatureFlagValue(
+                    'key' : ibm_gdsc_sdk_saas.models.featureflagsv3_feature_flag_value.featureflagsv3FeatureFlagValue(
                         is_enabled = True, 
                         value = '', )
                     },

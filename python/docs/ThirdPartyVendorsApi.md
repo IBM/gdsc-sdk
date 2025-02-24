@@ -1,4 +1,4 @@
-# ibm_gdsc_sdk_software.ThirdPartyVendorsApi
+# ibm_gdsc_sdk_saas.ThirdPartyVendorsApi
 
 All URIs are relative to *http://localhost*
 
@@ -23,14 +23,14 @@ Get additional details of a specific third party vendor, such as, customer accou
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.vendor_summary import VendorSummary
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.vendor_summary import VendorSummary
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -46,9 +46,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ThirdPartyVendorsApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ThirdPartyVendorsApi(api_client)
     vendor_id = '123456789101' # str | The third party vendor's account ID
 
     try:
@@ -106,14 +106,14 @@ Get details about a third party vendor.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.linked_vendor import LinkedVendor
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.linked_vendor import LinkedVendor
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -129,9 +129,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ThirdPartyVendorsApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ThirdPartyVendorsApi(api_client)
     vendor_id = '123456789101' # str | vendor id
 
     try:
@@ -186,16 +186,16 @@ Get a list of all the data stores that a third party vendor can access. Find out
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.list_linked_vendor_data_stores200_response import ListLinkedVendorDataStores200Response
-from ibm_gdsc_sdk_software.models.list_linked_vendor_data_stores_sort_parameter import ListLinkedVendorDataStoresSortParameter
-from ibm_gdsc_sdk_software.models.list_vendor_data_stores_filter_parameter import ListVendorDataStoresFilterParameter
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.list_linked_vendor_data_stores200_response import ListLinkedVendorDataStores200Response
+from ibm_gdsc_sdk_saas.models.list_linked_vendor_data_stores_sort_parameter import ListLinkedVendorDataStoresSortParameter
+from ibm_gdsc_sdk_saas.models.list_vendor_data_stores_filter_parameter import ListVendorDataStoresFilterParameter
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -211,12 +211,12 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ThirdPartyVendorsApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ThirdPartyVendorsApi(api_client)
     vendor_id = '123456789101' # str | The third party vendor's account ID
-    filter = ibm_gdsc_sdk_software.ListVendorDataStoresFilterParameter() # ListVendorDataStoresFilterParameter |  (optional)
-    sort = ibm_gdsc_sdk_software.ListLinkedVendorDataStoresSortParameter() # ListLinkedVendorDataStoresSortParameter |  (optional)
+    filter = ibm_gdsc_sdk_saas.ListVendorDataStoresFilterParameter() # ListVendorDataStoresFilterParameter |  (optional)
+    sort = ibm_gdsc_sdk_saas.ListLinkedVendorDataStoresSortParameter() # ListLinkedVendorDataStoresSortParameter |  (optional)
     page_size = 3.4 # float |  (optional)
     next_token = 'next_token_example' # str |  (optional)
 
@@ -276,14 +276,14 @@ Get a list of all third party vendors associated to your cloud environments (rel
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.linked_vendor import LinkedVendor
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.linked_vendor import LinkedVendor
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -299,9 +299,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ThirdPartyVendorsApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ThirdPartyVendorsApi(api_client)
 
     try:
         # Get the summary of a third party vendor
@@ -352,15 +352,15 @@ Get a list of roles, buckets or service principles, and their entitled permissio
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.list_trustees_filter_parameter import ListTrusteesFilterParameter
-from ibm_gdsc_sdk_software.models.trustee import Trustee
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.list_trustees_filter_parameter import ListTrusteesFilterParameter
+from ibm_gdsc_sdk_saas.models.trustee import Trustee
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -376,10 +376,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ThirdPartyVendorsApi(api_client)
-    filter = ibm_gdsc_sdk_software.ListTrusteesFilterParameter() # ListTrusteesFilterParameter |  (optional)
+    api_instance = ibm_gdsc_sdk_saas.ThirdPartyVendorsApi(api_client)
+    filter = ibm_gdsc_sdk_saas.ListTrusteesFilterParameter() # ListTrusteesFilterParameter |  (optional)
 
     try:
         # Get a list of all the actual trusted assets

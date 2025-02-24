@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_report_column_facet_response import Reportsrunnerv3GetReportColumnFacetResponse
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_get_report_column_facet_response import Reportsrunnerv3GetReportColumnFacetResponse
 
 class TestReportsrunnerv3GetReportColumnFacetResponse(unittest.TestCase):
     """Reportsrunnerv3GetReportColumnFacetResponse unit test stubs"""
@@ -36,26 +36,26 @@ class TestReportsrunnerv3GetReportColumnFacetResponse(unittest.TestCase):
         if include_optional:
             return Reportsrunnerv3GetReportColumnFacetResponse(
                 facet = [
-                    ibm_gdsc_sdk_software.models.reportsrunnerv3_filter.reportsrunnerv3Filter(
+                    ibm_gdsc_sdk_saas.models.reportsrunnerv3_filter.reportsrunnerv3Filter(
                         count = 56, 
                         value = '', )
                     ],
-                facet_selected_header = ibm_gdsc_sdk_software.models.reportsv3_report_header.reportsv3ReportHeader(
+                facet_selected_header = ibm_gdsc_sdk_saas.models.reportsv3_report_header.reportsv3ReportHeader(
                     aggregation_type = 'UNDEFINED_AGG_TYPE', 
-                    field_name = ibm_gdsc_sdk_software.models.reportsv3_field_name.reportsv3FieldName(
+                    field_name = ibm_gdsc_sdk_saas.models.reportsv3_field_name.reportsv3FieldName(
                         customized_value = '', 
                         nls_key = '', 
                         nls_value = '', ), 
                     group_type_id = 56, 
                     header_data_type = 'UNDEFINED_REPORT_HEADER_TYPE', 
-                    header_description = ibm_gdsc_sdk_software.models.reportsv3_header_description.reportsv3HeaderDescription(
+                    header_description = ibm_gdsc_sdk_saas.models.reportsv3_header_description.reportsv3HeaderDescription(
                         nls_key = '', 
                         nls_value = '', ), 
                     header_id = '', 
                     header_name = '', 
                     header_type = 'UNDEFINED_TYPE', 
                     header_type_length = 56, 
-                    literal = ibm_gdsc_sdk_software.models.reportsv3_literal.reportsv3Literal(
+                    literal = ibm_gdsc_sdk_saas.models.reportsv3_literal.reportsv3Literal(
                         customized_value = '', 
                         nls_key = '', 
                         nls_value = '', ), 

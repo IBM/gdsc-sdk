@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_partial_report_update_request import Reportsv3PartialReportUpdateRequest
+from ibm_gdsc_sdk_saas.models.reportsv3_partial_report_update_request import Reportsv3PartialReportUpdateRequest
 
 class TestReportsv3PartialReportUpdateRequest(unittest.TestCase):
     """Reportsv3PartialReportUpdateRequest unit test stubs"""
@@ -42,11 +42,11 @@ class TestReportsv3PartialReportUpdateRequest(unittest.TestCase):
                 report_id = '',
                 report_name = '',
                 report_tags = [
-                    ibm_gdsc_sdk_software.models.reportsv3_report_tag.reportsv3ReportTag(
+                    ibm_gdsc_sdk_saas.models.reportsv3_report_tag.reportsv3ReportTag(
                         nls_key = '', 
                         nls_value = '', )
                     ],
-                update_mask = ibm_gdsc_sdk_software.models.`field_mask`_represents_a_set_of_symbolic_field_paths,_for_example:.`FieldMask` represents a set of symbolic field paths, for example:(
+                update_mask = ibm_gdsc_sdk_saas.models.`field_mask`_represents_a_set_of_symbolic_field_paths,_for_example:.`FieldMask` represents a set of symbolic field paths, for example:(
                     paths = [
                         ''
                         ], )

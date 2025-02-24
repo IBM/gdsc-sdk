@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_get_collectors_config_response import Guardiumconnectorv3GetCollectorsConfigResponse
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_get_collectors_config_response import Guardiumconnectorv3GetCollectorsConfigResponse
 
 class TestGuardiumconnectorv3GetCollectorsConfigResponse(unittest.TestCase):
     """Guardiumconnectorv3GetCollectorsConfigResponse unit test stubs"""
@@ -36,12 +36,12 @@ class TestGuardiumconnectorv3GetCollectorsConfigResponse(unittest.TestCase):
         if include_optional:
             return Guardiumconnectorv3GetCollectorsConfigResponse(
                 collectors_config = [
-                    ibm_gdsc_sdk_software.models.guardiumconnectorv3_collector_config.guardiumconnectorv3CollectorConfig(
+                    ibm_gdsc_sdk_saas.models.guardiumconnectorv3_collector_config.guardiumconnectorv3CollectorConfig(
                         datamart_start_date_collector = '', 
                         host = '', 
                         unit_type = '', )
                     ],
-                status = ibm_gdsc_sdk_software.models.guardiumconnectorv3_status_response_base.guardiumconnectorv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.guardiumconnectorv3_status_response_base.guardiumconnectorv3StatusResponseBase(
                     message = '', 
                     status = '', )
             )

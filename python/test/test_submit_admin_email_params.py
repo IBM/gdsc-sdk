@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.submit_admin_email_params import SubmitAdminEmailParams
+from ibm_gdsc_sdk_saas.models.submit_admin_email_params import SubmitAdminEmailParams
 
 class TestSubmitAdminEmailParams(unittest.TestCase):
     """SubmitAdminEmailParams unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.tenantuserv3_get_privilege_response import Tenantuserv3GetPrivilegeResponse
+from ibm_gdsc_sdk_saas.models.tenantuserv3_get_privilege_response import Tenantuserv3GetPrivilegeResponse
 
 class TestTenantuserv3GetPrivilegeResponse(unittest.TestCase):
     """Tenantuserv3GetPrivilegeResponse unit test stubs"""
@@ -35,7 +35,7 @@ class TestTenantuserv3GetPrivilegeResponse(unittest.TestCase):
         model = Tenantuserv3GetPrivilegeResponse()
         if include_optional:
             return Tenantuserv3GetPrivilegeResponse(
-                privilege = ibm_gdsc_sdk_software.models.tenantuserv3_privilege.tenantuserv3Privilege(
+                privilege = ibm_gdsc_sdk_saas.models.tenantuserv3_privilege.tenantuserv3Privilege(
                     author_id = '', 
                     immutable_roles = [
                         ''

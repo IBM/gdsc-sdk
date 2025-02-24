@@ -2,7 +2,7 @@
 
 # Guardiumconnectorv3GetCMsConfigResponse
 
-Retrieves the list of Central Managers registered to Guardium.
+Retrieves the list of Central Managers registered to GDSC.
 
 ## Properties
 

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.data_movements_api import DataMovementsApi
+from ibm_gdsc_sdk_saas.api.data_movements_api import DataMovementsApi
 
 
 class TestDataMovementsApi(unittest.TestCase):

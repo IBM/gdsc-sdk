@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.auditv3_filter_field import Auditv3FilterField
+from ibm_gdsc_sdk_saas.models.auditv3_filter_field import Auditv3FilterField
 
 class TestAuditv3FilterField(unittest.TestCase):
     """Auditv3FilterField unit test stubs"""
@@ -36,7 +36,7 @@ class TestAuditv3FilterField(unittest.TestCase):
         if include_optional:
             return Auditv3FilterField(
                 filters = [
-                    ibm_gdsc_sdk_software.models.auditv3_filter.auditv3Filter(
+                    ibm_gdsc_sdk_saas.models.auditv3_filter.auditv3Filter(
                         count = 56, 
                         value = '', )
                     ],

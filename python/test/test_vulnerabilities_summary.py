@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.vulnerabilities_summary import VulnerabilitiesSummary
+from ibm_gdsc_sdk_saas.models.vulnerabilities_summary import VulnerabilitiesSummary
 
 class TestVulnerabilitiesSummary(unittest.TestCase):
     """VulnerabilitiesSummary unit test stubs"""
@@ -36,37 +36,37 @@ class TestVulnerabilitiesSummary(unittest.TestCase):
         if include_optional:
             return VulnerabilitiesSummary(
                 criticality_count = [
-                    ibm_gdsc_sdk_software.models.vulnerabilities_criticality_count_inner.VulnerabilitiesCriticalityCount_inner(
+                    ibm_gdsc_sdk_saas.models.vulnerabilities_criticality_count_inner.VulnerabilitiesCriticalityCount_inner(
                         criticality = 'HIGH', 
                         count = 5, )
                     ],
                 vulnerability_type_count = [
-                    ibm_gdsc_sdk_software.models.vulnerabilities_summary_vulnerability_type_count_inner.VulnerabilitiesSummary_vulnerabilityTypeCount_inner(
+                    ibm_gdsc_sdk_saas.models.vulnerabilities_summary_vulnerability_type_count_inner.VulnerabilitiesSummary_vulnerabilityTypeCount_inner(
                         vulnerability_type = 'public-facing', 
                         count = 10, )
                     ],
                 status_type_count = [
-                    ibm_gdsc_sdk_software.models.vulnerabilities_summary_status_type_count_inner.VulnerabilitiesSummary_statusTypeCount_inner(
+                    ibm_gdsc_sdk_saas.models.vulnerabilities_summary_status_type_count_inner.VulnerabilitiesSummary_statusTypeCount_inner(
                         status_type = 'review', 
                         count = 1, )
                     ],
-                status_summary = ibm_gdsc_sdk_software.models.vulnerabilities_summary_status_summary.VulnerabilitiesSummary_statusSummary(
+                status_summary = ibm_gdsc_sdk_saas.models.vulnerabilities_summary_status_summary.VulnerabilitiesSummary_statusSummary(
                     recently_discovered = 12, 
                     open = 34, 
                     fixed = 56, ),
-                affected_data_store_summary = ibm_gdsc_sdk_software.models.vulnerabilities_summary_affected_data_store_summary.VulnerabilitiesSummary_affectedDataStoreSummary(
+                affected_data_store_summary = ibm_gdsc_sdk_saas.models.vulnerabilities_summary_affected_data_store_summary.VulnerabilitiesSummary_affectedDataStoreSummary(
                     cloud_account_ids_count = [
-                        ibm_gdsc_sdk_software.models.vulnerabilities_summary_affected_data_store_summary_cloud_account_ids_count_inner.VulnerabilitiesSummary_affectedDataStoreSummary_cloudAccountIdsCount_inner(
+                        ibm_gdsc_sdk_saas.models.vulnerabilities_summary_affected_data_store_summary_cloud_account_ids_count_inner.VulnerabilitiesSummary_affectedDataStoreSummary_cloudAccountIdsCount_inner(
                             cloud_account_id = '123456789101', 
                             count = 1, )
                         ], 
                     cloud_regions_count = [
-                        ibm_gdsc_sdk_software.models.vulnerabilities_summary_affected_data_store_summary_cloud_regions_count_inner.VulnerabilitiesSummary_affectedDataStoreSummary_cloudRegionsCount_inner(
+                        ibm_gdsc_sdk_saas.models.vulnerabilities_summary_affected_data_store_summary_cloud_regions_count_inner.VulnerabilitiesSummary_affectedDataStoreSummary_cloudRegionsCount_inner(
                             cloud_region = '', 
                             count = 1.337, )
                         ], 
                     data_store_types = [
-                        ibm_gdsc_sdk_software.models.vulnerabilities_summary_affected_data_store_summary_data_store_types_inner.VulnerabilitiesSummary_affectedDataStoreSummary_dataStoreTypes_inner(
+                        ibm_gdsc_sdk_saas.models.vulnerabilities_summary_affected_data_store_summary_data_store_types_inner.VulnerabilitiesSummary_affectedDataStoreSummary_dataStoreTypes_inner(
                             data_store_type = '', 
                             count = 1.337, )
                         ], )
@@ -74,37 +74,37 @@ class TestVulnerabilitiesSummary(unittest.TestCase):
         else:
             return VulnerabilitiesSummary(
                 criticality_count = [
-                    ibm_gdsc_sdk_software.models.vulnerabilities_criticality_count_inner.VulnerabilitiesCriticalityCount_inner(
+                    ibm_gdsc_sdk_saas.models.vulnerabilities_criticality_count_inner.VulnerabilitiesCriticalityCount_inner(
                         criticality = 'HIGH', 
                         count = 5, )
                     ],
                 vulnerability_type_count = [
-                    ibm_gdsc_sdk_software.models.vulnerabilities_summary_vulnerability_type_count_inner.VulnerabilitiesSummary_vulnerabilityTypeCount_inner(
+                    ibm_gdsc_sdk_saas.models.vulnerabilities_summary_vulnerability_type_count_inner.VulnerabilitiesSummary_vulnerabilityTypeCount_inner(
                         vulnerability_type = 'public-facing', 
                         count = 10, )
                     ],
                 status_type_count = [
-                    ibm_gdsc_sdk_software.models.vulnerabilities_summary_status_type_count_inner.VulnerabilitiesSummary_statusTypeCount_inner(
+                    ibm_gdsc_sdk_saas.models.vulnerabilities_summary_status_type_count_inner.VulnerabilitiesSummary_statusTypeCount_inner(
                         status_type = 'review', 
                         count = 1, )
                     ],
-                status_summary = ibm_gdsc_sdk_software.models.vulnerabilities_summary_status_summary.VulnerabilitiesSummary_statusSummary(
+                status_summary = ibm_gdsc_sdk_saas.models.vulnerabilities_summary_status_summary.VulnerabilitiesSummary_statusSummary(
                     recently_discovered = 12, 
                     open = 34, 
                     fixed = 56, ),
-                affected_data_store_summary = ibm_gdsc_sdk_software.models.vulnerabilities_summary_affected_data_store_summary.VulnerabilitiesSummary_affectedDataStoreSummary(
+                affected_data_store_summary = ibm_gdsc_sdk_saas.models.vulnerabilities_summary_affected_data_store_summary.VulnerabilitiesSummary_affectedDataStoreSummary(
                     cloud_account_ids_count = [
-                        ibm_gdsc_sdk_software.models.vulnerabilities_summary_affected_data_store_summary_cloud_account_ids_count_inner.VulnerabilitiesSummary_affectedDataStoreSummary_cloudAccountIdsCount_inner(
+                        ibm_gdsc_sdk_saas.models.vulnerabilities_summary_affected_data_store_summary_cloud_account_ids_count_inner.VulnerabilitiesSummary_affectedDataStoreSummary_cloudAccountIdsCount_inner(
                             cloud_account_id = '123456789101', 
                             count = 1, )
                         ], 
                     cloud_regions_count = [
-                        ibm_gdsc_sdk_software.models.vulnerabilities_summary_affected_data_store_summary_cloud_regions_count_inner.VulnerabilitiesSummary_affectedDataStoreSummary_cloudRegionsCount_inner(
+                        ibm_gdsc_sdk_saas.models.vulnerabilities_summary_affected_data_store_summary_cloud_regions_count_inner.VulnerabilitiesSummary_affectedDataStoreSummary_cloudRegionsCount_inner(
                             cloud_region = '', 
                             count = 1.337, )
                         ], 
                     data_store_types = [
-                        ibm_gdsc_sdk_software.models.vulnerabilities_summary_affected_data_store_summary_data_store_types_inner.VulnerabilitiesSummary_affectedDataStoreSummary_dataStoreTypes_inner(
+                        ibm_gdsc_sdk_saas.models.vulnerabilities_summary_affected_data_store_summary_data_store_types_inner.VulnerabilitiesSummary_affectedDataStoreSummary_dataStoreTypes_inner(
                             data_store_type = '', 
                             count = 1.337, )
                         ], ),

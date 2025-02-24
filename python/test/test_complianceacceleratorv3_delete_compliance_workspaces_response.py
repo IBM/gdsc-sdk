@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.complianceacceleratorv3_delete_compliance_workspaces_response import Complianceacceleratorv3DeleteComplianceWorkspacesResponse
+from ibm_gdsc_sdk_saas.models.complianceacceleratorv3_delete_compliance_workspaces_response import Complianceacceleratorv3DeleteComplianceWorkspacesResponse
 
 class TestComplianceacceleratorv3DeleteComplianceWorkspacesResponse(unittest.TestCase):
     """Complianceacceleratorv3DeleteComplianceWorkspacesResponse unit test stubs"""
@@ -35,7 +35,7 @@ class TestComplianceacceleratorv3DeleteComplianceWorkspacesResponse(unittest.Tes
         model = Complianceacceleratorv3DeleteComplianceWorkspacesResponse()
         if include_optional:
             return Complianceacceleratorv3DeleteComplianceWorkspacesResponse(
-                status = ibm_gdsc_sdk_software.models.complianceacceleratorv3_status_response_base.complianceacceleratorv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.complianceacceleratorv3_status_response_base.complianceacceleratorv3StatusResponseBase(
                     message = '', 
                     status = '', ),
                 workspace_id = ''

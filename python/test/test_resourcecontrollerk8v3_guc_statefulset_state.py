@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_guc_statefulset_state import Resourcecontrollerk8v3GUCStatefulsetState
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_guc_statefulset_state import Resourcecontrollerk8v3GUCStatefulsetState
 
 class TestResourcecontrollerk8v3GUCStatefulsetState(unittest.TestCase):
     """Resourcecontrollerk8v3GUCStatefulsetState unit test stubs"""

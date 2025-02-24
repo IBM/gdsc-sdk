@@ -8,6 +8,7 @@ SnifAssistResponse defines the message structure for response.
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+|**batchNum** | **String** | Specify batch number if Type is POLICY or GROUP_UPDATE. |  [optional] |
 |**data** | **byte[]** | Data field if any. |  [optional] |
 |**dataCrc** | **Long** | Provide CRC value of Response Data. |  [optional] |
 |**stapId** | **String** | Provide STAP identifer. |  [optional] |

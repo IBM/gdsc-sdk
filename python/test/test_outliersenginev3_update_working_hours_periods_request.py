@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.outliersenginev3_update_working_hours_periods_request import Outliersenginev3UpdateWorkingHoursPeriodsRequest
+from ibm_gdsc_sdk_saas.models.outliersenginev3_update_working_hours_periods_request import Outliersenginev3UpdateWorkingHoursPeriodsRequest
 
 class TestOutliersenginev3UpdateWorkingHoursPeriodsRequest(unittest.TestCase):
     """Outliersenginev3UpdateWorkingHoursPeriodsRequest unit test stubs"""
@@ -35,7 +35,7 @@ class TestOutliersenginev3UpdateWorkingHoursPeriodsRequest(unittest.TestCase):
         model = Outliersenginev3UpdateWorkingHoursPeriodsRequest()
         if include_optional:
             return Outliersenginev3UpdateWorkingHoursPeriodsRequest(
-                period = ibm_gdsc_sdk_software.models.outliersenginev3_working_hours_period.outliersenginev3WorkingHoursPeriod(
+                period = ibm_gdsc_sdk_saas.models.outliersenginev3_working_hours_period.outliersenginev3WorkingHoursPeriod(
                     contiguous = True, 
                     datetime_code_description = '', 
                     datetime_code_id = 56, 

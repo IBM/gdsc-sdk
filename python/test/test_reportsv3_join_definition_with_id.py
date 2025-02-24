@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_join_definition_with_id import Reportsv3JoinDefinitionWithID
+from ibm_gdsc_sdk_saas.models.reportsv3_join_definition_with_id import Reportsv3JoinDefinitionWithID
 
 class TestReportsv3JoinDefinitionWithID(unittest.TestCase):
     """Reportsv3JoinDefinitionWithID unit test stubs"""
@@ -37,7 +37,7 @@ class TestReportsv3JoinDefinitionWithID(unittest.TestCase):
             return Reportsv3JoinDefinitionWithID(
                 category_id = '',
                 header_pair_list = [
-                    ibm_gdsc_sdk_software.models.header_pair___pair_of_source_and_target_report_headers_being_joined_on.HeaderPair - pair of source and target report headers being joined on(
+                    ibm_gdsc_sdk_saas.models.header_pair___pair_of_source_and_target_report_headers_being_joined_on.HeaderPair - pair of source and target report headers being joined on(
                         source_header_id = '', 
                         target_header_id = '', )
                     ],

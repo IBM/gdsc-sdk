@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_setup_cm_response import Guardiumconnectorv3SetupCMResponse
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_setup_cm_response import Guardiumconnectorv3SetupCMResponse
 
 class TestGuardiumconnectorv3SetupCMResponse(unittest.TestCase):
     """Guardiumconnectorv3SetupCMResponse unit test stubs"""
@@ -38,18 +38,18 @@ class TestGuardiumconnectorv3SetupCMResponse(unittest.TestCase):
                 response = '',
                 response_code = '',
                 tasks = [
-                    ibm_gdsc_sdk_software.models.guardiumconnectorv3_task_object.guardiumconnectorv3TaskObject(
+                    ibm_gdsc_sdk_saas.models.guardiumconnectorv3_task_object.guardiumconnectorv3TaskObject(
                         sub_tasks = [
-                            ibm_gdsc_sdk_software.models.guardiumconnectorv3_sub_task_object.guardiumconnectorv3SubTaskObject(
+                            ibm_gdsc_sdk_saas.models.guardiumconnectorv3_sub_task_object.guardiumconnectorv3SubTaskObject(
                                 id = '', 
                                 interval = '', 
                                 params = [
-                                    ibm_gdsc_sdk_software.models.guardiumconnectorv3_task_params_object.guardiumconnectorv3TaskParamsObject(
+                                    ibm_gdsc_sdk_saas.models.guardiumconnectorv3_task_params_object.guardiumconnectorv3TaskParamsObject(
                                         arg_name = '', 
                                         arg_value = '', )
                                     ], )
                             ], 
-                        task_definition = ibm_gdsc_sdk_software.models.guardiumconnectorv3_task_definition_object.guardiumconnectorv3TaskDefinitionObject(
+                        task_definition = ibm_gdsc_sdk_saas.models.guardiumconnectorv3_task_definition_object.guardiumconnectorv3TaskDefinitionObject(
                             execution_trigger = 56, 
                             interval = '', 
                             is_blocker_task = 56, 

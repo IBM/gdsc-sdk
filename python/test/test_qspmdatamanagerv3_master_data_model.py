@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.qspmdatamanagerv3_master_data_model import Qspmdatamanagerv3MasterDataModel
+from ibm_gdsc_sdk_saas.models.qspmdatamanagerv3_master_data_model import Qspmdatamanagerv3MasterDataModel
 
 class TestQspmdatamanagerv3MasterDataModel(unittest.TestCase):
     """Qspmdatamanagerv3MasterDataModel unit test stubs"""
@@ -40,7 +40,7 @@ class TestQspmdatamanagerv3MasterDataModel(unittest.TestCase):
                 ref_has_schema = True,
                 ref_id = '',
                 ref_name = '',
-                ref_schema = ibm_gdsc_sdk_software.models.protobuf_any.protobufAny(
+                ref_schema = ibm_gdsc_sdk_saas.models.protobuf_any.protobufAny(
                     type_url = '', 
                     value = 'YQ==', ),
                 ref_type = '',

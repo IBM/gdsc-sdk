@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.vulnerabilities_summary_affected_data_store_summary import VulnerabilitiesSummaryAffectedDataStoreSummary
+from ibm_gdsc_sdk_saas.models.vulnerabilities_summary_affected_data_store_summary import VulnerabilitiesSummaryAffectedDataStoreSummary
 
 class TestVulnerabilitiesSummaryAffectedDataStoreSummary(unittest.TestCase):
     """VulnerabilitiesSummaryAffectedDataStoreSummary unit test stubs"""
@@ -36,17 +36,17 @@ class TestVulnerabilitiesSummaryAffectedDataStoreSummary(unittest.TestCase):
         if include_optional:
             return VulnerabilitiesSummaryAffectedDataStoreSummary(
                 cloud_account_ids_count = [
-                    ibm_gdsc_sdk_software.models.vulnerabilities_summary_affected_data_store_summary_cloud_account_ids_count_inner.VulnerabilitiesSummary_affectedDataStoreSummary_cloudAccountIdsCount_inner(
+                    ibm_gdsc_sdk_saas.models.vulnerabilities_summary_affected_data_store_summary_cloud_account_ids_count_inner.VulnerabilitiesSummary_affectedDataStoreSummary_cloudAccountIdsCount_inner(
                         cloud_account_id = '123456789101', 
                         count = 1, )
                     ],
                 cloud_regions_count = [
-                    ibm_gdsc_sdk_software.models.vulnerabilities_summary_affected_data_store_summary_cloud_regions_count_inner.VulnerabilitiesSummary_affectedDataStoreSummary_cloudRegionsCount_inner(
+                    ibm_gdsc_sdk_saas.models.vulnerabilities_summary_affected_data_store_summary_cloud_regions_count_inner.VulnerabilitiesSummary_affectedDataStoreSummary_cloudRegionsCount_inner(
                         cloud_region = '', 
                         count = 1.337, )
                     ],
                 data_store_types = [
-                    ibm_gdsc_sdk_software.models.vulnerabilities_summary_affected_data_store_summary_data_store_types_inner.VulnerabilitiesSummary_affectedDataStoreSummary_dataStoreTypes_inner(
+                    ibm_gdsc_sdk_saas.models.vulnerabilities_summary_affected_data_store_summary_data_store_types_inner.VulnerabilitiesSummary_affectedDataStoreSummary_dataStoreTypes_inner(
                         data_store_type = '', 
                         count = 1.337, )
                     ]
@@ -54,17 +54,17 @@ class TestVulnerabilitiesSummaryAffectedDataStoreSummary(unittest.TestCase):
         else:
             return VulnerabilitiesSummaryAffectedDataStoreSummary(
                 cloud_account_ids_count = [
-                    ibm_gdsc_sdk_software.models.vulnerabilities_summary_affected_data_store_summary_cloud_account_ids_count_inner.VulnerabilitiesSummary_affectedDataStoreSummary_cloudAccountIdsCount_inner(
+                    ibm_gdsc_sdk_saas.models.vulnerabilities_summary_affected_data_store_summary_cloud_account_ids_count_inner.VulnerabilitiesSummary_affectedDataStoreSummary_cloudAccountIdsCount_inner(
                         cloud_account_id = '123456789101', 
                         count = 1, )
                     ],
                 cloud_regions_count = [
-                    ibm_gdsc_sdk_software.models.vulnerabilities_summary_affected_data_store_summary_cloud_regions_count_inner.VulnerabilitiesSummary_affectedDataStoreSummary_cloudRegionsCount_inner(
+                    ibm_gdsc_sdk_saas.models.vulnerabilities_summary_affected_data_store_summary_cloud_regions_count_inner.VulnerabilitiesSummary_affectedDataStoreSummary_cloudRegionsCount_inner(
                         cloud_region = '', 
                         count = 1.337, )
                     ],
                 data_store_types = [
-                    ibm_gdsc_sdk_software.models.vulnerabilities_summary_affected_data_store_summary_data_store_types_inner.VulnerabilitiesSummary_affectedDataStoreSummary_dataStoreTypes_inner(
+                    ibm_gdsc_sdk_saas.models.vulnerabilities_summary_affected_data_store_summary_data_store_types_inner.VulnerabilitiesSummary_affectedDataStoreSummary_dataStoreTypes_inner(
                         data_store_type = '', 
                         count = 1.337, )
                     ],

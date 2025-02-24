@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_get_gdp_policy_meta_data_response import Policybuilderv3GetGdpPolicyMetaDataResponse
+from ibm_gdsc_sdk_saas.models.policybuilderv3_get_gdp_policy_meta_data_response import Policybuilderv3GetGdpPolicyMetaDataResponse
 
 class TestPolicybuilderv3GetGdpPolicyMetaDataResponse(unittest.TestCase):
     """Policybuilderv3GetGdpPolicyMetaDataResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestPolicybuilderv3GetGdpPolicyMetaDataResponse(unittest.TestCase):
         if include_optional:
             return Policybuilderv3GetGdpPolicyMetaDataResponse(
                 policies = [
-                    ibm_gdsc_sdk_software.models.gdp_policy_object_used_when_listing_gdp_policies_to_sync.Gdp Policy Object used when listing gdp policies to sync(
+                    ibm_gdsc_sdk_saas.models.gdp_policy_object_used_when_listing_gdp_policies_to_sync.Gdp Policy Object used when listing GDP policies to sync(
                         central_manager = '', 
                         id = '', 
                         last_edited_timestamp = '', 
@@ -45,7 +45,7 @@ class TestPolicybuilderv3GetGdpPolicyMetaDataResponse(unittest.TestCase):
                         policy_sub_type = '', 
                         policy_type = '', )
                     ],
-                status = ibm_gdsc_sdk_software.models.policybuilderv3_status_response_base.policybuilderv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.policybuilderv3_status_response_base.policybuilderv3StatusResponseBase(
                     message = '', 
                     status = '', )
             )

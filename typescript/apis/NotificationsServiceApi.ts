@@ -16,6 +16,10 @@ import { Notificationsv3GetNotificationFilenameResponse } from '../models/Notifi
 import { Notificationsv3GetNotificationRecordResponse } from '../models/Notificationsv3GetNotificationRecordResponse';
 import { Notificationsv3GetNotificationRecordsResponse } from '../models/Notificationsv3GetNotificationRecordsResponse';
 import { Notificationsv3GetTicketStatusResponse } from '../models/Notificationsv3GetTicketStatusResponse';
+import { Notificationsv3PostNotificationRecordRequest } from '../models/Notificationsv3PostNotificationRecordRequest';
+import { Notificationsv3PostNotificationRecordResponse } from '../models/Notificationsv3PostNotificationRecordResponse';
+import { Notificationsv3SearchNotificationRecordsRequest } from '../models/Notificationsv3SearchNotificationRecordsRequest';
+import { Notificationsv3SearchNotificationRecordsResponse } from '../models/Notificationsv3SearchNotificationRecordsResponse';
 import { Notificationsv3TestIntegrationRequest } from '../models/Notificationsv3TestIntegrationRequest';
 import { Notificationsv3TestIntegrationResponse } from '../models/Notificationsv3TestIntegrationResponse';
 import { Notificationsv3UpdateNotificationRecordRequest } from '../models/Notificationsv3UpdateNotificationRecordRequest';
@@ -221,12 +225,14 @@ export class NotificationsServiceApiRequestFactory extends BaseAPIRequestFactory
      * @param filterState Only return record that include the specified state.
      * @param filterOrigins Only return record that includes the specified origins.
      * @param filterOriginData Only return record that with the specified origin_data.
+     * @param filterLimit The max amount of rows to return for this single query.
      * @param offset The amount to offset the rows by for pagination.
      * @param limit The max amount of rows to return for pagination.
      * @param includeFilterCounts Computing the filter counts is relatively expensive, only compute when needed.
      */
-    public async notificationsServiceGetNotificationRecords(filterStartTime?: Date, filterEndTime?: Date, filterState?: 'INCLUDE_ALL' | 'UNREAD_ONLY' | 'READ_ONLY' | 'COMPLETE_ONLY' | 'NOT_COMPLETE', filterOrigins?: Array<string>, filterOriginData?: string, offset?: number, limit?: number, includeFilterCounts?: boolean, _options?: Configuration): Promise<RequestContext> {
+    public async notificationsServiceGetNotificationRecords(filterStartTime?: Date, filterEndTime?: Date, filterState?: 'INCLUDE_ALL' | 'UNREAD_ONLY' | 'READ_ONLY' | 'COMPLETE_ONLY' | 'NOT_COMPLETE', filterOrigins?: Array<string>, filterOriginData?: string, filterLimit?: number, offset?: number, limit?: number, includeFilterCounts?: boolean, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
+
 
 
 
@@ -266,6 +272,11 @@ export class NotificationsServiceApiRequestFactory extends BaseAPIRequestFactory
         // Query Params
         if (filterOriginData !== undefined) {
             requestContext.setQueryParam("filter.origin_data", ObjectSerializer.serialize(filterOriginData, "string", ""));
+        }
+
+        // Query Params
+        if (filterLimit !== undefined) {
+            requestContext.setQueryParam("filter.limit", ObjectSerializer.serialize(filterLimit, "number", "int64"));
         }
 
         // Query Params
@@ -331,6 +342,110 @@ export class NotificationsServiceApiRequestFactory extends BaseAPIRequestFactory
             requestContext.setQueryParam("integration_id", ObjectSerializer.serialize(integrationId, "string", ""));
         }
 
+
+        let authMethod: SecurityAuthentication | undefined;
+        // Apply auth methods
+        authMethod = _config.authMethods["BasicAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        // Apply auth methods
+        authMethod = _config.authMethods["ApiKeyAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Summary: For PostNotificationRecord notification only Description: Sends notification with recipients and returns a status
+     * @param notificationsv3PostNotificationRecordRequest 
+     */
+    public async notificationsServicePostNotificationRecord(notificationsv3PostNotificationRecordRequest: Notificationsv3PostNotificationRecordRequest, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'notificationsv3PostNotificationRecordRequest' is not null or undefined
+        if (notificationsv3PostNotificationRecordRequest === null || notificationsv3PostNotificationRecordRequest === undefined) {
+            throw new RequiredError("NotificationsServiceApi", "notificationsServicePostNotificationRecord", "notificationsv3PostNotificationRecordRequest");
+        }
+
+
+        // Path Params
+        const localVarPath = '/api/v3/notifications';
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        // Body Params
+        const contentType = ObjectSerializer.getPreferredMediaType([
+            "application/json"
+        ]);
+        requestContext.setHeaderParam("Content-Type", contentType);
+        const serializedBody = ObjectSerializer.stringify(
+            ObjectSerializer.serialize(notificationsv3PostNotificationRecordRequest, "Notificationsv3PostNotificationRecordRequest", ""),
+            contentType
+        );
+        requestContext.setBody(serializedBody);
+
+        let authMethod: SecurityAuthentication | undefined;
+        // Apply auth methods
+        authMethod = _config.authMethods["BasicAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        // Apply auth methods
+        authMethod = _config.authMethods["ApiKeyAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Summary: Search notification records Description: Return notification records using pipeline of filters
+     * @param notificationsv3SearchNotificationRecordsRequest 
+     */
+    public async notificationsServiceSearchNotificationRecords(notificationsv3SearchNotificationRecordsRequest: Notificationsv3SearchNotificationRecordsRequest, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'notificationsv3SearchNotificationRecordsRequest' is not null or undefined
+        if (notificationsv3SearchNotificationRecordsRequest === null || notificationsv3SearchNotificationRecordsRequest === undefined) {
+            throw new RequiredError("NotificationsServiceApi", "notificationsServiceSearchNotificationRecords", "notificationsv3SearchNotificationRecordsRequest");
+        }
+
+
+        // Path Params
+        const localVarPath = '/api/v3/notifications/search';
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        // Body Params
+        const contentType = ObjectSerializer.getPreferredMediaType([
+            "application/json"
+        ]);
+        requestContext.setHeaderParam("Content-Type", contentType);
+        const serializedBody = ObjectSerializer.stringify(
+            ObjectSerializer.serialize(notificationsv3SearchNotificationRecordsRequest, "Notificationsv3SearchNotificationRecordsRequest", ""),
+            contentType
+        );
+        requestContext.setBody(serializedBody);
 
         let authMethod: SecurityAuthentication | undefined;
         // Apply auth methods
@@ -421,7 +536,7 @@ export class NotificationsServiceApiRequestFactory extends BaseAPIRequestFactory
         const localVarPath = '/api/v3/notifications';
 
         // Make Request Context
-        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.PUT);
         requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
 
 
@@ -670,6 +785,78 @@ export class NotificationsServiceApiResponseProcessor {
                 ObjectSerializer.parse(await response.body.text(), contentType),
                 "Notificationsv3GetTicketStatusResponse", ""
             ) as Notificationsv3GetTicketStatusResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to notificationsServicePostNotificationRecord
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async notificationsServicePostNotificationRecordWithHttpInfo(response: ResponseContext): Promise<HttpInfo<Notificationsv3PostNotificationRecordResponse >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: Notificationsv3PostNotificationRecordResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Notificationsv3PostNotificationRecordResponse", ""
+            ) as Notificationsv3PostNotificationRecordResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("0", response.httpStatusCode)) {
+            const body: RuntimeError = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RuntimeError", ""
+            ) as RuntimeError;
+            throw new ApiException<RuntimeError>(response.httpStatusCode, "An unexpected error response.", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: Notificationsv3PostNotificationRecordResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Notificationsv3PostNotificationRecordResponse", ""
+            ) as Notificationsv3PostNotificationRecordResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to notificationsServiceSearchNotificationRecords
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async notificationsServiceSearchNotificationRecordsWithHttpInfo(response: ResponseContext): Promise<HttpInfo<Notificationsv3SearchNotificationRecordsResponse >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: Notificationsv3SearchNotificationRecordsResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Notificationsv3SearchNotificationRecordsResponse", ""
+            ) as Notificationsv3SearchNotificationRecordsResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("0", response.httpStatusCode)) {
+            const body: RuntimeError = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RuntimeError", ""
+            ) as RuntimeError;
+            throw new ApiException<RuntimeError>(response.httpStatusCode, "An unexpected error response.", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: Notificationsv3SearchNotificationRecordsResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Notificationsv3SearchNotificationRecordsResponse", ""
+            ) as Notificationsv3SearchNotificationRecordsResponse;
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
         }
 

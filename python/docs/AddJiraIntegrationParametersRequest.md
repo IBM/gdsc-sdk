@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.add_jira_integration_parameters_request import AddJiraIntegrationParametersRequest
+from ibm_gdsc_sdk_saas.models.add_jira_integration_parameters_request import AddJiraIntegrationParametersRequest
 
 # TODO update the JSON string below
 json = "{}"

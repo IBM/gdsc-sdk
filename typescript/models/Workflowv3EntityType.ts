@@ -13,7 +13,7 @@
 import { HttpFile } from '../http/http';
 
 /**
-* Assignment type.   - UNDEFINED_ENTITY_TYPE: Undefined.  - EMAIL: External e-mail.  - USER: Insights user.  - ROLE: Insights role.  - DISTRIBUTION: Insights distribution rule.
+* Assignment type.   - UNDEFINED_ENTITY_TYPE: Undefined.  - EMAIL: External e-mail.  - USER: GDSC user.  - ROLE: GDSC role.  - DISTRIBUTION: GDSC distribution rule.
 */
 export enum Workflowv3EntityType {
     UndefinedEntityType = 'UNDEFINED_ENTITY_TYPE',

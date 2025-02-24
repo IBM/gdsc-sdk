@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.outliersenginev3_outlier_response import Outliersenginev3OutlierResponse
+from ibm_gdsc_sdk_saas.models.outliersenginev3_outlier_response import Outliersenginev3OutlierResponse
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_status import Connectionsv3Status
+from ibm_gdsc_sdk_saas.models.connectionsv3_status import Connectionsv3Status
 
 class TestConnectionsv3Status(unittest.TestCase):
     """Connectionsv3Status unit test stubs"""

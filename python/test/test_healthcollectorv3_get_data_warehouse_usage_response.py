@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.healthcollectorv3_get_data_warehouse_usage_response import Healthcollectorv3GetDataWarehouseUsageResponse
+from ibm_gdsc_sdk_saas.models.healthcollectorv3_get_data_warehouse_usage_response import Healthcollectorv3GetDataWarehouseUsageResponse
 
 class TestHealthcollectorv3GetDataWarehouseUsageResponse(unittest.TestCase):
     """Healthcollectorv3GetDataWarehouseUsageResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestHealthcollectorv3GetDataWarehouseUsageResponse(unittest.TestCase):
         if include_optional:
             return Healthcollectorv3GetDataWarehouseUsageResponse(
                 warehouse_usage = [
-                    ibm_gdsc_sdk_software.models.healthcollectorv3_usage.healthcollectorv3Usage(
+                    ibm_gdsc_sdk_saas.models.healthcollectorv3_usage.healthcollectorv3Usage(
                         label = '', 
                         name = '', 
                         nls_key = '', 

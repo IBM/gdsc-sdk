@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.tenantuserv3_unique_privilege import Tenantuserv3UniquePrivilege
+from ibm_gdsc_sdk_saas.models.tenantuserv3_unique_privilege import Tenantuserv3UniquePrivilege
 
 # TODO update the JSON string below
 json = "{}"

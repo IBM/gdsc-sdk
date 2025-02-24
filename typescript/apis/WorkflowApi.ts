@@ -12,24 +12,32 @@ import { RuntimeError } from '../models/RuntimeError';
 import { Workflowv3CaseListResponse } from '../models/Workflowv3CaseListResponse';
 import { Workflowv3CreateCaseRequest } from '../models/Workflowv3CreateCaseRequest';
 import { Workflowv3CreateCaseResponse } from '../models/Workflowv3CreateCaseResponse';
+import { Workflowv3CreateProductEntityResponse } from '../models/Workflowv3CreateProductEntityResponse';
 import { Workflowv3CreateTaskRequest } from '../models/Workflowv3CreateTaskRequest';
 import { Workflowv3CreateTaskResponse } from '../models/Workflowv3CreateTaskResponse';
+import { Workflowv3DeleteProductEntityResponse } from '../models/Workflowv3DeleteProductEntityResponse';
 import { Workflowv3GetCasesCountRequest } from '../models/Workflowv3GetCasesCountRequest';
 import { Workflowv3GetCasesCountResponse } from '../models/Workflowv3GetCasesCountResponse';
 import { Workflowv3GetFilenameResponse } from '../models/Workflowv3GetFilenameResponse';
 import { Workflowv3GetJobsCountRequest } from '../models/Workflowv3GetJobsCountRequest';
 import { Workflowv3GetJobsCountResponse } from '../models/Workflowv3GetJobsCountResponse';
+import { Workflowv3GetProductEntitiesResponse } from '../models/Workflowv3GetProductEntitiesResponse';
 import { Workflowv3GetReportResultResponse } from '../models/Workflowv3GetReportResultResponse';
 import { Workflowv3GetTasksCountRequest } from '../models/Workflowv3GetTasksCountRequest';
 import { Workflowv3GetTasksCountResponse } from '../models/Workflowv3GetTasksCountResponse';
+import { Workflowv3ProductEntity } from '../models/Workflowv3ProductEntity';
 import { Workflowv3SearchCasesRequest } from '../models/Workflowv3SearchCasesRequest';
 import { Workflowv3SearchReportsResponse } from '../models/Workflowv3SearchReportsResponse';
 import { Workflowv3SearchTasksRequest } from '../models/Workflowv3SearchTasksRequest';
 import { Workflowv3TaskListResponse } from '../models/Workflowv3TaskListResponse';
 import { Workflowv3UpdateCasesRequest } from '../models/Workflowv3UpdateCasesRequest';
 import { Workflowv3UpdateCasesResponse } from '../models/Workflowv3UpdateCasesResponse';
+import { Workflowv3UpdateProductEntityRequest } from '../models/Workflowv3UpdateProductEntityRequest';
+import { Workflowv3UpdateProductEntityResponse } from '../models/Workflowv3UpdateProductEntityResponse';
 import { Workflowv3UpdateTasksRequest } from '../models/Workflowv3UpdateTasksRequest';
 import { Workflowv3UpdateTasksResponse } from '../models/Workflowv3UpdateTasksResponse';
+import { Workflowv3WorkflowEvent } from '../models/Workflowv3WorkflowEvent';
+import { Workflowv3WorkflowEventResponse } from '../models/Workflowv3WorkflowEventResponse';
 
 /**
  * no description
@@ -64,6 +72,58 @@ export class WorkflowApiRequestFactory extends BaseAPIRequestFactory {
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
             ObjectSerializer.serialize(workflowv3CreateCaseRequest, "Workflowv3CreateCaseRequest", ""),
+            contentType
+        );
+        requestContext.setBody(serializedBody);
+
+        let authMethod: SecurityAuthentication | undefined;
+        // Apply auth methods
+        authMethod = _config.authMethods["BasicAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        // Apply auth methods
+        authMethod = _config.authMethods["ApiKeyAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Summary: Create product entity Description: Create single product entity.
+     * @param workflowv3ProductEntity 
+     */
+    public async workflowCreateProductEntity(workflowv3ProductEntity: Workflowv3ProductEntity, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'workflowv3ProductEntity' is not null or undefined
+        if (workflowv3ProductEntity === null || workflowv3ProductEntity === undefined) {
+            throw new RequiredError("WorkflowApi", "workflowCreateProductEntity", "workflowv3ProductEntity");
+        }
+
+
+        // Path Params
+        const localVarPath = '/api/v3/workflow/productentities';
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        // Body Params
+        const contentType = ObjectSerializer.getPreferredMediaType([
+            "application/json"
+        ]);
+        requestContext.setHeaderParam("Content-Type", contentType);
+        const serializedBody = ObjectSerializer.stringify(
+            ObjectSerializer.serialize(workflowv3ProductEntity, "Workflowv3ProductEntity", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -127,6 +187,100 @@ export class WorkflowApiRequestFactory extends BaseAPIRequestFactory {
             contentType
         );
         requestContext.setBody(serializedBody);
+
+        let authMethod: SecurityAuthentication | undefined;
+        // Apply auth methods
+        authMethod = _config.authMethods["BasicAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        // Apply auth methods
+        authMethod = _config.authMethods["ApiKeyAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Summary: Post event for processing by workflow rules Description: Find matching workflow rule and run it
+     * @param workflowv3WorkflowEvent 
+     */
+    public async workflowCreateWorkflowEvent(workflowv3WorkflowEvent: Workflowv3WorkflowEvent, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'workflowv3WorkflowEvent' is not null or undefined
+        if (workflowv3WorkflowEvent === null || workflowv3WorkflowEvent === undefined) {
+            throw new RequiredError("WorkflowApi", "workflowCreateWorkflowEvent", "workflowv3WorkflowEvent");
+        }
+
+
+        // Path Params
+        const localVarPath = '/api/v3/workflow/event';
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        // Body Params
+        const contentType = ObjectSerializer.getPreferredMediaType([
+            "application/json"
+        ]);
+        requestContext.setHeaderParam("Content-Type", contentType);
+        const serializedBody = ObjectSerializer.stringify(
+            ObjectSerializer.serialize(workflowv3WorkflowEvent, "Workflowv3WorkflowEvent", ""),
+            contentType
+        );
+        requestContext.setBody(serializedBody);
+
+        let authMethod: SecurityAuthentication | undefined;
+        // Apply auth methods
+        authMethod = _config.authMethods["BasicAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        // Apply auth methods
+        authMethod = _config.authMethods["ApiKeyAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Summary: Delete a product entity Description: Delete a single product entity.
+     * @param entityId Unique id for the product entity
+     */
+    public async workflowDeleteProductEntity(entityId: string, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'entityId' is not null or undefined
+        if (entityId === null || entityId === undefined) {
+            throw new RequiredError("WorkflowApi", "workflowDeleteProductEntity", "entityId");
+        }
+
+
+        // Path Params
+        const localVarPath = '/api/v3/workflow/productentities/{entity_id}'
+            .replace('{' + 'entity_id' + '}', encodeURIComponent(String(entityId)));
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.DELETE);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
 
         let authMethod: SecurityAuthentication | undefined;
         // Apply auth methods
@@ -351,6 +505,96 @@ export class WorkflowApiRequestFactory extends BaseAPIRequestFactory {
             contentType
         );
         requestContext.setBody(serializedBody);
+
+        let authMethod: SecurityAuthentication | undefined;
+        // Apply auth methods
+        authMethod = _config.authMethods["BasicAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        // Apply auth methods
+        authMethod = _config.authMethods["ApiKeyAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Summary: Get products and their associated event entities Description: Return a list of integrated products and their associated event entities
+     * @param offset Optional starting point for the page of data.
+     * @param limit Optional page size.
+     */
+    public async workflowGetProductEntities(offset?: number, limit?: number, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+
+
+        // Path Params
+        const localVarPath = '/api/v3/workflow/productentities';
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+        // Query Params
+        if (offset !== undefined) {
+            requestContext.setQueryParam("offset", ObjectSerializer.serialize(offset, "number", "int32"));
+        }
+
+        // Query Params
+        if (limit !== undefined) {
+            requestContext.setQueryParam("limit", ObjectSerializer.serialize(limit, "number", "int32"));
+        }
+
+
+        let authMethod: SecurityAuthentication | undefined;
+        // Apply auth methods
+        authMethod = _config.authMethods["BasicAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        // Apply auth methods
+        authMethod = _config.authMethods["ApiKeyAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Summary: Get event entity field names, field labels, and field data types Description: Return a list of fields similar to report headers
+     * @param entityId Unique id for the product entity
+     */
+    public async workflowGetProductEntity(entityId: string, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'entityId' is not null or undefined
+        if (entityId === null || entityId === undefined) {
+            throw new RequiredError("WorkflowApi", "workflowGetProductEntity", "entityId");
+        }
+
+
+        // Path Params
+        const localVarPath = '/api/v3/workflow/productentities/{entity_id}'
+            .replace('{' + 'entity_id' + '}', encodeURIComponent(String(entityId)));
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
 
         let authMethod: SecurityAuthentication | undefined;
         // Apply auth methods
@@ -762,6 +1006,66 @@ export class WorkflowApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
+     * Summary: Update a product entity Description: Update a single product entity.
+     * @param entityId Unique Entity id, required for update.
+     * @param workflowv3UpdateProductEntityRequest 
+     */
+    public async workflowUpdateProductEntity(entityId: string, workflowv3UpdateProductEntityRequest: Workflowv3UpdateProductEntityRequest, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'entityId' is not null or undefined
+        if (entityId === null || entityId === undefined) {
+            throw new RequiredError("WorkflowApi", "workflowUpdateProductEntity", "entityId");
+        }
+
+
+        // verify required parameter 'workflowv3UpdateProductEntityRequest' is not null or undefined
+        if (workflowv3UpdateProductEntityRequest === null || workflowv3UpdateProductEntityRequest === undefined) {
+            throw new RequiredError("WorkflowApi", "workflowUpdateProductEntity", "workflowv3UpdateProductEntityRequest");
+        }
+
+
+        // Path Params
+        const localVarPath = '/api/v3/workflow/productentities/{entity_id}'
+            .replace('{' + 'entity_id' + '}', encodeURIComponent(String(entityId)));
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.PUT);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        // Body Params
+        const contentType = ObjectSerializer.getPreferredMediaType([
+            "application/json"
+        ]);
+        requestContext.setHeaderParam("Content-Type", contentType);
+        const serializedBody = ObjectSerializer.stringify(
+            ObjectSerializer.serialize(workflowv3UpdateProductEntityRequest, "Workflowv3UpdateProductEntityRequest", ""),
+            contentType
+        );
+        requestContext.setBody(serializedBody);
+
+        let authMethod: SecurityAuthentication | undefined;
+        // Apply auth methods
+        authMethod = _config.authMethods["BasicAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        // Apply auth methods
+        authMethod = _config.authMethods["ApiKeyAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
      * Summary: Update tasks Description: Update multiple tasks for the same parent in one request.
      * @param caseId Update tasks belonging to common parent.
      * @param workflowv3UpdateTasksRequest 
@@ -865,6 +1169,42 @@ export class WorkflowApiResponseProcessor {
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
      *
+     * @params response Response returned by the server for a request to workflowCreateProductEntity
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async workflowCreateProductEntityWithHttpInfo(response: ResponseContext): Promise<HttpInfo<Workflowv3CreateProductEntityResponse >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: Workflowv3CreateProductEntityResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Workflowv3CreateProductEntityResponse", ""
+            ) as Workflowv3CreateProductEntityResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("0", response.httpStatusCode)) {
+            const body: RuntimeError = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RuntimeError", ""
+            ) as RuntimeError;
+            throw new ApiException<RuntimeError>(response.httpStatusCode, "An unexpected error response.", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: Workflowv3CreateProductEntityResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Workflowv3CreateProductEntityResponse", ""
+            ) as Workflowv3CreateProductEntityResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
      * @params response Response returned by the server for a request to workflowCreateTask
      * @throws ApiException if the response code was not in [200, 299]
      */
@@ -891,6 +1231,78 @@ export class WorkflowApiResponseProcessor {
                 ObjectSerializer.parse(await response.body.text(), contentType),
                 "Workflowv3CreateTaskResponse", ""
             ) as Workflowv3CreateTaskResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to workflowCreateWorkflowEvent
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async workflowCreateWorkflowEventWithHttpInfo(response: ResponseContext): Promise<HttpInfo<Workflowv3WorkflowEventResponse >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: Workflowv3WorkflowEventResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Workflowv3WorkflowEventResponse", ""
+            ) as Workflowv3WorkflowEventResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("0", response.httpStatusCode)) {
+            const body: RuntimeError = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RuntimeError", ""
+            ) as RuntimeError;
+            throw new ApiException<RuntimeError>(response.httpStatusCode, "An unexpected error response.", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: Workflowv3WorkflowEventResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Workflowv3WorkflowEventResponse", ""
+            ) as Workflowv3WorkflowEventResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to workflowDeleteProductEntity
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async workflowDeleteProductEntityWithHttpInfo(response: ResponseContext): Promise<HttpInfo<Workflowv3DeleteProductEntityResponse >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: Workflowv3DeleteProductEntityResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Workflowv3DeleteProductEntityResponse", ""
+            ) as Workflowv3DeleteProductEntityResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("0", response.httpStatusCode)) {
+            const body: RuntimeError = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RuntimeError", ""
+            ) as RuntimeError;
+            throw new ApiException<RuntimeError>(response.httpStatusCode, "An unexpected error response.", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: Workflowv3DeleteProductEntityResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Workflowv3DeleteProductEntityResponse", ""
+            ) as Workflowv3DeleteProductEntityResponse;
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
         }
 
@@ -1035,6 +1447,78 @@ export class WorkflowApiResponseProcessor {
                 ObjectSerializer.parse(await response.body.text(), contentType),
                 "Workflowv3GetJobsCountResponse", ""
             ) as Workflowv3GetJobsCountResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to workflowGetProductEntities
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async workflowGetProductEntitiesWithHttpInfo(response: ResponseContext): Promise<HttpInfo<Workflowv3GetProductEntitiesResponse >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: Workflowv3GetProductEntitiesResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Workflowv3GetProductEntitiesResponse", ""
+            ) as Workflowv3GetProductEntitiesResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("0", response.httpStatusCode)) {
+            const body: RuntimeError = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RuntimeError", ""
+            ) as RuntimeError;
+            throw new ApiException<RuntimeError>(response.httpStatusCode, "An unexpected error response.", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: Workflowv3GetProductEntitiesResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Workflowv3GetProductEntitiesResponse", ""
+            ) as Workflowv3GetProductEntitiesResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to workflowGetProductEntity
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async workflowGetProductEntityWithHttpInfo(response: ResponseContext): Promise<HttpInfo<Workflowv3ProductEntity >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: Workflowv3ProductEntity = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Workflowv3ProductEntity", ""
+            ) as Workflowv3ProductEntity;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("0", response.httpStatusCode)) {
+            const body: RuntimeError = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RuntimeError", ""
+            ) as RuntimeError;
+            throw new ApiException<RuntimeError>(response.httpStatusCode, "An unexpected error response.", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: Workflowv3ProductEntity = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Workflowv3ProductEntity", ""
+            ) as Workflowv3ProductEntity;
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
         }
 
@@ -1287,6 +1771,42 @@ export class WorkflowApiResponseProcessor {
                 ObjectSerializer.parse(await response.body.text(), contentType),
                 "Workflowv3UpdateCasesResponse", ""
             ) as Workflowv3UpdateCasesResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to workflowUpdateProductEntity
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async workflowUpdateProductEntityWithHttpInfo(response: ResponseContext): Promise<HttpInfo<Workflowv3UpdateProductEntityResponse >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: Workflowv3UpdateProductEntityResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Workflowv3UpdateProductEntityResponse", ""
+            ) as Workflowv3UpdateProductEntityResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("0", response.httpStatusCode)) {
+            const body: RuntimeError = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RuntimeError", ""
+            ) as RuntimeError;
+            throw new ApiException<RuntimeError>(response.httpStatusCode, "An unexpected error response.", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: Workflowv3UpdateProductEntityResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Workflowv3UpdateProductEntityResponse", ""
+            ) as Workflowv3UpdateProductEntityResponse;
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
         }
 

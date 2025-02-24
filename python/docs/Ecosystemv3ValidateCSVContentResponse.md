@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.ecosystemv3_validate_csv_content_response import Ecosystemv3ValidateCSVContentResponse
+from ibm_gdsc_sdk_saas.models.ecosystemv3_validate_csv_content_response import Ecosystemv3ValidateCSVContentResponse
 
 # TODO update the JSON string below
 json = "{}"

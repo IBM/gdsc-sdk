@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.outliersenginev3_working_hours_period import Outliersenginev3WorkingHoursPeriod
+from ibm_gdsc_sdk_saas.models.outliersenginev3_working_hours_period import Outliersenginev3WorkingHoursPeriod
 
 # TODO update the JSON string below
 json = "{}"

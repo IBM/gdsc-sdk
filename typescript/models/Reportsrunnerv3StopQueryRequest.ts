@@ -28,7 +28,7 @@ export class Reportsrunnerv3StopQueryRequest {
             "name": "queryIds",
             "baseName": "query_ids",
             "type": "Array<string>",
-            "format": "uint64"
+            "format": ""
         }    ];
 
     static getAttributeTypeMap() {

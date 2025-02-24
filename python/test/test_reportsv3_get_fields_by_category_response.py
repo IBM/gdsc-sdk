@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_get_fields_by_category_response import Reportsv3GetFieldsByCategoryResponse
+from ibm_gdsc_sdk_saas.models.reportsv3_get_fields_by_category_response import Reportsv3GetFieldsByCategoryResponse
 
 class TestReportsv3GetFieldsByCategoryResponse(unittest.TestCase):
     """Reportsv3GetFieldsByCategoryResponse unit test stubs"""
@@ -36,15 +36,15 @@ class TestReportsv3GetFieldsByCategoryResponse(unittest.TestCase):
         if include_optional:
             return Reportsv3GetFieldsByCategoryResponse(
                 headers = [
-                    ibm_gdsc_sdk_software.models.header_that_has_the_header_id,_name_in_the_translated_value_and_field_type.Header that has the header ID, name in the translated value and field type(
+                    ibm_gdsc_sdk_saas.models.header_that_has_the_header_id,_name_in_the_translated_value_and_field_type.Header that has the header ID, name in the translated value and field type(
                         can_be_used_in_chart = True, 
-                        field_name = ibm_gdsc_sdk_software.models.reportsv3_field_name.reportsv3FieldName(
+                        field_name = ibm_gdsc_sdk_saas.models.reportsv3_field_name.reportsv3FieldName(
                             customized_value = '', 
                             nls_key = '', 
                             nls_value = '', ), 
                         group_type_id = 56, 
                         header_category = '', 
-                        header_description = ibm_gdsc_sdk_software.models.reportsv3_header_description.reportsv3HeaderDescription(
+                        header_description = ibm_gdsc_sdk_saas.models.reportsv3_header_description.reportsv3HeaderDescription(
                             nls_key = '', 
                             nls_value = '', ), 
                         header_id = '', 

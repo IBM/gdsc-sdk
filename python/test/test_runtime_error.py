@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.runtime_error import RuntimeError
+from ibm_gdsc_sdk_saas.models.runtime_error import RuntimeError
 
 class TestRuntimeError(unittest.TestCase):
     """RuntimeError unit test stubs"""
@@ -37,7 +37,7 @@ class TestRuntimeError(unittest.TestCase):
             return RuntimeError(
                 code = 56,
                 details = [
-                    ibm_gdsc_sdk_software.models.protobuf_any.protobufAny(
+                    ibm_gdsc_sdk_saas.models.protobuf_any.protobufAny(
                         type_url = '', 
                         value = 'YQ==', )
                     ],

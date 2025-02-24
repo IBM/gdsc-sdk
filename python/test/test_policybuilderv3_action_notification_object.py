@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_action_notification_object import Policybuilderv3ActionNotificationObject
+from ibm_gdsc_sdk_saas.models.policybuilderv3_action_notification_object import Policybuilderv3ActionNotificationObject
 
 class TestPolicybuilderv3ActionNotificationObject(unittest.TestCase):
     """Policybuilderv3ActionNotificationObject unit test stubs"""
@@ -37,7 +37,7 @@ class TestPolicybuilderv3ActionNotificationObject(unittest.TestCase):
             return Policybuilderv3ActionNotificationObject(
                 action_id = '',
                 receivers = [
-                    ibm_gdsc_sdk_software.models.policybuilderv3_target_receiver.policybuilderv3TargetReceiver(
+                    ibm_gdsc_sdk_saas.models.policybuilderv3_target_receiver.policybuilderv3TargetReceiver(
                         integration_id = '', 
                         template_id = '', 
                         type = 'UNDEFINED_RECTYPE', 

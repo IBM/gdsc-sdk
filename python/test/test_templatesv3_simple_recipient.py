@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.templatesv3_simple_recipient import Templatesv3SimpleRecipient
+from ibm_gdsc_sdk_saas.models.templatesv3_simple_recipient import Templatesv3SimpleRecipient
 
 class TestTemplatesv3SimpleRecipient(unittest.TestCase):
     """Templatesv3SimpleRecipient unit test stubs"""

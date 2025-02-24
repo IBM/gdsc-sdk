@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_set_risk_event_status_request import Riskanalyticscontrollerv3SetRiskEventStatusRequest
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_set_risk_event_status_request import Riskanalyticscontrollerv3SetRiskEventStatusRequest
 
 class TestRiskanalyticscontrollerv3SetRiskEventStatusRequest(unittest.TestCase):
     """Riskanalyticscontrollerv3SetRiskEventStatusRequest unit test stubs"""

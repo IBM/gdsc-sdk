@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.googlerpc_status import GooglerpcStatus
+from ibm_gdsc_sdk_saas.models.googlerpc_status import GooglerpcStatus
 
 # TODO update the JSON string below
 json = "{}"

@@ -3,7 +3,7 @@
 #
 # ref: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
-name: ibm_gdsc_sdk_software Python package
+name: ibm_gdsc_sdk_saas Python package
 
 on: [push, pull_request]
 

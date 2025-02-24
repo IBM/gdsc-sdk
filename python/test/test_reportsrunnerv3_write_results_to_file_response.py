@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_write_results_to_file_response import Reportsrunnerv3WriteResultsToFileResponse
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_write_results_to_file_response import Reportsrunnerv3WriteResultsToFileResponse
 
 class TestReportsrunnerv3WriteResultsToFileResponse(unittest.TestCase):
     """Reportsrunnerv3WriteResultsToFileResponse unit test stubs"""

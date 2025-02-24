@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.group_builder_api import GroupBuilderApi
+from ibm_gdsc_sdk_saas.api.group_builder_api import GroupBuilderApi
 
 
 class TestGroupBuilderApi(unittest.TestCase):
@@ -78,14 +78,14 @@ class TestGroupBuilderApi(unittest.TestCase):
     def test_group_builder_get_group_sync_mapping(self) -> None:
         """Test case for group_builder_get_group_sync_mapping
 
-        Summary: Get gdp to gi group mapping Description: Get insights to gdp group sync mapping.
+        Summary: Get GDP to gi group mapping Description: Get GDSC to GDP group sync mapping.
         """
         pass
 
     def test_group_builder_get_group_type_mapping(self) -> None:
         """Test case for group_builder_get_group_type_mapping
 
-        Summary: Get group type mapping Description: Get insights to gdp group types mapping.
+        Summary: Get group type mapping Description: Get GDSC to GDP group types mapping.
         """
         pass
 

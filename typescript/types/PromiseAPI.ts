@@ -15,10 +15,6 @@ import { AddCloudAccountsRequest } from '../models/AddCloudAccountsRequest';
 import { AddCloudAccountsRequestCloudAccountsInner } from '../models/AddCloudAccountsRequestCloudAccountsInner';
 import { AddCommentBody } from '../models/AddCommentBody';
 import { AddJiraIntegrationParametersRequest } from '../models/AddJiraIntegrationParametersRequest';
-import { Analyticseventsv3DeleteCacheKeyRequest } from '../models/Analyticseventsv3DeleteCacheKeyRequest';
-import { Analyticseventsv3DeleteCacheKeyResponse } from '../models/Analyticseventsv3DeleteCacheKeyResponse';
-import { Analyticseventsv3PostQSAdvisorRiskRequest } from '../models/Analyticseventsv3PostQSAdvisorRiskRequest';
-import { Analyticseventsv3PostQSAdvisorRiskResponse } from '../models/Analyticseventsv3PostQSAdvisorRiskResponse';
 import { AnalyzedRegion } from '../models/AnalyzedRegion';
 import { AnalyzedRegionValidationResults } from '../models/AnalyzedRegionValidationResults';
 import { Assetsv3AccountVertex } from '../models/Assetsv3AccountVertex';
@@ -174,7 +170,6 @@ import { Complianceacceleratorv3DeleteComplianceWorkspacesResponse } from '../mo
 import { Complianceacceleratorv3EmailConfig } from '../models/Complianceacceleratorv3EmailConfig';
 import { Complianceacceleratorv3GetComplianceInfoResponse } from '../models/Complianceacceleratorv3GetComplianceInfoResponse';
 import { Complianceacceleratorv3Group } from '../models/Complianceacceleratorv3Group';
-import { Complianceacceleratorv3GroupMember } from '../models/Complianceacceleratorv3GroupMember';
 import { Complianceacceleratorv3HydrateComplianceWorkspacesRequest } from '../models/Complianceacceleratorv3HydrateComplianceWorkspacesRequest';
 import { Complianceacceleratorv3HydrateComplianceWorkspacesResponse } from '../models/Complianceacceleratorv3HydrateComplianceWorkspacesResponse';
 import { Complianceacceleratorv3Options } from '../models/Complianceacceleratorv3Options';
@@ -217,6 +212,9 @@ import { Connectionsv3DeleteAttributesResponse } from '../models/Connectionsv3De
 import { Connectionsv3DeleteConnectionsAccountsResponse } from '../models/Connectionsv3DeleteConnectionsAccountsResponse';
 import { Connectionsv3DeleteConnectionsConfigsResponse } from '../models/Connectionsv3DeleteConnectionsConfigsResponse';
 import { Connectionsv3DeletePluginResponse } from '../models/Connectionsv3DeletePluginResponse';
+import { Connectionsv3EdgeDeploymentServer } from '../models/Connectionsv3EdgeDeploymentServer';
+import { Connectionsv3GeneratePackageRequest } from '../models/Connectionsv3GeneratePackageRequest';
+import { Connectionsv3GeneratePackageResponse } from '../models/Connectionsv3GeneratePackageResponse';
 import { Connectionsv3GetAttributesResponse } from '../models/Connectionsv3GetAttributesResponse';
 import { Connectionsv3GetBannerStateResponse } from '../models/Connectionsv3GetBannerStateResponse';
 import { Connectionsv3GetConnectionsAccountsResponse } from '../models/Connectionsv3GetConnectionsAccountsResponse';
@@ -261,6 +259,8 @@ import { Connectionsv3UpdateConnectorsRequest } from '../models/Connectionsv3Upd
 import { Connectionsv3UpdatePluginRequest } from '../models/Connectionsv3UpdatePluginRequest';
 import { Connectionsv3UpdatePluginResponse } from '../models/Connectionsv3UpdatePluginResponse';
 import { Connectionsv3UpdateSettingsRequest } from '../models/Connectionsv3UpdateSettingsRequest';
+import { Connectionsv3ValidateAwsConnectionRequest } from '../models/Connectionsv3ValidateAwsConnectionRequest';
+import { Connectionsv3ValidateConnectionResponse } from '../models/Connectionsv3ValidateConnectionResponse';
 import { Dashboardsv3Card } from '../models/Dashboardsv3Card';
 import { Dashboardsv3CardPosition } from '../models/Dashboardsv3CardPosition';
 import { Dashboardsv3CardType } from '../models/Dashboardsv3CardType';
@@ -319,7 +319,13 @@ import { Ecosystemv3GetPurgableRowsRequest } from '../models/Ecosystemv3GetPurga
 import { Ecosystemv3GetPurgableRowsResponse } from '../models/Ecosystemv3GetPurgableRowsResponse';
 import { Ecosystemv3OrderType } from '../models/Ecosystemv3OrderType';
 import { Ecosystemv3PurgeDataResponse } from '../models/Ecosystemv3PurgeDataResponse';
+import { Ecosystemv3TestIntegrationRequest } from '../models/Ecosystemv3TestIntegrationRequest';
+import { Ecosystemv3TestIntegrationResponse } from '../models/Ecosystemv3TestIntegrationResponse';
 import { Ecosystemv3ValidateCSVContentResponse } from '../models/Ecosystemv3ValidateCSVContentResponse';
+import { Edgeschedulerv3GetEdgeQueryStatusResponse } from '../models/Edgeschedulerv3GetEdgeQueryStatusResponse';
+import { Edgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse } from '../models/Edgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse';
+import { Edgeschedulerv3ScheduleEdgeQueryRequest } from '../models/Edgeschedulerv3ScheduleEdgeQueryRequest';
+import { Edgeschedulerv3ScheduleEdgeQueryResponse } from '../models/Edgeschedulerv3ScheduleEdgeQueryResponse';
 import { Environment } from '../models/Environment';
 import { Featureflagsv3DeleteFeatureFlagOverridesResponse } from '../models/Featureflagsv3DeleteFeatureFlagOverridesResponse';
 import { Featureflagsv3FeatureFlag } from '../models/Featureflagsv3FeatureFlag';
@@ -574,7 +580,12 @@ import { Notificationsv3NotificationRecord } from '../models/Notificationsv3Noti
 import { Notificationsv3NotificationRecordsFilter } from '../models/Notificationsv3NotificationRecordsFilter';
 import { Notificationsv3NotificationSeverity } from '../models/Notificationsv3NotificationSeverity';
 import { Notificationsv3NotificationState } from '../models/Notificationsv3NotificationState';
+import { Notificationsv3PipelineQueryOperator } from '../models/Notificationsv3PipelineQueryOperator';
+import { Notificationsv3PostNotificationRecordRequest } from '../models/Notificationsv3PostNotificationRecordRequest';
+import { Notificationsv3PostNotificationRecordResponse } from '../models/Notificationsv3PostNotificationRecordResponse';
 import { Notificationsv3PutNotificationRecordResponse } from '../models/Notificationsv3PutNotificationRecordResponse';
+import { Notificationsv3SearchNotificationRecordsRequest } from '../models/Notificationsv3SearchNotificationRecordsRequest';
+import { Notificationsv3SearchNotificationRecordsResponse } from '../models/Notificationsv3SearchNotificationRecordsResponse';
 import { Notificationsv3TemplateProperty } from '../models/Notificationsv3TemplateProperty';
 import { Notificationsv3TestIntegrationRequest } from '../models/Notificationsv3TestIntegrationRequest';
 import { Notificationsv3TestIntegrationResponse } from '../models/Notificationsv3TestIntegrationResponse';
@@ -608,11 +619,13 @@ import { Policybuilderv3ActionNotificationObject } from '../models/Policybuilder
 import { Policybuilderv3ActionParameter } from '../models/Policybuilderv3ActionParameter';
 import { Policybuilderv3ActionParameterMetadata } from '../models/Policybuilderv3ActionParameterMetadata';
 import { Policybuilderv3ActionType } from '../models/Policybuilderv3ActionType';
+import { Policybuilderv3ActivationStatus } from '../models/Policybuilderv3ActivationStatus';
 import { Policybuilderv3ClonePolicyRequest } from '../models/Policybuilderv3ClonePolicyRequest';
 import { Policybuilderv3ControlFlow } from '../models/Policybuilderv3ControlFlow';
 import { Policybuilderv3CreateUpdatePolicyRequest } from '../models/Policybuilderv3CreateUpdatePolicyRequest';
 import { Policybuilderv3CreateUpdatePolicyResponse } from '../models/Policybuilderv3CreateUpdatePolicyResponse';
 import { Policybuilderv3DeleteGdpPolicySyncResponse } from '../models/Policybuilderv3DeleteGdpPolicySyncResponse';
+import { Policybuilderv3EdgeActivationObject } from '../models/Policybuilderv3EdgeActivationObject';
 import { Policybuilderv3GDPSyncEntry } from '../models/Policybuilderv3GDPSyncEntry';
 import { Policybuilderv3GdpPolicyObject } from '../models/Policybuilderv3GdpPolicyObject';
 import { Policybuilderv3GdpPolicyObjectWithCm } from '../models/Policybuilderv3GdpPolicyObjectWithCm';
@@ -667,12 +680,18 @@ import { PotentialFlowsSummary } from '../models/PotentialFlowsSummary';
 import { ProtobufAny } from '../models/ProtobufAny';
 import { ProtobufFieldMask } from '../models/ProtobufFieldMask';
 import { ProtobufNullValue } from '../models/ProtobufNullValue';
+import { Qsdataloaderv3QSfileValidatorExternalParamRequest } from '../models/Qsdataloaderv3QSfileValidatorExternalParamRequest';
+import { Qsdataloaderv3QSfileValidatorRequest } from '../models/Qsdataloaderv3QSfileValidatorRequest';
+import { Qsdataloaderv3QSfileValidatorResonse } from '../models/Qsdataloaderv3QSfileValidatorResonse';
+import { Qsdataloaderv3QSyntheticDataLoaderResonse } from '../models/Qsdataloaderv3QSyntheticDataLoaderResonse';
 import { Qspmdatamanagerv3AppData } from '../models/Qspmdatamanagerv3AppData';
 import { Qspmdatamanagerv3AppDataResponse } from '../models/Qspmdatamanagerv3AppDataResponse';
 import { Qspmdatamanagerv3MasterDataModel } from '../models/Qspmdatamanagerv3MasterDataModel';
 import { Qspmdatamanagerv3MasterDataResponse } from '../models/Qspmdatamanagerv3MasterDataResponse';
 import { Qspmdatamanagerv3NetlocData } from '../models/Qspmdatamanagerv3NetlocData';
 import { Qspmdatamanagerv3NetlocDataResponse } from '../models/Qspmdatamanagerv3NetlocDataResponse';
+import { Qspmdatamanagerv3PluginDataModel } from '../models/Qspmdatamanagerv3PluginDataModel';
+import { Qspmdatamanagerv3PluginDataResponse } from '../models/Qspmdatamanagerv3PluginDataResponse';
 import { Qspmdatamanagerv3Row } from '../models/Qspmdatamanagerv3Row';
 import { Qspmdatamanagerv3ScanRequest } from '../models/Qspmdatamanagerv3ScanRequest';
 import { Qspmdatamanagerv3ScanResponse } from '../models/Qspmdatamanagerv3ScanResponse';
@@ -684,13 +703,16 @@ import { Qspmpluginmanagerv3PluginRS } from '../models/Qspmpluginmanagerv3Plugin
 import { Qspmpluginmanagerv3PolicyPluginRQ } from '../models/Qspmpluginmanagerv3PolicyPluginRQ';
 import { Qspmpluginmanagerv3PolicyPluginRS } from '../models/Qspmpluginmanagerv3PolicyPluginRS';
 import { Qspmpluginmanagerv3ValidationResult } from '../models/Qspmpluginmanagerv3ValidationResult';
+import { Qspmpolicymanagerv3APIResonse } from '../models/Qspmpolicymanagerv3APIResonse';
 import { Qspmpolicymanagerv3CreateTicketRequest } from '../models/Qspmpolicymanagerv3CreateTicketRequest';
 import { Qspmpolicymanagerv3CreateTicketResponse } from '../models/Qspmpolicymanagerv3CreateTicketResponse';
 import { Qspmpolicymanagerv3FetchObjectStoreFileResponse } from '../models/Qspmpolicymanagerv3FetchObjectStoreFileResponse';
+import { Qspmpolicymanagerv3FileName } from '../models/Qspmpolicymanagerv3FileName';
 import { Qspmpolicymanagerv3NotificationSeverity } from '../models/Qspmpolicymanagerv3NotificationSeverity';
 import { Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest } from '../models/Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest';
 import { Qspmpolicymanagerv3ProcessPolicyDimentionRecordsResonse } from '../models/Qspmpolicymanagerv3ProcessPolicyDimentionRecordsResonse';
 import { Qspmpolicymanagerv3StandardEmptyResponse } from '../models/Qspmpolicymanagerv3StandardEmptyResponse';
+import { Qspmpolicymanagerv3UpdateConfigsRequest } from '../models/Qspmpolicymanagerv3UpdateConfigsRequest';
 import { Qspmpolicymanagerv3UpdateTicketStatusRequest } from '../models/Qspmpolicymanagerv3UpdateTicketStatusRequest';
 import { Qspmpolicymanagerv3UpdateTicketStatusResponse } from '../models/Qspmpolicymanagerv3UpdateTicketStatusResponse';
 import { QuestionType } from '../models/QuestionType';
@@ -843,6 +865,67 @@ import { Reportsv3VariantRuleCondition } from '../models/Reportsv3VariantRuleCon
 import { Reportsv3VariantRuleType } from '../models/Reportsv3VariantRuleType';
 import { RescanDataStoreRequest } from '../models/RescanDataStoreRequest';
 import { ResetPasswordRequest } from '../models/ResetPasswordRequest';
+import { Resourcecontrollerk8v3App } from '../models/Resourcecontrollerk8v3App';
+import { Resourcecontrollerk8v3AppDeployment } from '../models/Resourcecontrollerk8v3AppDeployment';
+import { Resourcecontrollerk8v3AppFile } from '../models/Resourcecontrollerk8v3AppFile';
+import { Resourcecontrollerk8v3AppHpa } from '../models/Resourcecontrollerk8v3AppHpa';
+import { Resourcecontrollerk8v3AppSecret } from '../models/Resourcecontrollerk8v3AppSecret';
+import { Resourcecontrollerk8v3Container } from '../models/Resourcecontrollerk8v3Container';
+import { Resourcecontrollerk8v3ContainerResources } from '../models/Resourcecontrollerk8v3ContainerResources';
+import { Resourcecontrollerk8v3ContainerResourcesQuantity } from '../models/Resourcecontrollerk8v3ContainerResourcesQuantity';
+import { Resourcecontrollerk8v3Controller } from '../models/Resourcecontrollerk8v3Controller';
+import { Resourcecontrollerk8v3ControllerApp } from '../models/Resourcecontrollerk8v3ControllerApp';
+import { Resourcecontrollerk8v3ControllerAppFile } from '../models/Resourcecontrollerk8v3ControllerAppFile';
+import { Resourcecontrollerk8v3ControllerAppSecret } from '../models/Resourcecontrollerk8v3ControllerAppSecret';
+import { Resourcecontrollerk8v3ControllerCommand } from '../models/Resourcecontrollerk8v3ControllerCommand';
+import { Resourcecontrollerk8v3ControllerHeartbeat } from '../models/Resourcecontrollerk8v3ControllerHeartbeat';
+import { Resourcecontrollerk8v3ControllerResources } from '../models/Resourcecontrollerk8v3ControllerResources';
+import { Resourcecontrollerk8v3ControllerStatus } from '../models/Resourcecontrollerk8v3ControllerStatus';
+import { Resourcecontrollerk8v3CreateControllerRequest } from '../models/Resourcecontrollerk8v3CreateControllerRequest';
+import { Resourcecontrollerk8v3CreateHeartBeatExResponse } from '../models/Resourcecontrollerk8v3CreateHeartBeatExResponse';
+import { Resourcecontrollerk8v3CreateHeartBeatRequest } from '../models/Resourcecontrollerk8v3CreateHeartBeatRequest';
+import { Resourcecontrollerk8v3CreateHeartBeatResponse } from '../models/Resourcecontrollerk8v3CreateHeartBeatResponse';
+import { Resourcecontrollerk8v3CreateKeypairRequest } from '../models/Resourcecontrollerk8v3CreateKeypairRequest';
+import { Resourcecontrollerk8v3CreateKeypairResponse } from '../models/Resourcecontrollerk8v3CreateKeypairResponse';
+import { Resourcecontrollerk8v3Cron } from '../models/Resourcecontrollerk8v3Cron';
+import { Resourcecontrollerk8v3DeleteControllerRequest } from '../models/Resourcecontrollerk8v3DeleteControllerRequest';
+import { Resourcecontrollerk8v3DeleteControllerResponse } from '../models/Resourcecontrollerk8v3DeleteControllerResponse';
+import { Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost } from '../models/Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost';
+import { Resourcecontrollerk8v3DeleteEdgeTenantResponse } from '../models/Resourcecontrollerk8v3DeleteEdgeTenantResponse';
+import { Resourcecontrollerk8v3DeleteJobRequest } from '../models/Resourcecontrollerk8v3DeleteJobRequest';
+import { Resourcecontrollerk8v3DeleteJobResponse } from '../models/Resourcecontrollerk8v3DeleteJobResponse';
+import { Resourcecontrollerk8v3DownloadControllerLogsRequest } from '../models/Resourcecontrollerk8v3DownloadControllerLogsRequest';
+import { Resourcecontrollerk8v3DownloadControllerLogsResponse } from '../models/Resourcecontrollerk8v3DownloadControllerLogsResponse';
+import { Resourcecontrollerk8v3EdgeResourceResponse } from '../models/Resourcecontrollerk8v3EdgeResourceResponse';
+import { Resourcecontrollerk8v3EdgeTenantRequest } from '../models/Resourcecontrollerk8v3EdgeTenantRequest';
+import { Resourcecontrollerk8v3File } from '../models/Resourcecontrollerk8v3File';
+import { Resourcecontrollerk8v3GUCStatefulsetState } from '../models/Resourcecontrollerk8v3GUCStatefulsetState';
+import { Resourcecontrollerk8v3GetControllerAppsResponse } from '../models/Resourcecontrollerk8v3GetControllerAppsResponse';
+import { Resourcecontrollerk8v3GetControllerCommandsResponse } from '../models/Resourcecontrollerk8v3GetControllerCommandsResponse';
+import { Resourcecontrollerk8v3GetControllerJobsResponse } from '../models/Resourcecontrollerk8v3GetControllerJobsResponse';
+import { Resourcecontrollerk8v3GetControllersResponse } from '../models/Resourcecontrollerk8v3GetControllersResponse';
+import { Resourcecontrollerk8v3GetControllersWithStatusResponse } from '../models/Resourcecontrollerk8v3GetControllersWithStatusResponse';
+import { Resourcecontrollerk8v3GetJobExecutionsResponse } from '../models/Resourcecontrollerk8v3GetJobExecutionsResponse';
+import { Resourcecontrollerk8v3GetTenantAppsResponse } from '../models/Resourcecontrollerk8v3GetTenantAppsResponse';
+import { Resourcecontrollerk8v3GetTenantJobsResponse } from '../models/Resourcecontrollerk8v3GetTenantJobsResponse';
+import { Resourcecontrollerk8v3InitContainer } from '../models/Resourcecontrollerk8v3InitContainer';
+import { Resourcecontrollerk8v3Job } from '../models/Resourcecontrollerk8v3Job';
+import { Resourcecontrollerk8v3JobExecution } from '../models/Resourcecontrollerk8v3JobExecution';
+import { Resourcecontrollerk8v3JobStatusDTO } from '../models/Resourcecontrollerk8v3JobStatusDTO';
+import { Resourcecontrollerk8v3KeyPair } from '../models/Resourcecontrollerk8v3KeyPair';
+import { Resourcecontrollerk8v3QueryControllerLogsRequest } from '../models/Resourcecontrollerk8v3QueryControllerLogsRequest';
+import { Resourcecontrollerk8v3QueryControllerLogsResponse } from '../models/Resourcecontrollerk8v3QueryControllerLogsResponse';
+import { Resourcecontrollerk8v3QueryLogs } from '../models/Resourcecontrollerk8v3QueryLogs';
+import { Resourcecontrollerk8v3Rule } from '../models/Resourcecontrollerk8v3Rule';
+import { Resourcecontrollerk8v3Secret } from '../models/Resourcecontrollerk8v3Secret';
+import { Resourcecontrollerk8v3TenantGUCCreateResponse } from '../models/Resourcecontrollerk8v3TenantGUCCreateResponse';
+import { Resourcecontrollerk8v3TenantGUCStatusResponse } from '../models/Resourcecontrollerk8v3TenantGUCStatusResponse';
+import { Resourcecontrollerk8v3TenantLifecycleResponse } from '../models/Resourcecontrollerk8v3TenantLifecycleResponse';
+import { Resourcecontrollerk8v3TenantResourceResponse } from '../models/Resourcecontrollerk8v3TenantResourceResponse';
+import { Resourcecontrollerk8v3TextContent } from '../models/Resourcecontrollerk8v3TextContent';
+import { Resourcecontrollerk8v3UpdateJobExecutionRequest } from '../models/Resourcecontrollerk8v3UpdateJobExecutionRequest';
+import { Resourcecontrollerk8v3UpdateJobStatusRequest } from '../models/Resourcecontrollerk8v3UpdateJobStatusRequest';
+import { Resourcecontrollerk8v3Version } from '../models/Resourcecontrollerk8v3Version';
 import { Riskanalyticscontrollerv3Action } from '../models/Riskanalyticscontrollerv3Action';
 import { Riskanalyticscontrollerv3CardSettings } from '../models/Riskanalyticscontrollerv3CardSettings';
 import { Riskanalyticscontrollerv3DetailToCount } from '../models/Riskanalyticscontrollerv3DetailToCount';
@@ -858,6 +941,7 @@ import { Riskanalyticscontrollerv3Filter } from '../models/Riskanalyticscontroll
 import { Riskanalyticscontrollerv3Finding } from '../models/Riskanalyticscontrollerv3Finding';
 import { Riskanalyticscontrollerv3FindingDetails } from '../models/Riskanalyticscontrollerv3FindingDetails';
 import { Riskanalyticscontrollerv3FindingDetailsMap } from '../models/Riskanalyticscontrollerv3FindingDetailsMap';
+import { Riskanalyticscontrollerv3FindingReferenceLink } from '../models/Riskanalyticscontrollerv3FindingReferenceLink';
 import { Riskanalyticscontrollerv3GetAllClassificationsListResponse } from '../models/Riskanalyticscontrollerv3GetAllClassificationsListResponse';
 import { Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse } from '../models/Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse';
 import { Riskanalyticscontrollerv3GetRiskEventDetailsResponse } from '../models/Riskanalyticscontrollerv3GetRiskEventDetailsResponse';
@@ -886,6 +970,7 @@ import { Riskanalyticscontrollerv3SetRiskEventStatusResponse } from '../models/R
 import { Riskanalyticscontrollerv3SetUserUISettingsRequest } from '../models/Riskanalyticscontrollerv3SetUserUISettingsRequest';
 import { Riskanalyticscontrollerv3SetUserUISettingsResponse } from '../models/Riskanalyticscontrollerv3SetUserUISettingsResponse';
 import { Riskanalyticscontrollerv3ShortObservation } from '../models/Riskanalyticscontrollerv3ShortObservation';
+import { Riskanalyticscontrollerv3Statistics } from '../models/Riskanalyticscontrollerv3Statistics';
 import { Riskanalyticscontrollerv3Status } from '../models/Riskanalyticscontrollerv3Status';
 import { Riskanalyticscontrollerv3UpdateRiskFeedbackRequest } from '../models/Riskanalyticscontrollerv3UpdateRiskFeedbackRequest';
 import { Riskanalyticscontrollerv3UpdateRiskFeedbackResponse } from '../models/Riskanalyticscontrollerv3UpdateRiskFeedbackResponse';
@@ -986,6 +1071,10 @@ import { SetQuestionBodyParams } from '../models/SetQuestionBodyParams';
 import { SetVulnerabilityStatusRequest } from '../models/SetVulnerabilityStatusRequest';
 import { SignupRequest } from '../models/SignupRequest';
 import { SimpleRecipientSimpleRecipientType } from '../models/SimpleRecipientSimpleRecipientType';
+import { Snifassistv3Feedback } from '../models/Snifassistv3Feedback';
+import { Snifassistv3FeedbackStatus } from '../models/Snifassistv3FeedbackStatus';
+import { Snifassistv3GetSnifConfigResponse } from '../models/Snifassistv3GetSnifConfigResponse';
+import { Snifassistv3PostSnifFeedbackRequest } from '../models/Snifassistv3PostSnifFeedbackRequest';
 import { Snifassistv3SnifAssistResponse } from '../models/Snifassistv3SnifAssistResponse';
 import { Snifassistv3SnifAssistType } from '../models/Snifassistv3SnifAssistType';
 import { Snifassistv3StapConfig } from '../models/Snifassistv3StapConfig';
@@ -995,6 +1084,7 @@ import { Snifassistv3StatusResponseBase } from '../models/Snifassistv3StatusResp
 import { Snifassistv3TestRegexRequest } from '../models/Snifassistv3TestRegexRequest';
 import { SortOrder } from '../models/SortOrder';
 import { StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse } from '../models/StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse';
+import { StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse } from '../models/StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse';
 import { StreamResultOfReportsrunnerv3RunReportResponse } from '../models/StreamResultOfReportsrunnerv3RunReportResponse';
 import { Streamsv3AWSCheckStreamStatus } from '../models/Streamsv3AWSCheckStreamStatus';
 import { Streamsv3AuthType } from '../models/Streamsv3AuthType';
@@ -1025,6 +1115,7 @@ import { Templatesv3DeleteTemplateResponse } from '../models/Templatesv3DeleteTe
 import { Templatesv3GetOriginDefaultContentResponse } from '../models/Templatesv3GetOriginDefaultContentResponse';
 import { Templatesv3GetOriginFieldsResponse } from '../models/Templatesv3GetOriginFieldsResponse';
 import { Templatesv3GetTemplateResponse } from '../models/Templatesv3GetTemplateResponse';
+import { Templatesv3GetTemplatesForEdgeResponse } from '../models/Templatesv3GetTemplatesForEdgeResponse';
 import { Templatesv3GetTemplatesResponse } from '../models/Templatesv3GetTemplatesResponse';
 import { Templatesv3Integration } from '../models/Templatesv3Integration';
 import { Templatesv3MIMEType } from '../models/Templatesv3MIMEType';
@@ -1050,6 +1141,7 @@ import { Tenantuserv3CurrentUserTenant } from '../models/Tenantuserv3CurrentUser
 import { Tenantuserv3DisableUsersBulkResponse } from '../models/Tenantuserv3DisableUsersBulkResponse';
 import { Tenantuserv3ExternalMetadata } from '../models/Tenantuserv3ExternalMetadata';
 import { Tenantuserv3FullUser } from '../models/Tenantuserv3FullUser';
+import { Tenantuserv3GetAPIPrivilegesResponse } from '../models/Tenantuserv3GetAPIPrivilegesResponse';
 import { Tenantuserv3GetApiKeysResponse } from '../models/Tenantuserv3GetApiKeysResponse';
 import { Tenantuserv3GetCurrentUserResponse } from '../models/Tenantuserv3GetCurrentUserResponse';
 import { Tenantuserv3GetPrivilegeResponse } from '../models/Tenantuserv3GetPrivilegeResponse';
@@ -1156,12 +1248,18 @@ import { Workflowv3CaseListResponse } from '../models/Workflowv3CaseListResponse
 import { Workflowv3Comment } from '../models/Workflowv3Comment';
 import { Workflowv3CreateCaseRequest } from '../models/Workflowv3CreateCaseRequest';
 import { Workflowv3CreateCaseResponse } from '../models/Workflowv3CreateCaseResponse';
+import { Workflowv3CreateProductEntityResponse } from '../models/Workflowv3CreateProductEntityResponse';
 import { Workflowv3CreateTaskRequest } from '../models/Workflowv3CreateTaskRequest';
 import { Workflowv3CreateTaskResponse } from '../models/Workflowv3CreateTaskResponse';
 import { Workflowv3DeleteCasesResponse } from '../models/Workflowv3DeleteCasesResponse';
+import { Workflowv3DeleteProductEntityResponse } from '../models/Workflowv3DeleteProductEntityResponse';
 import { Workflowv3DeleteTasksResponse } from '../models/Workflowv3DeleteTasksResponse';
 import { Workflowv3Entity } from '../models/Workflowv3Entity';
+import { Workflowv3EntityDefinition } from '../models/Workflowv3EntityDefinition';
+import { Workflowv3EntityHeader } from '../models/Workflowv3EntityHeader';
+import { Workflowv3EntityHeaderType } from '../models/Workflowv3EntityHeaderType';
 import { Workflowv3EntityType } from '../models/Workflowv3EntityType';
+import { Workflowv3EntityValueChoice } from '../models/Workflowv3EntityValueChoice';
 import { Workflowv3Filter } from '../models/Workflowv3Filter';
 import { Workflowv3FilterColumn } from '../models/Workflowv3FilterColumn';
 import { Workflowv3FilterOperator } from '../models/Workflowv3FilterOperator';
@@ -1170,6 +1268,7 @@ import { Workflowv3GetCasesCountResponse } from '../models/Workflowv3GetCasesCou
 import { Workflowv3GetFilenameResponse } from '../models/Workflowv3GetFilenameResponse';
 import { Workflowv3GetJobsCountRequest } from '../models/Workflowv3GetJobsCountRequest';
 import { Workflowv3GetJobsCountResponse } from '../models/Workflowv3GetJobsCountResponse';
+import { Workflowv3GetProductEntitiesResponse } from '../models/Workflowv3GetProductEntitiesResponse';
 import { Workflowv3GetReportResultResponse } from '../models/Workflowv3GetReportResultResponse';
 import { Workflowv3GetTasksCountRequest } from '../models/Workflowv3GetTasksCountRequest';
 import { Workflowv3GetTasksCountResponse } from '../models/Workflowv3GetTasksCountResponse';
@@ -1177,6 +1276,8 @@ import { Workflowv3JobCount } from '../models/Workflowv3JobCount';
 import { Workflowv3OperatorType } from '../models/Workflowv3OperatorType';
 import { Workflowv3Origin } from '../models/Workflowv3Origin';
 import { Workflowv3Priority } from '../models/Workflowv3Priority';
+import { Workflowv3ProductEntity } from '../models/Workflowv3ProductEntity';
+import { Workflowv3ProductWorkflow } from '../models/Workflowv3ProductWorkflow';
 import { Workflowv3ReportMetadata } from '../models/Workflowv3ReportMetadata';
 import { Workflowv3ReportResult } from '../models/Workflowv3ReportResult';
 import { Workflowv3ReportResultHeader } from '../models/Workflowv3ReportResultHeader';
@@ -1194,65 +1295,12 @@ import { Workflowv3TaskEdit } from '../models/Workflowv3TaskEdit';
 import { Workflowv3TaskListResponse } from '../models/Workflowv3TaskListResponse';
 import { Workflowv3UpdateCasesRequest } from '../models/Workflowv3UpdateCasesRequest';
 import { Workflowv3UpdateCasesResponse } from '../models/Workflowv3UpdateCasesResponse';
+import { Workflowv3UpdateProductEntityRequest } from '../models/Workflowv3UpdateProductEntityRequest';
+import { Workflowv3UpdateProductEntityResponse } from '../models/Workflowv3UpdateProductEntityResponse';
 import { Workflowv3UpdateTasksRequest } from '../models/Workflowv3UpdateTasksRequest';
 import { Workflowv3UpdateTasksResponse } from '../models/Workflowv3UpdateTasksResponse';
-import { ObservableAnalyticsEventsServiceApi } from './ObservableAPI';
-
-import { AnalyticsEventsServiceApiRequestFactory, AnalyticsEventsServiceApiResponseProcessor} from "../apis/AnalyticsEventsServiceApi";
-export class PromiseAnalyticsEventsServiceApi {
-    private api: ObservableAnalyticsEventsServiceApi
-
-    public constructor(
-        configuration: Configuration,
-        requestFactory?: AnalyticsEventsServiceApiRequestFactory,
-        responseProcessor?: AnalyticsEventsServiceApiResponseProcessor
-    ) {
-        this.api = new ObservableAnalyticsEventsServiceApi(configuration, requestFactory, responseProcessor);
-    }
-
-    /**
-     * Summary: Delete cache key Description: Return delete key result message.
-     * @param cacheKey The cache key to delete.
-     * @param analyticseventsv3DeleteCacheKeyRequest 
-     */
-    public analyticsEventsServiceDeleteCacheKeyWithHttpInfo(cacheKey: string, analyticseventsv3DeleteCacheKeyRequest: Analyticseventsv3DeleteCacheKeyRequest, _options?: Configuration): Promise<HttpInfo<Analyticseventsv3DeleteCacheKeyResponse>> {
-        const result = this.api.analyticsEventsServiceDeleteCacheKeyWithHttpInfo(cacheKey, analyticseventsv3DeleteCacheKeyRequest, _options);
-        return result.toPromise();
-    }
-
-    /**
-     * Summary: Delete cache key Description: Return delete key result message.
-     * @param cacheKey The cache key to delete.
-     * @param analyticseventsv3DeleteCacheKeyRequest 
-     */
-    public analyticsEventsServiceDeleteCacheKey(cacheKey: string, analyticseventsv3DeleteCacheKeyRequest: Analyticseventsv3DeleteCacheKeyRequest, _options?: Configuration): Promise<Analyticseventsv3DeleteCacheKeyResponse> {
-        const result = this.api.analyticsEventsServiceDeleteCacheKey(cacheKey, analyticseventsv3DeleteCacheKeyRequest, _options);
-        return result.toPromise();
-    }
-
-    /**
-     * Summary: For QS Advisor risk notification only Description: Sends QS Advisor risk notification with recipients and returns a status
-     * @param analyticseventsv3PostQSAdvisorRiskRequest 
-     */
-    public analyticsEventsServicePostQSAdvisorRiskWithHttpInfo(analyticseventsv3PostQSAdvisorRiskRequest: Analyticseventsv3PostQSAdvisorRiskRequest, _options?: Configuration): Promise<HttpInfo<Analyticseventsv3PostQSAdvisorRiskResponse>> {
-        const result = this.api.analyticsEventsServicePostQSAdvisorRiskWithHttpInfo(analyticseventsv3PostQSAdvisorRiskRequest, _options);
-        return result.toPromise();
-    }
-
-    /**
-     * Summary: For QS Advisor risk notification only Description: Sends QS Advisor risk notification with recipients and returns a status
-     * @param analyticseventsv3PostQSAdvisorRiskRequest 
-     */
-    public analyticsEventsServicePostQSAdvisorRisk(analyticseventsv3PostQSAdvisorRiskRequest: Analyticseventsv3PostQSAdvisorRiskRequest, _options?: Configuration): Promise<Analyticseventsv3PostQSAdvisorRiskResponse> {
-        const result = this.api.analyticsEventsServicePostQSAdvisorRisk(analyticseventsv3PostQSAdvisorRiskRequest, _options);
-        return result.toPromise();
-    }
-
-
-}
-
-
-
+import { Workflowv3WorkflowEvent } from '../models/Workflowv3WorkflowEvent';
+import { Workflowv3WorkflowEventResponse } from '../models/Workflowv3WorkflowEventResponse';
 import { ObservableAssetsServiceApi } from './ObservableAPI';
 
 import { AssetsServiceApiRequestFactory, AssetsServiceApiResponseProcessor} from "../apis/AssetsServiceApi";
@@ -2489,17 +2537,19 @@ export class PromiseComplianceAcceleratorApi {
 
     /**
      * Summary: Get compliance info Description: Return stored compliance data.
+     * @param isBrief gives compliance workspace data without reaching out to other services - meant to be quicker for dashboards.
      */
-    public complianceAcceleratorGetComplianceInfoWithHttpInfo(_options?: Configuration): Promise<HttpInfo<Complianceacceleratorv3GetComplianceInfoResponse>> {
-        const result = this.api.complianceAcceleratorGetComplianceInfoWithHttpInfo(_options);
+    public complianceAcceleratorGetComplianceInfoWithHttpInfo(isBrief?: boolean, _options?: Configuration): Promise<HttpInfo<Complianceacceleratorv3GetComplianceInfoResponse>> {
+        const result = this.api.complianceAcceleratorGetComplianceInfoWithHttpInfo(isBrief, _options);
         return result.toPromise();
     }
 
     /**
      * Summary: Get compliance info Description: Return stored compliance data.
+     * @param isBrief gives compliance workspace data without reaching out to other services - meant to be quicker for dashboards.
      */
-    public complianceAcceleratorGetComplianceInfo(_options?: Configuration): Promise<Complianceacceleratorv3GetComplianceInfoResponse> {
-        const result = this.api.complianceAcceleratorGetComplianceInfo(_options);
+    public complianceAcceleratorGetComplianceInfo(isBrief?: boolean, _options?: Configuration): Promise<Complianceacceleratorv3GetComplianceInfoResponse> {
+        const result = this.api.complianceAcceleratorGetComplianceInfo(isBrief, _options);
         return result.toPromise();
     }
 
@@ -2699,6 +2749,26 @@ export class PromiseConnectionsServiceApi {
      */
     public connectionsServiceDeletePlugin(id: string, _options?: Configuration): Promise<Connectionsv3DeletePluginResponse> {
         const result = this.api.connectionsServiceDeletePlugin(id, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Generate package. Description: Generate package.
+     * @param id id
+     * @param connectionsv3GeneratePackageRequest 
+     */
+    public connectionsServiceGeneratePackageWithHttpInfo(id: string, connectionsv3GeneratePackageRequest: Connectionsv3GeneratePackageRequest, _options?: Configuration): Promise<HttpInfo<Connectionsv3GeneratePackageResponse>> {
+        const result = this.api.connectionsServiceGeneratePackageWithHttpInfo(id, connectionsv3GeneratePackageRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Generate package. Description: Generate package.
+     * @param id id
+     * @param connectionsv3GeneratePackageRequest 
+     */
+    public connectionsServiceGeneratePackage(id: string, connectionsv3GeneratePackageRequest: Connectionsv3GeneratePackageRequest, _options?: Configuration): Promise<Connectionsv3GeneratePackageResponse> {
+        const result = this.api.connectionsServiceGeneratePackage(id, connectionsv3GeneratePackageRequest, _options);
         return result.toPromise();
     }
 
@@ -3017,6 +3087,24 @@ export class PromiseConnectionsServiceApi {
      */
     public connectionsServiceUpdateSettings(connectionsv3UpdateSettingsRequest: Connectionsv3UpdateSettingsRequest, _options?: Configuration): Promise<any> {
         const result = this.api.connectionsServiceUpdateSettings(connectionsv3UpdateSettingsRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Validate an AWS connection. Description: Validate an AWS connection.
+     * @param connectionsv3ValidateAwsConnectionRequest 
+     */
+    public connectionsServiceValidateAwsConnectionWithHttpInfo(connectionsv3ValidateAwsConnectionRequest: Connectionsv3ValidateAwsConnectionRequest, _options?: Configuration): Promise<HttpInfo<Connectionsv3ValidateConnectionResponse>> {
+        const result = this.api.connectionsServiceValidateAwsConnectionWithHttpInfo(connectionsv3ValidateAwsConnectionRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Validate an AWS connection. Description: Validate an AWS connection.
+     * @param connectionsv3ValidateAwsConnectionRequest 
+     */
+    public connectionsServiceValidateAwsConnection(connectionsv3ValidateAwsConnectionRequest: Connectionsv3ValidateAwsConnectionRequest, _options?: Configuration): Promise<Connectionsv3ValidateConnectionResponse> {
+        const result = this.api.connectionsServiceValidateAwsConnection(connectionsv3ValidateAwsConnectionRequest, _options);
         return result.toPromise();
     }
 
@@ -4367,6 +4455,101 @@ export class PromiseEcosystemServiceApi {
         return result.toPromise();
     }
 
+    /**
+     * Summary: Test integration Description: Test the integration connection with the arguments passed in the TestIntegrationRequest.  When possible a test message is sent to the integration to ensure it is functional. Currently this API only supports API_IMPORT type integrations
+     * @param ecosystemv3TestIntegrationRequest 
+     */
+    public ecosystemServiceTestIntegrationWithHttpInfo(ecosystemv3TestIntegrationRequest: Ecosystemv3TestIntegrationRequest, _options?: Configuration): Promise<HttpInfo<Ecosystemv3TestIntegrationResponse>> {
+        const result = this.api.ecosystemServiceTestIntegrationWithHttpInfo(ecosystemv3TestIntegrationRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Test integration Description: Test the integration connection with the arguments passed in the TestIntegrationRequest.  When possible a test message is sent to the integration to ensure it is functional. Currently this API only supports API_IMPORT type integrations
+     * @param ecosystemv3TestIntegrationRequest 
+     */
+    public ecosystemServiceTestIntegration(ecosystemv3TestIntegrationRequest: Ecosystemv3TestIntegrationRequest, _options?: Configuration): Promise<Ecosystemv3TestIntegrationResponse> {
+        const result = this.api.ecosystemServiceTestIntegration(ecosystemv3TestIntegrationRequest, _options);
+        return result.toPromise();
+    }
+
+
+}
+
+
+
+import { ObservableEdgeSchedulerServiceApi } from './ObservableAPI';
+
+import { EdgeSchedulerServiceApiRequestFactory, EdgeSchedulerServiceApiResponseProcessor} from "../apis/EdgeSchedulerServiceApi";
+export class PromiseEdgeSchedulerServiceApi {
+    private api: ObservableEdgeSchedulerServiceApi
+
+    public constructor(
+        configuration: Configuration,
+        requestFactory?: EdgeSchedulerServiceApiRequestFactory,
+        responseProcessor?: EdgeSchedulerServiceApiResponseProcessor
+    ) {
+        this.api = new ObservableEdgeSchedulerServiceApi(configuration, requestFactory, responseProcessor);
+    }
+
+    /**
+     * Summary: Get edge query status Description: Get the status of a queued edge query
+     * @param edgeId the id of the edge
+     * @param edgeResultReportId the id of the UC report being queried for.
+     */
+    public edgeSchedulerServiceGetEdgeQueryStatusWithHttpInfo(edgeId: string, edgeResultReportId?: string, _options?: Configuration): Promise<HttpInfo<Edgeschedulerv3GetEdgeQueryStatusResponse>> {
+        const result = this.api.edgeSchedulerServiceGetEdgeQueryStatusWithHttpInfo(edgeId, edgeResultReportId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Get edge query status Description: Get the status of a queued edge query
+     * @param edgeId the id of the edge
+     * @param edgeResultReportId the id of the UC report being queried for.
+     */
+    public edgeSchedulerServiceGetEdgeQueryStatus(edgeId: string, edgeResultReportId?: string, _options?: Configuration): Promise<Edgeschedulerv3GetEdgeQueryStatusResponse> {
+        const result = this.api.edgeSchedulerServiceGetEdgeQueryStatus(edgeId, edgeResultReportId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Monitor for a pending edge query request Description: monitor edge query pending request
+     * @param clientId edge client id to monitor edge query requests for.
+     */
+    public edgeSchedulerServiceMonitoringPendingRequestForEdgeQueryWithHttpInfo(clientId?: string, _options?: Configuration): Promise<HttpInfo<StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse>> {
+        const result = this.api.edgeSchedulerServiceMonitoringPendingRequestForEdgeQueryWithHttpInfo(clientId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Monitor for a pending edge query request Description: monitor edge query pending request
+     * @param clientId edge client id to monitor edge query requests for.
+     */
+    public edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery(clientId?: string, _options?: Configuration): Promise<StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse> {
+        const result = this.api.edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery(clientId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Schedule an edge query  Description: Schedule an edge query via data warehouse queue
+     * @param edgeId the id of the edge
+     * @param edgeschedulerv3ScheduleEdgeQueryRequest 
+     */
+    public edgeSchedulerServiceScheduleEdgeQueryWithHttpInfo(edgeId: string, edgeschedulerv3ScheduleEdgeQueryRequest: Edgeschedulerv3ScheduleEdgeQueryRequest, _options?: Configuration): Promise<HttpInfo<Edgeschedulerv3ScheduleEdgeQueryResponse>> {
+        const result = this.api.edgeSchedulerServiceScheduleEdgeQueryWithHttpInfo(edgeId, edgeschedulerv3ScheduleEdgeQueryRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Schedule an edge query  Description: Schedule an edge query via data warehouse queue
+     * @param edgeId the id of the edge
+     * @param edgeschedulerv3ScheduleEdgeQueryRequest 
+     */
+    public edgeSchedulerServiceScheduleEdgeQuery(edgeId: string, edgeschedulerv3ScheduleEdgeQueryRequest: Edgeschedulerv3ScheduleEdgeQueryRequest, _options?: Configuration): Promise<Edgeschedulerv3ScheduleEdgeQueryResponse> {
+        const result = this.api.edgeSchedulerServiceScheduleEdgeQuery(edgeId, edgeschedulerv3ScheduleEdgeQueryRequest, _options);
+        return result.toPromise();
+    }
+
 
 }
 
@@ -4616,7 +4799,7 @@ export class PromiseGroupBuilderApi {
     }
 
     /**
-     * Summary: Get gdp to gi group mapping Description: Get insights to gdp group sync mapping.
+     * Summary: Get GDP to gi group mapping Description: Get GDSC to GDP group sync mapping.
      * @param centralManagerId Central manager.
      */
     public groupBuilderGetGroupSyncMappingWithHttpInfo(centralManagerId?: string, _options?: Configuration): Promise<HttpInfo<Groupbuilderv3GetGroupSyncMappingResponse>> {
@@ -4625,7 +4808,7 @@ export class PromiseGroupBuilderApi {
     }
 
     /**
-     * Summary: Get gdp to gi group mapping Description: Get insights to gdp group sync mapping.
+     * Summary: Get GDP to gi group mapping Description: Get GDSC to GDP group sync mapping.
      * @param centralManagerId Central manager.
      */
     public groupBuilderGetGroupSyncMapping(centralManagerId?: string, _options?: Configuration): Promise<Groupbuilderv3GetGroupSyncMappingResponse> {
@@ -4634,7 +4817,7 @@ export class PromiseGroupBuilderApi {
     }
 
     /**
-     * Summary: Get group type mapping Description: Get insights to gdp group types mapping.
+     * Summary: Get group type mapping Description: Get GDSC to GDP group types mapping.
      */
     public groupBuilderGetGroupTypeMappingWithHttpInfo(_options?: Configuration): Promise<HttpInfo<Groupbuilderv3GetGroupTypeMappingResponse>> {
         const result = this.api.groupBuilderGetGroupTypeMappingWithHttpInfo(_options);
@@ -4642,7 +4825,7 @@ export class PromiseGroupBuilderApi {
     }
 
     /**
-     * Summary: Get group type mapping Description: Get insights to gdp group types mapping.
+     * Summary: Get group type mapping Description: Get GDSC to GDP group types mapping.
      */
     public groupBuilderGetGroupTypeMapping(_options?: Configuration): Promise<Groupbuilderv3GetGroupTypeMappingResponse> {
         const result = this.api.groupBuilderGetGroupTypeMapping(_options);
@@ -4837,7 +5020,7 @@ export class PromiseGuardiumConnectorApi {
     }
 
     /**
-     * Description: stores datamarts details from GDP
+     * Description: stores datamarts details from GDP. (This API is called from GDP only)
      * @param centralManagerId central manager
      * @param guardiumconnectorv3AddDatamartsRequest 
      */
@@ -4847,7 +5030,7 @@ export class PromiseGuardiumConnectorApi {
     }
 
     /**
-     * Description: stores datamarts details from GDP
+     * Description: stores datamarts details from GDP. (This API is called from GDP only)
      * @param centralManagerId central manager
      * @param guardiumconnectorv3AddDatamartsRequest 
      */
@@ -4875,7 +5058,7 @@ export class PromiseGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Add task Description: Add a task to be executed on GDP.
+     * Summary: Add task Description: Add a task to be executed on GDP. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param guardiumconnectorv3AddTaskRequest 
      */
@@ -4885,7 +5068,7 @@ export class PromiseGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Add task Description: Add a task to be executed on GDP.
+     * Summary: Add task Description: Add a task to be executed on GDP. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param guardiumconnectorv3AddTaskRequest 
      */
@@ -4973,7 +5156,7 @@ export class PromiseGuardiumConnectorApi {
     }
 
     /**
-     * Description: validates if central manager has datamart support for event model
+     * Description: validates if central manager has v5 datamart support. (This API is called from GDP only)
      * @param centralManagerId Central manager
      * @param guardiumconnectorv3DatamartVersionRequest 
      */
@@ -4983,7 +5166,7 @@ export class PromiseGuardiumConnectorApi {
     }
 
     /**
-     * Description: validates if central manager has datamart support for event model
+     * Description: validates if central manager has v5 datamart support. (This API is called from GDP only)
      * @param centralManagerId Central manager
      * @param guardiumconnectorv3DatamartVersionRequest 
      */
@@ -5031,7 +5214,7 @@ export class PromiseGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Delete task Description: Delete a task by central manager id and task id.
+     * Summary: Delete task Description: Delete a task by central manager id and task id. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param taskId ID of task being deleted.
      */
@@ -5041,7 +5224,7 @@ export class PromiseGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Delete task Description: Delete a task by central manager id and task id.
+     * Summary: Delete task Description: Delete a task by central manager id and task id. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param taskId ID of task being deleted.
      */
@@ -5051,7 +5234,7 @@ export class PromiseGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Delete tasks Description: Delete a central manager\'s tasks by central manager id.
+     * Summary: Delete tasks Description: Delete a central manager\'s tasks by central manager id. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      */
     public guardiumConnectorDeleteTasksWithHttpInfo(centralManagerId: string, _options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3DeleteTasksResponse>> {
@@ -5060,7 +5243,7 @@ export class PromiseGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Delete tasks Description: Delete a central manager\'s tasks by central manager id.
+     * Summary: Delete tasks Description: Delete a central manager\'s tasks by central manager id. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      */
     public guardiumConnectorDeleteTasks(centralManagerId: string, _options?: Configuration): Promise<Guardiumconnectorv3DeleteTasksResponse> {
@@ -5211,9 +5394,9 @@ export class PromiseGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Get gealth info Description: Get health information from Guardium Data Protection central mamangers.
+     * Summary: Get health info Description: Get health information from Guardium Data Protection central mamangers. (This API is for CMs registered in legacy pull mode. Supported on-premises only)
      * @param centralManagerId Central Manager ID.
-     * @param useFallback Flag indicating if the older gdp api is to be called in case it doesn\&#39;t support new api.
+     * @param useFallback Flag indicating if the older GDP api is to be called in case it doesn\&#39;t support new api.
      */
     public guardiumConnectorGetHealthInfoWithHttpInfo(centralManagerId: string, useFallback?: boolean, _options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3GetHealthInfoResponse>> {
         const result = this.api.guardiumConnectorGetHealthInfoWithHttpInfo(centralManagerId, useFallback, _options);
@@ -5221,9 +5404,9 @@ export class PromiseGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Get gealth info Description: Get health information from Guardium Data Protection central mamangers.
+     * Summary: Get health info Description: Get health information from Guardium Data Protection central mamangers. (This API is for CMs registered in legacy pull mode. Supported on-premises only)
      * @param centralManagerId Central Manager ID.
-     * @param useFallback Flag indicating if the older gdp api is to be called in case it doesn\&#39;t support new api.
+     * @param useFallback Flag indicating if the older GDP api is to be called in case it doesn\&#39;t support new api.
      */
     public guardiumConnectorGetHealthInfo(centralManagerId: string, useFallback?: boolean, _options?: Configuration): Promise<Guardiumconnectorv3GetHealthInfoResponse> {
         const result = this.api.guardiumConnectorGetHealthInfo(centralManagerId, useFallback, _options);
@@ -5231,7 +5414,7 @@ export class PromiseGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for Guardium.
+     * Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for GDSC.
      * @param centralManagerId Central Manager ID.
      */
     public guardiumConnectorGetLatestDMExtractionProfileWithHttpInfo(centralManagerId: string, _options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3GetLatestDMExtractionProfileResponse>> {
@@ -5240,7 +5423,7 @@ export class PromiseGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for Guardium.
+     * Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for GDSC.
      * @param centralManagerId Central Manager ID.
      */
     public guardiumConnectorGetLatestDMExtractionProfile(centralManagerId: string, _options?: Configuration): Promise<Guardiumconnectorv3GetLatestDMExtractionProfileResponse> {
@@ -5267,7 +5450,7 @@ export class PromiseGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Get sync DMs Description: Return the list of tasks from a central manager.
+     * Summary: Get sync DMs Description: Return the list of tasks from a central manager. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      */
     public guardiumConnectorGetSyncDMsWithHttpInfo(centralManagerId: string, _options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3GetSyncDMsResponse>> {
@@ -5276,7 +5459,7 @@ export class PromiseGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Get sync DMs Description: Return the list of tasks from a central manager.
+     * Summary: Get sync DMs Description: Return the list of tasks from a central manager. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      */
     public guardiumConnectorGetSyncDMs(centralManagerId: string, _options?: Configuration): Promise<Guardiumconnectorv3GetSyncDMsResponse> {
@@ -5301,7 +5484,7 @@ export class PromiseGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Get tasks Description: Return the list of tasks from a central manager.
+     * Summary: Get tasks Description: Return the list of tasks from a central manager. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param taskId ID of task.
      * @param taskType Type of task.
@@ -5313,7 +5496,7 @@ export class PromiseGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Get tasks Description: Return the list of tasks from a central manager.
+     * Summary: Get tasks Description: Return the list of tasks from a central manager. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param taskId ID of task.
      * @param taskType Type of task.
@@ -5325,7 +5508,7 @@ export class PromiseGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Run GDP report Description: Run GDP report.
+     * Summary: Run GDP report Description: Run GDP report. (This API is for CMs registered in legacy pull mode. Supported on-premises only)
      * @param centralManagerId Central Manager ID.
      * @param guardiumconnectorv3RunGDPReportRequest 
      */
@@ -5335,7 +5518,7 @@ export class PromiseGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Run GDP report Description: Run GDP report.
+     * Summary: Run GDP report Description: Run GDP report. (This API is for CMs registered in legacy pull mode. Supported on-premises only)
      * @param centralManagerId Central Manager ID.
      * @param guardiumconnectorv3RunGDPReportRequest 
      */
@@ -5345,7 +5528,7 @@ export class PromiseGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Setup CM Description: Set up the registration between a GDP Central manager and Guardium.
+     * Summary: Setup CM Description: Set up the registration between a GDP Central manager and GDSC. (This API is called from GDP only)
      * @param guardiumconnectorv3SetupCMRequest 
      */
     public guardiumConnectorSetupCMWithHttpInfo(guardiumconnectorv3SetupCMRequest: Guardiumconnectorv3SetupCMRequest, _options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3SetupCMResponse>> {
@@ -5354,7 +5537,7 @@ export class PromiseGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Setup CM Description: Set up the registration between a GDP Central manager and Guardium.
+     * Summary: Setup CM Description: Set up the registration between a GDP Central manager and GDSC. (This API is called from GDP only)
      * @param guardiumconnectorv3SetupCMRequest 
      */
     public guardiumConnectorSetupCM(guardiumconnectorv3SetupCMRequest: Guardiumconnectorv3SetupCMRequest, _options?: Configuration): Promise<Guardiumconnectorv3SetupCMResponse> {
@@ -5383,7 +5566,7 @@ export class PromiseGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Task error Description: Log error messages from GDP task execution.
+     * Summary: Task error Description: Log error messages from GDP task execution. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param guardiumconnectorv3TaskErrorRequest 
      */
@@ -5393,7 +5576,7 @@ export class PromiseGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Task error Description: Log error messages from GDP task execution.
+     * Summary: Task error Description: Log error messages from GDP task execution. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param guardiumconnectorv3TaskErrorRequest 
      */
@@ -5439,7 +5622,7 @@ export class PromiseGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Update streaming Description: Update streaming status into GI.
+     * Summary: Update streaming Description: Update streaming status into GI. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param guardiumconnectorv3UpdateStreamingRequest 
      */
@@ -5449,7 +5632,7 @@ export class PromiseGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Update streaming Description: Update streaming status into GI.
+     * Summary: Update streaming Description: Update streaming status into GI. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param guardiumconnectorv3UpdateStreamingRequest 
      */
@@ -5459,7 +5642,7 @@ export class PromiseGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Update task Description: Update a task that gets executed on GDP.
+     * Summary: Update task Description: Update a task that gets executed on GDP. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param taskId ID of task being updated.
      * @param guardiumconnectorv3UpdateTaskRequest 
@@ -5470,7 +5653,7 @@ export class PromiseGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Update task Description: Update a task that gets executed on GDP.
+     * Summary: Update task Description: Update a task that gets executed on GDP. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param taskId ID of task being updated.
      * @param guardiumconnectorv3UpdateTaskRequest 
@@ -5500,7 +5683,7 @@ export class PromiseHealthCollectorApi {
     }
 
     /**
-     * Summary: Get data warehouse usage info Description: Get information from Db2 related to usage
+     * Summary: Get data warehouse usage info Description: Get information from data warehouse related to usage
      * @param type The type of metric to retrieve
      * @param startTime The start time from which the data needs to be calculated.
      * @param endTime The end time from which the data needs to be calculated.
@@ -5511,7 +5694,7 @@ export class PromiseHealthCollectorApi {
     }
 
     /**
-     * Summary: Get data warehouse usage info Description: Get information from Db2 related to usage
+     * Summary: Get data warehouse usage info Description: Get information from data warehouse related to usage
      * @param type The type of metric to retrieve
      * @param startTime The start time from which the data needs to be calculated.
      * @param endTime The end time from which the data needs to be calculated.
@@ -6040,12 +6223,13 @@ export class PromiseNotificationsServiceApi {
      * @param filterState Only return record that include the specified state.
      * @param filterOrigins Only return record that includes the specified origins.
      * @param filterOriginData Only return record that with the specified origin_data.
+     * @param filterLimit The max amount of rows to return for this single query.
      * @param offset The amount to offset the rows by for pagination.
      * @param limit The max amount of rows to return for pagination.
      * @param includeFilterCounts Computing the filter counts is relatively expensive, only compute when needed.
      */
-    public notificationsServiceGetNotificationRecordsWithHttpInfo(filterStartTime?: Date, filterEndTime?: Date, filterState?: 'INCLUDE_ALL' | 'UNREAD_ONLY' | 'READ_ONLY' | 'COMPLETE_ONLY' | 'NOT_COMPLETE', filterOrigins?: Array<string>, filterOriginData?: string, offset?: number, limit?: number, includeFilterCounts?: boolean, _options?: Configuration): Promise<HttpInfo<Notificationsv3GetNotificationRecordsResponse>> {
-        const result = this.api.notificationsServiceGetNotificationRecordsWithHttpInfo(filterStartTime, filterEndTime, filterState, filterOrigins, filterOriginData, offset, limit, includeFilterCounts, _options);
+    public notificationsServiceGetNotificationRecordsWithHttpInfo(filterStartTime?: Date, filterEndTime?: Date, filterState?: 'INCLUDE_ALL' | 'UNREAD_ONLY' | 'READ_ONLY' | 'COMPLETE_ONLY' | 'NOT_COMPLETE', filterOrigins?: Array<string>, filterOriginData?: string, filterLimit?: number, offset?: number, limit?: number, includeFilterCounts?: boolean, _options?: Configuration): Promise<HttpInfo<Notificationsv3GetNotificationRecordsResponse>> {
+        const result = this.api.notificationsServiceGetNotificationRecordsWithHttpInfo(filterStartTime, filterEndTime, filterState, filterOrigins, filterOriginData, filterLimit, offset, limit, includeFilterCounts, _options);
         return result.toPromise();
     }
 
@@ -6056,12 +6240,13 @@ export class PromiseNotificationsServiceApi {
      * @param filterState Only return record that include the specified state.
      * @param filterOrigins Only return record that includes the specified origins.
      * @param filterOriginData Only return record that with the specified origin_data.
+     * @param filterLimit The max amount of rows to return for this single query.
      * @param offset The amount to offset the rows by for pagination.
      * @param limit The max amount of rows to return for pagination.
      * @param includeFilterCounts Computing the filter counts is relatively expensive, only compute when needed.
      */
-    public notificationsServiceGetNotificationRecords(filterStartTime?: Date, filterEndTime?: Date, filterState?: 'INCLUDE_ALL' | 'UNREAD_ONLY' | 'READ_ONLY' | 'COMPLETE_ONLY' | 'NOT_COMPLETE', filterOrigins?: Array<string>, filterOriginData?: string, offset?: number, limit?: number, includeFilterCounts?: boolean, _options?: Configuration): Promise<Notificationsv3GetNotificationRecordsResponse> {
-        const result = this.api.notificationsServiceGetNotificationRecords(filterStartTime, filterEndTime, filterState, filterOrigins, filterOriginData, offset, limit, includeFilterCounts, _options);
+    public notificationsServiceGetNotificationRecords(filterStartTime?: Date, filterEndTime?: Date, filterState?: 'INCLUDE_ALL' | 'UNREAD_ONLY' | 'READ_ONLY' | 'COMPLETE_ONLY' | 'NOT_COMPLETE', filterOrigins?: Array<string>, filterOriginData?: string, filterLimit?: number, offset?: number, limit?: number, includeFilterCounts?: boolean, _options?: Configuration): Promise<Notificationsv3GetNotificationRecordsResponse> {
+        const result = this.api.notificationsServiceGetNotificationRecords(filterStartTime, filterEndTime, filterState, filterOrigins, filterOriginData, filterLimit, offset, limit, includeFilterCounts, _options);
         return result.toPromise();
     }
 
@@ -6082,6 +6267,42 @@ export class PromiseNotificationsServiceApi {
      */
     public notificationsServiceGetTicketStatus(ticketId?: string, integrationId?: string, _options?: Configuration): Promise<Notificationsv3GetTicketStatusResponse> {
         const result = this.api.notificationsServiceGetTicketStatus(ticketId, integrationId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: For PostNotificationRecord notification only Description: Sends notification with recipients and returns a status
+     * @param notificationsv3PostNotificationRecordRequest 
+     */
+    public notificationsServicePostNotificationRecordWithHttpInfo(notificationsv3PostNotificationRecordRequest: Notificationsv3PostNotificationRecordRequest, _options?: Configuration): Promise<HttpInfo<Notificationsv3PostNotificationRecordResponse>> {
+        const result = this.api.notificationsServicePostNotificationRecordWithHttpInfo(notificationsv3PostNotificationRecordRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: For PostNotificationRecord notification only Description: Sends notification with recipients and returns a status
+     * @param notificationsv3PostNotificationRecordRequest 
+     */
+    public notificationsServicePostNotificationRecord(notificationsv3PostNotificationRecordRequest: Notificationsv3PostNotificationRecordRequest, _options?: Configuration): Promise<Notificationsv3PostNotificationRecordResponse> {
+        const result = this.api.notificationsServicePostNotificationRecord(notificationsv3PostNotificationRecordRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Search notification records Description: Return notification records using pipeline of filters
+     * @param notificationsv3SearchNotificationRecordsRequest 
+     */
+    public notificationsServiceSearchNotificationRecordsWithHttpInfo(notificationsv3SearchNotificationRecordsRequest: Notificationsv3SearchNotificationRecordsRequest, _options?: Configuration): Promise<HttpInfo<Notificationsv3SearchNotificationRecordsResponse>> {
+        const result = this.api.notificationsServiceSearchNotificationRecordsWithHttpInfo(notificationsv3SearchNotificationRecordsRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Search notification records Description: Return notification records using pipeline of filters
+     * @param notificationsv3SearchNotificationRecordsRequest 
+     */
+    public notificationsServiceSearchNotificationRecords(notificationsv3SearchNotificationRecordsRequest: Notificationsv3SearchNotificationRecordsRequest, _options?: Configuration): Promise<Notificationsv3SearchNotificationRecordsResponse> {
+        const result = this.api.notificationsServiceSearchNotificationRecords(notificationsv3SearchNotificationRecordsRequest, _options);
         return result.toPromise();
     }
 
@@ -6288,7 +6509,7 @@ export class PromisePipelineconfigServiceApi {
     }
 
     /**
-     * Summary: Delete a tenant resource Description: Delete tenant specific resources such as db2, mongo, postgres and s3.
+     * Summary: Delete a tenant resource Description: Delete tenant specific resources such as data warehouse, mongo, postgres and s3.
      * @param tenantId unique tenant ID
      * @param resource resource specifies the specific resource to delete
      */
@@ -6298,7 +6519,7 @@ export class PromisePipelineconfigServiceApi {
     }
 
     /**
-     * Summary: Delete a tenant resource Description: Delete tenant specific resources such as db2, mongo, postgres and s3.
+     * Summary: Delete a tenant resource Description: Delete tenant specific resources such as data warehouse, mongo, postgres and s3.
      * @param tenantId unique tenant ID
      * @param resource resource specifies the specific resource to delete
      */
@@ -6541,7 +6762,7 @@ export class PromisePolicyBuilderApi {
     }
 
     /**
-     * Summary: Insert gdp policy summaries Description: Inserts GDP\'s CM\'s policy summary information into mogodb. (This API is called from GDP only)
+     * Summary: Insert GDP policy summaries Description: Inserts GDP\'s CM\'s policy summary information into mogodb. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param policybuilderv3InsertGdpPolicyMetaDataRequest 
      */
@@ -6551,7 +6772,7 @@ export class PromisePolicyBuilderApi {
     }
 
     /**
-     * Summary: Insert gdp policy summaries Description: Inserts GDP\'s CM\'s policy summary information into mogodb. (This API is called from GDP only)
+     * Summary: Insert GDP policy summaries Description: Inserts GDP\'s CM\'s policy summary information into mogodb. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param policybuilderv3InsertGdpPolicyMetaDataRequest 
      */
@@ -6659,6 +6880,61 @@ export class PromisePolicyBuilderApi {
 
 
 
+import { ObservableQSDataLoaderApi } from './ObservableAPI';
+
+import { QSDataLoaderApiRequestFactory, QSDataLoaderApiResponseProcessor} from "../apis/QSDataLoaderApi";
+export class PromiseQSDataLoaderApi {
+    private api: ObservableQSDataLoaderApi
+
+    public constructor(
+        configuration: Configuration,
+        requestFactory?: QSDataLoaderApiRequestFactory,
+        responseProcessor?: QSDataLoaderApiResponseProcessor
+    ) {
+        this.api = new ObservableQSDataLoaderApi(configuration, requestFactory, responseProcessor);
+    }
+
+    /**
+     * QSfileValidator - validate the files before insert happend .
+     * @param qsdataloaderv3QSfileValidatorRequest 
+     */
+    public qSDataLoaderQSfileValidatorWithHttpInfo(qsdataloaderv3QSfileValidatorRequest: Qsdataloaderv3QSfileValidatorRequest, _options?: Configuration): Promise<HttpInfo<Qsdataloaderv3QSfileValidatorResonse>> {
+        const result = this.api.qSDataLoaderQSfileValidatorWithHttpInfo(qsdataloaderv3QSfileValidatorRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * QSfileValidator - validate the files before insert happend .
+     * @param qsdataloaderv3QSfileValidatorRequest 
+     */
+    public qSDataLoaderQSfileValidator(qsdataloaderv3QSfileValidatorRequest: Qsdataloaderv3QSfileValidatorRequest, _options?: Configuration): Promise<Qsdataloaderv3QSfileValidatorResonse> {
+        const result = this.api.qSDataLoaderQSfileValidator(qsdataloaderv3QSfileValidatorRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * UploadSyntheticDataLoader - Insert data into Db after read from .sql file .
+     * @param body 
+     */
+    public qSDataLoaderUploadSyntheticDataLoaderWithHttpInfo(body: any, _options?: Configuration): Promise<HttpInfo<Qsdataloaderv3QSyntheticDataLoaderResonse>> {
+        const result = this.api.qSDataLoaderUploadSyntheticDataLoaderWithHttpInfo(body, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * UploadSyntheticDataLoader - Insert data into Db after read from .sql file .
+     * @param body 
+     */
+    public qSDataLoaderUploadSyntheticDataLoader(body: any, _options?: Configuration): Promise<Qsdataloaderv3QSyntheticDataLoaderResonse> {
+        const result = this.api.qSDataLoaderUploadSyntheticDataLoader(body, _options);
+        return result.toPromise();
+    }
+
+
+}
+
+
+
 import { ObservableQSDataManagerApi } from './ObservableAPI';
 
 import { QSDataManagerApiRequestFactory, QSDataManagerApiResponseProcessor} from "../apis/QSDataManagerApi";
@@ -6686,6 +6962,22 @@ export class PromiseQSDataManagerApi {
      */
     public qSDataManagerGetMasterData(_options?: Configuration): Promise<Qspmdatamanagerv3MasterDataResponse> {
         const result = this.api.qSDataManagerGetMasterData(_options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Plugins Details Description: Retrieves All plugins information.
+     */
+    public qSDataManagerGetPluginDataWithHttpInfo(_options?: Configuration): Promise<HttpInfo<Qspmdatamanagerv3PluginDataResponse>> {
+        const result = this.api.qSDataManagerGetPluginDataWithHttpInfo(_options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Plugins Details Description: Retrieves All plugins information.
+     */
+    public qSDataManagerGetPluginData(_options?: Configuration): Promise<Qspmdatamanagerv3PluginDataResponse> {
+        const result = this.api.qSDataManagerGetPluginData(_options);
         return result.toPromise();
     }
 
@@ -6878,6 +7170,24 @@ export class PromiseQSPolicyManagerApi {
      */
     public qSPolicyManagerBatchStatusUpdate(body: any, _options?: Configuration): Promise<Qspmpolicymanagerv3StandardEmptyResponse> {
         const result = this.api.qSPolicyManagerBatchStatusUpdate(body, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * ConfigUpdate - this function update Crypto Risk Factor Weight in Db2 as well as Mongodb.
+     * @param qspmpolicymanagerv3UpdateConfigsRequest 
+     */
+    public qSPolicyManagerConfigUpdateWithHttpInfo(qspmpolicymanagerv3UpdateConfigsRequest: Qspmpolicymanagerv3UpdateConfigsRequest, _options?: Configuration): Promise<HttpInfo<Qspmpolicymanagerv3APIResonse>> {
+        const result = this.api.qSPolicyManagerConfigUpdateWithHttpInfo(qspmpolicymanagerv3UpdateConfigsRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * ConfigUpdate - this function update Crypto Risk Factor Weight in Db2 as well as Mongodb.
+     * @param qspmpolicymanagerv3UpdateConfigsRequest 
+     */
+    public qSPolicyManagerConfigUpdate(qspmpolicymanagerv3UpdateConfigsRequest: Qspmpolicymanagerv3UpdateConfigsRequest, _options?: Configuration): Promise<Qspmpolicymanagerv3APIResonse> {
+        const result = this.api.qSPolicyManagerConfigUpdate(qspmpolicymanagerv3UpdateConfigsRequest, _options);
         return result.toPromise();
     }
 
@@ -7956,6 +8266,687 @@ export class PromiseReportsServiceApi {
 
 
 
+import { ObservableResourceControllerK8ServiceApi } from './ObservableAPI';
+
+import { ResourceControllerK8ServiceApiRequestFactory, ResourceControllerK8ServiceApiResponseProcessor} from "../apis/ResourceControllerK8ServiceApi";
+export class PromiseResourceControllerK8ServiceApi {
+    private api: ObservableResourceControllerK8ServiceApi
+
+    public constructor(
+        configuration: Configuration,
+        requestFactory?: ResourceControllerK8ServiceApiRequestFactory,
+        responseProcessor?: ResourceControllerK8ServiceApiResponseProcessor
+    ) {
+        this.api = new ObservableResourceControllerK8ServiceApi(configuration, requestFactory, responseProcessor);
+    }
+
+    /**
+     * CreateController - Add a new controller.
+     * @param resourcecontrollerk8v3CreateControllerRequest 
+     */
+    public resourceControllerK8ServiceCreateControllerWithHttpInfo(resourcecontrollerk8v3CreateControllerRequest: Resourcecontrollerk8v3CreateControllerRequest, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3Controller>> {
+        const result = this.api.resourceControllerK8ServiceCreateControllerWithHttpInfo(resourcecontrollerk8v3CreateControllerRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * CreateController - Add a new controller.
+     * @param resourcecontrollerk8v3CreateControllerRequest 
+     */
+    public resourceControllerK8ServiceCreateController(resourcecontrollerk8v3CreateControllerRequest: Resourcecontrollerk8v3CreateControllerRequest, _options?: Configuration): Promise<Resourcecontrollerk8v3Controller> {
+        const result = this.api.resourceControllerK8ServiceCreateController(resourcecontrollerk8v3CreateControllerRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * CreateHeartBeat - Create a heartbeat for the controller.
+     * @param controllerId The ID of the controller to invoke a heartbeat on.
+     * @param resourcecontrollerk8v3CreateHeartBeatRequest 
+     */
+    public resourceControllerK8ServiceCreateHeartBeatWithHttpInfo(controllerId: string, resourcecontrollerk8v3CreateHeartBeatRequest: Resourcecontrollerk8v3CreateHeartBeatRequest, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3CreateHeartBeatResponse>> {
+        const result = this.api.resourceControllerK8ServiceCreateHeartBeatWithHttpInfo(controllerId, resourcecontrollerk8v3CreateHeartBeatRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * CreateHeartBeat - Create a heartbeat for the controller.
+     * @param controllerId The ID of the controller to invoke a heartbeat on.
+     * @param resourcecontrollerk8v3CreateHeartBeatRequest 
+     */
+    public resourceControllerK8ServiceCreateHeartBeat(controllerId: string, resourcecontrollerk8v3CreateHeartBeatRequest: Resourcecontrollerk8v3CreateHeartBeatRequest, _options?: Configuration): Promise<Resourcecontrollerk8v3CreateHeartBeatResponse> {
+        const result = this.api.resourceControllerK8ServiceCreateHeartBeat(controllerId, resourcecontrollerk8v3CreateHeartBeatRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * CreateHeartBeatEx - Create a heartbeat for the controller with extended information.
+     * @param controllerId Optional: controller id
+     * @param resourcecontrollerk8v3ControllerHeartbeat 
+     */
+    public resourceControllerK8ServiceCreateHeartBeatExWithHttpInfo(controllerId: string, resourcecontrollerk8v3ControllerHeartbeat: Resourcecontrollerk8v3ControllerHeartbeat, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3CreateHeartBeatExResponse>> {
+        const result = this.api.resourceControllerK8ServiceCreateHeartBeatExWithHttpInfo(controllerId, resourcecontrollerk8v3ControllerHeartbeat, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * CreateHeartBeatEx - Create a heartbeat for the controller with extended information.
+     * @param controllerId Optional: controller id
+     * @param resourcecontrollerk8v3ControllerHeartbeat 
+     */
+    public resourceControllerK8ServiceCreateHeartBeatEx(controllerId: string, resourcecontrollerk8v3ControllerHeartbeat: Resourcecontrollerk8v3ControllerHeartbeat, _options?: Configuration): Promise<Resourcecontrollerk8v3CreateHeartBeatExResponse> {
+        const result = this.api.resourceControllerK8ServiceCreateHeartBeatEx(controllerId, resourcecontrollerk8v3ControllerHeartbeat, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * //////////////////////////////////////////////////////////////// Interface to the controllers and apps api in the App-Manager microservice CreateJob - Create a job definition. Files and secrets contained within will also be created.
+     * @param resourcecontrollerk8v3Job 
+     */
+    public resourceControllerK8ServiceCreateJobWithHttpInfo(resourcecontrollerk8v3Job: Resourcecontrollerk8v3Job, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3Job>> {
+        const result = this.api.resourceControllerK8ServiceCreateJobWithHttpInfo(resourcecontrollerk8v3Job, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * //////////////////////////////////////////////////////////////// Interface to the controllers and apps api in the App-Manager microservice CreateJob - Create a job definition. Files and secrets contained within will also be created.
+     * @param resourcecontrollerk8v3Job 
+     */
+    public resourceControllerK8ServiceCreateJob(resourcecontrollerk8v3Job: Resourcecontrollerk8v3Job, _options?: Configuration): Promise<Resourcecontrollerk8v3Job> {
+        const result = this.api.resourceControllerK8ServiceCreateJob(resourcecontrollerk8v3Job, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * CreateJobExecution - Create a job execution.
+     * @param resourcecontrollerk8v3JobExecution 
+     */
+    public resourceControllerK8ServiceCreateJobExecutionWithHttpInfo(resourcecontrollerk8v3JobExecution: Resourcecontrollerk8v3JobExecution, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3JobExecution>> {
+        const result = this.api.resourceControllerK8ServiceCreateJobExecutionWithHttpInfo(resourcecontrollerk8v3JobExecution, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * CreateJobExecution - Create a job execution.
+     * @param resourcecontrollerk8v3JobExecution 
+     */
+    public resourceControllerK8ServiceCreateJobExecution(resourcecontrollerk8v3JobExecution: Resourcecontrollerk8v3JobExecution, _options?: Configuration): Promise<Resourcecontrollerk8v3JobExecution> {
+        const result = this.api.resourceControllerK8ServiceCreateJobExecution(resourcecontrollerk8v3JobExecution, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * CreateKeypair - Create a new keypair for the controller.
+     * @param controllerId The ID of the controller to get app tests for.
+     * @param resourcecontrollerk8v3CreateKeypairRequest 
+     */
+    public resourceControllerK8ServiceCreateKeypairWithHttpInfo(controllerId: string, resourcecontrollerk8v3CreateKeypairRequest: Resourcecontrollerk8v3CreateKeypairRequest, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3CreateKeypairResponse>> {
+        const result = this.api.resourceControllerK8ServiceCreateKeypairWithHttpInfo(controllerId, resourcecontrollerk8v3CreateKeypairRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * CreateKeypair - Create a new keypair for the controller.
+     * @param controllerId The ID of the controller to get app tests for.
+     * @param resourcecontrollerk8v3CreateKeypairRequest 
+     */
+    public resourceControllerK8ServiceCreateKeypair(controllerId: string, resourcecontrollerk8v3CreateKeypairRequest: Resourcecontrollerk8v3CreateKeypairRequest, _options?: Configuration): Promise<Resourcecontrollerk8v3CreateKeypairResponse> {
+        const result = this.api.resourceControllerK8ServiceCreateKeypair(controllerId, resourcecontrollerk8v3CreateKeypairRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * DeleteController - Delete a controller.
+     * @param controllerId The ID of the controller to get the status.
+     * @param resourcecontrollerk8v3DeleteControllerRequest 
+     */
+    public resourceControllerK8ServiceDeleteControllerWithHttpInfo(controllerId: string, resourcecontrollerk8v3DeleteControllerRequest: Resourcecontrollerk8v3DeleteControllerRequest, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3DeleteControllerResponse>> {
+        const result = this.api.resourceControllerK8ServiceDeleteControllerWithHttpInfo(controllerId, resourcecontrollerk8v3DeleteControllerRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * DeleteController - Delete a controller.
+     * @param controllerId The ID of the controller to get the status.
+     * @param resourcecontrollerk8v3DeleteControllerRequest 
+     */
+    public resourceControllerK8ServiceDeleteController(controllerId: string, resourcecontrollerk8v3DeleteControllerRequest: Resourcecontrollerk8v3DeleteControllerRequest, _options?: Configuration): Promise<Resourcecontrollerk8v3DeleteControllerResponse> {
+        const result = this.api.resourceControllerK8ServiceDeleteController(controllerId, resourcecontrollerk8v3DeleteControllerRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * DeleteEdgeTenant - deletes an edge tenant providing edge tenant id
+     * @param tenantId ID of the tenant to delete
+     * @param resourcecontrollerk8v3DeleteEdgeTenantRequestApphost 
+     */
+    public resourceControllerK8ServiceDeleteEdgeTenantWithHttpInfo(tenantId: string, resourcecontrollerk8v3DeleteEdgeTenantRequestApphost: Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3DeleteEdgeTenantResponse>> {
+        const result = this.api.resourceControllerK8ServiceDeleteEdgeTenantWithHttpInfo(tenantId, resourcecontrollerk8v3DeleteEdgeTenantRequestApphost, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * DeleteEdgeTenant - deletes an edge tenant providing edge tenant id
+     * @param tenantId ID of the tenant to delete
+     * @param resourcecontrollerk8v3DeleteEdgeTenantRequestApphost 
+     */
+    public resourceControllerK8ServiceDeleteEdgeTenant(tenantId: string, resourcecontrollerk8v3DeleteEdgeTenantRequestApphost: Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost, _options?: Configuration): Promise<Resourcecontrollerk8v3DeleteEdgeTenantResponse> {
+        const result = this.api.resourceControllerK8ServiceDeleteEdgeTenant(tenantId, resourcecontrollerk8v3DeleteEdgeTenantRequestApphost, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * DeleteEdgeTenantRequest to deletes gi and tnt CR on edge
+     * @param tenantId Tenant ID for the redge request.
+     * @param edgeId ID of the edge system.
+     * @param edgeName Edge gateway ID.
+     */
+    public resourceControllerK8ServiceDeleteEdgeTenantRequestWithHttpInfo(tenantId?: string, edgeId?: string, edgeName?: string, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3EdgeResourceResponse>> {
+        const result = this.api.resourceControllerK8ServiceDeleteEdgeTenantRequestWithHttpInfo(tenantId, edgeId, edgeName, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * DeleteEdgeTenantRequest to deletes gi and tnt CR on edge
+     * @param tenantId Tenant ID for the redge request.
+     * @param edgeId ID of the edge system.
+     * @param edgeName Edge gateway ID.
+     */
+    public resourceControllerK8ServiceDeleteEdgeTenantRequest(tenantId?: string, edgeId?: string, edgeName?: string, _options?: Configuration): Promise<Resourcecontrollerk8v3EdgeResourceResponse> {
+        const result = this.api.resourceControllerK8ServiceDeleteEdgeTenantRequest(tenantId, edgeId, edgeName, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * DeleteJob - Delete a job.
+     * @param jobId ID of the job that needs to be deleted.
+     * @param resourcecontrollerk8v3DeleteJobRequest 
+     */
+    public resourceControllerK8ServiceDeleteJobWithHttpInfo(jobId: string, resourcecontrollerk8v3DeleteJobRequest: Resourcecontrollerk8v3DeleteJobRequest, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3DeleteJobResponse>> {
+        const result = this.api.resourceControllerK8ServiceDeleteJobWithHttpInfo(jobId, resourcecontrollerk8v3DeleteJobRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * DeleteJob - Delete a job.
+     * @param jobId ID of the job that needs to be deleted.
+     * @param resourcecontrollerk8v3DeleteJobRequest 
+     */
+    public resourceControllerK8ServiceDeleteJob(jobId: string, resourcecontrollerk8v3DeleteJobRequest: Resourcecontrollerk8v3DeleteJobRequest, _options?: Configuration): Promise<Resourcecontrollerk8v3DeleteJobResponse> {
+        const result = this.api.resourceControllerK8ServiceDeleteJob(jobId, resourcecontrollerk8v3DeleteJobRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * DownloadControllerLogs - Download the controller logs for a running controller.
+     * @param controllerId The ID of the controller to download logs for.
+     * @param resourcecontrollerk8v3DownloadControllerLogsRequest 
+     */
+    public resourceControllerK8ServiceDownloadControllerLogsWithHttpInfo(controllerId: string, resourcecontrollerk8v3DownloadControllerLogsRequest: Resourcecontrollerk8v3DownloadControllerLogsRequest, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3DownloadControllerLogsResponse>> {
+        const result = this.api.resourceControllerK8ServiceDownloadControllerLogsWithHttpInfo(controllerId, resourcecontrollerk8v3DownloadControllerLogsRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * DownloadControllerLogs - Download the controller logs for a running controller.
+     * @param controllerId The ID of the controller to download logs for.
+     * @param resourcecontrollerk8v3DownloadControllerLogsRequest 
+     */
+    public resourceControllerK8ServiceDownloadControllerLogs(controllerId: string, resourcecontrollerk8v3DownloadControllerLogsRequest: Resourcecontrollerk8v3DownloadControllerLogsRequest, _options?: Configuration): Promise<Resourcecontrollerk8v3DownloadControllerLogsResponse> {
+        const result = this.api.resourceControllerK8ServiceDownloadControllerLogs(controllerId, resourcecontrollerk8v3DownloadControllerLogsRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * GetControllerApps - Get the apps for the given controller.
+     * @param controllerId The ID of the controller to get apps for.
+     * @param modifiedSince Only get the apps if any were modified since the given date.
+     */
+    public resourceControllerK8ServiceGetControllerAppsWithHttpInfo(controllerId: string, modifiedSince?: string, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3GetControllerAppsResponse>> {
+        const result = this.api.resourceControllerK8ServiceGetControllerAppsWithHttpInfo(controllerId, modifiedSince, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * GetControllerApps - Get the apps for the given controller.
+     * @param controllerId The ID of the controller to get apps for.
+     * @param modifiedSince Only get the apps if any were modified since the given date.
+     */
+    public resourceControllerK8ServiceGetControllerApps(controllerId: string, modifiedSince?: string, _options?: Configuration): Promise<Resourcecontrollerk8v3GetControllerAppsResponse> {
+        const result = this.api.resourceControllerK8ServiceGetControllerApps(controllerId, modifiedSince, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * GetControllerCommands - Get the commands for the controller to execute.
+     * @param controllerId The ID of the controller to get commands for.
+     */
+    public resourceControllerK8ServiceGetControllerCommandsWithHttpInfo(controllerId: string, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3GetControllerCommandsResponse>> {
+        const result = this.api.resourceControllerK8ServiceGetControllerCommandsWithHttpInfo(controllerId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * GetControllerCommands - Get the commands for the controller to execute.
+     * @param controllerId The ID of the controller to get commands for.
+     */
+    public resourceControllerK8ServiceGetControllerCommands(controllerId: string, _options?: Configuration): Promise<Resourcecontrollerk8v3GetControllerCommandsResponse> {
+        const result = this.api.resourceControllerK8ServiceGetControllerCommands(controllerId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * GetControllerJobs - Get the jobs for the controller to execute.
+     * @param controllerId The ID of the controller to get jobs for.
+     * @param modifiedSince Optional: Only get the jobs if any were modified since the given date.
+     */
+    public resourceControllerK8ServiceGetControllerJobsWithHttpInfo(controllerId: string, modifiedSince?: string, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3GetControllerJobsResponse>> {
+        const result = this.api.resourceControllerK8ServiceGetControllerJobsWithHttpInfo(controllerId, modifiedSince, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * GetControllerJobs - Get the jobs for the controller to execute.
+     * @param controllerId The ID of the controller to get jobs for.
+     * @param modifiedSince Optional: Only get the jobs if any were modified since the given date.
+     */
+    public resourceControllerK8ServiceGetControllerJobs(controllerId: string, modifiedSince?: string, _options?: Configuration): Promise<Resourcecontrollerk8v3GetControllerJobsResponse> {
+        const result = this.api.resourceControllerK8ServiceGetControllerJobs(controllerId, modifiedSince, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * GetControllerStatus - Get the status for the given controller.
+     * @param controllerId The ID of the controller to get the status.
+     */
+    public resourceControllerK8ServiceGetControllerStatusWithHttpInfo(controllerId: string, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3ControllerStatus>> {
+        const result = this.api.resourceControllerK8ServiceGetControllerStatusWithHttpInfo(controllerId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * GetControllerStatus - Get the status for the given controller.
+     * @param controllerId The ID of the controller to get the status.
+     */
+    public resourceControllerK8ServiceGetControllerStatus(controllerId: string, _options?: Configuration): Promise<Resourcecontrollerk8v3ControllerStatus> {
+        const result = this.api.resourceControllerK8ServiceGetControllerStatus(controllerId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * GetControllers - Get the controllers for the given tenant.
+     * @param tenantId The ID of the tenant to get controllers for.
+     * @param wantLocal Used to indicate the caller wants the local controller.
+     */
+    public resourceControllerK8ServiceGetControllersWithHttpInfo(tenantId: string, wantLocal?: boolean, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3GetControllersResponse>> {
+        const result = this.api.resourceControllerK8ServiceGetControllersWithHttpInfo(tenantId, wantLocal, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * GetControllers - Get the controllers for the given tenant.
+     * @param tenantId The ID of the tenant to get controllers for.
+     * @param wantLocal Used to indicate the caller wants the local controller.
+     */
+    public resourceControllerK8ServiceGetControllers(tenantId: string, wantLocal?: boolean, _options?: Configuration): Promise<Resourcecontrollerk8v3GetControllersResponse> {
+        const result = this.api.resourceControllerK8ServiceGetControllers(tenantId, wantLocal, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * GetControllersWithStatus - Get the controllers for the given tenant with computed status.
+     * @param tenantId The ID of the tenant to get controllers for.
+     * @param wantLocal Used to indicate the caller wants the local controller.
+     * @param controllerId \&quot;ALL\&quot;: for getting all controllers; &lt;controller_id&gt;: for getting single controller.
+     */
+    public resourceControllerK8ServiceGetControllersWithStatusWithHttpInfo(tenantId: string, wantLocal?: boolean, controllerId?: string, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3GetControllersWithStatusResponse>> {
+        const result = this.api.resourceControllerK8ServiceGetControllersWithStatusWithHttpInfo(tenantId, wantLocal, controllerId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * GetControllersWithStatus - Get the controllers for the given tenant with computed status.
+     * @param tenantId The ID of the tenant to get controllers for.
+     * @param wantLocal Used to indicate the caller wants the local controller.
+     * @param controllerId \&quot;ALL\&quot;: for getting all controllers; &lt;controller_id&gt;: for getting single controller.
+     */
+    public resourceControllerK8ServiceGetControllersWithStatus(tenantId: string, wantLocal?: boolean, controllerId?: string, _options?: Configuration): Promise<Resourcecontrollerk8v3GetControllersWithStatusResponse> {
+        const result = this.api.resourceControllerK8ServiceGetControllersWithStatus(tenantId, wantLocal, controllerId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * GetJob - Get the job.
+     * @param jobId The ID of the job to get.
+     * @param wantSecretValues Optional: True to return secret values, false otherwise.
+     */
+    public resourceControllerK8ServiceGetJobWithHttpInfo(jobId: string, wantSecretValues?: boolean, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3Job>> {
+        const result = this.api.resourceControllerK8ServiceGetJobWithHttpInfo(jobId, wantSecretValues, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * GetJob - Get the job.
+     * @param jobId The ID of the job to get.
+     * @param wantSecretValues Optional: True to return secret values, false otherwise.
+     */
+    public resourceControllerK8ServiceGetJob(jobId: string, wantSecretValues?: boolean, _options?: Configuration): Promise<Resourcecontrollerk8v3Job> {
+        const result = this.api.resourceControllerK8ServiceGetJob(jobId, wantSecretValues, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * GetJobExecution - Get a job execution.
+     * @param jobexeId The ID of the job execution to get.
+     */
+    public resourceControllerK8ServiceGetJobExecutionWithHttpInfo(jobexeId: string, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3JobExecution>> {
+        const result = this.api.resourceControllerK8ServiceGetJobExecutionWithHttpInfo(jobexeId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * GetJobExecution - Get a job execution.
+     * @param jobexeId The ID of the job execution to get.
+     */
+    public resourceControllerK8ServiceGetJobExecution(jobexeId: string, _options?: Configuration): Promise<Resourcecontrollerk8v3JobExecution> {
+        const result = this.api.resourceControllerK8ServiceGetJobExecution(jobexeId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * GetJobExecutions - Get the job executions.
+     * @param jobId The ID of the job to get status.
+     */
+    public resourceControllerK8ServiceGetJobExecutionsWithHttpInfo(jobId: string, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3GetJobExecutionsResponse>> {
+        const result = this.api.resourceControllerK8ServiceGetJobExecutionsWithHttpInfo(jobId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * GetJobExecutions - Get the job executions.
+     * @param jobId The ID of the job to get status.
+     */
+    public resourceControllerK8ServiceGetJobExecutions(jobId: string, _options?: Configuration): Promise<Resourcecontrollerk8v3GetJobExecutionsResponse> {
+        const result = this.api.resourceControllerK8ServiceGetJobExecutions(jobId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * GetJobStatus - Get the job\'s status.
+     * @param jobId The ID of the job to get status.
+     */
+    public resourceControllerK8ServiceGetJobStatusWithHttpInfo(jobId: string, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3JobStatusDTO>> {
+        const result = this.api.resourceControllerK8ServiceGetJobStatusWithHttpInfo(jobId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * GetJobStatus - Get the job\'s status.
+     * @param jobId The ID of the job to get status.
+     */
+    public resourceControllerK8ServiceGetJobStatus(jobId: string, _options?: Configuration): Promise<Resourcecontrollerk8v3JobStatusDTO> {
+        const result = this.api.resourceControllerK8ServiceGetJobStatus(jobId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * GetTenantApp - Get a specific app for the given tenant.
+     * @param tenantId The ID of the tenant to get apps for.
+     * @param appName The name of the app to get.
+     * @param returnLevel Optional: specify a return level for the data. This will control the amount of data returned.
+     */
+    public resourceControllerK8ServiceGetTenantAppWithHttpInfo(tenantId: string, appName: string, returnLevel?: string, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3App>> {
+        const result = this.api.resourceControllerK8ServiceGetTenantAppWithHttpInfo(tenantId, appName, returnLevel, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * GetTenantApp - Get a specific app for the given tenant.
+     * @param tenantId The ID of the tenant to get apps for.
+     * @param appName The name of the app to get.
+     * @param returnLevel Optional: specify a return level for the data. This will control the amount of data returned.
+     */
+    public resourceControllerK8ServiceGetTenantApp(tenantId: string, appName: string, returnLevel?: string, _options?: Configuration): Promise<Resourcecontrollerk8v3App> {
+        const result = this.api.resourceControllerK8ServiceGetTenantApp(tenantId, appName, returnLevel, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * GetTenantApps - Get the apps for the given tenant.
+     * @param tenantId The ID of the tenant to get apps for.
+     * @param returnLevel Optional: specify a return level for the data. This will control the amount of data returned.
+     */
+    public resourceControllerK8ServiceGetTenantAppsWithHttpInfo(tenantId: string, returnLevel?: string, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3GetTenantAppsResponse>> {
+        const result = this.api.resourceControllerK8ServiceGetTenantAppsWithHttpInfo(tenantId, returnLevel, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * GetTenantApps - Get the apps for the given tenant.
+     * @param tenantId The ID of the tenant to get apps for.
+     * @param returnLevel Optional: specify a return level for the data. This will control the amount of data returned.
+     */
+    public resourceControllerK8ServiceGetTenantApps(tenantId: string, returnLevel?: string, _options?: Configuration): Promise<Resourcecontrollerk8v3GetTenantAppsResponse> {
+        const result = this.api.resourceControllerK8ServiceGetTenantApps(tenantId, returnLevel, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * GetTenantJobs - Get jobs for the given tenant.
+     * @param tenantId The ID of the tenant to get jobs for.
+     */
+    public resourceControllerK8ServiceGetTenantJobsWithHttpInfo(tenantId: string, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3GetTenantJobsResponse>> {
+        const result = this.api.resourceControllerK8ServiceGetTenantJobsWithHttpInfo(tenantId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * GetTenantJobs - Get jobs for the given tenant.
+     * @param tenantId The ID of the tenant to get jobs for.
+     */
+    public resourceControllerK8ServiceGetTenantJobs(tenantId: string, _options?: Configuration): Promise<Resourcecontrollerk8v3GetTenantJobsResponse> {
+        const result = this.api.resourceControllerK8ServiceGetTenantJobs(tenantId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * GetVersion - Get the system version information for the service.
+     */
+    public resourceControllerK8ServiceGetVersionWithHttpInfo(_options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3Version>> {
+        const result = this.api.resourceControllerK8ServiceGetVersionWithHttpInfo(_options);
+        return result.toPromise();
+    }
+
+    /**
+     * GetVersion - Get the system version information for the service.
+     */
+    public resourceControllerK8ServiceGetVersion(_options?: Configuration): Promise<Resourcecontrollerk8v3Version> {
+        const result = this.api.resourceControllerK8ServiceGetVersion(_options);
+        return result.toPromise();
+    }
+
+    /**
+     * InstallEdgeTenantRequest to Create gi and tnt CRs on edge
+     * @param resourcecontrollerk8v3EdgeTenantRequest 
+     */
+    public resourceControllerK8ServiceInstallEdgeTenantRequestWithHttpInfo(resourcecontrollerk8v3EdgeTenantRequest: Resourcecontrollerk8v3EdgeTenantRequest, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3EdgeResourceResponse>> {
+        const result = this.api.resourceControllerK8ServiceInstallEdgeTenantRequestWithHttpInfo(resourcecontrollerk8v3EdgeTenantRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * InstallEdgeTenantRequest to Create gi and tnt CRs on edge
+     * @param resourcecontrollerk8v3EdgeTenantRequest 
+     */
+    public resourceControllerK8ServiceInstallEdgeTenantRequest(resourcecontrollerk8v3EdgeTenantRequest: Resourcecontrollerk8v3EdgeTenantRequest, _options?: Configuration): Promise<Resourcecontrollerk8v3EdgeResourceResponse> {
+        const result = this.api.resourceControllerK8ServiceInstallEdgeTenantRequest(resourcecontrollerk8v3EdgeTenantRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * QueryControllerLogs - Query for the controller logs for a running controller.
+     * @param controllerId The ID of the controller to get logs for.
+     * @param resourcecontrollerk8v3QueryControllerLogsRequest 
+     */
+    public resourceControllerK8ServiceQueryControllerLogsWithHttpInfo(controllerId: string, resourcecontrollerk8v3QueryControllerLogsRequest: Resourcecontrollerk8v3QueryControllerLogsRequest, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3QueryControllerLogsResponse>> {
+        const result = this.api.resourceControllerK8ServiceQueryControllerLogsWithHttpInfo(controllerId, resourcecontrollerk8v3QueryControllerLogsRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * QueryControllerLogs - Query for the controller logs for a running controller.
+     * @param controllerId The ID of the controller to get logs for.
+     * @param resourcecontrollerk8v3QueryControllerLogsRequest 
+     */
+    public resourceControllerK8ServiceQueryControllerLogs(controllerId: string, resourcecontrollerk8v3QueryControllerLogsRequest: Resourcecontrollerk8v3QueryControllerLogsRequest, _options?: Configuration): Promise<Resourcecontrollerk8v3QueryControllerLogsResponse> {
+        const result = this.api.resourceControllerK8ServiceQueryControllerLogs(controllerId, resourcecontrollerk8v3QueryControllerLogsRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * UpdateCommand - Update the command.
+     * @param id The ID of the command.
+     * @param resourcecontrollerk8v3ControllerCommand 
+     */
+    public resourceControllerK8ServiceUpdateCommandWithHttpInfo(id: string, resourcecontrollerk8v3ControllerCommand: Resourcecontrollerk8v3ControllerCommand, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3ControllerCommand>> {
+        const result = this.api.resourceControllerK8ServiceUpdateCommandWithHttpInfo(id, resourcecontrollerk8v3ControllerCommand, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * UpdateCommand - Update the command.
+     * @param id The ID of the command.
+     * @param resourcecontrollerk8v3ControllerCommand 
+     */
+    public resourceControllerK8ServiceUpdateCommand(id: string, resourcecontrollerk8v3ControllerCommand: Resourcecontrollerk8v3ControllerCommand, _options?: Configuration): Promise<Resourcecontrollerk8v3ControllerCommand> {
+        const result = this.api.resourceControllerK8ServiceUpdateCommand(id, resourcecontrollerk8v3ControllerCommand, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * UpdateController - Update an existing controller.
+     * @param id Optional: The internal ID of the controller.
+     * @param resourcecontrollerk8v3Controller 
+     */
+    public resourceControllerK8ServiceUpdateControllerWithHttpInfo(id: string, resourcecontrollerk8v3Controller: Resourcecontrollerk8v3Controller, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3Controller>> {
+        const result = this.api.resourceControllerK8ServiceUpdateControllerWithHttpInfo(id, resourcecontrollerk8v3Controller, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * UpdateController - Update an existing controller.
+     * @param id Optional: The internal ID of the controller.
+     * @param resourcecontrollerk8v3Controller 
+     */
+    public resourceControllerK8ServiceUpdateController(id: string, resourcecontrollerk8v3Controller: Resourcecontrollerk8v3Controller, _options?: Configuration): Promise<Resourcecontrollerk8v3Controller> {
+        const result = this.api.resourceControllerK8ServiceUpdateController(id, resourcecontrollerk8v3Controller, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * UpdateControllerStatus - Updates the status for the given controller.
+     * @param id The internal ID of the controller.
+     * @param resourcecontrollerk8v3ControllerStatus 
+     */
+    public resourceControllerK8ServiceUpdateControllerStatusWithHttpInfo(id: string, resourcecontrollerk8v3ControllerStatus: Resourcecontrollerk8v3ControllerStatus, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3ControllerStatus>> {
+        const result = this.api.resourceControllerK8ServiceUpdateControllerStatusWithHttpInfo(id, resourcecontrollerk8v3ControllerStatus, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * UpdateControllerStatus - Updates the status for the given controller.
+     * @param id The internal ID of the controller.
+     * @param resourcecontrollerk8v3ControllerStatus 
+     */
+    public resourceControllerK8ServiceUpdateControllerStatus(id: string, resourcecontrollerk8v3ControllerStatus: Resourcecontrollerk8v3ControllerStatus, _options?: Configuration): Promise<Resourcecontrollerk8v3ControllerStatus> {
+        const result = this.api.resourceControllerK8ServiceUpdateControllerStatus(id, resourcecontrollerk8v3ControllerStatus, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * UpdateEdgeTenantRequest to update gi and tnt CRs on edge
+     * @param edgeId ID of the edge system
+     * @param resourcecontrollerk8v3EdgeTenantRequest 
+     */
+    public resourceControllerK8ServiceUpdateEdgeTenantRequestWithHttpInfo(edgeId: string, resourcecontrollerk8v3EdgeTenantRequest: Resourcecontrollerk8v3EdgeTenantRequest, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3EdgeResourceResponse>> {
+        const result = this.api.resourceControllerK8ServiceUpdateEdgeTenantRequestWithHttpInfo(edgeId, resourcecontrollerk8v3EdgeTenantRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * UpdateEdgeTenantRequest to update gi and tnt CRs on edge
+     * @param edgeId ID of the edge system
+     * @param resourcecontrollerk8v3EdgeTenantRequest 
+     */
+    public resourceControllerK8ServiceUpdateEdgeTenantRequest(edgeId: string, resourcecontrollerk8v3EdgeTenantRequest: Resourcecontrollerk8v3EdgeTenantRequest, _options?: Configuration): Promise<Resourcecontrollerk8v3EdgeResourceResponse> {
+        const result = this.api.resourceControllerK8ServiceUpdateEdgeTenantRequest(edgeId, resourcecontrollerk8v3EdgeTenantRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * UpdateJob - Update a job.
+     * @param id The ID of the job.
+     * @param resourcecontrollerk8v3Job 
+     */
+    public resourceControllerK8ServiceUpdateJobWithHttpInfo(id: string, resourcecontrollerk8v3Job: Resourcecontrollerk8v3Job, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3Job>> {
+        const result = this.api.resourceControllerK8ServiceUpdateJobWithHttpInfo(id, resourcecontrollerk8v3Job, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * UpdateJob - Update a job.
+     * @param id The ID of the job.
+     * @param resourcecontrollerk8v3Job 
+     */
+    public resourceControllerK8ServiceUpdateJob(id: string, resourcecontrollerk8v3Job: Resourcecontrollerk8v3Job, _options?: Configuration): Promise<Resourcecontrollerk8v3Job> {
+        const result = this.api.resourceControllerK8ServiceUpdateJob(id, resourcecontrollerk8v3Job, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * UpdateJobExecution - Update a job execution.
+     * @param id The ID of the job execution to update.
+     * @param resourcecontrollerk8v3UpdateJobExecutionRequest 
+     */
+    public resourceControllerK8ServiceUpdateJobExecutionWithHttpInfo(id: string, resourcecontrollerk8v3UpdateJobExecutionRequest: Resourcecontrollerk8v3UpdateJobExecutionRequest, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3JobExecution>> {
+        const result = this.api.resourceControllerK8ServiceUpdateJobExecutionWithHttpInfo(id, resourcecontrollerk8v3UpdateJobExecutionRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * UpdateJobExecution - Update a job execution.
+     * @param id The ID of the job execution to update.
+     * @param resourcecontrollerk8v3UpdateJobExecutionRequest 
+     */
+    public resourceControllerK8ServiceUpdateJobExecution(id: string, resourcecontrollerk8v3UpdateJobExecutionRequest: Resourcecontrollerk8v3UpdateJobExecutionRequest, _options?: Configuration): Promise<Resourcecontrollerk8v3JobExecution> {
+        const result = this.api.resourceControllerK8ServiceUpdateJobExecution(id, resourcecontrollerk8v3UpdateJobExecutionRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * UpdateJobStatus - Updates the status for the given Job.
+     * @param jobId The ID of the job to get status.
+     * @param resourcecontrollerk8v3UpdateJobStatusRequest 
+     */
+    public resourceControllerK8ServiceUpdateJobStatusWithHttpInfo(jobId: string, resourcecontrollerk8v3UpdateJobStatusRequest: Resourcecontrollerk8v3UpdateJobStatusRequest, _options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3JobStatusDTO>> {
+        const result = this.api.resourceControllerK8ServiceUpdateJobStatusWithHttpInfo(jobId, resourcecontrollerk8v3UpdateJobStatusRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * UpdateJobStatus - Updates the status for the given Job.
+     * @param jobId The ID of the job to get status.
+     * @param resourcecontrollerk8v3UpdateJobStatusRequest 
+     */
+    public resourceControllerK8ServiceUpdateJobStatus(jobId: string, resourcecontrollerk8v3UpdateJobStatusRequest: Resourcecontrollerk8v3UpdateJobStatusRequest, _options?: Configuration): Promise<Resourcecontrollerk8v3JobStatusDTO> {
+        const result = this.api.resourceControllerK8ServiceUpdateJobStatus(jobId, resourcecontrollerk8v3UpdateJobStatusRequest, _options);
+        return result.toPromise();
+    }
+
+
+}
+
+
+
 import { ObservableRiskAnalyticsControllerApi } from './ObservableAPI';
 
 import { RiskAnalyticsControllerApiRequestFactory, RiskAnalyticsControllerApiResponseProcessor} from "../apis/RiskAnalyticsControllerApi";
@@ -8023,7 +9014,7 @@ export class PromiseRiskAnalyticsControllerApi {
     }
 
     /**
-     * Summary: Get risk event classifications list Description: retrieves the ClassificationMatchDetails for a given risk id – classification that did not matched will be with class_value 0.
+     * Summary: Get risk event classifications list Description: retrieves the ClassificationMatchDetails for a given risk id; classification that did not matched will be with class_value 0.
      * @param riskId Risk id
      */
     public riskAnalyticsControllerGetRiskEventClassificationsListWithHttpInfo(riskId: number, _options?: Configuration): Promise<HttpInfo<Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse>> {
@@ -8032,7 +9023,7 @@ export class PromiseRiskAnalyticsControllerApi {
     }
 
     /**
-     * Summary: Get risk event classifications list Description: retrieves the ClassificationMatchDetails for a given risk id – classification that did not matched will be with class_value 0.
+     * Summary: Get risk event classifications list Description: retrieves the ClassificationMatchDetails for a given risk id; classification that did not matched will be with class_value 0.
      * @param riskId Risk id
      */
     public riskAnalyticsControllerGetRiskEventClassificationsList(riskId: number, _options?: Configuration): Promise<Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse> {
@@ -8239,7 +9230,7 @@ export class PromiseRiskAnalyticsControllerApi {
     }
 
     /**
-     * Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium.
+     * Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to GDSC. Using this API to change a user settings may prevent the user from using the Risk Event function within GDSC.
      * @param riskanalyticscontrollerv3SetUserUISettingsRequest 
      */
     public riskAnalyticsControllerSetUserUISettingsWithHttpInfo(riskanalyticscontrollerv3SetUserUISettingsRequest: Riskanalyticscontrollerv3SetUserUISettingsRequest, _options?: Configuration): Promise<HttpInfo<Riskanalyticscontrollerv3SetUserUISettingsResponse>> {
@@ -8248,7 +9239,7 @@ export class PromiseRiskAnalyticsControllerApi {
     }
 
     /**
-     * Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium.
+     * Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to GDSC. Using this API to change a user settings may prevent the user from using the Risk Event function within GDSC.
      * @param riskanalyticscontrollerv3SetUserUISettingsRequest 
      */
     public riskAnalyticsControllerSetUserUISettings(riskanalyticscontrollerv3SetUserUISettingsRequest: Riskanalyticscontrollerv3SetUserUISettingsRequest, _options?: Configuration): Promise<Riskanalyticscontrollerv3SetUserUISettingsResponse> {
@@ -8658,6 +9649,72 @@ export class PromiseSnifAssistServiceApi {
     }
 
     /**
+     * Summary: Get sniffer configuration parameters Description: Get edge sniffer configuration parameters from GI-mothership.
+     * @param tenantId Provide tenant_id.
+     * @param edgeId Provide edge_id.
+     * @param configType Provide configuration type.
+     * @param configId Specify config_id provided by configuration service.
+     * @param configurationParametersCrc Provide CRC value of configuration parameters that sniffer is currently using.
+     */
+    public snifAssistServiceGetSnifConfigWithHttpInfo(tenantId?: string, edgeId?: string, configType?: string, configId?: string, configurationParametersCrc?: number, _options?: Configuration): Promise<HttpInfo<Snifassistv3GetSnifConfigResponse>> {
+        const result = this.api.snifAssistServiceGetSnifConfigWithHttpInfo(tenantId, edgeId, configType, configId, configurationParametersCrc, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Get sniffer configuration parameters Description: Get edge sniffer configuration parameters from GI-mothership.
+     * @param tenantId Provide tenant_id.
+     * @param edgeId Provide edge_id.
+     * @param configType Provide configuration type.
+     * @param configId Specify config_id provided by configuration service.
+     * @param configurationParametersCrc Provide CRC value of configuration parameters that sniffer is currently using.
+     */
+    public snifAssistServiceGetSnifConfig(tenantId?: string, edgeId?: string, configType?: string, configId?: string, configurationParametersCrc?: number, _options?: Configuration): Promise<Snifassistv3GetSnifConfigResponse> {
+        const result = this.api.snifAssistServiceGetSnifConfig(tenantId, edgeId, configType, configId, configurationParametersCrc, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Get sniffer policy Description: Get edge sniffer policy from GI-mothership.
+     * @param tenantId Specify tenant_id.
+     * @param edgeId Specify edge_id if known.
+     * @param policyCrc Provide CRC value of installed policy that sniffer is currently using.
+     */
+    public snifAssistServiceGetSnifPolicyWithHttpInfo(tenantId?: string, edgeId?: string, policyCrc?: number, _options?: Configuration): Promise<HttpInfo<Snifassistv3StatusResponseBase>> {
+        const result = this.api.snifAssistServiceGetSnifPolicyWithHttpInfo(tenantId, edgeId, policyCrc, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Get sniffer policy Description: Get edge sniffer policy from GI-mothership.
+     * @param tenantId Specify tenant_id.
+     * @param edgeId Specify edge_id if known.
+     * @param policyCrc Provide CRC value of installed policy that sniffer is currently using.
+     */
+    public snifAssistServiceGetSnifPolicy(tenantId?: string, edgeId?: string, policyCrc?: number, _options?: Configuration): Promise<Snifassistv3StatusResponseBase> {
+        const result = this.api.snifAssistServiceGetSnifPolicy(tenantId, edgeId, policyCrc, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Post sniffer feedback Description: Post policy installation feedback to policy-builder service.
+     * @param snifassistv3PostSnifFeedbackRequest 
+     */
+    public snifAssistServicePostSnifFeedbackWithHttpInfo(snifassistv3PostSnifFeedbackRequest: Snifassistv3PostSnifFeedbackRequest, _options?: Configuration): Promise<HttpInfo<Snifassistv3StatusResponseBase>> {
+        const result = this.api.snifAssistServicePostSnifFeedbackWithHttpInfo(snifassistv3PostSnifFeedbackRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Post sniffer feedback Description: Post policy installation feedback to policy-builder service.
+     * @param snifassistv3PostSnifFeedbackRequest 
+     */
+    public snifAssistServicePostSnifFeedback(snifassistv3PostSnifFeedbackRequest: Snifassistv3PostSnifFeedbackRequest, _options?: Configuration): Promise<Snifassistv3StatusResponseBase> {
+        const result = this.api.snifAssistServicePostSnifFeedback(snifassistv3PostSnifFeedbackRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
      * Summary: Test regex Description: Match a text string with a regular expression using the same sniffer  code used in production to match a regex.
      * @param snifassistv3TestRegexRequest 
      */
@@ -8960,6 +10017,32 @@ export class PromiseTemplatesServiceApi {
      */
     public templatesServiceGetTemplates(integrationId?: string, filterIntegration?: Array<'UNDEFINED_INTEGRATION' | 'SMTP' | 'SNMP' | 'SYSLOG' | 'CASES' | 'SERVICE_NOW' | 'RESILIENT' | 'SOAR' | 'WEBHOOK' | 'SLACK' | 'TEAMS' | 'SMS' | 'JIRA'>, filterOrigin?: Array<'UNDEFINED_ORIGIN' | 'GENERAL_NOTIFICATION' | 'ANOMALY_NOTIFICATION' | 'DATAMART_NOTIFICATION' | 'FETCH_NOTIFICATION' | 'POLICY_ALERT_NOTIFICATION' | 'RECOMMENDATION_NOTIFICATION' | 'REPORTS_NOTIFICATION' | 'SCHEDULED_REPORT_NOTIFICATION' | 'SCHEDULED_AUDIT_NOTIFICATION' | 'WELCOME_NOTIFICATION' | 'EMAIL_HEADER_AND_FOOTER' | 'RISK_NOTIFICATION' | 'SCHEDULED_JOB_SUMMARY' | 'INCIDENT_NOTIFICATION' | 'MAINTENANCE_NOTIFICATION' | 'QSPM_RISK' | 'POLICY_IMPORT_NOTIFICATION'>, filterMimeType?: Array<'PLAIN_TEXT' | 'TEXT_HTML' | 'APPLICATION_CEF'>, filterTags?: Array<string>, filterEnabledOnly?: boolean, includeIntegrationName?: boolean, _options?: Configuration): Promise<Templatesv3GetTemplatesResponse> {
         const result = this.api.templatesServiceGetTemplates(integrationId, filterIntegration, filterOrigin, filterMimeType, filterTags, filterEnabledOnly, includeIntegrationName, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Get templates for edge Description: Return all templates based on supplied filters.
+     * @param integrationId Templates associated with a specific integration.
+     * @param filterOrigin Filter on a specific set of data origins; ignored if empty.
+     * @param filterEnabledOnly Filter on all templates instead of just the enabled templates.
+     * @param includeIntegrationName Include the Integration name in the returned templates.
+     * @param transformToGdpFormat Tranform template format to GDP style format.
+     */
+    public templatesServiceGetTemplatesForEdgeWithHttpInfo(integrationId?: string, filterOrigin?: Array<'UNDEFINED_ORIGIN' | 'GENERAL_NOTIFICATION' | 'ANOMALY_NOTIFICATION' | 'DATAMART_NOTIFICATION' | 'FETCH_NOTIFICATION' | 'POLICY_ALERT_NOTIFICATION' | 'RECOMMENDATION_NOTIFICATION' | 'REPORTS_NOTIFICATION' | 'SCHEDULED_REPORT_NOTIFICATION' | 'SCHEDULED_AUDIT_NOTIFICATION' | 'WELCOME_NOTIFICATION' | 'EMAIL_HEADER_AND_FOOTER' | 'RISK_NOTIFICATION' | 'SCHEDULED_JOB_SUMMARY' | 'INCIDENT_NOTIFICATION' | 'MAINTENANCE_NOTIFICATION' | 'QSPM_RISK' | 'POLICY_IMPORT_NOTIFICATION'>, filterEnabledOnly?: boolean, includeIntegrationName?: boolean, transformToGdpFormat?: boolean, _options?: Configuration): Promise<HttpInfo<Templatesv3GetTemplatesForEdgeResponse>> {
+        const result = this.api.templatesServiceGetTemplatesForEdgeWithHttpInfo(integrationId, filterOrigin, filterEnabledOnly, includeIntegrationName, transformToGdpFormat, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Get templates for edge Description: Return all templates based on supplied filters.
+     * @param integrationId Templates associated with a specific integration.
+     * @param filterOrigin Filter on a specific set of data origins; ignored if empty.
+     * @param filterEnabledOnly Filter on all templates instead of just the enabled templates.
+     * @param includeIntegrationName Include the Integration name in the returned templates.
+     * @param transformToGdpFormat Tranform template format to GDP style format.
+     */
+    public templatesServiceGetTemplatesForEdge(integrationId?: string, filterOrigin?: Array<'UNDEFINED_ORIGIN' | 'GENERAL_NOTIFICATION' | 'ANOMALY_NOTIFICATION' | 'DATAMART_NOTIFICATION' | 'FETCH_NOTIFICATION' | 'POLICY_ALERT_NOTIFICATION' | 'RECOMMENDATION_NOTIFICATION' | 'REPORTS_NOTIFICATION' | 'SCHEDULED_REPORT_NOTIFICATION' | 'SCHEDULED_AUDIT_NOTIFICATION' | 'WELCOME_NOTIFICATION' | 'EMAIL_HEADER_AND_FOOTER' | 'RISK_NOTIFICATION' | 'SCHEDULED_JOB_SUMMARY' | 'INCIDENT_NOTIFICATION' | 'MAINTENANCE_NOTIFICATION' | 'QSPM_RISK' | 'POLICY_IMPORT_NOTIFICATION'>, filterEnabledOnly?: boolean, includeIntegrationName?: boolean, transformToGdpFormat?: boolean, _options?: Configuration): Promise<Templatesv3GetTemplatesForEdgeResponse> {
+        const result = this.api.templatesServiceGetTemplatesForEdge(integrationId, filterOrigin, filterEnabledOnly, includeIntegrationName, transformToGdpFormat, _options);
         return result.toPromise();
     }
 
@@ -9527,7 +10610,7 @@ export class PromiseUniversalConnectorManagerApi {
     }
 
     /**
-     * Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium.
+     * Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in GDSC.
      */
     public universalConnectorManagerGetCertificateWithHttpInfo(_options?: Configuration): Promise<HttpInfo<Universalconnectormanagerv3FileResponse>> {
         const result = this.api.universalConnectorManagerGetCertificateWithHttpInfo(_options);
@@ -9535,7 +10618,7 @@ export class PromiseUniversalConnectorManagerApi {
     }
 
     /**
-     * Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium.
+     * Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in GDSC.
      */
     public universalConnectorManagerGetCertificate(_options?: Configuration): Promise<Universalconnectormanagerv3FileResponse> {
         const result = this.api.universalConnectorManagerGetCertificate(_options);
@@ -9555,6 +10638,24 @@ export class PromiseUniversalConnectorManagerApi {
      */
     public universalConnectorManagerGetConnectors(_options?: Configuration): Promise<Universalconnectormanagerv3GetConnectorsResponse> {
         const result = this.api.universalConnectorManagerGetConnectors(_options);
+        return result.toPromise();
+    }
+
+    /**
+     * Gets information to setup the new Universal connection.
+     * @param pluginId UC plugin id.
+     */
+    public universalConnectorManagerGetUCSetupWithHttpInfo(pluginId: number, _options?: Configuration): Promise<HttpInfo<Universalconnectormanagerv3GetUCSetupResponse>> {
+        const result = this.api.universalConnectorManagerGetUCSetupWithHttpInfo(pluginId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Gets information to setup the new Universal connection.
+     * @param pluginId UC plugin id.
+     */
+    public universalConnectorManagerGetUCSetup(pluginId: number, _options?: Configuration): Promise<Universalconnectormanagerv3GetUCSetupResponse> {
+        const result = this.api.universalConnectorManagerGetUCSetup(pluginId, _options);
         return result.toPromise();
     }
 
@@ -9646,6 +10747,24 @@ export class PromiseWorkflowApi {
     }
 
     /**
+     * Summary: Create product entity Description: Create single product entity.
+     * @param workflowv3ProductEntity 
+     */
+    public workflowCreateProductEntityWithHttpInfo(workflowv3ProductEntity: Workflowv3ProductEntity, _options?: Configuration): Promise<HttpInfo<Workflowv3CreateProductEntityResponse>> {
+        const result = this.api.workflowCreateProductEntityWithHttpInfo(workflowv3ProductEntity, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Create product entity Description: Create single product entity.
+     * @param workflowv3ProductEntity 
+     */
+    public workflowCreateProductEntity(workflowv3ProductEntity: Workflowv3ProductEntity, _options?: Configuration): Promise<Workflowv3CreateProductEntityResponse> {
+        const result = this.api.workflowCreateProductEntity(workflowv3ProductEntity, _options);
+        return result.toPromise();
+    }
+
+    /**
      * Summary: Create task Description: Create single task within a parent case.
      * @param caseId Create tasks with common parent.
      * @param workflowv3CreateTaskRequest 
@@ -9662,6 +10781,42 @@ export class PromiseWorkflowApi {
      */
     public workflowCreateTask(caseId: string, workflowv3CreateTaskRequest: Workflowv3CreateTaskRequest, _options?: Configuration): Promise<Workflowv3CreateTaskResponse> {
         const result = this.api.workflowCreateTask(caseId, workflowv3CreateTaskRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Post event for processing by workflow rules Description: Find matching workflow rule and run it
+     * @param workflowv3WorkflowEvent 
+     */
+    public workflowCreateWorkflowEventWithHttpInfo(workflowv3WorkflowEvent: Workflowv3WorkflowEvent, _options?: Configuration): Promise<HttpInfo<Workflowv3WorkflowEventResponse>> {
+        const result = this.api.workflowCreateWorkflowEventWithHttpInfo(workflowv3WorkflowEvent, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Post event for processing by workflow rules Description: Find matching workflow rule and run it
+     * @param workflowv3WorkflowEvent 
+     */
+    public workflowCreateWorkflowEvent(workflowv3WorkflowEvent: Workflowv3WorkflowEvent, _options?: Configuration): Promise<Workflowv3WorkflowEventResponse> {
+        const result = this.api.workflowCreateWorkflowEvent(workflowv3WorkflowEvent, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Delete a product entity Description: Delete a single product entity.
+     * @param entityId Unique id for the product entity
+     */
+    public workflowDeleteProductEntityWithHttpInfo(entityId: string, _options?: Configuration): Promise<HttpInfo<Workflowv3DeleteProductEntityResponse>> {
+        const result = this.api.workflowDeleteProductEntityWithHttpInfo(entityId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Delete a product entity Description: Delete a single product entity.
+     * @param entityId Unique id for the product entity
+     */
+    public workflowDeleteProductEntity(entityId: string, _options?: Configuration): Promise<Workflowv3DeleteProductEntityResponse> {
+        const result = this.api.workflowDeleteProductEntity(entityId, _options);
         return result.toPromise();
     }
 
@@ -9744,6 +10899,44 @@ export class PromiseWorkflowApi {
      */
     public workflowGetJobsCount(caseId: string, workflowv3GetJobsCountRequest: Workflowv3GetJobsCountRequest, _options?: Configuration): Promise<Workflowv3GetJobsCountResponse> {
         const result = this.api.workflowGetJobsCount(caseId, workflowv3GetJobsCountRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Get products and their associated event entities Description: Return a list of integrated products and their associated event entities
+     * @param offset Optional starting point for the page of data.
+     * @param limit Optional page size.
+     */
+    public workflowGetProductEntitiesWithHttpInfo(offset?: number, limit?: number, _options?: Configuration): Promise<HttpInfo<Workflowv3GetProductEntitiesResponse>> {
+        const result = this.api.workflowGetProductEntitiesWithHttpInfo(offset, limit, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Get products and their associated event entities Description: Return a list of integrated products and their associated event entities
+     * @param offset Optional starting point for the page of data.
+     * @param limit Optional page size.
+     */
+    public workflowGetProductEntities(offset?: number, limit?: number, _options?: Configuration): Promise<Workflowv3GetProductEntitiesResponse> {
+        const result = this.api.workflowGetProductEntities(offset, limit, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Get event entity field names, field labels, and field data types Description: Return a list of fields similar to report headers
+     * @param entityId Unique id for the product entity
+     */
+    public workflowGetProductEntityWithHttpInfo(entityId: string, _options?: Configuration): Promise<HttpInfo<Workflowv3ProductEntity>> {
+        const result = this.api.workflowGetProductEntityWithHttpInfo(entityId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Get event entity field names, field labels, and field data types Description: Return a list of fields similar to report headers
+     * @param entityId Unique id for the product entity
+     */
+    public workflowGetProductEntity(entityId: string, _options?: Configuration): Promise<Workflowv3ProductEntity> {
+        const result = this.api.workflowGetProductEntity(entityId, _options);
         return result.toPromise();
     }
 
@@ -9882,6 +11075,26 @@ export class PromiseWorkflowApi {
      */
     public workflowUpdateCases(workflowv3UpdateCasesRequest: Workflowv3UpdateCasesRequest, _options?: Configuration): Promise<Workflowv3UpdateCasesResponse> {
         const result = this.api.workflowUpdateCases(workflowv3UpdateCasesRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Update a product entity Description: Update a single product entity.
+     * @param entityId Unique Entity id, required for update.
+     * @param workflowv3UpdateProductEntityRequest 
+     */
+    public workflowUpdateProductEntityWithHttpInfo(entityId: string, workflowv3UpdateProductEntityRequest: Workflowv3UpdateProductEntityRequest, _options?: Configuration): Promise<HttpInfo<Workflowv3UpdateProductEntityResponse>> {
+        const result = this.api.workflowUpdateProductEntityWithHttpInfo(entityId, workflowv3UpdateProductEntityRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Summary: Update a product entity Description: Update a single product entity.
+     * @param entityId Unique Entity id, required for update.
+     * @param workflowv3UpdateProductEntityRequest 
+     */
+    public workflowUpdateProductEntity(entityId: string, workflowv3UpdateProductEntityRequest: Workflowv3UpdateProductEntityRequest, _options?: Configuration): Promise<Workflowv3UpdateProductEntityResponse> {
+        const result = this.api.workflowUpdateProductEntity(entityId, workflowv3UpdateProductEntityRequest, _options);
         return result.toPromise();
     }
 

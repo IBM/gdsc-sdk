@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.tenantuserv3_create_api_key_request import Tenantuserv3CreateApiKeyRequest
+from ibm_gdsc_sdk_saas.models.tenantuserv3_create_api_key_request import Tenantuserv3CreateApiKeyRequest
 
 class TestTenantuserv3CreateApiKeyRequest(unittest.TestCase):
     """Tenantuserv3CreateApiKeyRequest unit test stubs"""

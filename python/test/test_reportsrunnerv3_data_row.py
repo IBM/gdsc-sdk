@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_data_row import Reportsrunnerv3DataRow
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_data_row import Reportsrunnerv3DataRow
 
 class TestReportsrunnerv3DataRow(unittest.TestCase):
     """Reportsrunnerv3DataRow unit test stubs"""

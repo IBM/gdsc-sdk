@@ -12,7 +12,6 @@ PluginRS is the response object for InvokePlugin,InvokeAppProv,InvokeExplorerV1,
 |**facts** | [**List&lt;Qspmpluginmanagerv3EntityNewSchema&gt;**](Qspmpluginmanagerv3EntityNewSchema.md) |  |  [optional] |
 |**orgId** | **String** |  |  [optional] |
 |**pluginId** | **String** |  |  [optional] |
-|**runForAllScans** | **Boolean** |  |  [optional] |
 |**scanDesc** | **String** |  |  [optional] |
 |**scanId** | **String** |  |  [optional] |
 |**userEmail** | **String** |  |  [optional] |

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_in_report_additional_parameter import Reportsv3InReportAdditionalParameter
+from ibm_gdsc_sdk_saas.models.reportsv3_in_report_additional_parameter import Reportsv3InReportAdditionalParameter
 
 class TestReportsv3InReportAdditionalParameter(unittest.TestCase):
     """Reportsv3InReportAdditionalParameter unit test stubs"""
@@ -35,7 +35,7 @@ class TestReportsv3InReportAdditionalParameter(unittest.TestCase):
         model = Reportsv3InReportAdditionalParameter()
         if include_optional:
             return Reportsv3InReportAdditionalParameter(
-                date_range = ibm_gdsc_sdk_software.models.reportsv3_date_range.reportsv3DateRange(
+                date_range = ibm_gdsc_sdk_saas.models.reportsv3_date_range.reportsv3DateRange(
                     end_date = '', 
                     end_number = 56, 
                     end_unit = 'UNDEFINED_UINT_TYPE', 

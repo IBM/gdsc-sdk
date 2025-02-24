@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_brief_report import Reportsv3BriefReport
+from ibm_gdsc_sdk_saas.models.reportsv3_brief_report import Reportsv3BriefReport
 
 class TestReportsv3BriefReport(unittest.TestCase):
     """Reportsv3BriefReport unit test stubs"""
@@ -43,12 +43,12 @@ class TestReportsv3BriefReport(unittest.TestCase):
                     ''
                     ],
                 headers = [
-                    ibm_gdsc_sdk_software.models.reportsv3_display_header.reportsv3DisplayHeader(
-                        field_name = ibm_gdsc_sdk_software.models.reportsv3_field_name.reportsv3FieldName(
+                    ibm_gdsc_sdk_saas.models.reportsv3_display_header.reportsv3DisplayHeader(
+                        field_name = ibm_gdsc_sdk_saas.models.reportsv3_field_name.reportsv3FieldName(
                             customized_value = '', 
                             nls_key = '', 
                             nls_value = '', ), 
-                        header_description = ibm_gdsc_sdk_software.models.reportsv3_header_description.reportsv3HeaderDescription(
+                        header_description = ibm_gdsc_sdk_saas.models.reportsv3_header_description.reportsv3HeaderDescription(
                             nls_key = '', 
                             nls_value = '', ), 
                         header_id = '', 
@@ -62,7 +62,7 @@ class TestReportsv3BriefReport(unittest.TestCase):
                 report_id = '',
                 report_name = '',
                 report_tags = [
-                    ibm_gdsc_sdk_software.models.reportsv3_report_tag.reportsv3ReportTag(
+                    ibm_gdsc_sdk_saas.models.reportsv3_report_tag.reportsv3ReportTag(
                         nls_key = '', 
                         nls_value = '', )
                     ],

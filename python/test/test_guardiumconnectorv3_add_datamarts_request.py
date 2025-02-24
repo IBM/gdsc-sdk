@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_add_datamarts_request import Guardiumconnectorv3AddDatamartsRequest
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_add_datamarts_request import Guardiumconnectorv3AddDatamartsRequest
 
 class TestGuardiumconnectorv3AddDatamartsRequest(unittest.TestCase):
     """Guardiumconnectorv3AddDatamartsRequest unit test stubs"""

@@ -5,15 +5,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**activatation_timestamp** | **datetime** |  | [optional] 
 **activation_order** | **int** |  | [optional] 
 **activation_status** | [**Policybuilderv3ActivationStatus**](Policybuilderv3ActivationStatus.md) |  | [optional] 
+**activation_timestamp** | **datetime** |  | [optional] 
 **edge_id** | **str** |  | [optional] 
 
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.policybuilderv3_edge_activation_object import Policybuilderv3EdgeActivationObject
+from ibm_gdsc_sdk_saas.models.policybuilderv3_edge_activation_object import Policybuilderv3EdgeActivationObject
 
 # TODO update the JSON string below
 json = "{}"

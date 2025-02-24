@@ -1,4 +1,4 @@
-# ibm_gdsc_sdk_software.RiskAnalyticsMlClassificationApi
+# ibm_gdsc_sdk_saas.RiskAnalyticsMlClassificationApi
 
 All URIs are relative to *http://localhost*
 
@@ -18,14 +18,14 @@ Summary: Reset the model to its default weights. Description: Load the initial m
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.riskanalyticsmlclassificationv3_reset_model_to_defaults_response import Riskanalyticsmlclassificationv3ResetModelToDefaultsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.riskanalyticsmlclassificationv3_reset_model_to_defaults_response import Riskanalyticsmlclassificationv3ResetModelToDefaultsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -35,7 +35,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -47,9 +47,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.RiskAnalyticsMlClassificationApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.RiskAnalyticsMlClassificationApi(api_client)
 
     try:
         # Summary: Reset the model to its default weights. Description: Load the initial model instead of the existing model - this action is irreversible.

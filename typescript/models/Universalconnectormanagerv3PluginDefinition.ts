@@ -17,6 +17,7 @@ import { HttpFile } from '../http/http';
 * Plugin definition based on UCPluginDefinition.
 */
 export class Universalconnectormanagerv3PluginDefinition {
+    'pluginJDBCDriverRequired'?: boolean;
     /**
     * mongoDB.
     */
@@ -77,6 +78,12 @@ export class Universalconnectormanagerv3PluginDefinition {
     static readonly discriminator: string | undefined = undefined;
 
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "pluginJDBCDriverRequired",
+            "baseName": "plugin_JDBC_driver_required",
+            "type": "boolean",
+            "format": ""
+        },
         {
             "name": "pluginAlias",
             "baseName": "plugin_alias",

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.notificationsv3_filter_field import Notificationsv3FilterField
+from ibm_gdsc_sdk_saas.models.notificationsv3_filter_field import Notificationsv3FilterField
 
 # TODO update the JSON string below
 json = "{}"

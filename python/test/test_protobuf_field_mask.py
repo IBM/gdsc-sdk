@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.protobuf_field_mask import ProtobufFieldMask
+from ibm_gdsc_sdk_saas.models.protobuf_field_mask import ProtobufFieldMask
 
 class TestProtobufFieldMask(unittest.TestCase):
     """ProtobufFieldMask unit test stubs"""

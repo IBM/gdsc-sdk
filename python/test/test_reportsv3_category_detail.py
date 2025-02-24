@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_category_detail import Reportsv3CategoryDetail
+from ibm_gdsc_sdk_saas.models.reportsv3_category_detail import Reportsv3CategoryDetail
 
 class TestReportsv3CategoryDetail(unittest.TestCase):
     """Reportsv3CategoryDetail unit test stubs"""
@@ -41,7 +41,7 @@ class TestReportsv3CategoryDetail(unittest.TestCase):
                     ''
                     ],
                 timestamp_mapping = [
-                    ibm_gdsc_sdk_software.models.reportsv3_timestamp_mapping.reportsv3TimestampMapping(
+                    ibm_gdsc_sdk_saas.models.reportsv3_timestamp_mapping.reportsv3TimestampMapping(
                         level = 56, 
                         table_name = '', 
                         timestamp_header_id = '', 

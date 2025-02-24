@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.data_resource import DataResource
+from ibm_gdsc_sdk_saas.models.data_resource import DataResource
 
 class TestDataResource(unittest.TestCase):
     """DataResource unit test stubs"""
@@ -46,10 +46,10 @@ class TestDataResource(unittest.TestCase):
                 modification_time = '',
                 is_reviewed = True,
                 link = '/polar-security-corplex.xlsx',
-                stats = ibm_gdsc_sdk_software.models.data_resource_stats.DataResourceStats(
+                stats = ibm_gdsc_sdk_saas.models.data_resource_stats.DataResourceStats(
                     sensitivities_count = 57, 
                     sensitivities_summary = [
-                        ibm_gdsc_sdk_software.models.sensitivity_summary.SensitivitySummary(
+                        ibm_gdsc_sdk_saas.models.sensitivity_summary.SensitivitySummary(
                             tag = 'BUSINESS_EMAIL_ADDRESS', 
                             count = 230, 
                             category = 'Personal', )

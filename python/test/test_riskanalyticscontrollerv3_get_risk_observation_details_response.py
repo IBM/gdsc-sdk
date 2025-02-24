@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_get_risk_observation_details_response import Riskanalyticscontrollerv3GetRiskObservationDetailsResponse
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_get_risk_observation_details_response import Riskanalyticscontrollerv3GetRiskObservationDetailsResponse
 
 class TestRiskanalyticscontrollerv3GetRiskObservationDetailsResponse(unittest.TestCase):
     """Riskanalyticscontrollerv3GetRiskObservationDetailsResponse unit test stubs"""
@@ -35,12 +35,12 @@ class TestRiskanalyticscontrollerv3GetRiskObservationDetailsResponse(unittest.Te
         model = Riskanalyticscontrollerv3GetRiskObservationDetailsResponse()
         if include_optional:
             return Riskanalyticscontrollerv3GetRiskObservationDetailsResponse(
-                risk_observation_details = ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_risk_observation_details.riskanalyticscontrollerv3RiskObservationDetails(
+                risk_observation_details = ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_risk_observation_details.riskanalyticscontrollerv3RiskObservationDetails(
                     classification = '', 
                     date_from = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     date_to = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     description = '', 
-                    emerging_risk_details = ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_emerging_risk_details.riskanalyticscontrollerv3EmergingRiskDetails(
+                    emerging_risk_details = ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_emerging_risk_details.riskanalyticscontrollerv3EmergingRiskDetails(
                         end_max_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         end_max_value = 56, 
                         peak_max_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
@@ -50,7 +50,7 @@ class TestRiskanalyticscontrollerv3GetRiskObservationDetailsResponse(unittest.Te
                         start_max_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         start_max_value = 56, ), 
                     features = [
-                        ibm_gdsc_sdk_software.models.riskanalyticsenginev3_feature.riskanalyticsenginev3Feature(
+                        ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_feature.riskanalyticsenginev3Feature(
                             feature_nls = '', 
                             is_observation = True, 
                             is_zero = True, 
@@ -62,11 +62,50 @@ class TestRiskanalyticscontrollerv3GetRiskObservationDetailsResponse(unittest.Te
                             severity_level = 'UNDEFINED_SEVERITY_LEVEL', 
                             value = 1.337, )
                         ], 
+                    finding = ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_finding.riskanalyticscontrollerv3Finding(
+                        finding_description = '', 
+                        finding_details_map = [
+                            ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_finding_details_map.riskanalyticscontrollerv3FindingDetailsMap(
+                                finding_details = ibm_gdsc_sdk_saas.models.details_examples,_reference_links_that_show_evidence.Details examples, reference links that show evidence(
+                                    counts = [
+                                        ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_detail_to_count.riskanalyticscontrollerv3DetailToCount(
+                                            count = 56, 
+                                            desc = '', )
+                                        ], 
+                                    finding_examples = [
+                                        ''
+                                        ], 
+                                    finding_references = [
+                                        ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_finding_reference_link.riskanalyticscontrollerv3FindingReferenceLink(
+                                            report_filters = [
+                                                ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_observation_report_filter.riskanalyticscontrollerv3ObservationReportFilter(
+                                                    header_id = '', 
+                                                    header_value = '', 
+                                                    operator_type = 'UNDEFINED_OPERATOR_TYPE', )
+                                                ], 
+                                            statistics = ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_statistics.riskanalyticscontrollerv3Statistics(
+                                                average = 1.337, 
+                                                total = 56, ), 
+                                            text = '', 
+                                            text_template = '', 
+                                            text_variables = [
+                                                ''
+                                                ], )
+                                        ], ), 
+                                finding_details_type = '', 
+                                finding_reference = ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_finding_reference_link.riskanalyticscontrollerv3FindingReferenceLink(
+                                    report_filters = [
+                                        ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_observation_report_filter.riskanalyticscontrollerv3ObservationReportFilter(
+                                            header_id = '', 
+                                            header_value = '', )
+                                        ], 
+                                    text = '', 
+                                    text_template = '', ), 
+                                report = '', )
+                            ], 
+                        finding_type = 'UNDEFINED_OBSERVATION_TYPE', ), 
                     report_filters = [
-                        ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_observation_report_filter.riskanalyticscontrollerv3ObservationReportFilter(
-                            header_id = '', 
-                            header_value = '', 
-                            operator_type = 'UNDEFINED_OPERATOR_TYPE', )
+                        
                         ], 
                     report_id = '', )
             )

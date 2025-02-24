@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.pipelineconfig_service_api import PipelineconfigServiceApi
+from ibm_gdsc_sdk_saas.api.pipelineconfig_service_api import PipelineconfigServiceApi
 
 
 class TestPipelineconfigServiceApi(unittest.TestCase):
@@ -29,7 +29,7 @@ class TestPipelineconfigServiceApi(unittest.TestCase):
     def test_pipelineconfig_service_delete_tenant_resources(self) -> None:
         """Test case for pipelineconfig_service_delete_tenant_resources
 
-        Summary: Delete a tenant resource Description: Delete tenant specific resources such as db2, mongo, postgres and s3.
+        Summary: Delete a tenant resource Description: Delete tenant specific resources such as data warehouse, mongo, postgres and s3.
         """
         pass
 

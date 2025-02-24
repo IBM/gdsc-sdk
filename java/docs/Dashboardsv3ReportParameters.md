@@ -9,6 +9,7 @@ ReportParameters - distinguishing features of a report card.
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**end** | **String** | End. |  [optional] |
+|**groupIds** | **List&lt;Integer&gt;** |  |  [optional] |
 |**id** | **String** | Parameters id. |  [optional] |
 |**localTimeFilter** | [**Dashboardsv3TimeRange**](Dashboardsv3TimeRange.md) |  |  [optional] |
 |**menuItem** | **String** | Menu Item. |  [optional] |

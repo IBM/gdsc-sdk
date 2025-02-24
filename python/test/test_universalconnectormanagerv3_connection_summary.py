@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.universalconnectormanagerv3_connection_summary import Universalconnectormanagerv3ConnectionSummary
+from ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_connection_summary import Universalconnectormanagerv3ConnectionSummary
 
 class TestUniversalconnectormanagerv3ConnectionSummary(unittest.TestCase):
     """Universalconnectormanagerv3ConnectionSummary unit test stubs"""
@@ -42,15 +42,15 @@ class TestUniversalconnectormanagerv3ConnectionSummary(unittest.TestCase):
                 connection_filter_alias = '',
                 connection_id = '',
                 connection_input_alias = '',
-                connection_route = ibm_gdsc_sdk_software.models.universalconnectormanagerv3_connection_route.universalconnectormanagerv3ConnectionRoute(
+                connection_route = ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_connection_route.universalconnectormanagerv3ConnectionRoute(
                     host = '', 
                     port = '', ),
-                connection_status = ibm_gdsc_sdk_software.models.universalconnectormanagerv3_connection_status.universalconnectormanagerv3ConnectionStatus(
+                connection_status = ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_connection_status.universalconnectormanagerv3ConnectionStatus(
                     status = 'UC_OK', 
                     status_text = '', 
                     timestamp = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     timestamp_last_ok = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), ),
-                user = ibm_gdsc_sdk_software.models.universalconnectormanagerv3_user.universalconnectormanagerv3User(
+                user = ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_user.universalconnectormanagerv3User(
                     display_name = '', 
                     uid = '', 
                     user_id = '', )

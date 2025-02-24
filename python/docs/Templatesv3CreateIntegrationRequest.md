@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.templatesv3_create_integration_request import Templatesv3CreateIntegrationRequest
+from ibm_gdsc_sdk_saas.models.templatesv3_create_integration_request import Templatesv3CreateIntegrationRequest
 
 # TODO update the JSON string below
 json = "{}"

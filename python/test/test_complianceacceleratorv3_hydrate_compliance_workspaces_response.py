@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.complianceacceleratorv3_hydrate_compliance_workspaces_response import Complianceacceleratorv3HydrateComplianceWorkspacesResponse
+from ibm_gdsc_sdk_saas.models.complianceacceleratorv3_hydrate_compliance_workspaces_response import Complianceacceleratorv3HydrateComplianceWorkspacesResponse
 
 class TestComplianceacceleratorv3HydrateComplianceWorkspacesResponse(unittest.TestCase):
     """Complianceacceleratorv3HydrateComplianceWorkspacesResponse unit test stubs"""
@@ -35,7 +35,7 @@ class TestComplianceacceleratorv3HydrateComplianceWorkspacesResponse(unittest.Te
         model = Complianceacceleratorv3HydrateComplianceWorkspacesResponse()
         if include_optional:
             return Complianceacceleratorv3HydrateComplianceWorkspacesResponse(
-                status = ibm_gdsc_sdk_software.models.complianceacceleratorv3_status_response_base.complianceacceleratorv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.complianceacceleratorv3_status_response_base.complianceacceleratorv3StatusResponseBase(
                     message = '', 
                     status = '', )
             )

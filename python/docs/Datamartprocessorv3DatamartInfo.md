@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **current_ts** | **datetime** | Timestamp in UTC when the entry was made. | [optional] 
 **data_type** | **str** | Type of datamart. | [optional] 
 **error** | **str** | Errors if any. | [optional] 
-**export_record_count** | **int** | Total records exported from gdp. | [optional] 
+**export_record_count** | **int** | Total records exported from GDP. | [optional] 
 **export_status** | **int** | Export status of datamart. | [optional] 
 **failure_file_count** | **int** | Total failed files in a datamart. | [optional] 
 **files** | [**List[Datamartprocessorv3DatamartFileInfo]**](Datamartprocessorv3DatamartFileInfo.md) | File info inside a datamart. | [optional] 
@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.datamartprocessorv3_datamart_info import Datamartprocessorv3DatamartInfo
+from ibm_gdsc_sdk_saas.models.datamartprocessorv3_datamart_info import Datamartprocessorv3DatamartInfo
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_report_column_facet_request import Reportsrunnerv3GetReportColumnFacetRequest
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_get_report_column_facet_request import Reportsrunnerv3GetReportColumnFacetRequest
 
 # TODO update the JSON string below
 json = "{}"

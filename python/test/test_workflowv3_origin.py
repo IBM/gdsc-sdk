@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.workflowv3_origin import Workflowv3Origin
+from ibm_gdsc_sdk_saas.models.workflowv3_origin import Workflowv3Origin
 
 class TestWorkflowv3Origin(unittest.TestCase):
     """Workflowv3Origin unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.healthcollectorv3_get_object_storage_usage_response import Healthcollectorv3GetObjectStorageUsageResponse
+from ibm_gdsc_sdk_saas.models.healthcollectorv3_get_object_storage_usage_response import Healthcollectorv3GetObjectStorageUsageResponse
 
 class TestHealthcollectorv3GetObjectStorageUsageResponse(unittest.TestCase):
     """Healthcollectorv3GetObjectStorageUsageResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestHealthcollectorv3GetObjectStorageUsageResponse(unittest.TestCase):
         if include_optional:
             return Healthcollectorv3GetObjectStorageUsageResponse(
                 object_storage_usage = [
-                    ibm_gdsc_sdk_software.models.healthcollectorv3_usage.healthcollectorv3Usage(
+                    ibm_gdsc_sdk_saas.models.healthcollectorv3_usage.healthcollectorv3Usage(
                         label = '', 
                         name = '', 
                         nls_key = '', 

@@ -396,7 +396,7 @@ export class GroupBuilderApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Summary: Get gdp to gi group mapping Description: Get insights to gdp group sync mapping.
+     * Summary: Get GDP to gi group mapping Description: Get GDSC to GDP group sync mapping.
      * @param centralManagerId Central manager.
      */
     public async groupBuilderGetGroupSyncMapping(centralManagerId?: string, _options?: Configuration): Promise<RequestContext> {
@@ -437,7 +437,7 @@ export class GroupBuilderApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Summary: Get group type mapping Description: Get insights to gdp group types mapping.
+     * Summary: Get group type mapping Description: Get GDSC to GDP group types mapping.
      */
     public async groupBuilderGetGroupTypeMapping(_options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;

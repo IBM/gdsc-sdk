@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.templatesv3_delete_template_response import Templatesv3DeleteTemplateResponse
+from ibm_gdsc_sdk_saas.models.templatesv3_delete_template_response import Templatesv3DeleteTemplateResponse
 
 # TODO update the JSON string below
 json = "{}"

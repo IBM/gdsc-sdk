@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_group import Guardiumconnectorv3Group
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_group import Guardiumconnectorv3Group
 
 class TestGuardiumconnectorv3Group(unittest.TestCase):
     """Guardiumconnectorv3Group unit test stubs"""
@@ -42,12 +42,12 @@ class TestGuardiumconnectorv3Group(unittest.TestCase):
                 hierarchical = True,
                 member_count = 56,
                 members = [
-                    ibm_gdsc_sdk_software.models.guardiumconnectorv3_group_member.guardiumconnectorv3GroupMember(
+                    ibm_gdsc_sdk_saas.models.guardiumconnectorv3_group_member.guardiumconnectorv3GroupMember(
                         description = '', 
                         member_id = 56, )
                     ],
                 nested_group_members = [
-                    ibm_gdsc_sdk_software.models.guardiumconnectorv3_nested_group_member.guardiumconnectorv3NestedGroupMember(
+                    ibm_gdsc_sdk_saas.models.guardiumconnectorv3_nested_group_member.guardiumconnectorv3NestedGroupMember(
                         description = '', 
                         group_id = 56, 
                         member_id = 56, )

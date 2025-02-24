@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.snifassistv3_test_regex_request import Snifassistv3TestRegexRequest
+from ibm_gdsc_sdk_saas.models.snifassistv3_test_regex_request import Snifassistv3TestRegexRequest
 
 class TestSnifassistv3TestRegexRequest(unittest.TestCase):
     """Snifassistv3TestRegexRequest unit test stubs"""

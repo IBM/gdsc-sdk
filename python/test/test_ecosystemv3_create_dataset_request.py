@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.ecosystemv3_create_dataset_request import Ecosystemv3CreateDatasetRequest
+from ibm_gdsc_sdk_saas.models.ecosystemv3_create_dataset_request import Ecosystemv3CreateDatasetRequest
 
 class TestEcosystemv3CreateDatasetRequest(unittest.TestCase):
     """Ecosystemv3CreateDatasetRequest unit test stubs"""
@@ -35,9 +35,9 @@ class TestEcosystemv3CreateDatasetRequest(unittest.TestCase):
         model = Ecosystemv3CreateDatasetRequest()
         if include_optional:
             return Ecosystemv3CreateDatasetRequest(
-                detail = ibm_gdsc_sdk_software.models.ecosystemv3_dataset_detail.ecosystemv3DatasetDetail(
+                detail = ibm_gdsc_sdk_saas.models.ecosystemv3_dataset_detail.ecosystemv3DatasetDetail(
                     columns = [
-                        ibm_gdsc_sdk_software.models.ecosystemv3_column_definition.ecosystemv3ColumnDefinition(
+                        ibm_gdsc_sdk_saas.models.ecosystemv3_column_definition.ecosystemv3ColumnDefinition(
                             allow_null = True, 
                             column_id = 56, 
                             column_name = '', 

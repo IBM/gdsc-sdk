@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.qspmpolicymanagerv3_fetch_object_store_file_response import Qspmpolicymanagerv3FetchObjectStoreFileResponse
+from ibm_gdsc_sdk_saas.models.qspmpolicymanagerv3_fetch_object_store_file_response import Qspmpolicymanagerv3FetchObjectStoreFileResponse
 
 class TestQspmpolicymanagerv3FetchObjectStoreFileResponse(unittest.TestCase):
     """Qspmpolicymanagerv3FetchObjectStoreFileResponse unit test stubs"""
@@ -36,10 +36,14 @@ class TestQspmpolicymanagerv3FetchObjectStoreFileResponse(unittest.TestCase):
         if include_optional:
             return Qspmpolicymanagerv3FetchObjectStoreFileResponse(
                 bucket_name = '',
-                folder_name = '',
-                file_name = [
-                    ''
-                    ]
+                file_name = ibm_gdsc_sdk_saas.models.nested_message_for_file_names.Nested message for file names(
+                    explorer_files_name = [
+                        ''
+                        ], 
+                    non_explorer_files_name = [
+                        ''
+                        ], ),
+                folder_name = ''
             )
         else:
             return Qspmpolicymanagerv3FetchObjectStoreFileResponse(

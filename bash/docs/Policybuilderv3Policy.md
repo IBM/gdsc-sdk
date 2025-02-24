@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **activationUnderscorestatus** | **integer** |  | [optional] [default to null]
 **containsUnderscoreruleUnderscoretypes** | [**array[Policybuilderv3RuleType]**](Policybuilderv3RuleType.md) |  | [optional] [default to null]
 **controlUnderscoreflow** | [**Policybuilderv3ControlFlow**](Policybuilderv3ControlFlow.md) |  | [optional] [default to null]
+**edgeUnderscoreactivationUnderscoreinfo** | [**array[Policybuilderv3EdgeActivationObject]**](Policybuilderv3EdgeActivationObject.md) | Activation info for the policy on all edges, it is activated on | [optional] [default to null]
 **installedUnderscoreflag** | **boolean** |  | [optional] [default to null]
 **installedUnderscoreorder** | **integer** |  | [optional] [default to null]
 **installedUnderscoretimestamp** | **string** |  | [optional] [default to null]

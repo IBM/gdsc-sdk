@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticsenginev3_additional_info import Riskanalyticsenginev3AdditionalInfo
+from ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_additional_info import Riskanalyticsenginev3AdditionalInfo
 
 class TestRiskanalyticsenginev3AdditionalInfo(unittest.TestCase):
     """Riskanalyticsenginev3AdditionalInfo unit test stubs"""

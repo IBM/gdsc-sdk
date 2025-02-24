@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.flow_node_summary import FlowNodeSummary
+from ibm_gdsc_sdk_saas.models.flow_node_summary import FlowNodeSummary
 
 class TestFlowNodeSummary(unittest.TestCase):
     """FlowNodeSummary unit test stubs"""
@@ -36,17 +36,17 @@ class TestFlowNodeSummary(unittest.TestCase):
         if include_optional:
             return FlowNodeSummary(
                 types_count = [
-                    ibm_gdsc_sdk_software.models.types_count_inner.TypesCount_inner(
+                    ibm_gdsc_sdk_saas.models.types_count_inner.TypesCount_inner(
                         type = 'compute', 
                         count = 43, )
                     ],
                 cloud_accounts_count = [
-                    ibm_gdsc_sdk_software.models.cloud_account_count_inner.CloudAccountCount_inner(
+                    ibm_gdsc_sdk_saas.models.cloud_account_count_inner.CloudAccountCount_inner(
                         cloud_account_id = '12345678910', 
                         count = 10, )
                     ],
                 cloud_regions_count = [
-                    ibm_gdsc_sdk_software.models.cloud_region_count_inner.CloudRegionCount_inner(
+                    ibm_gdsc_sdk_saas.models.cloud_region_count_inner.CloudRegionCount_inner(
                         cloud_region = 'eu-west-3', 
                         count = 7, )
                     ]
@@ -54,17 +54,17 @@ class TestFlowNodeSummary(unittest.TestCase):
         else:
             return FlowNodeSummary(
                 types_count = [
-                    ibm_gdsc_sdk_software.models.types_count_inner.TypesCount_inner(
+                    ibm_gdsc_sdk_saas.models.types_count_inner.TypesCount_inner(
                         type = 'compute', 
                         count = 43, )
                     ],
                 cloud_accounts_count = [
-                    ibm_gdsc_sdk_software.models.cloud_account_count_inner.CloudAccountCount_inner(
+                    ibm_gdsc_sdk_saas.models.cloud_account_count_inner.CloudAccountCount_inner(
                         cloud_account_id = '12345678910', 
                         count = 10, )
                     ],
                 cloud_regions_count = [
-                    ibm_gdsc_sdk_software.models.cloud_region_count_inner.CloudRegionCount_inner(
+                    ibm_gdsc_sdk_saas.models.cloud_region_count_inner.CloudRegionCount_inner(
                         cloud_region = 'eu-west-3', 
                         count = 7, )
                     ],

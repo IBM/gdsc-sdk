@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_excluded_item import Riskanalyticscontrollerv3ExcludedItem
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_excluded_item import Riskanalyticscontrollerv3ExcludedItem
 
 class TestRiskanalyticscontrollerv3ExcludedItem(unittest.TestCase):
     """Riskanalyticscontrollerv3ExcludedItem unit test stubs"""

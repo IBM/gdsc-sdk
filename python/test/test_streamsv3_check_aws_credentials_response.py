@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.streamsv3_check_aws_credentials_response import Streamsv3CheckAWSCredentialsResponse
+from ibm_gdsc_sdk_saas.models.streamsv3_check_aws_credentials_response import Streamsv3CheckAWSCredentialsResponse
 
 class TestStreamsv3CheckAWSCredentialsResponse(unittest.TestCase):
     """Streamsv3CheckAWSCredentialsResponse unit test stubs"""

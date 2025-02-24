@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_update_streaming_request import Guardiumconnectorv3UpdateStreamingRequest
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_update_streaming_request import Guardiumconnectorv3UpdateStreamingRequest
 
 class TestGuardiumconnectorv3UpdateStreamingRequest(unittest.TestCase):
     """Guardiumconnectorv3UpdateStreamingRequest unit test stubs"""
@@ -37,9 +37,9 @@ class TestGuardiumconnectorv3UpdateStreamingRequest(unittest.TestCase):
             return Guardiumconnectorv3UpdateStreamingRequest(
                 central_manager_id = '',
                 records = [
-                    ibm_gdsc_sdk_software.models.guardiumconnectorv3_status_record.guardiumconnectorv3StatusRecord(
+                    ibm_gdsc_sdk_saas.models.guardiumconnectorv3_status_record.guardiumconnectorv3StatusRecord(
                         attributes = [
-                            ibm_gdsc_sdk_software.models.guardiumconnectorv3_status_attribute.guardiumconnectorv3StatusAttribute(
+                            ibm_gdsc_sdk_saas.models.guardiumconnectorv3_status_attribute.guardiumconnectorv3StatusAttribute(
                                 key = '', 
                                 value = '', )
                             ], 

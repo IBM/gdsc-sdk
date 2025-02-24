@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.notificationsv3_get_ticket_status_response import Notificationsv3GetTicketStatusResponse
+from ibm_gdsc_sdk_saas.models.notificationsv3_get_ticket_status_response import Notificationsv3GetTicketStatusResponse
 
 class TestNotificationsv3GetTicketStatusResponse(unittest.TestCase):
     """Notificationsv3GetTicketStatusResponse unit test stubs"""

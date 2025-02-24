@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_create_controller_request import Resourcecontrollerk8v3CreateControllerRequest
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_create_controller_request import Resourcecontrollerk8v3CreateControllerRequest
 
 class TestResourcecontrollerk8v3CreateControllerRequest(unittest.TestCase):
     """Resourcecontrollerk8v3CreateControllerRequest unit test stubs"""

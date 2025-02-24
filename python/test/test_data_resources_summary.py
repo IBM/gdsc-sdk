@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.data_resources_summary import DataResourcesSummary
+from ibm_gdsc_sdk_saas.models.data_resources_summary import DataResourcesSummary
 
 class TestDataResourcesSummary(unittest.TestCase):
     """DataResourcesSummary unit test stubs"""
@@ -38,18 +38,18 @@ class TestDataResourcesSummary(unittest.TestCase):
                 reviewed_resources = 0,
                 total_resources = 3,
                 resource_types = [
-                    ibm_gdsc_sdk_software.models.data_resources_summary_resource_types_inner.DataResourcesSummary_resourceTypes_inner(
+                    ibm_gdsc_sdk_saas.models.data_resources_summary_resource_types_inner.DataResourcesSummary_resourceTypes_inner(
                         resource_type = 'file', 
                         count = 3, )
                     ],
                 resource_owners = [
-                    ibm_gdsc_sdk_software.models.data_resources_summary_resource_owners_inner.DataResourcesSummary_resourceOwners_inner(
+                    ibm_gdsc_sdk_saas.models.data_resources_summary_resource_owners_inner.DataResourcesSummary_resourceOwners_inner(
                         resource_owner = 'owner name', 
                         count = 2, )
                     ],
                 total_sensitivities = 238,
                 sensitivities = [
-                    ibm_gdsc_sdk_software.models.sensitivities_items_inner.SensitivitiesItems_inner(
+                    ibm_gdsc_sdk_saas.models.sensitivities_items_inner.SensitivitiesItems_inner(
                         sensitivity = 'EMAIL', 
                         count = 57, 
                         category = 'PERSONAL', )
@@ -60,12 +60,12 @@ class TestDataResourcesSummary(unittest.TestCase):
                 reviewed_resources = 0,
                 total_resources = 3,
                 resource_types = [
-                    ibm_gdsc_sdk_software.models.data_resources_summary_resource_types_inner.DataResourcesSummary_resourceTypes_inner(
+                    ibm_gdsc_sdk_saas.models.data_resources_summary_resource_types_inner.DataResourcesSummary_resourceTypes_inner(
                         resource_type = 'file', 
                         count = 3, )
                     ],
                 sensitivities = [
-                    ibm_gdsc_sdk_software.models.sensitivities_items_inner.SensitivitiesItems_inner(
+                    ibm_gdsc_sdk_saas.models.sensitivities_items_inner.SensitivitiesItems_inner(
                         sensitivity = 'EMAIL', 
                         count = 57, 
                         category = 'PERSONAL', )

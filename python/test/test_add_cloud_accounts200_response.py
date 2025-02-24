@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.add_cloud_accounts200_response import AddCloudAccounts200Response
+from ibm_gdsc_sdk_saas.models.add_cloud_accounts200_response import AddCloudAccounts200Response
 
 class TestAddCloudAccounts200Response(unittest.TestCase):
     """AddCloudAccounts200Response unit test stubs"""

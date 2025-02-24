@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.workflowv3_task_count import Workflowv3TaskCount
+from ibm_gdsc_sdk_saas.models.workflowv3_task_count import Workflowv3TaskCount
 
 class TestWorkflowv3TaskCount(unittest.TestCase):
     """Workflowv3TaskCount unit test stubs"""
@@ -36,7 +36,7 @@ class TestWorkflowv3TaskCount(unittest.TestCase):
         if include_optional:
             return Workflowv3TaskCount(
                 counts = [
-                    ibm_gdsc_sdk_software.models.returns_task_count_by_status.Returns task count by status(
+                    ibm_gdsc_sdk_saas.models.returns_task_count_by_status.Returns task count by status(
                         status = 'UNDEFINED_STATUS', 
                         total = 56, )
                     ],

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.auditv3_filter import Auditv3Filter
+from ibm_gdsc_sdk_saas.models.auditv3_filter import Auditv3Filter
 
 # TODO update the JSON string below
 json = "{}"

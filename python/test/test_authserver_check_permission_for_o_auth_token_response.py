@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.authserver_check_permission_for_o_auth_token_response import AuthserverCheckPermissionForOAuthTokenResponse
+from ibm_gdsc_sdk_saas.models.authserver_check_permission_for_o_auth_token_response import AuthserverCheckPermissionForOAuthTokenResponse
 
 class TestAuthserverCheckPermissionForOAuthTokenResponse(unittest.TestCase):
     """AuthserverCheckPermissionForOAuthTokenResponse unit test stubs"""

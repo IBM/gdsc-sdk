@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_get_chart_templatesv2_response import Reportsv3GetChartTemplatesv2Response
+from ibm_gdsc_sdk_saas.models.reportsv3_get_chart_templatesv2_response import Reportsv3GetChartTemplatesv2Response
 
 class TestReportsv3GetChartTemplatesv2Response(unittest.TestCase):
     """Reportsv3GetChartTemplatesv2Response unit test stubs"""
@@ -36,7 +36,7 @@ class TestReportsv3GetChartTemplatesv2Response(unittest.TestCase):
         if include_optional:
             return Reportsv3GetChartTemplatesv2Response(
                 templates = [
-                    ibm_gdsc_sdk_software.models.reportsv3_custom_chart_templatev2.reportsv3CustomChartTemplatev2(
+                    ibm_gdsc_sdk_saas.models.reportsv3_custom_chart_templatev2.reportsv3CustomChartTemplatev2(
                         template_id = '', 
                         user_id = '', 
                         vega_definition = '', )

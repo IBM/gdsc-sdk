@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.schedulerv3_search_scheduled_jobs_request import Schedulerv3SearchScheduledJobsRequest
+from ibm_gdsc_sdk_saas.models.schedulerv3_search_scheduled_jobs_request import Schedulerv3SearchScheduledJobsRequest
 
 class TestSchedulerv3SearchScheduledJobsRequest(unittest.TestCase):
     """Schedulerv3SearchScheduledJobsRequest unit test stubs"""
@@ -37,7 +37,7 @@ class TestSchedulerv3SearchScheduledJobsRequest(unittest.TestCase):
             return Schedulerv3SearchScheduledJobsRequest(
                 limit = 56,
                 offset = 56,
-                filter = ibm_gdsc_sdk_software.models.schedulerv3_scheduled_jobs_filter.schedulerv3ScheduledJobsFilter(
+                filter = ibm_gdsc_sdk_saas.models.schedulerv3_scheduled_jobs_filter.schedulerv3ScheduledJobsFilter(
                     enabled = '', 
                     end_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     ignore_acl = True, 

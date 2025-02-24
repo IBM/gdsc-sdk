@@ -1,0 +1,9 @@
+# Resourcecontrollerk8v3KeyPair
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Private** | **string** | Optional: A PEM-encoded private key used to sign requests to the manager. | [optional] [default to null]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

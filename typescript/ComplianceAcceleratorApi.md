@@ -39,6 +39,20 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorCreateWorkspaceRequest = 
             desc: "desc_example",
             groupTypeId: 1,
             id: 1,
+            ldapConfig: {
+              attributes: [
+                "attributes_example",
+              ],
+              bindGroupId: 1,
+              bindPassword: "bindPassword_example",
+              clearGroup: true,
+              filter: "filter_example",
+              filterScope: 1,
+              importLimit: 1,
+              ldapGroupName: "ldapGroupName_example",
+              ldapId: "ldapId_example",
+              memberPrefix: "memberPrefix_example",
+            },
             members: [
               {
                 memberId: "memberId_example",
@@ -175,6 +189,7 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorCreateWorkspaceRequest = 
                       },
                     ],
                     syncExecutionDate: true,
+                    threshold: 1,
                   },
                 },
                 recipients: [
@@ -196,6 +211,7 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorCreateWorkspaceRequest = 
                         caseInsensitive: true,
                         fieldNlsTranslationKey: "fieldNlsTranslationKey_example",
                         filterId: 1,
+                        groupTypeId: 1,
                         headerId: "headerId_example",
                         headerName: "headerName_example",
                         headerType: "UNDEFINED_TYPE",
@@ -214,11 +230,13 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorCreateWorkspaceRequest = 
                         inReportId: "inReportId_example",
                         inReportName: "inReportName_example",
                         inReportTableName: "inReportTableName_example",
+                        isTuple: true,
                         operatorType: "UNDEFINED_OPERATOR_TYPE",
                         parameterType: "UNDEFINED_PARAM_TYPE",
                         schemaName: "schemaName_example",
                         sequence: 1,
                         tableName: "tableName_example",
+                        tupleType: "tupleType_example",
                         values: [
                           "values_example",
                         ],
@@ -273,6 +291,20 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorCreateWorkspaceRequest = 
               desc: "desc_example",
               groupTypeId: 1,
               id: 1,
+              ldapConfig: {
+                attributes: [
+                  "attributes_example",
+                ],
+                bindGroupId: 1,
+                bindPassword: "bindPassword_example",
+                clearGroup: true,
+                filter: "filter_example",
+                filterScope: 1,
+                importLimit: 1,
+                ldapGroupName: "ldapGroupName_example",
+                ldapId: "ldapId_example",
+                memberPrefix: "memberPrefix_example",
+              },
               members: [
                 {
                   memberId: "memberId_example",
@@ -302,6 +334,20 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorCreateWorkspaceRequest = 
                       desc: "desc_example",
                       groupTypeId: 1,
                       id: 1,
+                      ldapConfig: {
+                        attributes: [
+                          "attributes_example",
+                        ],
+                        bindGroupId: 1,
+                        bindPassword: "bindPassword_example",
+                        clearGroup: true,
+                        filter: "filter_example",
+                        filterScope: 1,
+                        importLimit: 1,
+                        ldapGroupName: "ldapGroupName_example",
+                        ldapId: "ldapId_example",
+                        memberPrefix: "memberPrefix_example",
+                      },
                       members: [
                         {
                           memberId: "memberId_example",
@@ -326,6 +372,20 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorCreateWorkspaceRequest = 
                       desc: "desc_example",
                       groupTypeId: 1,
                       id: 1,
+                      ldapConfig: {
+                        attributes: [
+                          "attributes_example",
+                        ],
+                        bindGroupId: 1,
+                        bindPassword: "bindPassword_example",
+                        clearGroup: true,
+                        filter: "filter_example",
+                        filterScope: 1,
+                        importLimit: 1,
+                        ldapGroupName: "ldapGroupName_example",
+                        ldapId: "ldapId_example",
+                        memberPrefix: "memberPrefix_example",
+                      },
                       members: [
                         {
                           memberId: "memberId_example",
@@ -472,7 +532,10 @@ import * as fs from 'fs';
 const configuration = .createConfiguration();
 const apiInstance = new .ComplianceAcceleratorApi(configuration);
 
-let body:any = {};
+let body:.ComplianceAcceleratorApiComplianceAcceleratorGetComplianceInfoRequest = {
+  // boolean | gives compliance workspace data without reaching out to other services - meant to be quicker for dashboards. (optional)
+  isBrief: true,
+};
 
 apiInstance.complianceAcceleratorGetComplianceInfo(body).then((data:any) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -481,7 +544,10 @@ apiInstance.complianceAcceleratorGetComplianceInfo(body).then((data:any) => {
 
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **isBrief** | [**boolean**] | gives compliance workspace data without reaching out to other services - meant to be quicker for dashboards. | (optional) defaults to undefined
 
 
 ### Return type
@@ -590,6 +656,20 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorStoreComplianceInfoReques
             desc: "desc_example",
             groupTypeId: 1,
             id: 1,
+            ldapConfig: {
+              attributes: [
+                "attributes_example",
+              ],
+              bindGroupId: 1,
+              bindPassword: "bindPassword_example",
+              clearGroup: true,
+              filter: "filter_example",
+              filterScope: 1,
+              importLimit: 1,
+              ldapGroupName: "ldapGroupName_example",
+              ldapId: "ldapId_example",
+              memberPrefix: "memberPrefix_example",
+            },
             members: [
               {
                 memberId: "memberId_example",
@@ -726,6 +806,7 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorStoreComplianceInfoReques
                       },
                     ],
                     syncExecutionDate: true,
+                    threshold: 1,
                   },
                 },
                 recipients: [
@@ -747,6 +828,7 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorStoreComplianceInfoReques
                         caseInsensitive: true,
                         fieldNlsTranslationKey: "fieldNlsTranslationKey_example",
                         filterId: 1,
+                        groupTypeId: 1,
                         headerId: "headerId_example",
                         headerName: "headerName_example",
                         headerType: "UNDEFINED_TYPE",
@@ -765,11 +847,13 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorStoreComplianceInfoReques
                         inReportId: "inReportId_example",
                         inReportName: "inReportName_example",
                         inReportTableName: "inReportTableName_example",
+                        isTuple: true,
                         operatorType: "UNDEFINED_OPERATOR_TYPE",
                         parameterType: "UNDEFINED_PARAM_TYPE",
                         schemaName: "schemaName_example",
                         sequence: 1,
                         tableName: "tableName_example",
+                        tupleType: "tupleType_example",
                         values: [
                           "values_example",
                         ],
@@ -824,6 +908,20 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorStoreComplianceInfoReques
               desc: "desc_example",
               groupTypeId: 1,
               id: 1,
+              ldapConfig: {
+                attributes: [
+                  "attributes_example",
+                ],
+                bindGroupId: 1,
+                bindPassword: "bindPassword_example",
+                clearGroup: true,
+                filter: "filter_example",
+                filterScope: 1,
+                importLimit: 1,
+                ldapGroupName: "ldapGroupName_example",
+                ldapId: "ldapId_example",
+                memberPrefix: "memberPrefix_example",
+              },
               members: [
                 {
                   memberId: "memberId_example",
@@ -853,6 +951,20 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorStoreComplianceInfoReques
                       desc: "desc_example",
                       groupTypeId: 1,
                       id: 1,
+                      ldapConfig: {
+                        attributes: [
+                          "attributes_example",
+                        ],
+                        bindGroupId: 1,
+                        bindPassword: "bindPassword_example",
+                        clearGroup: true,
+                        filter: "filter_example",
+                        filterScope: 1,
+                        importLimit: 1,
+                        ldapGroupName: "ldapGroupName_example",
+                        ldapId: "ldapId_example",
+                        memberPrefix: "memberPrefix_example",
+                      },
                       members: [
                         {
                           memberId: "memberId_example",
@@ -877,6 +989,20 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorStoreComplianceInfoReques
                       desc: "desc_example",
                       groupTypeId: 1,
                       id: 1,
+                      ldapConfig: {
+                        attributes: [
+                          "attributes_example",
+                        ],
+                        bindGroupId: 1,
+                        bindPassword: "bindPassword_example",
+                        clearGroup: true,
+                        filter: "filter_example",
+                        filterScope: 1,
+                        importLimit: 1,
+                        ldapGroupName: "ldapGroupName_example",
+                        ldapId: "ldapId_example",
+                        memberPrefix: "memberPrefix_example",
+                      },
                       members: [
                         {
                           memberId: "memberId_example",

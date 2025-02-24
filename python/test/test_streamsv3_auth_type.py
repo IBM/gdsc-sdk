@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.streamsv3_auth_type import Streamsv3AuthType
+from ibm_gdsc_sdk_saas.models.streamsv3_auth_type import Streamsv3AuthType
 
 class TestStreamsv3AuthType(unittest.TestCase):
     """Streamsv3AuthType unit test stubs"""

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.reportsv3_create_category_request import Reportsv3CreateCategoryRequest
+from ibm_gdsc_sdk_saas.models.reportsv3_create_category_request import Reportsv3CreateCategoryRequest
 
 # TODO update the JSON string below
 json = "{}"

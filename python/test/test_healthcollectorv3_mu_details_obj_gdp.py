@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.healthcollectorv3_mu_details_obj_gdp import Healthcollectorv3MUDetailsObjGdp
+from ibm_gdsc_sdk_saas.models.healthcollectorv3_mu_details_obj_gdp import Healthcollectorv3MUDetailsObjGdp
 
 class TestHealthcollectorv3MUDetailsObjGdp(unittest.TestCase):
     """Healthcollectorv3MUDetailsObjGdp unit test stubs"""
@@ -36,19 +36,19 @@ class TestHealthcollectorv3MUDetailsObjGdp(unittest.TestCase):
         if include_optional:
             return Healthcollectorv3MUDetailsObjGdp(
                 agg_health_view_list = [
-                    ibm_gdsc_sdk_software.models.healthcollectorv3_aggregation_details_object_gdp.healthcollectorv3AggregationDetailsObjectGdp(
+                    ibm_gdsc_sdk_saas.models.healthcollectorv3_aggregation_details_object_gdp.healthcollectorv3AggregationDetailsObjectGdp(
                         agg_action_error = '', 
                         agg_action_health_status = 56, 
                         agg_type = '', 
                         error_code = 56, 
                         unit = '', )
                     ],
-                connectivity_details = ibm_gdsc_sdk_software.models.healthcollectorv3_general_details_object.healthcollectorv3GeneralDetailsObject(
+                connectivity_details = ibm_gdsc_sdk_saas.models.healthcollectorv3_general_details_object.healthcollectorv3GeneralDetailsObject(
                     err_messages = '', ),
                 general_err_messages = [
                     ''
                     ],
-                utilization_scheme = ibm_gdsc_sdk_software.models.healthcollectorv3_utilization_parameter_object_gdp.healthcollectorv3UtilizationParameterObjectGdp(
+                utilization_scheme = ibm_gdsc_sdk_saas.models.healthcollectorv3_utilization_parameter_object_gdp.healthcollectorv3UtilizationParameterObjectGdp(
                     analyzer_queue_value = 56, 
                     error_messages_code = 56, 
                     error_messages_value = '', 

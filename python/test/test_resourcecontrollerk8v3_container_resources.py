@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_container_resources import Resourcecontrollerk8v3ContainerResources
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_container_resources import Resourcecontrollerk8v3ContainerResources
 
 class TestResourcecontrollerk8v3ContainerResources(unittest.TestCase):
     """Resourcecontrollerk8v3ContainerResources unit test stubs"""
@@ -35,10 +35,10 @@ class TestResourcecontrollerk8v3ContainerResources(unittest.TestCase):
         model = Resourcecontrollerk8v3ContainerResources()
         if include_optional:
             return Resourcecontrollerk8v3ContainerResources(
-                limits = ibm_gdsc_sdk_software.models.container_resources_quantity_contains_the_resource_quantities_of_container.ContainerResourcesQuantity contains the resource quantities of container(
+                limits = ibm_gdsc_sdk_saas.models.container_resources_quantity_contains_the_resource_quantities_of_container.ContainerResourcesQuantity contains the resource quantities of container(
                     cpu = '', 
                     memory = '', ),
-                requests = ibm_gdsc_sdk_software.models.container_resources_quantity_contains_the_resource_quantities_of_container.ContainerResourcesQuantity contains the resource quantities of container(
+                requests = ibm_gdsc_sdk_saas.models.container_resources_quantity_contains_the_resource_quantities_of_container.ContainerResourcesQuantity contains the resource quantities of container(
                     cpu = '', 
                     memory = '', )
             )

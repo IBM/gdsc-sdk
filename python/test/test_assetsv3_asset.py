@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_asset import Assetsv3Asset
+from ibm_gdsc_sdk_saas.models.assetsv3_asset import Assetsv3Asset
 
 class TestAssetsv3Asset(unittest.TestCase):
     """Assetsv3Asset unit test stubs"""
@@ -49,7 +49,7 @@ class TestAssetsv3Asset(unittest.TestCase):
                 entity_id = '',
                 entity_type = '',
                 extended_properties = [
-                    ibm_gdsc_sdk_software.models.extended_properties_structure.Extended properties structure(
+                    ibm_gdsc_sdk_saas.models.extended_properties_structure.Extended properties structure(
                         data_type = '', 
                         entity_name = '', 
                         entity_type = '', 
@@ -63,6 +63,7 @@ class TestAssetsv3Asset(unittest.TestCase):
                 host_port = '',
                 ip = '',
                 ip_port = '',
+                is_splittable = True,
                 mac_address = '',
                 model_name = '',
                 monitoring = 'NA',
@@ -83,7 +84,8 @@ class TestAssetsv3Asset(unittest.TestCase):
                 type = '',
                 user_accounts = [
                     ''
-                    ]
+                    ],
+                vertex_id = ''
             )
         else:
             return Assetsv3Asset(

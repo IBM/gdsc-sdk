@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.tenantuserv3_update_privilege_request import Tenantuserv3UpdatePrivilegeRequest
+from ibm_gdsc_sdk_saas.models.tenantuserv3_update_privilege_request import Tenantuserv3UpdatePrivilegeRequest
 
 class TestTenantuserv3UpdatePrivilegeRequest(unittest.TestCase):
     """Tenantuserv3UpdatePrivilegeRequest unit test stubs"""

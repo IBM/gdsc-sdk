@@ -6,13 +6,13 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **description** | **str** | Optional: The description of the controller. | [optional] 
-**name** | **str** | // Controller object that needs to be added.   Controller controller &#x3D; 1; The name of the controller. | [optional] 
+**name** | **str** | The name of the controller. | [optional] 
 **tenant_id** | **str** |  | [optional] 
 
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_create_controller_request import Resourcecontrollerk8v3CreateControllerRequest
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_create_controller_request import Resourcecontrollerk8v3CreateControllerRequest
 
 # TODO update the JSON string below
 json = "{}"

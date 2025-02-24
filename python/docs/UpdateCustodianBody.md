@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.update_custodian_body import UpdateCustodianBody
+from ibm_gdsc_sdk_saas.models.update_custodian_body import UpdateCustodianBody
 
 # TODO update the JSON string below
 json = "{}"

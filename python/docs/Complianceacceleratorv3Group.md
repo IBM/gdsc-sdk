@@ -9,16 +9,17 @@ Name | Type | Description | Notes
 **desc** | **str** |  | [optional] 
 **group_type_id** | **int** | Group type ID. | [optional] 
 **id** | **int** | Id of group. | [optional] 
-**members** | [**List[Complianceacceleratorv3GroupMember]**](Complianceacceleratorv3GroupMember.md) | Group members. | [optional] 
+**ldap_config** | [**Groupbuilderv3LdapConfig**](Groupbuilderv3LdapConfig.md) |  | [optional] 
+**members** | [**List[Groupbuilderv3GroupMember]**](Groupbuilderv3GroupMember.md) | Group members. | [optional] 
 **members_to_add** | **List[str]** | Members of the groups to be stored. | [optional] 
-**members_to_delete** | [**List[Complianceacceleratorv3GroupMember]**](Complianceacceleratorv3GroupMember.md) | Member ids to be deleted. | [optional] 
+**members_to_delete** | [**List[Groupbuilderv3GroupMember]**](Groupbuilderv3GroupMember.md) | Member ids to be deleted. | [optional] 
 **name** | **str** | Name of group. | [optional] 
 **parent** | **bool** |  | [optional] 
 
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.complianceacceleratorv3_group import Complianceacceleratorv3Group
+from ibm_gdsc_sdk_saas.models.complianceacceleratorv3_group import Complianceacceleratorv3Group
 
 # TODO update the JSON string below
 json = "{}"

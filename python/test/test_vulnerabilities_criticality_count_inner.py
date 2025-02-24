@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.vulnerabilities_criticality_count_inner import VulnerabilitiesCriticalityCountInner
+from ibm_gdsc_sdk_saas.models.vulnerabilities_criticality_count_inner import VulnerabilitiesCriticalityCountInner
 
 class TestVulnerabilitiesCriticalityCountInner(unittest.TestCase):
     """VulnerabilitiesCriticalityCountInner unit test stubs"""

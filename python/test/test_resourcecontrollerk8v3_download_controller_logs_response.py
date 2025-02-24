@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_download_controller_logs_response import Resourcecontrollerk8v3DownloadControllerLogsResponse
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_download_controller_logs_response import Resourcecontrollerk8v3DownloadControllerLogsResponse
 
 class TestResourcecontrollerk8v3DownloadControllerLogsResponse(unittest.TestCase):
     """Resourcecontrollerk8v3DownloadControllerLogsResponse unit test stubs"""

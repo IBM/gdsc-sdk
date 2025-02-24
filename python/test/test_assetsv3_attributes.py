@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_attributes import Assetsv3Attributes
+from ibm_gdsc_sdk_saas.models.assetsv3_attributes import Assetsv3Attributes
 
 class TestAssetsv3Attributes(unittest.TestCase):
     """Assetsv3Attributes unit test stubs"""
@@ -39,6 +39,7 @@ class TestAssetsv3Attributes(unittest.TestCase):
                 entity_id = '',
                 entity_name = '',
                 grouper_id = '',
+                has_training_data = True,
                 major_vulnerability_count = '',
                 sensitive_data_count = '',
                 status_type = 'NA',

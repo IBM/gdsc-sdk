@@ -16,6 +16,7 @@ import { HttpFile } from '../http/http';
 * Object indicating Installation and UI Sequence of the policies.
 */
 export class Policybuilderv3InstallationAndSequenceObject {
+    'edgeIdentifier'?: string;
     /**
     * Sequence in which the policy is to be installed.
     */
@@ -32,6 +33,12 @@ export class Policybuilderv3InstallationAndSequenceObject {
     static readonly discriminator: string | undefined = undefined;
 
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "edgeIdentifier",
+            "baseName": "edge_identifier",
+            "type": "string",
+            "format": ""
+        },
         {
             "name": "installationSequence",
             "baseName": "installation_sequence",

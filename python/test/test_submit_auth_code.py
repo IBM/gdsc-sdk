@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.submit_auth_code import SubmitAuthCode
+from ibm_gdsc_sdk_saas.models.submit_auth_code import SubmitAuthCode
 
 class TestSubmitAuthCode(unittest.TestCase):
     """SubmitAuthCode unit test stubs"""

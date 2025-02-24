@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_highest_asset_tag_counts import Assetsv3HighestAssetTagCounts
+from ibm_gdsc_sdk_saas.models.assetsv3_highest_asset_tag_counts import Assetsv3HighestAssetTagCounts
 
 class TestAssetsv3HighestAssetTagCounts(unittest.TestCase):
     """Assetsv3HighestAssetTagCounts unit test stubs"""

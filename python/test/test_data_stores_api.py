@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.data_stores_api import DataStoresApi
+from ibm_gdsc_sdk_saas.api.data_stores_api import DataStoresApi
 
 
 class TestDataStoresApi(unittest.TestCase):

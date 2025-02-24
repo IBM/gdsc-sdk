@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_delete_join_response import Reportsv3DeleteJoinResponse
+from ibm_gdsc_sdk_saas.models.reportsv3_delete_join_response import Reportsv3DeleteJoinResponse
 
 class TestReportsv3DeleteJoinResponse(unittest.TestCase):
     """Reportsv3DeleteJoinResponse unit test stubs"""

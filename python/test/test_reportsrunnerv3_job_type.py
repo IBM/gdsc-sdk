@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_job_type import Reportsrunnerv3JobType
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_job_type import Reportsrunnerv3JobType
 
 class TestReportsrunnerv3JobType(unittest.TestCase):
     """Reportsrunnerv3JobType unit test stubs"""

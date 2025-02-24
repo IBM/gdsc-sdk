@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.workflow_api import WorkflowApi
+from ibm_gdsc_sdk_saas.api.workflow_api import WorkflowApi
 
 
 class TestWorkflowApi(unittest.TestCase):
@@ -33,10 +33,31 @@ class TestWorkflowApi(unittest.TestCase):
         """
         pass
 
+    def test_workflow_create_product_entity(self) -> None:
+        """Test case for workflow_create_product_entity
+
+        Summary: Create product entity Description: Create single product entity.
+        """
+        pass
+
     def test_workflow_create_task(self) -> None:
         """Test case for workflow_create_task
 
         Summary: Create task Description: Create single task within a parent case.
+        """
+        pass
+
+    def test_workflow_create_workflow_event(self) -> None:
+        """Test case for workflow_create_workflow_event
+
+        Summary: Post event for processing by workflow rules Description: Find matching workflow rule and run it
+        """
+        pass
+
+    def test_workflow_delete_product_entity(self) -> None:
+        """Test case for workflow_delete_product_entity
+
+        Summary: Delete a product entity Description: Delete a single product entity.
         """
         pass
 
@@ -65,6 +86,20 @@ class TestWorkflowApi(unittest.TestCase):
         """Test case for workflow_get_jobs_count
 
         Summary: Get jobs count Description: Get jobs count.
+        """
+        pass
+
+    def test_workflow_get_product_entities(self) -> None:
+        """Test case for workflow_get_product_entities
+
+        Summary: Get products and their associated event entities Description: Return a list of integrated products and their associated event entities
+        """
+        pass
+
+    def test_workflow_get_product_entity(self) -> None:
+        """Test case for workflow_get_product_entity
+
+        Summary: Get event entity field names, field labels, and field data types Description: Return a list of fields similar to report headers
         """
         pass
 
@@ -114,6 +149,13 @@ class TestWorkflowApi(unittest.TestCase):
         """Test case for workflow_update_cases
 
         Summary: Update cases Description: Update multiple cases in one request.
+        """
+        pass
+
+    def test_workflow_update_product_entity(self) -> None:
+        """Test case for workflow_update_product_entity
+
+        Summary: Update a product entity Description: Update a single product entity.
         """
         pass
 

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.list_data_resources200_response import ListDataResources200Response
+from ibm_gdsc_sdk_saas.models.list_data_resources200_response import ListDataResources200Response
 
 class TestListDataResources200Response(unittest.TestCase):
     """ListDataResources200Response unit test stubs"""
@@ -36,7 +36,7 @@ class TestListDataResources200Response(unittest.TestCase):
         if include_optional:
             return ListDataResources200Response(
                 results = [
-                    ibm_gdsc_sdk_software.models.data_resource.DataResource(
+                    ibm_gdsc_sdk_saas.models.data_resource.DataResource(
                         data_resource_id = 'arn:aws:s3::12345678910:polar-security-corplex.xlsx', 
                         data_resource_name = 'polar-security-corplex.xlsx', 
                         data_store_id = 'arn:aws:s3::123456781234:polar-security-corplex', 
@@ -48,10 +48,10 @@ class TestListDataResources200Response(unittest.TestCase):
                         modification_time = '', 
                         is_reviewed = True, 
                         link = '/polar-security-corplex.xlsx', 
-                        stats = ibm_gdsc_sdk_software.models.data_resource_stats.DataResourceStats(
+                        stats = ibm_gdsc_sdk_saas.models.data_resource_stats.DataResourceStats(
                             sensitivities_count = 57, 
                             sensitivities_summary = [
-                                ibm_gdsc_sdk_software.models.sensitivity_summary.SensitivitySummary(
+                                ibm_gdsc_sdk_saas.models.sensitivity_summary.SensitivitySummary(
                                     tag = 'BUSINESS_EMAIL_ADDRESS', 
                                     count = 230, 
                                     category = 'Personal', )

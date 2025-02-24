@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.complianceacceleratorv3_rule_and_action import Complianceacceleratorv3RuleAndAction
+from ibm_gdsc_sdk_saas.models.complianceacceleratorv3_rule_and_action import Complianceacceleratorv3RuleAndAction
 
 class TestComplianceacceleratorv3RuleAndAction(unittest.TestCase):
     """Complianceacceleratorv3RuleAndAction unit test stubs"""
@@ -36,7 +36,7 @@ class TestComplianceacceleratorv3RuleAndAction(unittest.TestCase):
         if include_optional:
             return Complianceacceleratorv3RuleAndAction(
                 actions = {
-                    'key' : ibm_gdsc_sdk_software.models.complianceacceleratorv3_action.complianceacceleratorv3Action(
+                    'key' : ibm_gdsc_sdk_saas.models.complianceacceleratorv3_action.complianceacceleratorv3Action(
                         notification_type = 'UNDEFINED_RECTYPE', 
                         user_ids = [
                             ''

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_partial_chart_update_request import Reportsv3PartialChartUpdateRequest
+from ibm_gdsc_sdk_saas.models.reportsv3_partial_chart_update_request import Reportsv3PartialChartUpdateRequest
 
 class TestReportsv3PartialChartUpdateRequest(unittest.TestCase):
     """Reportsv3PartialChartUpdateRequest unit test stubs"""
@@ -38,7 +38,7 @@ class TestReportsv3PartialChartUpdateRequest(unittest.TestCase):
                 chart_id = '',
                 chart_title = '',
                 chart_type = 'UNDEFINED_CHART_TYPE',
-                update_mask = ibm_gdsc_sdk_software.models.`field_mask`_represents_a_set_of_symbolic_field_paths,_for_example:.`FieldMask` represents a set of symbolic field paths, for example:(
+                update_mask = ibm_gdsc_sdk_saas.models.`field_mask`_represents_a_set_of_symbolic_field_paths,_for_example:.`FieldMask` represents a set of symbolic field paths, for example:(
                     paths = [
                         ''
                         ], )

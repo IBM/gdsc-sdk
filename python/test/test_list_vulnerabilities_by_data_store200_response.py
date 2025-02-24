@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.list_vulnerabilities_by_data_store200_response import ListVulnerabilitiesByDataStore200Response
+from ibm_gdsc_sdk_saas.models.list_vulnerabilities_by_data_store200_response import ListVulnerabilitiesByDataStore200Response
 
 class TestListVulnerabilitiesByDataStore200Response(unittest.TestCase):
     """ListVulnerabilitiesByDataStore200Response unit test stubs"""
@@ -36,19 +36,19 @@ class TestListVulnerabilitiesByDataStore200Response(unittest.TestCase):
         if include_optional:
             return ListVulnerabilitiesByDataStore200Response(
                 results = [
-                    ibm_gdsc_sdk_software.models.vulnerability_by_data_store_list_item.VulnerabilityByDataStoreListItem(
+                    ibm_gdsc_sdk_saas.models.vulnerability_by_data_store_list_item.VulnerabilityByDataStoreListItem(
                         data_store_id = 'arn:aws:s3::123456789101:polar-bucket', 
                         data_store_type = 's3', 
                         data_store_name = 'polar-bucket', 
                         cloud_account_id = '123456789101', 
                         cloud_service_provider = 'aws', 
                         vulnerability_criticality_count = [
-                            ibm_gdsc_sdk_software.models.vulnerabilities_criticality_count_inner.VulnerabilitiesCriticalityCount_inner(
+                            ibm_gdsc_sdk_saas.models.vulnerabilities_criticality_count_inner.VulnerabilitiesCriticalityCount_inner(
                                 criticality = 'HIGH', 
                                 count = 5, )
                             ], 
                         sensitivities_summary = [
-                            ibm_gdsc_sdk_software.models.sensitivity_summary.SensitivitySummary(
+                            ibm_gdsc_sdk_saas.models.sensitivity_summary.SensitivitySummary(
                                 tag = 'BUSINESS_EMAIL_ADDRESS', 
                                 count = 230, 
                                 category = 'Personal', )
@@ -60,19 +60,19 @@ class TestListVulnerabilitiesByDataStore200Response(unittest.TestCase):
         else:
             return ListVulnerabilitiesByDataStore200Response(
                 results = [
-                    ibm_gdsc_sdk_software.models.vulnerability_by_data_store_list_item.VulnerabilityByDataStoreListItem(
+                    ibm_gdsc_sdk_saas.models.vulnerability_by_data_store_list_item.VulnerabilityByDataStoreListItem(
                         data_store_id = 'arn:aws:s3::123456789101:polar-bucket', 
                         data_store_type = 's3', 
                         data_store_name = 'polar-bucket', 
                         cloud_account_id = '123456789101', 
                         cloud_service_provider = 'aws', 
                         vulnerability_criticality_count = [
-                            ibm_gdsc_sdk_software.models.vulnerabilities_criticality_count_inner.VulnerabilitiesCriticalityCount_inner(
+                            ibm_gdsc_sdk_saas.models.vulnerabilities_criticality_count_inner.VulnerabilitiesCriticalityCount_inner(
                                 criticality = 'HIGH', 
                                 count = 5, )
                             ], 
                         sensitivities_summary = [
-                            ibm_gdsc_sdk_software.models.sensitivity_summary.SensitivitySummary(
+                            ibm_gdsc_sdk_saas.models.sensitivity_summary.SensitivitySummary(
                                 tag = 'BUSINESS_EMAIL_ADDRESS', 
                                 count = 230, 
                                 category = 'Personal', )

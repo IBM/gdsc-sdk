@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_filter_headers import Reportsv3FilterHeaders
+from ibm_gdsc_sdk_saas.models.reportsv3_filter_headers import Reportsv3FilterHeaders
 
 class TestReportsv3FilterHeaders(unittest.TestCase):
     """Reportsv3FilterHeaders unit test stubs"""
@@ -36,7 +36,7 @@ class TestReportsv3FilterHeaders(unittest.TestCase):
         if include_optional:
             return Reportsv3FilterHeaders(
                 filters = [
-                    ibm_gdsc_sdk_software.models.filter_has_the_values_and_counts_for_value_in_a_column.Filter has the values and counts for value in a column(
+                    ibm_gdsc_sdk_saas.models.filter_has_the_values_and_counts_for_value_in_a_column.Filter has the values and counts for value in a column(
                         count = 56, 
                         value = '', )
                     ],

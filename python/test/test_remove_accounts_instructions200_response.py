@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.remove_accounts_instructions200_response import RemoveAccountsInstructions200Response
+from ibm_gdsc_sdk_saas.models.remove_accounts_instructions200_response import RemoveAccountsInstructions200Response
 
 class TestRemoveAccountsInstructions200Response(unittest.TestCase):
     """RemoveAccountsInstructions200Response unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_create_connections_configs_request import Connectionsv3CreateConnectionsConfigsRequest
+from ibm_gdsc_sdk_saas.models.connectionsv3_create_connections_configs_request import Connectionsv3CreateConnectionsConfigsRequest
 
 class TestConnectionsv3CreateConnectionsConfigsRequest(unittest.TestCase):
     """Connectionsv3CreateConnectionsConfigsRequest unit test stubs"""
@@ -36,7 +36,7 @@ class TestConnectionsv3CreateConnectionsConfigsRequest(unittest.TestCase):
         if include_optional:
             return Connectionsv3CreateConnectionsConfigsRequest(
                 connection_id = '',
-                stream_connection = ibm_gdsc_sdk_software.models.connectionsv3_stream_connection.connectionsv3StreamConnection(
+                stream_connection = ibm_gdsc_sdk_saas.models.connectionsv3_stream_connection.connectionsv3StreamConnection(
                     account_id = '', 
                     account_name = '', 
                     cluster_resource_id = '', 
@@ -57,10 +57,13 @@ class TestConnectionsv3CreateConnectionsConfigsRequest(unittest.TestCase):
                     storage_connection_string = '', 
                     username = '', ),
                 type = 'UNDEFINED_TYPE',
-                uc_connection = ibm_gdsc_sdk_software.models.connectionsv3_uc_connection_summary.connectionsv3UCConnectionSummary(
+                uc_connection = ibm_gdsc_sdk_saas.models.connectionsv3_uc_connection_summary.connectionsv3UCConnectionSummary(
                     alias = '', 
                     config_id = '', 
                     datasource_type = '', 
+                    edge_deployment_server = ibm_gdsc_sdk_saas.models.edge_deployment_server_type.Edge deployment server type(
+                        id = '', 
+                        name = '', ), 
                     filter_alias = '', 
                     host = '', 
                     input_alias = '', 

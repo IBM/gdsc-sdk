@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_get_report_timestamp_header_response import Reportsv3GetReportTimestampHeaderResponse
+from ibm_gdsc_sdk_saas.models.reportsv3_get_report_timestamp_header_response import Reportsv3GetReportTimestampHeaderResponse
 
 class TestReportsv3GetReportTimestampHeaderResponse(unittest.TestCase):
     """Reportsv3GetReportTimestampHeaderResponse unit test stubs"""
@@ -35,15 +35,15 @@ class TestReportsv3GetReportTimestampHeaderResponse(unittest.TestCase):
         model = Reportsv3GetReportTimestampHeaderResponse()
         if include_optional:
             return Reportsv3GetReportTimestampHeaderResponse(
-                report_timestamp = ibm_gdsc_sdk_software.models.header_that_has_the_header_id,_name_in_the_translated_value_and_field_type.Header that has the header ID, name in the translated value and field type(
+                report_timestamp = ibm_gdsc_sdk_saas.models.header_that_has_the_header_id,_name_in_the_translated_value_and_field_type.Header that has the header ID, name in the translated value and field type(
                     can_be_used_in_chart = True, 
-                    field_name = ibm_gdsc_sdk_software.models.reportsv3_field_name.reportsv3FieldName(
+                    field_name = ibm_gdsc_sdk_saas.models.reportsv3_field_name.reportsv3FieldName(
                         customized_value = '', 
                         nls_key = '', 
                         nls_value = '', ), 
                     group_type_id = 56, 
                     header_category = '', 
-                    header_description = ibm_gdsc_sdk_software.models.reportsv3_header_description.reportsv3HeaderDescription(
+                    header_description = ibm_gdsc_sdk_saas.models.reportsv3_header_description.reportsv3HeaderDescription(
                         nls_key = '', 
                         nls_value = '', ), 
                     header_id = '', 

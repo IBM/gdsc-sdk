@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_chart_data_response import Reportsrunnerv3GetChartDataResponse
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_get_chart_data_response import Reportsrunnerv3GetChartDataResponse
 
 # TODO update the JSON string below
 json = "{}"

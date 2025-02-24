@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_asset_control import Assetsv3AssetControl
+from ibm_gdsc_sdk_saas.models.assetsv3_asset_control import Assetsv3AssetControl
 
 class TestAssetsv3AssetControl(unittest.TestCase):
     """Assetsv3AssetControl unit test stubs"""
@@ -38,7 +38,7 @@ class TestAssetsv3AssetControl(unittest.TestCase):
                 encryption = 'NA',
                 last_response = '',
                 monitoring = 'NA',
-                policy_applied_status = ibm_gdsc_sdk_software.models.assetsv3_policy_applied.assetsv3PolicyApplied(
+                policy_applied_status = ibm_gdsc_sdk_saas.models.assetsv3_policy_applied.assetsv3PolicyApplied(
                     id = '', 
                     name = '', 
                     policy_source = '', 

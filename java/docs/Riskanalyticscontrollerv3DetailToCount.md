@@ -2,6 +2,7 @@
 
 # Riskanalyticscontrollerv3DetailToCount
 
+[deprecated] pairs with a count. Use Statistics, instead.
 
 ## Properties
 

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.edgeschedulerv3_monitoring_pending_request_for_edge_query_response import Edgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse
+from ibm_gdsc_sdk_saas.models.edgeschedulerv3_monitoring_pending_request_for_edge_query_response import Edgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse
 
 class TestEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse(unittest.TestCase):
     """Edgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse unit test stubs"""

@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **attributes** | [**Assetsv3Attributes**](Assetsv3Attributes.md) |  | [optional] [default to null]
 **children** | [**array[Assetsv3MappedEntities]**](Assetsv3MappedEntities.md) | List of children | [optional] [default to null]
-**name** | **string** | Entity name - database/hostname/ipaddress/account | [optional] [default to null]
+**name** | **string** | Entity name - database/hostname/ipaddress/account/application/storage/endpoint/model/deployment/subscription | [optional] [default to null]
 **parentUnderscorechildUnderscorecount** | **string** | Total no. of children for current parent (To be added in dummy node) | [optional] [default to null]
 **searchUnderscoreterm** | **string** | Term to be searched in asset inventory | [optional] [default to null]
 

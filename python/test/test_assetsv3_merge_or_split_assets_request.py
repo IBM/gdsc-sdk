@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_merge_or_split_assets_request import Assetsv3MergeOrSplitAssetsRequest
+from ibm_gdsc_sdk_saas.models.assetsv3_merge_or_split_assets_request import Assetsv3MergeOrSplitAssetsRequest
 
 class TestAssetsv3MergeOrSplitAssetsRequest(unittest.TestCase):
     """Assetsv3MergeOrSplitAssetsRequest unit test stubs"""
@@ -37,14 +37,14 @@ class TestAssetsv3MergeOrSplitAssetsRequest(unittest.TestCase):
             return Assetsv3MergeOrSplitAssetsRequest(
                 action = '',
                 destination_assets = [
-                    ibm_gdsc_sdk_software.models.assetsv3_asset_for_merge_split.assetsv3AssetForMergeSplit(
+                    ibm_gdsc_sdk_saas.models.assetsv3_asset_for_merge_split.assetsv3AssetForMergeSplit(
                         asset_id = '', 
                         asset_name = '', 
                         dsdef_key = [
                             ''
                             ], )
                     ],
-                source_asset = ibm_gdsc_sdk_software.models.assetsv3_asset_for_merge_split.assetsv3AssetForMergeSplit(
+                source_asset = ibm_gdsc_sdk_saas.models.assetsv3_asset_for_merge_split.assetsv3AssetForMergeSplit(
                     asset_id = '', 
                     asset_name = '', 
                     dsdef_key = [

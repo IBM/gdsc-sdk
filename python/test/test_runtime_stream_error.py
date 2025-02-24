@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.runtime_stream_error import RuntimeStreamError
+from ibm_gdsc_sdk_saas.models.runtime_stream_error import RuntimeStreamError
 
 class TestRuntimeStreamError(unittest.TestCase):
     """RuntimeStreamError unit test stubs"""
@@ -36,7 +36,7 @@ class TestRuntimeStreamError(unittest.TestCase):
         if include_optional:
             return RuntimeStreamError(
                 details = [
-                    ibm_gdsc_sdk_software.models.protobuf_any.protobufAny(
+                    ibm_gdsc_sdk_saas.models.protobuf_any.protobufAny(
                         type_url = '', 
                         value = 'YQ==', )
                     ],

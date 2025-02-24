@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.schedulerv3_notification_type import Schedulerv3NotificationType
+from ibm_gdsc_sdk_saas.models.schedulerv3_notification_type import Schedulerv3NotificationType
 
 class TestSchedulerv3NotificationType(unittest.TestCase):
     """Schedulerv3NotificationType unit test stubs"""

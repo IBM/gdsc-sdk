@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.jumpboxv3_user import Jumpboxv3User
+from ibm_gdsc_sdk_saas.models.jumpboxv3_user import Jumpboxv3User
 
 class TestJumpboxv3User(unittest.TestCase):
     """Jumpboxv3User unit test stubs"""

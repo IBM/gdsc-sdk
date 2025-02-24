@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **installedUnderscoreflag** | **boolean** |  | [optional] [default to null]
 **policyUnderscoreimportUnderscoreissue** | [**Policybuilderv3ImportIssue**](Policybuilderv3ImportIssue.md) |  | [optional] [default to null]
 **policyUnderscoreimportUnderscorestate** | [**Policybuilderv3ImportState**](Policybuilderv3ImportState.md) |  | [optional] [default to null]
+**policyUnderscoreinfo** | [**Policybuilderv3Policy**](Policybuilderv3Policy.md) |  | [optional] [default to null]
 **policyUnderscorename** | **string** | Policy Name for the requested policy id | [optional] [default to null]
 **rules** | [**array[Policybuilderv3Rule]**](Policybuilderv3Rule.md) |  | [optional] [default to null]
 **status** | [**Policybuilderv3StatusResponseBase**](Policybuilderv3StatusResponseBase.md) |  | [optional] [default to null]

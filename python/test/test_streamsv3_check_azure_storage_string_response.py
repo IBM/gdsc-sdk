@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.streamsv3_check_azure_storage_string_response import Streamsv3CheckAzureStorageStringResponse
+from ibm_gdsc_sdk_saas.models.streamsv3_check_azure_storage_string_response import Streamsv3CheckAzureStorageStringResponse
 
 class TestStreamsv3CheckAzureStorageStringResponse(unittest.TestCase):
     """Streamsv3CheckAzureStorageStringResponse unit test stubs"""

@@ -20,6 +20,8 @@ Description: Return the fields available with a specific origin.
 Description: Return a specific template by id.
 [**templatesServiceGetTemplates**](TemplatesServiceApi.md#templatesServiceGetTemplates) | **GET** /api/v3/templates | Summary: Get templates
 Description: Return all templates based on supplied filters.
+[**templatesServiceGetTemplatesForEdge**](TemplatesServiceApi.md#templatesServiceGetTemplatesForEdge) | **GET** /api/v3/templates/edge | Summary: Get templates for edge
+Description: Return all templates based on supplied filters.
 [**templatesServiceTestTemplate**](TemplatesServiceApi.md#templatesServiceTestTemplate) | **POST** /api/v3/templates/test | Summary: Test template
 Description: Analyze a specified template to ensure will function correctly when utilized.
 [**templatesServiceTransformTemplate**](TemplatesServiceApi.md#templatesServiceTransformTemplate) | **POST** /api/v3/templates/transform | Summary: Transform template
@@ -299,6 +301,44 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Templatesv3GetTemplatesResponse**](Templatesv3GetTemplatesResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## templatesServiceGetTemplatesForEdge
+
+Summary: Get templates for edge
+Description: Return all templates based on supplied filters.
+
+### Example
+
+```bash
+ templatesServiceGetTemplatesForEdge  integration_id=value  Specify as:  filter_origin=value1 filter_origin=value2 filter_origin=...  filter_enabled_only=value  include_integration_name=value  transform_to_gdp_format=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **integrationId** | **string** | Templates associated with a specific integration. | [optional] [default to null]
+ **filterOrigin** | [**array[string]**](string.md) | Filter on a specific set of data origins; ignored if empty. | [optional] [default to null]
+ **filterEnabledOnly** | **boolean** | Filter on all templates instead of just the enabled templates. | [optional] [default to null]
+ **includeIntegrationName** | **boolean** | Include the Integration name in the returned templates. | [optional] [default to null]
+ **transformToGdpFormat** | **boolean** | Tranform template format to GDP style format. | [optional] [default to null]
+
+### Return type
+
+[**Templatesv3GetTemplatesForEdgeResponse**](Templatesv3GetTemplatesForEdgeResponse.md)
 
 ### Authorization
 

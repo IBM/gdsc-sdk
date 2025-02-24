@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.datamartprocessorv3_get_datamart_info_response import Datamartprocessorv3GetDatamartInfoResponse
+from ibm_gdsc_sdk_saas.models.datamartprocessorv3_get_datamart_info_response import Datamartprocessorv3GetDatamartInfoResponse
 
 class TestDatamartprocessorv3GetDatamartInfoResponse(unittest.TestCase):
     """Datamartprocessorv3GetDatamartInfoResponse unit test stubs"""
@@ -35,7 +35,7 @@ class TestDatamartprocessorv3GetDatamartInfoResponse(unittest.TestCase):
         model = Datamartprocessorv3GetDatamartInfoResponse()
         if include_optional:
             return Datamartprocessorv3GetDatamartInfoResponse(
-                datamart = ibm_gdsc_sdk_software.models.datamartprocessorv3_datamart_info.datamartprocessorv3DatamartInfo(
+                datamart = ibm_gdsc_sdk_saas.models.datamartprocessorv3_datamart_info.datamartprocessorv3DatamartInfo(
                     current_ts = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     data_type = '', 
                     error = '', 
@@ -43,7 +43,7 @@ class TestDatamartprocessorv3GetDatamartInfoResponse(unittest.TestCase):
                     export_status = 56, 
                     failure_file_count = 56, 
                     files = [
-                        ibm_gdsc_sdk_software.models.datamartprocessorv3_datamart_file_info.datamartprocessorv3DatamartFileInfo(
+                        ibm_gdsc_sdk_saas.models.datamartprocessorv3_datamart_file_info.datamartprocessorv3DatamartFileInfo(
                             error = '', 
                             failed_state = True, 
                             file_name = '', 
@@ -61,7 +61,7 @@ class TestDatamartprocessorv3GetDatamartInfoResponse(unittest.TestCase):
                     period_start = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     success_file_count = 56, 
                     total_file_count = 56, ),
-                status = ibm_gdsc_sdk_software.models.datamartprocessorv3_status_response_base.datamartprocessorv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.datamartprocessorv3_status_response_base.datamartprocessorv3StatusResponseBase(
                     message = '', 
                     status = '', )
             )

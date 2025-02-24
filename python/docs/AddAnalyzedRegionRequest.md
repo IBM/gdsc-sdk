@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.add_analyzed_region_request import AddAnalyzedRegionRequest
+from ibm_gdsc_sdk_saas.models.add_analyzed_region_request import AddAnalyzedRegionRequest
 
 # TODO update the JSON string below
 json = "{}"

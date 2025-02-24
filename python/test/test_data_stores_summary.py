@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.data_stores_summary import DataStoresSummary
+from ibm_gdsc_sdk_saas.models.data_stores_summary import DataStoresSummary
 
 class TestDataStoresSummary(unittest.TestCase):
     """DataStoresSummary unit test stubs"""
@@ -37,23 +37,23 @@ class TestDataStoresSummary(unittest.TestCase):
             return DataStoresSummary(
                 total_stores = 464,
                 store_types = [
-                    ibm_gdsc_sdk_software.models.data_stores_summary_store_types_inner.DataStoresSummary_storeTypes_inner(
+                    ibm_gdsc_sdk_saas.models.data_stores_summary_store_types_inner.DataStoresSummary_storeTypes_inner(
                         store_type = 'S3', 
                         count = 47, )
                     ],
                 cloud_locations = [
-                    ibm_gdsc_sdk_software.models.data_stores_summary_cloud_locations_inner.DataStoresSummary_cloudLocations_inner(
+                    ibm_gdsc_sdk_saas.models.data_stores_summary_cloud_locations_inner.DataStoresSummary_cloudLocations_inner(
                         location = 'us-east-1', 
                         count = 3, )
                     ],
                 service_providers = [
-                    ibm_gdsc_sdk_software.models.data_stores_summary_service_providers_inner.DataStoresSummary_serviceProviders_inner(
+                    ibm_gdsc_sdk_saas.models.data_stores_summary_service_providers_inner.DataStoresSummary_serviceProviders_inner(
                         service_provider = 'aws', 
                         count = 5, )
                     ],
                 total_sensitivities = 2118,
                 sensitivities = [
-                    ibm_gdsc_sdk_software.models.sensitivities_items_inner.SensitivitiesItems_inner(
+                    ibm_gdsc_sdk_saas.models.sensitivities_items_inner.SensitivitiesItems_inner(
                         sensitivity = 'EMAIL', 
                         count = 57, 
                         category = 'PERSONAL', )
@@ -69,23 +69,23 @@ class TestDataStoresSummary(unittest.TestCase):
             return DataStoresSummary(
                 total_stores = 464,
                 store_types = [
-                    ibm_gdsc_sdk_software.models.data_stores_summary_store_types_inner.DataStoresSummary_storeTypes_inner(
+                    ibm_gdsc_sdk_saas.models.data_stores_summary_store_types_inner.DataStoresSummary_storeTypes_inner(
                         store_type = 'S3', 
                         count = 47, )
                     ],
                 cloud_locations = [
-                    ibm_gdsc_sdk_software.models.data_stores_summary_cloud_locations_inner.DataStoresSummary_cloudLocations_inner(
+                    ibm_gdsc_sdk_saas.models.data_stores_summary_cloud_locations_inner.DataStoresSummary_cloudLocations_inner(
                         location = 'us-east-1', 
                         count = 3, )
                     ],
                 service_providers = [
-                    ibm_gdsc_sdk_software.models.data_stores_summary_service_providers_inner.DataStoresSummary_serviceProviders_inner(
+                    ibm_gdsc_sdk_saas.models.data_stores_summary_service_providers_inner.DataStoresSummary_serviceProviders_inner(
                         service_provider = 'aws', 
                         count = 5, )
                     ],
                 total_sensitivities = 2118,
                 sensitivities = [
-                    ibm_gdsc_sdk_software.models.sensitivities_items_inner.SensitivitiesItems_inner(
+                    ibm_gdsc_sdk_saas.models.sensitivities_items_inner.SensitivitiesItems_inner(
                         sensitivity = 'EMAIL', 
                         count = 57, 
                         category = 'PERSONAL', )

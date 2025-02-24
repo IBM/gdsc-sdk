@@ -22,7 +22,6 @@ export class Qspmpluginmanagerv3PolicyPluginRQ {
     'runForAllScans'?: boolean;
     'scanDesc'?: string;
     'scanId'?: string;
-    'scanType'?: string;
     'userEmail'?: string;
 
     static readonly discriminator: string | undefined = undefined;
@@ -63,12 +62,6 @@ export class Qspmpluginmanagerv3PolicyPluginRQ {
             "baseName": "scan_id",
             "type": "string",
             "format": "int64"
-        },
-        {
-            "name": "scanType",
-            "baseName": "scan_type",
-            "type": "string",
-            "format": ""
         },
         {
             "name": "userEmail",

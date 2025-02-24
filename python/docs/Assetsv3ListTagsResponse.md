@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.assetsv3_list_tags_response import Assetsv3ListTagsResponse
+from ibm_gdsc_sdk_saas.models.assetsv3_list_tags_response import Assetsv3ListTagsResponse
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticsenginev3_classification_details import Riskanalyticsenginev3ClassificationDetails
+from ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_classification_details import Riskanalyticsenginev3ClassificationDetails
 
 class TestRiskanalyticsenginev3ClassificationDetails(unittest.TestCase):
     """Riskanalyticsenginev3ClassificationDetails unit test stubs"""
@@ -39,14 +39,14 @@ class TestRiskanalyticsenginev3ClassificationDetails(unittest.TestCase):
                 class_key = '',
                 class_nls = '',
                 class_observations = [
-                    ibm_gdsc_sdk_software.models.riskanalyticsenginev3_classification_observation.riskanalyticsenginev3ClassificationObservation(
+                    ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_classification_observation.riskanalyticsenginev3ClassificationObservation(
                         is_supporting_observation = True, 
                         key = '', 
                         original_value = 1.337, )
                     ],
                 class_value = 1.337,
                 classification_match_details = [
-                    ibm_gdsc_sdk_software.models.riskanalyticsenginev3_classification_match_details.riskanalyticsenginev3ClassificationMatchDetails(
+                    ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_classification_match_details.riskanalyticsenginev3ClassificationMatchDetails(
                         class_key = '', 
                         class_value = 1.337, 
                         classification_confidence = 1.337, 

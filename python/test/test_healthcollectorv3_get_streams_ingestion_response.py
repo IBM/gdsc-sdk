@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.healthcollectorv3_get_streams_ingestion_response import Healthcollectorv3GetStreamsIngestionResponse
+from ibm_gdsc_sdk_saas.models.healthcollectorv3_get_streams_ingestion_response import Healthcollectorv3GetStreamsIngestionResponse
 
 class TestHealthcollectorv3GetStreamsIngestionResponse(unittest.TestCase):
     """Healthcollectorv3GetStreamsIngestionResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestHealthcollectorv3GetStreamsIngestionResponse(unittest.TestCase):
         if include_optional:
             return Healthcollectorv3GetStreamsIngestionResponse(
                 streams_ingestion = [
-                    ibm_gdsc_sdk_software.models.healthcollectorv3_usage.healthcollectorv3Usage(
+                    ibm_gdsc_sdk_saas.models.healthcollectorv3_usage.healthcollectorv3Usage(
                         label = '', 
                         name = '', 
                         nls_key = '', 

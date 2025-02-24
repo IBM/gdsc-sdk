@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_get_plugins_response import Connectionsv3GetPluginsResponse
+from ibm_gdsc_sdk_saas.models.connectionsv3_get_plugins_response import Connectionsv3GetPluginsResponse
 
 class TestConnectionsv3GetPluginsResponse(unittest.TestCase):
     """Connectionsv3GetPluginsResponse unit test stubs"""
@@ -36,32 +36,37 @@ class TestConnectionsv3GetPluginsResponse(unittest.TestCase):
         if include_optional:
             return Connectionsv3GetPluginsResponse(
                 plugins = [
-                    ibm_gdsc_sdk_software.models.plugin_configuration_is_the_details_of_a_custom_filter_plugin.PluginConfiguration is the details of a custom filter plugin(
+                    ibm_gdsc_sdk_saas.models.plugin_configuration_is_the_details_of_a_custom_filter_plugin.PluginConfiguration is the details of a custom filter plugin(
                         datasource_type = '', 
                         developer_name = '', 
+                        document_link = '', 
+                        gdp_package_link = '', 
+                        gi_package_link = '', 
                         id = '', 
                         last_modified = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         logfile = '', 
                         name = '', 
                         readme = '', 
                         records = [
-                            ibm_gdsc_sdk_software.models.name_and_value_for_each_plugin_record.name and value for each plugin record(
+                            ibm_gdsc_sdk_saas.models.name_and_value_for_each_plugin_record.name and value for each plugin record(
                                 guard_record_name = '', 
                                 value = '', )
                             ], 
                         state = '', 
                         supported_inputs = [
                             ''
-                            ], )
+                            ], 
+                        version = '', 
+                        version_tested = '', )
                     ],
-                status = ibm_gdsc_sdk_software.models.the_`status`_type_defines_a_logical_error_model_that_is_suitable_for_different
+                status = ibm_gdsc_sdk_saas.models.the_`status`_type_defines_a_logical_error_model_that_is_suitable_for_different
 programming_environments,_including_rest_apis_and_rpc_apis/_it_is_used_by
 [g_rpc](https://github/com/grpc)/_the_error_model_is_designed_to_be:.The `Status` type defines a logical error model that is suitable for different
 programming environments, including REST APIs and RPC APIs. It is used by
 [gRPC](https://github.com/grpc). The error model is designed to be:(
                     code = 56, 
                     details = [
-                        ibm_gdsc_sdk_software.models.protobuf_any.protobufAny(
+                        ibm_gdsc_sdk_saas.models.protobuf_any.protobufAny(
                             type_url = '', 
                             value = 'YQ==', )
                         ], 

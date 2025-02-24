@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_utilization_parameter_object import Guardiumconnectorv3UtilizationParameterObject
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_utilization_parameter_object import Guardiumconnectorv3UtilizationParameterObject
 
 # TODO update the JSON string below
 json = "{}"

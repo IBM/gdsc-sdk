@@ -13,7 +13,6 @@ Name | Type | Description | Notes
 **scanUnderscorepercentageUnderscorecompletion** | **string** | Percentage completion of the scan | [optional] [default to null]
 **scanUnderscoreregUnderscorets** | **string** | Timestamp when the scan was registered | [optional] [default to null]
 **scanUnderscorestatus** | **string** | Current status of the scan | [optional] [default to null]
-**scanUnderscoretype** | **string** | Type of the scan | [optional] [default to null]
 **userUnderscoreemail** | **string** | Email of the user who initiated the scan | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

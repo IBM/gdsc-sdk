@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.streamsv3_aws_check_stream_status import Streamsv3AWSCheckStreamStatus
+from ibm_gdsc_sdk_saas.models.streamsv3_aws_check_stream_status import Streamsv3AWSCheckStreamStatus
 
 class TestStreamsv3AWSCheckStreamStatus(unittest.TestCase):
     """Streamsv3AWSCheckStreamStatus unit test stubs"""

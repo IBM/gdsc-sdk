@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.notificationsv3_create_ticket_request import Notificationsv3CreateTicketRequest
+from ibm_gdsc_sdk_saas.models.notificationsv3_create_ticket_request import Notificationsv3CreateTicketRequest
 
 class TestNotificationsv3CreateTicketRequest(unittest.TestCase):
     """Notificationsv3CreateTicketRequest unit test stubs"""

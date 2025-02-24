@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.integration_types import IntegrationTypes
+from ibm_gdsc_sdk_saas.models.integration_types import IntegrationTypes
 
 class TestIntegrationTypes(unittest.TestCase):
     """IntegrationTypes unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.tenantuserv3_post_privileges_bulk_response import Tenantuserv3PostPrivilegesBulkResponse
+from ibm_gdsc_sdk_saas.models.tenantuserv3_post_privileges_bulk_response import Tenantuserv3PostPrivilegesBulkResponse
 
 class TestTenantuserv3PostPrivilegesBulkResponse(unittest.TestCase):
     """Tenantuserv3PostPrivilegesBulkResponse unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.ecosystemv3_validate_csv_content_response import Ecosystemv3ValidateCSVContentResponse
+from ibm_gdsc_sdk_saas.models.ecosystemv3_validate_csv_content_response import Ecosystemv3ValidateCSVContentResponse
 
 class TestEcosystemv3ValidateCSVContentResponse(unittest.TestCase):
     """Ecosystemv3ValidateCSVContentResponse unit test stubs"""
@@ -38,14 +38,14 @@ class TestEcosystemv3ValidateCSVContentResponse(unittest.TestCase):
                 error_msgs = [
                     ''
                     ],
-                status = ibm_gdsc_sdk_software.models.the_`status`_type_defines_a_logical_error_model_that_is_suitable_for_different
+                status = ibm_gdsc_sdk_saas.models.the_`status`_type_defines_a_logical_error_model_that_is_suitable_for_different
 programming_environments,_including_rest_apis_and_rpc_apis/_it_is_used_by
 [g_rpc](https://github/com/grpc)/_the_error_model_is_designed_to_be:.The `Status` type defines a logical error model that is suitable for different
 programming environments, including REST APIs and RPC APIs. It is used by
 [gRPC](https://github.com/grpc). The error model is designed to be:(
                     code = 56, 
                     details = [
-                        ibm_gdsc_sdk_software.models.protobuf_any.protobufAny(
+                        ibm_gdsc_sdk_saas.models.protobuf_any.protobufAny(
                             type_url = '', 
                             value = 'YQ==', )
                         ], 

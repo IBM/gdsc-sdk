@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticsmlclassificationv3_reset_model_to_defaults_response import Riskanalyticsmlclassificationv3ResetModelToDefaultsResponse
+from ibm_gdsc_sdk_saas.models.riskanalyticsmlclassificationv3_reset_model_to_defaults_response import Riskanalyticsmlclassificationv3ResetModelToDefaultsResponse
 
 class TestRiskanalyticsmlclassificationv3ResetModelToDefaultsResponse(unittest.TestCase):
     """Riskanalyticsmlclassificationv3ResetModelToDefaultsResponse unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.tenantuserv3_get_users_response import Tenantuserv3GetUsersResponse
+from ibm_gdsc_sdk_saas.models.tenantuserv3_get_users_response import Tenantuserv3GetUsersResponse
 
 class TestTenantuserv3GetUsersResponse(unittest.TestCase):
     """Tenantuserv3GetUsersResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestTenantuserv3GetUsersResponse(unittest.TestCase):
         if include_optional:
             return Tenantuserv3GetUsersResponse(
                 users = [
-                    ibm_gdsc_sdk_software.models.tenantuserv3_user.tenantuserv3User(
+                    ibm_gdsc_sdk_saas.models.tenantuserv3_user.tenantuserv3User(
                         activation_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         directory_id = '', 
                         disabled = True, 

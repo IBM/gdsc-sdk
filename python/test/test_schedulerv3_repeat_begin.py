@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.schedulerv3_repeat_begin import Schedulerv3RepeatBegin
+from ibm_gdsc_sdk_saas.models.schedulerv3_repeat_begin import Schedulerv3RepeatBegin
 
 class TestSchedulerv3RepeatBegin(unittest.TestCase):
     """Schedulerv3RepeatBegin unit test stubs"""

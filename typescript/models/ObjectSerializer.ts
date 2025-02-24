@@ -12,10 +12,6 @@ export * from '../models/AddCloudAccountsRequest';
 export * from '../models/AddCloudAccountsRequestCloudAccountsInner';
 export * from '../models/AddCommentBody';
 export * from '../models/AddJiraIntegrationParametersRequest';
-export * from '../models/Analyticseventsv3DeleteCacheKeyRequest';
-export * from '../models/Analyticseventsv3DeleteCacheKeyResponse';
-export * from '../models/Analyticseventsv3PostQSAdvisorRiskRequest';
-export * from '../models/Analyticseventsv3PostQSAdvisorRiskResponse';
 export * from '../models/AnalyzedRegion';
 export * from '../models/AnalyzedRegionValidationResults';
 export * from '../models/Assetsv3AccountVertex';
@@ -171,7 +167,6 @@ export * from '../models/Complianceacceleratorv3DeleteComplianceWorkspacesRespon
 export * from '../models/Complianceacceleratorv3EmailConfig';
 export * from '../models/Complianceacceleratorv3GetComplianceInfoResponse';
 export * from '../models/Complianceacceleratorv3Group';
-export * from '../models/Complianceacceleratorv3GroupMember';
 export * from '../models/Complianceacceleratorv3HydrateComplianceWorkspacesRequest';
 export * from '../models/Complianceacceleratorv3HydrateComplianceWorkspacesResponse';
 export * from '../models/Complianceacceleratorv3Options';
@@ -214,6 +209,9 @@ export * from '../models/Connectionsv3DeleteAttributesResponse';
 export * from '../models/Connectionsv3DeleteConnectionsAccountsResponse';
 export * from '../models/Connectionsv3DeleteConnectionsConfigsResponse';
 export * from '../models/Connectionsv3DeletePluginResponse';
+export * from '../models/Connectionsv3EdgeDeploymentServer';
+export * from '../models/Connectionsv3GeneratePackageRequest';
+export * from '../models/Connectionsv3GeneratePackageResponse';
 export * from '../models/Connectionsv3GetAttributesResponse';
 export * from '../models/Connectionsv3GetBannerStateResponse';
 export * from '../models/Connectionsv3GetConnectionsAccountsResponse';
@@ -258,6 +256,8 @@ export * from '../models/Connectionsv3UpdateConnectorsRequest';
 export * from '../models/Connectionsv3UpdatePluginRequest';
 export * from '../models/Connectionsv3UpdatePluginResponse';
 export * from '../models/Connectionsv3UpdateSettingsRequest';
+export * from '../models/Connectionsv3ValidateAwsConnectionRequest';
+export * from '../models/Connectionsv3ValidateConnectionResponse';
 export * from '../models/Dashboardsv3Card';
 export * from '../models/Dashboardsv3CardPosition';
 export * from '../models/Dashboardsv3CardType';
@@ -316,7 +316,13 @@ export * from '../models/Ecosystemv3GetPurgableRowsRequest';
 export * from '../models/Ecosystemv3GetPurgableRowsResponse';
 export * from '../models/Ecosystemv3OrderType';
 export * from '../models/Ecosystemv3PurgeDataResponse';
+export * from '../models/Ecosystemv3TestIntegrationRequest';
+export * from '../models/Ecosystemv3TestIntegrationResponse';
 export * from '../models/Ecosystemv3ValidateCSVContentResponse';
+export * from '../models/Edgeschedulerv3GetEdgeQueryStatusResponse';
+export * from '../models/Edgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse';
+export * from '../models/Edgeschedulerv3ScheduleEdgeQueryRequest';
+export * from '../models/Edgeschedulerv3ScheduleEdgeQueryResponse';
 export * from '../models/Environment';
 export * from '../models/Featureflagsv3DeleteFeatureFlagOverridesResponse';
 export * from '../models/Featureflagsv3FeatureFlag';
@@ -571,7 +577,12 @@ export * from '../models/Notificationsv3NotificationRecord';
 export * from '../models/Notificationsv3NotificationRecordsFilter';
 export * from '../models/Notificationsv3NotificationSeverity';
 export * from '../models/Notificationsv3NotificationState';
+export * from '../models/Notificationsv3PipelineQueryOperator';
+export * from '../models/Notificationsv3PostNotificationRecordRequest';
+export * from '../models/Notificationsv3PostNotificationRecordResponse';
 export * from '../models/Notificationsv3PutNotificationRecordResponse';
+export * from '../models/Notificationsv3SearchNotificationRecordsRequest';
+export * from '../models/Notificationsv3SearchNotificationRecordsResponse';
 export * from '../models/Notificationsv3TemplateProperty';
 export * from '../models/Notificationsv3TestIntegrationRequest';
 export * from '../models/Notificationsv3TestIntegrationResponse';
@@ -605,11 +616,13 @@ export * from '../models/Policybuilderv3ActionNotificationObject';
 export * from '../models/Policybuilderv3ActionParameter';
 export * from '../models/Policybuilderv3ActionParameterMetadata';
 export * from '../models/Policybuilderv3ActionType';
+export * from '../models/Policybuilderv3ActivationStatus';
 export * from '../models/Policybuilderv3ClonePolicyRequest';
 export * from '../models/Policybuilderv3ControlFlow';
 export * from '../models/Policybuilderv3CreateUpdatePolicyRequest';
 export * from '../models/Policybuilderv3CreateUpdatePolicyResponse';
 export * from '../models/Policybuilderv3DeleteGdpPolicySyncResponse';
+export * from '../models/Policybuilderv3EdgeActivationObject';
 export * from '../models/Policybuilderv3GDPSyncEntry';
 export * from '../models/Policybuilderv3GdpPolicyObject';
 export * from '../models/Policybuilderv3GdpPolicyObjectWithCm';
@@ -664,12 +677,18 @@ export * from '../models/PotentialFlowsSummary';
 export * from '../models/ProtobufAny';
 export * from '../models/ProtobufFieldMask';
 export * from '../models/ProtobufNullValue';
+export * from '../models/Qsdataloaderv3QSfileValidatorExternalParamRequest';
+export * from '../models/Qsdataloaderv3QSfileValidatorRequest';
+export * from '../models/Qsdataloaderv3QSfileValidatorResonse';
+export * from '../models/Qsdataloaderv3QSyntheticDataLoaderResonse';
 export * from '../models/Qspmdatamanagerv3AppData';
 export * from '../models/Qspmdatamanagerv3AppDataResponse';
 export * from '../models/Qspmdatamanagerv3MasterDataModel';
 export * from '../models/Qspmdatamanagerv3MasterDataResponse';
 export * from '../models/Qspmdatamanagerv3NetlocData';
 export * from '../models/Qspmdatamanagerv3NetlocDataResponse';
+export * from '../models/Qspmdatamanagerv3PluginDataModel';
+export * from '../models/Qspmdatamanagerv3PluginDataResponse';
 export * from '../models/Qspmdatamanagerv3Row';
 export * from '../models/Qspmdatamanagerv3ScanRequest';
 export * from '../models/Qspmdatamanagerv3ScanResponse';
@@ -681,13 +700,16 @@ export * from '../models/Qspmpluginmanagerv3PluginRS';
 export * from '../models/Qspmpluginmanagerv3PolicyPluginRQ';
 export * from '../models/Qspmpluginmanagerv3PolicyPluginRS';
 export * from '../models/Qspmpluginmanagerv3ValidationResult';
+export * from '../models/Qspmpolicymanagerv3APIResonse';
 export * from '../models/Qspmpolicymanagerv3CreateTicketRequest';
 export * from '../models/Qspmpolicymanagerv3CreateTicketResponse';
 export * from '../models/Qspmpolicymanagerv3FetchObjectStoreFileResponse';
+export * from '../models/Qspmpolicymanagerv3FileName';
 export * from '../models/Qspmpolicymanagerv3NotificationSeverity';
 export * from '../models/Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest';
 export * from '../models/Qspmpolicymanagerv3ProcessPolicyDimentionRecordsResonse';
 export * from '../models/Qspmpolicymanagerv3StandardEmptyResponse';
+export * from '../models/Qspmpolicymanagerv3UpdateConfigsRequest';
 export * from '../models/Qspmpolicymanagerv3UpdateTicketStatusRequest';
 export * from '../models/Qspmpolicymanagerv3UpdateTicketStatusResponse';
 export * from '../models/QuestionType';
@@ -840,6 +862,67 @@ export * from '../models/Reportsv3VariantRuleCondition';
 export * from '../models/Reportsv3VariantRuleType';
 export * from '../models/RescanDataStoreRequest';
 export * from '../models/ResetPasswordRequest';
+export * from '../models/Resourcecontrollerk8v3App';
+export * from '../models/Resourcecontrollerk8v3AppDeployment';
+export * from '../models/Resourcecontrollerk8v3AppFile';
+export * from '../models/Resourcecontrollerk8v3AppHpa';
+export * from '../models/Resourcecontrollerk8v3AppSecret';
+export * from '../models/Resourcecontrollerk8v3Container';
+export * from '../models/Resourcecontrollerk8v3ContainerResources';
+export * from '../models/Resourcecontrollerk8v3ContainerResourcesQuantity';
+export * from '../models/Resourcecontrollerk8v3Controller';
+export * from '../models/Resourcecontrollerk8v3ControllerApp';
+export * from '../models/Resourcecontrollerk8v3ControllerAppFile';
+export * from '../models/Resourcecontrollerk8v3ControllerAppSecret';
+export * from '../models/Resourcecontrollerk8v3ControllerCommand';
+export * from '../models/Resourcecontrollerk8v3ControllerHeartbeat';
+export * from '../models/Resourcecontrollerk8v3ControllerResources';
+export * from '../models/Resourcecontrollerk8v3ControllerStatus';
+export * from '../models/Resourcecontrollerk8v3CreateControllerRequest';
+export * from '../models/Resourcecontrollerk8v3CreateHeartBeatExResponse';
+export * from '../models/Resourcecontrollerk8v3CreateHeartBeatRequest';
+export * from '../models/Resourcecontrollerk8v3CreateHeartBeatResponse';
+export * from '../models/Resourcecontrollerk8v3CreateKeypairRequest';
+export * from '../models/Resourcecontrollerk8v3CreateKeypairResponse';
+export * from '../models/Resourcecontrollerk8v3Cron';
+export * from '../models/Resourcecontrollerk8v3DeleteControllerRequest';
+export * from '../models/Resourcecontrollerk8v3DeleteControllerResponse';
+export * from '../models/Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost';
+export * from '../models/Resourcecontrollerk8v3DeleteEdgeTenantResponse';
+export * from '../models/Resourcecontrollerk8v3DeleteJobRequest';
+export * from '../models/Resourcecontrollerk8v3DeleteJobResponse';
+export * from '../models/Resourcecontrollerk8v3DownloadControllerLogsRequest';
+export * from '../models/Resourcecontrollerk8v3DownloadControllerLogsResponse';
+export * from '../models/Resourcecontrollerk8v3EdgeResourceResponse';
+export * from '../models/Resourcecontrollerk8v3EdgeTenantRequest';
+export * from '../models/Resourcecontrollerk8v3File';
+export * from '../models/Resourcecontrollerk8v3GUCStatefulsetState';
+export * from '../models/Resourcecontrollerk8v3GetControllerAppsResponse';
+export * from '../models/Resourcecontrollerk8v3GetControllerCommandsResponse';
+export * from '../models/Resourcecontrollerk8v3GetControllerJobsResponse';
+export * from '../models/Resourcecontrollerk8v3GetControllersResponse';
+export * from '../models/Resourcecontrollerk8v3GetControllersWithStatusResponse';
+export * from '../models/Resourcecontrollerk8v3GetJobExecutionsResponse';
+export * from '../models/Resourcecontrollerk8v3GetTenantAppsResponse';
+export * from '../models/Resourcecontrollerk8v3GetTenantJobsResponse';
+export * from '../models/Resourcecontrollerk8v3InitContainer';
+export * from '../models/Resourcecontrollerk8v3Job';
+export * from '../models/Resourcecontrollerk8v3JobExecution';
+export * from '../models/Resourcecontrollerk8v3JobStatusDTO';
+export * from '../models/Resourcecontrollerk8v3KeyPair';
+export * from '../models/Resourcecontrollerk8v3QueryControllerLogsRequest';
+export * from '../models/Resourcecontrollerk8v3QueryControllerLogsResponse';
+export * from '../models/Resourcecontrollerk8v3QueryLogs';
+export * from '../models/Resourcecontrollerk8v3Rule';
+export * from '../models/Resourcecontrollerk8v3Secret';
+export * from '../models/Resourcecontrollerk8v3TenantGUCCreateResponse';
+export * from '../models/Resourcecontrollerk8v3TenantGUCStatusResponse';
+export * from '../models/Resourcecontrollerk8v3TenantLifecycleResponse';
+export * from '../models/Resourcecontrollerk8v3TenantResourceResponse';
+export * from '../models/Resourcecontrollerk8v3TextContent';
+export * from '../models/Resourcecontrollerk8v3UpdateJobExecutionRequest';
+export * from '../models/Resourcecontrollerk8v3UpdateJobStatusRequest';
+export * from '../models/Resourcecontrollerk8v3Version';
 export * from '../models/Riskanalyticscontrollerv3Action';
 export * from '../models/Riskanalyticscontrollerv3CardSettings';
 export * from '../models/Riskanalyticscontrollerv3DetailToCount';
@@ -855,6 +938,7 @@ export * from '../models/Riskanalyticscontrollerv3Filter';
 export * from '../models/Riskanalyticscontrollerv3Finding';
 export * from '../models/Riskanalyticscontrollerv3FindingDetails';
 export * from '../models/Riskanalyticscontrollerv3FindingDetailsMap';
+export * from '../models/Riskanalyticscontrollerv3FindingReferenceLink';
 export * from '../models/Riskanalyticscontrollerv3GetAllClassificationsListResponse';
 export * from '../models/Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse';
 export * from '../models/Riskanalyticscontrollerv3GetRiskEventDetailsResponse';
@@ -883,6 +967,7 @@ export * from '../models/Riskanalyticscontrollerv3SetRiskEventStatusResponse';
 export * from '../models/Riskanalyticscontrollerv3SetUserUISettingsRequest';
 export * from '../models/Riskanalyticscontrollerv3SetUserUISettingsResponse';
 export * from '../models/Riskanalyticscontrollerv3ShortObservation';
+export * from '../models/Riskanalyticscontrollerv3Statistics';
 export * from '../models/Riskanalyticscontrollerv3Status';
 export * from '../models/Riskanalyticscontrollerv3UpdateRiskFeedbackRequest';
 export * from '../models/Riskanalyticscontrollerv3UpdateRiskFeedbackResponse';
@@ -983,6 +1068,10 @@ export * from '../models/SetQuestionBodyParams';
 export * from '../models/SetVulnerabilityStatusRequest';
 export * from '../models/SignupRequest';
 export * from '../models/SimpleRecipientSimpleRecipientType';
+export * from '../models/Snifassistv3Feedback';
+export * from '../models/Snifassistv3FeedbackStatus';
+export * from '../models/Snifassistv3GetSnifConfigResponse';
+export * from '../models/Snifassistv3PostSnifFeedbackRequest';
 export * from '../models/Snifassistv3SnifAssistResponse';
 export * from '../models/Snifassistv3SnifAssistType';
 export * from '../models/Snifassistv3StapConfig';
@@ -992,6 +1081,7 @@ export * from '../models/Snifassistv3StatusResponseBase';
 export * from '../models/Snifassistv3TestRegexRequest';
 export * from '../models/SortOrder';
 export * from '../models/StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse';
+export * from '../models/StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse';
 export * from '../models/StreamResultOfReportsrunnerv3RunReportResponse';
 export * from '../models/Streamsv3AWSCheckStreamStatus';
 export * from '../models/Streamsv3AuthType';
@@ -1022,6 +1112,7 @@ export * from '../models/Templatesv3DeleteTemplateResponse';
 export * from '../models/Templatesv3GetOriginDefaultContentResponse';
 export * from '../models/Templatesv3GetOriginFieldsResponse';
 export * from '../models/Templatesv3GetTemplateResponse';
+export * from '../models/Templatesv3GetTemplatesForEdgeResponse';
 export * from '../models/Templatesv3GetTemplatesResponse';
 export * from '../models/Templatesv3Integration';
 export * from '../models/Templatesv3MIMEType';
@@ -1047,6 +1138,7 @@ export * from '../models/Tenantuserv3CurrentUserTenant';
 export * from '../models/Tenantuserv3DisableUsersBulkResponse';
 export * from '../models/Tenantuserv3ExternalMetadata';
 export * from '../models/Tenantuserv3FullUser';
+export * from '../models/Tenantuserv3GetAPIPrivilegesResponse';
 export * from '../models/Tenantuserv3GetApiKeysResponse';
 export * from '../models/Tenantuserv3GetCurrentUserResponse';
 export * from '../models/Tenantuserv3GetPrivilegeResponse';
@@ -1153,12 +1245,18 @@ export * from '../models/Workflowv3CaseListResponse';
 export * from '../models/Workflowv3Comment';
 export * from '../models/Workflowv3CreateCaseRequest';
 export * from '../models/Workflowv3CreateCaseResponse';
+export * from '../models/Workflowv3CreateProductEntityResponse';
 export * from '../models/Workflowv3CreateTaskRequest';
 export * from '../models/Workflowv3CreateTaskResponse';
 export * from '../models/Workflowv3DeleteCasesResponse';
+export * from '../models/Workflowv3DeleteProductEntityResponse';
 export * from '../models/Workflowv3DeleteTasksResponse';
 export * from '../models/Workflowv3Entity';
+export * from '../models/Workflowv3EntityDefinition';
+export * from '../models/Workflowv3EntityHeader';
+export * from '../models/Workflowv3EntityHeaderType';
 export * from '../models/Workflowv3EntityType';
+export * from '../models/Workflowv3EntityValueChoice';
 export * from '../models/Workflowv3Filter';
 export * from '../models/Workflowv3FilterColumn';
 export * from '../models/Workflowv3FilterOperator';
@@ -1167,6 +1265,7 @@ export * from '../models/Workflowv3GetCasesCountResponse';
 export * from '../models/Workflowv3GetFilenameResponse';
 export * from '../models/Workflowv3GetJobsCountRequest';
 export * from '../models/Workflowv3GetJobsCountResponse';
+export * from '../models/Workflowv3GetProductEntitiesResponse';
 export * from '../models/Workflowv3GetReportResultResponse';
 export * from '../models/Workflowv3GetTasksCountRequest';
 export * from '../models/Workflowv3GetTasksCountResponse';
@@ -1174,6 +1273,8 @@ export * from '../models/Workflowv3JobCount';
 export * from '../models/Workflowv3OperatorType';
 export * from '../models/Workflowv3Origin';
 export * from '../models/Workflowv3Priority';
+export * from '../models/Workflowv3ProductEntity';
+export * from '../models/Workflowv3ProductWorkflow';
 export * from '../models/Workflowv3ReportMetadata';
 export * from '../models/Workflowv3ReportResult';
 export * from '../models/Workflowv3ReportResultHeader';
@@ -1191,8 +1292,12 @@ export * from '../models/Workflowv3TaskEdit';
 export * from '../models/Workflowv3TaskListResponse';
 export * from '../models/Workflowv3UpdateCasesRequest';
 export * from '../models/Workflowv3UpdateCasesResponse';
+export * from '../models/Workflowv3UpdateProductEntityRequest';
+export * from '../models/Workflowv3UpdateProductEntityResponse';
 export * from '../models/Workflowv3UpdateTasksRequest';
 export * from '../models/Workflowv3UpdateTasksResponse';
+export * from '../models/Workflowv3WorkflowEvent';
+export * from '../models/Workflowv3WorkflowEventResponse';
 
 import { AccessType } from '../models/AccessType';
 import { AccessTypeCountInner   } from '../models/AccessTypeCountInner';
@@ -1208,16 +1313,12 @@ import { AddCloudAccountsRequest    } from '../models/AddCloudAccountsRequest';
 import { AddCloudAccountsRequestCloudAccountsInner    } from '../models/AddCloudAccountsRequestCloudAccountsInner';
 import { AddCommentBody } from '../models/AddCommentBody';
 import { AddJiraIntegrationParametersRequest } from '../models/AddJiraIntegrationParametersRequest';
-import { Analyticseventsv3DeleteCacheKeyRequest } from '../models/Analyticseventsv3DeleteCacheKeyRequest';
-import { Analyticseventsv3DeleteCacheKeyResponse } from '../models/Analyticseventsv3DeleteCacheKeyResponse';
-import { Analyticseventsv3PostQSAdvisorRiskRequest      } from '../models/Analyticseventsv3PostQSAdvisorRiskRequest';
-import { Analyticseventsv3PostQSAdvisorRiskResponse } from '../models/Analyticseventsv3PostQSAdvisorRiskResponse';
 import { AnalyzedRegion } from '../models/AnalyzedRegion';
 import { AnalyzedRegionValidationResults } from '../models/AnalyzedRegionValidationResults';
 import { Assetsv3AccountVertex } from '../models/Assetsv3AccountVertex';
 import { Assetsv3Action } from '../models/Assetsv3Action';
 import { Assetsv3ApplicationVertex                     } from '../models/Assetsv3ApplicationVertex';
-import { Assetsv3Asset                                     } from '../models/Assetsv3Asset';
+import { Assetsv3Asset                                       } from '../models/Assetsv3Asset';
 import { Assetsv3AssetChangeLog } from '../models/Assetsv3AssetChangeLog';
 import { Assetsv3AssetClassification } from '../models/Assetsv3AssetClassification';
 import { Assetsv3AssetControl       } from '../models/Assetsv3AssetControl';
@@ -1239,7 +1340,7 @@ import { Assetsv3AssetView } from '../models/Assetsv3AssetView';
 import { Assetsv3AssetsForMergeSplitResponse } from '../models/Assetsv3AssetsForMergeSplitResponse';
 import { Assetsv3AssetsWithOpenVulnerabilities } from '../models/Assetsv3AssetsWithOpenVulnerabilities';
 import { Assetsv3AssignedTags } from '../models/Assetsv3AssignedTags';
-import { Assetsv3Attributes         } from '../models/Assetsv3Attributes';
+import { Assetsv3Attributes          } from '../models/Assetsv3Attributes';
 import { Assetsv3BeforeAfter } from '../models/Assetsv3BeforeAfter';
 import { Assetsv3Category } from '../models/Assetsv3Category';
 import { Assetsv3ChildCategory } from '../models/Assetsv3ChildCategory';
@@ -1367,7 +1468,6 @@ import { Complianceacceleratorv3DeleteComplianceWorkspacesResponse } from '../mo
 import { Complianceacceleratorv3EmailConfig } from '../models/Complianceacceleratorv3EmailConfig';
 import { Complianceacceleratorv3GetComplianceInfoResponse } from '../models/Complianceacceleratorv3GetComplianceInfoResponse';
 import { Complianceacceleratorv3Group } from '../models/Complianceacceleratorv3Group';
-import { Complianceacceleratorv3GroupMember } from '../models/Complianceacceleratorv3GroupMember';
 import { Complianceacceleratorv3HydrateComplianceWorkspacesRequest } from '../models/Complianceacceleratorv3HydrateComplianceWorkspacesRequest';
 import { Complianceacceleratorv3HydrateComplianceWorkspacesResponse } from '../models/Complianceacceleratorv3HydrateComplianceWorkspacesResponse';
 import { Complianceacceleratorv3Options } from '../models/Complianceacceleratorv3Options';
@@ -1410,6 +1510,9 @@ import { Connectionsv3DeleteAttributesResponse } from '../models/Connectionsv3De
 import { Connectionsv3DeleteConnectionsAccountsResponse } from '../models/Connectionsv3DeleteConnectionsAccountsResponse';
 import { Connectionsv3DeleteConnectionsConfigsResponse } from '../models/Connectionsv3DeleteConnectionsConfigsResponse';
 import { Connectionsv3DeletePluginResponse } from '../models/Connectionsv3DeletePluginResponse';
+import { Connectionsv3EdgeDeploymentServer } from '../models/Connectionsv3EdgeDeploymentServer';
+import { Connectionsv3GeneratePackageRequest } from '../models/Connectionsv3GeneratePackageRequest';
+import { Connectionsv3GeneratePackageResponse } from '../models/Connectionsv3GeneratePackageResponse';
 import { Connectionsv3GetAttributesResponse } from '../models/Connectionsv3GetAttributesResponse';
 import { Connectionsv3GetBannerStateResponse } from '../models/Connectionsv3GetBannerStateResponse';
 import { Connectionsv3GetConnectionsAccountsResponse } from '../models/Connectionsv3GetConnectionsAccountsResponse';
@@ -1442,7 +1545,7 @@ import { Connectionsv3StreamConnectionConfig } from '../models/Connectionsv3Stre
 import { Connectionsv3StreamingConfigs } from '../models/Connectionsv3StreamingConfigs';
 import { Connectionsv3StreamingConfigsByTenant } from '../models/Connectionsv3StreamingConfigsByTenant';
 import { Connectionsv3UCConnectionConfig } from '../models/Connectionsv3UCConnectionConfig';
-import { Connectionsv3UCConnectionSummary            } from '../models/Connectionsv3UCConnectionSummary';
+import { Connectionsv3UCConnectionSummary             } from '../models/Connectionsv3UCConnectionSummary';
 import { Connectionsv3UpdateAttributesResponse } from '../models/Connectionsv3UpdateAttributesResponse';
 import { Connectionsv3UpdateBannerStateRequest } from '../models/Connectionsv3UpdateBannerStateRequest';
 import { Connectionsv3UpdateBannerStateResponse } from '../models/Connectionsv3UpdateBannerStateResponse';
@@ -1454,6 +1557,8 @@ import { Connectionsv3UpdateConnectorsRequest } from '../models/Connectionsv3Upd
 import { Connectionsv3UpdatePluginRequest } from '../models/Connectionsv3UpdatePluginRequest';
 import { Connectionsv3UpdatePluginResponse } from '../models/Connectionsv3UpdatePluginResponse';
 import { Connectionsv3UpdateSettingsRequest } from '../models/Connectionsv3UpdateSettingsRequest';
+import { Connectionsv3ValidateAwsConnectionRequest } from '../models/Connectionsv3ValidateAwsConnectionRequest';
+import { Connectionsv3ValidateConnectionResponse } from '../models/Connectionsv3ValidateConnectionResponse';
 import { Dashboardsv3Card      } from '../models/Dashboardsv3Card';
 import { Dashboardsv3CardPosition } from '../models/Dashboardsv3CardPosition';
 import { Dashboardsv3CardType } from '../models/Dashboardsv3CardType';
@@ -1512,7 +1617,13 @@ import { Ecosystemv3GetPurgableRowsRequest } from '../models/Ecosystemv3GetPurga
 import { Ecosystemv3GetPurgableRowsResponse } from '../models/Ecosystemv3GetPurgableRowsResponse';
 import { Ecosystemv3OrderType } from '../models/Ecosystemv3OrderType';
 import { Ecosystemv3PurgeDataResponse } from '../models/Ecosystemv3PurgeDataResponse';
+import { Ecosystemv3TestIntegrationRequest } from '../models/Ecosystemv3TestIntegrationRequest';
+import { Ecosystemv3TestIntegrationResponse } from '../models/Ecosystemv3TestIntegrationResponse';
 import { Ecosystemv3ValidateCSVContentResponse } from '../models/Ecosystemv3ValidateCSVContentResponse';
+import { Edgeschedulerv3GetEdgeQueryStatusResponse } from '../models/Edgeschedulerv3GetEdgeQueryStatusResponse';
+import { Edgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse } from '../models/Edgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse';
+import { Edgeschedulerv3ScheduleEdgeQueryRequest } from '../models/Edgeschedulerv3ScheduleEdgeQueryRequest';
+import { Edgeschedulerv3ScheduleEdgeQueryResponse } from '../models/Edgeschedulerv3ScheduleEdgeQueryResponse';
 import { Environment } from '../models/Environment';
 import { Featureflagsv3DeleteFeatureFlagOverridesResponse } from '../models/Featureflagsv3DeleteFeatureFlagOverridesResponse';
 import { Featureflagsv3FeatureFlag } from '../models/Featureflagsv3FeatureFlag';
@@ -1764,10 +1875,15 @@ import { Notificationsv3GetNotificationRecordResponse } from '../models/Notifica
 import { Notificationsv3GetNotificationRecordsResponse } from '../models/Notificationsv3GetNotificationRecordsResponse';
 import { Notificationsv3GetTicketStatusResponse } from '../models/Notificationsv3GetTicketStatusResponse';
 import { Notificationsv3NotificationRecord                 } from '../models/Notificationsv3NotificationRecord';
-import { Notificationsv3NotificationRecordsFilter      } from '../models/Notificationsv3NotificationRecordsFilter';
+import { Notificationsv3NotificationRecordsFilter       } from '../models/Notificationsv3NotificationRecordsFilter';
 import { Notificationsv3NotificationSeverity } from '../models/Notificationsv3NotificationSeverity';
 import { Notificationsv3NotificationState } from '../models/Notificationsv3NotificationState';
+import { Notificationsv3PipelineQueryOperator } from '../models/Notificationsv3PipelineQueryOperator';
+import { Notificationsv3PostNotificationRecordRequest      } from '../models/Notificationsv3PostNotificationRecordRequest';
+import { Notificationsv3PostNotificationRecordResponse } from '../models/Notificationsv3PostNotificationRecordResponse';
 import { Notificationsv3PutNotificationRecordResponse } from '../models/Notificationsv3PutNotificationRecordResponse';
+import { Notificationsv3SearchNotificationRecordsRequest   } from '../models/Notificationsv3SearchNotificationRecordsRequest';
+import { Notificationsv3SearchNotificationRecordsResponse } from '../models/Notificationsv3SearchNotificationRecordsResponse';
 import { Notificationsv3TemplateProperty } from '../models/Notificationsv3TemplateProperty';
 import { Notificationsv3TestIntegrationRequest } from '../models/Notificationsv3TestIntegrationRequest';
 import { Notificationsv3TestIntegrationResponse } from '../models/Notificationsv3TestIntegrationResponse';
@@ -1801,11 +1917,13 @@ import { Policybuilderv3ActionNotificationObject } from '../models/Policybuilder
 import { Policybuilderv3ActionParameter } from '../models/Policybuilderv3ActionParameter';
 import { Policybuilderv3ActionParameterMetadata } from '../models/Policybuilderv3ActionParameterMetadata';
 import { Policybuilderv3ActionType } from '../models/Policybuilderv3ActionType';
+import { Policybuilderv3ActivationStatus } from '../models/Policybuilderv3ActivationStatus';
 import { Policybuilderv3ClonePolicyRequest } from '../models/Policybuilderv3ClonePolicyRequest';
 import { Policybuilderv3ControlFlow } from '../models/Policybuilderv3ControlFlow';
 import { Policybuilderv3CreateUpdatePolicyRequest } from '../models/Policybuilderv3CreateUpdatePolicyRequest';
 import { Policybuilderv3CreateUpdatePolicyResponse } from '../models/Policybuilderv3CreateUpdatePolicyResponse';
 import { Policybuilderv3DeleteGdpPolicySyncResponse } from '../models/Policybuilderv3DeleteGdpPolicySyncResponse';
+import { Policybuilderv3EdgeActivationObject     } from '../models/Policybuilderv3EdgeActivationObject';
 import { Policybuilderv3GDPSyncEntry } from '../models/Policybuilderv3GDPSyncEntry';
 import { Policybuilderv3GdpPolicyObject } from '../models/Policybuilderv3GdpPolicyObject';
 import { Policybuilderv3GdpPolicyObjectWithCm } from '../models/Policybuilderv3GdpPolicyObjectWithCm';
@@ -1814,7 +1932,7 @@ import { Policybuilderv3GetGdpPolicyMetaDataResponse } from '../models/Policybui
 import { Policybuilderv3GetIntegrationCheckResponse } from '../models/Policybuilderv3GetIntegrationCheckResponse';
 import { Policybuilderv3GetPoliciesGroupsResponse } from '../models/Policybuilderv3GetPoliciesGroupsResponse';
 import { Policybuilderv3GetPoliciesResponse } from '../models/Policybuilderv3GetPoliciesResponse';
-import { Policybuilderv3GetPolicyDetailsResponse         } from '../models/Policybuilderv3GetPolicyDetailsResponse';
+import { Policybuilderv3GetPolicyDetailsResponse          } from '../models/Policybuilderv3GetPolicyDetailsResponse';
 import { Policybuilderv3GetPolicyNamesFromRuleIDsRequest } from '../models/Policybuilderv3GetPolicyNamesFromRuleIDsRequest';
 import { Policybuilderv3GetPolicyNamesFromRuleIDsResponse } from '../models/Policybuilderv3GetPolicyNamesFromRuleIDsResponse';
 import { Policybuilderv3GetPolicySyncListResponse } from '../models/Policybuilderv3GetPolicySyncListResponse';
@@ -1830,7 +1948,7 @@ import { Policybuilderv3InstallPoliciesRequest } from '../models/Policybuilderv3
 import { Policybuilderv3InstallationAndSequenceObject } from '../models/Policybuilderv3InstallationAndSequenceObject';
 import { Policybuilderv3ParameterOperator } from '../models/Policybuilderv3ParameterOperator';
 import { Policybuilderv3ParameterRelationShip } from '../models/Policybuilderv3ParameterRelationShip';
-import { Policybuilderv3Policy                   } from '../models/Policybuilderv3Policy';
+import { Policybuilderv3Policy                    } from '../models/Policybuilderv3Policy';
 import { Policybuilderv3PolicyDetailsForGroups } from '../models/Policybuilderv3PolicyDetailsForGroups';
 import { Policybuilderv3PolicyGroups } from '../models/Policybuilderv3PolicyGroups';
 import { Policybuilderv3PolicyType } from '../models/Policybuilderv3PolicyType';
@@ -1860,12 +1978,18 @@ import { PotentialFlowsSummary } from '../models/PotentialFlowsSummary';
 import { ProtobufAny } from '../models/ProtobufAny';
 import { ProtobufFieldMask } from '../models/ProtobufFieldMask';
 import { ProtobufNullValue } from '../models/ProtobufNullValue';
+import { Qsdataloaderv3QSfileValidatorExternalParamRequest } from '../models/Qsdataloaderv3QSfileValidatorExternalParamRequest';
+import { Qsdataloaderv3QSfileValidatorRequest } from '../models/Qsdataloaderv3QSfileValidatorRequest';
+import { Qsdataloaderv3QSfileValidatorResonse } from '../models/Qsdataloaderv3QSfileValidatorResonse';
+import { Qsdataloaderv3QSyntheticDataLoaderResonse } from '../models/Qsdataloaderv3QSyntheticDataLoaderResonse';
 import { Qspmdatamanagerv3AppData } from '../models/Qspmdatamanagerv3AppData';
 import { Qspmdatamanagerv3AppDataResponse } from '../models/Qspmdatamanagerv3AppDataResponse';
 import { Qspmdatamanagerv3MasterDataModel } from '../models/Qspmdatamanagerv3MasterDataModel';
 import { Qspmdatamanagerv3MasterDataResponse } from '../models/Qspmdatamanagerv3MasterDataResponse';
 import { Qspmdatamanagerv3NetlocData } from '../models/Qspmdatamanagerv3NetlocData';
 import { Qspmdatamanagerv3NetlocDataResponse } from '../models/Qspmdatamanagerv3NetlocDataResponse';
+import { Qspmdatamanagerv3PluginDataModel } from '../models/Qspmdatamanagerv3PluginDataModel';
+import { Qspmdatamanagerv3PluginDataResponse } from '../models/Qspmdatamanagerv3PluginDataResponse';
 import { Qspmdatamanagerv3Row } from '../models/Qspmdatamanagerv3Row';
 import { Qspmdatamanagerv3ScanRequest } from '../models/Qspmdatamanagerv3ScanRequest';
 import { Qspmdatamanagerv3ScanResponse } from '../models/Qspmdatamanagerv3ScanResponse';
@@ -1877,13 +2001,16 @@ import { Qspmpluginmanagerv3PluginRS } from '../models/Qspmpluginmanagerv3Plugin
 import { Qspmpluginmanagerv3PolicyPluginRQ } from '../models/Qspmpluginmanagerv3PolicyPluginRQ';
 import { Qspmpluginmanagerv3PolicyPluginRS } from '../models/Qspmpluginmanagerv3PolicyPluginRS';
 import { Qspmpluginmanagerv3ValidationResult } from '../models/Qspmpluginmanagerv3ValidationResult';
+import { Qspmpolicymanagerv3APIResonse } from '../models/Qspmpolicymanagerv3APIResonse';
 import { Qspmpolicymanagerv3CreateTicketRequest        } from '../models/Qspmpolicymanagerv3CreateTicketRequest';
 import { Qspmpolicymanagerv3CreateTicketResponse } from '../models/Qspmpolicymanagerv3CreateTicketResponse';
 import { Qspmpolicymanagerv3FetchObjectStoreFileResponse } from '../models/Qspmpolicymanagerv3FetchObjectStoreFileResponse';
+import { Qspmpolicymanagerv3FileName } from '../models/Qspmpolicymanagerv3FileName';
 import { Qspmpolicymanagerv3NotificationSeverity } from '../models/Qspmpolicymanagerv3NotificationSeverity';
 import { Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest } from '../models/Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest';
 import { Qspmpolicymanagerv3ProcessPolicyDimentionRecordsResonse } from '../models/Qspmpolicymanagerv3ProcessPolicyDimentionRecordsResonse';
 import { Qspmpolicymanagerv3StandardEmptyResponse } from '../models/Qspmpolicymanagerv3StandardEmptyResponse';
+import { Qspmpolicymanagerv3UpdateConfigsRequest } from '../models/Qspmpolicymanagerv3UpdateConfigsRequest';
 import { Qspmpolicymanagerv3UpdateTicketStatusRequest } from '../models/Qspmpolicymanagerv3UpdateTicketStatusRequest';
 import { Qspmpolicymanagerv3UpdateTicketStatusResponse } from '../models/Qspmpolicymanagerv3UpdateTicketStatusResponse';
 import { QuestionType } from '../models/QuestionType';
@@ -1906,11 +2033,11 @@ import { Reportsrunnerv3GetChartDataResponsev2 } from '../models/Reportsrunnerv3
 import { Reportsrunnerv3GetExportReportJobStatusResponse          } from '../models/Reportsrunnerv3GetExportReportJobStatusResponse';
 import { Reportsrunnerv3GetReportColumnFacetRequest       } from '../models/Reportsrunnerv3GetReportColumnFacetRequest';
 import { Reportsrunnerv3GetReportColumnFacetResponse } from '../models/Reportsrunnerv3GetReportColumnFacetResponse';
-import { Reportsrunnerv3GetReportDataCountRequest       } from '../models/Reportsrunnerv3GetReportDataCountRequest';
+import { Reportsrunnerv3GetReportDataCountRequest        } from '../models/Reportsrunnerv3GetReportDataCountRequest';
 import { Reportsrunnerv3GetReportDataCountResponse } from '../models/Reportsrunnerv3GetReportDataCountResponse';
 import { Reportsrunnerv3JobType } from '../models/Reportsrunnerv3JobType';
 import { Reportsrunnerv3RunAuditReportRequest           } from '../models/Reportsrunnerv3RunAuditReportRequest';
-import { Reportsrunnerv3RunReportRequest              } from '../models/Reportsrunnerv3RunReportRequest';
+import { Reportsrunnerv3RunReportRequest               } from '../models/Reportsrunnerv3RunReportRequest';
 import { Reportsrunnerv3RunReportResponse } from '../models/Reportsrunnerv3RunReportResponse';
 import { Reportsrunnerv3StopExportReportJobResponse    } from '../models/Reportsrunnerv3StopExportReportJobResponse';
 import { Reportsrunnerv3StopQueryRequest } from '../models/Reportsrunnerv3StopQueryRequest';
@@ -2006,7 +2133,7 @@ import { Reportsv3ReportDefinition } from '../models/Reportsv3ReportDefinition';
 import { Reportsv3ReportDisplayLayout } from '../models/Reportsv3ReportDisplayLayout';
 import { Reportsv3ReportFilter } from '../models/Reportsv3ReportFilter';
 import { Reportsv3ReportFilterBrackets        } from '../models/Reportsv3ReportFilterBrackets';
-import { Reportsv3ReportFilterCondition                    } from '../models/Reportsv3ReportFilterCondition';
+import { Reportsv3ReportFilterCondition                       } from '../models/Reportsv3ReportFilterCondition';
 import { Reportsv3ReportHeader                } from '../models/Reportsv3ReportHeader';
 import { Reportsv3ReportResult } from '../models/Reportsv3ReportResult';
 import { Reportsv3ReportTag } from '../models/Reportsv3ReportTag';
@@ -2036,6 +2163,67 @@ import { Reportsv3VariantRuleCondition } from '../models/Reportsv3VariantRuleCon
 import { Reportsv3VariantRuleType } from '../models/Reportsv3VariantRuleType';
 import { RescanDataStoreRequest } from '../models/RescanDataStoreRequest';
 import { ResetPasswordRequest } from '../models/ResetPasswordRequest';
+import { Resourcecontrollerk8v3App } from '../models/Resourcecontrollerk8v3App';
+import { Resourcecontrollerk8v3AppDeployment } from '../models/Resourcecontrollerk8v3AppDeployment';
+import { Resourcecontrollerk8v3AppFile } from '../models/Resourcecontrollerk8v3AppFile';
+import { Resourcecontrollerk8v3AppHpa } from '../models/Resourcecontrollerk8v3AppHpa';
+import { Resourcecontrollerk8v3AppSecret } from '../models/Resourcecontrollerk8v3AppSecret';
+import { Resourcecontrollerk8v3Container } from '../models/Resourcecontrollerk8v3Container';
+import { Resourcecontrollerk8v3ContainerResources } from '../models/Resourcecontrollerk8v3ContainerResources';
+import { Resourcecontrollerk8v3ContainerResourcesQuantity } from '../models/Resourcecontrollerk8v3ContainerResourcesQuantity';
+import { Resourcecontrollerk8v3Controller } from '../models/Resourcecontrollerk8v3Controller';
+import { Resourcecontrollerk8v3ControllerApp } from '../models/Resourcecontrollerk8v3ControllerApp';
+import { Resourcecontrollerk8v3ControllerAppFile } from '../models/Resourcecontrollerk8v3ControllerAppFile';
+import { Resourcecontrollerk8v3ControllerAppSecret } from '../models/Resourcecontrollerk8v3ControllerAppSecret';
+import { Resourcecontrollerk8v3ControllerCommand } from '../models/Resourcecontrollerk8v3ControllerCommand';
+import { Resourcecontrollerk8v3ControllerHeartbeat } from '../models/Resourcecontrollerk8v3ControllerHeartbeat';
+import { Resourcecontrollerk8v3ControllerResources } from '../models/Resourcecontrollerk8v3ControllerResources';
+import { Resourcecontrollerk8v3ControllerStatus } from '../models/Resourcecontrollerk8v3ControllerStatus';
+import { Resourcecontrollerk8v3CreateControllerRequest } from '../models/Resourcecontrollerk8v3CreateControllerRequest';
+import { Resourcecontrollerk8v3CreateHeartBeatExResponse } from '../models/Resourcecontrollerk8v3CreateHeartBeatExResponse';
+import { Resourcecontrollerk8v3CreateHeartBeatRequest } from '../models/Resourcecontrollerk8v3CreateHeartBeatRequest';
+import { Resourcecontrollerk8v3CreateHeartBeatResponse } from '../models/Resourcecontrollerk8v3CreateHeartBeatResponse';
+import { Resourcecontrollerk8v3CreateKeypairRequest } from '../models/Resourcecontrollerk8v3CreateKeypairRequest';
+import { Resourcecontrollerk8v3CreateKeypairResponse } from '../models/Resourcecontrollerk8v3CreateKeypairResponse';
+import { Resourcecontrollerk8v3Cron } from '../models/Resourcecontrollerk8v3Cron';
+import { Resourcecontrollerk8v3DeleteControllerRequest } from '../models/Resourcecontrollerk8v3DeleteControllerRequest';
+import { Resourcecontrollerk8v3DeleteControllerResponse } from '../models/Resourcecontrollerk8v3DeleteControllerResponse';
+import { Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost } from '../models/Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost';
+import { Resourcecontrollerk8v3DeleteEdgeTenantResponse } from '../models/Resourcecontrollerk8v3DeleteEdgeTenantResponse';
+import { Resourcecontrollerk8v3DeleteJobRequest } from '../models/Resourcecontrollerk8v3DeleteJobRequest';
+import { Resourcecontrollerk8v3DeleteJobResponse } from '../models/Resourcecontrollerk8v3DeleteJobResponse';
+import { Resourcecontrollerk8v3DownloadControllerLogsRequest } from '../models/Resourcecontrollerk8v3DownloadControllerLogsRequest';
+import { Resourcecontrollerk8v3DownloadControllerLogsResponse } from '../models/Resourcecontrollerk8v3DownloadControllerLogsResponse';
+import { Resourcecontrollerk8v3EdgeResourceResponse } from '../models/Resourcecontrollerk8v3EdgeResourceResponse';
+import { Resourcecontrollerk8v3EdgeTenantRequest } from '../models/Resourcecontrollerk8v3EdgeTenantRequest';
+import { Resourcecontrollerk8v3File } from '../models/Resourcecontrollerk8v3File';
+import { Resourcecontrollerk8v3GUCStatefulsetState } from '../models/Resourcecontrollerk8v3GUCStatefulsetState';
+import { Resourcecontrollerk8v3GetControllerAppsResponse } from '../models/Resourcecontrollerk8v3GetControllerAppsResponse';
+import { Resourcecontrollerk8v3GetControllerCommandsResponse } from '../models/Resourcecontrollerk8v3GetControllerCommandsResponse';
+import { Resourcecontrollerk8v3GetControllerJobsResponse } from '../models/Resourcecontrollerk8v3GetControllerJobsResponse';
+import { Resourcecontrollerk8v3GetControllersResponse } from '../models/Resourcecontrollerk8v3GetControllersResponse';
+import { Resourcecontrollerk8v3GetControllersWithStatusResponse } from '../models/Resourcecontrollerk8v3GetControllersWithStatusResponse';
+import { Resourcecontrollerk8v3GetJobExecutionsResponse } from '../models/Resourcecontrollerk8v3GetJobExecutionsResponse';
+import { Resourcecontrollerk8v3GetTenantAppsResponse } from '../models/Resourcecontrollerk8v3GetTenantAppsResponse';
+import { Resourcecontrollerk8v3GetTenantJobsResponse } from '../models/Resourcecontrollerk8v3GetTenantJobsResponse';
+import { Resourcecontrollerk8v3InitContainer } from '../models/Resourcecontrollerk8v3InitContainer';
+import { Resourcecontrollerk8v3Job } from '../models/Resourcecontrollerk8v3Job';
+import { Resourcecontrollerk8v3JobExecution } from '../models/Resourcecontrollerk8v3JobExecution';
+import { Resourcecontrollerk8v3JobStatusDTO } from '../models/Resourcecontrollerk8v3JobStatusDTO';
+import { Resourcecontrollerk8v3KeyPair } from '../models/Resourcecontrollerk8v3KeyPair';
+import { Resourcecontrollerk8v3QueryControllerLogsRequest } from '../models/Resourcecontrollerk8v3QueryControllerLogsRequest';
+import { Resourcecontrollerk8v3QueryControllerLogsResponse } from '../models/Resourcecontrollerk8v3QueryControllerLogsResponse';
+import { Resourcecontrollerk8v3QueryLogs } from '../models/Resourcecontrollerk8v3QueryLogs';
+import { Resourcecontrollerk8v3Rule } from '../models/Resourcecontrollerk8v3Rule';
+import { Resourcecontrollerk8v3Secret } from '../models/Resourcecontrollerk8v3Secret';
+import { Resourcecontrollerk8v3TenantGUCCreateResponse } from '../models/Resourcecontrollerk8v3TenantGUCCreateResponse';
+import { Resourcecontrollerk8v3TenantGUCStatusResponse    } from '../models/Resourcecontrollerk8v3TenantGUCStatusResponse';
+import { Resourcecontrollerk8v3TenantLifecycleResponse } from '../models/Resourcecontrollerk8v3TenantLifecycleResponse';
+import { Resourcecontrollerk8v3TenantResourceResponse } from '../models/Resourcecontrollerk8v3TenantResourceResponse';
+import { Resourcecontrollerk8v3TextContent } from '../models/Resourcecontrollerk8v3TextContent';
+import { Resourcecontrollerk8v3UpdateJobExecutionRequest } from '../models/Resourcecontrollerk8v3UpdateJobExecutionRequest';
+import { Resourcecontrollerk8v3UpdateJobStatusRequest } from '../models/Resourcecontrollerk8v3UpdateJobStatusRequest';
+import { Resourcecontrollerk8v3Version } from '../models/Resourcecontrollerk8v3Version';
 import { Riskanalyticscontrollerv3Action } from '../models/Riskanalyticscontrollerv3Action';
 import { Riskanalyticscontrollerv3CardSettings        } from '../models/Riskanalyticscontrollerv3CardSettings';
 import { Riskanalyticscontrollerv3DetailToCount } from '../models/Riskanalyticscontrollerv3DetailToCount';
@@ -2051,6 +2239,7 @@ import { Riskanalyticscontrollerv3Filter } from '../models/Riskanalyticscontroll
 import { Riskanalyticscontrollerv3Finding    } from '../models/Riskanalyticscontrollerv3Finding';
 import { Riskanalyticscontrollerv3FindingDetails } from '../models/Riskanalyticscontrollerv3FindingDetails';
 import { Riskanalyticscontrollerv3FindingDetailsMap } from '../models/Riskanalyticscontrollerv3FindingDetailsMap';
+import { Riskanalyticscontrollerv3FindingReferenceLink } from '../models/Riskanalyticscontrollerv3FindingReferenceLink';
 import { Riskanalyticscontrollerv3GetAllClassificationsListResponse } from '../models/Riskanalyticscontrollerv3GetAllClassificationsListResponse';
 import { Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse } from '../models/Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse';
 import { Riskanalyticscontrollerv3GetRiskEventDetailsResponse } from '../models/Riskanalyticscontrollerv3GetRiskEventDetailsResponse';
@@ -2079,6 +2268,7 @@ import { Riskanalyticscontrollerv3SetRiskEventStatusResponse } from '../models/R
 import { Riskanalyticscontrollerv3SetUserUISettingsRequest } from '../models/Riskanalyticscontrollerv3SetUserUISettingsRequest';
 import { Riskanalyticscontrollerv3SetUserUISettingsResponse } from '../models/Riskanalyticscontrollerv3SetUserUISettingsResponse';
 import { Riskanalyticscontrollerv3ShortObservation   } from '../models/Riskanalyticscontrollerv3ShortObservation';
+import { Riskanalyticscontrollerv3Statistics } from '../models/Riskanalyticscontrollerv3Statistics';
 import { Riskanalyticscontrollerv3Status } from '../models/Riskanalyticscontrollerv3Status';
 import { Riskanalyticscontrollerv3UpdateRiskFeedbackRequest } from '../models/Riskanalyticscontrollerv3UpdateRiskFeedbackRequest';
 import { Riskanalyticscontrollerv3UpdateRiskFeedbackResponse } from '../models/Riskanalyticscontrollerv3UpdateRiskFeedbackResponse';
@@ -2149,7 +2339,7 @@ import { Schedulerv3ReportArray } from '../models/Schedulerv3ReportArray';
 import { Schedulerv3ReportParameter } from '../models/Schedulerv3ReportParameter';
 import { Schedulerv3Retention } from '../models/Schedulerv3Retention';
 import { Schedulerv3ScheduledJob                    } from '../models/Schedulerv3ScheduledJob';
-import { Schedulerv3ScheduledJobRun               } from '../models/Schedulerv3ScheduledJobRun';
+import { Schedulerv3ScheduledJobRun                } from '../models/Schedulerv3ScheduledJobRun';
 import { Schedulerv3ScheduledJobSummary                 } from '../models/Schedulerv3ScheduledJobSummary';
 import { Schedulerv3ScheduledJobSummaryResponse } from '../models/Schedulerv3ScheduledJobSummaryResponse';
 import { Schedulerv3ScheduledJobsFilter } from '../models/Schedulerv3ScheduledJobsFilter';
@@ -2179,7 +2369,11 @@ import { SetQuestionBodyParams   } from '../models/SetQuestionBodyParams';
 import { SetVulnerabilityStatusRequest  } from '../models/SetVulnerabilityStatusRequest';
 import { SignupRequest } from '../models/SignupRequest';
 import { SimpleRecipientSimpleRecipientType } from '../models/SimpleRecipientSimpleRecipientType';
-import { Snifassistv3SnifAssistResponse       } from '../models/Snifassistv3SnifAssistResponse';
+import { Snifassistv3Feedback    } from '../models/Snifassistv3Feedback';
+import { Snifassistv3FeedbackStatus } from '../models/Snifassistv3FeedbackStatus';
+import { Snifassistv3GetSnifConfigResponse } from '../models/Snifassistv3GetSnifConfigResponse';
+import { Snifassistv3PostSnifFeedbackRequest } from '../models/Snifassistv3PostSnifFeedbackRequest';
+import { Snifassistv3SnifAssistResponse        } from '../models/Snifassistv3SnifAssistResponse';
 import { Snifassistv3SnifAssistType } from '../models/Snifassistv3SnifAssistType';
 import { Snifassistv3StapConfig } from '../models/Snifassistv3StapConfig';
 import { Snifassistv3StapHeartBeat } from '../models/Snifassistv3StapHeartBeat';
@@ -2188,6 +2382,7 @@ import { Snifassistv3StatusResponseBase } from '../models/Snifassistv3StatusResp
 import { Snifassistv3TestRegexRequest } from '../models/Snifassistv3TestRegexRequest';
 import { SortOrder } from '../models/SortOrder';
 import { StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse } from '../models/StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse';
+import { StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse } from '../models/StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse';
 import { StreamResultOfReportsrunnerv3RunReportResponse } from '../models/StreamResultOfReportsrunnerv3RunReportResponse';
 import { Streamsv3AWSCheckStreamStatus } from '../models/Streamsv3AWSCheckStreamStatus';
 import { Streamsv3AuthType } from '../models/Streamsv3AuthType';
@@ -2218,6 +2413,7 @@ import { Templatesv3DeleteTemplateResponse } from '../models/Templatesv3DeleteTe
 import { Templatesv3GetOriginDefaultContentResponse } from '../models/Templatesv3GetOriginDefaultContentResponse';
 import { Templatesv3GetOriginFieldsResponse } from '../models/Templatesv3GetOriginFieldsResponse';
 import { Templatesv3GetTemplateResponse } from '../models/Templatesv3GetTemplateResponse';
+import { Templatesv3GetTemplatesForEdgeResponse } from '../models/Templatesv3GetTemplatesForEdgeResponse';
 import { Templatesv3GetTemplatesResponse } from '../models/Templatesv3GetTemplatesResponse';
 import { Templatesv3Integration } from '../models/Templatesv3Integration';
 import { Templatesv3MIMEType } from '../models/Templatesv3MIMEType';
@@ -2243,6 +2439,7 @@ import { Tenantuserv3CurrentUserTenant } from '../models/Tenantuserv3CurrentUser
 import { Tenantuserv3DisableUsersBulkResponse } from '../models/Tenantuserv3DisableUsersBulkResponse';
 import { Tenantuserv3ExternalMetadata } from '../models/Tenantuserv3ExternalMetadata';
 import { Tenantuserv3FullUser               } from '../models/Tenantuserv3FullUser';
+import { Tenantuserv3GetAPIPrivilegesResponse } from '../models/Tenantuserv3GetAPIPrivilegesResponse';
 import { Tenantuserv3GetApiKeysResponse } from '../models/Tenantuserv3GetApiKeysResponse';
 import { Tenantuserv3GetCurrentUserResponse } from '../models/Tenantuserv3GetCurrentUserResponse';
 import { Tenantuserv3GetPrivilegeResponse } from '../models/Tenantuserv3GetPrivilegeResponse';
@@ -2349,12 +2546,18 @@ import { Workflowv3CaseListResponse } from '../models/Workflowv3CaseListResponse
 import { Workflowv3Comment } from '../models/Workflowv3Comment';
 import { Workflowv3CreateCaseRequest } from '../models/Workflowv3CreateCaseRequest';
 import { Workflowv3CreateCaseResponse } from '../models/Workflowv3CreateCaseResponse';
+import { Workflowv3CreateProductEntityResponse } from '../models/Workflowv3CreateProductEntityResponse';
 import { Workflowv3CreateTaskRequest } from '../models/Workflowv3CreateTaskRequest';
 import { Workflowv3CreateTaskResponse } from '../models/Workflowv3CreateTaskResponse';
 import { Workflowv3DeleteCasesResponse } from '../models/Workflowv3DeleteCasesResponse';
+import { Workflowv3DeleteProductEntityResponse } from '../models/Workflowv3DeleteProductEntityResponse';
 import { Workflowv3DeleteTasksResponse } from '../models/Workflowv3DeleteTasksResponse';
 import { Workflowv3Entity     } from '../models/Workflowv3Entity';
+import { Workflowv3EntityDefinition } from '../models/Workflowv3EntityDefinition';
+import { Workflowv3EntityHeader       } from '../models/Workflowv3EntityHeader';
+import { Workflowv3EntityHeaderType } from '../models/Workflowv3EntityHeaderType';
 import { Workflowv3EntityType } from '../models/Workflowv3EntityType';
+import { Workflowv3EntityValueChoice } from '../models/Workflowv3EntityValueChoice';
 import { Workflowv3Filter                } from '../models/Workflowv3Filter';
 import { Workflowv3FilterColumn    } from '../models/Workflowv3FilterColumn';
 import { Workflowv3FilterOperator } from '../models/Workflowv3FilterOperator';
@@ -2363,6 +2566,7 @@ import { Workflowv3GetCasesCountResponse } from '../models/Workflowv3GetCasesCou
 import { Workflowv3GetFilenameResponse } from '../models/Workflowv3GetFilenameResponse';
 import { Workflowv3GetJobsCountRequest } from '../models/Workflowv3GetJobsCountRequest';
 import { Workflowv3GetJobsCountResponse } from '../models/Workflowv3GetJobsCountResponse';
+import { Workflowv3GetProductEntitiesResponse } from '../models/Workflowv3GetProductEntitiesResponse';
 import { Workflowv3GetReportResultResponse } from '../models/Workflowv3GetReportResultResponse';
 import { Workflowv3GetTasksCountRequest } from '../models/Workflowv3GetTasksCountRequest';
 import { Workflowv3GetTasksCountResponse } from '../models/Workflowv3GetTasksCountResponse';
@@ -2370,6 +2574,8 @@ import { Workflowv3JobCount } from '../models/Workflowv3JobCount';
 import { Workflowv3OperatorType } from '../models/Workflowv3OperatorType';
 import { Workflowv3Origin } from '../models/Workflowv3Origin';
 import { Workflowv3Priority } from '../models/Workflowv3Priority';
+import { Workflowv3ProductEntity } from '../models/Workflowv3ProductEntity';
+import { Workflowv3ProductWorkflow      } from '../models/Workflowv3ProductWorkflow';
 import { Workflowv3ReportMetadata } from '../models/Workflowv3ReportMetadata';
 import { Workflowv3ReportResult } from '../models/Workflowv3ReportResult';
 import { Workflowv3ReportResultHeader } from '../models/Workflowv3ReportResultHeader';
@@ -2387,8 +2593,12 @@ import { Workflowv3TaskEdit               } from '../models/Workflowv3TaskEdit';
 import { Workflowv3TaskListResponse } from '../models/Workflowv3TaskListResponse';
 import { Workflowv3UpdateCasesRequest } from '../models/Workflowv3UpdateCasesRequest';
 import { Workflowv3UpdateCasesResponse } from '../models/Workflowv3UpdateCasesResponse';
+import { Workflowv3UpdateProductEntityRequest } from '../models/Workflowv3UpdateProductEntityRequest';
+import { Workflowv3UpdateProductEntityResponse } from '../models/Workflowv3UpdateProductEntityResponse';
 import { Workflowv3UpdateTasksRequest } from '../models/Workflowv3UpdateTasksRequest';
 import { Workflowv3UpdateTasksResponse } from '../models/Workflowv3UpdateTasksResponse';
+import { Workflowv3WorkflowEvent       } from '../models/Workflowv3WorkflowEvent';
+import { Workflowv3WorkflowEventResponse } from '../models/Workflowv3WorkflowEventResponse';
 
 /* tslint:disable:no-unused-variable */
 let primitives = [
@@ -2446,9 +2656,11 @@ let enumsMap: Set<string> = new Set<string>([
     "NotificationRecordsFilterStateFilter",
     "Notificationsv3NotificationSeverity",
     "Notificationsv3NotificationState",
+    "Notificationsv3PipelineQueryOperator",
     "Operator",
     "Outliersenginev3SourceAttributeType",
     "Policybuilderv3ActionType",
+    "Policybuilderv3ActivationStatus",
     "Policybuilderv3ControlFlow",
     "Policybuilderv3ImportIssue",
     "Policybuilderv3ImportState",
@@ -2480,6 +2692,7 @@ let enumsMap: Set<string> = new Set<string>([
     "Reportsv3SqlType",
     "Reportsv3VariantRuleCondition",
     "Reportsv3VariantRuleType",
+    "Resourcecontrollerk8v3GUCStatefulsetState",
     "Riskanalyticscontrollerv3Action",
     "Riskanalyticscontrollerv3ExcludedItemType",
     "Riskanalyticscontrollerv3ObservationType",
@@ -2507,6 +2720,7 @@ let enumsMap: Set<string> = new Set<string>([
     "SensitivityCategory",
     "ServiceProvider",
     "SimpleRecipientSimpleRecipientType",
+    "Snifassistv3FeedbackStatus",
     "Snifassistv3SnifAssistType",
     "Snifassistv3StapOperation",
     "SortOrder",
@@ -2529,6 +2743,7 @@ let enumsMap: Set<string> = new Set<string>([
     "VulnerabilityStatusTypeFamily",
     "VulnerabilityThreatCategory",
     "VulnerabilityType",
+    "Workflowv3EntityHeaderType",
     "Workflowv3EntityType",
     "Workflowv3FilterOperator",
     "Workflowv3OperatorType",
@@ -2550,10 +2765,6 @@ let typeMap: {[index: string]: any} = {
     "AddCloudAccountsRequestCloudAccountsInner": AddCloudAccountsRequestCloudAccountsInner,
     "AddCommentBody": AddCommentBody,
     "AddJiraIntegrationParametersRequest": AddJiraIntegrationParametersRequest,
-    "Analyticseventsv3DeleteCacheKeyRequest": Analyticseventsv3DeleteCacheKeyRequest,
-    "Analyticseventsv3DeleteCacheKeyResponse": Analyticseventsv3DeleteCacheKeyResponse,
-    "Analyticseventsv3PostQSAdvisorRiskRequest": Analyticseventsv3PostQSAdvisorRiskRequest,
-    "Analyticseventsv3PostQSAdvisorRiskResponse": Analyticseventsv3PostQSAdvisorRiskResponse,
     "AnalyzedRegion": AnalyzedRegion,
     "AnalyzedRegionValidationResults": AnalyzedRegionValidationResults,
     "Assetsv3AccountVertex": Assetsv3AccountVertex,
@@ -2699,7 +2910,6 @@ let typeMap: {[index: string]: any} = {
     "Complianceacceleratorv3EmailConfig": Complianceacceleratorv3EmailConfig,
     "Complianceacceleratorv3GetComplianceInfoResponse": Complianceacceleratorv3GetComplianceInfoResponse,
     "Complianceacceleratorv3Group": Complianceacceleratorv3Group,
-    "Complianceacceleratorv3GroupMember": Complianceacceleratorv3GroupMember,
     "Complianceacceleratorv3HydrateComplianceWorkspacesRequest": Complianceacceleratorv3HydrateComplianceWorkspacesRequest,
     "Complianceacceleratorv3HydrateComplianceWorkspacesResponse": Complianceacceleratorv3HydrateComplianceWorkspacesResponse,
     "Complianceacceleratorv3Options": Complianceacceleratorv3Options,
@@ -2737,6 +2947,9 @@ let typeMap: {[index: string]: any} = {
     "Connectionsv3DeleteConnectionsAccountsResponse": Connectionsv3DeleteConnectionsAccountsResponse,
     "Connectionsv3DeleteConnectionsConfigsResponse": Connectionsv3DeleteConnectionsConfigsResponse,
     "Connectionsv3DeletePluginResponse": Connectionsv3DeletePluginResponse,
+    "Connectionsv3EdgeDeploymentServer": Connectionsv3EdgeDeploymentServer,
+    "Connectionsv3GeneratePackageRequest": Connectionsv3GeneratePackageRequest,
+    "Connectionsv3GeneratePackageResponse": Connectionsv3GeneratePackageResponse,
     "Connectionsv3GetAttributesResponse": Connectionsv3GetAttributesResponse,
     "Connectionsv3GetBannerStateResponse": Connectionsv3GetBannerStateResponse,
     "Connectionsv3GetConnectionsAccountsResponse": Connectionsv3GetConnectionsAccountsResponse,
@@ -2778,6 +2991,8 @@ let typeMap: {[index: string]: any} = {
     "Connectionsv3UpdatePluginRequest": Connectionsv3UpdatePluginRequest,
     "Connectionsv3UpdatePluginResponse": Connectionsv3UpdatePluginResponse,
     "Connectionsv3UpdateSettingsRequest": Connectionsv3UpdateSettingsRequest,
+    "Connectionsv3ValidateAwsConnectionRequest": Connectionsv3ValidateAwsConnectionRequest,
+    "Connectionsv3ValidateConnectionResponse": Connectionsv3ValidateConnectionResponse,
     "Dashboardsv3Card": Dashboardsv3Card,
     "Dashboardsv3CardPosition": Dashboardsv3CardPosition,
     "Dashboardsv3CreateDashboardResponse": Dashboardsv3CreateDashboardResponse,
@@ -2831,7 +3046,13 @@ let typeMap: {[index: string]: any} = {
     "Ecosystemv3GetPurgableRowsRequest": Ecosystemv3GetPurgableRowsRequest,
     "Ecosystemv3GetPurgableRowsResponse": Ecosystemv3GetPurgableRowsResponse,
     "Ecosystemv3PurgeDataResponse": Ecosystemv3PurgeDataResponse,
+    "Ecosystemv3TestIntegrationRequest": Ecosystemv3TestIntegrationRequest,
+    "Ecosystemv3TestIntegrationResponse": Ecosystemv3TestIntegrationResponse,
     "Ecosystemv3ValidateCSVContentResponse": Ecosystemv3ValidateCSVContentResponse,
+    "Edgeschedulerv3GetEdgeQueryStatusResponse": Edgeschedulerv3GetEdgeQueryStatusResponse,
+    "Edgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse": Edgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse,
+    "Edgeschedulerv3ScheduleEdgeQueryRequest": Edgeschedulerv3ScheduleEdgeQueryRequest,
+    "Edgeschedulerv3ScheduleEdgeQueryResponse": Edgeschedulerv3ScheduleEdgeQueryResponse,
     "Featureflagsv3DeleteFeatureFlagOverridesResponse": Featureflagsv3DeleteFeatureFlagOverridesResponse,
     "Featureflagsv3FeatureFlag": Featureflagsv3FeatureFlag,
     "Featureflagsv3FeatureFlagOverrides": Featureflagsv3FeatureFlagOverrides,
@@ -3077,7 +3298,11 @@ let typeMap: {[index: string]: any} = {
     "Notificationsv3GetTicketStatusResponse": Notificationsv3GetTicketStatusResponse,
     "Notificationsv3NotificationRecord": Notificationsv3NotificationRecord,
     "Notificationsv3NotificationRecordsFilter": Notificationsv3NotificationRecordsFilter,
+    "Notificationsv3PostNotificationRecordRequest": Notificationsv3PostNotificationRecordRequest,
+    "Notificationsv3PostNotificationRecordResponse": Notificationsv3PostNotificationRecordResponse,
     "Notificationsv3PutNotificationRecordResponse": Notificationsv3PutNotificationRecordResponse,
+    "Notificationsv3SearchNotificationRecordsRequest": Notificationsv3SearchNotificationRecordsRequest,
+    "Notificationsv3SearchNotificationRecordsResponse": Notificationsv3SearchNotificationRecordsResponse,
     "Notificationsv3TemplateProperty": Notificationsv3TemplateProperty,
     "Notificationsv3TestIntegrationRequest": Notificationsv3TestIntegrationRequest,
     "Notificationsv3TestIntegrationResponse": Notificationsv3TestIntegrationResponse,
@@ -3112,6 +3337,7 @@ let typeMap: {[index: string]: any} = {
     "Policybuilderv3CreateUpdatePolicyRequest": Policybuilderv3CreateUpdatePolicyRequest,
     "Policybuilderv3CreateUpdatePolicyResponse": Policybuilderv3CreateUpdatePolicyResponse,
     "Policybuilderv3DeleteGdpPolicySyncResponse": Policybuilderv3DeleteGdpPolicySyncResponse,
+    "Policybuilderv3EdgeActivationObject": Policybuilderv3EdgeActivationObject,
     "Policybuilderv3GDPSyncEntry": Policybuilderv3GDPSyncEntry,
     "Policybuilderv3GdpPolicyObject": Policybuilderv3GdpPolicyObject,
     "Policybuilderv3GdpPolicyObjectWithCm": Policybuilderv3GdpPolicyObjectWithCm,
@@ -3156,12 +3382,18 @@ let typeMap: {[index: string]: any} = {
     "PotentialFlowsSummary": PotentialFlowsSummary,
     "ProtobufAny": ProtobufAny,
     "ProtobufFieldMask": ProtobufFieldMask,
+    "Qsdataloaderv3QSfileValidatorExternalParamRequest": Qsdataloaderv3QSfileValidatorExternalParamRequest,
+    "Qsdataloaderv3QSfileValidatorRequest": Qsdataloaderv3QSfileValidatorRequest,
+    "Qsdataloaderv3QSfileValidatorResonse": Qsdataloaderv3QSfileValidatorResonse,
+    "Qsdataloaderv3QSyntheticDataLoaderResonse": Qsdataloaderv3QSyntheticDataLoaderResonse,
     "Qspmdatamanagerv3AppData": Qspmdatamanagerv3AppData,
     "Qspmdatamanagerv3AppDataResponse": Qspmdatamanagerv3AppDataResponse,
     "Qspmdatamanagerv3MasterDataModel": Qspmdatamanagerv3MasterDataModel,
     "Qspmdatamanagerv3MasterDataResponse": Qspmdatamanagerv3MasterDataResponse,
     "Qspmdatamanagerv3NetlocData": Qspmdatamanagerv3NetlocData,
     "Qspmdatamanagerv3NetlocDataResponse": Qspmdatamanagerv3NetlocDataResponse,
+    "Qspmdatamanagerv3PluginDataModel": Qspmdatamanagerv3PluginDataModel,
+    "Qspmdatamanagerv3PluginDataResponse": Qspmdatamanagerv3PluginDataResponse,
     "Qspmdatamanagerv3Row": Qspmdatamanagerv3Row,
     "Qspmdatamanagerv3ScanRequest": Qspmdatamanagerv3ScanRequest,
     "Qspmdatamanagerv3ScanResponse": Qspmdatamanagerv3ScanResponse,
@@ -3173,12 +3405,15 @@ let typeMap: {[index: string]: any} = {
     "Qspmpluginmanagerv3PolicyPluginRQ": Qspmpluginmanagerv3PolicyPluginRQ,
     "Qspmpluginmanagerv3PolicyPluginRS": Qspmpluginmanagerv3PolicyPluginRS,
     "Qspmpluginmanagerv3ValidationResult": Qspmpluginmanagerv3ValidationResult,
+    "Qspmpolicymanagerv3APIResonse": Qspmpolicymanagerv3APIResonse,
     "Qspmpolicymanagerv3CreateTicketRequest": Qspmpolicymanagerv3CreateTicketRequest,
     "Qspmpolicymanagerv3CreateTicketResponse": Qspmpolicymanagerv3CreateTicketResponse,
     "Qspmpolicymanagerv3FetchObjectStoreFileResponse": Qspmpolicymanagerv3FetchObjectStoreFileResponse,
+    "Qspmpolicymanagerv3FileName": Qspmpolicymanagerv3FileName,
     "Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest": Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest,
     "Qspmpolicymanagerv3ProcessPolicyDimentionRecordsResonse": Qspmpolicymanagerv3ProcessPolicyDimentionRecordsResonse,
     "Qspmpolicymanagerv3StandardEmptyResponse": Qspmpolicymanagerv3StandardEmptyResponse,
+    "Qspmpolicymanagerv3UpdateConfigsRequest": Qspmpolicymanagerv3UpdateConfigsRequest,
     "Qspmpolicymanagerv3UpdateTicketStatusRequest": Qspmpolicymanagerv3UpdateTicketStatusRequest,
     "Qspmpolicymanagerv3UpdateTicketStatusResponse": Qspmpolicymanagerv3UpdateTicketStatusResponse,
     "RemoveAccountsInstructions200Response": RemoveAccountsInstructions200Response,
@@ -3312,6 +3547,66 @@ let typeMap: {[index: string]: any} = {
     "Reportsv3VariantRule": Reportsv3VariantRule,
     "RescanDataStoreRequest": RescanDataStoreRequest,
     "ResetPasswordRequest": ResetPasswordRequest,
+    "Resourcecontrollerk8v3App": Resourcecontrollerk8v3App,
+    "Resourcecontrollerk8v3AppDeployment": Resourcecontrollerk8v3AppDeployment,
+    "Resourcecontrollerk8v3AppFile": Resourcecontrollerk8v3AppFile,
+    "Resourcecontrollerk8v3AppHpa": Resourcecontrollerk8v3AppHpa,
+    "Resourcecontrollerk8v3AppSecret": Resourcecontrollerk8v3AppSecret,
+    "Resourcecontrollerk8v3Container": Resourcecontrollerk8v3Container,
+    "Resourcecontrollerk8v3ContainerResources": Resourcecontrollerk8v3ContainerResources,
+    "Resourcecontrollerk8v3ContainerResourcesQuantity": Resourcecontrollerk8v3ContainerResourcesQuantity,
+    "Resourcecontrollerk8v3Controller": Resourcecontrollerk8v3Controller,
+    "Resourcecontrollerk8v3ControllerApp": Resourcecontrollerk8v3ControllerApp,
+    "Resourcecontrollerk8v3ControllerAppFile": Resourcecontrollerk8v3ControllerAppFile,
+    "Resourcecontrollerk8v3ControllerAppSecret": Resourcecontrollerk8v3ControllerAppSecret,
+    "Resourcecontrollerk8v3ControllerCommand": Resourcecontrollerk8v3ControllerCommand,
+    "Resourcecontrollerk8v3ControllerHeartbeat": Resourcecontrollerk8v3ControllerHeartbeat,
+    "Resourcecontrollerk8v3ControllerResources": Resourcecontrollerk8v3ControllerResources,
+    "Resourcecontrollerk8v3ControllerStatus": Resourcecontrollerk8v3ControllerStatus,
+    "Resourcecontrollerk8v3CreateControllerRequest": Resourcecontrollerk8v3CreateControllerRequest,
+    "Resourcecontrollerk8v3CreateHeartBeatExResponse": Resourcecontrollerk8v3CreateHeartBeatExResponse,
+    "Resourcecontrollerk8v3CreateHeartBeatRequest": Resourcecontrollerk8v3CreateHeartBeatRequest,
+    "Resourcecontrollerk8v3CreateHeartBeatResponse": Resourcecontrollerk8v3CreateHeartBeatResponse,
+    "Resourcecontrollerk8v3CreateKeypairRequest": Resourcecontrollerk8v3CreateKeypairRequest,
+    "Resourcecontrollerk8v3CreateKeypairResponse": Resourcecontrollerk8v3CreateKeypairResponse,
+    "Resourcecontrollerk8v3Cron": Resourcecontrollerk8v3Cron,
+    "Resourcecontrollerk8v3DeleteControllerRequest": Resourcecontrollerk8v3DeleteControllerRequest,
+    "Resourcecontrollerk8v3DeleteControllerResponse": Resourcecontrollerk8v3DeleteControllerResponse,
+    "Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost": Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost,
+    "Resourcecontrollerk8v3DeleteEdgeTenantResponse": Resourcecontrollerk8v3DeleteEdgeTenantResponse,
+    "Resourcecontrollerk8v3DeleteJobRequest": Resourcecontrollerk8v3DeleteJobRequest,
+    "Resourcecontrollerk8v3DeleteJobResponse": Resourcecontrollerk8v3DeleteJobResponse,
+    "Resourcecontrollerk8v3DownloadControllerLogsRequest": Resourcecontrollerk8v3DownloadControllerLogsRequest,
+    "Resourcecontrollerk8v3DownloadControllerLogsResponse": Resourcecontrollerk8v3DownloadControllerLogsResponse,
+    "Resourcecontrollerk8v3EdgeResourceResponse": Resourcecontrollerk8v3EdgeResourceResponse,
+    "Resourcecontrollerk8v3EdgeTenantRequest": Resourcecontrollerk8v3EdgeTenantRequest,
+    "Resourcecontrollerk8v3File": Resourcecontrollerk8v3File,
+    "Resourcecontrollerk8v3GetControllerAppsResponse": Resourcecontrollerk8v3GetControllerAppsResponse,
+    "Resourcecontrollerk8v3GetControllerCommandsResponse": Resourcecontrollerk8v3GetControllerCommandsResponse,
+    "Resourcecontrollerk8v3GetControllerJobsResponse": Resourcecontrollerk8v3GetControllerJobsResponse,
+    "Resourcecontrollerk8v3GetControllersResponse": Resourcecontrollerk8v3GetControllersResponse,
+    "Resourcecontrollerk8v3GetControllersWithStatusResponse": Resourcecontrollerk8v3GetControllersWithStatusResponse,
+    "Resourcecontrollerk8v3GetJobExecutionsResponse": Resourcecontrollerk8v3GetJobExecutionsResponse,
+    "Resourcecontrollerk8v3GetTenantAppsResponse": Resourcecontrollerk8v3GetTenantAppsResponse,
+    "Resourcecontrollerk8v3GetTenantJobsResponse": Resourcecontrollerk8v3GetTenantJobsResponse,
+    "Resourcecontrollerk8v3InitContainer": Resourcecontrollerk8v3InitContainer,
+    "Resourcecontrollerk8v3Job": Resourcecontrollerk8v3Job,
+    "Resourcecontrollerk8v3JobExecution": Resourcecontrollerk8v3JobExecution,
+    "Resourcecontrollerk8v3JobStatusDTO": Resourcecontrollerk8v3JobStatusDTO,
+    "Resourcecontrollerk8v3KeyPair": Resourcecontrollerk8v3KeyPair,
+    "Resourcecontrollerk8v3QueryControllerLogsRequest": Resourcecontrollerk8v3QueryControllerLogsRequest,
+    "Resourcecontrollerk8v3QueryControllerLogsResponse": Resourcecontrollerk8v3QueryControllerLogsResponse,
+    "Resourcecontrollerk8v3QueryLogs": Resourcecontrollerk8v3QueryLogs,
+    "Resourcecontrollerk8v3Rule": Resourcecontrollerk8v3Rule,
+    "Resourcecontrollerk8v3Secret": Resourcecontrollerk8v3Secret,
+    "Resourcecontrollerk8v3TenantGUCCreateResponse": Resourcecontrollerk8v3TenantGUCCreateResponse,
+    "Resourcecontrollerk8v3TenantGUCStatusResponse": Resourcecontrollerk8v3TenantGUCStatusResponse,
+    "Resourcecontrollerk8v3TenantLifecycleResponse": Resourcecontrollerk8v3TenantLifecycleResponse,
+    "Resourcecontrollerk8v3TenantResourceResponse": Resourcecontrollerk8v3TenantResourceResponse,
+    "Resourcecontrollerk8v3TextContent": Resourcecontrollerk8v3TextContent,
+    "Resourcecontrollerk8v3UpdateJobExecutionRequest": Resourcecontrollerk8v3UpdateJobExecutionRequest,
+    "Resourcecontrollerk8v3UpdateJobStatusRequest": Resourcecontrollerk8v3UpdateJobStatusRequest,
+    "Resourcecontrollerk8v3Version": Resourcecontrollerk8v3Version,
     "Riskanalyticscontrollerv3CardSettings": Riskanalyticscontrollerv3CardSettings,
     "Riskanalyticscontrollerv3DetailToCount": Riskanalyticscontrollerv3DetailToCount,
     "Riskanalyticscontrollerv3EmergingRiskDetails": Riskanalyticscontrollerv3EmergingRiskDetails,
@@ -3325,6 +3620,7 @@ let typeMap: {[index: string]: any} = {
     "Riskanalyticscontrollerv3Finding": Riskanalyticscontrollerv3Finding,
     "Riskanalyticscontrollerv3FindingDetails": Riskanalyticscontrollerv3FindingDetails,
     "Riskanalyticscontrollerv3FindingDetailsMap": Riskanalyticscontrollerv3FindingDetailsMap,
+    "Riskanalyticscontrollerv3FindingReferenceLink": Riskanalyticscontrollerv3FindingReferenceLink,
     "Riskanalyticscontrollerv3GetAllClassificationsListResponse": Riskanalyticscontrollerv3GetAllClassificationsListResponse,
     "Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse": Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse,
     "Riskanalyticscontrollerv3GetRiskEventDetailsResponse": Riskanalyticscontrollerv3GetRiskEventDetailsResponse,
@@ -3350,6 +3646,7 @@ let typeMap: {[index: string]: any} = {
     "Riskanalyticscontrollerv3SetUserUISettingsRequest": Riskanalyticscontrollerv3SetUserUISettingsRequest,
     "Riskanalyticscontrollerv3SetUserUISettingsResponse": Riskanalyticscontrollerv3SetUserUISettingsResponse,
     "Riskanalyticscontrollerv3ShortObservation": Riskanalyticscontrollerv3ShortObservation,
+    "Riskanalyticscontrollerv3Statistics": Riskanalyticscontrollerv3Statistics,
     "Riskanalyticscontrollerv3UpdateRiskFeedbackRequest": Riskanalyticscontrollerv3UpdateRiskFeedbackRequest,
     "Riskanalyticscontrollerv3UpdateRiskFeedbackResponse": Riskanalyticscontrollerv3UpdateRiskFeedbackResponse,
     "Riskanalyticscontrollerv3UserUISettings": Riskanalyticscontrollerv3UserUISettings,
@@ -3428,12 +3725,16 @@ let typeMap: {[index: string]: any} = {
     "SetQuestionBodyParams": SetQuestionBodyParams,
     "SetVulnerabilityStatusRequest": SetVulnerabilityStatusRequest,
     "SignupRequest": SignupRequest,
+    "Snifassistv3Feedback": Snifassistv3Feedback,
+    "Snifassistv3GetSnifConfigResponse": Snifassistv3GetSnifConfigResponse,
+    "Snifassistv3PostSnifFeedbackRequest": Snifassistv3PostSnifFeedbackRequest,
     "Snifassistv3SnifAssistResponse": Snifassistv3SnifAssistResponse,
     "Snifassistv3StapConfig": Snifassistv3StapConfig,
     "Snifassistv3StapHeartBeat": Snifassistv3StapHeartBeat,
     "Snifassistv3StatusResponseBase": Snifassistv3StatusResponseBase,
     "Snifassistv3TestRegexRequest": Snifassistv3TestRegexRequest,
     "StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse": StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse,
+    "StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse": StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse,
     "StreamResultOfReportsrunnerv3RunReportResponse": StreamResultOfReportsrunnerv3RunReportResponse,
     "Streamsv3CheckAWSCredentialsRequest": Streamsv3CheckAWSCredentialsRequest,
     "Streamsv3CheckAWSCredentialsResponse": Streamsv3CheckAWSCredentialsResponse,
@@ -3460,6 +3761,7 @@ let typeMap: {[index: string]: any} = {
     "Templatesv3GetOriginDefaultContentResponse": Templatesv3GetOriginDefaultContentResponse,
     "Templatesv3GetOriginFieldsResponse": Templatesv3GetOriginFieldsResponse,
     "Templatesv3GetTemplateResponse": Templatesv3GetTemplateResponse,
+    "Templatesv3GetTemplatesForEdgeResponse": Templatesv3GetTemplatesForEdgeResponse,
     "Templatesv3GetTemplatesResponse": Templatesv3GetTemplatesResponse,
     "Templatesv3SimpleRecipient": Templatesv3SimpleRecipient,
     "Templatesv3Template": Templatesv3Template,
@@ -3482,6 +3784,7 @@ let typeMap: {[index: string]: any} = {
     "Tenantuserv3DisableUsersBulkResponse": Tenantuserv3DisableUsersBulkResponse,
     "Tenantuserv3ExternalMetadata": Tenantuserv3ExternalMetadata,
     "Tenantuserv3FullUser": Tenantuserv3FullUser,
+    "Tenantuserv3GetAPIPrivilegesResponse": Tenantuserv3GetAPIPrivilegesResponse,
     "Tenantuserv3GetApiKeysResponse": Tenantuserv3GetApiKeysResponse,
     "Tenantuserv3GetCurrentUserResponse": Tenantuserv3GetCurrentUserResponse,
     "Tenantuserv3GetPrivilegeResponse": Tenantuserv3GetPrivilegeResponse,
@@ -3581,11 +3884,16 @@ let typeMap: {[index: string]: any} = {
     "Workflowv3Comment": Workflowv3Comment,
     "Workflowv3CreateCaseRequest": Workflowv3CreateCaseRequest,
     "Workflowv3CreateCaseResponse": Workflowv3CreateCaseResponse,
+    "Workflowv3CreateProductEntityResponse": Workflowv3CreateProductEntityResponse,
     "Workflowv3CreateTaskRequest": Workflowv3CreateTaskRequest,
     "Workflowv3CreateTaskResponse": Workflowv3CreateTaskResponse,
     "Workflowv3DeleteCasesResponse": Workflowv3DeleteCasesResponse,
+    "Workflowv3DeleteProductEntityResponse": Workflowv3DeleteProductEntityResponse,
     "Workflowv3DeleteTasksResponse": Workflowv3DeleteTasksResponse,
     "Workflowv3Entity": Workflowv3Entity,
+    "Workflowv3EntityDefinition": Workflowv3EntityDefinition,
+    "Workflowv3EntityHeader": Workflowv3EntityHeader,
+    "Workflowv3EntityValueChoice": Workflowv3EntityValueChoice,
     "Workflowv3Filter": Workflowv3Filter,
     "Workflowv3FilterColumn": Workflowv3FilterColumn,
     "Workflowv3GetCasesCountRequest": Workflowv3GetCasesCountRequest,
@@ -3593,11 +3901,14 @@ let typeMap: {[index: string]: any} = {
     "Workflowv3GetFilenameResponse": Workflowv3GetFilenameResponse,
     "Workflowv3GetJobsCountRequest": Workflowv3GetJobsCountRequest,
     "Workflowv3GetJobsCountResponse": Workflowv3GetJobsCountResponse,
+    "Workflowv3GetProductEntitiesResponse": Workflowv3GetProductEntitiesResponse,
     "Workflowv3GetReportResultResponse": Workflowv3GetReportResultResponse,
     "Workflowv3GetTasksCountRequest": Workflowv3GetTasksCountRequest,
     "Workflowv3GetTasksCountResponse": Workflowv3GetTasksCountResponse,
     "Workflowv3JobCount": Workflowv3JobCount,
     "Workflowv3Origin": Workflowv3Origin,
+    "Workflowv3ProductEntity": Workflowv3ProductEntity,
+    "Workflowv3ProductWorkflow": Workflowv3ProductWorkflow,
     "Workflowv3ReportMetadata": Workflowv3ReportMetadata,
     "Workflowv3ReportResult": Workflowv3ReportResult,
     "Workflowv3ReportResultHeader": Workflowv3ReportResultHeader,
@@ -3614,8 +3925,12 @@ let typeMap: {[index: string]: any} = {
     "Workflowv3TaskListResponse": Workflowv3TaskListResponse,
     "Workflowv3UpdateCasesRequest": Workflowv3UpdateCasesRequest,
     "Workflowv3UpdateCasesResponse": Workflowv3UpdateCasesResponse,
+    "Workflowv3UpdateProductEntityRequest": Workflowv3UpdateProductEntityRequest,
+    "Workflowv3UpdateProductEntityResponse": Workflowv3UpdateProductEntityResponse,
     "Workflowv3UpdateTasksRequest": Workflowv3UpdateTasksRequest,
     "Workflowv3UpdateTasksResponse": Workflowv3UpdateTasksResponse,
+    "Workflowv3WorkflowEvent": Workflowv3WorkflowEvent,
+    "Workflowv3WorkflowEventResponse": Workflowv3WorkflowEventResponse,
 }
 
 type MimeTypeDescriptor = {

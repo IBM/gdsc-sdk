@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_clone_policy_request import Assetsv3ClonePolicyRequest
+from ibm_gdsc_sdk_saas.models.assetsv3_clone_policy_request import Assetsv3ClonePolicyRequest
 
 class TestAssetsv3ClonePolicyRequest(unittest.TestCase):
     """Assetsv3ClonePolicyRequest unit test stubs"""
@@ -38,16 +38,16 @@ class TestAssetsv3ClonePolicyRequest(unittest.TestCase):
                 policy_id = '',
                 policy_name = '',
                 rules = [
-                    ibm_gdsc_sdk_software.models.assetsv3_rule.assetsv3Rule(
+                    ibm_gdsc_sdk_saas.models.assetsv3_rule.assetsv3Rule(
                         actions = [
-                            ibm_gdsc_sdk_software.models.action___action_associated_with_a_rule.Action - Action associated with a rule(
+                            ibm_gdsc_sdk_saas.models.action___action_associated_with_a_rule.Action - Action associated with a rule(
                                 dest_category = '', 
                                 dest_type = '', 
                                 dest_value = '', )
                             ], 
                         is_delete = 56, 
                         parameters = [
-                            ibm_gdsc_sdk_software.models.rule_parameter___parameters_for_a_rule.RuleParameter - Parameters for a rule(
+                            ibm_gdsc_sdk_saas.models.rule_parameter___parameters_for_a_rule.RuleParameter - Parameters for a rule(
                                 asset_attribute = '', 
                                 attribute_enum = '', 
                                 condition = '', 

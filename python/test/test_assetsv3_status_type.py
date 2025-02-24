@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_status_type import Assetsv3StatusType
+from ibm_gdsc_sdk_saas.models.assetsv3_status_type import Assetsv3StatusType
 
 class TestAssetsv3StatusType(unittest.TestCase):
     """Assetsv3StatusType unit test stubs"""

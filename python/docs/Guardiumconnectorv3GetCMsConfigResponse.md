@@ -1,6 +1,6 @@
 # Guardiumconnectorv3GetCMsConfigResponse
 
-Retrieves the list of Central Managers registered to Guardium.
+Retrieves the list of Central Managers registered to GDSC.
 
 ## Properties
 
@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_get_cms_config_response import Guardiumconnectorv3GetCMsConfigResponse
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_get_cms_config_response import Guardiumconnectorv3GetCMsConfigResponse
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_finding import Riskanalyticscontrollerv3Finding
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_finding import Riskanalyticscontrollerv3Finding
 
 class TestRiskanalyticscontrollerv3Finding(unittest.TestCase):
     """Riskanalyticscontrollerv3Finding unit test stubs"""
@@ -37,17 +37,43 @@ class TestRiskanalyticscontrollerv3Finding(unittest.TestCase):
             return Riskanalyticscontrollerv3Finding(
                 finding_description = '',
                 finding_details_map = [
-                    ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_finding_details_map.riskanalyticscontrollerv3FindingDetailsMap(
-                        finding_details = ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_finding_details.riskanalyticscontrollerv3FindingDetails(
+                    ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_finding_details_map.riskanalyticscontrollerv3FindingDetailsMap(
+                        finding_details = ibm_gdsc_sdk_saas.models.details_examples,_reference_links_that_show_evidence.Details examples, reference links that show evidence(
                             counts = [
-                                ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_detail_to_count.riskanalyticscontrollerv3DetailToCount(
+                                ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_detail_to_count.riskanalyticscontrollerv3DetailToCount(
                                     count = 56, 
                                     desc = '', )
                                 ], 
                             finding_examples = [
                                 ''
+                                ], 
+                            finding_references = [
+                                ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_finding_reference_link.riskanalyticscontrollerv3FindingReferenceLink(
+                                    report_filters = [
+                                        ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_observation_report_filter.riskanalyticscontrollerv3ObservationReportFilter(
+                                            header_id = '', 
+                                            header_value = '', 
+                                            operator_type = 'UNDEFINED_OPERATOR_TYPE', )
+                                        ], 
+                                    statistics = ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_statistics.riskanalyticscontrollerv3Statistics(
+                                        average = 1.337, 
+                                        total = 56, ), 
+                                    text = '', 
+                                    text_template = '', 
+                                    text_variables = [
+                                        ''
+                                        ], )
                                 ], ), 
-                        finding_details_type = '', )
+                        finding_details_type = '', 
+                        finding_reference = ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_finding_reference_link.riskanalyticscontrollerv3FindingReferenceLink(
+                            report_filters = [
+                                ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_observation_report_filter.riskanalyticscontrollerv3ObservationReportFilter(
+                                    header_id = '', 
+                                    header_value = '', )
+                                ], 
+                            text = '', 
+                            text_template = '', ), 
+                        report = '', )
                     ],
                 finding_type = 'UNDEFINED_OBSERVATION_TYPE'
             )

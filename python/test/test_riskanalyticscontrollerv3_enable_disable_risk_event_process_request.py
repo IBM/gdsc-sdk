@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_enable_disable_risk_event_process_request import Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_enable_disable_risk_event_process_request import Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest
 
 class TestRiskanalyticscontrollerv3EnableDisableRiskEventProcessRequest(unittest.TestCase):
     """Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest unit test stubs"""

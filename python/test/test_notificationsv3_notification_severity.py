@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.notificationsv3_notification_severity import Notificationsv3NotificationSeverity
+from ibm_gdsc_sdk_saas.models.notificationsv3_notification_severity import Notificationsv3NotificationSeverity
 
 class TestNotificationsv3NotificationSeverity(unittest.TestCase):
     """Notificationsv3NotificationSeverity unit test stubs"""

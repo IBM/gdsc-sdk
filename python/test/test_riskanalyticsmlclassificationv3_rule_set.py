@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticsmlclassificationv3_rule_set import Riskanalyticsmlclassificationv3RuleSet
+from ibm_gdsc_sdk_saas.models.riskanalyticsmlclassificationv3_rule_set import Riskanalyticsmlclassificationv3RuleSet
 
 class TestRiskanalyticsmlclassificationv3RuleSet(unittest.TestCase):
     """Riskanalyticsmlclassificationv3RuleSet unit test stubs"""

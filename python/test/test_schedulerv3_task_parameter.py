@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.schedulerv3_task_parameter import Schedulerv3TaskParameter
+from ibm_gdsc_sdk_saas.models.schedulerv3_task_parameter import Schedulerv3TaskParameter
 
 class TestSchedulerv3TaskParameter(unittest.TestCase):
     """Schedulerv3TaskParameter unit test stubs"""
@@ -35,17 +35,17 @@ class TestSchedulerv3TaskParameter(unittest.TestCase):
         model = Schedulerv3TaskParameter()
         if include_optional:
             return Schedulerv3TaskParameter(
-                data_import_parameter = ibm_gdsc_sdk_software.models.schedulerv3_integration_parameter.schedulerv3IntegrationParameter(
+                data_import_parameter = ibm_gdsc_sdk_saas.models.schedulerv3_integration_parameter.schedulerv3IntegrationParameter(
                     extra_detail = '', 
                     integration_id = '', 
                     template_id = '', 
                     value = '', ),
-                report_parameter = ibm_gdsc_sdk_software.models.schedulerv3_report_parameter.schedulerv3ReportParameter(
+                report_parameter = ibm_gdsc_sdk_saas.models.schedulerv3_report_parameter.schedulerv3ReportParameter(
                     extra_detail = '', 
                     report_id = '', 
                     report_name = '', 
                     runtime_parameters = [
-                        ibm_gdsc_sdk_software.models.reportsv3_run_time_parameter.reportsv3RunTimeParameter(
+                        ibm_gdsc_sdk_saas.models.reportsv3_run_time_parameter.reportsv3RunTimeParameter(
                             key = '', 
                             label = '', 
                             operator_type = 'UNDEFINED_OPERATOR_TYPE', 
@@ -53,7 +53,8 @@ class TestSchedulerv3TaskParameter(unittest.TestCase):
                             runtime_parameter_type_length = 56, 
                             value = '', )
                         ], 
-                    sync_execution_date = True, )
+                    sync_execution_date = True, 
+                    threshold = 56, )
             )
         else:
             return Schedulerv3TaskParameter(

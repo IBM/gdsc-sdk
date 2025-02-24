@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.ecosystemv3_create_dataset_response import Ecosystemv3CreateDatasetResponse
+from ibm_gdsc_sdk_saas.models.ecosystemv3_create_dataset_response import Ecosystemv3CreateDatasetResponse
 
 # TODO update the JSON string below
 json = "{}"

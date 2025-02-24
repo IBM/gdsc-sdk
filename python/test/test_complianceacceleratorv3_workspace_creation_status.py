@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.complianceacceleratorv3_workspace_creation_status import Complianceacceleratorv3WorkspaceCreationStatus
+from ibm_gdsc_sdk_saas.models.complianceacceleratorv3_workspace_creation_status import Complianceacceleratorv3WorkspaceCreationStatus
 
 class TestComplianceacceleratorv3WorkspaceCreationStatus(unittest.TestCase):
     """Complianceacceleratorv3WorkspaceCreationStatus unit test stubs"""

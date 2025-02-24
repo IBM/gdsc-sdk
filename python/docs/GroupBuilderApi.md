@@ -1,4 +1,4 @@
-# ibm_gdsc_sdk_software.GroupBuilderApi
+# ibm_gdsc_sdk_saas.GroupBuilderApi
 
 All URIs are relative to *http://localhost*
 
@@ -11,8 +11,8 @@ Method | HTTP request | Description
 [**group_builder_export_group**](GroupBuilderApi.md#group_builder_export_group) | **POST** /api/v3/groups_export | Summary: Export group Description: Export group content to a file based on a group ID.
 [**group_builder_get_group_details**](GroupBuilderApi.md#group_builder_get_group_details) | **GET** /api/v3/groups/{group_id} | Summary: Get group details Description: Get details of group specified by group ID.
 [**group_builder_get_group_members**](GroupBuilderApi.md#group_builder_get_group_members) | **POST** /api/v3/groups/search | Summary: Get group members Description: Get members of all the group ids provided in the request. To be consumed by policy builder ms.
-[**group_builder_get_group_sync_mapping**](GroupBuilderApi.md#group_builder_get_group_sync_mapping) | **GET** /api/v3/groups/mappings/sync | Summary: Get gdp to gi group mapping Description: Get insights to gdp group sync mapping.
-[**group_builder_get_group_type_mapping**](GroupBuilderApi.md#group_builder_get_group_type_mapping) | **GET** /api/v3/groups-mappings | Summary: Get group type mapping Description: Get insights to gdp group types mapping.
+[**group_builder_get_group_sync_mapping**](GroupBuilderApi.md#group_builder_get_group_sync_mapping) | **GET** /api/v3/groups/mappings/sync | Summary: Get GDP to gi group mapping Description: Get GDSC to GDP group sync mapping.
+[**group_builder_get_group_type_mapping**](GroupBuilderApi.md#group_builder_get_group_type_mapping) | **GET** /api/v3/groups-mappings | Summary: Get group type mapping Description: Get GDSC to GDP group types mapping.
 [**group_builder_get_group_types**](GroupBuilderApi.md#group_builder_get_group_types) | **GET** /api/v3/group_types | Summary: Get group types Description: Get a list of available group types.
 [**group_builder_get_groups**](GroupBuilderApi.md#group_builder_get_groups) | **GET** /api/v3/groups | Summary: Get groups Description: Get a list of imported group members.
 [**group_builder_get_import_groups**](GroupBuilderApi.md#group_builder_get_import_groups) | **GET** /api/v3/groups_import | Summary: Get import groups Description: Get unsynchronized groups from a central manager.
@@ -34,14 +34,14 @@ Summary: Cancel import group Description: Cancel import refresh for selected gro
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.groupbuilderv3_cancel_group_import_response import Groupbuilderv3CancelGroupImportResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_cancel_group_import_response import Groupbuilderv3CancelGroupImportResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -51,7 +51,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -63,9 +63,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GroupBuilderApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GroupBuilderApi(api_client)
     group_ids = [56] # List[int] | Group IDs to delete. (optional)
 
     try:
@@ -119,15 +119,15 @@ Summary: Create group Description: Create new groups.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.groupbuilderv3_create_group_request import Groupbuilderv3CreateGroupRequest
-from ibm_gdsc_sdk_software.models.groupbuilderv3_create_group_response import Groupbuilderv3CreateGroupResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_create_group_request import Groupbuilderv3CreateGroupRequest
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_create_group_response import Groupbuilderv3CreateGroupResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -137,7 +137,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -149,10 +149,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GroupBuilderApi(api_client)
-    groupbuilderv3_create_group_request = ibm_gdsc_sdk_software.Groupbuilderv3CreateGroupRequest() # Groupbuilderv3CreateGroupRequest | 
+    api_instance = ibm_gdsc_sdk_saas.GroupBuilderApi(api_client)
+    groupbuilderv3_create_group_request = ibm_gdsc_sdk_saas.Groupbuilderv3CreateGroupRequest() # Groupbuilderv3CreateGroupRequest | 
 
     try:
         # Summary: Create group Description: Create new groups.
@@ -205,14 +205,14 @@ Summary: Delete group Description: Delete specified groups if the group ID is no
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.groupbuilderv3_delete_group_response import Groupbuilderv3DeleteGroupResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_delete_group_response import Groupbuilderv3DeleteGroupResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -222,7 +222,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -234,9 +234,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GroupBuilderApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GroupBuilderApi(api_client)
     group_ids = [56] # List[int] | Group IDs to delete. (optional)
 
     try:
@@ -290,15 +290,15 @@ Summary: Edit group Description: Add or delete group members.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.groupbuilderv3_edit_group_request import Groupbuilderv3EditGroupRequest
-from ibm_gdsc_sdk_software.models.groupbuilderv3_edit_group_response import Groupbuilderv3EditGroupResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_edit_group_request import Groupbuilderv3EditGroupRequest
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_edit_group_response import Groupbuilderv3EditGroupResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -308,7 +308,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -320,11 +320,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GroupBuilderApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GroupBuilderApi(api_client)
     group_id = 56 # int | Group ID.
-    groupbuilderv3_edit_group_request = ibm_gdsc_sdk_software.Groupbuilderv3EditGroupRequest() # Groupbuilderv3EditGroupRequest | 
+    groupbuilderv3_edit_group_request = ibm_gdsc_sdk_saas.Groupbuilderv3EditGroupRequest() # Groupbuilderv3EditGroupRequest | 
 
     try:
         # Summary: Edit group Description: Add or delete group members.
@@ -378,15 +378,15 @@ Summary: Export group Description: Export group content to a file based on a gro
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.groupbuilderv3_get_export_group_request import Groupbuilderv3GetExportGroupRequest
-from ibm_gdsc_sdk_software.models.groupbuilderv3_get_export_group_response import Groupbuilderv3GetExportGroupResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_get_export_group_request import Groupbuilderv3GetExportGroupRequest
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_get_export_group_response import Groupbuilderv3GetExportGroupResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -396,7 +396,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -408,10 +408,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GroupBuilderApi(api_client)
-    groupbuilderv3_get_export_group_request = ibm_gdsc_sdk_software.Groupbuilderv3GetExportGroupRequest() # Groupbuilderv3GetExportGroupRequest | 
+    api_instance = ibm_gdsc_sdk_saas.GroupBuilderApi(api_client)
+    groupbuilderv3_get_export_group_request = ibm_gdsc_sdk_saas.Groupbuilderv3GetExportGroupRequest() # Groupbuilderv3GetExportGroupRequest | 
 
     try:
         # Summary: Export group Description: Export group content to a file based on a group ID.
@@ -464,14 +464,14 @@ Summary: Get group details Description: Get details of group specified by group 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.groupbuilderv3_get_group_detail_response import Groupbuilderv3GetGroupDetailResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_get_group_detail_response import Groupbuilderv3GetGroupDetailResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -481,7 +481,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -493,9 +493,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GroupBuilderApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GroupBuilderApi(api_client)
     group_id = 56 # int | Group ID.
     filter = 'filter_example' # str | Filter by group member name. (optional)
     order = 'order_example' # str | Order by ascending (ASC) or descending (DESC). (optional)
@@ -553,15 +553,15 @@ Summary: Get group members Description: Get members of all the group ids provide
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.groupbuilderv3_get_group_members_request import Groupbuilderv3GetGroupMembersRequest
-from ibm_gdsc_sdk_software.models.groupbuilderv3_get_group_members_response import Groupbuilderv3GetGroupMembersResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_get_group_members_request import Groupbuilderv3GetGroupMembersRequest
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_get_group_members_response import Groupbuilderv3GetGroupMembersResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -571,7 +571,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -583,10 +583,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GroupBuilderApi(api_client)
-    groupbuilderv3_get_group_members_request = ibm_gdsc_sdk_software.Groupbuilderv3GetGroupMembersRequest() # Groupbuilderv3GetGroupMembersRequest | 
+    api_instance = ibm_gdsc_sdk_saas.GroupBuilderApi(api_client)
+    groupbuilderv3_get_group_members_request = ibm_gdsc_sdk_saas.Groupbuilderv3GetGroupMembersRequest() # Groupbuilderv3GetGroupMembersRequest | 
 
     try:
         # Summary: Get group members Description: Get members of all the group ids provided in the request. To be consumed by policy builder ms.
@@ -631,7 +631,7 @@ Name | Type | Description  | Notes
 # **group_builder_get_group_sync_mapping**
 > Groupbuilderv3GetGroupSyncMappingResponse group_builder_get_group_sync_mapping(central_manager_id=central_manager_id)
 
-Summary: Get gdp to gi group mapping Description: Get insights to gdp group sync mapping.
+Summary: Get GDP to gi group mapping Description: Get GDSC to GDP group sync mapping.
 
 ### Example
 
@@ -639,14 +639,14 @@ Summary: Get gdp to gi group mapping Description: Get insights to gdp group sync
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.groupbuilderv3_get_group_sync_mapping_response import Groupbuilderv3GetGroupSyncMappingResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_get_group_sync_mapping_response import Groupbuilderv3GetGroupSyncMappingResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -656,7 +656,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -668,13 +668,13 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GroupBuilderApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GroupBuilderApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | Central manager. (optional)
 
     try:
-        # Summary: Get gdp to gi group mapping Description: Get insights to gdp group sync mapping.
+        # Summary: Get GDP to gi group mapping Description: Get GDSC to GDP group sync mapping.
         api_response = api_instance.group_builder_get_group_sync_mapping(central_manager_id=central_manager_id)
         print("The response of GroupBuilderApi->group_builder_get_group_sync_mapping:\n")
         pprint(api_response)
@@ -716,7 +716,7 @@ Name | Type | Description  | Notes
 # **group_builder_get_group_type_mapping**
 > Groupbuilderv3GetGroupTypeMappingResponse group_builder_get_group_type_mapping()
 
-Summary: Get group type mapping Description: Get insights to gdp group types mapping.
+Summary: Get group type mapping Description: Get GDSC to GDP group types mapping.
 
 ### Example
 
@@ -724,14 +724,14 @@ Summary: Get group type mapping Description: Get insights to gdp group types map
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.groupbuilderv3_get_group_type_mapping_response import Groupbuilderv3GetGroupTypeMappingResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_get_group_type_mapping_response import Groupbuilderv3GetGroupTypeMappingResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -741,7 +741,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -753,12 +753,12 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GroupBuilderApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GroupBuilderApi(api_client)
 
     try:
-        # Summary: Get group type mapping Description: Get insights to gdp group types mapping.
+        # Summary: Get group type mapping Description: Get GDSC to GDP group types mapping.
         api_response = api_instance.group_builder_get_group_type_mapping()
         print("The response of GroupBuilderApi->group_builder_get_group_type_mapping:\n")
         pprint(api_response)
@@ -805,14 +805,14 @@ Summary: Get group types Description: Get a list of available group types.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.groupbuilderv3_get_group_types_response import Groupbuilderv3GetGroupTypesResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_get_group_types_response import Groupbuilderv3GetGroupTypesResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -822,7 +822,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -834,9 +834,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GroupBuilderApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GroupBuilderApi(api_client)
 
     try:
         # Summary: Get group types Description: Get a list of available group types.
@@ -886,14 +886,14 @@ Summary: Get groups Description: Get a list of imported group members.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.groupbuilderv3_get_groups_response import Groupbuilderv3GetGroupsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_get_groups_response import Groupbuilderv3GetGroupsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -903,7 +903,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -915,9 +915,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GroupBuilderApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GroupBuilderApi(api_client)
     do_not_include_member_count = True # bool | Return group names, ID's, type ID's, nested bool, and tuple count only if the flag is true. (optional)
     only_full_access = True # bool | Only return groups that user has full-access to. (optional)
     non_nested = True # bool | Only return non-nested groups. (optional)
@@ -975,14 +975,14 @@ Summary: Get import groups Description: Get unsynchronized groups from a central
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.groupbuilderv3_get_import_groups_response import Groupbuilderv3GetImportGroupsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_get_import_groups_response import Groupbuilderv3GetImportGroupsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -992,7 +992,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1004,9 +1004,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GroupBuilderApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GroupBuilderApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | Central manager host name. (optional)
 
     try:
@@ -1060,15 +1060,15 @@ Summary: Import group Description: Import selected groups from a central manager
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.groupbuilderv3_import_group_request import Groupbuilderv3ImportGroupRequest
-from ibm_gdsc_sdk_software.models.groupbuilderv3_import_group_response import Groupbuilderv3ImportGroupResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_import_group_request import Groupbuilderv3ImportGroupRequest
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_import_group_response import Groupbuilderv3ImportGroupResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1078,7 +1078,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1090,10 +1090,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GroupBuilderApi(api_client)
-    groupbuilderv3_import_group_request = ibm_gdsc_sdk_software.Groupbuilderv3ImportGroupRequest() # Groupbuilderv3ImportGroupRequest | 
+    api_instance = ibm_gdsc_sdk_saas.GroupBuilderApi(api_client)
+    groupbuilderv3_import_group_request = ibm_gdsc_sdk_saas.Groupbuilderv3ImportGroupRequest() # Groupbuilderv3ImportGroupRequest | 
 
     try:
         # Summary: Import group Description: Import selected groups from a central manager. (This API is called from GDP only)
@@ -1146,15 +1146,15 @@ Summary: Refresh groups Description: Refresh tenants selected imported groups.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.groupbuilderv3_refresh_groups_request import Groupbuilderv3RefreshGroupsRequest
-from ibm_gdsc_sdk_software.models.groupbuilderv3_refresh_groups_response import Groupbuilderv3RefreshGroupsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_refresh_groups_request import Groupbuilderv3RefreshGroupsRequest
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_refresh_groups_response import Groupbuilderv3RefreshGroupsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1164,7 +1164,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1176,10 +1176,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GroupBuilderApi(api_client)
-    groupbuilderv3_refresh_groups_request = ibm_gdsc_sdk_software.Groupbuilderv3RefreshGroupsRequest() # Groupbuilderv3RefreshGroupsRequest | 
+    api_instance = ibm_gdsc_sdk_saas.GroupBuilderApi(api_client)
+    groupbuilderv3_refresh_groups_request = ibm_gdsc_sdk_saas.Groupbuilderv3RefreshGroupsRequest() # Groupbuilderv3RefreshGroupsRequest | 
 
     try:
         # Summary: Refresh groups Description: Refresh tenants selected imported groups.
@@ -1232,15 +1232,15 @@ Summary: Reset groups Description: Resets tenants selected predefined groups.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.groupbuilderv3_reset_groups_request import Groupbuilderv3ResetGroupsRequest
-from ibm_gdsc_sdk_software.models.groupbuilderv3_reset_groups_response import Groupbuilderv3ResetGroupsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_reset_groups_request import Groupbuilderv3ResetGroupsRequest
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_reset_groups_response import Groupbuilderv3ResetGroupsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1250,7 +1250,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1262,10 +1262,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GroupBuilderApi(api_client)
-    groupbuilderv3_reset_groups_request = ibm_gdsc_sdk_software.Groupbuilderv3ResetGroupsRequest() # Groupbuilderv3ResetGroupsRequest | 
+    api_instance = ibm_gdsc_sdk_saas.GroupBuilderApi(api_client)
+    groupbuilderv3_reset_groups_request = ibm_gdsc_sdk_saas.Groupbuilderv3ResetGroupsRequest() # Groupbuilderv3ResetGroupsRequest | 
 
     try:
         # Summary: Reset groups Description: Resets tenants selected predefined groups.
@@ -1318,15 +1318,15 @@ Summary: Store group members Gdp Description: Store GDP groups. (This API is cal
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.groupbuilderv3_store_group_members_gdp_request import Groupbuilderv3StoreGroupMembersGdpRequest
-from ibm_gdsc_sdk_software.models.groupbuilderv3_store_group_members_gdp_response import Groupbuilderv3StoreGroupMembersGdpResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_store_group_members_gdp_request import Groupbuilderv3StoreGroupMembersGdpRequest
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_store_group_members_gdp_response import Groupbuilderv3StoreGroupMembersGdpResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1336,7 +1336,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1348,11 +1348,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GroupBuilderApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GroupBuilderApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | ID of central manager.
-    groupbuilderv3_store_group_members_gdp_request = ibm_gdsc_sdk_software.Groupbuilderv3StoreGroupMembersGdpRequest() # Groupbuilderv3StoreGroupMembersGdpRequest | 
+    groupbuilderv3_store_group_members_gdp_request = ibm_gdsc_sdk_saas.Groupbuilderv3StoreGroupMembersGdpRequest() # Groupbuilderv3StoreGroupMembersGdpRequest | 
 
     try:
         # Summary: Store group members Gdp Description: Store GDP groups. (This API is called from GDP only)
@@ -1406,15 +1406,15 @@ Summary: Store groups Gdp Description: Store GDP groups. (This API is called fro
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.groupbuilderv3_get_groups_request_gdp import Groupbuilderv3GetGroupsRequestGdp
-from ibm_gdsc_sdk_software.models.groupbuilderv3_get_groups_response_gdp import Groupbuilderv3GetGroupsResponseGdp
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_get_groups_request_gdp import Groupbuilderv3GetGroupsRequestGdp
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_get_groups_response_gdp import Groupbuilderv3GetGroupsResponseGdp
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1424,7 +1424,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1436,11 +1436,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GroupBuilderApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GroupBuilderApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | ID of central manager.
-    groupbuilderv3_get_groups_request_gdp = ibm_gdsc_sdk_software.Groupbuilderv3GetGroupsRequestGdp() # Groupbuilderv3GetGroupsRequestGdp | 
+    groupbuilderv3_get_groups_request_gdp = ibm_gdsc_sdk_saas.Groupbuilderv3GetGroupsRequestGdp() # Groupbuilderv3GetGroupsRequestGdp | 
 
     try:
         # Summary: Store groups Gdp Description: Store GDP groups. (This API is called from GDP only)

@@ -6,13 +6,13 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bucket_name** | **str** |  | [optional] 
+**file_name** | [**Qspmpolicymanagerv3FileName**](Qspmpolicymanagerv3FileName.md) |  | [optional] 
 **folder_name** | **str** |  | [optional] 
-**file_name** | **List[str]** |  | [optional] 
 
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.qspmpolicymanagerv3_fetch_object_store_file_response import Qspmpolicymanagerv3FetchObjectStoreFileResponse
+from ibm_gdsc_sdk_saas.models.qspmpolicymanagerv3_fetch_object_store_file_response import Qspmpolicymanagerv3FetchObjectStoreFileResponse
 
 # TODO update the JSON string below
 json = "{}"

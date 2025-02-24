@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.tags import Tags
+from ibm_gdsc_sdk_saas.models.tags import Tags
 
 class TestTags(unittest.TestCase):
     """Tags unit test stubs"""

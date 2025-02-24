@@ -6,14 +6,14 @@ ContributionPointersInfoObject is the request type for the api call to get the S
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**column** | **str** | The colmun name in the db2 table. | [optional] 
+**column** | **str** | The colmun name in the data warehouse table. | [optional] 
 **operator** | **str** | The operation to perform. | [optional] 
 **value** | **str** | The value to match. | [optional] 
 
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.reportsv3_contribution_pointers_info_object import Reportsv3ContributionPointersInfoObject
+from ibm_gdsc_sdk_saas.models.reportsv3_contribution_pointers_info_object import Reportsv3ContributionPointersInfoObject
 
 # TODO update the JSON string below
 json = "{}"

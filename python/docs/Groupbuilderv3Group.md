@@ -1,6 +1,6 @@
 # Groupbuilderv3Group
 
-Group imports groups from a Guradium Data Protection central manager to Guardium.
+Group imports groups from a Guradium Data Protection central manager to GDSC.
 
 ## Properties
 
@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.groupbuilderv3_group import Groupbuilderv3Group
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_group import Groupbuilderv3Group
 
 # TODO update the JSON string below
 json = "{}"

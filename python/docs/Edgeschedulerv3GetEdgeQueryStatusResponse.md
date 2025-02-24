@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.edgeschedulerv3_get_edge_query_status_response import Edgeschedulerv3GetEdgeQueryStatusResponse
+from ibm_gdsc_sdk_saas.models.edgeschedulerv3_get_edge_query_status_response import Edgeschedulerv3GetEdgeQueryStatusResponse
 
 # TODO update the JSON string below
 json = "{}"

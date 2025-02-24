@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.schedulerv3_report_array import Schedulerv3ReportArray
+from ibm_gdsc_sdk_saas.models.schedulerv3_report_array import Schedulerv3ReportArray
 
 class TestSchedulerv3ReportArray(unittest.TestCase):
     """Schedulerv3ReportArray unit test stubs"""

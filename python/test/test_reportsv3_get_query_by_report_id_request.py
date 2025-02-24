@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_get_query_by_report_id_request import Reportsv3GetQueryByReportIDRequest
+from ibm_gdsc_sdk_saas.models.reportsv3_get_query_by_report_id_request import Reportsv3GetQueryByReportIDRequest
 
 class TestReportsv3GetQueryByReportIDRequest(unittest.TestCase):
     """Reportsv3GetQueryByReportIDRequest unit test stubs"""
@@ -37,7 +37,7 @@ class TestReportsv3GetQueryByReportIDRequest(unittest.TestCase):
             return Reportsv3GetQueryByReportIDRequest(
                 add_group_literal = '',
                 add_job_id_literal = '',
-                date_range = ibm_gdsc_sdk_software.models.reportsv3_date_range.reportsv3DateRange(
+                date_range = ibm_gdsc_sdk_saas.models.reportsv3_date_range.reportsv3DateRange(
                     end_date = '', 
                     end_number = 56, 
                     end_unit = 'UNDEFINED_UINT_TYPE', 
@@ -47,22 +47,22 @@ class TestReportsv3GetQueryByReportIDRequest(unittest.TestCase):
                     type = 'UNDEFINED_DATE_RANGE_TYPE', ),
                 default_chart_expanded = True,
                 exclude_group_id = '',
-                facet_selected_header = ibm_gdsc_sdk_software.models.reportsv3_report_header.reportsv3ReportHeader(
+                facet_selected_header = ibm_gdsc_sdk_saas.models.reportsv3_report_header.reportsv3ReportHeader(
                     aggregation_type = 'UNDEFINED_AGG_TYPE', 
-                    field_name = ibm_gdsc_sdk_software.models.reportsv3_field_name.reportsv3FieldName(
+                    field_name = ibm_gdsc_sdk_saas.models.reportsv3_field_name.reportsv3FieldName(
                         customized_value = '', 
                         nls_key = '', 
                         nls_value = '', ), 
                     group_type_id = 56, 
                     header_data_type = 'UNDEFINED_REPORT_HEADER_TYPE', 
-                    header_description = ibm_gdsc_sdk_software.models.reportsv3_header_description.reportsv3HeaderDescription(
+                    header_description = ibm_gdsc_sdk_saas.models.reportsv3_header_description.reportsv3HeaderDescription(
                         nls_key = '', 
                         nls_value = '', ), 
                     header_id = '', 
                     header_name = '', 
                     header_type = 'UNDEFINED_TYPE', 
                     header_type_length = 56, 
-                    literal = ibm_gdsc_sdk_software.models.reportsv3_literal.reportsv3Literal(
+                    literal = ibm_gdsc_sdk_saas.models.reportsv3_literal.reportsv3Literal(
                         customized_value = '', 
                         nls_key = '', 
                         nls_value = '', ), 

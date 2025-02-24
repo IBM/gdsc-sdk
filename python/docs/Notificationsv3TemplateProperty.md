@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.notificationsv3_template_property import Notificationsv3TemplateProperty
+from ibm_gdsc_sdk_saas.models.notificationsv3_template_property import Notificationsv3TemplateProperty
 
 # TODO update the JSON string below
 json = "{}"

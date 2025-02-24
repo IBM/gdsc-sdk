@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_finding_details import Riskanalyticscontrollerv3FindingDetails
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_finding_details import Riskanalyticscontrollerv3FindingDetails
 
 class TestRiskanalyticscontrollerv3FindingDetails(unittest.TestCase):
     """Riskanalyticscontrollerv3FindingDetails unit test stubs"""
@@ -36,12 +36,29 @@ class TestRiskanalyticscontrollerv3FindingDetails(unittest.TestCase):
         if include_optional:
             return Riskanalyticscontrollerv3FindingDetails(
                 counts = [
-                    ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_detail_to_count.riskanalyticscontrollerv3DetailToCount(
+                    ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_detail_to_count.riskanalyticscontrollerv3DetailToCount(
                         count = 56, 
                         desc = '', )
                     ],
                 finding_examples = [
                     ''
+                    ],
+                finding_references = [
+                    ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_finding_reference_link.riskanalyticscontrollerv3FindingReferenceLink(
+                        report_filters = [
+                            ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_observation_report_filter.riskanalyticscontrollerv3ObservationReportFilter(
+                                header_id = '', 
+                                header_value = '', 
+                                operator_type = 'UNDEFINED_OPERATOR_TYPE', )
+                            ], 
+                        statistics = ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_statistics.riskanalyticscontrollerv3Statistics(
+                            average = 1.337, 
+                            total = 56, ), 
+                        text = '', 
+                        text_template = '', 
+                        text_variables = [
+                            ''
+                            ], )
                     ]
             )
         else:

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.assetsv3_filter_sub_catagory_child import Assetsv3FilterSubCatagoryChild
+from ibm_gdsc_sdk_saas.models.assetsv3_filter_sub_catagory_child import Assetsv3FilterSubCatagoryChild
 
 # TODO update the JSON string below
 json = "{}"

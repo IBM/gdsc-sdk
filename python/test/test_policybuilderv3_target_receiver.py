@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_target_receiver import Policybuilderv3TargetReceiver
+from ibm_gdsc_sdk_saas.models.policybuilderv3_target_receiver import Policybuilderv3TargetReceiver
 
 class TestPolicybuilderv3TargetReceiver(unittest.TestCase):
     """Policybuilderv3TargetReceiver unit test stubs"""

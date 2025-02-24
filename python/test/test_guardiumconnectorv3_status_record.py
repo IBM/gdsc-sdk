@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_status_record import Guardiumconnectorv3StatusRecord
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_status_record import Guardiumconnectorv3StatusRecord
 
 class TestGuardiumconnectorv3StatusRecord(unittest.TestCase):
     """Guardiumconnectorv3StatusRecord unit test stubs"""
@@ -36,7 +36,7 @@ class TestGuardiumconnectorv3StatusRecord(unittest.TestCase):
         if include_optional:
             return Guardiumconnectorv3StatusRecord(
                 attributes = [
-                    ibm_gdsc_sdk_software.models.guardiumconnectorv3_status_attribute.guardiumconnectorv3StatusAttribute(
+                    ibm_gdsc_sdk_saas.models.guardiumconnectorv3_status_attribute.guardiumconnectorv3StatusAttribute(
                         key = '', 
                         value = '', )
                     ],

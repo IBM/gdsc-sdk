@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.groupbuilderv3_gdp_group import Groupbuilderv3GdpGroup
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_gdp_group import Groupbuilderv3GdpGroup
 
 # TODO update the JSON string below
 json = "{}"

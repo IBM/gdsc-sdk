@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.authenticate400_response import Authenticate400Response
+from ibm_gdsc_sdk_saas.models.authenticate400_response import Authenticate400Response
 
 # TODO update the JSON string below
 json = "{}"

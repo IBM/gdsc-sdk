@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_run_report_response import Reportsrunnerv3RunReportResponse
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_run_report_response import Reportsrunnerv3RunReportResponse
 
 class TestReportsrunnerv3RunReportResponse(unittest.TestCase):
     """Reportsrunnerv3RunReportResponse unit test stubs"""
@@ -36,15 +36,15 @@ class TestReportsrunnerv3RunReportResponse(unittest.TestCase):
         if include_optional:
             return Reportsrunnerv3RunReportResponse(
                 data = [
-                    ibm_gdsc_sdk_software.models.data_row_is_the_type_of_one_of_the_results.DataRow is the type of one of the results(
+                    ibm_gdsc_sdk_saas.models.data_row_is_the_type_of_one_of_the_results.DataRow is the type of one of the results(
                         results = {
                             'key' : ''
                             }, )
                     ],
                 facets = [
-                    ibm_gdsc_sdk_software.models.filter_headers_is_the_column_for_which_each_of_the_filters_can_be_selected.FilterHeaders is the column for which each of the filters can be selected(
+                    ibm_gdsc_sdk_saas.models.filter_headers_is_the_column_for_which_each_of_the_filters_can_be_selected.FilterHeaders is the column for which each of the filters can be selected(
                         filters = [
-                            ibm_gdsc_sdk_software.models.reportsrunnerv3_filter.reportsrunnerv3Filter(
+                            ibm_gdsc_sdk_saas.models.reportsrunnerv3_filter.reportsrunnerv3Filter(
                                 count = 56, 
                                 value = '', )
                             ], 
@@ -53,12 +53,12 @@ class TestReportsrunnerv3RunReportResponse(unittest.TestCase):
                     ],
                 final_result = True,
                 limit_reached = True,
-                report_layout = ibm_gdsc_sdk_software.models.reportsv3_report_display_layout.reportsv3ReportDisplayLayout(
+                report_layout = ibm_gdsc_sdk_saas.models.reportsv3_report_display_layout.reportsv3ReportDisplayLayout(
                     default_timestamp_header_id = '', 
                     fetch_size = 56, 
                     in_report_additional_parameter = [
-                        ibm_gdsc_sdk_software.models.reportsv3_in_report_additional_parameter.reportsv3InReportAdditionalParameter(
-                            date_range = ibm_gdsc_sdk_software.models.reportsv3_date_range.reportsv3DateRange(
+                        ibm_gdsc_sdk_saas.models.reportsv3_in_report_additional_parameter.reportsv3InReportAdditionalParameter(
+                            date_range = ibm_gdsc_sdk_saas.models.reportsv3_date_range.reportsv3DateRange(
                                 end_date = '', 
                                 end_number = 56, 
                                 end_unit = 'UNDEFINED_UINT_TYPE', 
@@ -77,12 +77,12 @@ class TestReportsrunnerv3RunReportResponse(unittest.TestCase):
                     refresh_rate = 56, 
                     report_description = '', 
                     report_headers = [
-                        ibm_gdsc_sdk_software.models.reportsv3_display_header.reportsv3DisplayHeader(
-                            field_name = ibm_gdsc_sdk_software.models.reportsv3_field_name.reportsv3FieldName(
+                        ibm_gdsc_sdk_saas.models.reportsv3_display_header.reportsv3DisplayHeader(
+                            field_name = ibm_gdsc_sdk_saas.models.reportsv3_field_name.reportsv3FieldName(
                                 customized_value = '', 
                                 nls_key = '', 
                                 nls_value = '', ), 
-                            header_description = ibm_gdsc_sdk_software.models.reportsv3_header_description.reportsv3HeaderDescription(
+                            header_description = ibm_gdsc_sdk_saas.models.reportsv3_header_description.reportsv3HeaderDescription(
                                 nls_key = '', 
                                 nls_value = '', ), 
                             header_id = '', 
@@ -93,12 +93,12 @@ class TestReportsrunnerv3RunReportResponse(unittest.TestCase):
                     report_id = '', 
                     report_name = '', 
                     report_tags = [
-                        ibm_gdsc_sdk_software.models.reportsv3_report_tag.reportsv3ReportTag(
+                        ibm_gdsc_sdk_saas.models.reportsv3_report_tag.reportsv3ReportTag(
                             nls_key = '', 
                             nls_value = '', )
                         ], 
                     runtime_param_list = [
-                        ibm_gdsc_sdk_software.models.reportsv3_run_time_parameter.reportsv3RunTimeParameter(
+                        ibm_gdsc_sdk_saas.models.reportsv3_run_time_parameter.reportsv3RunTimeParameter(
                             key = '', 
                             label = '', 
                             operator_type = 'UNDEFINED_OPERATOR_TYPE', 

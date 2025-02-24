@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.resource_controller_k8_service_api import ResourceControllerK8ServiceApi
+from ibm_gdsc_sdk_saas.api.resource_controller_k8_service_api import ResourceControllerK8ServiceApi
 
 
 class TestResourceControllerK8ServiceApi(unittest.TestCase):
@@ -204,7 +204,7 @@ class TestResourceControllerK8ServiceApi(unittest.TestCase):
     def test_resource_controller_k8_service_install_edge_tenant_request(self) -> None:
         """Test case for resource_controller_k8_service_install_edge_tenant_request
 
-        InstallEdgeTenantRequest to Create/update gi and tnt CRs on edge
+        InstallEdgeTenantRequest to Create gi and tnt CRs on edge
         """
         pass
 
@@ -233,6 +233,13 @@ class TestResourceControllerK8ServiceApi(unittest.TestCase):
         """Test case for resource_controller_k8_service_update_controller_status
 
         UpdateControllerStatus - Updates the status for the given controller.
+        """
+        pass
+
+    def test_resource_controller_k8_service_update_edge_tenant_request(self) -> None:
+        """Test case for resource_controller_k8_service_update_edge_tenant_request
+
+        UpdateEdgeTenantRequest to update gi and tnt CRs on edge
         """
         pass
 

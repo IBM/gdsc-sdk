@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.protobuf_null_value import ProtobufNullValue
+from ibm_gdsc_sdk_saas.models.protobuf_null_value import ProtobufNullValue
 
 class TestProtobufNullValue(unittest.TestCase):
     """ProtobufNullValue unit test stubs"""

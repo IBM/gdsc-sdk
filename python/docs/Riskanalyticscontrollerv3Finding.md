@@ -1,5 +1,6 @@
 # Riskanalyticscontrollerv3Finding
 
+A finding (AKA observation); details the evidence found in a Risk event hourly observation; may contain multiple finding maps.
 
 ## Properties
 
@@ -12,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_finding import Riskanalyticscontrollerv3Finding
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_finding import Riskanalyticscontrollerv3Finding
 
 # TODO update the JSON string below
 json = "{}"

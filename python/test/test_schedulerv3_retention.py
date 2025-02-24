@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.schedulerv3_retention import Schedulerv3Retention
+from ibm_gdsc_sdk_saas.models.schedulerv3_retention import Schedulerv3Retention
 
 class TestSchedulerv3Retention(unittest.TestCase):
     """Schedulerv3Retention unit test stubs"""

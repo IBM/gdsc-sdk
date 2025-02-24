@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_update_streaming_response import Guardiumconnectorv3UpdateStreamingResponse
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_update_streaming_response import Guardiumconnectorv3UpdateStreamingResponse
 
 class TestGuardiumconnectorv3UpdateStreamingResponse(unittest.TestCase):
     """Guardiumconnectorv3UpdateStreamingResponse unit test stubs"""

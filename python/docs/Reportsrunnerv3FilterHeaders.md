@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_filter_headers import Reportsrunnerv3FilterHeaders
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_filter_headers import Reportsrunnerv3FilterHeaders
 
 # TODO update the JSON string below
 json = "{}"

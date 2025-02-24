@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.reports_runner_api import ReportsRunnerApi
+from ibm_gdsc_sdk_saas.api.reports_runner_api import ReportsRunnerApi
 
 
 class TestReportsRunnerApi(unittest.TestCase):

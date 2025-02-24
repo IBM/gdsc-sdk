@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_sub_task_object import Guardiumconnectorv3SubTaskObject
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_sub_task_object import Guardiumconnectorv3SubTaskObject
 
 class TestGuardiumconnectorv3SubTaskObject(unittest.TestCase):
     """Guardiumconnectorv3SubTaskObject unit test stubs"""
@@ -38,7 +38,7 @@ class TestGuardiumconnectorv3SubTaskObject(unittest.TestCase):
                 id = '',
                 interval = '',
                 params = [
-                    ibm_gdsc_sdk_software.models.guardiumconnectorv3_task_params_object.guardiumconnectorv3TaskParamsObject(
+                    ibm_gdsc_sdk_saas.models.guardiumconnectorv3_task_params_object.guardiumconnectorv3TaskParamsObject(
                         arg_name = '', 
                         arg_value = '', )
                     ]

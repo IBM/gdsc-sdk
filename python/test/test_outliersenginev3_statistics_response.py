@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.outliersenginev3_statistics_response import Outliersenginev3StatisticsResponse
+from ibm_gdsc_sdk_saas.models.outliersenginev3_statistics_response import Outliersenginev3StatisticsResponse
 
 class TestOutliersenginev3StatisticsResponse(unittest.TestCase):
     """Outliersenginev3StatisticsResponse unit test stubs"""
@@ -35,18 +35,18 @@ class TestOutliersenginev3StatisticsResponse(unittest.TestCase):
         model = Outliersenginev3StatisticsResponse()
         if include_optional:
             return Outliersenginev3StatisticsResponse(
-                analysis_statistics = ibm_gdsc_sdk_software.models.outliersenginev3_analysis_statistics_message.outliersenginev3AnalysisStatisticsMessage(
+                analysis_statistics = ibm_gdsc_sdk_saas.models.outliersenginev3_analysis_statistics_message.outliersenginev3AnalysisStatisticsMessage(
                     datasources_1h = 56, 
                     datasources_24h = 56, 
                     datasources_72h = 56, 
                     errors_1h = 56, 
                     errors_24h = 56, 
                     errors_72h = 56, 
-                    performance_1h = ibm_gdsc_sdk_software.models.outliersenginev3_analysis_performance_stats.outliersenginev3AnalysisPerformanceStats(
+                    performance_1h = ibm_gdsc_sdk_saas.models.outliersenginev3_analysis_performance_stats.outliersenginev3AnalysisPerformanceStats(
                         duration_seconds = 56, 
                         events_analyzed = 56, 
                         events_per_second = 1.337, ), 
-                    performance_24h = ibm_gdsc_sdk_software.models.outliersenginev3_analysis_performance_stats.outliersenginev3AnalysisPerformanceStats(
+                    performance_24h = ibm_gdsc_sdk_saas.models.outliersenginev3_analysis_performance_stats.outliersenginev3AnalysisPerformanceStats(
                         duration_seconds = 56, 
                         events_analyzed = 56, 
                         events_per_second = 1.337, ), 
@@ -58,9 +58,9 @@ class TestOutliersenginev3StatisticsResponse(unittest.TestCase):
                 number_of_outliers_summary = 56,
                 number_of_sources = 56,
                 number_of_uncompleted_periods = 56,
-                outliers_stats = ibm_gdsc_sdk_software.models.outliersenginev3_outliers_stats.outliersenginev3OutliersStats(
+                outliers_stats = ibm_gdsc_sdk_saas.models.outliersenginev3_outliers_stats.outliersenginev3OutliersStats(
                     outlier_type_stats_1h = [
-                        ibm_gdsc_sdk_software.models.outliersenginev3_outlier_type_stats.outliersenginev3OutlierTypeStats(
+                        ibm_gdsc_sdk_saas.models.outliersenginev3_outlier_type_stats.outliersenginev3OutlierTypeStats(
                             count = 56, 
                             type_diff_messages = True, 
                             type_fails = True, 
@@ -70,7 +70,7 @@ class TestOutliersenginev3StatisticsResponse(unittest.TestCase):
                             type_vulnerable_objects = True, )
                         ], 
                     outlier_type_stats_24h = [
-                        ibm_gdsc_sdk_software.models.outliersenginev3_outlier_type_stats.outliersenginev3OutlierTypeStats(
+                        ibm_gdsc_sdk_saas.models.outliersenginev3_outlier_type_stats.outliersenginev3OutlierTypeStats(
                             count = 56, 
                             type_diff_messages = True, 
                             type_fails = True, 
@@ -79,12 +79,12 @@ class TestOutliersenginev3StatisticsResponse(unittest.TestCase):
                             type_volume = True, 
                             type_vulnerable_objects = True, )
                         ], ),
-                queue_statistics = ibm_gdsc_sdk_software.models.outliersenginev3_queue_statistics_message.outliersenginev3QueueStatisticsMessage(
-                    coverage_1h = ibm_gdsc_sdk_software.models.outliersenginev3_datasources_coverage_stats.outliersenginev3DatasourcesCoverageStats(
+                queue_statistics = ibm_gdsc_sdk_saas.models.outliersenginev3_queue_statistics_message.outliersenginev3QueueStatisticsMessage(
+                    coverage_1h = ibm_gdsc_sdk_saas.models.outliersenginev3_datasources_coverage_stats.outliersenginev3DatasourcesCoverageStats(
                         datasources_coverage = '', 
                         datasources_in_gi = 56, 
                         datasources_in_queue = 56, ), 
-                    coverage_24h = ibm_gdsc_sdk_software.models.outliersenginev3_datasources_coverage_stats.outliersenginev3DatasourcesCoverageStats(
+                    coverage_24h = ibm_gdsc_sdk_saas.models.outliersenginev3_datasources_coverage_stats.outliersenginev3DatasourcesCoverageStats(
                         datasources_coverage = '', 
                         datasources_in_gi = 56, 
                         datasources_in_queue = 56, ), 
@@ -95,18 +95,18 @@ class TestOutliersenginev3StatisticsResponse(unittest.TestCase):
                     tasks_in_progress_2h = 56, 
                     tasks_new = 56, 
                     tasks_new_2h = 56, ),
-                sources_stats = ibm_gdsc_sdk_software.models.outliersenginev3_sources_stats.outliersenginev3SourcesStats(
+                sources_stats = ibm_gdsc_sdk_saas.models.outliersenginev3_sources_stats.outliersenginev3SourcesStats(
                     datasource_avg_users = 56, 
                     datasource_max_users = 56, 
                     datasource_min_users = 56, ),
-                status = ibm_gdsc_sdk_software.models.the_`status`_type_defines_a_logical_error_model_that_is_suitable_for_different
+                status = ibm_gdsc_sdk_saas.models.the_`status`_type_defines_a_logical_error_model_that_is_suitable_for_different
 programming_environments,_including_rest_apis_and_rpc_apis/_it_is_used_by
 [g_rpc](https://github/com/grpc)/_the_error_model_is_designed_to_be:.The `Status` type defines a logical error model that is suitable for different
 programming environments, including REST APIs and RPC APIs. It is used by
 [gRPC](https://github.com/grpc). The error model is designed to be:(
                     code = 56, 
                     details = [
-                        ibm_gdsc_sdk_software.models.protobuf_any.protobufAny(
+                        ibm_gdsc_sdk_saas.models.protobuf_any.protobufAny(
                             type_url = '', 
                             value = 'YQ==', )
                         ], 

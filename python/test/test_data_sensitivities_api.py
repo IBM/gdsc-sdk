@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.data_sensitivities_api import DataSensitivitiesApi
+from ibm_gdsc_sdk_saas.api.data_sensitivities_api import DataSensitivitiesApi
 
 
 class TestDataSensitivitiesApi(unittest.TestCase):

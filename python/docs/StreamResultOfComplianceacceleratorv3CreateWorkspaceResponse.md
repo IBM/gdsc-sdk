@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.stream_result_of_complianceacceleratorv3_create_workspace_response import StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse
+from ibm_gdsc_sdk_saas.models.stream_result_of_complianceacceleratorv3_create_workspace_response import StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse
 
 # TODO update the JSON string below
 json = "{}"

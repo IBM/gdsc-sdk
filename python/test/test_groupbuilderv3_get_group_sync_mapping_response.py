@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.groupbuilderv3_get_group_sync_mapping_response import Groupbuilderv3GetGroupSyncMappingResponse
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_get_group_sync_mapping_response import Groupbuilderv3GetGroupSyncMappingResponse
 
 class TestGroupbuilderv3GetGroupSyncMappingResponse(unittest.TestCase):
     """Groupbuilderv3GetGroupSyncMappingResponse unit test stubs"""
@@ -38,7 +38,7 @@ class TestGroupbuilderv3GetGroupSyncMappingResponse(unittest.TestCase):
                 group_map = {
                     'key' : 56
                     },
-                status = ibm_gdsc_sdk_software.models.groupbuilderv3_status_response_base.groupbuilderv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.groupbuilderv3_status_response_base.groupbuilderv3StatusResponseBase(
                     message = '', 
                     status = '', )
             )

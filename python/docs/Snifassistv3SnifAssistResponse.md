@@ -6,6 +6,7 @@ SnifAssistResponse defines the message structure for response.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**batch_num** | **str** | Specify batch number if Type is POLICY or GROUP_UPDATE. | [optional] 
 **data** | **bytearray** | Data field if any. | [optional] 
 **data_crc** | **int** | Provide CRC value of Response Data. | [optional] 
 **stap_id** | **str** | Provide STAP identifer. | [optional] 
@@ -16,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.snifassistv3_snif_assist_response import Snifassistv3SnifAssistResponse
+from ibm_gdsc_sdk_saas.models.snifassistv3_snif_assist_response import Snifassistv3SnifAssistResponse
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.groupbuilderv3_edit_group_request import Groupbuilderv3EditGroupRequest
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_edit_group_request import Groupbuilderv3EditGroupRequest
 
 class TestGroupbuilderv3EditGroupRequest(unittest.TestCase):
     """Groupbuilderv3EditGroupRequest unit test stubs"""
@@ -41,7 +41,7 @@ class TestGroupbuilderv3EditGroupRequest(unittest.TestCase):
                     ],
                 description = '',
                 group_id = 56,
-                ldap_config = ibm_gdsc_sdk_software.models.groupbuilderv3_ldap_config.groupbuilderv3LdapConfig(
+                ldap_config = ibm_gdsc_sdk_saas.models.groupbuilderv3_ldap_config.groupbuilderv3LdapConfig(
                     attributes = [
                         ''
                         ], 
@@ -59,7 +59,7 @@ class TestGroupbuilderv3EditGroupRequest(unittest.TestCase):
                     ''
                     ],
                 updated_members = [
-                    ibm_gdsc_sdk_software.models.groupbuilderv3_group_member.groupbuilderv3GroupMember(
+                    ibm_gdsc_sdk_saas.models.groupbuilderv3_group_member.groupbuilderv3GroupMember(
                         member_id = '', 
                         name = '', )
                     ]

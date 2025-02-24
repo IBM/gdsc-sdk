@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.workflowv3_report_result_row import Workflowv3ReportResultRow
+from ibm_gdsc_sdk_saas.models.workflowv3_report_result_row import Workflowv3ReportResultRow
 
 class TestWorkflowv3ReportResultRow(unittest.TestCase):
     """Workflowv3ReportResultRow unit test stubs"""

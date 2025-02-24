@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.streamsv3_azure_check_status import Streamsv3AzureCheckStatus
+from ibm_gdsc_sdk_saas.models.streamsv3_azure_check_status import Streamsv3AzureCheckStatus
 
 class TestStreamsv3AzureCheckStatus(unittest.TestCase):
     """Streamsv3AzureCheckStatus unit test stubs"""

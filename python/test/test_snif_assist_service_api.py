@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.snif_assist_service_api import SnifAssistServiceApi
+from ibm_gdsc_sdk_saas.api.snif_assist_service_api import SnifAssistServiceApi
 
 
 class TestSnifAssistServiceApi(unittest.TestCase):
@@ -24,6 +24,27 @@ class TestSnifAssistServiceApi(unittest.TestCase):
         self.api = SnifAssistServiceApi()
 
     def tearDown(self) -> None:
+        pass
+
+    def test_snif_assist_service_get_snif_config(self) -> None:
+        """Test case for snif_assist_service_get_snif_config
+
+        Summary: Get sniffer configuration parameters Description: Get edge sniffer configuration parameters from GI-mothership.
+        """
+        pass
+
+    def test_snif_assist_service_get_snif_policy(self) -> None:
+        """Test case for snif_assist_service_get_snif_policy
+
+        Summary: Get sniffer policy Description: Get edge sniffer policy from GI-mothership.
+        """
+        pass
+
+    def test_snif_assist_service_post_snif_feedback(self) -> None:
+        """Test case for snif_assist_service_post_snif_feedback
+
+        Summary: Post sniffer feedback Description: Post policy installation feedback to policy-builder service.
+        """
         pass
 
     def test_snif_assist_service_test_regex(self) -> None:

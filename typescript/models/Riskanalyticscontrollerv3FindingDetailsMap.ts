@@ -11,11 +11,17 @@
  */
 
 import { Riskanalyticscontrollerv3FindingDetails } from '../models/Riskanalyticscontrollerv3FindingDetails';
+import { Riskanalyticscontrollerv3FindingReferenceLink } from '../models/Riskanalyticscontrollerv3FindingReferenceLink';
 import { HttpFile } from '../http/http';
 
+/**
+* Contains a list of examples, reference links, in a finding category. If outlier finding, it could be HIGH_VOLUME, ERROR, NEW, and so on.
+*/
 export class Riskanalyticscontrollerv3FindingDetailsMap {
     'findingDetails'?: Riskanalyticscontrollerv3FindingDetails;
     'findingDetailsType'?: string;
+    'findingReference'?: Riskanalyticscontrollerv3FindingReferenceLink;
+    'report'?: string;
 
     static readonly discriminator: string | undefined = undefined;
 
@@ -29,6 +35,18 @@ export class Riskanalyticscontrollerv3FindingDetailsMap {
         {
             "name": "findingDetailsType",
             "baseName": "finding_details_type",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "findingReference",
+            "baseName": "finding_reference",
+            "type": "Riskanalyticscontrollerv3FindingReferenceLink",
+            "format": ""
+        },
+        {
+            "name": "report",
+            "baseName": "report",
             "type": "string",
             "format": ""
         }    ];

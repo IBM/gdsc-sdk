@@ -1,4 +1,4 @@
-# ibm_gdsc_sdk_software.FeatureFlagsServiceApi
+# ibm_gdsc_sdk_saas.FeatureFlagsServiceApi
 
 All URIs are relative to *http://localhost*
 
@@ -21,14 +21,14 @@ Summary: Delete feature Flag overrides Description: Delete feature Flag override
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.featureflagsv3_delete_feature_flag_overrides_response import Featureflagsv3DeleteFeatureFlagOverridesResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.featureflagsv3_delete_feature_flag_overrides_response import Featureflagsv3DeleteFeatureFlagOverridesResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -38,7 +38,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -50,9 +50,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.FeatureFlagsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.FeatureFlagsServiceApi(api_client)
     flag_name = 'flag_name_example' # str | Flag name. (optional)
     tenant_id = 'tenant_id_example' # str | Optional tenant id. (optional)
 
@@ -108,14 +108,14 @@ Summary: Get feature Flag overrides Description: Get feature Flag overrides by F
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.featureflagsv3_get_feature_flag_overrides_response import Featureflagsv3GetFeatureFlagOverridesResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.featureflagsv3_get_feature_flag_overrides_response import Featureflagsv3GetFeatureFlagOverridesResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -125,7 +125,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -137,9 +137,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.FeatureFlagsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.FeatureFlagsServiceApi(api_client)
     tenant_id = 'tenant_id_example' # str | Optional tenant id. (optional)
     flag_names = ['flag_names_example'] # List[str] | Optional flag names; if empty then return all flag. (optional)
 
@@ -195,14 +195,14 @@ Summary: Get feature flags Description: Get feature flags by Feature Flag Name.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.featureflagsv3_get_feature_flags_response import Featureflagsv3GetFeatureFlagsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.featureflagsv3_get_feature_flags_response import Featureflagsv3GetFeatureFlagsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -212,7 +212,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -224,9 +224,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.FeatureFlagsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.FeatureFlagsServiceApi(api_client)
     tenant_id = 'tenant_id_example' # str | Tenant id. (optional)
     flag_names = ['flag_names_example'] # List[str] | Optional flag names; if empty then return all flag. (optional)
 
@@ -282,15 +282,15 @@ Summary: Update feature Flag overrides Description: Update feature Flag override
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.featureflagsv3_update_feature_flag_overrides_request import Featureflagsv3UpdateFeatureFlagOverridesRequest
-from ibm_gdsc_sdk_software.models.featureflagsv3_update_feature_flag_overrides_response import Featureflagsv3UpdateFeatureFlagOverridesResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.featureflagsv3_update_feature_flag_overrides_request import Featureflagsv3UpdateFeatureFlagOverridesRequest
+from ibm_gdsc_sdk_saas.models.featureflagsv3_update_feature_flag_overrides_response import Featureflagsv3UpdateFeatureFlagOverridesResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -300,7 +300,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -312,10 +312,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.FeatureFlagsServiceApi(api_client)
-    featureflagsv3_update_feature_flag_overrides_request = ibm_gdsc_sdk_software.Featureflagsv3UpdateFeatureFlagOverridesRequest() # Featureflagsv3UpdateFeatureFlagOverridesRequest | 
+    api_instance = ibm_gdsc_sdk_saas.FeatureFlagsServiceApi(api_client)
+    featureflagsv3_update_feature_flag_overrides_request = ibm_gdsc_sdk_saas.Featureflagsv3UpdateFeatureFlagOverridesRequest() # Featureflagsv3UpdateFeatureFlagOverridesRequest | 
 
     try:
         # Summary: Update feature Flag overrides Description: Update feature Flag overrides in the database.

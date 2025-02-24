@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_date_range import Reportsv3DateRange
+from ibm_gdsc_sdk_saas.models.reportsv3_date_range import Reportsv3DateRange
 
 class TestReportsv3DateRange(unittest.TestCase):
     """Reportsv3DateRange unit test stubs"""

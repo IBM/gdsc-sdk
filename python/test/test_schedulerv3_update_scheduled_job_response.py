@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.schedulerv3_update_scheduled_job_response import Schedulerv3UpdateScheduledJobResponse
+from ibm_gdsc_sdk_saas.models.schedulerv3_update_scheduled_job_response import Schedulerv3UpdateScheduledJobResponse
 
 class TestSchedulerv3UpdateScheduledJobResponse(unittest.TestCase):
     """Schedulerv3UpdateScheduledJobResponse unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.authenticate400_response import Authenticate400Response
+from ibm_gdsc_sdk_saas.models.authenticate400_response import Authenticate400Response
 
 class TestAuthenticate400Response(unittest.TestCase):
     """Authenticate400Response unit test stubs"""

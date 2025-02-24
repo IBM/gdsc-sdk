@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.healthcollectorv3_stap_object_gdp import Healthcollectorv3StapObjectGdp
+from ibm_gdsc_sdk_saas.models.healthcollectorv3_stap_object_gdp import Healthcollectorv3StapObjectGdp
 
 # TODO update the JSON string below
 json = "{}"

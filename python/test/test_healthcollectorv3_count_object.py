@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.healthcollectorv3_count_object import Healthcollectorv3CountObject
+from ibm_gdsc_sdk_saas.models.healthcollectorv3_count_object import Healthcollectorv3CountObject
 
 class TestHealthcollectorv3CountObject(unittest.TestCase):
     """Healthcollectorv3CountObject unit test stubs"""

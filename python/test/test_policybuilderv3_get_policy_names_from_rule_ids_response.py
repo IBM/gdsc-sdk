@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_get_policy_names_from_rule_ids_response import Policybuilderv3GetPolicyNamesFromRuleIDsResponse
+from ibm_gdsc_sdk_saas.models.policybuilderv3_get_policy_names_from_rule_ids_response import Policybuilderv3GetPolicyNamesFromRuleIDsResponse
 
 class TestPolicybuilderv3GetPolicyNamesFromRuleIDsResponse(unittest.TestCase):
     """Policybuilderv3GetPolicyNamesFromRuleIDsResponse unit test stubs"""
@@ -38,7 +38,7 @@ class TestPolicybuilderv3GetPolicyNamesFromRuleIDsResponse(unittest.TestCase):
                 policy_names = {
                     'key' : ''
                     },
-                status = ibm_gdsc_sdk_software.models.policybuilderv3_status_response_base.policybuilderv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.policybuilderv3_status_response_base.policybuilderv3StatusResponseBase(
                     message = '', 
                     status = '', )
             )

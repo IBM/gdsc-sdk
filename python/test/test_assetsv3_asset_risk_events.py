@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_asset_risk_events import Assetsv3AssetRiskEvents
+from ibm_gdsc_sdk_saas.models.assetsv3_asset_risk_events import Assetsv3AssetRiskEvents
 
 class TestAssetsv3AssetRiskEvents(unittest.TestCase):
     """Assetsv3AssetRiskEvents unit test stubs"""
@@ -36,11 +36,11 @@ class TestAssetsv3AssetRiskEvents(unittest.TestCase):
         if include_optional:
             return Assetsv3AssetRiskEvents(
                 asset_open_risk_event_list = [
-                    ibm_gdsc_sdk_software.models.asset_open_risk_event_list___assets_open_risk_events_widget_data.AssetOpenRiskEventList - Assets Open risk events widget data(
+                    ibm_gdsc_sdk_saas.models.asset_open_risk_event_list___assets_open_risk_events_widget_data.AssetOpenRiskEventList - Assets Open risk events widget data(
                         event_type = '', 
                         expandable = True, 
                         value = [
-                            ibm_gdsc_sdk_software.models.asset_open_risk_event___assets_open_risk_events_widget_data.AssetOpenRiskEvent - Assets Open risk events widget data(
+                            ibm_gdsc_sdk_saas.models.asset_open_risk_event___assets_open_risk_events_widget_data.AssetOpenRiskEvent - Assets Open risk events widget data(
                                 criticallity = '', 
                                 id = '', 
                                 name = '', 

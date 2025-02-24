@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.risk_analytics_data_processor_api import RiskAnalyticsDataProcessorApi
+from ibm_gdsc_sdk_saas.api.risk_analytics_data_processor_api import RiskAnalyticsDataProcessorApi
 
 
 class TestRiskAnalyticsDataProcessorApi(unittest.TestCase):

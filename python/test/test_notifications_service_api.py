@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.notifications_service_api import NotificationsServiceApi
+from ibm_gdsc_sdk_saas.api.notifications_service_api import NotificationsServiceApi
 
 
 class TestNotificationsServiceApi(unittest.TestCase):
@@ -65,6 +65,20 @@ class TestNotificationsServiceApi(unittest.TestCase):
         """Test case for notifications_service_get_ticket_status
 
         Summary: Get ticket status Description: Get the status of the given ticket
+        """
+        pass
+
+    def test_notifications_service_post_notification_record(self) -> None:
+        """Test case for notifications_service_post_notification_record
+
+        Summary: For PostNotificationRecord notification only Description: Sends notification with recipients and returns a status
+        """
+        pass
+
+    def test_notifications_service_search_notification_records(self) -> None:
+        """Test case for notifications_service_search_notification_records
+
+        Summary: Search notification records Description: Return notification records using pipeline of filters
         """
         pass
 

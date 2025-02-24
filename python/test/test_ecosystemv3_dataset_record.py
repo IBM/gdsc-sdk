@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.ecosystemv3_dataset_record import Ecosystemv3DatasetRecord
+from ibm_gdsc_sdk_saas.models.ecosystemv3_dataset_record import Ecosystemv3DatasetRecord
 
 class TestEcosystemv3DatasetRecord(unittest.TestCase):
     """Ecosystemv3DatasetRecord unit test stubs"""

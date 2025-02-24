@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_connection_edge import Assetsv3ConnectionEdge
+from ibm_gdsc_sdk_saas.models.assetsv3_connection_edge import Assetsv3ConnectionEdge
 
 class TestAssetsv3ConnectionEdge(unittest.TestCase):
     """Assetsv3ConnectionEdge unit test stubs"""

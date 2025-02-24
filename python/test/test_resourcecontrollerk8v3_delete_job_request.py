@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_delete_job_request import Resourcecontrollerk8v3DeleteJobRequest
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_delete_job_request import Resourcecontrollerk8v3DeleteJobRequest
 
 class TestResourcecontrollerk8v3DeleteJobRequest(unittest.TestCase):
     """Resourcecontrollerk8v3DeleteJobRequest unit test stubs"""

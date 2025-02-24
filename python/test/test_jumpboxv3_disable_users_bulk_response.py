@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.jumpboxv3_disable_users_bulk_response import Jumpboxv3DisableUsersBulkResponse
+from ibm_gdsc_sdk_saas.models.jumpboxv3_disable_users_bulk_response import Jumpboxv3DisableUsersBulkResponse
 
 class TestJumpboxv3DisableUsersBulkResponse(unittest.TestCase):
     """Jumpboxv3DisableUsersBulkResponse unit test stubs"""

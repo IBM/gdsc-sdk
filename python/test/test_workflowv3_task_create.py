@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.workflowv3_task_create import Workflowv3TaskCreate
+from ibm_gdsc_sdk_saas.models.workflowv3_task_create import Workflowv3TaskCreate
 
 class TestWorkflowv3TaskCreate(unittest.TestCase):
     """Workflowv3TaskCreate unit test stubs"""
@@ -37,7 +37,7 @@ class TestWorkflowv3TaskCreate(unittest.TestCase):
             return Workflowv3TaskCreate(
                 alt_id = '',
                 assignments = [
-                    ibm_gdsc_sdk_software.models.workflowv3_entity.workflowv3Entity(
+                    ibm_gdsc_sdk_saas.models.workflowv3_entity.workflowv3Entity(
                         label = '', 
                         template_id = '', 
                         type = 'UNDEFINED_ENTITY_TYPE', 
@@ -50,12 +50,12 @@ class TestWorkflowv3TaskCreate(unittest.TestCase):
                     ],
                 description = '',
                 investigation_links = [
-                    ibm_gdsc_sdk_software.models.generic_configuration_item_reference.Generic configuration item reference(
+                    ibm_gdsc_sdk_saas.models.generic_configuration_item_reference.Generic configuration item reference(
                         display = '', 
                         id = '', 
                         type = '', )
                     ],
-                origin = ibm_gdsc_sdk_software.models.origininating_job_identification.Origininating job identification(
+                origin = ibm_gdsc_sdk_saas.models.origininating_job_identification.Origininating job identification(
                     date_next = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     date_start = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     description = '', 
@@ -63,19 +63,19 @@ class TestWorkflowv3TaskCreate(unittest.TestCase):
                     name = '', 
                     scheduled_job_id = '', ),
                 priority = 'UNDEFINED_PRIORITY',
-                report_result = ibm_gdsc_sdk_software.models.workflowv3_report_result.workflowv3ReportResult(
+                report_result = ibm_gdsc_sdk_saas.models.workflowv3_report_result.workflowv3ReportResult(
                     headers = [
-                        ibm_gdsc_sdk_software.models.workflowv3_report_result_header.workflowv3ReportResultHeader(
+                        ibm_gdsc_sdk_saas.models.workflowv3_report_result_header.workflowv3ReportResultHeader(
                             header = '', 
                             key = '', )
                         ], 
                     rows = [
-                        ibm_gdsc_sdk_software.models.workflowv3_report_result_row.workflowv3ReportResultRow(
+                        ibm_gdsc_sdk_saas.models.workflowv3_report_result_row.workflowv3ReportResultRow(
                             row = {
                                 'key' : ''
                                 }, )
                         ], ),
-                response_template = ibm_gdsc_sdk_software.models.generic_configuration_item_reference.Generic configuration item reference(
+                response_template = ibm_gdsc_sdk_saas.models.generic_configuration_item_reference.Generic configuration item reference(
                     display = '', 
                     id = '', 
                     type = '', ),

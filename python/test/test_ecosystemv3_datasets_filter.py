@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.ecosystemv3_datasets_filter import Ecosystemv3DatasetsFilter
+from ibm_gdsc_sdk_saas.models.ecosystemv3_datasets_filter import Ecosystemv3DatasetsFilter
 
 class TestEcosystemv3DatasetsFilter(unittest.TestCase):
     """Ecosystemv3DatasetsFilter unit test stubs"""

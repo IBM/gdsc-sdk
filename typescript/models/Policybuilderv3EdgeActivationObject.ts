@@ -14,20 +14,14 @@ import { Policybuilderv3ActivationStatus } from '../models/Policybuilderv3Activa
 import { HttpFile } from '../http/http';
 
 export class Policybuilderv3EdgeActivationObject {
-    'activatationTimestamp'?: Date;
     'activationOrder'?: number;
     'activationStatus'?: Policybuilderv3ActivationStatus;
+    'activationTimestamp'?: Date;
     'edgeId'?: string;
 
     static readonly discriminator: string | undefined = undefined;
 
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "activatationTimestamp",
-            "baseName": "activatation_timestamp",
-            "type": "Date",
-            "format": "date-time"
-        },
         {
             "name": "activationOrder",
             "baseName": "activation_order",
@@ -39,6 +33,12 @@ export class Policybuilderv3EdgeActivationObject {
             "baseName": "activation_status",
             "type": "Policybuilderv3ActivationStatus",
             "format": ""
+        },
+        {
+            "name": "activationTimestamp",
+            "baseName": "activation_timestamp",
+            "type": "Date",
+            "format": "date-time"
         },
         {
             "name": "edgeId",

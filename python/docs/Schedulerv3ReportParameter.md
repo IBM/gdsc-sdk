@@ -11,11 +11,12 @@ Name | Type | Description | Notes
 **report_name** | **str** | Optional: Report Name for the scheduled report. | [optional] 
 **runtime_parameters** | [**List[Reportsv3RunTimeParameter]**](Reportsv3RunTimeParameter.md) | Optional: Runtime parameters for this report. | [optional] 
 **sync_execution_date** | **bool** | Optional: Flag if sync query_from_date when running this report. | [optional] 
+**threshold** | **int** | Optional: threshold count for creating tickets or other integration messages. Default is 1. If there is one row of data from a report, send message. | [optional] 
 
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.schedulerv3_report_parameter import Schedulerv3ReportParameter
+from ibm_gdsc_sdk_saas.models.schedulerv3_report_parameter import Schedulerv3ReportParameter
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.update_resource_review_body import UpdateResourceReviewBody
+from ibm_gdsc_sdk_saas.models.update_resource_review_body import UpdateResourceReviewBody
 
 class TestUpdateResourceReviewBody(unittest.TestCase):
     """UpdateResourceReviewBody unit test stubs"""

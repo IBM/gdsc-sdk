@@ -13,6 +13,7 @@
 import { Policybuilderv3ControlFlow } from '../models/Policybuilderv3ControlFlow';
 import { Policybuilderv3ImportIssue } from '../models/Policybuilderv3ImportIssue';
 import { Policybuilderv3ImportState } from '../models/Policybuilderv3ImportState';
+import { Policybuilderv3Policy } from '../models/Policybuilderv3Policy';
 import { Policybuilderv3Rule } from '../models/Policybuilderv3Rule';
 import { Policybuilderv3StatusResponseBase } from '../models/Policybuilderv3StatusResponseBase';
 import { HttpFile } from '../http/http';
@@ -32,6 +33,7 @@ export class Policybuilderv3GetPolicyDetailsResponse {
     'installedFlag'?: boolean;
     'policyImportIssue'?: Policybuilderv3ImportIssue;
     'policyImportState'?: Policybuilderv3ImportState;
+    'policyInfo'?: Policybuilderv3Policy;
     'policyName'?: string;
     /**
     * Rules contained by the policy.
@@ -70,6 +72,12 @@ export class Policybuilderv3GetPolicyDetailsResponse {
             "name": "policyImportState",
             "baseName": "policy_import_state",
             "type": "Policybuilderv3ImportState",
+            "format": ""
+        },
+        {
+            "name": "policyInfo",
+            "baseName": "policy_info",
+            "type": "Policybuilderv3Policy",
             "format": ""
         },
         {

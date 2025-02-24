@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_variant_rule_type import Reportsv3VariantRuleType
+from ibm_gdsc_sdk_saas.models.reportsv3_variant_rule_type import Reportsv3VariantRuleType
 
 class TestReportsv3VariantRuleType(unittest.TestCase):
     """Reportsv3VariantRuleType unit test stubs"""

@@ -19,7 +19,7 @@ import { HttpFile } from '../http/http';
 export class Groupbuilderv3GetGroupTypeMappingResponse {
     'status'?: Groupbuilderv3StatusResponseBase;
     /**
-    * Map of gdp to gi group type mapping objects.
+    * Map of GDP to gi group type mapping objects.
     */
     'typeMap'?: { [key: string]: number; };
 

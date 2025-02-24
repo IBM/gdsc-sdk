@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.snifassistv3_post_snif_feedback_request import Snifassistv3PostSnifFeedbackRequest
+from ibm_gdsc_sdk_saas.models.snifassistv3_post_snif_feedback_request import Snifassistv3PostSnifFeedbackRequest
 
 class TestSnifassistv3PostSnifFeedbackRequest(unittest.TestCase):
     """Snifassistv3PostSnifFeedbackRequest unit test stubs"""
@@ -36,7 +36,7 @@ class TestSnifassistv3PostSnifFeedbackRequest(unittest.TestCase):
         if include_optional:
             return Snifassistv3PostSnifFeedbackRequest(
                 edge_id = '',
-                snif_feedback = ibm_gdsc_sdk_software.models.snifassistv3_feedback.snifassistv3Feedback(
+                snif_feedback = ibm_gdsc_sdk_saas.models.snifassistv3_feedback.snifassistv3Feedback(
                     batch_num = '', 
                     message = '', 
                     status = 'SUCCEEDED', ),

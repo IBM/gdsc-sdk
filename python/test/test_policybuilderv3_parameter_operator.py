@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_parameter_operator import Policybuilderv3ParameterOperator
+from ibm_gdsc_sdk_saas.models.policybuilderv3_parameter_operator import Policybuilderv3ParameterOperator
 
 class TestPolicybuilderv3ParameterOperator(unittest.TestCase):
     """Policybuilderv3ParameterOperator unit test stubs"""

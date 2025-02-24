@@ -20,6 +20,10 @@ Description: Return dataset list that matches the specified filter.
 Description: Check the number of rows that can be purged.
 [**ecosystemServicePurgeData**](EcosystemServiceApi.md#ecosystemServicePurgeData) | **DELETE** /api/v3/integrations/datasets/data | Summary: Purge data
 Description: Purge data.
+[**ecosystemServiceTestIntegration**](EcosystemServiceApi.md#ecosystemServiceTestIntegration) | **POST** /api/v3/integrations/setup/test | Summary: Test integration
+Description: Test the integration connection with the arguments passed in the TestIntegrationRequest.  When possible
+a test message is sent to the integration to ensure it is functional.
+Currently this API only supports API_IMPORT type integrations
 
 
 
@@ -304,6 +308,42 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## ecosystemServiceTestIntegration
+
+Summary: Test integration
+Description: Test the integration connection with the arguments passed in the TestIntegrationRequest.  When possible
+a test message is sent to the integration to ensure it is functional.
+Currently this API only supports API_IMPORT type integrations
+
+### Example
+
+```bash
+ ecosystemServiceTestIntegration
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ecosystemv3TestIntegrationRequest** | [**Ecosystemv3TestIntegrationRequest**](Ecosystemv3TestIntegrationRequest.md) |  |
+
+### Return type
+
+[**Ecosystemv3TestIntegrationResponse**](Ecosystemv3TestIntegrationResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

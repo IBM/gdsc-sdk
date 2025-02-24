@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_validation_result import Qspmpluginmanagerv3ValidationResult
+from ibm_gdsc_sdk_saas.models.qspmpluginmanagerv3_validation_result import Qspmpluginmanagerv3ValidationResult
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.complianceacceleratorv3_dashboard_type import Complianceacceleratorv3DashboardType
+from ibm_gdsc_sdk_saas.models.complianceacceleratorv3_dashboard_type import Complianceacceleratorv3DashboardType
 
 class TestComplianceacceleratorv3DashboardType(unittest.TestCase):
     """Complianceacceleratorv3DashboardType unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_create_update_policy_request import Assetsv3CreateUpdatePolicyRequest
+from ibm_gdsc_sdk_saas.models.assetsv3_create_update_policy_request import Assetsv3CreateUpdatePolicyRequest
 
 class TestAssetsv3CreateUpdatePolicyRequest(unittest.TestCase):
     """Assetsv3CreateUpdatePolicyRequest unit test stubs"""
@@ -36,7 +36,7 @@ class TestAssetsv3CreateUpdatePolicyRequest(unittest.TestCase):
         if include_optional:
             return Assetsv3CreateUpdatePolicyRequest(
                 operation = 56,
-                policy = ibm_gdsc_sdk_software.models.assetsv3_policy_update.assetsv3PolicyUpdate(
+                policy = ibm_gdsc_sdk_saas.models.assetsv3_policy_update.assetsv3PolicyUpdate(
                     activation_status = 56, 
                     deleted_rule_ids = [
                         ''
@@ -48,16 +48,16 @@ class TestAssetsv3CreateUpdatePolicyRequest(unittest.TestCase):
                     policy_name = '', 
                     policy_sequence = 56, 
                     rules = [
-                        ibm_gdsc_sdk_software.models.assetsv3_rule.assetsv3Rule(
+                        ibm_gdsc_sdk_saas.models.assetsv3_rule.assetsv3Rule(
                             actions = [
-                                ibm_gdsc_sdk_software.models.action___action_associated_with_a_rule.Action - Action associated with a rule(
+                                ibm_gdsc_sdk_saas.models.action___action_associated_with_a_rule.Action - Action associated with a rule(
                                     dest_category = '', 
                                     dest_type = '', 
                                     dest_value = '', )
                                 ], 
                             is_delete = 56, 
                             parameters = [
-                                ibm_gdsc_sdk_software.models.rule_parameter___parameters_for_a_rule.RuleParameter - Parameters for a rule(
+                                ibm_gdsc_sdk_saas.models.rule_parameter___parameters_for_a_rule.RuleParameter - Parameters for a rule(
                                     asset_attribute = '', 
                                     attribute_enum = '', 
                                     condition = '', 

@@ -125,9 +125,11 @@ export class ComplianceAcceleratorApiRequestFactory extends BaseAPIRequestFactor
 
     /**
      * Summary: Get compliance info Description: Return stored compliance data.
+     * @param isBrief gives compliance workspace data without reaching out to other services - meant to be quicker for dashboards.
      */
-    public async complianceAcceleratorGetComplianceInfo(_options?: Configuration): Promise<RequestContext> {
+    public async complianceAcceleratorGetComplianceInfo(isBrief?: boolean, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
+
 
         // Path Params
         const localVarPath = '/api/v3/compliance';
@@ -135,6 +137,11 @@ export class ComplianceAcceleratorApiRequestFactory extends BaseAPIRequestFactor
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
         requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+        // Query Params
+        if (isBrief !== undefined) {
+            requestContext.setQueryParam("is_brief", ObjectSerializer.serialize(isBrief, "boolean", ""));
+        }
 
 
         let authMethod: SecurityAuthentication | undefined;

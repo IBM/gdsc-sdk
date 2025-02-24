@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.groupbuilderv3_refresh_groups_response import Groupbuilderv3RefreshGroupsResponse
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_refresh_groups_response import Groupbuilderv3RefreshGroupsResponse
 
 class TestGroupbuilderv3RefreshGroupsResponse(unittest.TestCase):
     """Groupbuilderv3RefreshGroupsResponse unit test stubs"""
@@ -35,7 +35,7 @@ class TestGroupbuilderv3RefreshGroupsResponse(unittest.TestCase):
         model = Groupbuilderv3RefreshGroupsResponse()
         if include_optional:
             return Groupbuilderv3RefreshGroupsResponse(
-                status = ibm_gdsc_sdk_software.models.groupbuilderv3_status_response_base.groupbuilderv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.groupbuilderv3_status_response_base.groupbuilderv3StatusResponseBase(
                     message = '', 
                     status = '', )
             )

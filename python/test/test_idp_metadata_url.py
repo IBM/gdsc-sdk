@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.idp_metadata_url import IdpMetadataUrl
+from ibm_gdsc_sdk_saas.models.idp_metadata_url import IdpMetadataUrl
 
 class TestIdpMetadataUrl(unittest.TestCase):
     """IdpMetadataUrl unit test stubs"""

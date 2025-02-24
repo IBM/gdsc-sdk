@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_fetch_asset_list_response import Assetsv3FetchAssetListResponse
+from ibm_gdsc_sdk_saas.models.assetsv3_fetch_asset_list_response import Assetsv3FetchAssetListResponse
 
 class TestAssetsv3FetchAssetListResponse(unittest.TestCase):
     """Assetsv3FetchAssetListResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestAssetsv3FetchAssetListResponse(unittest.TestCase):
         if include_optional:
             return Assetsv3FetchAssetListResponse(
                 assets = [
-                    ibm_gdsc_sdk_software.models.asset___the_asset_response_entity.Asset - The asset response entity(
+                    ibm_gdsc_sdk_saas.models.asset___the_asset_response_entity.Asset - The asset response entity(
                         application_name = '', 
                         application_version = '', 
                         asset_subtype = '', 
@@ -51,7 +51,7 @@ class TestAssetsv3FetchAssetListResponse(unittest.TestCase):
                         entity_id = '', 
                         entity_type = '', 
                         extended_properties = [
-                            ibm_gdsc_sdk_software.models.extended_properties_structure.Extended properties structure(
+                            ibm_gdsc_sdk_saas.models.extended_properties_structure.Extended properties structure(
                                 data_type = '', 
                                 entity_name = '', 
                                 entity_type = '', 
@@ -65,6 +65,7 @@ class TestAssetsv3FetchAssetListResponse(unittest.TestCase):
                         host_port = '', 
                         ip = '', 
                         ip_port = '', 
+                        is_splittable = True, 
                         mac_address = '', 
                         model_name = '', 
                         monitoring = 'NA', 
@@ -85,10 +86,11 @@ class TestAssetsv3FetchAssetListResponse(unittest.TestCase):
                         type = '', 
                         user_accounts = [
                             ''
-                            ], )
+                            ], 
+                        vertex_id = '', )
                     ],
                 groups = [
-                    ibm_gdsc_sdk_software.models.grouped_asset___the_assets_list_by_grouper_entity.GroupedAsset - The assets list by grouper entity(
+                    ibm_gdsc_sdk_saas.models.grouped_asset___the_assets_list_by_grouper_entity.GroupedAsset - The assets list by grouper entity(
                         group_id = '', 
                         group_name = '', )
                     ],

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.qspmdatamanagerv3_scan_response import Qspmdatamanagerv3ScanResponse
+from ibm_gdsc_sdk_saas.models.qspmdatamanagerv3_scan_response import Qspmdatamanagerv3ScanResponse
 
 class TestQspmdatamanagerv3ScanResponse(unittest.TestCase):
     """Qspmdatamanagerv3ScanResponse unit test stubs"""
@@ -45,7 +45,6 @@ class TestQspmdatamanagerv3ScanResponse(unittest.TestCase):
                 scan_percentage_completion = '',
                 scan_reg_ts = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 scan_status = '',
-                scan_type = '',
                 user_email = ''
             )
         else:

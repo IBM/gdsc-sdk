@@ -8,7 +8,7 @@ ContributionPointersInfoObject is the request type for the api call to get the S
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**column** | **String** | The colmun name in the db2 table. |  [optional] |
+|**column** | **String** | The colmun name in the data warehouse table. |  [optional] |
 |**operator** | **String** | The operation to perform. |  [optional] |
 |**value** | **String** | The value to match. |  [optional] |
 

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.user_sensitive_categories200_response import UserSensitiveCategories200Response
+from ibm_gdsc_sdk_saas.models.user_sensitive_categories200_response import UserSensitiveCategories200Response
 
 class TestUserSensitiveCategories200Response(unittest.TestCase):
     """UserSensitiveCategories200Response unit test stubs"""
@@ -45,7 +45,7 @@ class TestUserSensitiveCategories200Response(unittest.TestCase):
                     ''
                     ],
                 sensitive_categories = [
-                    ibm_gdsc_sdk_software.models.user_sensitive_categories_sensitive_categories_inner.UserSensitiveCategories_sensitiveCategories_inner(
+                    ibm_gdsc_sdk_saas.models.user_sensitive_categories_sensitive_categories_inner.UserSensitiveCategories_sensitiveCategories_inner(
                         count = 1.337, 
                         category = '', )
                     ],
@@ -63,7 +63,7 @@ class TestUserSensitiveCategories200Response(unittest.TestCase):
                     ''
                     ],
                 sensitive_categories = [
-                    ibm_gdsc_sdk_software.models.user_sensitive_categories_sensitive_categories_inner.UserSensitiveCategories_sensitiveCategories_inner(
+                    ibm_gdsc_sdk_saas.models.user_sensitive_categories_sensitive_categories_inner.UserSensitiveCategories_sensitiveCategories_inner(
                         count = 1.337, 
                         category = '', )
                     ],

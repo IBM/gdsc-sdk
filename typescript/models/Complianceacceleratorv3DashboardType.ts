@@ -21,5 +21,11 @@ export enum Complianceacceleratorv3DashboardType {
     SecurityReportsDash = 'SECURITY_REPORTS_DASH',
     GdprReportsDash = 'GDPR_REPORTS_DASH',
     CcpaWorkspaceDash = 'CCPA_WORKSPACE_DASH',
-    GdprWorkspaceDash = 'GDPR_WORKSPACE_DASH'
+    GdprWorkspaceDash = 'GDPR_WORKSPACE_DASH',
+    SoxWorkspaceDash = 'SOX_WORKSPACE_DASH',
+    HipaaWorkspaceDash = 'HIPAA_WORKSPACE_DASH',
+    PciWorkspaceDash = 'PCI_WORKSPACE_DASH',
+    SoxReportsDash = 'SOX_REPORTS_DASH',
+    HipaaReportsDash = 'HIPAA_REPORTS_DASH',
+    PciReportsDash = 'PCI_REPORTS_DASH'
 }

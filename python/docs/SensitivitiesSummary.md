@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.sensitivities_summary import SensitivitiesSummary
+from ibm_gdsc_sdk_saas.models.sensitivities_summary import SensitivitiesSummary
 
 # TODO update the JSON string below
 json = "{}"

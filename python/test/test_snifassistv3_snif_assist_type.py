@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.snifassistv3_snif_assist_type import Snifassistv3SnifAssistType
+from ibm_gdsc_sdk_saas.models.snifassistv3_snif_assist_type import Snifassistv3SnifAssistType
 
 class TestSnifassistv3SnifAssistType(unittest.TestCase):
     """Snifassistv3SnifAssistType unit test stubs"""

@@ -13,29 +13,29 @@
 import { HttpFile } from '../http/http';
 
 export class Resourcecontrollerk8v3EdgeTenantRequest {
-    'edgeGatewayId'?: string;
-    'edgeGatewayName'?: string;
+    'edgeId'?: string;
+    'edgeName'?: string;
     'edgeVersion'?: string;
     'hostname'?: string;
     'licenseType'?: string;
     'rsyslog'?: string;
+    'size'?: string;
     'storageClassName'?: string;
     'storageClassNameRwo'?: string;
     'tenantId'?: string;
-    'tntPlan'?: string;
 
     static readonly discriminator: string | undefined = undefined;
 
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
-            "name": "edgeGatewayId",
-            "baseName": "edge_gateway_id",
+            "name": "edgeId",
+            "baseName": "edge_id",
             "type": "string",
             "format": ""
         },
         {
-            "name": "edgeGatewayName",
-            "baseName": "edge_gateway_name",
+            "name": "edgeName",
+            "baseName": "edge_name",
             "type": "string",
             "format": ""
         },
@@ -64,6 +64,12 @@ export class Resourcecontrollerk8v3EdgeTenantRequest {
             "format": ""
         },
         {
+            "name": "size",
+            "baseName": "size",
+            "type": "string",
+            "format": ""
+        },
+        {
             "name": "storageClassName",
             "baseName": "storage_class_name",
             "type": "string",
@@ -78,12 +84,6 @@ export class Resourcecontrollerk8v3EdgeTenantRequest {
         {
             "name": "tenantId",
             "baseName": "tenant_id",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "tntPlan",
-            "baseName": "tnt_plan",
             "type": "string",
             "format": ""
         }    ];

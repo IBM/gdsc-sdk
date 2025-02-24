@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.flow_node import FlowNode
+from ibm_gdsc_sdk_saas.models.flow_node import FlowNode
 
 # TODO update the JSON string below
 json = "{}"

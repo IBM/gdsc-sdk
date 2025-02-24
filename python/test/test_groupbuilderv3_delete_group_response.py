@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.groupbuilderv3_delete_group_response import Groupbuilderv3DeleteGroupResponse
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_delete_group_response import Groupbuilderv3DeleteGroupResponse
 
 class TestGroupbuilderv3DeleteGroupResponse(unittest.TestCase):
     """Groupbuilderv3DeleteGroupResponse unit test stubs"""
@@ -35,7 +35,7 @@ class TestGroupbuilderv3DeleteGroupResponse(unittest.TestCase):
         model = Groupbuilderv3DeleteGroupResponse()
         if include_optional:
             return Groupbuilderv3DeleteGroupResponse(
-                status = ibm_gdsc_sdk_software.models.groupbuilderv3_status_response_base.groupbuilderv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.groupbuilderv3_status_response_base.groupbuilderv3StatusResponseBase(
                     message = '', 
                     status = '', )
             )

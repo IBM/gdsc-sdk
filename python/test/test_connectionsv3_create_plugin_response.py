@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_create_plugin_response import Connectionsv3CreatePluginResponse
+from ibm_gdsc_sdk_saas.models.connectionsv3_create_plugin_response import Connectionsv3CreatePluginResponse
 
 class TestConnectionsv3CreatePluginResponse(unittest.TestCase):
     """Connectionsv3CreatePluginResponse unit test stubs"""
@@ -36,14 +36,14 @@ class TestConnectionsv3CreatePluginResponse(unittest.TestCase):
         if include_optional:
             return Connectionsv3CreatePluginResponse(
                 id = '',
-                status = ibm_gdsc_sdk_software.models.the_`status`_type_defines_a_logical_error_model_that_is_suitable_for_different
+                status = ibm_gdsc_sdk_saas.models.the_`status`_type_defines_a_logical_error_model_that_is_suitable_for_different
 programming_environments,_including_rest_apis_and_rpc_apis/_it_is_used_by
 [g_rpc](https://github/com/grpc)/_the_error_model_is_designed_to_be:.The `Status` type defines a logical error model that is suitable for different
 programming environments, including REST APIs and RPC APIs. It is used by
 [gRPC](https://github.com/grpc). The error model is designed to be:(
                     code = 56, 
                     details = [
-                        ibm_gdsc_sdk_software.models.protobuf_any.protobufAny(
+                        ibm_gdsc_sdk_saas.models.protobuf_any.protobufAny(
                             type_url = '', 
                             value = 'YQ==', )
                         ], 

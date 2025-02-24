@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.groupbuilderv3_get_groups_response import Groupbuilderv3GetGroupsResponse
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_get_groups_response import Groupbuilderv3GetGroupsResponse
 
 class TestGroupbuilderv3GetGroupsResponse(unittest.TestCase):
     """Groupbuilderv3GetGroupsResponse unit test stubs"""
@@ -36,14 +36,14 @@ class TestGroupbuilderv3GetGroupsResponse(unittest.TestCase):
         if include_optional:
             return Groupbuilderv3GetGroupsResponse(
                 groups = [
-                    ibm_gdsc_sdk_software.models.groupbuilderv3_group.groupbuilderv3Group(
+                    ibm_gdsc_sdk_saas.models.groupbuilderv3_group.groupbuilderv3Group(
                         access_level = 56, 
                         description = '', 
                         flattened_member_count = 56, 
                         group_id = 56, 
                         group_type_id = 56, 
                         last_sync_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                        ldap_config = ibm_gdsc_sdk_software.models.groupbuilderv3_ldap_config.groupbuilderv3LdapConfig(
+                        ldap_config = ibm_gdsc_sdk_saas.models.groupbuilderv3_ldap_config.groupbuilderv3LdapConfig(
                             attributes = [
                                 ''
                                 ], 
@@ -58,14 +58,14 @@ class TestGroupbuilderv3GetGroupsResponse(unittest.TestCase):
                             member_prefix = '', ), 
                         member_count = 56, 
                         members = [
-                            ibm_gdsc_sdk_software.models.groupbuilderv3_group_member.groupbuilderv3GroupMember(
+                            ibm_gdsc_sdk_saas.models.groupbuilderv3_group_member.groupbuilderv3GroupMember(
                                 member_id = '', 
                                 name = '', )
                             ], 
                         name = '', 
                         nested = True, 
                         nested_group_members = [
-                            ibm_gdsc_sdk_software.models.groupbuilderv3_nested_group_member.groupbuilderv3NestedGroupMember(
+                            ibm_gdsc_sdk_saas.models.groupbuilderv3_nested_group_member.groupbuilderv3NestedGroupMember(
                                 group_id = 56, 
                                 name = '', 
                                 nested_member_id = 56, )
@@ -79,7 +79,7 @@ class TestGroupbuilderv3GetGroupsResponse(unittest.TestCase):
                             ''
                             ], )
                     ],
-                status = ibm_gdsc_sdk_software.models.groupbuilderv3_status_response_base.groupbuilderv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.groupbuilderv3_status_response_base.groupbuilderv3StatusResponseBase(
                     message = '', 
                     status = '', )
             )

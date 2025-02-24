@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticsenginev3_generate_leads_response import Riskanalyticsenginev3GenerateLeadsResponse
+from ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_generate_leads_response import Riskanalyticsenginev3GenerateLeadsResponse
 
 class TestRiskanalyticsenginev3GenerateLeadsResponse(unittest.TestCase):
     """Riskanalyticsenginev3GenerateLeadsResponse unit test stubs"""
@@ -38,20 +38,20 @@ class TestRiskanalyticsenginev3GenerateLeadsResponse(unittest.TestCase):
                 end_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 pivot_type = 'UNDEFINED_PIVOT_TYPE',
                 risks = [
-                    ibm_gdsc_sdk_software.models.riskanalyticsenginev3_risk.riskanalyticsenginev3Risk(
-                        classification_details = ibm_gdsc_sdk_software.models.riskanalyticsenginev3_classification_details.riskanalyticsenginev3ClassificationDetails(
+                    ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_risk.riskanalyticsenginev3Risk(
+                        classification_details = ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_classification_details.riskanalyticsenginev3ClassificationDetails(
                             class_description_nls = '', 
                             class_key = '', 
                             class_nls = '', 
                             class_observations = [
-                                ibm_gdsc_sdk_software.models.riskanalyticsenginev3_classification_observation.riskanalyticsenginev3ClassificationObservation(
+                                ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_classification_observation.riskanalyticsenginev3ClassificationObservation(
                                     is_supporting_observation = True, 
                                     key = '', 
                                     original_value = 1.337, )
                                 ], 
                             class_value = 1.337, 
                             classification_match_details = [
-                                ibm_gdsc_sdk_software.models.riskanalyticsenginev3_classification_match_details.riskanalyticsenginev3ClassificationMatchDetails(
+                                ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_classification_match_details.riskanalyticsenginev3ClassificationMatchDetails(
                                     class_key = '', 
                                     class_value = 1.337, 
                                     classification_confidence = 1.337, 
@@ -62,9 +62,9 @@ class TestRiskanalyticsenginev3GenerateLeadsResponse(unittest.TestCase):
                         creation_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         end_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         feature_sets = [
-                            ibm_gdsc_sdk_software.models.riskanalyticsenginev3_feature_set.riskanalyticsenginev3FeatureSet(
+                            ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_feature_set.riskanalyticsenginev3FeatureSet(
                                 features = [
-                                    ibm_gdsc_sdk_software.models.riskanalyticsenginev3_feature.riskanalyticsenginev3Feature(
+                                    ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_feature.riskanalyticsenginev3Feature(
                                         feature_nls = '', 
                                         is_observation = True, 
                                         is_zero = True, 
@@ -81,18 +81,18 @@ class TestRiskanalyticsenginev3GenerateLeadsResponse(unittest.TestCase):
                         id = '', 
                         is_emerging = True, 
                         leads = [
-                            ibm_gdsc_sdk_software.models.riskanalyticsenginev3_lead.riskanalyticsenginev3Lead(
+                            ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_lead.riskanalyticsenginev3Lead(
                                 count = 56, 
                                 creation_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                                 info = [
-                                    ibm_gdsc_sdk_software.models.riskanalyticsenginev3_additional_info.riskanalyticsenginev3AdditionalInfo(
+                                    ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_additional_info.riskanalyticsenginev3AdditionalInfo(
                                         key = '', 
                                         type = 'UNDEFINED_TYPE', 
                                         value = '', )
                                     ], 
                                 is_observation = True, 
                                 lead_key = '', 
-                                pivot = ibm_gdsc_sdk_software.models.riskanalyticsenginev3_pivot.riskanalyticsenginev3Pivot(
+                                pivot = ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_pivot.riskanalyticsenginev3Pivot(
                                     database = '', 
                                     database_source_field = 'UNDEFINED', 
                                     db_user = '', 
@@ -103,7 +103,7 @@ class TestRiskanalyticsenginev3GenerateLeadsResponse(unittest.TestCase):
                                 severity = 56, 
                                 type = 'UNDEFINED_LEAD_TYPE', )
                             ], 
-                        pivot = ibm_gdsc_sdk_software.models.riskanalyticsenginev3_pivot.riskanalyticsenginev3Pivot(
+                        pivot = ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_pivot.riskanalyticsenginev3Pivot(
                             database = '', 
                             db_user = '', 
                             id = '', 

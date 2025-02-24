@@ -20,12 +20,12 @@ Summary: Create workspace Description: Create a workspace.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.ComplianceAcceleratorApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ComplianceAcceleratorApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -93,12 +93,12 @@ Summary: Delete compliance workspaces Description: Delete workspaces.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.ComplianceAcceleratorApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ComplianceAcceleratorApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -161,19 +161,19 @@ public class Example {
 
 <a id="complianceAcceleratorGetComplianceInfo"></a>
 # **complianceAcceleratorGetComplianceInfo**
-> Complianceacceleratorv3GetComplianceInfoResponse complianceAcceleratorGetComplianceInfo()
+> Complianceacceleratorv3GetComplianceInfoResponse complianceAcceleratorGetComplianceInfo(isBrief)
 
 Summary: Get compliance info Description: Return stored compliance data.
 
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.ComplianceAcceleratorApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ComplianceAcceleratorApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -192,8 +192,9 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     ComplianceAcceleratorApi apiInstance = new ComplianceAcceleratorApi(defaultClient);
+    Boolean isBrief = true; // Boolean | gives compliance workspace data without reaching out to other services - meant to be quicker for dashboards.
     try {
-      Complianceacceleratorv3GetComplianceInfoResponse result = apiInstance.complianceAcceleratorGetComplianceInfo();
+      Complianceacceleratorv3GetComplianceInfoResponse result = apiInstance.complianceAcceleratorGetComplianceInfo(isBrief);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ComplianceAcceleratorApi#complianceAcceleratorGetComplianceInfo");
@@ -207,7 +208,10 @@ public class Example {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **isBrief** | **Boolean**| gives compliance workspace data without reaching out to other services - meant to be quicker for dashboards. | [optional] |
 
 ### Return type
 
@@ -237,12 +241,12 @@ HydrateWorkspace - Hydrates specified objects within a workspace
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.ComplianceAcceleratorApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ComplianceAcceleratorApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -310,12 +314,12 @@ Summary: Store compliance info Description: Store compliance data.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.ApiClient;
-import com.ibm.gdsc.ApiException;
-import com.ibm.gdsc.Configuration;
-import com.ibm.gdsc.auth.*;
-import com.ibm.gdsc.models.*;
-import com.ibm.gdsc.sdk.ComplianceAcceleratorApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ComplianceAcceleratorApi;
 
 public class Example {
   public static void main(String[] args) {

@@ -1,4 +1,4 @@
-# ibm_gdsc_sdk_software.RiskAnalyticsEngineApi
+# ibm_gdsc_sdk_saas.RiskAnalyticsEngineApi
 
 All URIs are relative to *http://localhost*
 
@@ -19,14 +19,14 @@ Summary: Get lead generator config Description: Retrieve the configuration of a 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.riskanalyticsenginev3_get_lead_generator_config_response import Riskanalyticsenginev3GetLeadGeneratorConfigResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_get_lead_generator_config_response import Riskanalyticsenginev3GetLeadGeneratorConfigResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -36,7 +36,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -48,9 +48,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.RiskAnalyticsEngineApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.RiskAnalyticsEngineApi(api_client)
 
     try:
         # Summary: Get lead generator config Description: Retrieve the configuration of a lead generator.
@@ -100,15 +100,15 @@ Summary: Update lead generator config Description: Update the configuration of a
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.riskanalyticsenginev3_update_lead_generator_config_request import Riskanalyticsenginev3UpdateLeadGeneratorConfigRequest
-from ibm_gdsc_sdk_software.models.riskanalyticsenginev3_update_lead_generator_config_response import Riskanalyticsenginev3UpdateLeadGeneratorConfigResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_update_lead_generator_config_request import Riskanalyticsenginev3UpdateLeadGeneratorConfigRequest
+from ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_update_lead_generator_config_response import Riskanalyticsenginev3UpdateLeadGeneratorConfigResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -118,7 +118,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -130,10 +130,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.RiskAnalyticsEngineApi(api_client)
-    riskanalyticsenginev3_update_lead_generator_config_request = ibm_gdsc_sdk_software.Riskanalyticsenginev3UpdateLeadGeneratorConfigRequest() # Riskanalyticsenginev3UpdateLeadGeneratorConfigRequest | 
+    api_instance = ibm_gdsc_sdk_saas.RiskAnalyticsEngineApi(api_client)
+    riskanalyticsenginev3_update_lead_generator_config_request = ibm_gdsc_sdk_saas.Riskanalyticsenginev3UpdateLeadGeneratorConfigRequest() # Riskanalyticsenginev3UpdateLeadGeneratorConfigRequest | 
 
     try:
         # Summary: Update lead generator config Description: Update the configuration of a leads generator.

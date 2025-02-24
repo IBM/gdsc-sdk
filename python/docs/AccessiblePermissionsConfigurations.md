@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.accessible_permissions_configurations import AccessiblePermissionsConfigurations
+from ibm_gdsc_sdk_saas.models.accessible_permissions_configurations import AccessiblePermissionsConfigurations
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_stop_export_report_job_response import Reportsrunnerv3StopExportReportJobResponse
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_stop_export_report_job_response import Reportsrunnerv3StopExportReportJobResponse
 
 class TestReportsrunnerv3StopExportReportJobResponse(unittest.TestCase):
     """Reportsrunnerv3StopExportReportJobResponse unit test stubs"""

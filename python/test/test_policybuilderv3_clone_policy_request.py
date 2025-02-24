@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_clone_policy_request import Policybuilderv3ClonePolicyRequest
+from ibm_gdsc_sdk_saas.models.policybuilderv3_clone_policy_request import Policybuilderv3ClonePolicyRequest
 
 class TestPolicybuilderv3ClonePolicyRequest(unittest.TestCase):
     """Policybuilderv3ClonePolicyRequest unit test stubs"""

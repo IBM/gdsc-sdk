@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.schedulerv3_get_dependencies_response import Schedulerv3GetDependenciesResponse
+from ibm_gdsc_sdk_saas.models.schedulerv3_get_dependencies_response import Schedulerv3GetDependenciesResponse
 
 class TestSchedulerv3GetDependenciesResponse(unittest.TestCase):
     """Schedulerv3GetDependenciesResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestSchedulerv3GetDependenciesResponse(unittest.TestCase):
         if include_optional:
             return Schedulerv3GetDependenciesResponse(
                 dependencies = [
-                    ibm_gdsc_sdk_software.models.dependency_shows_how_many_scheduled_tasks_are_using_the_requested_configuration_type.Dependency shows how many scheduled tasks are using the requested configuration type(
+                    ibm_gdsc_sdk_saas.models.dependency_shows_how_many_scheduled_tasks_are_using_the_requested_configuration_type.Dependency shows how many scheduled tasks are using the requested configuration type(
                         config_id = '', 
                         config_type = '', 
                         scheduled_task_count = 56, )

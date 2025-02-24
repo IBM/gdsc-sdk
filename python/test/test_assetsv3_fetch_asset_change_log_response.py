@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_fetch_asset_change_log_response import Assetsv3FetchAssetChangeLogResponse
+from ibm_gdsc_sdk_saas.models.assetsv3_fetch_asset_change_log_response import Assetsv3FetchAssetChangeLogResponse
 
 class TestAssetsv3FetchAssetChangeLogResponse(unittest.TestCase):
     """Assetsv3FetchAssetChangeLogResponse unit test stubs"""
@@ -36,11 +36,11 @@ class TestAssetsv3FetchAssetChangeLogResponse(unittest.TestCase):
         if include_optional:
             return Assetsv3FetchAssetChangeLogResponse(
                 asset_change_log = [
-                    ibm_gdsc_sdk_software.models.asset_change_log.Asset Change Log(
+                    ibm_gdsc_sdk_saas.models.asset_change_log.Asset Change Log(
                         action_taken = '', 
                         activity = '', 
                         after = [
-                            ibm_gdsc_sdk_software.models.assetsv3_before_after.assetsv3BeforeAfter(
+                            ibm_gdsc_sdk_saas.models.assetsv3_before_after.assetsv3BeforeAfter(
                                 asset_id = '', 
                                 asset_name = '', 
                                 rule_id = '', 
@@ -49,7 +49,7 @@ class TestAssetsv3FetchAssetChangeLogResponse(unittest.TestCase):
                                 tag_name = '', )
                             ], 
                         before = [
-                            ibm_gdsc_sdk_software.models.assetsv3_before_after.assetsv3BeforeAfter(
+                            ibm_gdsc_sdk_saas.models.assetsv3_before_after.assetsv3BeforeAfter(
                                 asset_id = '', 
                                 asset_name = '', 
                                 rule_id = '', 
@@ -60,7 +60,7 @@ class TestAssetsv3FetchAssetChangeLogResponse(unittest.TestCase):
                         date = '', 
                         performed_by = '', 
                         rule = [
-                            ibm_gdsc_sdk_software.models.rule_logged.Rule logged(
+                            ibm_gdsc_sdk_saas.models.rule_logged.Rule logged(
                                 rule_id = '', 
                                 rule_name = '', )
                             ], )

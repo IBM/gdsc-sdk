@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.workflowv3_update_cases_request import Workflowv3UpdateCasesRequest
+from ibm_gdsc_sdk_saas.models.workflowv3_update_cases_request import Workflowv3UpdateCasesRequest
 
 class TestWorkflowv3UpdateCasesRequest(unittest.TestCase):
     """Workflowv3UpdateCasesRequest unit test stubs"""
@@ -36,12 +36,12 @@ class TestWorkflowv3UpdateCasesRequest(unittest.TestCase):
         if include_optional:
             return Workflowv3UpdateCasesRequest(
                 cases = [
-                    ibm_gdsc_sdk_software.models.editiable_fields_of_a_case.Editiable fields of a case(
+                    ibm_gdsc_sdk_saas.models.editiable_fields_of_a_case.Editiable fields of a case(
                         artifacts = [
                             ''
                             ], 
                         assignments = [
-                            ibm_gdsc_sdk_software.models.workflowv3_entity.workflowv3Entity(
+                            ibm_gdsc_sdk_saas.models.workflowv3_entity.workflowv3Entity(
                                 label = '', 
                                 template_id = '', 
                                 type = 'UNDEFINED_ENTITY_TYPE', 

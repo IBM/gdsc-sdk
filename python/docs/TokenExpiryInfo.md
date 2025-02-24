@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.token_expiry_info import TokenExpiryInfo
+from ibm_gdsc_sdk_saas.models.token_expiry_info import TokenExpiryInfo
 
 # TODO update the JSON string below
 json = "{}"

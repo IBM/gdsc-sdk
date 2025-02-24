@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.vendor_data_store import VendorDataStore
+from ibm_gdsc_sdk_saas.models.vendor_data_store import VendorDataStore
 
 class TestVendorDataStore(unittest.TestCase):
     """VendorDataStore unit test stubs"""
@@ -40,7 +40,7 @@ class TestVendorDataStore(unittest.TestCase):
                 data_store_name = '',
                 cloud_region = '',
                 sensitivities_summary = [
-                    ibm_gdsc_sdk_software.models.sensitivity_summary.SensitivitySummary(
+                    ibm_gdsc_sdk_saas.models.sensitivity_summary.SensitivitySummary(
                         tag = 'BUSINESS_EMAIL_ADDRESS', 
                         count = 230, 
                         category = 'Personal', )
@@ -54,7 +54,7 @@ class TestVendorDataStore(unittest.TestCase):
                 data_store_name = '',
                 cloud_region = '',
                 sensitivities_summary = [
-                    ibm_gdsc_sdk_software.models.sensitivity_summary.SensitivitySummary(
+                    ibm_gdsc_sdk_saas.models.sensitivity_summary.SensitivitySummary(
                         tag = 'BUSINESS_EMAIL_ADDRESS', 
                         count = 230, 
                         category = 'Personal', )

@@ -1,4 +1,4 @@
-# ibm_gdsc_sdk_software.ReportsServiceApi
+# ibm_gdsc_sdk_saas.ReportsServiceApi
 
 All URIs are relative to *http://localhost*
 
@@ -60,15 +60,15 @@ Summary: Create a category Description: Create a report category
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_create_category_request import Reportsv3CreateCategoryRequest
-from ibm_gdsc_sdk_software.models.reportsv3_create_category_response import Reportsv3CreateCategoryResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_create_category_request import Reportsv3CreateCategoryRequest
+from ibm_gdsc_sdk_saas.models.reportsv3_create_category_response import Reportsv3CreateCategoryResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -78,7 +78,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -90,10 +90,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
-    reportsv3_create_category_request = ibm_gdsc_sdk_software.Reportsv3CreateCategoryRequest() # Reportsv3CreateCategoryRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
+    reportsv3_create_category_request = ibm_gdsc_sdk_saas.Reportsv3CreateCategoryRequest() # Reportsv3CreateCategoryRequest | 
 
     try:
         # Summary: Create a category Description: Create a report category
@@ -146,15 +146,15 @@ Summary: Create chart Description: Create custom chart based on provided propert
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_create_chart_request import Reportsv3CreateChartRequest
-from ibm_gdsc_sdk_software.models.reportsv3_create_chart_response import Reportsv3CreateChartResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_create_chart_request import Reportsv3CreateChartRequest
+from ibm_gdsc_sdk_saas.models.reportsv3_create_chart_response import Reportsv3CreateChartResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -164,7 +164,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -176,10 +176,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
-    reportsv3_create_chart_request = ibm_gdsc_sdk_software.Reportsv3CreateChartRequest() # Reportsv3CreateChartRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
+    reportsv3_create_chart_request = ibm_gdsc_sdk_saas.Reportsv3CreateChartRequest() # Reportsv3CreateChartRequest | 
 
     try:
         # Summary: Create chart Description: Create custom chart based on provided properties.
@@ -232,15 +232,15 @@ Summary: Create chart template v2 Description: Create custom VEGA chart template
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_create_chart_templatev2_request import Reportsv3CreateChartTemplatev2Request
-from ibm_gdsc_sdk_software.models.reportsv3_create_chart_templatev2_response import Reportsv3CreateChartTemplatev2Response
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_create_chart_templatev2_request import Reportsv3CreateChartTemplatev2Request
+from ibm_gdsc_sdk_saas.models.reportsv3_create_chart_templatev2_response import Reportsv3CreateChartTemplatev2Response
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -250,7 +250,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -262,10 +262,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
-    reportsv3_create_chart_templatev2_request = ibm_gdsc_sdk_software.Reportsv3CreateChartTemplatev2Request() # Reportsv3CreateChartTemplatev2Request | 
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
+    reportsv3_create_chart_templatev2_request = ibm_gdsc_sdk_saas.Reportsv3CreateChartTemplatev2Request() # Reportsv3CreateChartTemplatev2Request | 
 
     try:
         # Summary: Create chart template v2 Description: Create custom VEGA chart template.
@@ -318,15 +318,15 @@ Summary: Create chart v2 Description: Create custom VEGA chart based on provided
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_create_chartv2_request import Reportsv3CreateChartv2Request
-from ibm_gdsc_sdk_software.models.reportsv3_create_chartv2_response import Reportsv3CreateChartv2Response
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_create_chartv2_request import Reportsv3CreateChartv2Request
+from ibm_gdsc_sdk_saas.models.reportsv3_create_chartv2_response import Reportsv3CreateChartv2Response
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -336,7 +336,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -348,10 +348,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
-    reportsv3_create_chartv2_request = ibm_gdsc_sdk_software.Reportsv3CreateChartv2Request() # Reportsv3CreateChartv2Request | 
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
+    reportsv3_create_chartv2_request = ibm_gdsc_sdk_saas.Reportsv3CreateChartv2Request() # Reportsv3CreateChartv2Request | 
 
     try:
         # Summary: Create chart v2 Description: Create custom VEGA chart based on provided properties.
@@ -404,15 +404,15 @@ Summary - Create fields by category Description: Cteate category fields based on
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_create_fields_by_category_request import Reportsv3CreateFieldsByCategoryRequest
-from ibm_gdsc_sdk_software.models.reportsv3_create_fields_by_category_response import Reportsv3CreateFieldsByCategoryResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_create_fields_by_category_request import Reportsv3CreateFieldsByCategoryRequest
+from ibm_gdsc_sdk_saas.models.reportsv3_create_fields_by_category_response import Reportsv3CreateFieldsByCategoryResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -422,7 +422,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -434,10 +434,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
-    reportsv3_create_fields_by_category_request = ibm_gdsc_sdk_software.Reportsv3CreateFieldsByCategoryRequest() # Reportsv3CreateFieldsByCategoryRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
+    reportsv3_create_fields_by_category_request = ibm_gdsc_sdk_saas.Reportsv3CreateFieldsByCategoryRequest() # Reportsv3CreateFieldsByCategoryRequest | 
 
     try:
         # Summary - Create fields by category Description: Cteate category fields based on provided properties.
@@ -490,15 +490,15 @@ Summary: Create a join Description: Create a custom report join
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_create_join_request import Reportsv3CreateJoinRequest
-from ibm_gdsc_sdk_software.models.reportsv3_create_join_response import Reportsv3CreateJoinResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_create_join_request import Reportsv3CreateJoinRequest
+from ibm_gdsc_sdk_saas.models.reportsv3_create_join_response import Reportsv3CreateJoinResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -508,7 +508,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -520,10 +520,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
-    reportsv3_create_join_request = ibm_gdsc_sdk_software.Reportsv3CreateJoinRequest() # Reportsv3CreateJoinRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
+    reportsv3_create_join_request = ibm_gdsc_sdk_saas.Reportsv3CreateJoinRequest() # Reportsv3CreateJoinRequest | 
 
     try:
         # Summary: Create a join Description: Create a custom report join
@@ -576,15 +576,15 @@ Summary: Create report Description: Create custom report based on provided prope
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_create_report_request import Reportsv3CreateReportRequest
-from ibm_gdsc_sdk_software.models.reportsv3_create_report_response import Reportsv3CreateReportResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_create_report_request import Reportsv3CreateReportRequest
+from ibm_gdsc_sdk_saas.models.reportsv3_create_report_response import Reportsv3CreateReportResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -594,7 +594,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -606,10 +606,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
-    reportsv3_create_report_request = ibm_gdsc_sdk_software.Reportsv3CreateReportRequest() # Reportsv3CreateReportRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
+    reportsv3_create_report_request = ibm_gdsc_sdk_saas.Reportsv3CreateReportRequest() # Reportsv3CreateReportRequest | 
 
     try:
         # Summary: Create report Description: Create custom report based on provided properties.
@@ -662,15 +662,15 @@ Summary: Create a variant Description: Create a variant for reports
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_create_variant_request import Reportsv3CreateVariantRequest
-from ibm_gdsc_sdk_software.models.reportsv3_create_variant_response import Reportsv3CreateVariantResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_create_variant_request import Reportsv3CreateVariantRequest
+from ibm_gdsc_sdk_saas.models.reportsv3_create_variant_response import Reportsv3CreateVariantResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -680,7 +680,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -692,10 +692,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
-    reportsv3_create_variant_request = ibm_gdsc_sdk_software.Reportsv3CreateVariantRequest() # Reportsv3CreateVariantRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
+    reportsv3_create_variant_request = ibm_gdsc_sdk_saas.Reportsv3CreateVariantRequest() # Reportsv3CreateVariantRequest | 
 
     try:
         # Summary: Create a variant Description: Create a variant for reports
@@ -748,14 +748,14 @@ Summary: Delete a category Description: Delete a report category
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_delete_category_response import Reportsv3DeleteCategoryResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_delete_category_response import Reportsv3DeleteCategoryResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -765,7 +765,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -777,9 +777,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
     category_id = 'category_id_example' # str | category id. (optional)
     table_name = 'table_name_example' # str | table name. (optional)
 
@@ -835,14 +835,14 @@ Summary: Delete chart Description: Delete a custom chart.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_delete_chart_response import Reportsv3DeleteChartResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_delete_chart_response import Reportsv3DeleteChartResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -852,7 +852,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -864,9 +864,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
     chart_id = 'chart_id_example' # str | The id of the chart to be deleted.
 
     try:
@@ -920,14 +920,14 @@ Summary: Delete chart template v2 Description: Delete a custom VEGA chart templa
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_delete_chart_templatev2_response import Reportsv3DeleteChartTemplatev2Response
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_delete_chart_templatev2_response import Reportsv3DeleteChartTemplatev2Response
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -937,7 +937,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -949,9 +949,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
     template_id = 'template_id_example' # str | Unique template ID.
 
     try:
@@ -1005,14 +1005,14 @@ Summary: Delete chart v2 Description: Delete a custom VEGA chart.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_delete_chartv2_response import Reportsv3DeleteChartv2Response
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_delete_chartv2_response import Reportsv3DeleteChartv2Response
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1022,7 +1022,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1034,9 +1034,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
     chart_id = 'chart_id_example' # str | The ID of the chart for deletion.
 
     try:
@@ -1090,14 +1090,14 @@ Summary - Delete fields by category Description: Delete category fields based on
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_delete_fields_by_category_response import Reportsv3DeleteFieldsByCategoryResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_delete_fields_by_category_response import Reportsv3DeleteFieldsByCategoryResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1107,7 +1107,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1119,9 +1119,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
     header_ids = ['header_ids_example'] # List[str] | Header ids. (optional)
     table_name = 'table_name_example' # str | table name. (optional)
 
@@ -1177,14 +1177,14 @@ Summary: Delete a join Description: Delete a custom join
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_delete_join_response import Reportsv3DeleteJoinResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_delete_join_response import Reportsv3DeleteJoinResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1194,7 +1194,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1206,9 +1206,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
     join_id = 'join_id_example' # str | The id of the join to be deleted.
 
     try:
@@ -1262,14 +1262,14 @@ Summary: Delete report Description: Delete a custom report.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_delete_report_response import Reportsv3DeleteReportResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_delete_report_response import Reportsv3DeleteReportResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1279,7 +1279,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1291,9 +1291,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
     report_id = 'report_id_example' # str | The id of the Report to be deleted.
 
     try:
@@ -1347,14 +1347,14 @@ Summary: Delete a variant Description: Delete a variant
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_delete_variant_response import Reportsv3DeleteVariantResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_delete_variant_response import Reportsv3DeleteVariantResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1364,7 +1364,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1376,9 +1376,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
     variant_id = 'variant_id_example' # str | The id of the variant to delete
 
     try:
@@ -1432,14 +1432,14 @@ Summary:  Get all available report categories. Description: Get all category rel
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_get_categories_response import Reportsv3GetCategoriesResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_get_categories_response import Reportsv3GetCategoriesResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1449,7 +1449,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1461,9 +1461,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
     report_id = 'report_id_example' # str | Report ID. (optional)
 
     try:
@@ -1517,14 +1517,14 @@ Summary: Get chart settings Description: Get a custom chart based on provided re
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_get_chart_settings_response import Reportsv3GetChartSettingsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_get_chart_settings_response import Reportsv3GetChartSettingsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1534,7 +1534,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1546,9 +1546,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
     chart_id = 'chart_id_example' # str | Unique Chart ID. (optional)
     report_id = 'report_id_example' # str | Unique Report ID. (optional)
 
@@ -1604,14 +1604,14 @@ Summary: Get chart settings v2 Description: Get a custom VEGA chart based on pro
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_get_chart_settingsv2_response import Reportsv3GetChartSettingsv2Response
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_get_chart_settingsv2_response import Reportsv3GetChartSettingsv2Response
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1621,7 +1621,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1633,9 +1633,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
     chart_id = 'chart_id_example' # str | Unique Chart ID. (optional)
     report_id = 'report_id_example' # str | Unique Report ID. (optional)
 
@@ -1691,14 +1691,14 @@ Summary: Get chart template v2 Description: Get all custom VEGA chart templates.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_get_chart_templatesv2_response import Reportsv3GetChartTemplatesv2Response
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_get_chart_templatesv2_response import Reportsv3GetChartTemplatesv2Response
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1708,7 +1708,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1720,9 +1720,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
 
     try:
         # Summary: Get chart template v2 Description: Get all custom VEGA chart templates.
@@ -1772,14 +1772,14 @@ Summary: Get fields by categories Description: Get all category related fields o
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_get_fields_by_categories_response import Reportsv3GetFieldsByCategoriesResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_get_fields_by_categories_response import Reportsv3GetFieldsByCategoriesResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1789,7 +1789,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1801,9 +1801,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
     category_ids = ['category_ids_example'] # List[str] | Category IDs. (optional)
 
     try:
@@ -1857,14 +1857,14 @@ Summary: Get fields by category Description: Get all category related fields or 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_get_fields_by_category_response import Reportsv3GetFieldsByCategoryResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_get_fields_by_category_response import Reportsv3GetFieldsByCategoryResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1874,7 +1874,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1886,9 +1886,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
     category_id = 'category_id_example' # str | Category ID. (optional)
     report_id = 'report_id_example' # str | Report ID. (optional)
     table_name = 'table_name_example' # str | optional table name parameter. (optional)
@@ -1946,14 +1946,14 @@ Summary: Get all joins Description: Get all custom joins.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_get_joins_response import Reportsv3GetJoinsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_get_joins_response import Reportsv3GetJoinsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1963,7 +1963,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1975,9 +1975,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
     category_id = 'category_id_example' # str | Category ID (Optional). (optional)
 
     try:
@@ -2031,15 +2031,15 @@ Summary: Get query by report definition Description: Get query by report definit
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_get_query_by_report_definition_request import Reportsv3GetQueryByReportDefinitionRequest
-from ibm_gdsc_sdk_software.models.reportsv3_get_report_query_response import Reportsv3GetReportQueryResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_get_query_by_report_definition_request import Reportsv3GetQueryByReportDefinitionRequest
+from ibm_gdsc_sdk_saas.models.reportsv3_get_report_query_response import Reportsv3GetReportQueryResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2049,7 +2049,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -2061,10 +2061,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
-    reportsv3_get_query_by_report_definition_request = ibm_gdsc_sdk_software.Reportsv3GetQueryByReportDefinitionRequest() # Reportsv3GetQueryByReportDefinitionRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
+    reportsv3_get_query_by_report_definition_request = ibm_gdsc_sdk_saas.Reportsv3GetQueryByReportDefinitionRequest() # Reportsv3GetQueryByReportDefinitionRequest | 
 
     try:
         # Summary: Get query by report definition Description: Get query by report definition.
@@ -2117,15 +2117,15 @@ Summary: Get query by report ID Description: Get query by report ID.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_get_query_by_report_id_request import Reportsv3GetQueryByReportIDRequest
-from ibm_gdsc_sdk_software.models.reportsv3_get_report_query_response import Reportsv3GetReportQueryResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_get_query_by_report_id_request import Reportsv3GetQueryByReportIDRequest
+from ibm_gdsc_sdk_saas.models.reportsv3_get_report_query_response import Reportsv3GetReportQueryResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2135,7 +2135,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -2147,10 +2147,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
-    reportsv3_get_query_by_report_id_request = ibm_gdsc_sdk_software.Reportsv3GetQueryByReportIDRequest() # Reportsv3GetQueryByReportIDRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
+    reportsv3_get_query_by_report_id_request = ibm_gdsc_sdk_saas.Reportsv3GetQueryByReportIDRequest() # Reportsv3GetQueryByReportIDRequest | 
 
     try:
         # Summary: Get query by report ID Description: Get query by report ID.
@@ -2203,14 +2203,14 @@ Summary: Get report definition Description: Get report definition.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_get_report_definition_response import Reportsv3GetReportDefinitionResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_get_report_definition_response import Reportsv3GetReportDefinitionResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2220,7 +2220,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -2232,9 +2232,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
     report_id = 'report_id_example' # str | Unique Report ID.
 
     try:
@@ -2288,14 +2288,14 @@ Summary: Get report groups Description: Get reports used by the provided groups.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_get_report_groups_response import Reportsv3GetReportGroupsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_get_report_groups_response import Reportsv3GetReportGroupsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2305,7 +2305,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -2317,9 +2317,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
     groups = ['groups_example'] # List[str] | List of group IDs that should be checked for usage in each report. (optional)
 
     try:
@@ -2373,14 +2373,14 @@ Summary: Get report synopsis Description: Return BriefReport.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_get_report_synopsis_response import Reportsv3GetReportSynopsisResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_get_report_synopsis_response import Reportsv3GetReportSynopsisResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2390,7 +2390,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -2402,9 +2402,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
     report_id = 'report_id_example' # str | Unique Report ID.
 
     try:
@@ -2458,14 +2458,14 @@ Summary: Get report timestamp header Description: Get where to take a report tim
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_get_report_timestamp_header_response import Reportsv3GetReportTimestampHeaderResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_get_report_timestamp_header_response import Reportsv3GetReportTimestampHeaderResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2475,7 +2475,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -2487,9 +2487,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
     category_id = 'category_id_example' # str | Category ID parameter. (optional)
     table_names = ['table_names_example'] # List[str] | List of all header tables. (optional)
 
@@ -2545,14 +2545,14 @@ Summary: Get reports Description: Get reports list.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_get_reports_response import Reportsv3GetReportsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_get_reports_response import Reportsv3GetReportsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2562,7 +2562,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -2574,9 +2574,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
     category_id = 'category_id_example' # str | Optional Category ID parameter. (optional)
     table_name = 'table_name_example' # str | Optional table name parameter. (optional)
 
@@ -2632,14 +2632,14 @@ Summary: Get the reports that use a join Description: Get the reports that use a
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_get_reports_for_join_response import Reportsv3GetReportsForJoinResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_get_reports_for_join_response import Reportsv3GetReportsForJoinResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2649,7 +2649,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -2661,9 +2661,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
     join_id = 'join_id_example' # str | 
 
     try:
@@ -2717,14 +2717,14 @@ Summary: Get reports tags Description: Get all report distinct tags.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_get_reports_tags_response import Reportsv3GetReportsTagsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_get_reports_tags_response import Reportsv3GetReportsTagsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2734,7 +2734,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -2746,9 +2746,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
 
     try:
         # Summary: Get reports tags Description: Get all report distinct tags.
@@ -2798,14 +2798,14 @@ Summary: Get a variant Description: Get a given variant
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_get_variant_response import Reportsv3GetVariantResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_get_variant_response import Reportsv3GetVariantResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2815,7 +2815,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -2827,9 +2827,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
     variant_id = 'variant_id_example' # str | The variant id
 
     try:
@@ -2883,14 +2883,14 @@ Summary: Get all variants Description: Get all variants in reports
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_get_variants_response import Reportsv3GetVariantsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_get_variants_response import Reportsv3GetVariantsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2900,7 +2900,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -2912,9 +2912,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
 
     try:
         # Summary: Get all variants Description: Get all variants in reports
@@ -2964,15 +2964,15 @@ Summary: Partial chart update Description: Update a custom chart with partial in
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_partial_chart_update_request import Reportsv3PartialChartUpdateRequest
-from ibm_gdsc_sdk_software.models.reportsv3_partial_chart_update_response import Reportsv3PartialChartUpdateResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_partial_chart_update_request import Reportsv3PartialChartUpdateRequest
+from ibm_gdsc_sdk_saas.models.reportsv3_partial_chart_update_response import Reportsv3PartialChartUpdateResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2982,7 +2982,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -2994,11 +2994,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
     chart_id = 'chart_id_example' # str | Unique chart ID.
-    reportsv3_partial_chart_update_request = ibm_gdsc_sdk_software.Reportsv3PartialChartUpdateRequest() # Reportsv3PartialChartUpdateRequest | 
+    reportsv3_partial_chart_update_request = ibm_gdsc_sdk_saas.Reportsv3PartialChartUpdateRequest() # Reportsv3PartialChartUpdateRequest | 
 
     try:
         # Summary: Partial chart update Description: Update a custom chart with partial information.
@@ -3052,15 +3052,15 @@ Summary: Partial report update Description: Update a custom report with partial 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_partial_report_update_request import Reportsv3PartialReportUpdateRequest
-from ibm_gdsc_sdk_software.models.reportsv3_partial_report_update_response import Reportsv3PartialReportUpdateResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_partial_report_update_request import Reportsv3PartialReportUpdateRequest
+from ibm_gdsc_sdk_saas.models.reportsv3_partial_report_update_response import Reportsv3PartialReportUpdateResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -3070,7 +3070,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -3082,11 +3082,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
     report_id = 'report_id_example' # str | Unique Report ID.
-    reportsv3_partial_report_update_request = ibm_gdsc_sdk_software.Reportsv3PartialReportUpdateRequest() # Reportsv3PartialReportUpdateRequest | 
+    reportsv3_partial_report_update_request = ibm_gdsc_sdk_saas.Reportsv3PartialReportUpdateRequest() # Reportsv3PartialReportUpdateRequest | 
 
     try:
         # Summary: Partial report update Description: Update a custom report with partial information.
@@ -3140,15 +3140,15 @@ Summary: Run a variant Description: Run the operations in a variant
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_run_variant_operation_request import Reportsv3RunVariantOperationRequest
-from ibm_gdsc_sdk_software.models.reportsv3_run_variant_operation_response import Reportsv3RunVariantOperationResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_run_variant_operation_request import Reportsv3RunVariantOperationRequest
+from ibm_gdsc_sdk_saas.models.reportsv3_run_variant_operation_response import Reportsv3RunVariantOperationResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -3158,7 +3158,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -3170,10 +3170,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
-    reportsv3_run_variant_operation_request = ibm_gdsc_sdk_software.Reportsv3RunVariantOperationRequest() # Reportsv3RunVariantOperationRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
+    reportsv3_run_variant_operation_request = ibm_gdsc_sdk_saas.Reportsv3RunVariantOperationRequest() # Reportsv3RunVariantOperationRequest | 
 
     try:
         # Summary: Run a variant Description: Run the operations in a variant
@@ -3226,15 +3226,15 @@ Summary: Transpose Description: Return the corresponding full sql data.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_run_report_response import Reportsv3RunReportResponse
-from ibm_gdsc_sdk_software.models.reportsv3_transpose_request import Reportsv3TransposeRequest
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_run_report_response import Reportsv3RunReportResponse
+from ibm_gdsc_sdk_saas.models.reportsv3_transpose_request import Reportsv3TransposeRequest
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -3244,7 +3244,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -3256,10 +3256,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
-    reportsv3_transpose_request = ibm_gdsc_sdk_software.Reportsv3TransposeRequest() # Reportsv3TransposeRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
+    reportsv3_transpose_request = ibm_gdsc_sdk_saas.Reportsv3TransposeRequest() # Reportsv3TransposeRequest | 
 
     try:
         # Summary: Transpose Description: Return the corresponding full sql data.
@@ -3312,15 +3312,15 @@ Summary: Update chart Description: Update a custom chart.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_update_chart_request import Reportsv3UpdateChartRequest
-from ibm_gdsc_sdk_software.models.reportsv3_update_chart_response import Reportsv3UpdateChartResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_update_chart_request import Reportsv3UpdateChartRequest
+from ibm_gdsc_sdk_saas.models.reportsv3_update_chart_response import Reportsv3UpdateChartResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -3330,7 +3330,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -3342,11 +3342,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
     chart_id = 'chart_id_example' # str | Unique chart ID.
-    reportsv3_update_chart_request = ibm_gdsc_sdk_software.Reportsv3UpdateChartRequest() # Reportsv3UpdateChartRequest | 
+    reportsv3_update_chart_request = ibm_gdsc_sdk_saas.Reportsv3UpdateChartRequest() # Reportsv3UpdateChartRequest | 
 
     try:
         # Summary: Update chart Description: Update a custom chart.
@@ -3400,15 +3400,15 @@ Summary: Update chart v2 Description: Update a custom VEGA chart.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_update_chartv2_request import Reportsv3UpdateChartv2Request
-from ibm_gdsc_sdk_software.models.reportsv3_update_chartv2_response import Reportsv3UpdateChartv2Response
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_update_chartv2_request import Reportsv3UpdateChartv2Request
+from ibm_gdsc_sdk_saas.models.reportsv3_update_chartv2_response import Reportsv3UpdateChartv2Response
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -3418,7 +3418,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -3430,11 +3430,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
     chart_id = 'chart_id_example' # str | Unique chart ID.
-    reportsv3_update_chartv2_request = ibm_gdsc_sdk_software.Reportsv3UpdateChartv2Request() # Reportsv3UpdateChartv2Request | 
+    reportsv3_update_chartv2_request = ibm_gdsc_sdk_saas.Reportsv3UpdateChartv2Request() # Reportsv3UpdateChartv2Request | 
 
     try:
         # Summary: Update chart v2 Description: Update a custom VEGA chart.
@@ -3488,15 +3488,15 @@ Summary: Update a join Description: Update a custom join
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_update_join_request import Reportsv3UpdateJoinRequest
-from ibm_gdsc_sdk_software.models.reportsv3_update_join_response import Reportsv3UpdateJoinResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_update_join_request import Reportsv3UpdateJoinRequest
+from ibm_gdsc_sdk_saas.models.reportsv3_update_join_response import Reportsv3UpdateJoinResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -3506,7 +3506,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -3518,11 +3518,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
     join_id = 'join_id_example' # str | Unique join ID.
-    reportsv3_update_join_request = ibm_gdsc_sdk_software.Reportsv3UpdateJoinRequest() # Reportsv3UpdateJoinRequest | 
+    reportsv3_update_join_request = ibm_gdsc_sdk_saas.Reportsv3UpdateJoinRequest() # Reportsv3UpdateJoinRequest | 
 
     try:
         # Summary: Update a join Description: Update a custom join
@@ -3576,15 +3576,15 @@ Summary: Update report Description: Update a custom report.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_update_report_request import Reportsv3UpdateReportRequest
-from ibm_gdsc_sdk_software.models.reportsv3_update_report_response import Reportsv3UpdateReportResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_update_report_request import Reportsv3UpdateReportRequest
+from ibm_gdsc_sdk_saas.models.reportsv3_update_report_response import Reportsv3UpdateReportResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -3594,7 +3594,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -3606,11 +3606,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
     report_id = 'report_id_example' # str | Unique Report ID.
-    reportsv3_update_report_request = ibm_gdsc_sdk_software.Reportsv3UpdateReportRequest() # Reportsv3UpdateReportRequest | 
+    reportsv3_update_report_request = ibm_gdsc_sdk_saas.Reportsv3UpdateReportRequest() # Reportsv3UpdateReportRequest | 
 
     try:
         # Summary: Update report Description: Update a custom report.
@@ -3664,15 +3664,15 @@ Summary: Update a variant Description: Update a variant with a custom override
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsv3_update_variant_override_request import Reportsv3UpdateVariantOverrideRequest
-from ibm_gdsc_sdk_software.models.reportsv3_update_variant_override_response import Reportsv3UpdateVariantOverrideResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsv3_update_variant_override_request import Reportsv3UpdateVariantOverrideRequest
+from ibm_gdsc_sdk_saas.models.reportsv3_update_variant_override_response import Reportsv3UpdateVariantOverrideResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -3682,7 +3682,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -3694,11 +3694,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsServiceApi(api_client)
     variant_id = 'variant_id_example' # str | The variant id
-    reportsv3_update_variant_override_request = ibm_gdsc_sdk_software.Reportsv3UpdateVariantOverrideRequest() # Reportsv3UpdateVariantOverrideRequest | 
+    reportsv3_update_variant_override_request = ibm_gdsc_sdk_saas.Reportsv3UpdateVariantOverrideRequest() # Reportsv3UpdateVariantOverrideRequest | 
 
     try:
         # Summary: Update a variant Description: Update a variant with a custom override

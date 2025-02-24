@@ -18,6 +18,8 @@ import { Connectionsv3CreateSettingsRequest } from '../models/Connectionsv3Creat
 import { Connectionsv3DeleteConnectionsAccountsResponse } from '../models/Connectionsv3DeleteConnectionsAccountsResponse';
 import { Connectionsv3DeleteConnectionsConfigsResponse } from '../models/Connectionsv3DeleteConnectionsConfigsResponse';
 import { Connectionsv3DeletePluginResponse } from '../models/Connectionsv3DeletePluginResponse';
+import { Connectionsv3GeneratePackageRequest } from '../models/Connectionsv3GeneratePackageRequest';
+import { Connectionsv3GeneratePackageResponse } from '../models/Connectionsv3GeneratePackageResponse';
 import { Connectionsv3GetBannerStateResponse } from '../models/Connectionsv3GetBannerStateResponse';
 import { Connectionsv3GetConnectionsAccountsResponse } from '../models/Connectionsv3GetConnectionsAccountsResponse';
 import { Connectionsv3GetConnectionsConfigsResponse } from '../models/Connectionsv3GetConnectionsConfigsResponse';
@@ -43,6 +45,8 @@ import { Connectionsv3UpdateConnectorsRequest } from '../models/Connectionsv3Upd
 import { Connectionsv3UpdatePluginRequest } from '../models/Connectionsv3UpdatePluginRequest';
 import { Connectionsv3UpdatePluginResponse } from '../models/Connectionsv3UpdatePluginResponse';
 import { Connectionsv3UpdateSettingsRequest } from '../models/Connectionsv3UpdateSettingsRequest';
+import { Connectionsv3ValidateAwsConnectionRequest } from '../models/Connectionsv3ValidateAwsConnectionRequest';
+import { Connectionsv3ValidateConnectionResponse } from '../models/Connectionsv3ValidateConnectionResponse';
 import { RuntimeError } from '../models/RuntimeError';
 
 /**
@@ -405,6 +409,66 @@ export class ConnectionsServiceApiRequestFactory extends BaseAPIRequestFactory {
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.DELETE);
         requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
 
+
+        let authMethod: SecurityAuthentication | undefined;
+        // Apply auth methods
+        authMethod = _config.authMethods["BasicAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        // Apply auth methods
+        authMethod = _config.authMethods["ApiKeyAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Summary: Generate package. Description: Generate package.
+     * @param id id
+     * @param connectionsv3GeneratePackageRequest 
+     */
+    public async connectionsServiceGeneratePackage(id: string, connectionsv3GeneratePackageRequest: Connectionsv3GeneratePackageRequest, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'id' is not null or undefined
+        if (id === null || id === undefined) {
+            throw new RequiredError("ConnectionsServiceApi", "connectionsServiceGeneratePackage", "id");
+        }
+
+
+        // verify required parameter 'connectionsv3GeneratePackageRequest' is not null or undefined
+        if (connectionsv3GeneratePackageRequest === null || connectionsv3GeneratePackageRequest === undefined) {
+            throw new RequiredError("ConnectionsServiceApi", "connectionsServiceGeneratePackage", "connectionsv3GeneratePackageRequest");
+        }
+
+
+        // Path Params
+        const localVarPath = '/api/v3/connections/plugins/{id}/package'
+            .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.PUT);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        // Body Params
+        const contentType = ObjectSerializer.getPreferredMediaType([
+            "application/json"
+        ]);
+        requestContext.setHeaderParam("Content-Type", contentType);
+        const serializedBody = ObjectSerializer.stringify(
+            ObjectSerializer.serialize(connectionsv3GeneratePackageRequest, "Connectionsv3GeneratePackageRequest", ""),
+            contentType
+        );
+        requestContext.setBody(serializedBody);
 
         let authMethod: SecurityAuthentication | undefined;
         // Apply auth methods
@@ -1243,6 +1307,58 @@ export class ConnectionsServiceApiRequestFactory extends BaseAPIRequestFactory {
         return requestContext;
     }
 
+    /**
+     * Summary: Validate an AWS connection. Description: Validate an AWS connection.
+     * @param connectionsv3ValidateAwsConnectionRequest 
+     */
+    public async connectionsServiceValidateAwsConnection(connectionsv3ValidateAwsConnectionRequest: Connectionsv3ValidateAwsConnectionRequest, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'connectionsv3ValidateAwsConnectionRequest' is not null or undefined
+        if (connectionsv3ValidateAwsConnectionRequest === null || connectionsv3ValidateAwsConnectionRequest === undefined) {
+            throw new RequiredError("ConnectionsServiceApi", "connectionsServiceValidateAwsConnection", "connectionsv3ValidateAwsConnectionRequest");
+        }
+
+
+        // Path Params
+        const localVarPath = '/api/v3/connections/validate/aws';
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        // Body Params
+        const contentType = ObjectSerializer.getPreferredMediaType([
+            "application/json"
+        ]);
+        requestContext.setHeaderParam("Content-Type", contentType);
+        const serializedBody = ObjectSerializer.stringify(
+            ObjectSerializer.serialize(connectionsv3ValidateAwsConnectionRequest, "Connectionsv3ValidateAwsConnectionRequest", ""),
+            contentType
+        );
+        requestContext.setBody(serializedBody);
+
+        let authMethod: SecurityAuthentication | undefined;
+        // Apply auth methods
+        authMethod = _config.authMethods["BasicAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        // Apply auth methods
+        authMethod = _config.authMethods["ApiKeyAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
 }
 
 export class ConnectionsServiceApiResponseProcessor {
@@ -1529,6 +1645,42 @@ export class ConnectionsServiceApiResponseProcessor {
                 ObjectSerializer.parse(await response.body.text(), contentType),
                 "Connectionsv3DeletePluginResponse", ""
             ) as Connectionsv3DeletePluginResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to connectionsServiceGeneratePackage
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async connectionsServiceGeneratePackageWithHttpInfo(response: ResponseContext): Promise<HttpInfo<Connectionsv3GeneratePackageResponse >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: Connectionsv3GeneratePackageResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Connectionsv3GeneratePackageResponse", ""
+            ) as Connectionsv3GeneratePackageResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("0", response.httpStatusCode)) {
+            const body: RuntimeError = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RuntimeError", ""
+            ) as RuntimeError;
+            throw new ApiException<RuntimeError>(response.httpStatusCode, "An unexpected error response.", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: Connectionsv3GeneratePackageResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Connectionsv3GeneratePackageResponse", ""
+            ) as Connectionsv3GeneratePackageResponse;
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
         }
 
@@ -2177,6 +2329,42 @@ export class ConnectionsServiceApiResponseProcessor {
                 ObjectSerializer.parse(await response.body.text(), contentType),
                 "any", ""
             ) as any;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to connectionsServiceValidateAwsConnection
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async connectionsServiceValidateAwsConnectionWithHttpInfo(response: ResponseContext): Promise<HttpInfo<Connectionsv3ValidateConnectionResponse >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: Connectionsv3ValidateConnectionResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Connectionsv3ValidateConnectionResponse", ""
+            ) as Connectionsv3ValidateConnectionResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("0", response.httpStatusCode)) {
+            const body: RuntimeError = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RuntimeError", ""
+            ) as RuntimeError;
+            throw new ApiException<RuntimeError>(response.httpStatusCode, "An unexpected error response.", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: Connectionsv3ValidateConnectionResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Connectionsv3ValidateConnectionResponse", ""
+            ) as Connectionsv3ValidateConnectionResponse;
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
         }
 

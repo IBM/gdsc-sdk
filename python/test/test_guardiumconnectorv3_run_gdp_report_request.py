@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_run_gdp_report_request import Guardiumconnectorv3RunGDPReportRequest
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_run_gdp_report_request import Guardiumconnectorv3RunGDPReportRequest
 
 class TestGuardiumconnectorv3RunGDPReportRequest(unittest.TestCase):
     """Guardiumconnectorv3RunGDPReportRequest unit test stubs"""
@@ -39,7 +39,7 @@ class TestGuardiumconnectorv3RunGDPReportRequest(unittest.TestCase):
                 max_fetch_size = 56,
                 report_name = '',
                 report_parameters = [
-                    ibm_gdsc_sdk_software.models.guardiumconnectorv3_gdp_report_parameter.guardiumconnectorv3GDPReportParameter(
+                    ibm_gdsc_sdk_saas.models.guardiumconnectorv3_gdp_report_parameter.guardiumconnectorv3GDPReportParameter(
                         parameter_value = '', 
                         paremeter_name = '', )
                     ],

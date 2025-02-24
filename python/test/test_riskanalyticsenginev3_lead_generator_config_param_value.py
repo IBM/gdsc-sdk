@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticsenginev3_lead_generator_config_param_value import Riskanalyticsenginev3LeadGeneratorConfigParamValue
+from ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_lead_generator_config_param_value import Riskanalyticsenginev3LeadGeneratorConfigParamValue
 
 class TestRiskanalyticsenginev3LeadGeneratorConfigParamValue(unittest.TestCase):
     """Riskanalyticsenginev3LeadGeneratorConfigParamValue unit test stubs"""

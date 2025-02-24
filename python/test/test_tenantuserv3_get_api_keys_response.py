@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.tenantuserv3_get_api_keys_response import Tenantuserv3GetApiKeysResponse
+from ibm_gdsc_sdk_saas.models.tenantuserv3_get_api_keys_response import Tenantuserv3GetApiKeysResponse
 
 class TestTenantuserv3GetApiKeysResponse(unittest.TestCase):
     """Tenantuserv3GetApiKeysResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestTenantuserv3GetApiKeysResponse(unittest.TestCase):
         if include_optional:
             return Tenantuserv3GetApiKeysResponse(
                 apikeys = [
-                    ibm_gdsc_sdk_software.models.tenantuserv3_apikey.tenantuserv3Apikey(
+                    ibm_gdsc_sdk_saas.models.tenantuserv3_apikey.tenantuserv3Apikey(
                         activation_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         active = True, 
                         apikey = '', 

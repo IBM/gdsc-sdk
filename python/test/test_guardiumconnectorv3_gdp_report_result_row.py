@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_gdp_report_result_row import Guardiumconnectorv3GDPReportResultRow
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_gdp_report_result_row import Guardiumconnectorv3GDPReportResultRow
 
 class TestGuardiumconnectorv3GDPReportResultRow(unittest.TestCase):
     """Guardiumconnectorv3GDPReportResultRow unit test stubs"""
@@ -36,7 +36,7 @@ class TestGuardiumconnectorv3GDPReportResultRow(unittest.TestCase):
         if include_optional:
             return Guardiumconnectorv3GDPReportResultRow(
                 columns = [
-                    ibm_gdsc_sdk_software.models.guardiumconnectorv3_gdp_report_result_column.guardiumconnectorv3GDPReportResultColumn(
+                    ibm_gdsc_sdk_saas.models.guardiumconnectorv3_gdp_report_result_column.guardiumconnectorv3GDPReportResultColumn(
                         column_name = '', 
                         column_value = '', )
                     ]

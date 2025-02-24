@@ -12,13 +12,12 @@ Name | Type | Description | Notes
 **run_for_all_scans** | **bool** |  | [optional] 
 **scan_desc** | **str** |  | [optional] 
 **scan_id** | **str** |  | [optional] 
-**scan_type** | **str** |  | [optional] 
 **user_email** | **str** |  | [optional] 
 
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_policy_plugin_rq import Qspmpluginmanagerv3PolicyPluginRQ
+from ibm_gdsc_sdk_saas.models.qspmpluginmanagerv3_policy_plugin_rq import Qspmpluginmanagerv3PolicyPluginRQ
 
 # TODO update the JSON string below
 json = "{}"

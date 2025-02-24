@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_order_by import Reportsv3OrderBy
+from ibm_gdsc_sdk_saas.models.reportsv3_order_by import Reportsv3OrderBy
 
 class TestReportsv3OrderBy(unittest.TestCase):
     """Reportsv3OrderBy unit test stubs"""

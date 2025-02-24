@@ -1,4 +1,4 @@
-# ibm_gdsc_sdk_software.DataResourcesApi
+# ibm_gdsc_sdk_saas.DataResourcesApi
 
 All URIs are relative to *http://localhost*
 
@@ -24,14 +24,14 @@ Get additional details on a specific data resource by providing its ID.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.data_resource import DataResource
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.data_resource import DataResource
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -47,9 +47,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.DataResourcesApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.DataResourcesApi(api_client)
     data_resource_id = 'arn:aws:s3::12345678910:polar-security-corplex.xlsx' # str | Data resource ID
 
     try:
@@ -104,15 +104,15 @@ Get a summary of all the data resource, that is, number of data resources, types
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.data_resources_summary import DataResourcesSummary
-from ibm_gdsc_sdk_software.models.list_data_resources_filter_parameter import ListDataResourcesFilterParameter
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.data_resources_summary import DataResourcesSummary
+from ibm_gdsc_sdk_saas.models.list_data_resources_filter_parameter import ListDataResourcesFilterParameter
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -128,11 +128,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.DataResourcesApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.DataResourcesApi(api_client)
     data_store_id = 'arn:aws:s3::123456789101:mys3-prod' # str | Data store id (optional)
-    filter = ibm_gdsc_sdk_software.ListDataResourcesFilterParameter() # ListDataResourcesFilterParameter |  (optional)
+    filter = ibm_gdsc_sdk_saas.ListDataResourcesFilterParameter() # ListDataResourcesFilterParameter |  (optional)
 
     try:
         # Data resources summary
@@ -187,16 +187,16 @@ Get a list of data resources based on the filter applied. You can filter by data
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.list_data_resources200_response import ListDataResources200Response
-from ibm_gdsc_sdk_software.models.list_data_resources_filter_parameter import ListDataResourcesFilterParameter
-from ibm_gdsc_sdk_software.models.list_data_resources_sort_parameter import ListDataResourcesSortParameter
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.list_data_resources200_response import ListDataResources200Response
+from ibm_gdsc_sdk_saas.models.list_data_resources_filter_parameter import ListDataResourcesFilterParameter
+from ibm_gdsc_sdk_saas.models.list_data_resources_sort_parameter import ListDataResourcesSortParameter
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -212,12 +212,12 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.DataResourcesApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.DataResourcesApi(api_client)
     data_store_id = 'arn:aws:s3::123456789101:mys3-prod' # str |  (optional)
-    filter = ibm_gdsc_sdk_software.ListDataResourcesFilterParameter() # ListDataResourcesFilterParameter |  (optional)
-    sort = ibm_gdsc_sdk_software.ListDataResourcesSortParameter() # ListDataResourcesSortParameter |  (optional)
+    filter = ibm_gdsc_sdk_saas.ListDataResourcesFilterParameter() # ListDataResourcesFilterParameter |  (optional)
+    sort = ibm_gdsc_sdk_saas.ListDataResourcesSortParameter() # ListDataResourcesSortParameter |  (optional)
     page_size = 3.4 # float |  (optional)
     next_token = 'next_token_example' # str |  (optional)
 
@@ -277,13 +277,13 @@ List and filter data resources by their names
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -299,9 +299,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.DataResourcesApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.DataResourcesApi(api_client)
     prefix = 'check' # str | Prefix of data resource name
     data_store_id = 'arn:aws:s3::123456789101:mys3-prod' # str |  (optional)
 
@@ -358,14 +358,14 @@ Removes a resource, with all its sensitivities, from Guardium DSPM dashboard. Th
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.remove_resource200_response import RemoveResource200Response
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.remove_resource200_response import RemoveResource200Response
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -381,9 +381,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.DataResourcesApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.DataResourcesApi(api_client)
     data_resource_id = 'arn:aws:s3::12345678910:polar-security-corplex.xlsx' # str | Data resource ID
     data_store_id = 'arn:aws:s3::123456789101:mys3-prod' # str | Data store ID
 
@@ -440,15 +440,15 @@ Set the review status of a specific data resource in a specific data store.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.update_resource_review_body import UpdateResourceReviewBody
-from ibm_gdsc_sdk_software.models.update_resource_review_status200_response import UpdateResourceReviewStatus200Response
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.update_resource_review_body import UpdateResourceReviewBody
+from ibm_gdsc_sdk_saas.models.update_resource_review_status200_response import UpdateResourceReviewStatus200Response
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -464,11 +464,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.DataResourcesApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.DataResourcesApi(api_client)
     data_resource_id = 'data_resource_id_example' # str | Data resource id
-    update_resource_review_body = ibm_gdsc_sdk_software.UpdateResourceReviewBody() # UpdateResourceReviewBody | 
+    update_resource_review_body = ibm_gdsc_sdk_saas.UpdateResourceReviewBody() # UpdateResourceReviewBody | 
 
     try:
         # Set review status of a data resource

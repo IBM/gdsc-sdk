@@ -1,4 +1,4 @@
-# ibm_gdsc_sdk_software.TenantuserApi
+# ibm_gdsc_sdk_saas.TenantuserApi
 
 All URIs are relative to *http://localhost*
 
@@ -34,15 +34,15 @@ Summary: Create API key Description: Create API Key.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.tenantuserv3_create_api_key_request import Tenantuserv3CreateApiKeyRequest
-from ibm_gdsc_sdk_software.models.tenantuserv3_create_api_key_response import Tenantuserv3CreateApiKeyResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.tenantuserv3_create_api_key_request import Tenantuserv3CreateApiKeyRequest
+from ibm_gdsc_sdk_saas.models.tenantuserv3_create_api_key_response import Tenantuserv3CreateApiKeyResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -58,10 +58,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.TenantuserApi(api_client)
-    tenantuserv3_create_api_key_request = ibm_gdsc_sdk_software.Tenantuserv3CreateApiKeyRequest() # Tenantuserv3CreateApiKeyRequest | 
+    api_instance = ibm_gdsc_sdk_saas.TenantuserApi(api_client)
+    tenantuserv3_create_api_key_request = ibm_gdsc_sdk_saas.Tenantuserv3CreateApiKeyRequest() # Tenantuserv3CreateApiKeyRequest | 
 
     try:
         # Summary: Create API key Description: Create API Key.
@@ -113,13 +113,13 @@ Summary: Delete API key Description: Delete APIKey Document based on the documen
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -135,9 +135,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.TenantuserApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.TenantuserApi(api_client)
     id = 'id_example' # str | Apikey id.
 
     try:
@@ -191,13 +191,13 @@ Summary: Delete role Description: Delete a role.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -207,7 +207,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -219,9 +219,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.TenantuserApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.TenantuserApi(api_client)
     role_id = 'role_id_example' # str | ID or role deleted.
 
     try:
@@ -274,14 +274,14 @@ Summary: Get API keys Description: Get all APIKeys base on a tenant ID.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.tenantuserv3_get_api_keys_response import Tenantuserv3GetApiKeysResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.tenantuserv3_get_api_keys_response import Tenantuserv3GetApiKeysResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -297,9 +297,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.TenantuserApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.TenantuserApi(api_client)
 
     try:
         # Summary: Get API keys Description: Get all APIKeys base on a tenant ID.
@@ -349,14 +349,14 @@ Summary: Get current user Description: Return the currently authenticated user.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.tenantuserv3_get_current_user_response import Tenantuserv3GetCurrentUserResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.tenantuserv3_get_current_user_response import Tenantuserv3GetCurrentUserResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -366,7 +366,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -378,9 +378,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.TenantuserApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.TenantuserApi(api_client)
 
     try:
         # Summary: Get current user Description: Return the currently authenticated user.
@@ -430,14 +430,14 @@ Summary: Get privilege Description: Return privilege.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.tenantuserv3_get_privilege_response import Tenantuserv3GetPrivilegeResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.tenantuserv3_get_privilege_response import Tenantuserv3GetPrivilegeResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -447,7 +447,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -459,9 +459,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.TenantuserApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.TenantuserApi(api_client)
     privilege_privilege_id = 'privilege_privilege_id_example' # str | Privilege ID.
     privilege_type = 'privilege_type_example' # str | Privilege Type - a report, group, and datasource may have the same ID. By passing type, the artifact can be uniquely determined. (optional)
 
@@ -517,14 +517,14 @@ Summary: Get privileges Description: Return all available privileges (pages, res
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.tenantuserv3_get_privileges_response import Tenantuserv3GetPrivilegesResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.tenantuserv3_get_privileges_response import Tenantuserv3GetPrivilegesResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -534,7 +534,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -546,9 +546,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.TenantuserApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.TenantuserApi(api_client)
     roles = ['roles_example'] # List[str] | If empty, will return all privileges. (optional)
     type = 'type_example' # str | Type of privilege to return: group, page, permission, report, restapi, etc. (optional)
 
@@ -604,14 +604,14 @@ Summary: Get role Description: Return single role.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.tenantuserv3_role import Tenantuserv3Role
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.tenantuserv3_role import Tenantuserv3Role
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -621,7 +621,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -633,9 +633,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.TenantuserApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.TenantuserApi(api_client)
     role_id = 'role_id_example' # str | ID of role to be returned.
 
     try:
@@ -689,14 +689,14 @@ Summary: Get roles Description: Return all roles without privileges.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.tenantuserv3_get_roles_response import Tenantuserv3GetRolesResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.tenantuserv3_get_roles_response import Tenantuserv3GetRolesResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -706,7 +706,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -718,9 +718,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.TenantuserApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.TenantuserApi(api_client)
 
     try:
         # Summary: Get roles Description: Return all roles without privileges.
@@ -770,14 +770,14 @@ Summary: Get user Description: Return full user for specified user_id.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.tenantuserv3_get_user_response import Tenantuserv3GetUserResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.tenantuserv3_get_user_response import Tenantuserv3GetUserResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -787,7 +787,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -799,9 +799,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.TenantuserApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.TenantuserApi(api_client)
     user_id = 'user_id_example' # str | User id defaults to the current user or specify \"current\" or an actual user id.
 
     try:
@@ -855,15 +855,15 @@ Summary: Get user names Description: Get user names.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.tenantuserv3_get_user_names_request import Tenantuserv3GetUserNamesRequest
-from ibm_gdsc_sdk_software.models.tenantuserv3_get_user_names_response import Tenantuserv3GetUserNamesResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.tenantuserv3_get_user_names_request import Tenantuserv3GetUserNamesRequest
+from ibm_gdsc_sdk_saas.models.tenantuserv3_get_user_names_response import Tenantuserv3GetUserNamesResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -873,7 +873,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -885,10 +885,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.TenantuserApi(api_client)
-    tenantuserv3_get_user_names_request = ibm_gdsc_sdk_software.Tenantuserv3GetUserNamesRequest() # Tenantuserv3GetUserNamesRequest | 
+    api_instance = ibm_gdsc_sdk_saas.TenantuserApi(api_client)
+    tenantuserv3_get_user_names_request = ibm_gdsc_sdk_saas.Tenantuserv3GetUserNamesRequest() # Tenantuserv3GetUserNamesRequest | 
 
     try:
         # Summary: Get user names Description: Get user names.
@@ -941,14 +941,14 @@ Summary: Get user tenant Description: Return the user plus tenant information.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.tenantuserv3_get_user_tenant_response import Tenantuserv3GetUserTenantResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.tenantuserv3_get_user_tenant_response import Tenantuserv3GetUserTenantResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -958,7 +958,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -970,9 +970,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.TenantuserApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.TenantuserApi(api_client)
     user_id = 'user_id_example' # str | User id defaults to the current user or specify \"current\" or an actual user id.
 
     try:
@@ -1026,15 +1026,15 @@ Summary: Post privileges bulk Description: Perform bulk user add preivilege.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.tenantuserv3_post_privileges_bulk_request import Tenantuserv3PostPrivilegesBulkRequest
-from ibm_gdsc_sdk_software.models.tenantuserv3_post_privileges_bulk_response import Tenantuserv3PostPrivilegesBulkResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.tenantuserv3_post_privileges_bulk_request import Tenantuserv3PostPrivilegesBulkRequest
+from ibm_gdsc_sdk_saas.models.tenantuserv3_post_privileges_bulk_response import Tenantuserv3PostPrivilegesBulkResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1044,7 +1044,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1056,10 +1056,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.TenantuserApi(api_client)
-    tenantuserv3_post_privileges_bulk_request = ibm_gdsc_sdk_software.Tenantuserv3PostPrivilegesBulkRequest() # Tenantuserv3PostPrivilegesBulkRequest | 
+    api_instance = ibm_gdsc_sdk_saas.TenantuserApi(api_client)
+    tenantuserv3_post_privileges_bulk_request = ibm_gdsc_sdk_saas.Tenantuserv3PostPrivilegesBulkRequest() # Tenantuserv3PostPrivilegesBulkRequest | 
 
     try:
         # Summary: Post privileges bulk Description: Perform bulk user add preivilege.
@@ -1112,15 +1112,15 @@ Summary: Post role Description: Create a new role.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.tenantuserv3_post_role_request import Tenantuserv3PostRoleRequest
-from ibm_gdsc_sdk_software.models.tenantuserv3_post_role_response import Tenantuserv3PostRoleResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.tenantuserv3_post_role_request import Tenantuserv3PostRoleRequest
+from ibm_gdsc_sdk_saas.models.tenantuserv3_post_role_response import Tenantuserv3PostRoleResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1130,7 +1130,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1142,10 +1142,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.TenantuserApi(api_client)
-    tenantuserv3_post_role_request = ibm_gdsc_sdk_software.Tenantuserv3PostRoleRequest() # Tenantuserv3PostRoleRequest | 
+    api_instance = ibm_gdsc_sdk_saas.TenantuserApi(api_client)
+    tenantuserv3_post_role_request = ibm_gdsc_sdk_saas.Tenantuserv3PostRoleRequest() # Tenantuserv3PostRoleRequest | 
 
     try:
         # Summary: Post role Description: Create a new role.
@@ -1198,15 +1198,15 @@ Summary: Update privilege Description: Update privilege.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.tenantuserv3_update_privilege_request import Tenantuserv3UpdatePrivilegeRequest
-from ibm_gdsc_sdk_software.models.tenantuserv3_update_privilege_response import Tenantuserv3UpdatePrivilegeResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.tenantuserv3_update_privilege_request import Tenantuserv3UpdatePrivilegeRequest
+from ibm_gdsc_sdk_saas.models.tenantuserv3_update_privilege_response import Tenantuserv3UpdatePrivilegeResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1216,7 +1216,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1228,11 +1228,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.TenantuserApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.TenantuserApi(api_client)
     privilege_id = 'privilege_id_example' # str | Permanent id of the privilege to be updated or created.
-    tenantuserv3_update_privilege_request = ibm_gdsc_sdk_software.Tenantuserv3UpdatePrivilegeRequest() # Tenantuserv3UpdatePrivilegeRequest | 
+    tenantuserv3_update_privilege_request = ibm_gdsc_sdk_saas.Tenantuserv3UpdatePrivilegeRequest() # Tenantuserv3UpdatePrivilegeRequest | 
 
     try:
         # Summary: Update privilege Description: Update privilege.
@@ -1286,15 +1286,15 @@ Summary: Update privileges role bulk Description: Perform bulk user update role.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.tenantuserv3_update_privileges_bulk_request import Tenantuserv3UpdatePrivilegesBulkRequest
-from ibm_gdsc_sdk_software.models.tenantuserv3_update_privileges_bulk_response import Tenantuserv3UpdatePrivilegesBulkResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.tenantuserv3_update_privileges_bulk_request import Tenantuserv3UpdatePrivilegesBulkRequest
+from ibm_gdsc_sdk_saas.models.tenantuserv3_update_privileges_bulk_response import Tenantuserv3UpdatePrivilegesBulkResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1304,7 +1304,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1316,10 +1316,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.TenantuserApi(api_client)
-    tenantuserv3_update_privileges_bulk_request = ibm_gdsc_sdk_software.Tenantuserv3UpdatePrivilegesBulkRequest() # Tenantuserv3UpdatePrivilegesBulkRequest | 
+    api_instance = ibm_gdsc_sdk_saas.TenantuserApi(api_client)
+    tenantuserv3_update_privileges_bulk_request = ibm_gdsc_sdk_saas.Tenantuserv3UpdatePrivilegesBulkRequest() # Tenantuserv3UpdatePrivilegesBulkRequest | 
 
     try:
         # Summary: Update privileges role bulk Description: Perform bulk user update role.
@@ -1372,15 +1372,15 @@ Summary: Update role Description: Update single role.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.tenantuserv3_update_role_request import Tenantuserv3UpdateRoleRequest
-from ibm_gdsc_sdk_software.models.tenantuserv3_update_role_response import Tenantuserv3UpdateRoleResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.tenantuserv3_update_role_request import Tenantuserv3UpdateRoleRequest
+from ibm_gdsc_sdk_saas.models.tenantuserv3_update_role_response import Tenantuserv3UpdateRoleResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1390,7 +1390,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1402,11 +1402,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.TenantuserApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.TenantuserApi(api_client)
     role_id = 'role_id_example' # str | Permanent id of the role.
-    tenantuserv3_update_role_request = ibm_gdsc_sdk_software.Tenantuserv3UpdateRoleRequest() # Tenantuserv3UpdateRoleRequest | 
+    tenantuserv3_update_role_request = ibm_gdsc_sdk_saas.Tenantuserv3UpdateRoleRequest() # Tenantuserv3UpdateRoleRequest | 
 
     try:
         # Summary: Update role Description: Update single role.
@@ -1460,15 +1460,15 @@ Summary: Update user role bulk Description: Perform bulk user add or remove role
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.tenantuserv3_update_user_role_bulk_request import Tenantuserv3UpdateUserRoleBulkRequest
-from ibm_gdsc_sdk_software.models.tenantuserv3_update_user_role_bulk_response import Tenantuserv3UpdateUserRoleBulkResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.tenantuserv3_update_user_role_bulk_request import Tenantuserv3UpdateUserRoleBulkRequest
+from ibm_gdsc_sdk_saas.models.tenantuserv3_update_user_role_bulk_response import Tenantuserv3UpdateUserRoleBulkResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1478,7 +1478,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1490,10 +1490,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.TenantuserApi(api_client)
-    tenantuserv3_update_user_role_bulk_request = ibm_gdsc_sdk_software.Tenantuserv3UpdateUserRoleBulkRequest() # Tenantuserv3UpdateUserRoleBulkRequest | 
+    api_instance = ibm_gdsc_sdk_saas.TenantuserApi(api_client)
+    tenantuserv3_update_user_role_bulk_request = ibm_gdsc_sdk_saas.Tenantuserv3UpdateUserRoleBulkRequest() # Tenantuserv3UpdateUserRoleBulkRequest | 
 
     try:
         # Summary: Update user role bulk Description: Perform bulk user add or remove role.

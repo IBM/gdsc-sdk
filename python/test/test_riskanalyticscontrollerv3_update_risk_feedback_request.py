@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_update_risk_feedback_request import Riskanalyticscontrollerv3UpdateRiskFeedbackRequest
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_update_risk_feedback_request import Riskanalyticscontrollerv3UpdateRiskFeedbackRequest
 
 class TestRiskanalyticscontrollerv3UpdateRiskFeedbackRequest(unittest.TestCase):
     """Riskanalyticscontrollerv3UpdateRiskFeedbackRequest unit test stubs"""

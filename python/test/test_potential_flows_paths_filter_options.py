@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.potential_flows_paths_filter_options import PotentialFlowsPathsFilterOptions
+from ibm_gdsc_sdk_saas.models.potential_flows_paths_filter_options import PotentialFlowsPathsFilterOptions
 
 class TestPotentialFlowsPathsFilterOptions(unittest.TestCase):
     """PotentialFlowsPathsFilterOptions unit test stubs"""

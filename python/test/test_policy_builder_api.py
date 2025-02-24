@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.policy_builder_api import PolicyBuilderApi
+from ibm_gdsc_sdk_saas.api.policy_builder_api import PolicyBuilderApi
 
 
 class TestPolicyBuilderApi(unittest.TestCase):
@@ -113,7 +113,7 @@ class TestPolicyBuilderApi(unittest.TestCase):
     def test_policy_builder_insert_gdp_policy_meta_data(self) -> None:
         """Test case for policy_builder_insert_gdp_policy_meta_data
 
-        Summary: Insert gdp policy summaries Description: Inserts GDP's CM's policy summary information into mogodb. (This API is called from GDP only)
+        Summary: Insert GDP policy summaries Description: Inserts GDP's CM's policy summary information into mogodb. (This API is called from GDP only)
         """
         pass
 

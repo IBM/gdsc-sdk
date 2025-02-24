@@ -93,12 +93,15 @@ Description: Return stored compliance data.
 ### Example
 
 ```bash
- complianceAcceleratorGetComplianceInfo
+ complianceAcceleratorGetComplianceInfo  is_brief=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **isBrief** | **boolean** | gives compliance workspace data without reaching out to other services - meant to be quicker for dashboards. | [optional] [default to null]
 
 ### Return type
 

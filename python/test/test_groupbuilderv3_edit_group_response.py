@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.groupbuilderv3_edit_group_response import Groupbuilderv3EditGroupResponse
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_edit_group_response import Groupbuilderv3EditGroupResponse
 
 class TestGroupbuilderv3EditGroupResponse(unittest.TestCase):
     """Groupbuilderv3EditGroupResponse unit test stubs"""
@@ -37,7 +37,7 @@ class TestGroupbuilderv3EditGroupResponse(unittest.TestCase):
             return Groupbuilderv3EditGroupResponse(
                 deleted_count = 56,
                 inserted_count = 56,
-                status = ibm_gdsc_sdk_software.models.groupbuilderv3_status_response_base.groupbuilderv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.groupbuilderv3_status_response_base.groupbuilderv3StatusResponseBase(
                     message = '', 
                     status = '', ),
                 updated_count = 56

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.outliersenginev3_run_simulator_request import Outliersenginev3RunSimulatorRequest
+from ibm_gdsc_sdk_saas.models.outliersenginev3_run_simulator_request import Outliersenginev3RunSimulatorRequest
 
 class TestOutliersenginev3RunSimulatorRequest(unittest.TestCase):
     """Outliersenginev3RunSimulatorRequest unit test stubs"""

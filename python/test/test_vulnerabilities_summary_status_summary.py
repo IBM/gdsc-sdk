@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.vulnerabilities_summary_status_summary import VulnerabilitiesSummaryStatusSummary
+from ibm_gdsc_sdk_saas.models.vulnerabilities_summary_status_summary import VulnerabilitiesSummaryStatusSummary
 
 class TestVulnerabilitiesSummaryStatusSummary(unittest.TestCase):
     """VulnerabilitiesSummaryStatusSummary unit test stubs"""

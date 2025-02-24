@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.healthcollectorv3_stap_details_object import Healthcollectorv3StapDetailsObject
+from ibm_gdsc_sdk_saas.models.healthcollectorv3_stap_details_object import Healthcollectorv3StapDetailsObject
 
 class TestHealthcollectorv3StapDetailsObject(unittest.TestCase):
     """Healthcollectorv3StapDetailsObject unit test stubs"""
@@ -35,19 +35,19 @@ class TestHealthcollectorv3StapDetailsObject(unittest.TestCase):
         model = Healthcollectorv3StapDetailsObject()
         if include_optional:
             return Healthcollectorv3StapDetailsObject(
-                connectivity_details = ibm_gdsc_sdk_software.models.healthcollectorv3_general_details_object.healthcollectorv3GeneralDetailsObject(
+                connectivity_details = ibm_gdsc_sdk_saas.models.healthcollectorv3_general_details_object.healthcollectorv3GeneralDetailsObject(
                     err_messages = '', ),
                 general_err_messages = [
                     ''
                     ],
-                ktap_details = ibm_gdsc_sdk_software.models.healthcollectorv3_general_details_object.healthcollectorv3GeneralDetailsObject(
+                ktap_details = ibm_gdsc_sdk_saas.models.healthcollectorv3_general_details_object.healthcollectorv3GeneralDetailsObject(
                     err_messages = '', ),
-                stap_liveliness_information = ibm_gdsc_sdk_software.models.healthcollectorv3_stap_live_info_object.healthcollectorv3StapLiveInfoObject(
+                stap_liveliness_information = ibm_gdsc_sdk_saas.models.healthcollectorv3_stap_live_info_object.healthcollectorv3StapLiveInfoObject(
                     has_event = True, 
                     health_status = 56, 
                     liveliness_state = '', 
                     stap = '', ),
-                traffic_details = ibm_gdsc_sdk_software.models.healthcollectorv3_general_details_object.healthcollectorv3GeneralDetailsObject(
+                traffic_details = ibm_gdsc_sdk_saas.models.healthcollectorv3_general_details_object.healthcollectorv3GeneralDetailsObject(
                     err_messages = '', )
             )
         else:

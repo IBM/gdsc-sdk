@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.connections_service_api import ConnectionsServiceApi
+from ibm_gdsc_sdk_saas.api.connections_service_api import ConnectionsServiceApi
 
 
 class TestConnectionsServiceApi(unittest.TestCase):
@@ -79,6 +79,13 @@ class TestConnectionsServiceApi(unittest.TestCase):
         """Test case for connections_service_delete_plugin
 
         Summary: Delete plugin. Description: Delete plugin.
+        """
+        pass
+
+    def test_connections_service_generate_package(self) -> None:
+        """Test case for connections_service_generate_package
+
+        Summary: Generate package. Description: Generate package.
         """
         pass
 
@@ -205,6 +212,13 @@ class TestConnectionsServiceApi(unittest.TestCase):
         """Test case for connections_service_update_settings
 
         Summary: Update settings Description: Update Settings.
+        """
+        pass
+
+    def test_connections_service_validate_aws_connection(self) -> None:
+        """Test case for connections_service_validate_aws_connection
+
+        Summary: Validate an AWS connection. Description: Validate an AWS connection.
         """
         pass
 

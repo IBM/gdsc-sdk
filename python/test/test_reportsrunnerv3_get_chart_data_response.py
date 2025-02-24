@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_chart_data_response import Reportsrunnerv3GetChartDataResponse
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_get_chart_data_response import Reportsrunnerv3GetChartDataResponse
 
 class TestReportsrunnerv3GetChartDataResponse(unittest.TestCase):
     """Reportsrunnerv3GetChartDataResponse unit test stubs"""
@@ -35,14 +35,14 @@ class TestReportsrunnerv3GetChartDataResponse(unittest.TestCase):
         model = Reportsrunnerv3GetChartDataResponse()
         if include_optional:
             return Reportsrunnerv3GetChartDataResponse(
-                chart_layout = ibm_gdsc_sdk_software.models.reportsv3_chart_display_layout.reportsv3ChartDisplayLayout(
+                chart_layout = ibm_gdsc_sdk_saas.models.reportsv3_chart_display_layout.reportsv3ChartDisplayLayout(
                     chart_headers = [
-                        ibm_gdsc_sdk_software.models.reportsv3_display_header.reportsv3DisplayHeader(
-                            field_name = ibm_gdsc_sdk_software.models.reportsv3_field_name.reportsv3FieldName(
+                        ibm_gdsc_sdk_saas.models.reportsv3_display_header.reportsv3DisplayHeader(
+                            field_name = ibm_gdsc_sdk_saas.models.reportsv3_field_name.reportsv3FieldName(
                                 customized_value = '', 
                                 nls_key = '', 
                                 nls_value = '', ), 
-                            header_description = ibm_gdsc_sdk_software.models.reportsv3_header_description.reportsv3HeaderDescription(
+                            header_description = ibm_gdsc_sdk_saas.models.reportsv3_header_description.reportsv3HeaderDescription(
                                 nls_key = '', 
                                 nls_value = '', ), 
                             header_id = '', 
@@ -54,7 +54,7 @@ class TestReportsrunnerv3GetChartDataResponse(unittest.TestCase):
                     report_id = '', 
                     results_limit = 56, ),
                 data = [
-                    ibm_gdsc_sdk_software.models.data_row_is_the_type_of_one_of_the_results.DataRow is the type of one of the results(
+                    ibm_gdsc_sdk_saas.models.data_row_is_the_type_of_one_of_the_results.DataRow is the type of one of the results(
                         results = {
                             'key' : ''
                             }, )

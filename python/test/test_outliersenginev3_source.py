@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.outliersenginev3_source import Outliersenginev3Source
+from ibm_gdsc_sdk_saas.models.outliersenginev3_source import Outliersenginev3Source
 
 class TestOutliersenginev3Source(unittest.TestCase):
     """Outliersenginev3Source unit test stubs"""

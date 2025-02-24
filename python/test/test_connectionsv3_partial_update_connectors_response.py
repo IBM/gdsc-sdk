@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_partial_update_connectors_response import Connectionsv3PartialUpdateConnectorsResponse
+from ibm_gdsc_sdk_saas.models.connectionsv3_partial_update_connectors_response import Connectionsv3PartialUpdateConnectorsResponse
 
 class TestConnectionsv3PartialUpdateConnectorsResponse(unittest.TestCase):
     """Connectionsv3PartialUpdateConnectorsResponse unit test stubs"""

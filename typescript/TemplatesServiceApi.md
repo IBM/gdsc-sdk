@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**templatesServiceGetOriginFields**](TemplatesServiceApi.md#templatesServiceGetOriginFields) | **GET** /api/v3/templates/origins/{origin}/fields | Summary: Get origin fields Description: Return the fields available with a specific origin.
 [**templatesServiceGetTemplate**](TemplatesServiceApi.md#templatesServiceGetTemplate) | **GET** /api/v3/templates/{template_id} | Summary: Get template Description: Return a specific template by id.
 [**templatesServiceGetTemplates**](TemplatesServiceApi.md#templatesServiceGetTemplates) | **GET** /api/v3/templates | Summary: Get templates Description: Return all templates based on supplied filters.
+[**templatesServiceGetTemplatesForEdge**](TemplatesServiceApi.md#templatesServiceGetTemplatesForEdge) | **GET** /api/v3/templates/edge | Summary: Get templates for edge Description: Return all templates based on supplied filters.
 [**templatesServiceTestTemplate**](TemplatesServiceApi.md#templatesServiceTestTemplate) | **POST** /api/v3/templates/test | Summary: Test template Description: Analyze a specified template to ensure will function correctly when utilized.
 [**templatesServiceTransformTemplate**](TemplatesServiceApi.md#templatesServiceTransformTemplate) | **POST** /api/v3/templates/transform | Summary: Transform template Description: Process the specified template and returns the Title and Content based on supplied data.
 [**templatesServiceTransformTemplateJSON**](TemplatesServiceApi.md#templatesServiceTransformTemplateJSON) | **POST** /api/v3/templates/transformjson | Summary: Transform template JSON Description: Process the specified template and returns the Title and Content based on supplied json data string.
@@ -492,6 +493,74 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Templatesv3GetTemplatesResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **templatesServiceGetTemplatesForEdge**
+> Templatesv3GetTemplatesForEdgeResponse templatesServiceGetTemplatesForEdge()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .TemplatesServiceApi(configuration);
+
+let body:.TemplatesServiceApiTemplatesServiceGetTemplatesForEdgeRequest = {
+  // string | Templates associated with a specific integration. (optional)
+  integrationId: "integration_id_example",
+  // Array<'UNDEFINED_ORIGIN' | 'GENERAL_NOTIFICATION' | 'ANOMALY_NOTIFICATION' | 'DATAMART_NOTIFICATION' | 'FETCH_NOTIFICATION' | 'POLICY_ALERT_NOTIFICATION' | 'RECOMMENDATION_NOTIFICATION' | 'REPORTS_NOTIFICATION' | 'SCHEDULED_REPORT_NOTIFICATION' | 'SCHEDULED_AUDIT_NOTIFICATION' | 'WELCOME_NOTIFICATION' | 'EMAIL_HEADER_AND_FOOTER' | 'RISK_NOTIFICATION' | 'SCHEDULED_JOB_SUMMARY' | 'INCIDENT_NOTIFICATION' | 'MAINTENANCE_NOTIFICATION' | 'QSPM_RISK' | 'POLICY_IMPORT_NOTIFICATION'> | Filter on a specific set of data origins; ignored if empty. (optional)
+  filterOrigin: [
+    "UNDEFINED_ORIGIN",
+  ],
+  // boolean | Filter on all templates instead of just the enabled templates. (optional)
+  filterEnabledOnly: true,
+  // boolean | Include the Integration name in the returned templates. (optional)
+  includeIntegrationName: true,
+  // boolean | Tranform template format to GDP style format. (optional)
+  transformToGdpFormat: true,
+};
+
+apiInstance.templatesServiceGetTemplatesForEdge(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **integrationId** | [**string**] | Templates associated with a specific integration. | (optional) defaults to undefined
+ **filterOrigin** | **Array<&#39;UNDEFINED_ORIGIN&#39; &#124; &#39;GENERAL_NOTIFICATION&#39; &#124; &#39;ANOMALY_NOTIFICATION&#39; &#124; &#39;DATAMART_NOTIFICATION&#39; &#124; &#39;FETCH_NOTIFICATION&#39; &#124; &#39;POLICY_ALERT_NOTIFICATION&#39; &#124; &#39;RECOMMENDATION_NOTIFICATION&#39; &#124; &#39;REPORTS_NOTIFICATION&#39; &#124; &#39;SCHEDULED_REPORT_NOTIFICATION&#39; &#124; &#39;SCHEDULED_AUDIT_NOTIFICATION&#39; &#124; &#39;WELCOME_NOTIFICATION&#39; &#124; &#39;EMAIL_HEADER_AND_FOOTER&#39; &#124; &#39;RISK_NOTIFICATION&#39; &#124; &#39;SCHEDULED_JOB_SUMMARY&#39; &#124; &#39;INCIDENT_NOTIFICATION&#39; &#124; &#39;MAINTENANCE_NOTIFICATION&#39; &#124; &#39;QSPM_RISK&#39; &#124; &#39;POLICY_IMPORT_NOTIFICATION&#39;>** | Filter on a specific set of data origins; ignored if empty. | (optional) defaults to undefined
+ **filterEnabledOnly** | [**boolean**] | Filter on all templates instead of just the enabled templates. | (optional) defaults to undefined
+ **includeIntegrationName** | [**boolean**] | Include the Integration name in the returned templates. | (optional) defaults to undefined
+ **transformToGdpFormat** | [**boolean**] | Tranform template format to GDP style format. | (optional) defaults to undefined
+
+
+### Return type
+
+**Templatesv3GetTemplatesForEdgeResponse**
 
 ### Authorization
 

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_update_join_response import Reportsv3UpdateJoinResponse
+from ibm_gdsc_sdk_saas.models.reportsv3_update_join_response import Reportsv3UpdateJoinResponse
 
 class TestReportsv3UpdateJoinResponse(unittest.TestCase):
     """Reportsv3UpdateJoinResponse unit test stubs"""

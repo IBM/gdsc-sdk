@@ -2,7 +2,7 @@
 
 # Guardiumconnectorv3SetupCMResponse
 
-SetupCMResponse is the response after registering a GDP Central manager to Guardium.
+SetupCMResponse is the response after registering a GDP Central manager to GDSC.
 
 ## Properties
 

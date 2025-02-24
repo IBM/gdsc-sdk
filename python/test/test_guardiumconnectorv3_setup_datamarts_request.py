@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_setup_datamarts_request import Guardiumconnectorv3SetupDatamartsRequest
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_setup_datamarts_request import Guardiumconnectorv3SetupDatamartsRequest
 
 class TestGuardiumconnectorv3SetupDatamartsRequest(unittest.TestCase):
     """Guardiumconnectorv3SetupDatamartsRequest unit test stubs"""
@@ -37,7 +37,7 @@ class TestGuardiumconnectorv3SetupDatamartsRequest(unittest.TestCase):
             return Guardiumconnectorv3SetupDatamartsRequest(
                 central_manager_id = '',
                 datamarts = [
-                    ibm_gdsc_sdk_software.models.guardiumconnectorv3_datamart_execution_mode.guardiumconnectorv3DatamartExecutionMode(
+                    ibm_gdsc_sdk_saas.models.guardiumconnectorv3_datamart_execution_mode.guardiumconnectorv3DatamartExecutionMode(
                         dm_exec_default_mode = '', 
                         dm_exec_mode = '', 
                         dm_name = '', )

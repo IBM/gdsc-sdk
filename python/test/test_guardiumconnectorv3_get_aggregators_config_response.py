@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_get_aggregators_config_response import Guardiumconnectorv3GetAggregatorsConfigResponse
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_get_aggregators_config_response import Guardiumconnectorv3GetAggregatorsConfigResponse
 
 class TestGuardiumconnectorv3GetAggregatorsConfigResponse(unittest.TestCase):
     """Guardiumconnectorv3GetAggregatorsConfigResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestGuardiumconnectorv3GetAggregatorsConfigResponse(unittest.TestCase):
         if include_optional:
             return Guardiumconnectorv3GetAggregatorsConfigResponse(
                 managed_units_config = [
-                    ibm_gdsc_sdk_software.models.guardiumconnectorv3_aggregator_config.guardiumconnectorv3AggregatorConfig(
+                    ibm_gdsc_sdk_saas.models.guardiumconnectorv3_aggregator_config.guardiumconnectorv3AggregatorConfig(
                         datamart_end_date_aggregator = '', 
                         datamart_start_date_aggregator = '', 
                         host = '', 

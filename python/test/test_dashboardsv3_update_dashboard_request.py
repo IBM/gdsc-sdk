@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.dashboardsv3_update_dashboard_request import Dashboardsv3UpdateDashboardRequest
+from ibm_gdsc_sdk_saas.models.dashboardsv3_update_dashboard_request import Dashboardsv3UpdateDashboardRequest
 
 class TestDashboardsv3UpdateDashboardRequest(unittest.TestCase):
     """Dashboardsv3UpdateDashboardRequest unit test stubs"""
@@ -35,11 +35,11 @@ class TestDashboardsv3UpdateDashboardRequest(unittest.TestCase):
         model = Dashboardsv3UpdateDashboardRequest()
         if include_optional:
             return Dashboardsv3UpdateDashboardRequest(
-                dashboard = ibm_gdsc_sdk_software.models.dashboardsv3_dashboard.dashboardsv3Dashboard(
+                dashboard = ibm_gdsc_sdk_saas.models.dashboardsv3_dashboard.dashboardsv3Dashboard(
                     cards = [
-                        ibm_gdsc_sdk_software.models.dashboardsv3_card.dashboardsv3Card(
+                        ibm_gdsc_sdk_saas.models.dashboardsv3_card.dashboardsv3Card(
                             card_id = '', 
-                            card_position = ibm_gdsc_sdk_software.models.dashboardsv3_card_position.dashboardsv3CardPosition(
+                            card_position = ibm_gdsc_sdk_saas.models.dashboardsv3_card_position.dashboardsv3CardPosition(
                                 height = 1.337, 
                                 width = 1.337, 
                                 x_position = 1.337, 
@@ -48,10 +48,13 @@ class TestDashboardsv3UpdateDashboardRequest(unittest.TestCase):
                             excluded_global_filter_ids = [
                                 ''
                                 ], 
-                            report_parameters = ibm_gdsc_sdk_software.models.dashboardsv3_report_parameters.dashboardsv3ReportParameters(
+                            report_parameters = ibm_gdsc_sdk_saas.models.dashboardsv3_report_parameters.dashboardsv3ReportParameters(
                                 end = '', 
+                                group_ids = [
+                                    56
+                                    ], 
                                 id = '', 
-                                local_time_filter = ibm_gdsc_sdk_software.models.dashboardsv3_time_range.dashboardsv3TimeRange(
+                                local_time_filter = ibm_gdsc_sdk_saas.models.dashboardsv3_time_range.dashboardsv3TimeRange(
                                     end = '', 
                                     range = '', 
                                     start = '', ), 
@@ -61,7 +64,7 @@ class TestDashboardsv3UpdateDashboardRequest(unittest.TestCase):
                                 regulation = '', 
                                 start = '', 
                                 tags = [
-                                    ibm_gdsc_sdk_software.models.reportsv3_report_tag.reportsv3ReportTag(
+                                    ibm_gdsc_sdk_saas.models.reportsv3_report_tag.reportsv3ReportTag(
                                         nls_key = '', 
                                         nls_value = '', )
                                     ], 
@@ -70,12 +73,12 @@ class TestDashboardsv3UpdateDashboardRequest(unittest.TestCase):
                     dashboard_description = '', 
                     dashboard_id = '', 
                     dashboard_title = '', 
-                    global_time_filter = ibm_gdsc_sdk_software.models.dashboardsv3_time_range.dashboardsv3TimeRange(
+                    global_time_filter = ibm_gdsc_sdk_saas.models.dashboardsv3_time_range.dashboardsv3TimeRange(
                         end = '', 
                         range = '', 
                         start = '', ), 
                     report_global_filter_list = [
-                        ibm_gdsc_sdk_software.models.report_global_filter.ReportGlobalFilter(
+                        ibm_gdsc_sdk_saas.models.report_global_filter.ReportGlobalFilter(
                             case_insensitive = True, 
                             filter_item_type = '', 
                             group_name = '', 
@@ -86,7 +89,7 @@ class TestDashboardsv3UpdateDashboardRequest(unittest.TestCase):
                             operator = '', 
                             operator_key = '', 
                             report_operator = [
-                                ibm_gdsc_sdk_software.models.report_global_filter_operator_types.Report global filter operator types(
+                                ibm_gdsc_sdk_saas.models.report_global_filter_operator_types.Report global filter operator types(
                                     key = '', 
                                     label = '', 
                                     value = '', )

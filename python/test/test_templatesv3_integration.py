@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.templatesv3_integration import Templatesv3Integration
+from ibm_gdsc_sdk_saas.models.templatesv3_integration import Templatesv3Integration
 
 class TestTemplatesv3Integration(unittest.TestCase):
     """Templatesv3Integration unit test stubs"""

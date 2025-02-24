@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.qspmdatamanagerv3_master_data_model import Qspmdatamanagerv3MasterDataModel
+from ibm_gdsc_sdk_saas.models.qspmdatamanagerv3_master_data_model import Qspmdatamanagerv3MasterDataModel
 
 # TODO update the JSON string below
 json = "{}"

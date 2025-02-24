@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.healthcollectorv3_aggregation_details_object import Healthcollectorv3AggregationDetailsObject
+from ibm_gdsc_sdk_saas.models.healthcollectorv3_aggregation_details_object import Healthcollectorv3AggregationDetailsObject
 
 class TestHealthcollectorv3AggregationDetailsObject(unittest.TestCase):
     """Healthcollectorv3AggregationDetailsObject unit test stubs"""

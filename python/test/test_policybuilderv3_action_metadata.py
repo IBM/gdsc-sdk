@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_action_metadata import Policybuilderv3ActionMetadata
+from ibm_gdsc_sdk_saas.models.policybuilderv3_action_metadata import Policybuilderv3ActionMetadata
 
 class TestPolicybuilderv3ActionMetadata(unittest.TestCase):
     """Policybuilderv3ActionMetadata unit test stubs"""
@@ -38,7 +38,7 @@ class TestPolicybuilderv3ActionMetadata(unittest.TestCase):
                 action_name = '',
                 label = '',
                 parameters = [
-                    ibm_gdsc_sdk_software.models.policybuilderv3_action_parameter_metadata.policybuilderv3ActionParameterMetadata(
+                    ibm_gdsc_sdk_saas.models.policybuilderv3_action_parameter_metadata.policybuilderv3ActionParameterMetadata(
                         default_value = '', 
                         mandatory = True, 
                         name = '', 

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.ecosystemv3_filter_field import Ecosystemv3FilterField
+from ibm_gdsc_sdk_saas.models.ecosystemv3_filter_field import Ecosystemv3FilterField
 
 class TestEcosystemv3FilterField(unittest.TestCase):
     """Ecosystemv3FilterField unit test stubs"""
@@ -36,7 +36,7 @@ class TestEcosystemv3FilterField(unittest.TestCase):
         if include_optional:
             return Ecosystemv3FilterField(
                 filters = [
-                    ibm_gdsc_sdk_software.models.ecosystemv3_filter.ecosystemv3Filter(
+                    ibm_gdsc_sdk_saas.models.ecosystemv3_filter.ecosystemv3Filter(
                         count = 56, 
                         value = '', )
                     ],

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_category_version import Reportsv3CategoryVersion
+from ibm_gdsc_sdk_saas.models.reportsv3_category_version import Reportsv3CategoryVersion
 
 class TestReportsv3CategoryVersion(unittest.TestCase):
     """Reportsv3CategoryVersion unit test stubs"""
@@ -42,7 +42,7 @@ class TestReportsv3CategoryVersion(unittest.TestCase):
                 primary = True,
                 skip_join_only = True,
                 table_map = {
-                    'key' : ibm_gdsc_sdk_software.models.array_of_table_names.Array of table names(
+                    'key' : ibm_gdsc_sdk_saas.models.array_of_table_names.Array of table names(
                         table_names = [
                             ''
                             ], )

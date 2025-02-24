@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.sort_order import SortOrder
+from ibm_gdsc_sdk_saas.models.sort_order import SortOrder
 
 class TestSortOrder(unittest.TestCase):
     """SortOrder unit test stubs"""

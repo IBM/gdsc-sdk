@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_asset_view import Assetsv3AssetView
+from ibm_gdsc_sdk_saas.models.assetsv3_asset_view import Assetsv3AssetView
 
 class TestAssetsv3AssetView(unittest.TestCase):
     """Assetsv3AssetView unit test stubs"""

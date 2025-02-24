@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_table_column import Assetsv3TableColumn
+from ibm_gdsc_sdk_saas.models.assetsv3_table_column import Assetsv3TableColumn
 
 class TestAssetsv3TableColumn(unittest.TestCase):
     """Assetsv3TableColumn unit test stubs"""

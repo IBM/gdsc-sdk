@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.service_account_installation_status import ServiceAccountInstallationStatus
+from ibm_gdsc_sdk_saas.models.service_account_installation_status import ServiceAccountInstallationStatus
 
 # TODO update the JSON string below
 json = "{}"

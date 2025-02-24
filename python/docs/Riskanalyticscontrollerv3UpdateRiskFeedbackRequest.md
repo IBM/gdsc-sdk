@@ -9,12 +9,12 @@ Name | Type | Description | Notes
 **comment** | **str** |  | [optional] 
 **feedback_classification_key** | **str** |  | [optional] 
 **original_classification_key** | **str** |  | [optional] 
-**risk_ids** | **List[int]** |  | [optional] 
+**risk_ids** | **List[int]** | One or more risk id. This API can be called for multiple risks, only if all of them are from the same category. | [optional] 
 
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_update_risk_feedback_request import Riskanalyticscontrollerv3UpdateRiskFeedbackRequest
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_update_risk_feedback_request import Riskanalyticscontrollerv3UpdateRiskFeedbackRequest
 
 # TODO update the JSON string below
 json = "{}"

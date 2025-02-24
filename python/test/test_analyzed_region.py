@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.analyzed_region import AnalyzedRegion
+from ibm_gdsc_sdk_saas.models.analyzed_region import AnalyzedRegion
 
 class TestAnalyzedRegion(unittest.TestCase):
     """AnalyzedRegion unit test stubs"""

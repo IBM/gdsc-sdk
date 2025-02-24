@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.policybuilderv3_action_parameter_metadata import Policybuilderv3ActionParameterMetadata
+from ibm_gdsc_sdk_saas.models.policybuilderv3_action_parameter_metadata import Policybuilderv3ActionParameterMetadata
 
 # TODO update the JSON string below
 json = "{}"

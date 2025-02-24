@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_standard_crud_response import Policybuilderv3StandardCRUDResponse
+from ibm_gdsc_sdk_saas.models.policybuilderv3_standard_crud_response import Policybuilderv3StandardCRUDResponse
 
 class TestPolicybuilderv3StandardCRUDResponse(unittest.TestCase):
     """Policybuilderv3StandardCRUDResponse unit test stubs"""
@@ -35,7 +35,7 @@ class TestPolicybuilderv3StandardCRUDResponse(unittest.TestCase):
         model = Policybuilderv3StandardCRUDResponse()
         if include_optional:
             return Policybuilderv3StandardCRUDResponse(
-                status = ibm_gdsc_sdk_software.models.policybuilderv3_status_response_base.policybuilderv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.policybuilderv3_status_response_base.policybuilderv3StatusResponseBase(
                     message = '', 
                     status = '', )
             )

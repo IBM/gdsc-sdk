@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.tenantuser_api import TenantuserApi
+from ibm_gdsc_sdk_saas.api.tenantuser_api import TenantuserApi
 
 
 class TestTenantuserApi(unittest.TestCase):

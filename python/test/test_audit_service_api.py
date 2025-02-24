@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.audit_service_api import AuditServiceApi
+from ibm_gdsc_sdk_saas.api.audit_service_api import AuditServiceApi
 
 
 class TestAuditServiceApi(unittest.TestCase):

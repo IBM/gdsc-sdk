@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.installation_status import InstallationStatus
+from ibm_gdsc_sdk_saas.models.installation_status import InstallationStatus
 
 class TestInstallationStatus(unittest.TestCase):
     """InstallationStatus unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.client_info import ClientInfo
+from ibm_gdsc_sdk_saas.models.client_info import ClientInfo
 
 class TestClientInfo(unittest.TestCase):
     """ClientInfo unit test stubs"""

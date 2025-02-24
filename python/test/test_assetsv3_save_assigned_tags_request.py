@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_save_assigned_tags_request import Assetsv3SaveAssignedTagsRequest
+from ibm_gdsc_sdk_saas.models.assetsv3_save_assigned_tags_request import Assetsv3SaveAssignedTagsRequest
 
 class TestAssetsv3SaveAssignedTagsRequest(unittest.TestCase):
     """Assetsv3SaveAssignedTagsRequest unit test stubs"""
@@ -36,7 +36,7 @@ class TestAssetsv3SaveAssignedTagsRequest(unittest.TestCase):
         if include_optional:
             return Assetsv3SaveAssignedTagsRequest(
                 tags_assigned = [
-                    ibm_gdsc_sdk_software.models.assets_and_tags_assigned_to_them_respectively.Assets and tags assigned to them respectively(
+                    ibm_gdsc_sdk_saas.models.assets_and_tags_assigned_to_them_respectively.Assets and tags assigned to them respectively(
                         asset_id = '', 
                         tag_id = [
                             ''

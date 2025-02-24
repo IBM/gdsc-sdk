@@ -1,4 +1,4 @@
-# ibm_gdsc_sdk_software.PolicyBuilderApi
+# ibm_gdsc_sdk_saas.PolicyBuilderApi
 
 All URIs are relative to *http://localhost*
 
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 [**policy_builder_get_receivers**](PolicyBuilderApi.md#policy_builder_get_receivers) | **GET** /api/v3/policies/receivers | Summary: Get receivers Description: Get all the receivers associated with actions.
 [**policy_builder_get_rule_metadata**](PolicyBuilderApi.md#policy_builder_get_rule_metadata) | **GET** /api/v3/rules/metadata | Summary: Get rule metadata Description: Return a list of rule parameters and actions to the caller.
 [**policy_builder_insert_gdp_policy**](PolicyBuilderApi.md#policy_builder_insert_gdp_policy) | **POST** /api/v3/policies/sync_entry | Summary: Insert GDP policy sync entry Description: Inserts GDP policy&#39;s name into sync collection
-[**policy_builder_insert_gdp_policy_meta_data**](PolicyBuilderApi.md#policy_builder_insert_gdp_policy_meta_data) | **POST** /api/v3/central_managers/{central_manager_id}/policies/policy_metadata | Summary: Insert gdp policy summaries Description: Inserts GDP&#39;s CM&#39;s policy summary information into mogodb. (This API is called from GDP only)
+[**policy_builder_insert_gdp_policy_meta_data**](PolicyBuilderApi.md#policy_builder_insert_gdp_policy_meta_data) | **POST** /api/v3/central_managers/{central_manager_id}/policies/policy_metadata | Summary: Insert GDP policy summaries Description: Inserts GDP&#39;s CM&#39;s policy summary information into mogodb. (This API is called from GDP only)
 [**policy_builder_install_policies**](PolicyBuilderApi.md#policy_builder_install_policies) | **PUT** /api/v3/policies/install | Summary: Install policies Description: Activate Policies request performs activations.
 [**policy_builder_integration_check**](PolicyBuilderApi.md#policy_builder_integration_check) | **GET** /api/v3/policies/integration_check/{integration_id} | Summary: Integration check Description: Check if integration id is being used in policies.
 [**policy_builder_policies_groups**](PolicyBuilderApi.md#policy_builder_policies_groups) | **GET** /api/v3/policies/groups | Summary: Policies groups Description: Get policy groups.
@@ -35,15 +35,15 @@ Summary: Clone policy Description: Clone a policy.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.policybuilderv3_clone_policy_request import Policybuilderv3ClonePolicyRequest
-from ibm_gdsc_sdk_software.models.policybuilderv3_standard_crud_response import Policybuilderv3StandardCRUDResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.policybuilderv3_clone_policy_request import Policybuilderv3ClonePolicyRequest
+from ibm_gdsc_sdk_saas.models.policybuilderv3_standard_crud_response import Policybuilderv3StandardCRUDResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -53,7 +53,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -65,11 +65,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.PolicyBuilderApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.PolicyBuilderApi(api_client)
     policy_id = 'policy_id_example' # str | Policy id that needs to be cloned.
-    policybuilderv3_clone_policy_request = ibm_gdsc_sdk_software.Policybuilderv3ClonePolicyRequest() # Policybuilderv3ClonePolicyRequest | 
+    policybuilderv3_clone_policy_request = ibm_gdsc_sdk_saas.Policybuilderv3ClonePolicyRequest() # Policybuilderv3ClonePolicyRequest | 
 
     try:
         # Summary: Clone policy Description: Clone a policy.
@@ -123,15 +123,15 @@ Summary: Create policy Description: Create Policy returns response code and mess
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.policybuilderv3_create_update_policy_request import Policybuilderv3CreateUpdatePolicyRequest
-from ibm_gdsc_sdk_software.models.policybuilderv3_create_update_policy_response import Policybuilderv3CreateUpdatePolicyResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.policybuilderv3_create_update_policy_request import Policybuilderv3CreateUpdatePolicyRequest
+from ibm_gdsc_sdk_saas.models.policybuilderv3_create_update_policy_response import Policybuilderv3CreateUpdatePolicyResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -141,7 +141,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -153,10 +153,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.PolicyBuilderApi(api_client)
-    policybuilderv3_create_update_policy_request = ibm_gdsc_sdk_software.Policybuilderv3CreateUpdatePolicyRequest() # Policybuilderv3CreateUpdatePolicyRequest | 
+    api_instance = ibm_gdsc_sdk_saas.PolicyBuilderApi(api_client)
+    policybuilderv3_create_update_policy_request = ibm_gdsc_sdk_saas.Policybuilderv3CreateUpdatePolicyRequest() # Policybuilderv3CreateUpdatePolicyRequest | 
 
     try:
         # Summary: Create policy Description: Create Policy returns response code and message.
@@ -209,14 +209,14 @@ Summary: Delete GDP policy sync entry Description: Deletes GDP policy from sync 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.policybuilderv3_delete_gdp_policy_sync_response import Policybuilderv3DeleteGdpPolicySyncResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.policybuilderv3_delete_gdp_policy_sync_response import Policybuilderv3DeleteGdpPolicySyncResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -226,7 +226,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -238,9 +238,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.PolicyBuilderApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.PolicyBuilderApi(api_client)
     sync_ids = ['sync_ids_example'] # List[str] | Policy sync entry id to delete from sync. (optional)
 
     try:
@@ -294,14 +294,14 @@ Summary: Delete policies Description: Delete Policy returns response code and me
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.policybuilderv3_standard_crud_response import Policybuilderv3StandardCRUDResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.policybuilderv3_standard_crud_response import Policybuilderv3StandardCRUDResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -311,7 +311,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -323,9 +323,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.PolicyBuilderApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.PolicyBuilderApi(api_client)
     policy_ids = ['policy_ids_example'] # List[str] | Policy ids. (optional)
 
     try:
@@ -379,14 +379,14 @@ Summary: Get GDP policy summary information Description: Get GDP's CM's policy s
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.policybuilderv3_get_gdp_policy_meta_data_response import Policybuilderv3GetGdpPolicyMetaDataResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.policybuilderv3_get_gdp_policy_meta_data_response import Policybuilderv3GetGdpPolicyMetaDataResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -396,7 +396,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -408,9 +408,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.PolicyBuilderApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.PolicyBuilderApi(api_client)
 
     try:
         # Summary: Get GDP policy summary information Description: Get GDP's CM's policy summary from mogodb
@@ -460,14 +460,14 @@ Summary: Get policies Description: Return a list of policies to the caller.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.policybuilderv3_get_policies_response import Policybuilderv3GetPoliciesResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.policybuilderv3_get_policies_response import Policybuilderv3GetPoliciesResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -477,7 +477,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -489,9 +489,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.PolicyBuilderApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.PolicyBuilderApi(api_client)
 
     try:
         # Summary: Get policies Description: Return a list of policies to the caller.
@@ -541,14 +541,14 @@ Summary: Get policy details Description: Return a list of rules inside the polic
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.policybuilderv3_get_policy_details_response import Policybuilderv3GetPolicyDetailsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.policybuilderv3_get_policy_details_response import Policybuilderv3GetPolicyDetailsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -558,7 +558,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -570,9 +570,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.PolicyBuilderApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.PolicyBuilderApi(api_client)
     policy_id = 'policy_id_example' # str | Policy id.
 
     try:
@@ -626,15 +626,15 @@ Summary: GetPolicy names from rule IDs Description: Return a map where the key i
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.policybuilderv3_get_policy_names_from_rule_ids_request import Policybuilderv3GetPolicyNamesFromRuleIDsRequest
-from ibm_gdsc_sdk_software.models.policybuilderv3_get_policy_names_from_rule_ids_response import Policybuilderv3GetPolicyNamesFromRuleIDsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.policybuilderv3_get_policy_names_from_rule_ids_request import Policybuilderv3GetPolicyNamesFromRuleIDsRequest
+from ibm_gdsc_sdk_saas.models.policybuilderv3_get_policy_names_from_rule_ids_response import Policybuilderv3GetPolicyNamesFromRuleIDsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -644,7 +644,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -656,10 +656,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.PolicyBuilderApi(api_client)
-    policybuilderv3_get_policy_names_from_rule_ids_request = ibm_gdsc_sdk_software.Policybuilderv3GetPolicyNamesFromRuleIDsRequest() # Policybuilderv3GetPolicyNamesFromRuleIDsRequest | 
+    api_instance = ibm_gdsc_sdk_saas.PolicyBuilderApi(api_client)
+    policybuilderv3_get_policy_names_from_rule_ids_request = ibm_gdsc_sdk_saas.Policybuilderv3GetPolicyNamesFromRuleIDsRequest() # Policybuilderv3GetPolicyNamesFromRuleIDsRequest | 
 
     try:
         # Summary: GetPolicy names from rule IDs Description: Return a map where the key is the rule ID and value is the policy name that has the rule ID.
@@ -712,14 +712,14 @@ Summary: Get list of synced polices Description: Returns the list and status of 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.policybuilderv3_get_policy_sync_list_response import Policybuilderv3GetPolicySyncListResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.policybuilderv3_get_policy_sync_list_response import Policybuilderv3GetPolicySyncListResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -729,7 +729,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -741,9 +741,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.PolicyBuilderApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.PolicyBuilderApi(api_client)
 
     try:
         # Summary: Get list of synced polices Description: Returns the list and status of sync entries
@@ -793,14 +793,14 @@ Summary: Get receivers Description: Get all the receivers associated with action
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.policybuilderv3_get_receivers_response import Policybuilderv3GetReceiversResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.policybuilderv3_get_receivers_response import Policybuilderv3GetReceiversResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -810,7 +810,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -822,9 +822,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.PolicyBuilderApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.PolicyBuilderApi(api_client)
     action_id = ['action_id_example'] # List[str] | Action id. (optional)
     validate_cache = True # bool | Flag that indicates if cache needs to be validated. (optional)
 
@@ -880,14 +880,14 @@ Summary: Get rule metadata Description: Return a list of rule parameters and act
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.policybuilderv3_rule_metadata_response import Policybuilderv3RuleMetadataResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.policybuilderv3_rule_metadata_response import Policybuilderv3RuleMetadataResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -897,7 +897,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -909,9 +909,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.PolicyBuilderApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.PolicyBuilderApi(api_client)
     rule_type = 'ACCESS' # str | Rule type integer to indicate rule type. (optional) (default to 'ACCESS')
 
     try:
@@ -965,15 +965,15 @@ Summary: Insert GDP policy sync entry Description: Inserts GDP policy's name int
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.policybuilderv3_insert_gdp_policy_sync_request import Policybuilderv3InsertGdpPolicySyncRequest
-from ibm_gdsc_sdk_software.models.policybuilderv3_insert_gdp_policy_sync_response import Policybuilderv3InsertGdpPolicySyncResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.policybuilderv3_insert_gdp_policy_sync_request import Policybuilderv3InsertGdpPolicySyncRequest
+from ibm_gdsc_sdk_saas.models.policybuilderv3_insert_gdp_policy_sync_response import Policybuilderv3InsertGdpPolicySyncResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -983,7 +983,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -995,10 +995,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.PolicyBuilderApi(api_client)
-    policybuilderv3_insert_gdp_policy_sync_request = ibm_gdsc_sdk_software.Policybuilderv3InsertGdpPolicySyncRequest() # Policybuilderv3InsertGdpPolicySyncRequest | 
+    api_instance = ibm_gdsc_sdk_saas.PolicyBuilderApi(api_client)
+    policybuilderv3_insert_gdp_policy_sync_request = ibm_gdsc_sdk_saas.Policybuilderv3InsertGdpPolicySyncRequest() # Policybuilderv3InsertGdpPolicySyncRequest | 
 
     try:
         # Summary: Insert GDP policy sync entry Description: Inserts GDP policy's name into sync collection
@@ -1043,7 +1043,7 @@ Name | Type | Description  | Notes
 # **policy_builder_insert_gdp_policy_meta_data**
 > Policybuilderv3InsertGdpPolicyMetaDataResponse policy_builder_insert_gdp_policy_meta_data(central_manager_id, policybuilderv3_insert_gdp_policy_meta_data_request)
 
-Summary: Insert gdp policy summaries Description: Inserts GDP's CM's policy summary information into mogodb. (This API is called from GDP only)
+Summary: Insert GDP policy summaries Description: Inserts GDP's CM's policy summary information into mogodb. (This API is called from GDP only)
 
 ### Example
 
@@ -1051,15 +1051,15 @@ Summary: Insert gdp policy summaries Description: Inserts GDP's CM's policy summ
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.policybuilderv3_insert_gdp_policy_meta_data_request import Policybuilderv3InsertGdpPolicyMetaDataRequest
-from ibm_gdsc_sdk_software.models.policybuilderv3_insert_gdp_policy_meta_data_response import Policybuilderv3InsertGdpPolicyMetaDataResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.policybuilderv3_insert_gdp_policy_meta_data_request import Policybuilderv3InsertGdpPolicyMetaDataRequest
+from ibm_gdsc_sdk_saas.models.policybuilderv3_insert_gdp_policy_meta_data_response import Policybuilderv3InsertGdpPolicyMetaDataResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1069,7 +1069,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1081,14 +1081,14 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.PolicyBuilderApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.PolicyBuilderApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | ID of central manager.
-    policybuilderv3_insert_gdp_policy_meta_data_request = ibm_gdsc_sdk_software.Policybuilderv3InsertGdpPolicyMetaDataRequest() # Policybuilderv3InsertGdpPolicyMetaDataRequest | 
+    policybuilderv3_insert_gdp_policy_meta_data_request = ibm_gdsc_sdk_saas.Policybuilderv3InsertGdpPolicyMetaDataRequest() # Policybuilderv3InsertGdpPolicyMetaDataRequest | 
 
     try:
-        # Summary: Insert gdp policy summaries Description: Inserts GDP's CM's policy summary information into mogodb. (This API is called from GDP only)
+        # Summary: Insert GDP policy summaries Description: Inserts GDP's CM's policy summary information into mogodb. (This API is called from GDP only)
         api_response = api_instance.policy_builder_insert_gdp_policy_meta_data(central_manager_id, policybuilderv3_insert_gdp_policy_meta_data_request)
         print("The response of PolicyBuilderApi->policy_builder_insert_gdp_policy_meta_data:\n")
         pprint(api_response)
@@ -1139,15 +1139,15 @@ Summary: Install policies Description: Activate Policies request performs activa
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.policybuilderv3_install_policies_request import Policybuilderv3InstallPoliciesRequest
-from ibm_gdsc_sdk_software.models.policybuilderv3_status_response_base import Policybuilderv3StatusResponseBase
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.policybuilderv3_install_policies_request import Policybuilderv3InstallPoliciesRequest
+from ibm_gdsc_sdk_saas.models.policybuilderv3_status_response_base import Policybuilderv3StatusResponseBase
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1157,7 +1157,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1169,10 +1169,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.PolicyBuilderApi(api_client)
-    policybuilderv3_install_policies_request = ibm_gdsc_sdk_software.Policybuilderv3InstallPoliciesRequest() # Policybuilderv3InstallPoliciesRequest | 
+    api_instance = ibm_gdsc_sdk_saas.PolicyBuilderApi(api_client)
+    policybuilderv3_install_policies_request = ibm_gdsc_sdk_saas.Policybuilderv3InstallPoliciesRequest() # Policybuilderv3InstallPoliciesRequest | 
 
     try:
         # Summary: Install policies Description: Activate Policies request performs activations.
@@ -1225,14 +1225,14 @@ Summary: Integration check Description: Check if integration id is being used in
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.policybuilderv3_get_integration_check_response import Policybuilderv3GetIntegrationCheckResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.policybuilderv3_get_integration_check_response import Policybuilderv3GetIntegrationCheckResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1242,7 +1242,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1254,9 +1254,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.PolicyBuilderApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.PolicyBuilderApi(api_client)
     integration_id = 'integration_id_example' # str | Integration Id to check if it is being used in policies.
     template_id = 'template_id_example' # str | Template Id to check if it is being used in policies. (optional)
 
@@ -1312,14 +1312,14 @@ Summary: Policies groups Description: Get policy groups.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.policybuilderv3_get_policies_groups_response import Policybuilderv3GetPoliciesGroupsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.policybuilderv3_get_policies_groups_response import Policybuilderv3GetPoliciesGroupsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1329,7 +1329,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1341,9 +1341,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.PolicyBuilderApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.PolicyBuilderApi(api_client)
     group_ids = ['group_ids_example'] # List[str] | Group ids to check if they are being used in policies. (optional)
 
     try:
@@ -1397,15 +1397,15 @@ Summary: Rule validation Description: Validate a rule parameters and actions.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.policybuilderv3_get_rule_validation_request import Policybuilderv3GetRuleValidationRequest
-from ibm_gdsc_sdk_software.models.policybuilderv3_standard_crud_response import Policybuilderv3StandardCRUDResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.policybuilderv3_get_rule_validation_request import Policybuilderv3GetRuleValidationRequest
+from ibm_gdsc_sdk_saas.models.policybuilderv3_standard_crud_response import Policybuilderv3StandardCRUDResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1415,7 +1415,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1427,10 +1427,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.PolicyBuilderApi(api_client)
-    policybuilderv3_get_rule_validation_request = ibm_gdsc_sdk_software.Policybuilderv3GetRuleValidationRequest() # Policybuilderv3GetRuleValidationRequest | 
+    api_instance = ibm_gdsc_sdk_saas.PolicyBuilderApi(api_client)
+    policybuilderv3_get_rule_validation_request = ibm_gdsc_sdk_saas.Policybuilderv3GetRuleValidationRequest() # Policybuilderv3GetRuleValidationRequest | 
 
     try:
         # Summary: Rule validation Description: Validate a rule parameters and actions.
@@ -1483,15 +1483,15 @@ Summary: Store policies Gdp Description: Store policies.  (This API is called fr
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.policybuilderv3_store_policy_gdp_request import Policybuilderv3StorePolicyGdpRequest
-from ibm_gdsc_sdk_software.models.policybuilderv3_store_policy_gdp_response import Policybuilderv3StorePolicyGdpResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.policybuilderv3_store_policy_gdp_request import Policybuilderv3StorePolicyGdpRequest
+from ibm_gdsc_sdk_saas.models.policybuilderv3_store_policy_gdp_response import Policybuilderv3StorePolicyGdpResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1501,7 +1501,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1513,11 +1513,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.PolicyBuilderApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.PolicyBuilderApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | ID of central manager.
-    policybuilderv3_store_policy_gdp_request = ibm_gdsc_sdk_software.Policybuilderv3StorePolicyGdpRequest() # Policybuilderv3StorePolicyGdpRequest | 
+    policybuilderv3_store_policy_gdp_request = ibm_gdsc_sdk_saas.Policybuilderv3StorePolicyGdpRequest() # Policybuilderv3StorePolicyGdpRequest | 
 
     try:
         # Summary: Store policies Gdp Description: Store policies.  (This API is called from GDP only)

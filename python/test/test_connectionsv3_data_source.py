@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_data_source import Connectionsv3DataSource
+from ibm_gdsc_sdk_saas.models.connectionsv3_data_source import Connectionsv3DataSource
 
 class TestConnectionsv3DataSource(unittest.TestCase):
     """Connectionsv3DataSource unit test stubs"""

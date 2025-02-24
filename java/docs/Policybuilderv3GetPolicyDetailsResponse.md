@@ -13,6 +13,7 @@ Policy details response message.
 |**installedFlag** | **Boolean** | Flag to indicate whether policy is installed or not. |  [optional] |
 |**policyImportIssue** | **Policybuilderv3ImportIssue** |  |  [optional] |
 |**policyImportState** | **Policybuilderv3ImportState** |  |  [optional] |
+|**policyInfo** | [**Policybuilderv3Policy**](Policybuilderv3Policy.md) |  |  [optional] |
 |**policyName** | **String** |  |  [optional] |
 |**rules** | [**List&lt;Policybuilderv3Rule&gt;**](Policybuilderv3Rule.md) | Rules contained by the policy. |  [optional] |
 |**status** | [**Policybuilderv3StatusResponseBase**](Policybuilderv3StatusResponseBase.md) |  |  [optional] |

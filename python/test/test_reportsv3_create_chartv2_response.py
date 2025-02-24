@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_create_chartv2_response import Reportsv3CreateChartv2Response
+from ibm_gdsc_sdk_saas.models.reportsv3_create_chartv2_response import Reportsv3CreateChartv2Response
 
 class TestReportsv3CreateChartv2Response(unittest.TestCase):
     """Reportsv3CreateChartv2Response unit test stubs"""

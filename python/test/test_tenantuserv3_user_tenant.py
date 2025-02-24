@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.tenantuserv3_user_tenant import Tenantuserv3UserTenant
+from ibm_gdsc_sdk_saas.models.tenantuserv3_user_tenant import Tenantuserv3UserTenant
 
 class TestTenantuserv3UserTenant(unittest.TestCase):
     """Tenantuserv3UserTenant unit test stubs"""
@@ -35,13 +35,13 @@ class TestTenantuserv3UserTenant(unittest.TestCase):
         model = Tenantuserv3UserTenant()
         if include_optional:
             return Tenantuserv3UserTenant(
-                active_tenant = ibm_gdsc_sdk_software.models.tenantuserv3_tenant.tenantuserv3Tenant(
+                active_tenant = ibm_gdsc_sdk_saas.models.tenantuserv3_tenant.tenantuserv3Tenant(
                     activation_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     external_id = '', 
                     external_metadata = {
-                        'key' : ibm_gdsc_sdk_software.models.tenantuserv3_external_metadata.tenantuserv3ExternalMetadata(
+                        'key' : ibm_gdsc_sdk_saas.models.tenantuserv3_external_metadata.tenantuserv3ExternalMetadata(
                             add_ons = {
-                                'key' : ibm_gdsc_sdk_software.models.tenantuserv3_prometheus.tenantuserv3Prometheus(
+                                'key' : ibm_gdsc_sdk_saas.models.tenantuserv3_prometheus.tenantuserv3Prometheus(
                                     unit = '', 
                                     value = '', )
                                 }, 
@@ -66,13 +66,13 @@ class TestTenantuserv3UserTenant(unittest.TestCase):
                     tenant_id = '', 
                     uid = '', ),
                 tenants = [
-                    ibm_gdsc_sdk_software.models.tenantuserv3_tenant.tenantuserv3Tenant(
+                    ibm_gdsc_sdk_saas.models.tenantuserv3_tenant.tenantuserv3Tenant(
                         activation_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         external_id = '', 
                         external_metadata = {
-                            'key' : ibm_gdsc_sdk_software.models.tenantuserv3_external_metadata.tenantuserv3ExternalMetadata(
+                            'key' : ibm_gdsc_sdk_saas.models.tenantuserv3_external_metadata.tenantuserv3ExternalMetadata(
                                 add_ons = {
-                                    'key' : ibm_gdsc_sdk_software.models.tenantuserv3_prometheus.tenantuserv3Prometheus(
+                                    'key' : ibm_gdsc_sdk_saas.models.tenantuserv3_prometheus.tenantuserv3Prometheus(
                                         unit = '', 
                                         value = '', )
                                     }, 
@@ -97,7 +97,7 @@ class TestTenantuserv3UserTenant(unittest.TestCase):
                         tenant_id = '', 
                         uid = '', )
                     ],
-                user = ibm_gdsc_sdk_software.models.full_user_has_information_about_a_single_user_and_cumulative_privileges.FullUser has information about a single user and cumulative privileges(
+                user = ibm_gdsc_sdk_saas.models.full_user_has_information_about_a_single_user_and_cumulative_privileges.FullUser has information about a single user and cumulative privileges(
                     activation_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     directory_id = '', 
                     disabled = True, 

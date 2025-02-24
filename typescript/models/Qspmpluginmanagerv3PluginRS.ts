@@ -22,7 +22,6 @@ export class Qspmpluginmanagerv3PluginRS {
     'facts'?: Array<Qspmpluginmanagerv3EntityNewSchema>;
     'orgId'?: string;
     'pluginId'?: string;
-    'runForAllScans'?: boolean;
     'scanDesc'?: string;
     'scanId'?: string;
     'userEmail'?: string;
@@ -54,12 +53,6 @@ export class Qspmpluginmanagerv3PluginRS {
             "baseName": "plugin_id",
             "type": "string",
             "format": "int64"
-        },
-        {
-            "name": "runForAllScans",
-            "baseName": "run_for_all_scans",
-            "type": "boolean",
-            "format": ""
         },
         {
             "name": "scanDesc",

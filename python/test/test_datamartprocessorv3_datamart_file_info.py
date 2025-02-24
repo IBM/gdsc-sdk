@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.datamartprocessorv3_datamart_file_info import Datamartprocessorv3DatamartFileInfo
+from ibm_gdsc_sdk_saas.models.datamartprocessorv3_datamart_file_info import Datamartprocessorv3DatamartFileInfo
 
 class TestDatamartprocessorv3DatamartFileInfo(unittest.TestCase):
     """Datamartprocessorv3DatamartFileInfo unit test stubs"""

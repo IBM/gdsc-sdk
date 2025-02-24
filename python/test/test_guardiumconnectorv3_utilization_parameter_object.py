@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_utilization_parameter_object import Guardiumconnectorv3UtilizationParameterObject
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_utilization_parameter_object import Guardiumconnectorv3UtilizationParameterObject
 
 class TestGuardiumconnectorv3UtilizationParameterObject(unittest.TestCase):
     """Guardiumconnectorv3UtilizationParameterObject unit test stubs"""

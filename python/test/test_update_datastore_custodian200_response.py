@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.update_datastore_custodian200_response import UpdateDatastoreCustodian200Response
+from ibm_gdsc_sdk_saas.models.update_datastore_custodian200_response import UpdateDatastoreCustodian200Response
 
 class TestUpdateDatastoreCustodian200Response(unittest.TestCase):
     """UpdateDatastoreCustodian200Response unit test stubs"""

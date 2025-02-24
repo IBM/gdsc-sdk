@@ -7,9 +7,9 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**activatationTimestamp** | **OffsetDateTime** |  |  [optional] |
 |**activationOrder** | **Integer** |  |  [optional] |
 |**activationStatus** | **Policybuilderv3ActivationStatus** |  |  [optional] |
+|**activationTimestamp** | **OffsetDateTime** |  |  [optional] |
 |**edgeId** | **String** |  |  [optional] |
 
 

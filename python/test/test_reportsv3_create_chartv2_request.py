@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_create_chartv2_request import Reportsv3CreateChartv2Request
+from ibm_gdsc_sdk_saas.models.reportsv3_create_chartv2_request import Reportsv3CreateChartv2Request
 
 class TestReportsv3CreateChartv2Request(unittest.TestCase):
     """Reportsv3CreateChartv2Request unit test stubs"""
@@ -35,7 +35,7 @@ class TestReportsv3CreateChartv2Request(unittest.TestCase):
         model = Reportsv3CreateChartv2Request()
         if include_optional:
             return Reportsv3CreateChartv2Request(
-                chart_settings_v2 = ibm_gdsc_sdk_software.models.reportsv3_chart_settingsv2.reportsv3ChartSettingsv2(
+                chart_settings_v2 = ibm_gdsc_sdk_saas.models.reportsv3_chart_settingsv2.reportsv3ChartSettingsv2(
                     category_sequence_numbers = [
                         56
                         ], 

@@ -120,7 +120,7 @@ export class GuardiumConnectorApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Description: stores datamarts details from GDP
+     * Description: stores datamarts details from GDP. (This API is called from GDP only)
      * @param centralManagerId central manager
      * @param guardiumconnectorv3AddDatamartsRequest 
      */
@@ -232,7 +232,7 @@ export class GuardiumConnectorApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Summary: Add task Description: Add a task to be executed on GDP.
+     * Summary: Add task Description: Add a task to be executed on GDP. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param guardiumconnectorv3AddTaskRequest 
      */
@@ -524,7 +524,7 @@ export class GuardiumConnectorApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Description: validates if central manager has datamart support for event model
+     * Description: validates if central manager has v5 datamart support. (This API is called from GDP only)
      * @param centralManagerId Central manager
      * @param guardiumconnectorv3DatamartVersionRequest 
      */
@@ -674,7 +674,7 @@ export class GuardiumConnectorApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Summary: Delete task Description: Delete a task by central manager id and task id.
+     * Summary: Delete task Description: Delete a task by central manager id and task id. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param taskId ID of task being deleted.
      */
@@ -724,7 +724,7 @@ export class GuardiumConnectorApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Summary: Delete tasks Description: Delete a central manager\'s tasks by central manager id.
+     * Summary: Delete tasks Description: Delete a central manager\'s tasks by central manager id. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      */
     public async guardiumConnectorDeleteTasks(centralManagerId: string, _options?: Configuration): Promise<RequestContext> {
@@ -1092,9 +1092,9 @@ export class GuardiumConnectorApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Summary: Get gealth info Description: Get health information from Guardium Data Protection central mamangers.
+     * Summary: Get health info Description: Get health information from Guardium Data Protection central mamangers. (This API is for CMs registered in legacy pull mode. Supported on-premises only)
      * @param centralManagerId Central Manager ID.
-     * @param useFallback Flag indicating if the older gdp api is to be called in case it doesn\&#39;t support new api.
+     * @param useFallback Flag indicating if the older GDP api is to be called in case it doesn\&#39;t support new api.
      */
     public async guardiumConnectorGetHealthInfo(centralManagerId: string, useFallback?: boolean, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
@@ -1141,7 +1141,7 @@ export class GuardiumConnectorApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for Guardium.
+     * Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for GDSC.
      * @param centralManagerId Central Manager ID.
      */
     public async guardiumConnectorGetLatestDMExtractionProfile(centralManagerId: string, _options?: Configuration): Promise<RequestContext> {
@@ -1225,7 +1225,7 @@ export class GuardiumConnectorApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Summary: Get sync DMs Description: Return the list of tasks from a central manager.
+     * Summary: Get sync DMs Description: Return the list of tasks from a central manager. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      */
     public async guardiumConnectorGetSyncDMs(centralManagerId: string, _options?: Configuration): Promise<RequestContext> {
@@ -1301,7 +1301,7 @@ export class GuardiumConnectorApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Summary: Get tasks Description: Return the list of tasks from a central manager.
+     * Summary: Get tasks Description: Return the list of tasks from a central manager. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param taskId ID of task.
      * @param taskType Type of task.
@@ -1364,7 +1364,7 @@ export class GuardiumConnectorApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Summary: Run GDP report Description: Run GDP report.
+     * Summary: Run GDP report Description: Run GDP report. (This API is for CMs registered in legacy pull mode. Supported on-premises only)
      * @param centralManagerId Central Manager ID.
      * @param guardiumconnectorv3RunGDPReportRequest 
      */
@@ -1424,7 +1424,7 @@ export class GuardiumConnectorApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Summary: Setup CM Description: Set up the registration between a GDP Central manager and Guardium.
+     * Summary: Setup CM Description: Set up the registration between a GDP Central manager and GDSC. (This API is called from GDP only)
      * @param guardiumconnectorv3SetupCMRequest 
      */
     public async guardiumConnectorSetupCM(guardiumconnectorv3SetupCMRequest: Guardiumconnectorv3SetupCMRequest, _options?: Configuration): Promise<RequestContext> {
@@ -1536,7 +1536,7 @@ export class GuardiumConnectorApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Summary: Task error Description: Log error messages from GDP task execution.
+     * Summary: Task error Description: Log error messages from GDP task execution. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param guardiumconnectorv3TaskErrorRequest 
      */
@@ -1695,7 +1695,7 @@ export class GuardiumConnectorApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Summary: Update streaming Description: Update streaming status into GI.
+     * Summary: Update streaming Description: Update streaming status into GI. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param guardiumconnectorv3UpdateStreamingRequest 
      */
@@ -1755,7 +1755,7 @@ export class GuardiumConnectorApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Summary: Update task Description: Update a task that gets executed on GDP.
+     * Summary: Update task Description: Update a task that gets executed on GDP. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param taskId ID of task being updated.
      * @param guardiumconnectorv3UpdateTaskRequest 

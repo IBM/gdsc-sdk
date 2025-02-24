@@ -1,4 +1,4 @@
-# ibm_gdsc_sdk_software.ComplianceAcceleratorApi
+# ibm_gdsc_sdk_saas.ComplianceAcceleratorApi
 
 All URIs are relative to *http://localhost*
 
@@ -22,15 +22,15 @@ Summary: Create workspace Description: Create a workspace.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.complianceacceleratorv3_create_workspace_request import Complianceacceleratorv3CreateWorkspaceRequest
-from ibm_gdsc_sdk_software.models.stream_result_of_complianceacceleratorv3_create_workspace_response import StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.complianceacceleratorv3_create_workspace_request import Complianceacceleratorv3CreateWorkspaceRequest
+from ibm_gdsc_sdk_saas.models.stream_result_of_complianceacceleratorv3_create_workspace_response import StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -40,7 +40,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -52,10 +52,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ComplianceAcceleratorApi(api_client)
-    complianceacceleratorv3_create_workspace_request = ibm_gdsc_sdk_software.Complianceacceleratorv3CreateWorkspaceRequest() # Complianceacceleratorv3CreateWorkspaceRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ComplianceAcceleratorApi(api_client)
+    complianceacceleratorv3_create_workspace_request = ibm_gdsc_sdk_saas.Complianceacceleratorv3CreateWorkspaceRequest() # Complianceacceleratorv3CreateWorkspaceRequest | 
 
     try:
         # Summary: Create workspace Description: Create a workspace.
@@ -108,14 +108,14 @@ Summary: Delete compliance workspaces Description: Delete workspaces.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.complianceacceleratorv3_delete_compliance_workspaces_response import Complianceacceleratorv3DeleteComplianceWorkspacesResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.complianceacceleratorv3_delete_compliance_workspaces_response import Complianceacceleratorv3DeleteComplianceWorkspacesResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -125,7 +125,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -137,9 +137,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ComplianceAcceleratorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ComplianceAcceleratorApi(api_client)
     regulations = ['regulations_example'] # List[str] | Id to be deleted. (optional)
     delete_all = True # bool | if you want to delete a whole configuration. (optional)
 
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **compliance_accelerator_get_compliance_info**
-> Complianceacceleratorv3GetComplianceInfoResponse compliance_accelerator_get_compliance_info()
+> Complianceacceleratorv3GetComplianceInfoResponse compliance_accelerator_get_compliance_info(is_brief=is_brief)
 
 Summary: Get compliance info Description: Return stored compliance data.
 
@@ -195,14 +195,14 @@ Summary: Get compliance info Description: Return stored compliance data.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.complianceacceleratorv3_get_compliance_info_response import Complianceacceleratorv3GetComplianceInfoResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.complianceacceleratorv3_get_compliance_info_response import Complianceacceleratorv3GetComplianceInfoResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -212,7 +212,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -224,13 +224,14 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ComplianceAcceleratorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ComplianceAcceleratorApi(api_client)
+    is_brief = True # bool | gives compliance workspace data without reaching out to other services - meant to be quicker for dashboards. (optional)
 
     try:
         # Summary: Get compliance info Description: Return stored compliance data.
-        api_response = api_instance.compliance_accelerator_get_compliance_info()
+        api_response = api_instance.compliance_accelerator_get_compliance_info(is_brief=is_brief)
         print("The response of ComplianceAcceleratorApi->compliance_accelerator_get_compliance_info:\n")
         pprint(api_response)
     except Exception as e:
@@ -241,7 +242,10 @@ with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **is_brief** | **bool**| gives compliance workspace data without reaching out to other services - meant to be quicker for dashboards. | [optional] 
 
 ### Return type
 
@@ -276,15 +280,15 @@ HydrateWorkspace - Hydrates specified objects within a workspace
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.complianceacceleratorv3_hydrate_compliance_workspaces_request import Complianceacceleratorv3HydrateComplianceWorkspacesRequest
-from ibm_gdsc_sdk_software.models.complianceacceleratorv3_hydrate_compliance_workspaces_response import Complianceacceleratorv3HydrateComplianceWorkspacesResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.complianceacceleratorv3_hydrate_compliance_workspaces_request import Complianceacceleratorv3HydrateComplianceWorkspacesRequest
+from ibm_gdsc_sdk_saas.models.complianceacceleratorv3_hydrate_compliance_workspaces_response import Complianceacceleratorv3HydrateComplianceWorkspacesResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -294,7 +298,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -306,10 +310,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ComplianceAcceleratorApi(api_client)
-    complianceacceleratorv3_hydrate_compliance_workspaces_request = ibm_gdsc_sdk_software.Complianceacceleratorv3HydrateComplianceWorkspacesRequest() # Complianceacceleratorv3HydrateComplianceWorkspacesRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ComplianceAcceleratorApi(api_client)
+    complianceacceleratorv3_hydrate_compliance_workspaces_request = ibm_gdsc_sdk_saas.Complianceacceleratorv3HydrateComplianceWorkspacesRequest() # Complianceacceleratorv3HydrateComplianceWorkspacesRequest | 
 
     try:
         # HydrateWorkspace - Hydrates specified objects within a workspace
@@ -362,15 +366,15 @@ Summary: Store compliance info Description: Store compliance data.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.complianceacceleratorv3_store_compliance_info_request import Complianceacceleratorv3StoreComplianceInfoRequest
-from ibm_gdsc_sdk_software.models.complianceacceleratorv3_store_compliance_info_response import Complianceacceleratorv3StoreComplianceInfoResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.complianceacceleratorv3_store_compliance_info_request import Complianceacceleratorv3StoreComplianceInfoRequest
+from ibm_gdsc_sdk_saas.models.complianceacceleratorv3_store_compliance_info_response import Complianceacceleratorv3StoreComplianceInfoResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -380,7 +384,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -392,10 +396,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ComplianceAcceleratorApi(api_client)
-    complianceacceleratorv3_store_compliance_info_request = ibm_gdsc_sdk_software.Complianceacceleratorv3StoreComplianceInfoRequest() # Complianceacceleratorv3StoreComplianceInfoRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ComplianceAcceleratorApi(api_client)
+    complianceacceleratorv3_store_compliance_info_request = ibm_gdsc_sdk_saas.Complianceacceleratorv3StoreComplianceInfoRequest() # Complianceacceleratorv3StoreComplianceInfoRequest | 
 
     try:
         # Summary: Store compliance info Description: Store compliance data.

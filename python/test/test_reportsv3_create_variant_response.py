@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_create_variant_response import Reportsv3CreateVariantResponse
+from ibm_gdsc_sdk_saas.models.reportsv3_create_variant_response import Reportsv3CreateVariantResponse
 
 class TestReportsv3CreateVariantResponse(unittest.TestCase):
     """Reportsv3CreateVariantResponse unit test stubs"""

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.connectionsv3_create_plugin_response import Connectionsv3CreatePluginResponse
+from ibm_gdsc_sdk_saas.models.connectionsv3_create_plugin_response import Connectionsv3CreatePluginResponse
 
 # TODO update the JSON string below
 json = "{}"

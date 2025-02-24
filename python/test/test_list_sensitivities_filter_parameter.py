@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.list_sensitivities_filter_parameter import ListSensitivitiesFilterParameter
+from ibm_gdsc_sdk_saas.models.list_sensitivities_filter_parameter import ListSensitivitiesFilterParameter
 
 class TestListSensitivitiesFilterParameter(unittest.TestCase):
     """ListSensitivitiesFilterParameter unit test stubs"""

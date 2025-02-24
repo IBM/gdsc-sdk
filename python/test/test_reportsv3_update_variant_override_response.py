@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_update_variant_override_response import Reportsv3UpdateVariantOverrideResponse
+from ibm_gdsc_sdk_saas.models.reportsv3_update_variant_override_response import Reportsv3UpdateVariantOverrideResponse
 
 class TestReportsv3UpdateVariantOverrideResponse(unittest.TestCase):
     """Reportsv3UpdateVariantOverrideResponse unit test stubs"""

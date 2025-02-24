@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.jumpboxv3_authorize_response import Jumpboxv3AuthorizeResponse
+from ibm_gdsc_sdk_saas.models.jumpboxv3_authorize_response import Jumpboxv3AuthorizeResponse
 
 # TODO update the JSON string below
 json = "{}"

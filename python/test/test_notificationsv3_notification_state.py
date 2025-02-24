@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.notificationsv3_notification_state import Notificationsv3NotificationState
+from ibm_gdsc_sdk_saas.models.notificationsv3_notification_state import Notificationsv3NotificationState
 
 class TestNotificationsv3NotificationState(unittest.TestCase):
     """Notificationsv3NotificationState unit test stubs"""

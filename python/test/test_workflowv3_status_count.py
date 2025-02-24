@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.workflowv3_status_count import Workflowv3StatusCount
+from ibm_gdsc_sdk_saas.models.workflowv3_status_count import Workflowv3StatusCount
 
 class TestWorkflowv3StatusCount(unittest.TestCase):
     """Workflowv3StatusCount unit test stubs"""

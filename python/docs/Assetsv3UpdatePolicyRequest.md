@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.assetsv3_update_policy_request import Assetsv3UpdatePolicyRequest
+from ibm_gdsc_sdk_saas.models.assetsv3_update_policy_request import Assetsv3UpdatePolicyRequest
 
 # TODO update the JSON string below
 json = "{}"

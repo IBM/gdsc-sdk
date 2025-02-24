@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_plugin_record import Connectionsv3PluginRecord
+from ibm_gdsc_sdk_saas.models.connectionsv3_plugin_record import Connectionsv3PluginRecord
 
 class TestConnectionsv3PluginRecord(unittest.TestCase):
     """Connectionsv3PluginRecord unit test stubs"""

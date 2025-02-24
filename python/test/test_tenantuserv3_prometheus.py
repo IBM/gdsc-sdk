@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.tenantuserv3_prometheus import Tenantuserv3Prometheus
+from ibm_gdsc_sdk_saas.models.tenantuserv3_prometheus import Tenantuserv3Prometheus
 
 class TestTenantuserv3Prometheus(unittest.TestCase):
     """Tenantuserv3Prometheus unit test stubs"""

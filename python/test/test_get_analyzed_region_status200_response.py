@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.get_analyzed_region_status200_response import GetAnalyzedRegionStatus200Response
+from ibm_gdsc_sdk_saas.models.get_analyzed_region_status200_response import GetAnalyzedRegionStatus200Response
 
 class TestGetAnalyzedRegionStatus200Response(unittest.TestCase):
     """GetAnalyzedRegionStatus200Response unit test stubs"""

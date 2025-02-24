@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.outliersenginev3_statistics_response import Outliersenginev3StatisticsResponse
+from ibm_gdsc_sdk_saas.models.outliersenginev3_statistics_response import Outliersenginev3StatisticsResponse
 
 # TODO update the JSON string below
 json = "{}"

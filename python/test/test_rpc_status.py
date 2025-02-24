@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.rpc_status import RpcStatus
+from ibm_gdsc_sdk_saas.models.rpc_status import RpcStatus
 
 class TestRpcStatus(unittest.TestCase):
     """RpcStatus unit test stubs"""
@@ -37,7 +37,7 @@ class TestRpcStatus(unittest.TestCase):
             return RpcStatus(
                 code = 56,
                 details = [
-                    ibm_gdsc_sdk_software.models.protobuf_any.protobufAny(
+                    ibm_gdsc_sdk_saas.models.protobuf_any.protobufAny(
                         type_url = '', 
                         value = 'YQ==', )
                     ],

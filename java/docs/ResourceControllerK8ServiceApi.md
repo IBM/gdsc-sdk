@@ -4,39 +4,40 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**resourceControllerK8ServiceCreateController**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceCreateController) | **POST** /api/v3/app_manager/controllers | CreateController - Add a new controller. |
-| [**resourceControllerK8ServiceCreateHeartBeat**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceCreateHeartBeat) | **POST** /api/v3/app_manager/controllers/{controller_id}/heartbeat | CreateHeartBeat - Create a heartbeat for the controller. |
-| [**resourceControllerK8ServiceCreateHeartBeatEx**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceCreateHeartBeatEx) | **POST** /api/v3/app_manager/controllers/{controller_id}/heartbeat_ex | CreateHeartBeatEx - Create a heartbeat for the controller with extended information. |
-| [**resourceControllerK8ServiceCreateJob**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceCreateJob) | **POST** /api/v3/app_manager/jobs | //////////////////////////////////////////////////////////////// Interface to the controllers and apps api in the App-Manager microservice CreateJob - Create a job definition. Files and secrets contained within will also be created. |
-| [**resourceControllerK8ServiceCreateJobExecution**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceCreateJobExecution) | **POST** /api/v3/app_manager/job_executions | CreateJobExecution - Create a job execution. |
-| [**resourceControllerK8ServiceCreateKeypair**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceCreateKeypair) | **POST** /api/v3/app_manager/controllers/{controller_id}/keypair | CreateKeypair - Create a new keypair for the controller. |
-| [**resourceControllerK8ServiceDeleteController**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceDeleteController) | **DELETE** /api/v3/app_manager/controllers/{controller_id} | DeleteController - Delete a controller. |
-| [**resourceControllerK8ServiceDeleteEdgeTenant**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceDeleteEdgeTenant) | **DELETE** /api/v3/app_manager/tenants/{tenant_id} | DeleteEdgeTenant - deletes an edge tenant providing edge tenant id |
-| [**resourceControllerK8ServiceDeleteEdgeTenantRequest**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceDeleteEdgeTenantRequest) | **DELETE** /api/v3/edgegateways/{tenant_id} | DeleteEdgeTenantRequest to deletes gi and tnt CR on edge |
-| [**resourceControllerK8ServiceDeleteJob**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceDeleteJob) | **DELETE** /api/v3/app_manager/jobs/{job_id} | DeleteJob - Delete a job. |
-| [**resourceControllerK8ServiceDownloadControllerLogs**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceDownloadControllerLogs) | **POST** /api/v3/app_manager/controllers/{controller_id}/logs | DownloadControllerLogs - Download the controller logs for a running controller. |
-| [**resourceControllerK8ServiceGetControllerApps**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetControllerApps) | **GET** /api/v3/app_manager/controllers/{controller_id}/apps | GetControllerApps - Get the apps for the given controller. |
-| [**resourceControllerK8ServiceGetControllerCommands**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetControllerCommands) | **GET** /api/v3/app_manager/controllers/{controller_id}/commands | GetControllerCommands - Get the commands for the controller to execute. |
-| [**resourceControllerK8ServiceGetControllerJobs**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetControllerJobs) | **GET** /api/v3/app_manager/controllers/{controller_id}/jobs | GetControllerJobs - Get the jobs for the controller to execute. |
-| [**resourceControllerK8ServiceGetControllerStatus**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetControllerStatus) | **GET** /api/v3/app_manager/controllers/{controller_id}/status | GetControllerStatus - Get the status for the given controller. |
-| [**resourceControllerK8ServiceGetControllers**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetControllers) | **GET** /api/v3/app_manager/tenants/{tenant_id}/controllers | GetControllers - Get the controllers for the given tenant. |
-| [**resourceControllerK8ServiceGetControllersWithStatus**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetControllersWithStatus) | **GET** /api/v3/app_manager/tenants/{tenant_id}/controller_status | GetControllersWithStatus - Get the controllers for the given tenant with computed status. |
-| [**resourceControllerK8ServiceGetJob**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetJob) | **GET** /api/v3/app_manager/jobs/{job_id} | GetJob - Get the job. |
-| [**resourceControllerK8ServiceGetJobExecution**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetJobExecution) | **GET** /api/v3/app_manager/job_executions/{jobexe_id} | GetJobExecution - Get a job execution. |
-| [**resourceControllerK8ServiceGetJobExecutions**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetJobExecutions) | **GET** /api/v3/app_manager/jobs/{job_id}/executions | GetJobExecutions - Get the job executions. |
-| [**resourceControllerK8ServiceGetJobStatus**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetJobStatus) | **GET** /api/v3/app_manager/jobs/{job_id}/status | GetJobStatus - Get the job&#39;s status. |
-| [**resourceControllerK8ServiceGetTenantApp**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetTenantApp) | **GET** /api/v3/app_manager/tenants/{tenant_id}/apps/{app_name} | GetTenantApp - Get a specific app for the given tenant. |
-| [**resourceControllerK8ServiceGetTenantApps**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetTenantApps) | **GET** /api/v3/app_manager/tenants/{tenant_id}/apps | GetTenantApps - Get the apps for the given tenant. |
-| [**resourceControllerK8ServiceGetTenantJobs**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetTenantJobs) | **GET** /api/v3/app_manager/tenants/{tenant_id}/jobs | GetTenantJobs - Get jobs for the given tenant. |
-| [**resourceControllerK8ServiceGetVersion**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetVersion) | **GET** /api/v3/app_manager/system/version | GetVersion - Get the system version information for the service. |
-| [**resourceControllerK8ServiceInstallEdgeTenantRequest**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceInstallEdgeTenantRequest) | **POST** /api/v3/edgegateways | InstallEdgeTenantRequest to Create/update gi and tnt CRs on edge |
-| [**resourceControllerK8ServiceQueryControllerLogs**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceQueryControllerLogs) | **POST** /api/v3/app_manager/controllers/{controller_id}/logs/query | QueryControllerLogs - Query for the controller logs for a running controller. |
-| [**resourceControllerK8ServiceUpdateCommand**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateCommand) | **PUT** /api/v3/app_manager/commands/{id} | UpdateCommand - Update the command. |
-| [**resourceControllerK8ServiceUpdateController**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateController) | **PUT** /api/v3/app_manager/controllers/{id} | UpdateController - Update an existing controller. |
-| [**resourceControllerK8ServiceUpdateControllerStatus**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateControllerStatus) | **PUT** /api/v3/app_manager/controllers/{id}/status | UpdateControllerStatus - Updates the status for the given controller. |
-| [**resourceControllerK8ServiceUpdateJob**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateJob) | **PUT** /api/v3/app_manager/jobs/{id} | UpdateJob - Update a job. |
-| [**resourceControllerK8ServiceUpdateJobExecution**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateJobExecution) | **PUT** /api/v3/app_manager/job_executions/{id} | UpdateJobExecution - Update a job execution. |
-| [**resourceControllerK8ServiceUpdateJobStatus**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateJobStatus) | **PUT** /api/v3/app_manager/jobs/{job_id}/status | UpdateJobStatus - Updates the status for the given Job. |
+| [**resourceControllerK8ServiceCreateController**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceCreateController) | **POST** /api/v3/edge_manager/controllers | CreateController - Add a new controller. |
+| [**resourceControllerK8ServiceCreateHeartBeat**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceCreateHeartBeat) | **POST** /api/v3/edge_manager/controllers/{controller_id}/heartbeat | CreateHeartBeat - Create a heartbeat for the controller. |
+| [**resourceControllerK8ServiceCreateHeartBeatEx**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceCreateHeartBeatEx) | **POST** /api/v3/edge_manager/controllers/{controller_id}/heartbeat_ex | CreateHeartBeatEx - Create a heartbeat for the controller with extended information. |
+| [**resourceControllerK8ServiceCreateJob**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceCreateJob) | **POST** /api/v3/edge_manager/jobs | //////////////////////////////////////////////////////////////// Interface to the controllers and apps api in the App-Manager microservice CreateJob - Create a job definition. Files and secrets contained within will also be created. |
+| [**resourceControllerK8ServiceCreateJobExecution**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceCreateJobExecution) | **POST** /api/v3/edge_manager/job_executions | CreateJobExecution - Create a job execution. |
+| [**resourceControllerK8ServiceCreateKeypair**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceCreateKeypair) | **POST** /api/v3/edge_manager/controllers/{controller_id}/keypair | CreateKeypair - Create a new keypair for the controller. |
+| [**resourceControllerK8ServiceDeleteController**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceDeleteController) | **DELETE** /api/v3/edge_manager/controllers/{controller_id} | DeleteController - Delete a controller. |
+| [**resourceControllerK8ServiceDeleteEdgeTenant**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceDeleteEdgeTenant) | **DELETE** /api/v3/edge_manager/tenants/{tenant_id} | DeleteEdgeTenant - deletes an edge tenant providing edge tenant id |
+| [**resourceControllerK8ServiceDeleteEdgeTenantRequest**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceDeleteEdgeTenantRequest) | **DELETE** /api/v3/edges | DeleteEdgeTenantRequest to deletes gi and tnt CR on edge |
+| [**resourceControllerK8ServiceDeleteJob**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceDeleteJob) | **DELETE** /api/v3/edge_manager/jobs/{job_id} | DeleteJob - Delete a job. |
+| [**resourceControllerK8ServiceDownloadControllerLogs**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceDownloadControllerLogs) | **POST** /api/v3/edge_manager/controllers/{controller_id}/logs | DownloadControllerLogs - Download the controller logs for a running controller. |
+| [**resourceControllerK8ServiceGetControllerApps**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetControllerApps) | **GET** /api/v3/edge_manager/controllers/{controller_id}/apps | GetControllerApps - Get the apps for the given controller. |
+| [**resourceControllerK8ServiceGetControllerCommands**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetControllerCommands) | **GET** /api/v3/edge_manager/controllers/{controller_id}/commands | GetControllerCommands - Get the commands for the controller to execute. |
+| [**resourceControllerK8ServiceGetControllerJobs**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetControllerJobs) | **GET** /api/v3/edge_manager/controllers/{controller_id}/jobs | GetControllerJobs - Get the jobs for the controller to execute. |
+| [**resourceControllerK8ServiceGetControllerStatus**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetControllerStatus) | **GET** /api/v3/edge_manager/controllers/{controller_id}/status | GetControllerStatus - Get the status for the given controller. |
+| [**resourceControllerK8ServiceGetControllers**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetControllers) | **GET** /api/v3/edge_manager/tenants/{tenant_id}/controllers | GetControllers - Get the controllers for the given tenant. |
+| [**resourceControllerK8ServiceGetControllersWithStatus**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetControllersWithStatus) | **GET** /api/v3/edge_manager/tenants/{tenant_id}/controller_status | GetControllersWithStatus - Get the controllers for the given tenant with computed status. |
+| [**resourceControllerK8ServiceGetJob**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetJob) | **GET** /api/v3/edge_manager/jobs/{job_id} | GetJob - Get the job. |
+| [**resourceControllerK8ServiceGetJobExecution**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetJobExecution) | **GET** /api/v3/edge_manager/job_executions/{jobexe_id} | GetJobExecution - Get a job execution. |
+| [**resourceControllerK8ServiceGetJobExecutions**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetJobExecutions) | **GET** /api/v3/edge_manager/jobs/{job_id}/executions | GetJobExecutions - Get the job executions. |
+| [**resourceControllerK8ServiceGetJobStatus**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetJobStatus) | **GET** /api/v3/edge_manager/jobs/{job_id}/status | GetJobStatus - Get the job&#39;s status. |
+| [**resourceControllerK8ServiceGetTenantApp**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetTenantApp) | **GET** /api/v3/edge_manager/tenants/{tenant_id}/apps/{app_name} | GetTenantApp - Get a specific app for the given tenant. |
+| [**resourceControllerK8ServiceGetTenantApps**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetTenantApps) | **GET** /api/v3/edge_manager/tenants/{tenant_id}/apps | GetTenantApps - Get the apps for the given tenant. |
+| [**resourceControllerK8ServiceGetTenantJobs**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetTenantJobs) | **GET** /api/v3/edge_manager/tenants/{tenant_id}/jobs | GetTenantJobs - Get jobs for the given tenant. |
+| [**resourceControllerK8ServiceGetVersion**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetVersion) | **GET** /api/v3/edge_manager/system/version | GetVersion - Get the system version information for the service. |
+| [**resourceControllerK8ServiceInstallEdgeTenantRequest**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceInstallEdgeTenantRequest) | **POST** /api/v3/edges | InstallEdgeTenantRequest to Create gi and tnt CRs on edge |
+| [**resourceControllerK8ServiceQueryControllerLogs**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceQueryControllerLogs) | **POST** /api/v3/edge_manager/controllers/{controller_id}/logs/query | QueryControllerLogs - Query for the controller logs for a running controller. |
+| [**resourceControllerK8ServiceUpdateCommand**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateCommand) | **PUT** /api/v3/edge_manager/commands/{id} | UpdateCommand - Update the command. |
+| [**resourceControllerK8ServiceUpdateController**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateController) | **PUT** /api/v3/edge_manager/controllers/{id} | UpdateController - Update an existing controller. |
+| [**resourceControllerK8ServiceUpdateControllerStatus**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateControllerStatus) | **PUT** /api/v3/edge_manager/controllers/{id}/status | UpdateControllerStatus - Updates the status for the given controller. |
+| [**resourceControllerK8ServiceUpdateEdgeTenantRequest**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateEdgeTenantRequest) | **PATCH** /api/v3/edges/{edge_id} | UpdateEdgeTenantRequest to update gi and tnt CRs on edge |
+| [**resourceControllerK8ServiceUpdateJob**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateJob) | **PUT** /api/v3/edge_manager/jobs/{id} | UpdateJob - Update a job. |
+| [**resourceControllerK8ServiceUpdateJobExecution**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateJobExecution) | **PUT** /api/v3/edge_manager/job_executions/{id} | UpdateJobExecution - Update a job execution. |
+| [**resourceControllerK8ServiceUpdateJobStatus**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateJobStatus) | **PUT** /api/v3/edge_manager/jobs/{job_id}/status | UpdateJobStatus - Updates the status for the given Job. |
 
 
 <a id="resourceControllerK8ServiceCreateController"></a>
@@ -48,12 +49,12 @@ CreateController - Add a new controller.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -121,12 +122,12 @@ CreateHeartBeat - Create a heartbeat for the controller.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -196,12 +197,12 @@ CreateHeartBeatEx - Create a heartbeat for the controller with extended informat
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -271,12 +272,12 @@ public class Example {
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -344,12 +345,12 @@ CreateJobExecution - Create a job execution.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -417,12 +418,12 @@ CreateKeypair - Create a new keypair for the controller.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -492,12 +493,12 @@ DeleteController - Delete a controller.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -567,12 +568,12 @@ DeleteEdgeTenant - deletes an edge tenant providing edge tenant id
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -635,19 +636,19 @@ public class Example {
 
 <a id="resourceControllerK8ServiceDeleteEdgeTenantRequest"></a>
 # **resourceControllerK8ServiceDeleteEdgeTenantRequest**
-> Resourcecontrollerk8v3EdgeResourceResponse resourceControllerK8ServiceDeleteEdgeTenantRequest(tenantId, resourcecontrollerk8v3EdgeTenantRequest)
+> Resourcecontrollerk8v3EdgeResourceResponse resourceControllerK8ServiceDeleteEdgeTenantRequest(tenantId, edgeId, edgeName)
 
 DeleteEdgeTenantRequest to deletes gi and tnt CR on edge
 
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -661,10 +662,11 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     ResourceControllerK8ServiceApi apiInstance = new ResourceControllerK8ServiceApi(defaultClient);
-    String tenantId = "tenantId_example"; // String | Tenant ID for the redge request
-    Resourcecontrollerk8v3EdgeTenantRequest resourcecontrollerk8v3EdgeTenantRequest = new Resourcecontrollerk8v3EdgeTenantRequest(); // Resourcecontrollerk8v3EdgeTenantRequest | 
+    String tenantId = "tenantId_example"; // String | Tenant ID for the redge request.
+    String edgeId = "edgeId_example"; // String | ID of the edge system.
+    String edgeName = "edgeName_example"; // String | Edge gateway ID.
     try {
-      Resourcecontrollerk8v3EdgeResourceResponse result = apiInstance.resourceControllerK8ServiceDeleteEdgeTenantRequest(tenantId, resourcecontrollerk8v3EdgeTenantRequest);
+      Resourcecontrollerk8v3EdgeResourceResponse result = apiInstance.resourceControllerK8ServiceDeleteEdgeTenantRequest(tenantId, edgeId, edgeName);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ResourceControllerK8ServiceApi#resourceControllerK8ServiceDeleteEdgeTenantRequest");
@@ -681,8 +683,9 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **tenantId** | **String**| Tenant ID for the redge request | |
-| **resourcecontrollerk8v3EdgeTenantRequest** | [**Resourcecontrollerk8v3EdgeTenantRequest**](Resourcecontrollerk8v3EdgeTenantRequest.md)|  | |
+| **tenantId** | **String**| Tenant ID for the redge request. | [optional] |
+| **edgeId** | **String**| ID of the edge system. | [optional] |
+| **edgeName** | **String**| Edge gateway ID. | [optional] |
 
 ### Return type
 
@@ -694,7 +697,7 @@ public class Example {
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 ### HTTP response details
@@ -712,12 +715,12 @@ DeleteJob - Delete a job.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -787,12 +790,12 @@ DownloadControllerLogs - Download the controller logs for a running controller.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -862,12 +865,12 @@ GetControllerApps - Get the apps for the given controller.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -937,12 +940,12 @@ GetControllerCommands - Get the commands for the controller to execute.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1010,12 +1013,12 @@ GetControllerJobs - Get the jobs for the controller to execute.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1085,12 +1088,12 @@ GetControllerStatus - Get the status for the given controller.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1158,12 +1161,12 @@ GetControllers - Get the controllers for the given tenant.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1233,12 +1236,12 @@ GetControllersWithStatus - Get the controllers for the given tenant with compute
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1310,12 +1313,12 @@ GetJob - Get the job.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1385,12 +1388,12 @@ GetJobExecution - Get a job execution.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1458,12 +1461,12 @@ GetJobExecutions - Get the job executions.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1531,12 +1534,12 @@ GetJobStatus - Get the job&#39;s status.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1604,12 +1607,12 @@ GetTenantApp - Get a specific app for the given tenant.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1681,12 +1684,12 @@ GetTenantApps - Get the apps for the given tenant.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1756,12 +1759,12 @@ GetTenantJobs - Get jobs for the given tenant.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1829,12 +1832,12 @@ GetVersion - Get the system version information for the service.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1893,17 +1896,17 @@ This endpoint does not need any parameter.
 # **resourceControllerK8ServiceInstallEdgeTenantRequest**
 > Resourcecontrollerk8v3EdgeResourceResponse resourceControllerK8ServiceInstallEdgeTenantRequest(resourcecontrollerk8v3EdgeTenantRequest)
 
-InstallEdgeTenantRequest to Create/update gi and tnt CRs on edge
+InstallEdgeTenantRequest to Create gi and tnt CRs on edge
 
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1966,12 +1969,12 @@ QueryControllerLogs - Query for the controller logs for a running controller.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2041,12 +2044,12 @@ UpdateCommand - Update the command.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2116,12 +2119,12 @@ UpdateController - Update an existing controller.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2191,12 +2194,12 @@ UpdateControllerStatus - Updates the status for the given controller.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2257,6 +2260,76 @@ public class Example {
 | **200** | A successful response. |  -  |
 | **0** | An unexpected error response. |  -  |
 
+<a id="resourceControllerK8ServiceUpdateEdgeTenantRequest"></a>
+# **resourceControllerK8ServiceUpdateEdgeTenantRequest**
+> Resourcecontrollerk8v3EdgeResourceResponse resourceControllerK8ServiceUpdateEdgeTenantRequest(edgeId, resourcecontrollerk8v3EdgeTenantRequest)
+
+UpdateEdgeTenantRequest to update gi and tnt CRs on edge
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    ResourceControllerK8ServiceApi apiInstance = new ResourceControllerK8ServiceApi(defaultClient);
+    String edgeId = "edgeId_example"; // String | ID of the edge system
+    Resourcecontrollerk8v3EdgeTenantRequest resourcecontrollerk8v3EdgeTenantRequest = new Resourcecontrollerk8v3EdgeTenantRequest(); // Resourcecontrollerk8v3EdgeTenantRequest | 
+    try {
+      Resourcecontrollerk8v3EdgeResourceResponse result = apiInstance.resourceControllerK8ServiceUpdateEdgeTenantRequest(edgeId, resourcecontrollerk8v3EdgeTenantRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ResourceControllerK8ServiceApi#resourceControllerK8ServiceUpdateEdgeTenantRequest");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeId** | **String**| ID of the edge system | |
+| **resourcecontrollerk8v3EdgeTenantRequest** | [**Resourcecontrollerk8v3EdgeTenantRequest**](Resourcecontrollerk8v3EdgeTenantRequest.md)|  | |
+
+### Return type
+
+[**Resourcecontrollerk8v3EdgeResourceResponse**](Resourcecontrollerk8v3EdgeResourceResponse.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
 <a id="resourceControllerK8ServiceUpdateJob"></a>
 # **resourceControllerK8ServiceUpdateJob**
 > Resourcecontrollerk8v3Job resourceControllerK8ServiceUpdateJob(id, resourcecontrollerk8v3Job)
@@ -2266,12 +2339,12 @@ UpdateJob - Update a job.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2341,12 +2414,12 @@ UpdateJobExecution - Update a job execution.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2416,12 +2489,12 @@ UpdateJobStatus - Updates the status for the given Job.
 ### Example
 ```java
 // Import classes:
-import com.ibm.gdsc.sdk.ApiClient;
-import com.ibm.gdsc.sdk.ApiException;
-import com.ibm.gdsc.sdk.Configuration;
-import com.ibm.gdsc.sdk.auth.*;
-import com.ibm.gdsc.sdk.models.*;
-import com.ibm.gdsc.sdk.api.ResourceControllerK8ServiceApi;
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ResourceControllerK8ServiceApi;
 
 public class Example {
   public static void main(String[] args) {

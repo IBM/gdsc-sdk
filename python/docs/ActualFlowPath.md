@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.actual_flow_path import ActualFlowPath
+from ibm_gdsc_sdk_saas.models.actual_flow_path import ActualFlowPath
 
 # TODO update the JSON string below
 json = "{}"

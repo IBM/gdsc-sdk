@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_get_categories_response import Reportsv3GetCategoriesResponse
+from ibm_gdsc_sdk_saas.models.reportsv3_get_categories_response import Reportsv3GetCategoriesResponse
 
 class TestReportsv3GetCategoriesResponse(unittest.TestCase):
     """Reportsv3GetCategoriesResponse unit test stubs"""
@@ -36,13 +36,13 @@ class TestReportsv3GetCategoriesResponse(unittest.TestCase):
         if include_optional:
             return Reportsv3GetCategoriesResponse(
                 category_list = [
-                    ibm_gdsc_sdk_software.models.category_that_have_the_category_id_and_the_category_name_translated_value.Category that have the category ID and the category name translated value(
+                    ibm_gdsc_sdk_saas.models.category_that_have_the_category_id_and_the_category_name_translated_value.Category that have the category ID and the category name translated value(
                         category_description = '', 
                         category_id = '', 
                         category_name = '', 
                         multi_version = True, 
                         versions = [
-                            ibm_gdsc_sdk_software.models.data_for_a_version_inside_a_category_that_is_a_multi_version_type.Data for a version inside a category that is a multi-version type(
+                            ibm_gdsc_sdk_saas.models.data_for_a_version_inside_a_category_that_is_a_multi_version_type.Data for a version inside a category that is a multi-version type(
                                 header_map = {
                                     'key' : ''
                                     }, 
@@ -50,7 +50,7 @@ class TestReportsv3GetCategoriesResponse(unittest.TestCase):
                                 primary = True, 
                                 skip_join_only = True, 
                                 table_map = {
-                                    'key' : ibm_gdsc_sdk_software.models.array_of_table_names.Array of table names(
+                                    'key' : ibm_gdsc_sdk_saas.models.array_of_table_names.Array of table names(
                                         table_names = [
                                             ''
                                             ], )

@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.complianceacceleratorv3_audit_scheduler import Complianceacceleratorv3AuditScheduler
+from ibm_gdsc_sdk_saas.models.complianceacceleratorv3_audit_scheduler import Complianceacceleratorv3AuditScheduler
 
 # TODO update the JSON string below
 json = "{}"

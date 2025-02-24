@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.list_vulnerabilities_sort_parameter import ListVulnerabilitiesSortParameter
+from ibm_gdsc_sdk_saas.models.list_vulnerabilities_sort_parameter import ListVulnerabilitiesSortParameter
 
 class TestListVulnerabilitiesSortParameter(unittest.TestCase):
     """ListVulnerabilitiesSortParameter unit test stubs"""

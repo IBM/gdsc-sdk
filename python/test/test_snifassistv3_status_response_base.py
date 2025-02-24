@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.snifassistv3_status_response_base import Snifassistv3StatusResponseBase
+from ibm_gdsc_sdk_saas.models.snifassistv3_status_response_base import Snifassistv3StatusResponseBase
 
 class TestSnifassistv3StatusResponseBase(unittest.TestCase):
     """Snifassistv3StatusResponseBase unit test stubs"""

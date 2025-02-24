@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.permissions_configurations import PermissionsConfigurations
+from ibm_gdsc_sdk_saas.models.permissions_configurations import PermissionsConfigurations
 
 class TestPermissionsConfigurations(unittest.TestCase):
     """PermissionsConfigurations unit test stubs"""
@@ -44,7 +44,7 @@ class TestPermissionsConfigurations(unittest.TestCase):
                 assigned_via_url = '',
                 assigned_via_type = '',
                 assigned_to = 1.337,
-                cloud_account_details = ibm_gdsc_sdk_software.models.cloud_account_details.CloudAccountDetails(
+                cloud_account_details = ibm_gdsc_sdk_saas.models.cloud_account_details.CloudAccountDetails(
                     cloud_account_id = '123456789101', 
                     cloud_account_name = 'corplex', 
                     service_provider = 'aws', ),
@@ -63,7 +63,7 @@ class TestPermissionsConfigurations(unittest.TestCase):
                 assigned_via_url = '',
                 assigned_via_type = '',
                 assigned_to = 1.337,
-                cloud_account_details = ibm_gdsc_sdk_software.models.cloud_account_details.CloudAccountDetails(
+                cloud_account_details = ibm_gdsc_sdk_saas.models.cloud_account_details.CloudAccountDetails(
                     cloud_account_id = '123456789101', 
                     cloud_account_name = 'corplex', 
                     service_provider = 'aws', ),

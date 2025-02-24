@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.schedulerv3_file_format import Schedulerv3FileFormat
+from ibm_gdsc_sdk_saas.models.schedulerv3_file_format import Schedulerv3FileFormat
 
 class TestSchedulerv3FileFormat(unittest.TestCase):
     """Schedulerv3FileFormat unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_get_data_sources_response import Connectionsv3GetDataSourcesResponse
+from ibm_gdsc_sdk_saas.models.connectionsv3_get_data_sources_response import Connectionsv3GetDataSourcesResponse
 
 class TestConnectionsv3GetDataSourcesResponse(unittest.TestCase):
     """Connectionsv3GetDataSourcesResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestConnectionsv3GetDataSourcesResponse(unittest.TestCase):
         if include_optional:
             return Connectionsv3GetDataSourcesResponse(
                 data_sources = [
-                    ibm_gdsc_sdk_software.models.connectionsv3_data_source.connectionsv3DataSource(
+                    ibm_gdsc_sdk_saas.models.connectionsv3_data_source.connectionsv3DataSource(
                         key = '', 
                         last_used = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         name = '', 

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.remove_resource200_response import RemoveResource200Response
+from ibm_gdsc_sdk_saas.models.remove_resource200_response import RemoveResource200Response
 
 class TestRemoveResource200Response(unittest.TestCase):
     """RemoveResource200Response unit test stubs"""

@@ -18,6 +18,7 @@ import { Templatesv3DeleteTemplateResponse } from '../models/Templatesv3DeleteTe
 import { Templatesv3GetOriginDefaultContentResponse } from '../models/Templatesv3GetOriginDefaultContentResponse';
 import { Templatesv3GetOriginFieldsResponse } from '../models/Templatesv3GetOriginFieldsResponse';
 import { Templatesv3GetTemplateResponse } from '../models/Templatesv3GetTemplateResponse';
+import { Templatesv3GetTemplatesForEdgeResponse } from '../models/Templatesv3GetTemplatesForEdgeResponse';
 import { Templatesv3GetTemplatesResponse } from '../models/Templatesv3GetTemplatesResponse';
 import { Templatesv3TestTemplateRequest } from '../models/Templatesv3TestTemplateRequest';
 import { Templatesv3TestTemplateResponse } from '../models/Templatesv3TestTemplateResponse';
@@ -428,6 +429,75 @@ export class TemplatesServiceApiRequestFactory extends BaseAPIRequestFactory {
         // Query Params
         if (includeIntegrationName !== undefined) {
             requestContext.setQueryParam("include_integration_name", ObjectSerializer.serialize(includeIntegrationName, "boolean", ""));
+        }
+
+
+        let authMethod: SecurityAuthentication | undefined;
+        // Apply auth methods
+        authMethod = _config.authMethods["BasicAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        // Apply auth methods
+        authMethod = _config.authMethods["ApiKeyAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Summary: Get templates for edge Description: Return all templates based on supplied filters.
+     * @param integrationId Templates associated with a specific integration.
+     * @param filterOrigin Filter on a specific set of data origins; ignored if empty.
+     * @param filterEnabledOnly Filter on all templates instead of just the enabled templates.
+     * @param includeIntegrationName Include the Integration name in the returned templates.
+     * @param transformToGdpFormat Tranform template format to GDP style format.
+     */
+    public async templatesServiceGetTemplatesForEdge(integrationId?: string, filterOrigin?: Array<'UNDEFINED_ORIGIN' | 'GENERAL_NOTIFICATION' | 'ANOMALY_NOTIFICATION' | 'DATAMART_NOTIFICATION' | 'FETCH_NOTIFICATION' | 'POLICY_ALERT_NOTIFICATION' | 'RECOMMENDATION_NOTIFICATION' | 'REPORTS_NOTIFICATION' | 'SCHEDULED_REPORT_NOTIFICATION' | 'SCHEDULED_AUDIT_NOTIFICATION' | 'WELCOME_NOTIFICATION' | 'EMAIL_HEADER_AND_FOOTER' | 'RISK_NOTIFICATION' | 'SCHEDULED_JOB_SUMMARY' | 'INCIDENT_NOTIFICATION' | 'MAINTENANCE_NOTIFICATION' | 'QSPM_RISK' | 'POLICY_IMPORT_NOTIFICATION'>, filterEnabledOnly?: boolean, includeIntegrationName?: boolean, transformToGdpFormat?: boolean, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+
+
+
+
+
+        // Path Params
+        const localVarPath = '/api/v3/templates/edge';
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+        // Query Params
+        if (integrationId !== undefined) {
+            requestContext.setQueryParam("integration_id", ObjectSerializer.serialize(integrationId, "string", ""));
+        }
+
+        // Query Params
+        if (filterOrigin !== undefined) {
+            requestContext.setQueryParam("filter_origin", ObjectSerializer.serialize(filterOrigin, "Array<'UNDEFINED_ORIGIN' | 'GENERAL_NOTIFICATION' | 'ANOMALY_NOTIFICATION' | 'DATAMART_NOTIFICATION' | 'FETCH_NOTIFICATION' | 'POLICY_ALERT_NOTIFICATION' | 'RECOMMENDATION_NOTIFICATION' | 'REPORTS_NOTIFICATION' | 'SCHEDULED_REPORT_NOTIFICATION' | 'SCHEDULED_AUDIT_NOTIFICATION' | 'WELCOME_NOTIFICATION' | 'EMAIL_HEADER_AND_FOOTER' | 'RISK_NOTIFICATION' | 'SCHEDULED_JOB_SUMMARY' | 'INCIDENT_NOTIFICATION' | 'MAINTENANCE_NOTIFICATION' | 'QSPM_RISK' | 'POLICY_IMPORT_NOTIFICATION'>", ""));
+        }
+
+        // Query Params
+        if (filterEnabledOnly !== undefined) {
+            requestContext.setQueryParam("filter_enabled_only", ObjectSerializer.serialize(filterEnabledOnly, "boolean", ""));
+        }
+
+        // Query Params
+        if (includeIntegrationName !== undefined) {
+            requestContext.setQueryParam("include_integration_name", ObjectSerializer.serialize(includeIntegrationName, "boolean", ""));
+        }
+
+        // Query Params
+        if (transformToGdpFormat !== undefined) {
+            requestContext.setQueryParam("transform_to_gdp_format", ObjectSerializer.serialize(transformToGdpFormat, "boolean", ""));
         }
 
 
@@ -953,6 +1023,42 @@ export class TemplatesServiceApiResponseProcessor {
                 ObjectSerializer.parse(await response.body.text(), contentType),
                 "Templatesv3GetTemplatesResponse", ""
             ) as Templatesv3GetTemplatesResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to templatesServiceGetTemplatesForEdge
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async templatesServiceGetTemplatesForEdgeWithHttpInfo(response: ResponseContext): Promise<HttpInfo<Templatesv3GetTemplatesForEdgeResponse >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: Templatesv3GetTemplatesForEdgeResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Templatesv3GetTemplatesForEdgeResponse", ""
+            ) as Templatesv3GetTemplatesForEdgeResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("0", response.httpStatusCode)) {
+            const body: RuntimeError = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RuntimeError", ""
+            ) as RuntimeError;
+            throw new ApiException<RuntimeError>(response.httpStatusCode, "An unexpected error response.", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: Templatesv3GetTemplatesForEdgeResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Templatesv3GetTemplatesForEdgeResponse", ""
+            ) as Templatesv3GetTemplatesForEdgeResponse;
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
         }
 

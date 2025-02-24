@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.auth_code import AuthCode
+from ibm_gdsc_sdk_saas.models.auth_code import AuthCode
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.workflowv3_get_filename_response import Workflowv3GetFilenameResponse
+from ibm_gdsc_sdk_saas.models.workflowv3_get_filename_response import Workflowv3GetFilenameResponse
 
 class TestWorkflowv3GetFilenameResponse(unittest.TestCase):
     """Workflowv3GetFilenameResponse unit test stubs"""

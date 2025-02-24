@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.data_store_stats import DataStoreStats
+from ibm_gdsc_sdk_saas.models.data_store_stats import DataStoreStats
 
 class TestDataStoreStats(unittest.TestCase):
     """DataStoreStats unit test stubs"""
@@ -41,13 +41,13 @@ class TestDataStoreStats(unittest.TestCase):
                 sensitivities_count = 70,
                 user_access_count = 1.337,
                 sensitivities_summary = [
-                    ibm_gdsc_sdk_software.models.sensitivity_summary.SensitivitySummary(
+                    ibm_gdsc_sdk_saas.models.sensitivity_summary.SensitivitySummary(
                         tag = 'BUSINESS_EMAIL_ADDRESS', 
                         count = 230, 
                         category = 'Personal', )
                     ],
                 vulnerabilities_summary = [
-                    ibm_gdsc_sdk_software.models.vulnerabilities_criticality_count_inner.VulnerabilitiesCriticalityCount_inner(
+                    ibm_gdsc_sdk_saas.models.vulnerabilities_criticality_count_inner.VulnerabilitiesCriticalityCount_inner(
                         criticality = 'HIGH', 
                         count = 5, )
                     ]

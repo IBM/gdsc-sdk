@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.notificationsv3_update_notification_record_request import Notificationsv3UpdateNotificationRecordRequest
+from ibm_gdsc_sdk_saas.models.notificationsv3_update_notification_record_request import Notificationsv3UpdateNotificationRecordRequest
 
 class TestNotificationsv3UpdateNotificationRecordRequest(unittest.TestCase):
     """Notificationsv3UpdateNotificationRecordRequest unit test stubs"""
@@ -41,7 +41,7 @@ class TestNotificationsv3UpdateNotificationRecordRequest(unittest.TestCase):
                 severity = 'UNDEFINED',
                 state = 'UNREAD',
                 template_data = [
-                    ibm_gdsc_sdk_software.models.notificationsv3_template_property.notificationsv3TemplateProperty(
+                    ibm_gdsc_sdk_saas.models.notificationsv3_template_property.notificationsv3TemplateProperty(
                         name = '', 
                         value = '', )
                     ]

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_create_settings_request import Connectionsv3CreateSettingsRequest
+from ibm_gdsc_sdk_saas.models.connectionsv3_create_settings_request import Connectionsv3CreateSettingsRequest
 
 class TestConnectionsv3CreateSettingsRequest(unittest.TestCase):
     """Connectionsv3CreateSettingsRequest unit test stubs"""
@@ -36,10 +36,10 @@ class TestConnectionsv3CreateSettingsRequest(unittest.TestCase):
         if include_optional:
             return Connectionsv3CreateSettingsRequest(
                 settings = [
-                    ibm_gdsc_sdk_software.models.connectionsv3_connector_setting.connectionsv3ConnectorSetting(
+                    ibm_gdsc_sdk_saas.models.connectionsv3_connector_setting.connectionsv3ConnectorSetting(
                         description = '', 
                         filters = [
-                            ibm_gdsc_sdk_software.models.connectionsv3_header_filter.connectionsv3HeaderFilter(
+                            ibm_gdsc_sdk_saas.models.connectionsv3_header_filter.connectionsv3HeaderFilter(
                                 id = '', 
                                 values = [
                                     ''

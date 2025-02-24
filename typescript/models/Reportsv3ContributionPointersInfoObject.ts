@@ -17,7 +17,7 @@ import { HttpFile } from '../http/http';
 */
 export class Reportsv3ContributionPointersInfoObject {
     /**
-    * The colmun name in the db2 table.
+    * The colmun name in the data warehouse table.
     */
     'column'?: string;
     /**

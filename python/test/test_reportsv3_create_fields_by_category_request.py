@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_create_fields_by_category_request import Reportsv3CreateFieldsByCategoryRequest
+from ibm_gdsc_sdk_saas.models.reportsv3_create_fields_by_category_request import Reportsv3CreateFieldsByCategoryRequest
 
 class TestReportsv3CreateFieldsByCategoryRequest(unittest.TestCase):
     """Reportsv3CreateFieldsByCategoryRequest unit test stubs"""
@@ -36,7 +36,7 @@ class TestReportsv3CreateFieldsByCategoryRequest(unittest.TestCase):
         if include_optional:
             return Reportsv3CreateFieldsByCategoryRequest(
                 fields = [
-                    ibm_gdsc_sdk_software.models.category_field_that_has_the_header_id,_name_in_the_translated_value_and_field_type.CategoryField that has the header ID, name in the translated value and field type(
+                    ibm_gdsc_sdk_saas.models.category_field_that_has_the_header_id,_name_in_the_translated_value_and_field_type.CategoryField that has the header ID, name in the translated value and field type(
                         can_be_used_in_chart = True, 
                         field_name = '', 
                         group_type_id = 56, 

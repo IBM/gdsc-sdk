@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_display_header import Reportsv3DisplayHeader
+from ibm_gdsc_sdk_saas.models.reportsv3_display_header import Reportsv3DisplayHeader
 
 class TestReportsv3DisplayHeader(unittest.TestCase):
     """Reportsv3DisplayHeader unit test stubs"""
@@ -35,11 +35,11 @@ class TestReportsv3DisplayHeader(unittest.TestCase):
         model = Reportsv3DisplayHeader()
         if include_optional:
             return Reportsv3DisplayHeader(
-                field_name = ibm_gdsc_sdk_software.models.reportsv3_field_name.reportsv3FieldName(
+                field_name = ibm_gdsc_sdk_saas.models.reportsv3_field_name.reportsv3FieldName(
                     customized_value = '', 
                     nls_key = '', 
                     nls_value = '', ),
-                header_description = ibm_gdsc_sdk_software.models.reportsv3_header_description.reportsv3HeaderDescription(
+                header_description = ibm_gdsc_sdk_saas.models.reportsv3_header_description.reportsv3HeaderDescription(
                     nls_key = '', 
                     nls_value = '', ),
                 header_id = '',

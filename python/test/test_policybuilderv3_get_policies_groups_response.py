@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_get_policies_groups_response import Policybuilderv3GetPoliciesGroupsResponse
+from ibm_gdsc_sdk_saas.models.policybuilderv3_get_policies_groups_response import Policybuilderv3GetPoliciesGroupsResponse
 
 class TestPolicybuilderv3GetPoliciesGroupsResponse(unittest.TestCase):
     """Policybuilderv3GetPoliciesGroupsResponse unit test stubs"""
@@ -36,15 +36,15 @@ class TestPolicybuilderv3GetPoliciesGroupsResponse(unittest.TestCase):
         if include_optional:
             return Policybuilderv3GetPoliciesGroupsResponse(
                 groups = [
-                    ibm_gdsc_sdk_software.models.message_to_return_what_policies_the_groups_are_being_used.Message to return what policies the groups are being used(
+                    ibm_gdsc_sdk_saas.models.message_to_return_what_policies_the_groups_are_being_used.Message to return what policies the groups are being used(
                         group_id = '', 
                         policies = [
-                            ibm_gdsc_sdk_software.models.policybuilderv3_policy_details_for_groups.policybuilderv3PolicyDetailsForGroups(
+                            ibm_gdsc_sdk_saas.models.policybuilderv3_policy_details_for_groups.policybuilderv3PolicyDetailsForGroups(
                                 policy_id = '', 
                                 policy_name = '', )
                             ], )
                     ],
-                status = ibm_gdsc_sdk_software.models.policybuilderv3_status_response_base.policybuilderv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.policybuilderv3_status_response_base.policybuilderv3StatusResponseBase(
                     message = '', 
                     status = '', )
             )

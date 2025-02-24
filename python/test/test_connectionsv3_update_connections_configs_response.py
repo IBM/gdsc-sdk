@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_update_connections_configs_response import Connectionsv3UpdateConnectionsConfigsResponse
+from ibm_gdsc_sdk_saas.models.connectionsv3_update_connections_configs_response import Connectionsv3UpdateConnectionsConfigsResponse
 
 class TestConnectionsv3UpdateConnectionsConfigsResponse(unittest.TestCase):
     """Connectionsv3UpdateConnectionsConfigsResponse unit test stubs"""

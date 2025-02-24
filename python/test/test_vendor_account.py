@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.vendor_account import VendorAccount
+from ibm_gdsc_sdk_saas.models.vendor_account import VendorAccount
 
 class TestVendorAccount(unittest.TestCase):
     """VendorAccount unit test stubs"""

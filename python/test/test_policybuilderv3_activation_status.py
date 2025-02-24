@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_activation_status import Policybuilderv3ActivationStatus
+from ibm_gdsc_sdk_saas.models.policybuilderv3_activation_status import Policybuilderv3ActivationStatus
 
 class TestPolicybuilderv3ActivationStatus(unittest.TestCase):
     """Policybuilderv3ActivationStatus unit test stubs"""

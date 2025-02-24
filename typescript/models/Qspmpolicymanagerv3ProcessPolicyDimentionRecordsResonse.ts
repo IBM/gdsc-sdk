@@ -20,7 +20,7 @@ export class Qspmpolicymanagerv3ProcessPolicyDimentionRecordsResonse {
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "message",
-            "baseName": "Message",
+            "baseName": "message",
             "type": "string",
             "format": ""
         }    ];

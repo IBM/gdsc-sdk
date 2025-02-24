@@ -2,7 +2,7 @@
 
 # Groupbuilderv3Group
 
-Group imports groups from a Guradium Data Protection central manager to Guardium.
+Group imports groups from a Guradium Data Protection central manager to GDSC.
 
 ## Properties
 

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_filter_catagory import Assetsv3FilterCatagory
+from ibm_gdsc_sdk_saas.models.assetsv3_filter_catagory import Assetsv3FilterCatagory
 
 class TestAssetsv3FilterCatagory(unittest.TestCase):
     """Assetsv3FilterCatagory unit test stubs"""
@@ -36,7 +36,7 @@ class TestAssetsv3FilterCatagory(unittest.TestCase):
         if include_optional:
             return Assetsv3FilterCatagory(
                 catagory_id = '',
-                date_range = ibm_gdsc_sdk_software.models.timeline_date_range___timel_line_data_range_object_for_ui_widget_for_appliying_on_assets_list.TimelineDateRange - Timel Line Data Range object for ui widget for appliying on assets list(
+                date_range = ibm_gdsc_sdk_saas.models.timeline_date_range___timel_line_data_range_object_for_ui_widget_for_appliying_on_assets_list.TimelineDateRange - Timel Line Data Range object for ui widget for appliying on assets list(
                     end = '', 
                     end_number = 56, 
                     end_unit = '', 
@@ -47,9 +47,9 @@ class TestAssetsv3FilterCatagory(unittest.TestCase):
                     start_unit = '', 
                     type = '', ),
                 selected_sub_catagory_list = [
-                    ibm_gdsc_sdk_software.models.filter_sub_query___filter_sub_query_of_a_filter_query_saved_in_template.FilterSubQuery - Filter Sub Query of a Filter Query saved in template(
+                    ibm_gdsc_sdk_saas.models.filter_sub_query___filter_sub_query_of_a_filter_query_saved_in_template.FilterSubQuery - Filter Sub Query of a Filter Query saved in template(
                         selected_children_list = [
-                            ibm_gdsc_sdk_software.models.filter_sub_catagory_child___child_values_under_filter_sub_category_of_a_filter_category_in_template.FilterSubCatagoryChild - child values under Filter Sub category of a Filter category in template(
+                            ibm_gdsc_sdk_saas.models.filter_sub_catagory_child___child_values_under_filter_sub_category_of_a_filter_category_in_template.FilterSubCatagoryChild - child values under Filter Sub category of a Filter category in template(
                                 child_id = '', 
                                 child_name = '', )
                             ], 

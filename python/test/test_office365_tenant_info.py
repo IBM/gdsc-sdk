@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.office365_tenant_info import Office365TenantInfo
+from ibm_gdsc_sdk_saas.models.office365_tenant_info import Office365TenantInfo
 
 class TestOffice365TenantInfo(unittest.TestCase):
     """Office365TenantInfo unit test stubs"""

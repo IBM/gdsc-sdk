@@ -20,6 +20,8 @@ Description: Delete Connection config by connection id.
 Description: Delete a Connection.
 [**connectionsServiceDeletePlugin**](ConnectionsServiceApi.md#connectionsServiceDeletePlugin) | **DELETE** /api/v3/connections/plugins/{id} | Summary: Delete plugin.
 Description: Delete plugin.
+[**connectionsServiceGeneratePackage**](ConnectionsServiceApi.md#connectionsServiceGeneratePackage) | **PUT** /api/v3/connections/plugins/{id}/package | Summary: Generate package.
+Description: Generate package.
 [**connectionsServiceGetBannerState**](ConnectionsServiceApi.md#connectionsServiceGetBannerState) | **GET** /api/v3/connections/banner | Summary: Get banner state for object verb page. 
 Description: Get banner state for object verb page.
 [**connectionsServiceGetConnectionsAccounts**](ConnectionsServiceApi.md#connectionsServiceGetConnectionsAccounts) | **GET** /api/v3/connections/accounts | Summary: Get Connections accounts
@@ -56,6 +58,8 @@ Description: Update a list of Connectors.
 Description: Update plugin.
 [**connectionsServiceUpdateSettings**](ConnectionsServiceApi.md#connectionsServiceUpdateSettings) | **PUT** /api/v3/connections/settings | Summary: Update settings
 Description: Update Settings.
+[**connectionsServiceValidateAwsConnection**](ConnectionsServiceApi.md#connectionsServiceValidateAwsConnection) | **POST** /api/v3/connections/validate/aws | Summary: Validate an AWS connection.
+Description: Validate an AWS connection.
 
 
 
@@ -326,6 +330,41 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## connectionsServiceGeneratePackage
+
+Summary: Generate package.
+Description: Generate package.
+
+### Example
+
+```bash
+ connectionsServiceGeneratePackage id=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string** | id | [default to null]
+ **connectionsv3GeneratePackageRequest** | [**Connectionsv3GeneratePackageRequest**](Connectionsv3GeneratePackageRequest.md) |  |
+
+### Return type
+
+[**Connectionsv3GeneratePackageResponse**](Connectionsv3GeneratePackageResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -915,6 +954,40 @@ Name | Type | Description  | Notes
 ### Return type
 
 **map**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## connectionsServiceValidateAwsConnection
+
+Summary: Validate an AWS connection.
+Description: Validate an AWS connection.
+
+### Example
+
+```bash
+ connectionsServiceValidateAwsConnection
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **connectionsv3ValidateAwsConnectionRequest** | [**Connectionsv3ValidateAwsConnectionRequest**](Connectionsv3ValidateAwsConnectionRequest.md) |  |
+
+### Return type
+
+[**Connectionsv3ValidateConnectionResponse**](Connectionsv3ValidateConnectionResponse.md)
 
 ### Authorization
 

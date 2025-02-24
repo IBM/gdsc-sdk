@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_query_controller_logs_request import Resourcecontrollerk8v3QueryControllerLogsRequest
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_query_controller_logs_request import Resourcecontrollerk8v3QueryControllerLogsRequest
 
 class TestResourcecontrollerk8v3QueryControllerLogsRequest(unittest.TestCase):
     """Resourcecontrollerk8v3QueryControllerLogsRequest unit test stubs"""
@@ -36,7 +36,7 @@ class TestResourcecontrollerk8v3QueryControllerLogsRequest(unittest.TestCase):
         if include_optional:
             return Resourcecontrollerk8v3QueryControllerLogsRequest(
                 controller_id = '',
-                query_logs = ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_query_logs.resourcecontrollerk8v3QueryLogs(
+                query_logs = ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_query_logs.resourcecontrollerk8v3QueryLogs(
                     end_date = '', 
                     previous = True, 
                     start_date = '', )

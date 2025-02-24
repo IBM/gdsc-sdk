@@ -30,7 +30,7 @@ export class Datamartprocessorv3DatamartInfo {
     */
     'error'?: string;
     /**
-    * Total records exported from gdp.
+    * Total records exported from GDP.
     */
     'exportRecordCount'?: number;
     /**

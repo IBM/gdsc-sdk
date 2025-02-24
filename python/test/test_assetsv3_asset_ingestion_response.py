@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_asset_ingestion_response import Assetsv3AssetIngestionResponse
+from ibm_gdsc_sdk_saas.models.assetsv3_asset_ingestion_response import Assetsv3AssetIngestionResponse
 
 class TestAssetsv3AssetIngestionResponse(unittest.TestCase):
     """Assetsv3AssetIngestionResponse unit test stubs"""

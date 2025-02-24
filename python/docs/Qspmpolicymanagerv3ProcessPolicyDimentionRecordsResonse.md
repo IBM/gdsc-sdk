@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.qspmpolicymanagerv3_process_policy_dimention_records_resonse import Qspmpolicymanagerv3ProcessPolicyDimentionRecordsResonse
+from ibm_gdsc_sdk_saas.models.qspmpolicymanagerv3_process_policy_dimention_records_resonse import Qspmpolicymanagerv3ProcessPolicyDimentionRecordsResonse
 
 # TODO update the JSON string below
 json = "{}"

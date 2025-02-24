@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **entity_id** | **str** |  | [optional] 
 **entity_name** | **str** |  | [optional] 
 **grouper_id** | **str** |  | [optional] 
+**has_training_data** | **bool** |  | [optional] 
 **major_vulnerability_count** | **str** |  | [optional] 
 **sensitive_data_count** | **str** |  | [optional] 
 **status_type** | [**Assetsv3StatusType**](Assetsv3StatusType.md) |  | [optional] 
@@ -18,7 +19,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.assetsv3_attributes import Assetsv3Attributes
+from ibm_gdsc_sdk_saas.models.assetsv3_attributes import Assetsv3Attributes
 
 # TODO update the JSON string below
 json = "{}"

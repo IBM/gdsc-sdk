@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.third_party_vendors_api import ThirdPartyVendorsApi
+from ibm_gdsc_sdk_saas.api.third_party_vendors_api import ThirdPartyVendorsApi
 
 
 class TestThirdPartyVendorsApi(unittest.TestCase):

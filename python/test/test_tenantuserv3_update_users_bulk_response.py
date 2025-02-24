@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.tenantuserv3_update_users_bulk_response import Tenantuserv3UpdateUsersBulkResponse
+from ibm_gdsc_sdk_saas.models.tenantuserv3_update_users_bulk_response import Tenantuserv3UpdateUsersBulkResponse
 
 class TestTenantuserv3UpdateUsersBulkResponse(unittest.TestCase):
     """Tenantuserv3UpdateUsersBulkResponse unit test stubs"""

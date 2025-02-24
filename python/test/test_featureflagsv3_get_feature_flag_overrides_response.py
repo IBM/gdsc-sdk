@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.featureflagsv3_get_feature_flag_overrides_response import Featureflagsv3GetFeatureFlagOverridesResponse
+from ibm_gdsc_sdk_saas.models.featureflagsv3_get_feature_flag_overrides_response import Featureflagsv3GetFeatureFlagOverridesResponse
 
 class TestFeatureflagsv3GetFeatureFlagOverridesResponse(unittest.TestCase):
     """Featureflagsv3GetFeatureFlagOverridesResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestFeatureflagsv3GetFeatureFlagOverridesResponse(unittest.TestCase):
         if include_optional:
             return Featureflagsv3GetFeatureFlagOverridesResponse(
                 feature_flags = [
-                    ibm_gdsc_sdk_software.models.featureflagsv3_feature_flag_overrides.featureflagsv3FeatureFlagOverrides(
+                    ibm_gdsc_sdk_saas.models.featureflagsv3_feature_flag_overrides.featureflagsv3FeatureFlagOverrides(
                         flag_name = '', 
                         high_priority = True, 
                         is_enabled = True, 

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.jumpboxv3_test_user_response import Jumpboxv3TestUserResponse
+from ibm_gdsc_sdk_saas.models.jumpboxv3_test_user_response import Jumpboxv3TestUserResponse
 
 class TestJumpboxv3TestUserResponse(unittest.TestCase):
     """Jumpboxv3TestUserResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestJumpboxv3TestUserResponse(unittest.TestCase):
         if include_optional:
             return Jumpboxv3TestUserResponse(
                 message = '',
-                user = ibm_gdsc_sdk_software.models.jumpboxv3_user.jumpboxv3User(
+                user = ibm_gdsc_sdk_saas.models.jumpboxv3_user.jumpboxv3User(
                     activation_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     directory_id = '', 
                     disabled = True, 

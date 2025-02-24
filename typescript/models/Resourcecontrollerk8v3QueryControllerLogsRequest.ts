@@ -31,7 +31,7 @@ export class Resourcecontrollerk8v3QueryControllerLogsRequest {
         },
         {
             "name": "queryLogs",
-            "baseName": "queryLogs",
+            "baseName": "query_logs",
             "type": "Resourcecontrollerk8v3QueryLogs",
             "format": ""
         }    ];

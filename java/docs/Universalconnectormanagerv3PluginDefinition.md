@@ -8,6 +8,7 @@ Plugin definition based on UCPluginDefinition.
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+|**pluginJDBCDriverRequired** | **Boolean** |  |  [optional] |
 |**pluginAlias** | **String** | mongoDB. |  [optional] |
 |**pluginConfigurationNotes** | **String** | Config noted. |  [optional] |
 |**pluginDescription** | **String** | Description. |  [optional] |

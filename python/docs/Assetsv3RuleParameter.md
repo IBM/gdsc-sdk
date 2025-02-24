@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.assetsv3_rule_parameter import Assetsv3RuleParameter
+from ibm_gdsc_sdk_saas.models.assetsv3_rule_parameter import Assetsv3RuleParameter
 
 # TODO update the JSON string below
 json = "{}"

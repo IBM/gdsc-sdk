@@ -10,7 +10,8 @@
  * Do not edit the class manually.
  */
 
-import { Complianceacceleratorv3GroupMember } from '../models/Complianceacceleratorv3GroupMember';
+import { Groupbuilderv3GroupMember } from '../models/Groupbuilderv3GroupMember';
+import { Groupbuilderv3LdapConfig } from '../models/Groupbuilderv3LdapConfig';
 import { HttpFile } from '../http/http';
 
 /**
@@ -26,10 +27,11 @@ export class Complianceacceleratorv3Group {
     * Id of group.
     */
     'id'?: number;
+    'ldapConfig'?: Groupbuilderv3LdapConfig;
     /**
     * Group members.
     */
-    'members'?: Array<Complianceacceleratorv3GroupMember>;
+    'members'?: Array<Groupbuilderv3GroupMember>;
     /**
     * Members of the groups to be stored.
     */
@@ -37,7 +39,7 @@ export class Complianceacceleratorv3Group {
     /**
     * Member ids to be deleted.
     */
-    'membersToDelete'?: Array<Complianceacceleratorv3GroupMember>;
+    'membersToDelete'?: Array<Groupbuilderv3GroupMember>;
     /**
     * Name of group.
     */
@@ -66,9 +68,15 @@ export class Complianceacceleratorv3Group {
             "format": "int32"
         },
         {
+            "name": "ldapConfig",
+            "baseName": "ldap_config",
+            "type": "Groupbuilderv3LdapConfig",
+            "format": ""
+        },
+        {
             "name": "members",
             "baseName": "members",
-            "type": "Array<Complianceacceleratorv3GroupMember>",
+            "type": "Array<Groupbuilderv3GroupMember>",
             "format": ""
         },
         {
@@ -80,7 +88,7 @@ export class Complianceacceleratorv3Group {
         {
             "name": "membersToDelete",
             "baseName": "members_to_delete",
-            "type": "Array<Complianceacceleratorv3GroupMember>",
+            "type": "Array<Groupbuilderv3GroupMember>",
             "format": ""
         },
         {

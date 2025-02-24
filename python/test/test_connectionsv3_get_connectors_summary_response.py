@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_get_connectors_summary_response import Connectionsv3GetConnectorsSummaryResponse
+from ibm_gdsc_sdk_saas.models.connectionsv3_get_connectors_summary_response import Connectionsv3GetConnectorsSummaryResponse
 
 class TestConnectionsv3GetConnectorsSummaryResponse(unittest.TestCase):
     """Connectionsv3GetConnectorsSummaryResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestConnectionsv3GetConnectorsSummaryResponse(unittest.TestCase):
         if include_optional:
             return Connectionsv3GetConnectorsSummaryResponse(
                 connectors = [
-                    ibm_gdsc_sdk_software.models.connectionsv3_connector_summary.connectionsv3ConnectorSummary(
+                    ibm_gdsc_sdk_saas.models.connectionsv3_connector_summary.connectionsv3ConnectorSummary(
                         status_green = 56, 
                         status_red = 56, 
                         status_yellow = 56, 

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.schedulerv3_scheduled_task import Schedulerv3ScheduledTask
+from ibm_gdsc_sdk_saas.models.schedulerv3_scheduled_task import Schedulerv3ScheduledTask
 
 class TestSchedulerv3ScheduledTask(unittest.TestCase):
     """Schedulerv3ScheduledTask unit test stubs"""
@@ -36,7 +36,7 @@ class TestSchedulerv3ScheduledTask(unittest.TestCase):
         if include_optional:
             return Schedulerv3ScheduledTask(
                 audit_type = 'UNDEFINED_TYPE',
-                delivery_method = ibm_gdsc_sdk_software.models.schedulerv3_delivery_method.schedulerv3DeliveryMethod(
+                delivery_method = ibm_gdsc_sdk_saas.models.schedulerv3_delivery_method.schedulerv3DeliveryMethod(
                     file_format = 'UNDEFINED_FORMAT', 
                     report_time_zone = '', ),
                 distribution_rule_ids = [
@@ -45,18 +45,18 @@ class TestSchedulerv3ScheduledTask(unittest.TestCase):
                 email_subject = '',
                 instructions = '',
                 name = '',
-                parameter = ibm_gdsc_sdk_software.models.schedulerv3_task_parameter.schedulerv3TaskParameter(
-                    data_import_parameter = ibm_gdsc_sdk_software.models.schedulerv3_integration_parameter.schedulerv3IntegrationParameter(
+                parameter = ibm_gdsc_sdk_saas.models.schedulerv3_task_parameter.schedulerv3TaskParameter(
+                    data_import_parameter = ibm_gdsc_sdk_saas.models.schedulerv3_integration_parameter.schedulerv3IntegrationParameter(
                         extra_detail = '', 
                         integration_id = '', 
                         template_id = '', 
                         value = '', ), 
-                    report_parameter = ibm_gdsc_sdk_software.models.schedulerv3_report_parameter.schedulerv3ReportParameter(
+                    report_parameter = ibm_gdsc_sdk_saas.models.schedulerv3_report_parameter.schedulerv3ReportParameter(
                         extra_detail = '', 
                         report_id = '', 
                         report_name = '', 
                         runtime_parameters = [
-                            ibm_gdsc_sdk_software.models.reportsv3_run_time_parameter.reportsv3RunTimeParameter(
+                            ibm_gdsc_sdk_saas.models.reportsv3_run_time_parameter.reportsv3RunTimeParameter(
                                 key = '', 
                                 label = '', 
                                 operator_type = 'UNDEFINED_OPERATOR_TYPE', 
@@ -64,26 +64,27 @@ class TestSchedulerv3ScheduledTask(unittest.TestCase):
                                 runtime_parameter_type_length = 56, 
                                 value = '', )
                             ], 
-                        sync_execution_date = True, ), ),
+                        sync_execution_date = True, 
+                        threshold = 56, ), ),
                 recipients = [
-                    ibm_gdsc_sdk_software.models.schedulerv3_recipient.schedulerv3Recipient(
+                    ibm_gdsc_sdk_saas.models.schedulerv3_recipient.schedulerv3Recipient(
                         integration_id = '', 
                         label = '', 
                         template_id = '', 
                         type = 'UNDEFINED_RECTYPE', 
                         value = '', )
                     ],
-                report_filters = ibm_gdsc_sdk_software.models.reportsv3_report_filter_brackets.reportsv3ReportFilterBrackets(
+                report_filters = ibm_gdsc_sdk_saas.models.reportsv3_report_filter_brackets.reportsv3ReportFilterBrackets(
                     brackets_id = 56, 
                     filter_name = '', 
                     filters_array = [
-                        ibm_gdsc_sdk_software.models.reportsv3_report_filter.reportsv3ReportFilter(
-                            brackets = ibm_gdsc_sdk_software.models.reportsv3_report_filter_brackets.reportsv3ReportFilterBrackets(
+                        ibm_gdsc_sdk_saas.models.reportsv3_report_filter.reportsv3ReportFilter(
+                            brackets = ibm_gdsc_sdk_saas.models.reportsv3_report_filter_brackets.reportsv3ReportFilterBrackets(
                                 brackets_id = 56, 
                                 filter_name = '', 
                                 having_array = [
-                                    ibm_gdsc_sdk_software.models.report_agg_filter_represents_a_report_aggregate_filter.ReportAggFilter represents a report aggregate filter(
-                                        condition = ibm_gdsc_sdk_software.models.reportsv3_report_agg_filter_condition.reportsv3ReportAggFilterCondition(
+                                    ibm_gdsc_sdk_saas.models.report_agg_filter_represents_a_report_aggregate_filter.ReportAggFilter represents a report aggregate filter(
+                                        condition = ibm_gdsc_sdk_saas.models.reportsv3_report_agg_filter_condition.reportsv3ReportAggFilterCondition(
                                             aggregation_type = 'UNDEFINED_AGG_TYPE', 
                                             header_id = '', 
                                             header_name = '', 
@@ -94,14 +95,15 @@ class TestSchedulerv3ScheduledTask(unittest.TestCase):
                                 is_custom = True, 
                                 option_type = 'UNDEFINED_OPTION_TYPE', 
                                 sequence = 56, ), 
-                            condition = ibm_gdsc_sdk_software.models.reportsv3_report_filter_condition.reportsv3ReportFilterCondition(
+                            condition = ibm_gdsc_sdk_saas.models.reportsv3_report_filter_condition.reportsv3ReportFilterCondition(
                                 case_insensitive = True, 
                                 field_nls_translation_key = '', 
                                 filter_id = 56, 
+                                group_type_id = 56, 
                                 header_id = '', 
                                 header_name = '', 
                                 header_type = 'UNDEFINED_TYPE', 
-                                in_report_date_range = ibm_gdsc_sdk_software.models.reportsv3_date_range.reportsv3DateRange(
+                                in_report_date_range = ibm_gdsc_sdk_saas.models.reportsv3_date_range.reportsv3DateRange(
                                     end_date = '', 
                                     end_number = 56, 
                                     end_unit = 'UNDEFINED_UINT_TYPE', 
@@ -115,16 +117,18 @@ class TestSchedulerv3ScheduledTask(unittest.TestCase):
                                 in_report_id = '', 
                                 in_report_name = '', 
                                 in_report_table_name = '', 
+                                is_tuple = True, 
                                 parameter_type = 'UNDEFINED_PARAM_TYPE', 
                                 schema_name = '', 
                                 sequence = 56, 
                                 table_name = '', 
+                                tuple_type = '', 
                                 values = [
                                     ''
                                     ], ), )
                         ], 
                     having_array = [
-                        ibm_gdsc_sdk_software.models.report_agg_filter_represents_a_report_aggregate_filter.ReportAggFilter represents a report aggregate filter()
+                        ibm_gdsc_sdk_saas.models.report_agg_filter_represents_a_report_aggregate_filter.ReportAggFilter represents a report aggregate filter()
                         ], 
                     is_custom = True, 
                     option_type = 'UNDEFINED_OPTION_TYPE', 
@@ -132,12 +136,12 @@ class TestSchedulerv3ScheduledTask(unittest.TestCase):
                 scheduled_task_id = '',
                 type = 'UNDEFINED_JOBTYPE',
                 workflow_investigation_links = [
-                    ibm_gdsc_sdk_software.models.generic_configuration_item_reference.Generic configuration item reference(
+                    ibm_gdsc_sdk_saas.models.generic_configuration_item_reference.Generic configuration item reference(
                         display = '', 
                         id = '', 
                         type = '', )
                     ],
-                workflow_response_template = ibm_gdsc_sdk_software.models.generic_configuration_item_reference.Generic configuration item reference(
+                workflow_response_template = ibm_gdsc_sdk_saas.models.generic_configuration_item_reference.Generic configuration item reference(
                     display = '', 
                     id = '', 
                     type = '', ),

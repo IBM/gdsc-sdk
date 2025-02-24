@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.groupbuilderv3_group import Groupbuilderv3Group
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_group import Groupbuilderv3Group
 
 class TestGroupbuilderv3Group(unittest.TestCase):
     """Groupbuilderv3Group unit test stubs"""
@@ -41,7 +41,7 @@ class TestGroupbuilderv3Group(unittest.TestCase):
                 group_id = 56,
                 group_type_id = 56,
                 last_sync_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
-                ldap_config = ibm_gdsc_sdk_software.models.groupbuilderv3_ldap_config.groupbuilderv3LdapConfig(
+                ldap_config = ibm_gdsc_sdk_saas.models.groupbuilderv3_ldap_config.groupbuilderv3LdapConfig(
                     attributes = [
                         ''
                         ], 
@@ -56,14 +56,14 @@ class TestGroupbuilderv3Group(unittest.TestCase):
                     member_prefix = '', ),
                 member_count = 56,
                 members = [
-                    ibm_gdsc_sdk_software.models.groupbuilderv3_group_member.groupbuilderv3GroupMember(
+                    ibm_gdsc_sdk_saas.models.groupbuilderv3_group_member.groupbuilderv3GroupMember(
                         member_id = '', 
                         name = '', )
                     ],
                 name = '',
                 nested = True,
                 nested_group_members = [
-                    ibm_gdsc_sdk_software.models.groupbuilderv3_nested_group_member.groupbuilderv3NestedGroupMember(
+                    ibm_gdsc_sdk_saas.models.groupbuilderv3_nested_group_member.groupbuilderv3NestedGroupMember(
                         group_id = 56, 
                         name = '', 
                         nested_member_id = 56, )

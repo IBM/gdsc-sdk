@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_create_plugin_request import Connectionsv3CreatePluginRequest
+from ibm_gdsc_sdk_saas.models.connectionsv3_create_plugin_request import Connectionsv3CreatePluginRequest
 
 class TestConnectionsv3CreatePluginRequest(unittest.TestCase):
     """Connectionsv3CreatePluginRequest unit test stubs"""
@@ -37,17 +37,20 @@ class TestConnectionsv3CreatePluginRequest(unittest.TestCase):
             return Connectionsv3CreatePluginRequest(
                 datasource_type = '',
                 developer_name = '',
+                document_link = '',
                 logfile = '',
                 name = '',
                 readme = '',
                 records = [
-                    ibm_gdsc_sdk_software.models.name_and_value_for_each_plugin_record.name and value for each plugin record(
+                    ibm_gdsc_sdk_saas.models.name_and_value_for_each_plugin_record.name and value for each plugin record(
                         guard_record_name = '', 
                         value = '', )
                     ],
                 supported_inputs = [
                     ''
-                    ]
+                    ],
+                version = '',
+                version_tested = ''
             )
         else:
             return Connectionsv3CreatePluginRequest(

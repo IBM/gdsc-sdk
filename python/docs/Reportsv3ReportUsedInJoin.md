@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.reportsv3_report_used_in_join import Reportsv3ReportUsedInJoin
+from ibm_gdsc_sdk_saas.models.reportsv3_report_used_in_join import Reportsv3ReportUsedInJoin
 
 # TODO update the JSON string below
 json = "{}"

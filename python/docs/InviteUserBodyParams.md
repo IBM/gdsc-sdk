@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.invite_user_body_params import InviteUserBodyParams
+from ibm_gdsc_sdk_saas.models.invite_user_body_params import InviteUserBodyParams
 
 # TODO update the JSON string below
 json = "{}"

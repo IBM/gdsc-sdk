@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.healthcollectorv3_get_pvc_usage_response import Healthcollectorv3GetPVCUsageResponse
+from ibm_gdsc_sdk_saas.models.healthcollectorv3_get_pvc_usage_response import Healthcollectorv3GetPVCUsageResponse
 
 class TestHealthcollectorv3GetPVCUsageResponse(unittest.TestCase):
     """Healthcollectorv3GetPVCUsageResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestHealthcollectorv3GetPVCUsageResponse(unittest.TestCase):
         if include_optional:
             return Healthcollectorv3GetPVCUsageResponse(
                 pvc_usage = [
-                    ibm_gdsc_sdk_software.models.healthcollectorv3_usage.healthcollectorv3Usage(
+                    ibm_gdsc_sdk_saas.models.healthcollectorv3_usage.healthcollectorv3Usage(
                         label = '', 
                         name = '', 
                         nls_key = '', 

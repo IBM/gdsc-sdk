@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_get_asset_topology_request import Assetsv3GetAssetTopologyRequest
+from ibm_gdsc_sdk_saas.models.assetsv3_get_asset_topology_request import Assetsv3GetAssetTopologyRequest
 
 class TestAssetsv3GetAssetTopologyRequest(unittest.TestCase):
     """Assetsv3GetAssetTopologyRequest unit test stubs"""

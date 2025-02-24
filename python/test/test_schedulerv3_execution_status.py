@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.schedulerv3_execution_status import Schedulerv3ExecutionStatus
+from ibm_gdsc_sdk_saas.models.schedulerv3_execution_status import Schedulerv3ExecutionStatus
 
 class TestSchedulerv3ExecutionStatus(unittest.TestCase):
     """Schedulerv3ExecutionStatus unit test stubs"""

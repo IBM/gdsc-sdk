@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.snifassistv3_stap_heart_beat import Snifassistv3StapHeartBeat
+from ibm_gdsc_sdk_saas.models.snifassistv3_stap_heart_beat import Snifassistv3StapHeartBeat
 
 class TestSnifassistv3StapHeartBeat(unittest.TestCase):
     """Snifassistv3StapHeartBeat unit test stubs"""

@@ -16,10 +16,6 @@ import { AddCloudAccountsRequest } from '../models/AddCloudAccountsRequest';
 import { AddCloudAccountsRequestCloudAccountsInner } from '../models/AddCloudAccountsRequestCloudAccountsInner';
 import { AddCommentBody } from '../models/AddCommentBody';
 import { AddJiraIntegrationParametersRequest } from '../models/AddJiraIntegrationParametersRequest';
-import { Analyticseventsv3DeleteCacheKeyRequest } from '../models/Analyticseventsv3DeleteCacheKeyRequest';
-import { Analyticseventsv3DeleteCacheKeyResponse } from '../models/Analyticseventsv3DeleteCacheKeyResponse';
-import { Analyticseventsv3PostQSAdvisorRiskRequest } from '../models/Analyticseventsv3PostQSAdvisorRiskRequest';
-import { Analyticseventsv3PostQSAdvisorRiskResponse } from '../models/Analyticseventsv3PostQSAdvisorRiskResponse';
 import { AnalyzedRegion } from '../models/AnalyzedRegion';
 import { AnalyzedRegionValidationResults } from '../models/AnalyzedRegionValidationResults';
 import { Assetsv3AccountVertex } from '../models/Assetsv3AccountVertex';
@@ -175,7 +171,6 @@ import { Complianceacceleratorv3DeleteComplianceWorkspacesResponse } from '../mo
 import { Complianceacceleratorv3EmailConfig } from '../models/Complianceacceleratorv3EmailConfig';
 import { Complianceacceleratorv3GetComplianceInfoResponse } from '../models/Complianceacceleratorv3GetComplianceInfoResponse';
 import { Complianceacceleratorv3Group } from '../models/Complianceacceleratorv3Group';
-import { Complianceacceleratorv3GroupMember } from '../models/Complianceacceleratorv3GroupMember';
 import { Complianceacceleratorv3HydrateComplianceWorkspacesRequest } from '../models/Complianceacceleratorv3HydrateComplianceWorkspacesRequest';
 import { Complianceacceleratorv3HydrateComplianceWorkspacesResponse } from '../models/Complianceacceleratorv3HydrateComplianceWorkspacesResponse';
 import { Complianceacceleratorv3Options } from '../models/Complianceacceleratorv3Options';
@@ -218,6 +213,9 @@ import { Connectionsv3DeleteAttributesResponse } from '../models/Connectionsv3De
 import { Connectionsv3DeleteConnectionsAccountsResponse } from '../models/Connectionsv3DeleteConnectionsAccountsResponse';
 import { Connectionsv3DeleteConnectionsConfigsResponse } from '../models/Connectionsv3DeleteConnectionsConfigsResponse';
 import { Connectionsv3DeletePluginResponse } from '../models/Connectionsv3DeletePluginResponse';
+import { Connectionsv3EdgeDeploymentServer } from '../models/Connectionsv3EdgeDeploymentServer';
+import { Connectionsv3GeneratePackageRequest } from '../models/Connectionsv3GeneratePackageRequest';
+import { Connectionsv3GeneratePackageResponse } from '../models/Connectionsv3GeneratePackageResponse';
 import { Connectionsv3GetAttributesResponse } from '../models/Connectionsv3GetAttributesResponse';
 import { Connectionsv3GetBannerStateResponse } from '../models/Connectionsv3GetBannerStateResponse';
 import { Connectionsv3GetConnectionsAccountsResponse } from '../models/Connectionsv3GetConnectionsAccountsResponse';
@@ -262,6 +260,8 @@ import { Connectionsv3UpdateConnectorsRequest } from '../models/Connectionsv3Upd
 import { Connectionsv3UpdatePluginRequest } from '../models/Connectionsv3UpdatePluginRequest';
 import { Connectionsv3UpdatePluginResponse } from '../models/Connectionsv3UpdatePluginResponse';
 import { Connectionsv3UpdateSettingsRequest } from '../models/Connectionsv3UpdateSettingsRequest';
+import { Connectionsv3ValidateAwsConnectionRequest } from '../models/Connectionsv3ValidateAwsConnectionRequest';
+import { Connectionsv3ValidateConnectionResponse } from '../models/Connectionsv3ValidateConnectionResponse';
 import { Dashboardsv3Card } from '../models/Dashboardsv3Card';
 import { Dashboardsv3CardPosition } from '../models/Dashboardsv3CardPosition';
 import { Dashboardsv3CardType } from '../models/Dashboardsv3CardType';
@@ -320,7 +320,13 @@ import { Ecosystemv3GetPurgableRowsRequest } from '../models/Ecosystemv3GetPurga
 import { Ecosystemv3GetPurgableRowsResponse } from '../models/Ecosystemv3GetPurgableRowsResponse';
 import { Ecosystemv3OrderType } from '../models/Ecosystemv3OrderType';
 import { Ecosystemv3PurgeDataResponse } from '../models/Ecosystemv3PurgeDataResponse';
+import { Ecosystemv3TestIntegrationRequest } from '../models/Ecosystemv3TestIntegrationRequest';
+import { Ecosystemv3TestIntegrationResponse } from '../models/Ecosystemv3TestIntegrationResponse';
 import { Ecosystemv3ValidateCSVContentResponse } from '../models/Ecosystemv3ValidateCSVContentResponse';
+import { Edgeschedulerv3GetEdgeQueryStatusResponse } from '../models/Edgeschedulerv3GetEdgeQueryStatusResponse';
+import { Edgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse } from '../models/Edgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse';
+import { Edgeschedulerv3ScheduleEdgeQueryRequest } from '../models/Edgeschedulerv3ScheduleEdgeQueryRequest';
+import { Edgeschedulerv3ScheduleEdgeQueryResponse } from '../models/Edgeschedulerv3ScheduleEdgeQueryResponse';
 import { Environment } from '../models/Environment';
 import { Featureflagsv3DeleteFeatureFlagOverridesResponse } from '../models/Featureflagsv3DeleteFeatureFlagOverridesResponse';
 import { Featureflagsv3FeatureFlag } from '../models/Featureflagsv3FeatureFlag';
@@ -575,7 +581,12 @@ import { Notificationsv3NotificationRecord } from '../models/Notificationsv3Noti
 import { Notificationsv3NotificationRecordsFilter } from '../models/Notificationsv3NotificationRecordsFilter';
 import { Notificationsv3NotificationSeverity } from '../models/Notificationsv3NotificationSeverity';
 import { Notificationsv3NotificationState } from '../models/Notificationsv3NotificationState';
+import { Notificationsv3PipelineQueryOperator } from '../models/Notificationsv3PipelineQueryOperator';
+import { Notificationsv3PostNotificationRecordRequest } from '../models/Notificationsv3PostNotificationRecordRequest';
+import { Notificationsv3PostNotificationRecordResponse } from '../models/Notificationsv3PostNotificationRecordResponse';
 import { Notificationsv3PutNotificationRecordResponse } from '../models/Notificationsv3PutNotificationRecordResponse';
+import { Notificationsv3SearchNotificationRecordsRequest } from '../models/Notificationsv3SearchNotificationRecordsRequest';
+import { Notificationsv3SearchNotificationRecordsResponse } from '../models/Notificationsv3SearchNotificationRecordsResponse';
 import { Notificationsv3TemplateProperty } from '../models/Notificationsv3TemplateProperty';
 import { Notificationsv3TestIntegrationRequest } from '../models/Notificationsv3TestIntegrationRequest';
 import { Notificationsv3TestIntegrationResponse } from '../models/Notificationsv3TestIntegrationResponse';
@@ -609,11 +620,13 @@ import { Policybuilderv3ActionNotificationObject } from '../models/Policybuilder
 import { Policybuilderv3ActionParameter } from '../models/Policybuilderv3ActionParameter';
 import { Policybuilderv3ActionParameterMetadata } from '../models/Policybuilderv3ActionParameterMetadata';
 import { Policybuilderv3ActionType } from '../models/Policybuilderv3ActionType';
+import { Policybuilderv3ActivationStatus } from '../models/Policybuilderv3ActivationStatus';
 import { Policybuilderv3ClonePolicyRequest } from '../models/Policybuilderv3ClonePolicyRequest';
 import { Policybuilderv3ControlFlow } from '../models/Policybuilderv3ControlFlow';
 import { Policybuilderv3CreateUpdatePolicyRequest } from '../models/Policybuilderv3CreateUpdatePolicyRequest';
 import { Policybuilderv3CreateUpdatePolicyResponse } from '../models/Policybuilderv3CreateUpdatePolicyResponse';
 import { Policybuilderv3DeleteGdpPolicySyncResponse } from '../models/Policybuilderv3DeleteGdpPolicySyncResponse';
+import { Policybuilderv3EdgeActivationObject } from '../models/Policybuilderv3EdgeActivationObject';
 import { Policybuilderv3GDPSyncEntry } from '../models/Policybuilderv3GDPSyncEntry';
 import { Policybuilderv3GdpPolicyObject } from '../models/Policybuilderv3GdpPolicyObject';
 import { Policybuilderv3GdpPolicyObjectWithCm } from '../models/Policybuilderv3GdpPolicyObjectWithCm';
@@ -668,12 +681,18 @@ import { PotentialFlowsSummary } from '../models/PotentialFlowsSummary';
 import { ProtobufAny } from '../models/ProtobufAny';
 import { ProtobufFieldMask } from '../models/ProtobufFieldMask';
 import { ProtobufNullValue } from '../models/ProtobufNullValue';
+import { Qsdataloaderv3QSfileValidatorExternalParamRequest } from '../models/Qsdataloaderv3QSfileValidatorExternalParamRequest';
+import { Qsdataloaderv3QSfileValidatorRequest } from '../models/Qsdataloaderv3QSfileValidatorRequest';
+import { Qsdataloaderv3QSfileValidatorResonse } from '../models/Qsdataloaderv3QSfileValidatorResonse';
+import { Qsdataloaderv3QSyntheticDataLoaderResonse } from '../models/Qsdataloaderv3QSyntheticDataLoaderResonse';
 import { Qspmdatamanagerv3AppData } from '../models/Qspmdatamanagerv3AppData';
 import { Qspmdatamanagerv3AppDataResponse } from '../models/Qspmdatamanagerv3AppDataResponse';
 import { Qspmdatamanagerv3MasterDataModel } from '../models/Qspmdatamanagerv3MasterDataModel';
 import { Qspmdatamanagerv3MasterDataResponse } from '../models/Qspmdatamanagerv3MasterDataResponse';
 import { Qspmdatamanagerv3NetlocData } from '../models/Qspmdatamanagerv3NetlocData';
 import { Qspmdatamanagerv3NetlocDataResponse } from '../models/Qspmdatamanagerv3NetlocDataResponse';
+import { Qspmdatamanagerv3PluginDataModel } from '../models/Qspmdatamanagerv3PluginDataModel';
+import { Qspmdatamanagerv3PluginDataResponse } from '../models/Qspmdatamanagerv3PluginDataResponse';
 import { Qspmdatamanagerv3Row } from '../models/Qspmdatamanagerv3Row';
 import { Qspmdatamanagerv3ScanRequest } from '../models/Qspmdatamanagerv3ScanRequest';
 import { Qspmdatamanagerv3ScanResponse } from '../models/Qspmdatamanagerv3ScanResponse';
@@ -685,13 +704,16 @@ import { Qspmpluginmanagerv3PluginRS } from '../models/Qspmpluginmanagerv3Plugin
 import { Qspmpluginmanagerv3PolicyPluginRQ } from '../models/Qspmpluginmanagerv3PolicyPluginRQ';
 import { Qspmpluginmanagerv3PolicyPluginRS } from '../models/Qspmpluginmanagerv3PolicyPluginRS';
 import { Qspmpluginmanagerv3ValidationResult } from '../models/Qspmpluginmanagerv3ValidationResult';
+import { Qspmpolicymanagerv3APIResonse } from '../models/Qspmpolicymanagerv3APIResonse';
 import { Qspmpolicymanagerv3CreateTicketRequest } from '../models/Qspmpolicymanagerv3CreateTicketRequest';
 import { Qspmpolicymanagerv3CreateTicketResponse } from '../models/Qspmpolicymanagerv3CreateTicketResponse';
 import { Qspmpolicymanagerv3FetchObjectStoreFileResponse } from '../models/Qspmpolicymanagerv3FetchObjectStoreFileResponse';
+import { Qspmpolicymanagerv3FileName } from '../models/Qspmpolicymanagerv3FileName';
 import { Qspmpolicymanagerv3NotificationSeverity } from '../models/Qspmpolicymanagerv3NotificationSeverity';
 import { Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest } from '../models/Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest';
 import { Qspmpolicymanagerv3ProcessPolicyDimentionRecordsResonse } from '../models/Qspmpolicymanagerv3ProcessPolicyDimentionRecordsResonse';
 import { Qspmpolicymanagerv3StandardEmptyResponse } from '../models/Qspmpolicymanagerv3StandardEmptyResponse';
+import { Qspmpolicymanagerv3UpdateConfigsRequest } from '../models/Qspmpolicymanagerv3UpdateConfigsRequest';
 import { Qspmpolicymanagerv3UpdateTicketStatusRequest } from '../models/Qspmpolicymanagerv3UpdateTicketStatusRequest';
 import { Qspmpolicymanagerv3UpdateTicketStatusResponse } from '../models/Qspmpolicymanagerv3UpdateTicketStatusResponse';
 import { QuestionType } from '../models/QuestionType';
@@ -844,6 +866,67 @@ import { Reportsv3VariantRuleCondition } from '../models/Reportsv3VariantRuleCon
 import { Reportsv3VariantRuleType } from '../models/Reportsv3VariantRuleType';
 import { RescanDataStoreRequest } from '../models/RescanDataStoreRequest';
 import { ResetPasswordRequest } from '../models/ResetPasswordRequest';
+import { Resourcecontrollerk8v3App } from '../models/Resourcecontrollerk8v3App';
+import { Resourcecontrollerk8v3AppDeployment } from '../models/Resourcecontrollerk8v3AppDeployment';
+import { Resourcecontrollerk8v3AppFile } from '../models/Resourcecontrollerk8v3AppFile';
+import { Resourcecontrollerk8v3AppHpa } from '../models/Resourcecontrollerk8v3AppHpa';
+import { Resourcecontrollerk8v3AppSecret } from '../models/Resourcecontrollerk8v3AppSecret';
+import { Resourcecontrollerk8v3Container } from '../models/Resourcecontrollerk8v3Container';
+import { Resourcecontrollerk8v3ContainerResources } from '../models/Resourcecontrollerk8v3ContainerResources';
+import { Resourcecontrollerk8v3ContainerResourcesQuantity } from '../models/Resourcecontrollerk8v3ContainerResourcesQuantity';
+import { Resourcecontrollerk8v3Controller } from '../models/Resourcecontrollerk8v3Controller';
+import { Resourcecontrollerk8v3ControllerApp } from '../models/Resourcecontrollerk8v3ControllerApp';
+import { Resourcecontrollerk8v3ControllerAppFile } from '../models/Resourcecontrollerk8v3ControllerAppFile';
+import { Resourcecontrollerk8v3ControllerAppSecret } from '../models/Resourcecontrollerk8v3ControllerAppSecret';
+import { Resourcecontrollerk8v3ControllerCommand } from '../models/Resourcecontrollerk8v3ControllerCommand';
+import { Resourcecontrollerk8v3ControllerHeartbeat } from '../models/Resourcecontrollerk8v3ControllerHeartbeat';
+import { Resourcecontrollerk8v3ControllerResources } from '../models/Resourcecontrollerk8v3ControllerResources';
+import { Resourcecontrollerk8v3ControllerStatus } from '../models/Resourcecontrollerk8v3ControllerStatus';
+import { Resourcecontrollerk8v3CreateControllerRequest } from '../models/Resourcecontrollerk8v3CreateControllerRequest';
+import { Resourcecontrollerk8v3CreateHeartBeatExResponse } from '../models/Resourcecontrollerk8v3CreateHeartBeatExResponse';
+import { Resourcecontrollerk8v3CreateHeartBeatRequest } from '../models/Resourcecontrollerk8v3CreateHeartBeatRequest';
+import { Resourcecontrollerk8v3CreateHeartBeatResponse } from '../models/Resourcecontrollerk8v3CreateHeartBeatResponse';
+import { Resourcecontrollerk8v3CreateKeypairRequest } from '../models/Resourcecontrollerk8v3CreateKeypairRequest';
+import { Resourcecontrollerk8v3CreateKeypairResponse } from '../models/Resourcecontrollerk8v3CreateKeypairResponse';
+import { Resourcecontrollerk8v3Cron } from '../models/Resourcecontrollerk8v3Cron';
+import { Resourcecontrollerk8v3DeleteControllerRequest } from '../models/Resourcecontrollerk8v3DeleteControllerRequest';
+import { Resourcecontrollerk8v3DeleteControllerResponse } from '../models/Resourcecontrollerk8v3DeleteControllerResponse';
+import { Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost } from '../models/Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost';
+import { Resourcecontrollerk8v3DeleteEdgeTenantResponse } from '../models/Resourcecontrollerk8v3DeleteEdgeTenantResponse';
+import { Resourcecontrollerk8v3DeleteJobRequest } from '../models/Resourcecontrollerk8v3DeleteJobRequest';
+import { Resourcecontrollerk8v3DeleteJobResponse } from '../models/Resourcecontrollerk8v3DeleteJobResponse';
+import { Resourcecontrollerk8v3DownloadControllerLogsRequest } from '../models/Resourcecontrollerk8v3DownloadControllerLogsRequest';
+import { Resourcecontrollerk8v3DownloadControllerLogsResponse } from '../models/Resourcecontrollerk8v3DownloadControllerLogsResponse';
+import { Resourcecontrollerk8v3EdgeResourceResponse } from '../models/Resourcecontrollerk8v3EdgeResourceResponse';
+import { Resourcecontrollerk8v3EdgeTenantRequest } from '../models/Resourcecontrollerk8v3EdgeTenantRequest';
+import { Resourcecontrollerk8v3File } from '../models/Resourcecontrollerk8v3File';
+import { Resourcecontrollerk8v3GUCStatefulsetState } from '../models/Resourcecontrollerk8v3GUCStatefulsetState';
+import { Resourcecontrollerk8v3GetControllerAppsResponse } from '../models/Resourcecontrollerk8v3GetControllerAppsResponse';
+import { Resourcecontrollerk8v3GetControllerCommandsResponse } from '../models/Resourcecontrollerk8v3GetControllerCommandsResponse';
+import { Resourcecontrollerk8v3GetControllerJobsResponse } from '../models/Resourcecontrollerk8v3GetControllerJobsResponse';
+import { Resourcecontrollerk8v3GetControllersResponse } from '../models/Resourcecontrollerk8v3GetControllersResponse';
+import { Resourcecontrollerk8v3GetControllersWithStatusResponse } from '../models/Resourcecontrollerk8v3GetControllersWithStatusResponse';
+import { Resourcecontrollerk8v3GetJobExecutionsResponse } from '../models/Resourcecontrollerk8v3GetJobExecutionsResponse';
+import { Resourcecontrollerk8v3GetTenantAppsResponse } from '../models/Resourcecontrollerk8v3GetTenantAppsResponse';
+import { Resourcecontrollerk8v3GetTenantJobsResponse } from '../models/Resourcecontrollerk8v3GetTenantJobsResponse';
+import { Resourcecontrollerk8v3InitContainer } from '../models/Resourcecontrollerk8v3InitContainer';
+import { Resourcecontrollerk8v3Job } from '../models/Resourcecontrollerk8v3Job';
+import { Resourcecontrollerk8v3JobExecution } from '../models/Resourcecontrollerk8v3JobExecution';
+import { Resourcecontrollerk8v3JobStatusDTO } from '../models/Resourcecontrollerk8v3JobStatusDTO';
+import { Resourcecontrollerk8v3KeyPair } from '../models/Resourcecontrollerk8v3KeyPair';
+import { Resourcecontrollerk8v3QueryControllerLogsRequest } from '../models/Resourcecontrollerk8v3QueryControllerLogsRequest';
+import { Resourcecontrollerk8v3QueryControllerLogsResponse } from '../models/Resourcecontrollerk8v3QueryControllerLogsResponse';
+import { Resourcecontrollerk8v3QueryLogs } from '../models/Resourcecontrollerk8v3QueryLogs';
+import { Resourcecontrollerk8v3Rule } from '../models/Resourcecontrollerk8v3Rule';
+import { Resourcecontrollerk8v3Secret } from '../models/Resourcecontrollerk8v3Secret';
+import { Resourcecontrollerk8v3TenantGUCCreateResponse } from '../models/Resourcecontrollerk8v3TenantGUCCreateResponse';
+import { Resourcecontrollerk8v3TenantGUCStatusResponse } from '../models/Resourcecontrollerk8v3TenantGUCStatusResponse';
+import { Resourcecontrollerk8v3TenantLifecycleResponse } from '../models/Resourcecontrollerk8v3TenantLifecycleResponse';
+import { Resourcecontrollerk8v3TenantResourceResponse } from '../models/Resourcecontrollerk8v3TenantResourceResponse';
+import { Resourcecontrollerk8v3TextContent } from '../models/Resourcecontrollerk8v3TextContent';
+import { Resourcecontrollerk8v3UpdateJobExecutionRequest } from '../models/Resourcecontrollerk8v3UpdateJobExecutionRequest';
+import { Resourcecontrollerk8v3UpdateJobStatusRequest } from '../models/Resourcecontrollerk8v3UpdateJobStatusRequest';
+import { Resourcecontrollerk8v3Version } from '../models/Resourcecontrollerk8v3Version';
 import { Riskanalyticscontrollerv3Action } from '../models/Riskanalyticscontrollerv3Action';
 import { Riskanalyticscontrollerv3CardSettings } from '../models/Riskanalyticscontrollerv3CardSettings';
 import { Riskanalyticscontrollerv3DetailToCount } from '../models/Riskanalyticscontrollerv3DetailToCount';
@@ -859,6 +942,7 @@ import { Riskanalyticscontrollerv3Filter } from '../models/Riskanalyticscontroll
 import { Riskanalyticscontrollerv3Finding } from '../models/Riskanalyticscontrollerv3Finding';
 import { Riskanalyticscontrollerv3FindingDetails } from '../models/Riskanalyticscontrollerv3FindingDetails';
 import { Riskanalyticscontrollerv3FindingDetailsMap } from '../models/Riskanalyticscontrollerv3FindingDetailsMap';
+import { Riskanalyticscontrollerv3FindingReferenceLink } from '../models/Riskanalyticscontrollerv3FindingReferenceLink';
 import { Riskanalyticscontrollerv3GetAllClassificationsListResponse } from '../models/Riskanalyticscontrollerv3GetAllClassificationsListResponse';
 import { Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse } from '../models/Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse';
 import { Riskanalyticscontrollerv3GetRiskEventDetailsResponse } from '../models/Riskanalyticscontrollerv3GetRiskEventDetailsResponse';
@@ -887,6 +971,7 @@ import { Riskanalyticscontrollerv3SetRiskEventStatusResponse } from '../models/R
 import { Riskanalyticscontrollerv3SetUserUISettingsRequest } from '../models/Riskanalyticscontrollerv3SetUserUISettingsRequest';
 import { Riskanalyticscontrollerv3SetUserUISettingsResponse } from '../models/Riskanalyticscontrollerv3SetUserUISettingsResponse';
 import { Riskanalyticscontrollerv3ShortObservation } from '../models/Riskanalyticscontrollerv3ShortObservation';
+import { Riskanalyticscontrollerv3Statistics } from '../models/Riskanalyticscontrollerv3Statistics';
 import { Riskanalyticscontrollerv3Status } from '../models/Riskanalyticscontrollerv3Status';
 import { Riskanalyticscontrollerv3UpdateRiskFeedbackRequest } from '../models/Riskanalyticscontrollerv3UpdateRiskFeedbackRequest';
 import { Riskanalyticscontrollerv3UpdateRiskFeedbackResponse } from '../models/Riskanalyticscontrollerv3UpdateRiskFeedbackResponse';
@@ -987,6 +1072,10 @@ import { SetQuestionBodyParams } from '../models/SetQuestionBodyParams';
 import { SetVulnerabilityStatusRequest } from '../models/SetVulnerabilityStatusRequest';
 import { SignupRequest } from '../models/SignupRequest';
 import { SimpleRecipientSimpleRecipientType } from '../models/SimpleRecipientSimpleRecipientType';
+import { Snifassistv3Feedback } from '../models/Snifassistv3Feedback';
+import { Snifassistv3FeedbackStatus } from '../models/Snifassistv3FeedbackStatus';
+import { Snifassistv3GetSnifConfigResponse } from '../models/Snifassistv3GetSnifConfigResponse';
+import { Snifassistv3PostSnifFeedbackRequest } from '../models/Snifassistv3PostSnifFeedbackRequest';
 import { Snifassistv3SnifAssistResponse } from '../models/Snifassistv3SnifAssistResponse';
 import { Snifassistv3SnifAssistType } from '../models/Snifassistv3SnifAssistType';
 import { Snifassistv3StapConfig } from '../models/Snifassistv3StapConfig';
@@ -996,6 +1085,7 @@ import { Snifassistv3StatusResponseBase } from '../models/Snifassistv3StatusResp
 import { Snifassistv3TestRegexRequest } from '../models/Snifassistv3TestRegexRequest';
 import { SortOrder } from '../models/SortOrder';
 import { StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse } from '../models/StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse';
+import { StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse } from '../models/StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse';
 import { StreamResultOfReportsrunnerv3RunReportResponse } from '../models/StreamResultOfReportsrunnerv3RunReportResponse';
 import { Streamsv3AWSCheckStreamStatus } from '../models/Streamsv3AWSCheckStreamStatus';
 import { Streamsv3AuthType } from '../models/Streamsv3AuthType';
@@ -1026,6 +1116,7 @@ import { Templatesv3DeleteTemplateResponse } from '../models/Templatesv3DeleteTe
 import { Templatesv3GetOriginDefaultContentResponse } from '../models/Templatesv3GetOriginDefaultContentResponse';
 import { Templatesv3GetOriginFieldsResponse } from '../models/Templatesv3GetOriginFieldsResponse';
 import { Templatesv3GetTemplateResponse } from '../models/Templatesv3GetTemplateResponse';
+import { Templatesv3GetTemplatesForEdgeResponse } from '../models/Templatesv3GetTemplatesForEdgeResponse';
 import { Templatesv3GetTemplatesResponse } from '../models/Templatesv3GetTemplatesResponse';
 import { Templatesv3Integration } from '../models/Templatesv3Integration';
 import { Templatesv3MIMEType } from '../models/Templatesv3MIMEType';
@@ -1051,6 +1142,7 @@ import { Tenantuserv3CurrentUserTenant } from '../models/Tenantuserv3CurrentUser
 import { Tenantuserv3DisableUsersBulkResponse } from '../models/Tenantuserv3DisableUsersBulkResponse';
 import { Tenantuserv3ExternalMetadata } from '../models/Tenantuserv3ExternalMetadata';
 import { Tenantuserv3FullUser } from '../models/Tenantuserv3FullUser';
+import { Tenantuserv3GetAPIPrivilegesResponse } from '../models/Tenantuserv3GetAPIPrivilegesResponse';
 import { Tenantuserv3GetApiKeysResponse } from '../models/Tenantuserv3GetApiKeysResponse';
 import { Tenantuserv3GetCurrentUserResponse } from '../models/Tenantuserv3GetCurrentUserResponse';
 import { Tenantuserv3GetPrivilegeResponse } from '../models/Tenantuserv3GetPrivilegeResponse';
@@ -1157,12 +1249,18 @@ import { Workflowv3CaseListResponse } from '../models/Workflowv3CaseListResponse
 import { Workflowv3Comment } from '../models/Workflowv3Comment';
 import { Workflowv3CreateCaseRequest } from '../models/Workflowv3CreateCaseRequest';
 import { Workflowv3CreateCaseResponse } from '../models/Workflowv3CreateCaseResponse';
+import { Workflowv3CreateProductEntityResponse } from '../models/Workflowv3CreateProductEntityResponse';
 import { Workflowv3CreateTaskRequest } from '../models/Workflowv3CreateTaskRequest';
 import { Workflowv3CreateTaskResponse } from '../models/Workflowv3CreateTaskResponse';
 import { Workflowv3DeleteCasesResponse } from '../models/Workflowv3DeleteCasesResponse';
+import { Workflowv3DeleteProductEntityResponse } from '../models/Workflowv3DeleteProductEntityResponse';
 import { Workflowv3DeleteTasksResponse } from '../models/Workflowv3DeleteTasksResponse';
 import { Workflowv3Entity } from '../models/Workflowv3Entity';
+import { Workflowv3EntityDefinition } from '../models/Workflowv3EntityDefinition';
+import { Workflowv3EntityHeader } from '../models/Workflowv3EntityHeader';
+import { Workflowv3EntityHeaderType } from '../models/Workflowv3EntityHeaderType';
 import { Workflowv3EntityType } from '../models/Workflowv3EntityType';
+import { Workflowv3EntityValueChoice } from '../models/Workflowv3EntityValueChoice';
 import { Workflowv3Filter } from '../models/Workflowv3Filter';
 import { Workflowv3FilterColumn } from '../models/Workflowv3FilterColumn';
 import { Workflowv3FilterOperator } from '../models/Workflowv3FilterOperator';
@@ -1171,6 +1269,7 @@ import { Workflowv3GetCasesCountResponse } from '../models/Workflowv3GetCasesCou
 import { Workflowv3GetFilenameResponse } from '../models/Workflowv3GetFilenameResponse';
 import { Workflowv3GetJobsCountRequest } from '../models/Workflowv3GetJobsCountRequest';
 import { Workflowv3GetJobsCountResponse } from '../models/Workflowv3GetJobsCountResponse';
+import { Workflowv3GetProductEntitiesResponse } from '../models/Workflowv3GetProductEntitiesResponse';
 import { Workflowv3GetReportResultResponse } from '../models/Workflowv3GetReportResultResponse';
 import { Workflowv3GetTasksCountRequest } from '../models/Workflowv3GetTasksCountRequest';
 import { Workflowv3GetTasksCountResponse } from '../models/Workflowv3GetTasksCountResponse';
@@ -1178,6 +1277,8 @@ import { Workflowv3JobCount } from '../models/Workflowv3JobCount';
 import { Workflowv3OperatorType } from '../models/Workflowv3OperatorType';
 import { Workflowv3Origin } from '../models/Workflowv3Origin';
 import { Workflowv3Priority } from '../models/Workflowv3Priority';
+import { Workflowv3ProductEntity } from '../models/Workflowv3ProductEntity';
+import { Workflowv3ProductWorkflow } from '../models/Workflowv3ProductWorkflow';
 import { Workflowv3ReportMetadata } from '../models/Workflowv3ReportMetadata';
 import { Workflowv3ReportResult } from '../models/Workflowv3ReportResult';
 import { Workflowv3ReportResultHeader } from '../models/Workflowv3ReportResultHeader';
@@ -1195,90 +1296,12 @@ import { Workflowv3TaskEdit } from '../models/Workflowv3TaskEdit';
 import { Workflowv3TaskListResponse } from '../models/Workflowv3TaskListResponse';
 import { Workflowv3UpdateCasesRequest } from '../models/Workflowv3UpdateCasesRequest';
 import { Workflowv3UpdateCasesResponse } from '../models/Workflowv3UpdateCasesResponse';
+import { Workflowv3UpdateProductEntityRequest } from '../models/Workflowv3UpdateProductEntityRequest';
+import { Workflowv3UpdateProductEntityResponse } from '../models/Workflowv3UpdateProductEntityResponse';
 import { Workflowv3UpdateTasksRequest } from '../models/Workflowv3UpdateTasksRequest';
 import { Workflowv3UpdateTasksResponse } from '../models/Workflowv3UpdateTasksResponse';
-
-import { AnalyticsEventsServiceApiRequestFactory, AnalyticsEventsServiceApiResponseProcessor} from "../apis/AnalyticsEventsServiceApi";
-export class ObservableAnalyticsEventsServiceApi {
-    private requestFactory: AnalyticsEventsServiceApiRequestFactory;
-    private responseProcessor: AnalyticsEventsServiceApiResponseProcessor;
-    private configuration: Configuration;
-
-    public constructor(
-        configuration: Configuration,
-        requestFactory?: AnalyticsEventsServiceApiRequestFactory,
-        responseProcessor?: AnalyticsEventsServiceApiResponseProcessor
-    ) {
-        this.configuration = configuration;
-        this.requestFactory = requestFactory || new AnalyticsEventsServiceApiRequestFactory(configuration);
-        this.responseProcessor = responseProcessor || new AnalyticsEventsServiceApiResponseProcessor();
-    }
-
-    /**
-     * Summary: Delete cache key Description: Return delete key result message.
-     * @param cacheKey The cache key to delete.
-     * @param analyticseventsv3DeleteCacheKeyRequest 
-     */
-    public analyticsEventsServiceDeleteCacheKeyWithHttpInfo(cacheKey: string, analyticseventsv3DeleteCacheKeyRequest: Analyticseventsv3DeleteCacheKeyRequest, _options?: Configuration): Observable<HttpInfo<Analyticseventsv3DeleteCacheKeyResponse>> {
-        const requestContextPromise = this.requestFactory.analyticsEventsServiceDeleteCacheKey(cacheKey, analyticseventsv3DeleteCacheKeyRequest, _options);
-
-        // build promise chain
-        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
-        for (let middleware of this.configuration.middleware) {
-            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
-        }
-
-        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
-            pipe(mergeMap((response: ResponseContext) => {
-                let middlewarePostObservable = of(response);
-                for (let middleware of this.configuration.middleware) {
-                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
-                }
-                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.analyticsEventsServiceDeleteCacheKeyWithHttpInfo(rsp)));
-            }));
-    }
-
-    /**
-     * Summary: Delete cache key Description: Return delete key result message.
-     * @param cacheKey The cache key to delete.
-     * @param analyticseventsv3DeleteCacheKeyRequest 
-     */
-    public analyticsEventsServiceDeleteCacheKey(cacheKey: string, analyticseventsv3DeleteCacheKeyRequest: Analyticseventsv3DeleteCacheKeyRequest, _options?: Configuration): Observable<Analyticseventsv3DeleteCacheKeyResponse> {
-        return this.analyticsEventsServiceDeleteCacheKeyWithHttpInfo(cacheKey, analyticseventsv3DeleteCacheKeyRequest, _options).pipe(map((apiResponse: HttpInfo<Analyticseventsv3DeleteCacheKeyResponse>) => apiResponse.data));
-    }
-
-    /**
-     * Summary: For QS Advisor risk notification only Description: Sends QS Advisor risk notification with recipients and returns a status
-     * @param analyticseventsv3PostQSAdvisorRiskRequest 
-     */
-    public analyticsEventsServicePostQSAdvisorRiskWithHttpInfo(analyticseventsv3PostQSAdvisorRiskRequest: Analyticseventsv3PostQSAdvisorRiskRequest, _options?: Configuration): Observable<HttpInfo<Analyticseventsv3PostQSAdvisorRiskResponse>> {
-        const requestContextPromise = this.requestFactory.analyticsEventsServicePostQSAdvisorRisk(analyticseventsv3PostQSAdvisorRiskRequest, _options);
-
-        // build promise chain
-        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
-        for (let middleware of this.configuration.middleware) {
-            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
-        }
-
-        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
-            pipe(mergeMap((response: ResponseContext) => {
-                let middlewarePostObservable = of(response);
-                for (let middleware of this.configuration.middleware) {
-                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
-                }
-                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.analyticsEventsServicePostQSAdvisorRiskWithHttpInfo(rsp)));
-            }));
-    }
-
-    /**
-     * Summary: For QS Advisor risk notification only Description: Sends QS Advisor risk notification with recipients and returns a status
-     * @param analyticseventsv3PostQSAdvisorRiskRequest 
-     */
-    public analyticsEventsServicePostQSAdvisorRisk(analyticseventsv3PostQSAdvisorRiskRequest: Analyticseventsv3PostQSAdvisorRiskRequest, _options?: Configuration): Observable<Analyticseventsv3PostQSAdvisorRiskResponse> {
-        return this.analyticsEventsServicePostQSAdvisorRiskWithHttpInfo(analyticseventsv3PostQSAdvisorRiskRequest, _options).pipe(map((apiResponse: HttpInfo<Analyticseventsv3PostQSAdvisorRiskResponse>) => apiResponse.data));
-    }
-
-}
+import { Workflowv3WorkflowEvent } from '../models/Workflowv3WorkflowEvent';
+import { Workflowv3WorkflowEventResponse } from '../models/Workflowv3WorkflowEventResponse';
 
 import { AssetsServiceApiRequestFactory, AssetsServiceApiResponseProcessor} from "../apis/AssetsServiceApi";
 export class ObservableAssetsServiceApi {
@@ -3268,9 +3291,10 @@ export class ObservableComplianceAcceleratorApi {
 
     /**
      * Summary: Get compliance info Description: Return stored compliance data.
+     * @param isBrief gives compliance workspace data without reaching out to other services - meant to be quicker for dashboards.
      */
-    public complianceAcceleratorGetComplianceInfoWithHttpInfo(_options?: Configuration): Observable<HttpInfo<Complianceacceleratorv3GetComplianceInfoResponse>> {
-        const requestContextPromise = this.requestFactory.complianceAcceleratorGetComplianceInfo(_options);
+    public complianceAcceleratorGetComplianceInfoWithHttpInfo(isBrief?: boolean, _options?: Configuration): Observable<HttpInfo<Complianceacceleratorv3GetComplianceInfoResponse>> {
+        const requestContextPromise = this.requestFactory.complianceAcceleratorGetComplianceInfo(isBrief, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -3290,9 +3314,10 @@ export class ObservableComplianceAcceleratorApi {
 
     /**
      * Summary: Get compliance info Description: Return stored compliance data.
+     * @param isBrief gives compliance workspace data without reaching out to other services - meant to be quicker for dashboards.
      */
-    public complianceAcceleratorGetComplianceInfo(_options?: Configuration): Observable<Complianceacceleratorv3GetComplianceInfoResponse> {
-        return this.complianceAcceleratorGetComplianceInfoWithHttpInfo(_options).pipe(map((apiResponse: HttpInfo<Complianceacceleratorv3GetComplianceInfoResponse>) => apiResponse.data));
+    public complianceAcceleratorGetComplianceInfo(isBrief?: boolean, _options?: Configuration): Observable<Complianceacceleratorv3GetComplianceInfoResponse> {
+        return this.complianceAcceleratorGetComplianceInfoWithHttpInfo(isBrief, _options).pipe(map((apiResponse: HttpInfo<Complianceacceleratorv3GetComplianceInfoResponse>) => apiResponse.data));
     }
 
     /**
@@ -3621,6 +3646,39 @@ export class ObservableConnectionsServiceApi {
      */
     public connectionsServiceDeletePlugin(id: string, _options?: Configuration): Observable<Connectionsv3DeletePluginResponse> {
         return this.connectionsServiceDeletePluginWithHttpInfo(id, _options).pipe(map((apiResponse: HttpInfo<Connectionsv3DeletePluginResponse>) => apiResponse.data));
+    }
+
+    /**
+     * Summary: Generate package. Description: Generate package.
+     * @param id id
+     * @param connectionsv3GeneratePackageRequest 
+     */
+    public connectionsServiceGeneratePackageWithHttpInfo(id: string, connectionsv3GeneratePackageRequest: Connectionsv3GeneratePackageRequest, _options?: Configuration): Observable<HttpInfo<Connectionsv3GeneratePackageResponse>> {
+        const requestContextPromise = this.requestFactory.connectionsServiceGeneratePackage(id, connectionsv3GeneratePackageRequest, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.connectionsServiceGeneratePackageWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Summary: Generate package. Description: Generate package.
+     * @param id id
+     * @param connectionsv3GeneratePackageRequest 
+     */
+    public connectionsServiceGeneratePackage(id: string, connectionsv3GeneratePackageRequest: Connectionsv3GeneratePackageRequest, _options?: Configuration): Observable<Connectionsv3GeneratePackageResponse> {
+        return this.connectionsServiceGeneratePackageWithHttpInfo(id, connectionsv3GeneratePackageRequest, _options).pipe(map((apiResponse: HttpInfo<Connectionsv3GeneratePackageResponse>) => apiResponse.data));
     }
 
     /**
@@ -4173,6 +4231,37 @@ export class ObservableConnectionsServiceApi {
      */
     public connectionsServiceUpdateSettings(connectionsv3UpdateSettingsRequest: Connectionsv3UpdateSettingsRequest, _options?: Configuration): Observable<any> {
         return this.connectionsServiceUpdateSettingsWithHttpInfo(connectionsv3UpdateSettingsRequest, _options).pipe(map((apiResponse: HttpInfo<any>) => apiResponse.data));
+    }
+
+    /**
+     * Summary: Validate an AWS connection. Description: Validate an AWS connection.
+     * @param connectionsv3ValidateAwsConnectionRequest 
+     */
+    public connectionsServiceValidateAwsConnectionWithHttpInfo(connectionsv3ValidateAwsConnectionRequest: Connectionsv3ValidateAwsConnectionRequest, _options?: Configuration): Observable<HttpInfo<Connectionsv3ValidateConnectionResponse>> {
+        const requestContextPromise = this.requestFactory.connectionsServiceValidateAwsConnection(connectionsv3ValidateAwsConnectionRequest, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.connectionsServiceValidateAwsConnectionWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Summary: Validate an AWS connection. Description: Validate an AWS connection.
+     * @param connectionsv3ValidateAwsConnectionRequest 
+     */
+    public connectionsServiceValidateAwsConnection(connectionsv3ValidateAwsConnectionRequest: Connectionsv3ValidateAwsConnectionRequest, _options?: Configuration): Observable<Connectionsv3ValidateConnectionResponse> {
+        return this.connectionsServiceValidateAwsConnectionWithHttpInfo(connectionsv3ValidateAwsConnectionRequest, _options).pipe(map((apiResponse: HttpInfo<Connectionsv3ValidateConnectionResponse>) => apiResponse.data));
     }
 
 }
@@ -6228,6 +6317,152 @@ export class ObservableEcosystemServiceApi {
         return this.ecosystemServicePurgeDataWithHttpInfo(datasetNames, _options).pipe(map((apiResponse: HttpInfo<Ecosystemv3PurgeDataResponse>) => apiResponse.data));
     }
 
+    /**
+     * Summary: Test integration Description: Test the integration connection with the arguments passed in the TestIntegrationRequest.  When possible a test message is sent to the integration to ensure it is functional. Currently this API only supports API_IMPORT type integrations
+     * @param ecosystemv3TestIntegrationRequest 
+     */
+    public ecosystemServiceTestIntegrationWithHttpInfo(ecosystemv3TestIntegrationRequest: Ecosystemv3TestIntegrationRequest, _options?: Configuration): Observable<HttpInfo<Ecosystemv3TestIntegrationResponse>> {
+        const requestContextPromise = this.requestFactory.ecosystemServiceTestIntegration(ecosystemv3TestIntegrationRequest, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.ecosystemServiceTestIntegrationWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Summary: Test integration Description: Test the integration connection with the arguments passed in the TestIntegrationRequest.  When possible a test message is sent to the integration to ensure it is functional. Currently this API only supports API_IMPORT type integrations
+     * @param ecosystemv3TestIntegrationRequest 
+     */
+    public ecosystemServiceTestIntegration(ecosystemv3TestIntegrationRequest: Ecosystemv3TestIntegrationRequest, _options?: Configuration): Observable<Ecosystemv3TestIntegrationResponse> {
+        return this.ecosystemServiceTestIntegrationWithHttpInfo(ecosystemv3TestIntegrationRequest, _options).pipe(map((apiResponse: HttpInfo<Ecosystemv3TestIntegrationResponse>) => apiResponse.data));
+    }
+
+}
+
+import { EdgeSchedulerServiceApiRequestFactory, EdgeSchedulerServiceApiResponseProcessor} from "../apis/EdgeSchedulerServiceApi";
+export class ObservableEdgeSchedulerServiceApi {
+    private requestFactory: EdgeSchedulerServiceApiRequestFactory;
+    private responseProcessor: EdgeSchedulerServiceApiResponseProcessor;
+    private configuration: Configuration;
+
+    public constructor(
+        configuration: Configuration,
+        requestFactory?: EdgeSchedulerServiceApiRequestFactory,
+        responseProcessor?: EdgeSchedulerServiceApiResponseProcessor
+    ) {
+        this.configuration = configuration;
+        this.requestFactory = requestFactory || new EdgeSchedulerServiceApiRequestFactory(configuration);
+        this.responseProcessor = responseProcessor || new EdgeSchedulerServiceApiResponseProcessor();
+    }
+
+    /**
+     * Summary: Get edge query status Description: Get the status of a queued edge query
+     * @param edgeId the id of the edge
+     * @param edgeResultReportId the id of the UC report being queried for.
+     */
+    public edgeSchedulerServiceGetEdgeQueryStatusWithHttpInfo(edgeId: string, edgeResultReportId?: string, _options?: Configuration): Observable<HttpInfo<Edgeschedulerv3GetEdgeQueryStatusResponse>> {
+        const requestContextPromise = this.requestFactory.edgeSchedulerServiceGetEdgeQueryStatus(edgeId, edgeResultReportId, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.edgeSchedulerServiceGetEdgeQueryStatusWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Summary: Get edge query status Description: Get the status of a queued edge query
+     * @param edgeId the id of the edge
+     * @param edgeResultReportId the id of the UC report being queried for.
+     */
+    public edgeSchedulerServiceGetEdgeQueryStatus(edgeId: string, edgeResultReportId?: string, _options?: Configuration): Observable<Edgeschedulerv3GetEdgeQueryStatusResponse> {
+        return this.edgeSchedulerServiceGetEdgeQueryStatusWithHttpInfo(edgeId, edgeResultReportId, _options).pipe(map((apiResponse: HttpInfo<Edgeschedulerv3GetEdgeQueryStatusResponse>) => apiResponse.data));
+    }
+
+    /**
+     * Summary: Monitor for a pending edge query request Description: monitor edge query pending request
+     * @param clientId edge client id to monitor edge query requests for.
+     */
+    public edgeSchedulerServiceMonitoringPendingRequestForEdgeQueryWithHttpInfo(clientId?: string, _options?: Configuration): Observable<HttpInfo<StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse>> {
+        const requestContextPromise = this.requestFactory.edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery(clientId, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.edgeSchedulerServiceMonitoringPendingRequestForEdgeQueryWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Summary: Monitor for a pending edge query request Description: monitor edge query pending request
+     * @param clientId edge client id to monitor edge query requests for.
+     */
+    public edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery(clientId?: string, _options?: Configuration): Observable<StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse> {
+        return this.edgeSchedulerServiceMonitoringPendingRequestForEdgeQueryWithHttpInfo(clientId, _options).pipe(map((apiResponse: HttpInfo<StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse>) => apiResponse.data));
+    }
+
+    /**
+     * Summary: Schedule an edge query  Description: Schedule an edge query via data warehouse queue
+     * @param edgeId the id of the edge
+     * @param edgeschedulerv3ScheduleEdgeQueryRequest 
+     */
+    public edgeSchedulerServiceScheduleEdgeQueryWithHttpInfo(edgeId: string, edgeschedulerv3ScheduleEdgeQueryRequest: Edgeschedulerv3ScheduleEdgeQueryRequest, _options?: Configuration): Observable<HttpInfo<Edgeschedulerv3ScheduleEdgeQueryResponse>> {
+        const requestContextPromise = this.requestFactory.edgeSchedulerServiceScheduleEdgeQuery(edgeId, edgeschedulerv3ScheduleEdgeQueryRequest, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.edgeSchedulerServiceScheduleEdgeQueryWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Summary: Schedule an edge query  Description: Schedule an edge query via data warehouse queue
+     * @param edgeId the id of the edge
+     * @param edgeschedulerv3ScheduleEdgeQueryRequest 
+     */
+    public edgeSchedulerServiceScheduleEdgeQuery(edgeId: string, edgeschedulerv3ScheduleEdgeQueryRequest: Edgeschedulerv3ScheduleEdgeQueryRequest, _options?: Configuration): Observable<Edgeschedulerv3ScheduleEdgeQueryResponse> {
+        return this.edgeSchedulerServiceScheduleEdgeQueryWithHttpInfo(edgeId, edgeschedulerv3ScheduleEdgeQueryRequest, _options).pipe(map((apiResponse: HttpInfo<Edgeschedulerv3ScheduleEdgeQueryResponse>) => apiResponse.data));
+    }
+
 }
 
 import { FeatureFlagsServiceApiRequestFactory, FeatureFlagsServiceApiResponseProcessor} from "../apis/FeatureFlagsServiceApi";
@@ -6618,7 +6853,7 @@ export class ObservableGroupBuilderApi {
     }
 
     /**
-     * Summary: Get gdp to gi group mapping Description: Get insights to gdp group sync mapping.
+     * Summary: Get GDP to gi group mapping Description: Get GDSC to GDP group sync mapping.
      * @param centralManagerId Central manager.
      */
     public groupBuilderGetGroupSyncMappingWithHttpInfo(centralManagerId?: string, _options?: Configuration): Observable<HttpInfo<Groupbuilderv3GetGroupSyncMappingResponse>> {
@@ -6641,7 +6876,7 @@ export class ObservableGroupBuilderApi {
     }
 
     /**
-     * Summary: Get gdp to gi group mapping Description: Get insights to gdp group sync mapping.
+     * Summary: Get GDP to gi group mapping Description: Get GDSC to GDP group sync mapping.
      * @param centralManagerId Central manager.
      */
     public groupBuilderGetGroupSyncMapping(centralManagerId?: string, _options?: Configuration): Observable<Groupbuilderv3GetGroupSyncMappingResponse> {
@@ -6649,7 +6884,7 @@ export class ObservableGroupBuilderApi {
     }
 
     /**
-     * Summary: Get group type mapping Description: Get insights to gdp group types mapping.
+     * Summary: Get group type mapping Description: Get GDSC to GDP group types mapping.
      */
     public groupBuilderGetGroupTypeMappingWithHttpInfo(_options?: Configuration): Observable<HttpInfo<Groupbuilderv3GetGroupTypeMappingResponse>> {
         const requestContextPromise = this.requestFactory.groupBuilderGetGroupTypeMapping(_options);
@@ -6671,7 +6906,7 @@ export class ObservableGroupBuilderApi {
     }
 
     /**
-     * Summary: Get group type mapping Description: Get insights to gdp group types mapping.
+     * Summary: Get group type mapping Description: Get GDSC to GDP group types mapping.
      */
     public groupBuilderGetGroupTypeMapping(_options?: Configuration): Observable<Groupbuilderv3GetGroupTypeMappingResponse> {
         return this.groupBuilderGetGroupTypeMappingWithHttpInfo(_options).pipe(map((apiResponse: HttpInfo<Groupbuilderv3GetGroupTypeMappingResponse>) => apiResponse.data));
@@ -6981,7 +7216,7 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Description: stores datamarts details from GDP
+     * Description: stores datamarts details from GDP. (This API is called from GDP only)
      * @param centralManagerId central manager
      * @param guardiumconnectorv3AddDatamartsRequest 
      */
@@ -7005,7 +7240,7 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Description: stores datamarts details from GDP
+     * Description: stores datamarts details from GDP. (This API is called from GDP only)
      * @param centralManagerId central manager
      * @param guardiumconnectorv3AddDatamartsRequest 
      */
@@ -7045,7 +7280,7 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Add task Description: Add a task to be executed on GDP.
+     * Summary: Add task Description: Add a task to be executed on GDP. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param guardiumconnectorv3AddTaskRequest 
      */
@@ -7069,7 +7304,7 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Add task Description: Add a task to be executed on GDP.
+     * Summary: Add task Description: Add a task to be executed on GDP. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param guardiumconnectorv3AddTaskRequest 
      */
@@ -7208,7 +7443,7 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Description: validates if central manager has datamart support for event model
+     * Description: validates if central manager has v5 datamart support. (This API is called from GDP only)
      * @param centralManagerId Central manager
      * @param guardiumconnectorv3DatamartVersionRequest 
      */
@@ -7232,7 +7467,7 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Description: validates if central manager has datamart support for event model
+     * Description: validates if central manager has v5 datamart support. (This API is called from GDP only)
      * @param centralManagerId Central manager
      * @param guardiumconnectorv3DatamartVersionRequest 
      */
@@ -7305,7 +7540,7 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Delete task Description: Delete a task by central manager id and task id.
+     * Summary: Delete task Description: Delete a task by central manager id and task id. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param taskId ID of task being deleted.
      */
@@ -7329,7 +7564,7 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Delete task Description: Delete a task by central manager id and task id.
+     * Summary: Delete task Description: Delete a task by central manager id and task id. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param taskId ID of task being deleted.
      */
@@ -7338,7 +7573,7 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Delete tasks Description: Delete a central manager\'s tasks by central manager id.
+     * Summary: Delete tasks Description: Delete a central manager\'s tasks by central manager id. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      */
     public guardiumConnectorDeleteTasksWithHttpInfo(centralManagerId: string, _options?: Configuration): Observable<HttpInfo<Guardiumconnectorv3DeleteTasksResponse>> {
@@ -7361,7 +7596,7 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Delete tasks Description: Delete a central manager\'s tasks by central manager id.
+     * Summary: Delete tasks Description: Delete a central manager\'s tasks by central manager id. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      */
     public guardiumConnectorDeleteTasks(centralManagerId: string, _options?: Configuration): Observable<Guardiumconnectorv3DeleteTasksResponse> {
@@ -7615,9 +7850,9 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Get gealth info Description: Get health information from Guardium Data Protection central mamangers.
+     * Summary: Get health info Description: Get health information from Guardium Data Protection central mamangers. (This API is for CMs registered in legacy pull mode. Supported on-premises only)
      * @param centralManagerId Central Manager ID.
-     * @param useFallback Flag indicating if the older gdp api is to be called in case it doesn\&#39;t support new api.
+     * @param useFallback Flag indicating if the older GDP api is to be called in case it doesn\&#39;t support new api.
      */
     public guardiumConnectorGetHealthInfoWithHttpInfo(centralManagerId: string, useFallback?: boolean, _options?: Configuration): Observable<HttpInfo<Guardiumconnectorv3GetHealthInfoResponse>> {
         const requestContextPromise = this.requestFactory.guardiumConnectorGetHealthInfo(centralManagerId, useFallback, _options);
@@ -7639,16 +7874,16 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Get gealth info Description: Get health information from Guardium Data Protection central mamangers.
+     * Summary: Get health info Description: Get health information from Guardium Data Protection central mamangers. (This API is for CMs registered in legacy pull mode. Supported on-premises only)
      * @param centralManagerId Central Manager ID.
-     * @param useFallback Flag indicating if the older gdp api is to be called in case it doesn\&#39;t support new api.
+     * @param useFallback Flag indicating if the older GDP api is to be called in case it doesn\&#39;t support new api.
      */
     public guardiumConnectorGetHealthInfo(centralManagerId: string, useFallback?: boolean, _options?: Configuration): Observable<Guardiumconnectorv3GetHealthInfoResponse> {
         return this.guardiumConnectorGetHealthInfoWithHttpInfo(centralManagerId, useFallback, _options).pipe(map((apiResponse: HttpInfo<Guardiumconnectorv3GetHealthInfoResponse>) => apiResponse.data));
     }
 
     /**
-     * Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for Guardium.
+     * Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for GDSC.
      * @param centralManagerId Central Manager ID.
      */
     public guardiumConnectorGetLatestDMExtractionProfileWithHttpInfo(centralManagerId: string, _options?: Configuration): Observable<HttpInfo<Guardiumconnectorv3GetLatestDMExtractionProfileResponse>> {
@@ -7671,7 +7906,7 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for Guardium.
+     * Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for GDSC.
      * @param centralManagerId Central Manager ID.
      */
     public guardiumConnectorGetLatestDMExtractionProfile(centralManagerId: string, _options?: Configuration): Observable<Guardiumconnectorv3GetLatestDMExtractionProfileResponse> {
@@ -7710,7 +7945,7 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Get sync DMs Description: Return the list of tasks from a central manager.
+     * Summary: Get sync DMs Description: Return the list of tasks from a central manager. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      */
     public guardiumConnectorGetSyncDMsWithHttpInfo(centralManagerId: string, _options?: Configuration): Observable<HttpInfo<Guardiumconnectorv3GetSyncDMsResponse>> {
@@ -7733,7 +7968,7 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Get sync DMs Description: Return the list of tasks from a central manager.
+     * Summary: Get sync DMs Description: Return the list of tasks from a central manager. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      */
     public guardiumConnectorGetSyncDMs(centralManagerId: string, _options?: Configuration): Observable<Guardiumconnectorv3GetSyncDMsResponse> {
@@ -7770,7 +8005,7 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Get tasks Description: Return the list of tasks from a central manager.
+     * Summary: Get tasks Description: Return the list of tasks from a central manager. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param taskId ID of task.
      * @param taskType Type of task.
@@ -7796,7 +8031,7 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Get tasks Description: Return the list of tasks from a central manager.
+     * Summary: Get tasks Description: Return the list of tasks from a central manager. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param taskId ID of task.
      * @param taskType Type of task.
@@ -7807,7 +8042,7 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Run GDP report Description: Run GDP report.
+     * Summary: Run GDP report Description: Run GDP report. (This API is for CMs registered in legacy pull mode. Supported on-premises only)
      * @param centralManagerId Central Manager ID.
      * @param guardiumconnectorv3RunGDPReportRequest 
      */
@@ -7831,7 +8066,7 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Run GDP report Description: Run GDP report.
+     * Summary: Run GDP report Description: Run GDP report. (This API is for CMs registered in legacy pull mode. Supported on-premises only)
      * @param centralManagerId Central Manager ID.
      * @param guardiumconnectorv3RunGDPReportRequest 
      */
@@ -7840,7 +8075,7 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Setup CM Description: Set up the registration between a GDP Central manager and Guardium.
+     * Summary: Setup CM Description: Set up the registration between a GDP Central manager and GDSC. (This API is called from GDP only)
      * @param guardiumconnectorv3SetupCMRequest 
      */
     public guardiumConnectorSetupCMWithHttpInfo(guardiumconnectorv3SetupCMRequest: Guardiumconnectorv3SetupCMRequest, _options?: Configuration): Observable<HttpInfo<Guardiumconnectorv3SetupCMResponse>> {
@@ -7863,7 +8098,7 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Setup CM Description: Set up the registration between a GDP Central manager and Guardium.
+     * Summary: Setup CM Description: Set up the registration between a GDP Central manager and GDSC. (This API is called from GDP only)
      * @param guardiumconnectorv3SetupCMRequest 
      */
     public guardiumConnectorSetupCM(guardiumconnectorv3SetupCMRequest: Guardiumconnectorv3SetupCMRequest, _options?: Configuration): Observable<Guardiumconnectorv3SetupCMResponse> {
@@ -7904,7 +8139,7 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Task error Description: Log error messages from GDP task execution.
+     * Summary: Task error Description: Log error messages from GDP task execution. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param guardiumconnectorv3TaskErrorRequest 
      */
@@ -7928,7 +8163,7 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Task error Description: Log error messages from GDP task execution.
+     * Summary: Task error Description: Log error messages from GDP task execution. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param guardiumconnectorv3TaskErrorRequest 
      */
@@ -7999,7 +8234,7 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Update streaming Description: Update streaming status into GI.
+     * Summary: Update streaming Description: Update streaming status into GI. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param guardiumconnectorv3UpdateStreamingRequest 
      */
@@ -8023,7 +8258,7 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Update streaming Description: Update streaming status into GI.
+     * Summary: Update streaming Description: Update streaming status into GI. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param guardiumconnectorv3UpdateStreamingRequest 
      */
@@ -8032,7 +8267,7 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Update task Description: Update a task that gets executed on GDP.
+     * Summary: Update task Description: Update a task that gets executed on GDP. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param taskId ID of task being updated.
      * @param guardiumconnectorv3UpdateTaskRequest 
@@ -8057,7 +8292,7 @@ export class ObservableGuardiumConnectorApi {
     }
 
     /**
-     * Summary: Update task Description: Update a task that gets executed on GDP.
+     * Summary: Update task Description: Update a task that gets executed on GDP. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param taskId ID of task being updated.
      * @param guardiumconnectorv3UpdateTaskRequest 
@@ -8085,7 +8320,7 @@ export class ObservableHealthCollectorApi {
     }
 
     /**
-     * Summary: Get data warehouse usage info Description: Get information from Db2 related to usage
+     * Summary: Get data warehouse usage info Description: Get information from data warehouse related to usage
      * @param type The type of metric to retrieve
      * @param startTime The start time from which the data needs to be calculated.
      * @param endTime The end time from which the data needs to be calculated.
@@ -8110,7 +8345,7 @@ export class ObservableHealthCollectorApi {
     }
 
     /**
-     * Summary: Get data warehouse usage info Description: Get information from Db2 related to usage
+     * Summary: Get data warehouse usage info Description: Get information from data warehouse related to usage
      * @param type The type of metric to retrieve
      * @param startTime The start time from which the data needs to be calculated.
      * @param endTime The end time from which the data needs to be calculated.
@@ -8948,12 +9183,13 @@ export class ObservableNotificationsServiceApi {
      * @param filterState Only return record that include the specified state.
      * @param filterOrigins Only return record that includes the specified origins.
      * @param filterOriginData Only return record that with the specified origin_data.
+     * @param filterLimit The max amount of rows to return for this single query.
      * @param offset The amount to offset the rows by for pagination.
      * @param limit The max amount of rows to return for pagination.
      * @param includeFilterCounts Computing the filter counts is relatively expensive, only compute when needed.
      */
-    public notificationsServiceGetNotificationRecordsWithHttpInfo(filterStartTime?: Date, filterEndTime?: Date, filterState?: 'INCLUDE_ALL' | 'UNREAD_ONLY' | 'READ_ONLY' | 'COMPLETE_ONLY' | 'NOT_COMPLETE', filterOrigins?: Array<string>, filterOriginData?: string, offset?: number, limit?: number, includeFilterCounts?: boolean, _options?: Configuration): Observable<HttpInfo<Notificationsv3GetNotificationRecordsResponse>> {
-        const requestContextPromise = this.requestFactory.notificationsServiceGetNotificationRecords(filterStartTime, filterEndTime, filterState, filterOrigins, filterOriginData, offset, limit, includeFilterCounts, _options);
+    public notificationsServiceGetNotificationRecordsWithHttpInfo(filterStartTime?: Date, filterEndTime?: Date, filterState?: 'INCLUDE_ALL' | 'UNREAD_ONLY' | 'READ_ONLY' | 'COMPLETE_ONLY' | 'NOT_COMPLETE', filterOrigins?: Array<string>, filterOriginData?: string, filterLimit?: number, offset?: number, limit?: number, includeFilterCounts?: boolean, _options?: Configuration): Observable<HttpInfo<Notificationsv3GetNotificationRecordsResponse>> {
+        const requestContextPromise = this.requestFactory.notificationsServiceGetNotificationRecords(filterStartTime, filterEndTime, filterState, filterOrigins, filterOriginData, filterLimit, offset, limit, includeFilterCounts, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -8978,12 +9214,13 @@ export class ObservableNotificationsServiceApi {
      * @param filterState Only return record that include the specified state.
      * @param filterOrigins Only return record that includes the specified origins.
      * @param filterOriginData Only return record that with the specified origin_data.
+     * @param filterLimit The max amount of rows to return for this single query.
      * @param offset The amount to offset the rows by for pagination.
      * @param limit The max amount of rows to return for pagination.
      * @param includeFilterCounts Computing the filter counts is relatively expensive, only compute when needed.
      */
-    public notificationsServiceGetNotificationRecords(filterStartTime?: Date, filterEndTime?: Date, filterState?: 'INCLUDE_ALL' | 'UNREAD_ONLY' | 'READ_ONLY' | 'COMPLETE_ONLY' | 'NOT_COMPLETE', filterOrigins?: Array<string>, filterOriginData?: string, offset?: number, limit?: number, includeFilterCounts?: boolean, _options?: Configuration): Observable<Notificationsv3GetNotificationRecordsResponse> {
-        return this.notificationsServiceGetNotificationRecordsWithHttpInfo(filterStartTime, filterEndTime, filterState, filterOrigins, filterOriginData, offset, limit, includeFilterCounts, _options).pipe(map((apiResponse: HttpInfo<Notificationsv3GetNotificationRecordsResponse>) => apiResponse.data));
+    public notificationsServiceGetNotificationRecords(filterStartTime?: Date, filterEndTime?: Date, filterState?: 'INCLUDE_ALL' | 'UNREAD_ONLY' | 'READ_ONLY' | 'COMPLETE_ONLY' | 'NOT_COMPLETE', filterOrigins?: Array<string>, filterOriginData?: string, filterLimit?: number, offset?: number, limit?: number, includeFilterCounts?: boolean, _options?: Configuration): Observable<Notificationsv3GetNotificationRecordsResponse> {
+        return this.notificationsServiceGetNotificationRecordsWithHttpInfo(filterStartTime, filterEndTime, filterState, filterOrigins, filterOriginData, filterLimit, offset, limit, includeFilterCounts, _options).pipe(map((apiResponse: HttpInfo<Notificationsv3GetNotificationRecordsResponse>) => apiResponse.data));
     }
 
     /**
@@ -9017,6 +9254,68 @@ export class ObservableNotificationsServiceApi {
      */
     public notificationsServiceGetTicketStatus(ticketId?: string, integrationId?: string, _options?: Configuration): Observable<Notificationsv3GetTicketStatusResponse> {
         return this.notificationsServiceGetTicketStatusWithHttpInfo(ticketId, integrationId, _options).pipe(map((apiResponse: HttpInfo<Notificationsv3GetTicketStatusResponse>) => apiResponse.data));
+    }
+
+    /**
+     * Summary: For PostNotificationRecord notification only Description: Sends notification with recipients and returns a status
+     * @param notificationsv3PostNotificationRecordRequest 
+     */
+    public notificationsServicePostNotificationRecordWithHttpInfo(notificationsv3PostNotificationRecordRequest: Notificationsv3PostNotificationRecordRequest, _options?: Configuration): Observable<HttpInfo<Notificationsv3PostNotificationRecordResponse>> {
+        const requestContextPromise = this.requestFactory.notificationsServicePostNotificationRecord(notificationsv3PostNotificationRecordRequest, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.notificationsServicePostNotificationRecordWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Summary: For PostNotificationRecord notification only Description: Sends notification with recipients and returns a status
+     * @param notificationsv3PostNotificationRecordRequest 
+     */
+    public notificationsServicePostNotificationRecord(notificationsv3PostNotificationRecordRequest: Notificationsv3PostNotificationRecordRequest, _options?: Configuration): Observable<Notificationsv3PostNotificationRecordResponse> {
+        return this.notificationsServicePostNotificationRecordWithHttpInfo(notificationsv3PostNotificationRecordRequest, _options).pipe(map((apiResponse: HttpInfo<Notificationsv3PostNotificationRecordResponse>) => apiResponse.data));
+    }
+
+    /**
+     * Summary: Search notification records Description: Return notification records using pipeline of filters
+     * @param notificationsv3SearchNotificationRecordsRequest 
+     */
+    public notificationsServiceSearchNotificationRecordsWithHttpInfo(notificationsv3SearchNotificationRecordsRequest: Notificationsv3SearchNotificationRecordsRequest, _options?: Configuration): Observable<HttpInfo<Notificationsv3SearchNotificationRecordsResponse>> {
+        const requestContextPromise = this.requestFactory.notificationsServiceSearchNotificationRecords(notificationsv3SearchNotificationRecordsRequest, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.notificationsServiceSearchNotificationRecordsWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Summary: Search notification records Description: Return notification records using pipeline of filters
+     * @param notificationsv3SearchNotificationRecordsRequest 
+     */
+    public notificationsServiceSearchNotificationRecords(notificationsv3SearchNotificationRecordsRequest: Notificationsv3SearchNotificationRecordsRequest, _options?: Configuration): Observable<Notificationsv3SearchNotificationRecordsResponse> {
+        return this.notificationsServiceSearchNotificationRecordsWithHttpInfo(notificationsv3SearchNotificationRecordsRequest, _options).pipe(map((apiResponse: HttpInfo<Notificationsv3SearchNotificationRecordsResponse>) => apiResponse.data));
     }
 
     /**
@@ -9337,7 +9636,7 @@ export class ObservablePipelineconfigServiceApi {
     }
 
     /**
-     * Summary: Delete a tenant resource Description: Delete tenant specific resources such as db2, mongo, postgres and s3.
+     * Summary: Delete a tenant resource Description: Delete tenant specific resources such as data warehouse, mongo, postgres and s3.
      * @param tenantId unique tenant ID
      * @param resource resource specifies the specific resource to delete
      */
@@ -9361,7 +9660,7 @@ export class ObservablePipelineconfigServiceApi {
     }
 
     /**
-     * Summary: Delete a tenant resource Description: Delete tenant specific resources such as db2, mongo, postgres and s3.
+     * Summary: Delete a tenant resource Description: Delete tenant specific resources such as data warehouse, mongo, postgres and s3.
      * @param tenantId unique tenant ID
      * @param resource resource specifies the specific resource to delete
      */
@@ -9758,7 +10057,7 @@ export class ObservablePolicyBuilderApi {
     }
 
     /**
-     * Summary: Insert gdp policy summaries Description: Inserts GDP\'s CM\'s policy summary information into mogodb. (This API is called from GDP only)
+     * Summary: Insert GDP policy summaries Description: Inserts GDP\'s CM\'s policy summary information into mogodb. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param policybuilderv3InsertGdpPolicyMetaDataRequest 
      */
@@ -9782,7 +10081,7 @@ export class ObservablePolicyBuilderApi {
     }
 
     /**
-     * Summary: Insert gdp policy summaries Description: Inserts GDP\'s CM\'s policy summary information into mogodb. (This API is called from GDP only)
+     * Summary: Insert GDP policy summaries Description: Inserts GDP\'s CM\'s policy summary information into mogodb. (This API is called from GDP only)
      * @param centralManagerId ID of central manager.
      * @param policybuilderv3InsertGdpPolicyMetaDataRequest 
      */
@@ -9951,6 +10250,86 @@ export class ObservablePolicyBuilderApi {
 
 }
 
+import { QSDataLoaderApiRequestFactory, QSDataLoaderApiResponseProcessor} from "../apis/QSDataLoaderApi";
+export class ObservableQSDataLoaderApi {
+    private requestFactory: QSDataLoaderApiRequestFactory;
+    private responseProcessor: QSDataLoaderApiResponseProcessor;
+    private configuration: Configuration;
+
+    public constructor(
+        configuration: Configuration,
+        requestFactory?: QSDataLoaderApiRequestFactory,
+        responseProcessor?: QSDataLoaderApiResponseProcessor
+    ) {
+        this.configuration = configuration;
+        this.requestFactory = requestFactory || new QSDataLoaderApiRequestFactory(configuration);
+        this.responseProcessor = responseProcessor || new QSDataLoaderApiResponseProcessor();
+    }
+
+    /**
+     * QSfileValidator - validate the files before insert happend .
+     * @param qsdataloaderv3QSfileValidatorRequest 
+     */
+    public qSDataLoaderQSfileValidatorWithHttpInfo(qsdataloaderv3QSfileValidatorRequest: Qsdataloaderv3QSfileValidatorRequest, _options?: Configuration): Observable<HttpInfo<Qsdataloaderv3QSfileValidatorResonse>> {
+        const requestContextPromise = this.requestFactory.qSDataLoaderQSfileValidator(qsdataloaderv3QSfileValidatorRequest, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.qSDataLoaderQSfileValidatorWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * QSfileValidator - validate the files before insert happend .
+     * @param qsdataloaderv3QSfileValidatorRequest 
+     */
+    public qSDataLoaderQSfileValidator(qsdataloaderv3QSfileValidatorRequest: Qsdataloaderv3QSfileValidatorRequest, _options?: Configuration): Observable<Qsdataloaderv3QSfileValidatorResonse> {
+        return this.qSDataLoaderQSfileValidatorWithHttpInfo(qsdataloaderv3QSfileValidatorRequest, _options).pipe(map((apiResponse: HttpInfo<Qsdataloaderv3QSfileValidatorResonse>) => apiResponse.data));
+    }
+
+    /**
+     * UploadSyntheticDataLoader - Insert data into Db after read from .sql file .
+     * @param body 
+     */
+    public qSDataLoaderUploadSyntheticDataLoaderWithHttpInfo(body: any, _options?: Configuration): Observable<HttpInfo<Qsdataloaderv3QSyntheticDataLoaderResonse>> {
+        const requestContextPromise = this.requestFactory.qSDataLoaderUploadSyntheticDataLoader(body, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.qSDataLoaderUploadSyntheticDataLoaderWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * UploadSyntheticDataLoader - Insert data into Db after read from .sql file .
+     * @param body 
+     */
+    public qSDataLoaderUploadSyntheticDataLoader(body: any, _options?: Configuration): Observable<Qsdataloaderv3QSyntheticDataLoaderResonse> {
+        return this.qSDataLoaderUploadSyntheticDataLoaderWithHttpInfo(body, _options).pipe(map((apiResponse: HttpInfo<Qsdataloaderv3QSyntheticDataLoaderResonse>) => apiResponse.data));
+    }
+
+}
+
 import { QSDataManagerApiRequestFactory, QSDataManagerApiResponseProcessor} from "../apis/QSDataManagerApi";
 export class ObservableQSDataManagerApi {
     private requestFactory: QSDataManagerApiRequestFactory;
@@ -9994,6 +10373,35 @@ export class ObservableQSDataManagerApi {
      */
     public qSDataManagerGetMasterData(_options?: Configuration): Observable<Qspmdatamanagerv3MasterDataResponse> {
         return this.qSDataManagerGetMasterDataWithHttpInfo(_options).pipe(map((apiResponse: HttpInfo<Qspmdatamanagerv3MasterDataResponse>) => apiResponse.data));
+    }
+
+    /**
+     * Summary: Plugins Details Description: Retrieves All plugins information.
+     */
+    public qSDataManagerGetPluginDataWithHttpInfo(_options?: Configuration): Observable<HttpInfo<Qspmdatamanagerv3PluginDataResponse>> {
+        const requestContextPromise = this.requestFactory.qSDataManagerGetPluginData(_options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.qSDataManagerGetPluginDataWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Summary: Plugins Details Description: Retrieves All plugins information.
+     */
+    public qSDataManagerGetPluginData(_options?: Configuration): Observable<Qspmdatamanagerv3PluginDataResponse> {
+        return this.qSDataManagerGetPluginDataWithHttpInfo(_options).pipe(map((apiResponse: HttpInfo<Qspmdatamanagerv3PluginDataResponse>) => apiResponse.data));
     }
 
     /**
@@ -10288,6 +10696,37 @@ export class ObservableQSPolicyManagerApi {
      */
     public qSPolicyManagerBatchStatusUpdate(body: any, _options?: Configuration): Observable<Qspmpolicymanagerv3StandardEmptyResponse> {
         return this.qSPolicyManagerBatchStatusUpdateWithHttpInfo(body, _options).pipe(map((apiResponse: HttpInfo<Qspmpolicymanagerv3StandardEmptyResponse>) => apiResponse.data));
+    }
+
+    /**
+     * ConfigUpdate - this function update Crypto Risk Factor Weight in Db2 as well as Mongodb.
+     * @param qspmpolicymanagerv3UpdateConfigsRequest 
+     */
+    public qSPolicyManagerConfigUpdateWithHttpInfo(qspmpolicymanagerv3UpdateConfigsRequest: Qspmpolicymanagerv3UpdateConfigsRequest, _options?: Configuration): Observable<HttpInfo<Qspmpolicymanagerv3APIResonse>> {
+        const requestContextPromise = this.requestFactory.qSPolicyManagerConfigUpdate(qspmpolicymanagerv3UpdateConfigsRequest, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.qSPolicyManagerConfigUpdateWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * ConfigUpdate - this function update Crypto Risk Factor Weight in Db2 as well as Mongodb.
+     * @param qspmpolicymanagerv3UpdateConfigsRequest 
+     */
+    public qSPolicyManagerConfigUpdate(qspmpolicymanagerv3UpdateConfigsRequest: Qspmpolicymanagerv3UpdateConfigsRequest, _options?: Configuration): Observable<Qspmpolicymanagerv3APIResonse> {
+        return this.qSPolicyManagerConfigUpdateWithHttpInfo(qspmpolicymanagerv3UpdateConfigsRequest, _options).pipe(map((apiResponse: HttpInfo<Qspmpolicymanagerv3APIResonse>) => apiResponse.data));
     }
 
     /**
@@ -12088,6 +12527,1128 @@ export class ObservableReportsServiceApi {
 
 }
 
+import { ResourceControllerK8ServiceApiRequestFactory, ResourceControllerK8ServiceApiResponseProcessor} from "../apis/ResourceControllerK8ServiceApi";
+export class ObservableResourceControllerK8ServiceApi {
+    private requestFactory: ResourceControllerK8ServiceApiRequestFactory;
+    private responseProcessor: ResourceControllerK8ServiceApiResponseProcessor;
+    private configuration: Configuration;
+
+    public constructor(
+        configuration: Configuration,
+        requestFactory?: ResourceControllerK8ServiceApiRequestFactory,
+        responseProcessor?: ResourceControllerK8ServiceApiResponseProcessor
+    ) {
+        this.configuration = configuration;
+        this.requestFactory = requestFactory || new ResourceControllerK8ServiceApiRequestFactory(configuration);
+        this.responseProcessor = responseProcessor || new ResourceControllerK8ServiceApiResponseProcessor();
+    }
+
+    /**
+     * CreateController - Add a new controller.
+     * @param resourcecontrollerk8v3CreateControllerRequest 
+     */
+    public resourceControllerK8ServiceCreateControllerWithHttpInfo(resourcecontrollerk8v3CreateControllerRequest: Resourcecontrollerk8v3CreateControllerRequest, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3Controller>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceCreateController(resourcecontrollerk8v3CreateControllerRequest, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceCreateControllerWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * CreateController - Add a new controller.
+     * @param resourcecontrollerk8v3CreateControllerRequest 
+     */
+    public resourceControllerK8ServiceCreateController(resourcecontrollerk8v3CreateControllerRequest: Resourcecontrollerk8v3CreateControllerRequest, _options?: Configuration): Observable<Resourcecontrollerk8v3Controller> {
+        return this.resourceControllerK8ServiceCreateControllerWithHttpInfo(resourcecontrollerk8v3CreateControllerRequest, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3Controller>) => apiResponse.data));
+    }
+
+    /**
+     * CreateHeartBeat - Create a heartbeat for the controller.
+     * @param controllerId The ID of the controller to invoke a heartbeat on.
+     * @param resourcecontrollerk8v3CreateHeartBeatRequest 
+     */
+    public resourceControllerK8ServiceCreateHeartBeatWithHttpInfo(controllerId: string, resourcecontrollerk8v3CreateHeartBeatRequest: Resourcecontrollerk8v3CreateHeartBeatRequest, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3CreateHeartBeatResponse>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceCreateHeartBeat(controllerId, resourcecontrollerk8v3CreateHeartBeatRequest, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceCreateHeartBeatWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * CreateHeartBeat - Create a heartbeat for the controller.
+     * @param controllerId The ID of the controller to invoke a heartbeat on.
+     * @param resourcecontrollerk8v3CreateHeartBeatRequest 
+     */
+    public resourceControllerK8ServiceCreateHeartBeat(controllerId: string, resourcecontrollerk8v3CreateHeartBeatRequest: Resourcecontrollerk8v3CreateHeartBeatRequest, _options?: Configuration): Observable<Resourcecontrollerk8v3CreateHeartBeatResponse> {
+        return this.resourceControllerK8ServiceCreateHeartBeatWithHttpInfo(controllerId, resourcecontrollerk8v3CreateHeartBeatRequest, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3CreateHeartBeatResponse>) => apiResponse.data));
+    }
+
+    /**
+     * CreateHeartBeatEx - Create a heartbeat for the controller with extended information.
+     * @param controllerId Optional: controller id
+     * @param resourcecontrollerk8v3ControllerHeartbeat 
+     */
+    public resourceControllerK8ServiceCreateHeartBeatExWithHttpInfo(controllerId: string, resourcecontrollerk8v3ControllerHeartbeat: Resourcecontrollerk8v3ControllerHeartbeat, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3CreateHeartBeatExResponse>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceCreateHeartBeatEx(controllerId, resourcecontrollerk8v3ControllerHeartbeat, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceCreateHeartBeatExWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * CreateHeartBeatEx - Create a heartbeat for the controller with extended information.
+     * @param controllerId Optional: controller id
+     * @param resourcecontrollerk8v3ControllerHeartbeat 
+     */
+    public resourceControllerK8ServiceCreateHeartBeatEx(controllerId: string, resourcecontrollerk8v3ControllerHeartbeat: Resourcecontrollerk8v3ControllerHeartbeat, _options?: Configuration): Observable<Resourcecontrollerk8v3CreateHeartBeatExResponse> {
+        return this.resourceControllerK8ServiceCreateHeartBeatExWithHttpInfo(controllerId, resourcecontrollerk8v3ControllerHeartbeat, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3CreateHeartBeatExResponse>) => apiResponse.data));
+    }
+
+    /**
+     * //////////////////////////////////////////////////////////////// Interface to the controllers and apps api in the App-Manager microservice CreateJob - Create a job definition. Files and secrets contained within will also be created.
+     * @param resourcecontrollerk8v3Job 
+     */
+    public resourceControllerK8ServiceCreateJobWithHttpInfo(resourcecontrollerk8v3Job: Resourcecontrollerk8v3Job, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3Job>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceCreateJob(resourcecontrollerk8v3Job, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceCreateJobWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * //////////////////////////////////////////////////////////////// Interface to the controllers and apps api in the App-Manager microservice CreateJob - Create a job definition. Files and secrets contained within will also be created.
+     * @param resourcecontrollerk8v3Job 
+     */
+    public resourceControllerK8ServiceCreateJob(resourcecontrollerk8v3Job: Resourcecontrollerk8v3Job, _options?: Configuration): Observable<Resourcecontrollerk8v3Job> {
+        return this.resourceControllerK8ServiceCreateJobWithHttpInfo(resourcecontrollerk8v3Job, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3Job>) => apiResponse.data));
+    }
+
+    /**
+     * CreateJobExecution - Create a job execution.
+     * @param resourcecontrollerk8v3JobExecution 
+     */
+    public resourceControllerK8ServiceCreateJobExecutionWithHttpInfo(resourcecontrollerk8v3JobExecution: Resourcecontrollerk8v3JobExecution, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3JobExecution>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceCreateJobExecution(resourcecontrollerk8v3JobExecution, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceCreateJobExecutionWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * CreateJobExecution - Create a job execution.
+     * @param resourcecontrollerk8v3JobExecution 
+     */
+    public resourceControllerK8ServiceCreateJobExecution(resourcecontrollerk8v3JobExecution: Resourcecontrollerk8v3JobExecution, _options?: Configuration): Observable<Resourcecontrollerk8v3JobExecution> {
+        return this.resourceControllerK8ServiceCreateJobExecutionWithHttpInfo(resourcecontrollerk8v3JobExecution, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3JobExecution>) => apiResponse.data));
+    }
+
+    /**
+     * CreateKeypair - Create a new keypair for the controller.
+     * @param controllerId The ID of the controller to get app tests for.
+     * @param resourcecontrollerk8v3CreateKeypairRequest 
+     */
+    public resourceControllerK8ServiceCreateKeypairWithHttpInfo(controllerId: string, resourcecontrollerk8v3CreateKeypairRequest: Resourcecontrollerk8v3CreateKeypairRequest, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3CreateKeypairResponse>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceCreateKeypair(controllerId, resourcecontrollerk8v3CreateKeypairRequest, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceCreateKeypairWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * CreateKeypair - Create a new keypair for the controller.
+     * @param controllerId The ID of the controller to get app tests for.
+     * @param resourcecontrollerk8v3CreateKeypairRequest 
+     */
+    public resourceControllerK8ServiceCreateKeypair(controllerId: string, resourcecontrollerk8v3CreateKeypairRequest: Resourcecontrollerk8v3CreateKeypairRequest, _options?: Configuration): Observable<Resourcecontrollerk8v3CreateKeypairResponse> {
+        return this.resourceControllerK8ServiceCreateKeypairWithHttpInfo(controllerId, resourcecontrollerk8v3CreateKeypairRequest, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3CreateKeypairResponse>) => apiResponse.data));
+    }
+
+    /**
+     * DeleteController - Delete a controller.
+     * @param controllerId The ID of the controller to get the status.
+     * @param resourcecontrollerk8v3DeleteControllerRequest 
+     */
+    public resourceControllerK8ServiceDeleteControllerWithHttpInfo(controllerId: string, resourcecontrollerk8v3DeleteControllerRequest: Resourcecontrollerk8v3DeleteControllerRequest, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3DeleteControllerResponse>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceDeleteController(controllerId, resourcecontrollerk8v3DeleteControllerRequest, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceDeleteControllerWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * DeleteController - Delete a controller.
+     * @param controllerId The ID of the controller to get the status.
+     * @param resourcecontrollerk8v3DeleteControllerRequest 
+     */
+    public resourceControllerK8ServiceDeleteController(controllerId: string, resourcecontrollerk8v3DeleteControllerRequest: Resourcecontrollerk8v3DeleteControllerRequest, _options?: Configuration): Observable<Resourcecontrollerk8v3DeleteControllerResponse> {
+        return this.resourceControllerK8ServiceDeleteControllerWithHttpInfo(controllerId, resourcecontrollerk8v3DeleteControllerRequest, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3DeleteControllerResponse>) => apiResponse.data));
+    }
+
+    /**
+     * DeleteEdgeTenant - deletes an edge tenant providing edge tenant id
+     * @param tenantId ID of the tenant to delete
+     * @param resourcecontrollerk8v3DeleteEdgeTenantRequestApphost 
+     */
+    public resourceControllerK8ServiceDeleteEdgeTenantWithHttpInfo(tenantId: string, resourcecontrollerk8v3DeleteEdgeTenantRequestApphost: Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3DeleteEdgeTenantResponse>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceDeleteEdgeTenant(tenantId, resourcecontrollerk8v3DeleteEdgeTenantRequestApphost, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceDeleteEdgeTenantWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * DeleteEdgeTenant - deletes an edge tenant providing edge tenant id
+     * @param tenantId ID of the tenant to delete
+     * @param resourcecontrollerk8v3DeleteEdgeTenantRequestApphost 
+     */
+    public resourceControllerK8ServiceDeleteEdgeTenant(tenantId: string, resourcecontrollerk8v3DeleteEdgeTenantRequestApphost: Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost, _options?: Configuration): Observable<Resourcecontrollerk8v3DeleteEdgeTenantResponse> {
+        return this.resourceControllerK8ServiceDeleteEdgeTenantWithHttpInfo(tenantId, resourcecontrollerk8v3DeleteEdgeTenantRequestApphost, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3DeleteEdgeTenantResponse>) => apiResponse.data));
+    }
+
+    /**
+     * DeleteEdgeTenantRequest to deletes gi and tnt CR on edge
+     * @param tenantId Tenant ID for the redge request.
+     * @param edgeId ID of the edge system.
+     * @param edgeName Edge gateway ID.
+     */
+    public resourceControllerK8ServiceDeleteEdgeTenantRequestWithHttpInfo(tenantId?: string, edgeId?: string, edgeName?: string, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3EdgeResourceResponse>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceDeleteEdgeTenantRequest(tenantId, edgeId, edgeName, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceDeleteEdgeTenantRequestWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * DeleteEdgeTenantRequest to deletes gi and tnt CR on edge
+     * @param tenantId Tenant ID for the redge request.
+     * @param edgeId ID of the edge system.
+     * @param edgeName Edge gateway ID.
+     */
+    public resourceControllerK8ServiceDeleteEdgeTenantRequest(tenantId?: string, edgeId?: string, edgeName?: string, _options?: Configuration): Observable<Resourcecontrollerk8v3EdgeResourceResponse> {
+        return this.resourceControllerK8ServiceDeleteEdgeTenantRequestWithHttpInfo(tenantId, edgeId, edgeName, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3EdgeResourceResponse>) => apiResponse.data));
+    }
+
+    /**
+     * DeleteJob - Delete a job.
+     * @param jobId ID of the job that needs to be deleted.
+     * @param resourcecontrollerk8v3DeleteJobRequest 
+     */
+    public resourceControllerK8ServiceDeleteJobWithHttpInfo(jobId: string, resourcecontrollerk8v3DeleteJobRequest: Resourcecontrollerk8v3DeleteJobRequest, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3DeleteJobResponse>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceDeleteJob(jobId, resourcecontrollerk8v3DeleteJobRequest, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceDeleteJobWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * DeleteJob - Delete a job.
+     * @param jobId ID of the job that needs to be deleted.
+     * @param resourcecontrollerk8v3DeleteJobRequest 
+     */
+    public resourceControllerK8ServiceDeleteJob(jobId: string, resourcecontrollerk8v3DeleteJobRequest: Resourcecontrollerk8v3DeleteJobRequest, _options?: Configuration): Observable<Resourcecontrollerk8v3DeleteJobResponse> {
+        return this.resourceControllerK8ServiceDeleteJobWithHttpInfo(jobId, resourcecontrollerk8v3DeleteJobRequest, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3DeleteJobResponse>) => apiResponse.data));
+    }
+
+    /**
+     * DownloadControllerLogs - Download the controller logs for a running controller.
+     * @param controllerId The ID of the controller to download logs for.
+     * @param resourcecontrollerk8v3DownloadControllerLogsRequest 
+     */
+    public resourceControllerK8ServiceDownloadControllerLogsWithHttpInfo(controllerId: string, resourcecontrollerk8v3DownloadControllerLogsRequest: Resourcecontrollerk8v3DownloadControllerLogsRequest, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3DownloadControllerLogsResponse>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceDownloadControllerLogs(controllerId, resourcecontrollerk8v3DownloadControllerLogsRequest, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceDownloadControllerLogsWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * DownloadControllerLogs - Download the controller logs for a running controller.
+     * @param controllerId The ID of the controller to download logs for.
+     * @param resourcecontrollerk8v3DownloadControllerLogsRequest 
+     */
+    public resourceControllerK8ServiceDownloadControllerLogs(controllerId: string, resourcecontrollerk8v3DownloadControllerLogsRequest: Resourcecontrollerk8v3DownloadControllerLogsRequest, _options?: Configuration): Observable<Resourcecontrollerk8v3DownloadControllerLogsResponse> {
+        return this.resourceControllerK8ServiceDownloadControllerLogsWithHttpInfo(controllerId, resourcecontrollerk8v3DownloadControllerLogsRequest, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3DownloadControllerLogsResponse>) => apiResponse.data));
+    }
+
+    /**
+     * GetControllerApps - Get the apps for the given controller.
+     * @param controllerId The ID of the controller to get apps for.
+     * @param modifiedSince Only get the apps if any were modified since the given date.
+     */
+    public resourceControllerK8ServiceGetControllerAppsWithHttpInfo(controllerId: string, modifiedSince?: string, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3GetControllerAppsResponse>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceGetControllerApps(controllerId, modifiedSince, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceGetControllerAppsWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * GetControllerApps - Get the apps for the given controller.
+     * @param controllerId The ID of the controller to get apps for.
+     * @param modifiedSince Only get the apps if any were modified since the given date.
+     */
+    public resourceControllerK8ServiceGetControllerApps(controllerId: string, modifiedSince?: string, _options?: Configuration): Observable<Resourcecontrollerk8v3GetControllerAppsResponse> {
+        return this.resourceControllerK8ServiceGetControllerAppsWithHttpInfo(controllerId, modifiedSince, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3GetControllerAppsResponse>) => apiResponse.data));
+    }
+
+    /**
+     * GetControllerCommands - Get the commands for the controller to execute.
+     * @param controllerId The ID of the controller to get commands for.
+     */
+    public resourceControllerK8ServiceGetControllerCommandsWithHttpInfo(controllerId: string, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3GetControllerCommandsResponse>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceGetControllerCommands(controllerId, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceGetControllerCommandsWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * GetControllerCommands - Get the commands for the controller to execute.
+     * @param controllerId The ID of the controller to get commands for.
+     */
+    public resourceControllerK8ServiceGetControllerCommands(controllerId: string, _options?: Configuration): Observable<Resourcecontrollerk8v3GetControllerCommandsResponse> {
+        return this.resourceControllerK8ServiceGetControllerCommandsWithHttpInfo(controllerId, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3GetControllerCommandsResponse>) => apiResponse.data));
+    }
+
+    /**
+     * GetControllerJobs - Get the jobs for the controller to execute.
+     * @param controllerId The ID of the controller to get jobs for.
+     * @param modifiedSince Optional: Only get the jobs if any were modified since the given date.
+     */
+    public resourceControllerK8ServiceGetControllerJobsWithHttpInfo(controllerId: string, modifiedSince?: string, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3GetControllerJobsResponse>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceGetControllerJobs(controllerId, modifiedSince, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceGetControllerJobsWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * GetControllerJobs - Get the jobs for the controller to execute.
+     * @param controllerId The ID of the controller to get jobs for.
+     * @param modifiedSince Optional: Only get the jobs if any were modified since the given date.
+     */
+    public resourceControllerK8ServiceGetControllerJobs(controllerId: string, modifiedSince?: string, _options?: Configuration): Observable<Resourcecontrollerk8v3GetControllerJobsResponse> {
+        return this.resourceControllerK8ServiceGetControllerJobsWithHttpInfo(controllerId, modifiedSince, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3GetControllerJobsResponse>) => apiResponse.data));
+    }
+
+    /**
+     * GetControllerStatus - Get the status for the given controller.
+     * @param controllerId The ID of the controller to get the status.
+     */
+    public resourceControllerK8ServiceGetControllerStatusWithHttpInfo(controllerId: string, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3ControllerStatus>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceGetControllerStatus(controllerId, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceGetControllerStatusWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * GetControllerStatus - Get the status for the given controller.
+     * @param controllerId The ID of the controller to get the status.
+     */
+    public resourceControllerK8ServiceGetControllerStatus(controllerId: string, _options?: Configuration): Observable<Resourcecontrollerk8v3ControllerStatus> {
+        return this.resourceControllerK8ServiceGetControllerStatusWithHttpInfo(controllerId, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3ControllerStatus>) => apiResponse.data));
+    }
+
+    /**
+     * GetControllers - Get the controllers for the given tenant.
+     * @param tenantId The ID of the tenant to get controllers for.
+     * @param wantLocal Used to indicate the caller wants the local controller.
+     */
+    public resourceControllerK8ServiceGetControllersWithHttpInfo(tenantId: string, wantLocal?: boolean, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3GetControllersResponse>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceGetControllers(tenantId, wantLocal, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceGetControllersWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * GetControllers - Get the controllers for the given tenant.
+     * @param tenantId The ID of the tenant to get controllers for.
+     * @param wantLocal Used to indicate the caller wants the local controller.
+     */
+    public resourceControllerK8ServiceGetControllers(tenantId: string, wantLocal?: boolean, _options?: Configuration): Observable<Resourcecontrollerk8v3GetControllersResponse> {
+        return this.resourceControllerK8ServiceGetControllersWithHttpInfo(tenantId, wantLocal, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3GetControllersResponse>) => apiResponse.data));
+    }
+
+    /**
+     * GetControllersWithStatus - Get the controllers for the given tenant with computed status.
+     * @param tenantId The ID of the tenant to get controllers for.
+     * @param wantLocal Used to indicate the caller wants the local controller.
+     * @param controllerId \&quot;ALL\&quot;: for getting all controllers; &lt;controller_id&gt;: for getting single controller.
+     */
+    public resourceControllerK8ServiceGetControllersWithStatusWithHttpInfo(tenantId: string, wantLocal?: boolean, controllerId?: string, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3GetControllersWithStatusResponse>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceGetControllersWithStatus(tenantId, wantLocal, controllerId, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceGetControllersWithStatusWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * GetControllersWithStatus - Get the controllers for the given tenant with computed status.
+     * @param tenantId The ID of the tenant to get controllers for.
+     * @param wantLocal Used to indicate the caller wants the local controller.
+     * @param controllerId \&quot;ALL\&quot;: for getting all controllers; &lt;controller_id&gt;: for getting single controller.
+     */
+    public resourceControllerK8ServiceGetControllersWithStatus(tenantId: string, wantLocal?: boolean, controllerId?: string, _options?: Configuration): Observable<Resourcecontrollerk8v3GetControllersWithStatusResponse> {
+        return this.resourceControllerK8ServiceGetControllersWithStatusWithHttpInfo(tenantId, wantLocal, controllerId, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3GetControllersWithStatusResponse>) => apiResponse.data));
+    }
+
+    /**
+     * GetJob - Get the job.
+     * @param jobId The ID of the job to get.
+     * @param wantSecretValues Optional: True to return secret values, false otherwise.
+     */
+    public resourceControllerK8ServiceGetJobWithHttpInfo(jobId: string, wantSecretValues?: boolean, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3Job>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceGetJob(jobId, wantSecretValues, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceGetJobWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * GetJob - Get the job.
+     * @param jobId The ID of the job to get.
+     * @param wantSecretValues Optional: True to return secret values, false otherwise.
+     */
+    public resourceControllerK8ServiceGetJob(jobId: string, wantSecretValues?: boolean, _options?: Configuration): Observable<Resourcecontrollerk8v3Job> {
+        return this.resourceControllerK8ServiceGetJobWithHttpInfo(jobId, wantSecretValues, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3Job>) => apiResponse.data));
+    }
+
+    /**
+     * GetJobExecution - Get a job execution.
+     * @param jobexeId The ID of the job execution to get.
+     */
+    public resourceControllerK8ServiceGetJobExecutionWithHttpInfo(jobexeId: string, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3JobExecution>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceGetJobExecution(jobexeId, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceGetJobExecutionWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * GetJobExecution - Get a job execution.
+     * @param jobexeId The ID of the job execution to get.
+     */
+    public resourceControllerK8ServiceGetJobExecution(jobexeId: string, _options?: Configuration): Observable<Resourcecontrollerk8v3JobExecution> {
+        return this.resourceControllerK8ServiceGetJobExecutionWithHttpInfo(jobexeId, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3JobExecution>) => apiResponse.data));
+    }
+
+    /**
+     * GetJobExecutions - Get the job executions.
+     * @param jobId The ID of the job to get status.
+     */
+    public resourceControllerK8ServiceGetJobExecutionsWithHttpInfo(jobId: string, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3GetJobExecutionsResponse>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceGetJobExecutions(jobId, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceGetJobExecutionsWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * GetJobExecutions - Get the job executions.
+     * @param jobId The ID of the job to get status.
+     */
+    public resourceControllerK8ServiceGetJobExecutions(jobId: string, _options?: Configuration): Observable<Resourcecontrollerk8v3GetJobExecutionsResponse> {
+        return this.resourceControllerK8ServiceGetJobExecutionsWithHttpInfo(jobId, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3GetJobExecutionsResponse>) => apiResponse.data));
+    }
+
+    /**
+     * GetJobStatus - Get the job\'s status.
+     * @param jobId The ID of the job to get status.
+     */
+    public resourceControllerK8ServiceGetJobStatusWithHttpInfo(jobId: string, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3JobStatusDTO>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceGetJobStatus(jobId, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceGetJobStatusWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * GetJobStatus - Get the job\'s status.
+     * @param jobId The ID of the job to get status.
+     */
+    public resourceControllerK8ServiceGetJobStatus(jobId: string, _options?: Configuration): Observable<Resourcecontrollerk8v3JobStatusDTO> {
+        return this.resourceControllerK8ServiceGetJobStatusWithHttpInfo(jobId, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3JobStatusDTO>) => apiResponse.data));
+    }
+
+    /**
+     * GetTenantApp - Get a specific app for the given tenant.
+     * @param tenantId The ID of the tenant to get apps for.
+     * @param appName The name of the app to get.
+     * @param returnLevel Optional: specify a return level for the data. This will control the amount of data returned.
+     */
+    public resourceControllerK8ServiceGetTenantAppWithHttpInfo(tenantId: string, appName: string, returnLevel?: string, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3App>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceGetTenantApp(tenantId, appName, returnLevel, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceGetTenantAppWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * GetTenantApp - Get a specific app for the given tenant.
+     * @param tenantId The ID of the tenant to get apps for.
+     * @param appName The name of the app to get.
+     * @param returnLevel Optional: specify a return level for the data. This will control the amount of data returned.
+     */
+    public resourceControllerK8ServiceGetTenantApp(tenantId: string, appName: string, returnLevel?: string, _options?: Configuration): Observable<Resourcecontrollerk8v3App> {
+        return this.resourceControllerK8ServiceGetTenantAppWithHttpInfo(tenantId, appName, returnLevel, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3App>) => apiResponse.data));
+    }
+
+    /**
+     * GetTenantApps - Get the apps for the given tenant.
+     * @param tenantId The ID of the tenant to get apps for.
+     * @param returnLevel Optional: specify a return level for the data. This will control the amount of data returned.
+     */
+    public resourceControllerK8ServiceGetTenantAppsWithHttpInfo(tenantId: string, returnLevel?: string, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3GetTenantAppsResponse>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceGetTenantApps(tenantId, returnLevel, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceGetTenantAppsWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * GetTenantApps - Get the apps for the given tenant.
+     * @param tenantId The ID of the tenant to get apps for.
+     * @param returnLevel Optional: specify a return level for the data. This will control the amount of data returned.
+     */
+    public resourceControllerK8ServiceGetTenantApps(tenantId: string, returnLevel?: string, _options?: Configuration): Observable<Resourcecontrollerk8v3GetTenantAppsResponse> {
+        return this.resourceControllerK8ServiceGetTenantAppsWithHttpInfo(tenantId, returnLevel, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3GetTenantAppsResponse>) => apiResponse.data));
+    }
+
+    /**
+     * GetTenantJobs - Get jobs for the given tenant.
+     * @param tenantId The ID of the tenant to get jobs for.
+     */
+    public resourceControllerK8ServiceGetTenantJobsWithHttpInfo(tenantId: string, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3GetTenantJobsResponse>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceGetTenantJobs(tenantId, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceGetTenantJobsWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * GetTenantJobs - Get jobs for the given tenant.
+     * @param tenantId The ID of the tenant to get jobs for.
+     */
+    public resourceControllerK8ServiceGetTenantJobs(tenantId: string, _options?: Configuration): Observable<Resourcecontrollerk8v3GetTenantJobsResponse> {
+        return this.resourceControllerK8ServiceGetTenantJobsWithHttpInfo(tenantId, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3GetTenantJobsResponse>) => apiResponse.data));
+    }
+
+    /**
+     * GetVersion - Get the system version information for the service.
+     */
+    public resourceControllerK8ServiceGetVersionWithHttpInfo(_options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3Version>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceGetVersion(_options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceGetVersionWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * GetVersion - Get the system version information for the service.
+     */
+    public resourceControllerK8ServiceGetVersion(_options?: Configuration): Observable<Resourcecontrollerk8v3Version> {
+        return this.resourceControllerK8ServiceGetVersionWithHttpInfo(_options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3Version>) => apiResponse.data));
+    }
+
+    /**
+     * InstallEdgeTenantRequest to Create gi and tnt CRs on edge
+     * @param resourcecontrollerk8v3EdgeTenantRequest 
+     */
+    public resourceControllerK8ServiceInstallEdgeTenantRequestWithHttpInfo(resourcecontrollerk8v3EdgeTenantRequest: Resourcecontrollerk8v3EdgeTenantRequest, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3EdgeResourceResponse>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceInstallEdgeTenantRequest(resourcecontrollerk8v3EdgeTenantRequest, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceInstallEdgeTenantRequestWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * InstallEdgeTenantRequest to Create gi and tnt CRs on edge
+     * @param resourcecontrollerk8v3EdgeTenantRequest 
+     */
+    public resourceControllerK8ServiceInstallEdgeTenantRequest(resourcecontrollerk8v3EdgeTenantRequest: Resourcecontrollerk8v3EdgeTenantRequest, _options?: Configuration): Observable<Resourcecontrollerk8v3EdgeResourceResponse> {
+        return this.resourceControllerK8ServiceInstallEdgeTenantRequestWithHttpInfo(resourcecontrollerk8v3EdgeTenantRequest, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3EdgeResourceResponse>) => apiResponse.data));
+    }
+
+    /**
+     * QueryControllerLogs - Query for the controller logs for a running controller.
+     * @param controllerId The ID of the controller to get logs for.
+     * @param resourcecontrollerk8v3QueryControllerLogsRequest 
+     */
+    public resourceControllerK8ServiceQueryControllerLogsWithHttpInfo(controllerId: string, resourcecontrollerk8v3QueryControllerLogsRequest: Resourcecontrollerk8v3QueryControllerLogsRequest, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3QueryControllerLogsResponse>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceQueryControllerLogs(controllerId, resourcecontrollerk8v3QueryControllerLogsRequest, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceQueryControllerLogsWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * QueryControllerLogs - Query for the controller logs for a running controller.
+     * @param controllerId The ID of the controller to get logs for.
+     * @param resourcecontrollerk8v3QueryControllerLogsRequest 
+     */
+    public resourceControllerK8ServiceQueryControllerLogs(controllerId: string, resourcecontrollerk8v3QueryControllerLogsRequest: Resourcecontrollerk8v3QueryControllerLogsRequest, _options?: Configuration): Observable<Resourcecontrollerk8v3QueryControllerLogsResponse> {
+        return this.resourceControllerK8ServiceQueryControllerLogsWithHttpInfo(controllerId, resourcecontrollerk8v3QueryControllerLogsRequest, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3QueryControllerLogsResponse>) => apiResponse.data));
+    }
+
+    /**
+     * UpdateCommand - Update the command.
+     * @param id The ID of the command.
+     * @param resourcecontrollerk8v3ControllerCommand 
+     */
+    public resourceControllerK8ServiceUpdateCommandWithHttpInfo(id: string, resourcecontrollerk8v3ControllerCommand: Resourcecontrollerk8v3ControllerCommand, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3ControllerCommand>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceUpdateCommand(id, resourcecontrollerk8v3ControllerCommand, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceUpdateCommandWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * UpdateCommand - Update the command.
+     * @param id The ID of the command.
+     * @param resourcecontrollerk8v3ControllerCommand 
+     */
+    public resourceControllerK8ServiceUpdateCommand(id: string, resourcecontrollerk8v3ControllerCommand: Resourcecontrollerk8v3ControllerCommand, _options?: Configuration): Observable<Resourcecontrollerk8v3ControllerCommand> {
+        return this.resourceControllerK8ServiceUpdateCommandWithHttpInfo(id, resourcecontrollerk8v3ControllerCommand, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3ControllerCommand>) => apiResponse.data));
+    }
+
+    /**
+     * UpdateController - Update an existing controller.
+     * @param id Optional: The internal ID of the controller.
+     * @param resourcecontrollerk8v3Controller 
+     */
+    public resourceControllerK8ServiceUpdateControllerWithHttpInfo(id: string, resourcecontrollerk8v3Controller: Resourcecontrollerk8v3Controller, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3Controller>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceUpdateController(id, resourcecontrollerk8v3Controller, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceUpdateControllerWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * UpdateController - Update an existing controller.
+     * @param id Optional: The internal ID of the controller.
+     * @param resourcecontrollerk8v3Controller 
+     */
+    public resourceControllerK8ServiceUpdateController(id: string, resourcecontrollerk8v3Controller: Resourcecontrollerk8v3Controller, _options?: Configuration): Observable<Resourcecontrollerk8v3Controller> {
+        return this.resourceControllerK8ServiceUpdateControllerWithHttpInfo(id, resourcecontrollerk8v3Controller, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3Controller>) => apiResponse.data));
+    }
+
+    /**
+     * UpdateControllerStatus - Updates the status for the given controller.
+     * @param id The internal ID of the controller.
+     * @param resourcecontrollerk8v3ControllerStatus 
+     */
+    public resourceControllerK8ServiceUpdateControllerStatusWithHttpInfo(id: string, resourcecontrollerk8v3ControllerStatus: Resourcecontrollerk8v3ControllerStatus, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3ControllerStatus>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceUpdateControllerStatus(id, resourcecontrollerk8v3ControllerStatus, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceUpdateControllerStatusWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * UpdateControllerStatus - Updates the status for the given controller.
+     * @param id The internal ID of the controller.
+     * @param resourcecontrollerk8v3ControllerStatus 
+     */
+    public resourceControllerK8ServiceUpdateControllerStatus(id: string, resourcecontrollerk8v3ControllerStatus: Resourcecontrollerk8v3ControllerStatus, _options?: Configuration): Observable<Resourcecontrollerk8v3ControllerStatus> {
+        return this.resourceControllerK8ServiceUpdateControllerStatusWithHttpInfo(id, resourcecontrollerk8v3ControllerStatus, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3ControllerStatus>) => apiResponse.data));
+    }
+
+    /**
+     * UpdateEdgeTenantRequest to update gi and tnt CRs on edge
+     * @param edgeId ID of the edge system
+     * @param resourcecontrollerk8v3EdgeTenantRequest 
+     */
+    public resourceControllerK8ServiceUpdateEdgeTenantRequestWithHttpInfo(edgeId: string, resourcecontrollerk8v3EdgeTenantRequest: Resourcecontrollerk8v3EdgeTenantRequest, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3EdgeResourceResponse>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceUpdateEdgeTenantRequest(edgeId, resourcecontrollerk8v3EdgeTenantRequest, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceUpdateEdgeTenantRequestWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * UpdateEdgeTenantRequest to update gi and tnt CRs on edge
+     * @param edgeId ID of the edge system
+     * @param resourcecontrollerk8v3EdgeTenantRequest 
+     */
+    public resourceControllerK8ServiceUpdateEdgeTenantRequest(edgeId: string, resourcecontrollerk8v3EdgeTenantRequest: Resourcecontrollerk8v3EdgeTenantRequest, _options?: Configuration): Observable<Resourcecontrollerk8v3EdgeResourceResponse> {
+        return this.resourceControllerK8ServiceUpdateEdgeTenantRequestWithHttpInfo(edgeId, resourcecontrollerk8v3EdgeTenantRequest, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3EdgeResourceResponse>) => apiResponse.data));
+    }
+
+    /**
+     * UpdateJob - Update a job.
+     * @param id The ID of the job.
+     * @param resourcecontrollerk8v3Job 
+     */
+    public resourceControllerK8ServiceUpdateJobWithHttpInfo(id: string, resourcecontrollerk8v3Job: Resourcecontrollerk8v3Job, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3Job>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceUpdateJob(id, resourcecontrollerk8v3Job, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceUpdateJobWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * UpdateJob - Update a job.
+     * @param id The ID of the job.
+     * @param resourcecontrollerk8v3Job 
+     */
+    public resourceControllerK8ServiceUpdateJob(id: string, resourcecontrollerk8v3Job: Resourcecontrollerk8v3Job, _options?: Configuration): Observable<Resourcecontrollerk8v3Job> {
+        return this.resourceControllerK8ServiceUpdateJobWithHttpInfo(id, resourcecontrollerk8v3Job, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3Job>) => apiResponse.data));
+    }
+
+    /**
+     * UpdateJobExecution - Update a job execution.
+     * @param id The ID of the job execution to update.
+     * @param resourcecontrollerk8v3UpdateJobExecutionRequest 
+     */
+    public resourceControllerK8ServiceUpdateJobExecutionWithHttpInfo(id: string, resourcecontrollerk8v3UpdateJobExecutionRequest: Resourcecontrollerk8v3UpdateJobExecutionRequest, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3JobExecution>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceUpdateJobExecution(id, resourcecontrollerk8v3UpdateJobExecutionRequest, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceUpdateJobExecutionWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * UpdateJobExecution - Update a job execution.
+     * @param id The ID of the job execution to update.
+     * @param resourcecontrollerk8v3UpdateJobExecutionRequest 
+     */
+    public resourceControllerK8ServiceUpdateJobExecution(id: string, resourcecontrollerk8v3UpdateJobExecutionRequest: Resourcecontrollerk8v3UpdateJobExecutionRequest, _options?: Configuration): Observable<Resourcecontrollerk8v3JobExecution> {
+        return this.resourceControllerK8ServiceUpdateJobExecutionWithHttpInfo(id, resourcecontrollerk8v3UpdateJobExecutionRequest, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3JobExecution>) => apiResponse.data));
+    }
+
+    /**
+     * UpdateJobStatus - Updates the status for the given Job.
+     * @param jobId The ID of the job to get status.
+     * @param resourcecontrollerk8v3UpdateJobStatusRequest 
+     */
+    public resourceControllerK8ServiceUpdateJobStatusWithHttpInfo(jobId: string, resourcecontrollerk8v3UpdateJobStatusRequest: Resourcecontrollerk8v3UpdateJobStatusRequest, _options?: Configuration): Observable<HttpInfo<Resourcecontrollerk8v3JobStatusDTO>> {
+        const requestContextPromise = this.requestFactory.resourceControllerK8ServiceUpdateJobStatus(jobId, resourcecontrollerk8v3UpdateJobStatusRequest, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.resourceControllerK8ServiceUpdateJobStatusWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * UpdateJobStatus - Updates the status for the given Job.
+     * @param jobId The ID of the job to get status.
+     * @param resourcecontrollerk8v3UpdateJobStatusRequest 
+     */
+    public resourceControllerK8ServiceUpdateJobStatus(jobId: string, resourcecontrollerk8v3UpdateJobStatusRequest: Resourcecontrollerk8v3UpdateJobStatusRequest, _options?: Configuration): Observable<Resourcecontrollerk8v3JobStatusDTO> {
+        return this.resourceControllerK8ServiceUpdateJobStatusWithHttpInfo(jobId, resourcecontrollerk8v3UpdateJobStatusRequest, _options).pipe(map((apiResponse: HttpInfo<Resourcecontrollerk8v3JobStatusDTO>) => apiResponse.data));
+    }
+
+}
+
 import { RiskAnalyticsControllerApiRequestFactory, RiskAnalyticsControllerApiResponseProcessor} from "../apis/RiskAnalyticsControllerApi";
 export class ObservableRiskAnalyticsControllerApi {
     private requestFactory: RiskAnalyticsControllerApiRequestFactory;
@@ -12196,7 +13757,7 @@ export class ObservableRiskAnalyticsControllerApi {
     }
 
     /**
-     * Summary: Get risk event classifications list Description: retrieves the ClassificationMatchDetails for a given risk id – classification that did not matched will be with class_value 0.
+     * Summary: Get risk event classifications list Description: retrieves the ClassificationMatchDetails for a given risk id; classification that did not matched will be with class_value 0.
      * @param riskId Risk id
      */
     public riskAnalyticsControllerGetRiskEventClassificationsListWithHttpInfo(riskId: number, _options?: Configuration): Observable<HttpInfo<Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse>> {
@@ -12219,7 +13780,7 @@ export class ObservableRiskAnalyticsControllerApi {
     }
 
     /**
-     * Summary: Get risk event classifications list Description: retrieves the ClassificationMatchDetails for a given risk id – classification that did not matched will be with class_value 0.
+     * Summary: Get risk event classifications list Description: retrieves the ClassificationMatchDetails for a given risk id; classification that did not matched will be with class_value 0.
      * @param riskId Risk id
      */
     public riskAnalyticsControllerGetRiskEventClassificationsList(riskId: number, _options?: Configuration): Observable<Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse> {
@@ -12555,7 +14116,7 @@ export class ObservableRiskAnalyticsControllerApi {
     }
 
     /**
-     * Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium.
+     * Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to GDSC. Using this API to change a user settings may prevent the user from using the Risk Event function within GDSC.
      * @param riskanalyticscontrollerv3SetUserUISettingsRequest 
      */
     public riskAnalyticsControllerSetUserUISettingsWithHttpInfo(riskanalyticscontrollerv3SetUserUISettingsRequest: Riskanalyticscontrollerv3SetUserUISettingsRequest, _options?: Configuration): Observable<HttpInfo<Riskanalyticscontrollerv3SetUserUISettingsResponse>> {
@@ -12578,7 +14139,7 @@ export class ObservableRiskAnalyticsControllerApi {
     }
 
     /**
-     * Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium.
+     * Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to GDSC. Using this API to change a user settings may prevent the user from using the Risk Event function within GDSC.
      * @param riskanalyticscontrollerv3SetUserUISettingsRequest 
      */
     public riskAnalyticsControllerSetUserUISettings(riskanalyticscontrollerv3SetUserUISettingsRequest: Riskanalyticscontrollerv3SetUserUISettingsRequest, _options?: Configuration): Observable<Riskanalyticscontrollerv3SetUserUISettingsResponse> {
@@ -13203,6 +14764,111 @@ export class ObservableSnifAssistServiceApi {
     }
 
     /**
+     * Summary: Get sniffer configuration parameters Description: Get edge sniffer configuration parameters from GI-mothership.
+     * @param tenantId Provide tenant_id.
+     * @param edgeId Provide edge_id.
+     * @param configType Provide configuration type.
+     * @param configId Specify config_id provided by configuration service.
+     * @param configurationParametersCrc Provide CRC value of configuration parameters that sniffer is currently using.
+     */
+    public snifAssistServiceGetSnifConfigWithHttpInfo(tenantId?: string, edgeId?: string, configType?: string, configId?: string, configurationParametersCrc?: number, _options?: Configuration): Observable<HttpInfo<Snifassistv3GetSnifConfigResponse>> {
+        const requestContextPromise = this.requestFactory.snifAssistServiceGetSnifConfig(tenantId, edgeId, configType, configId, configurationParametersCrc, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.snifAssistServiceGetSnifConfigWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Summary: Get sniffer configuration parameters Description: Get edge sniffer configuration parameters from GI-mothership.
+     * @param tenantId Provide tenant_id.
+     * @param edgeId Provide edge_id.
+     * @param configType Provide configuration type.
+     * @param configId Specify config_id provided by configuration service.
+     * @param configurationParametersCrc Provide CRC value of configuration parameters that sniffer is currently using.
+     */
+    public snifAssistServiceGetSnifConfig(tenantId?: string, edgeId?: string, configType?: string, configId?: string, configurationParametersCrc?: number, _options?: Configuration): Observable<Snifassistv3GetSnifConfigResponse> {
+        return this.snifAssistServiceGetSnifConfigWithHttpInfo(tenantId, edgeId, configType, configId, configurationParametersCrc, _options).pipe(map((apiResponse: HttpInfo<Snifassistv3GetSnifConfigResponse>) => apiResponse.data));
+    }
+
+    /**
+     * Summary: Get sniffer policy Description: Get edge sniffer policy from GI-mothership.
+     * @param tenantId Specify tenant_id.
+     * @param edgeId Specify edge_id if known.
+     * @param policyCrc Provide CRC value of installed policy that sniffer is currently using.
+     */
+    public snifAssistServiceGetSnifPolicyWithHttpInfo(tenantId?: string, edgeId?: string, policyCrc?: number, _options?: Configuration): Observable<HttpInfo<Snifassistv3StatusResponseBase>> {
+        const requestContextPromise = this.requestFactory.snifAssistServiceGetSnifPolicy(tenantId, edgeId, policyCrc, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.snifAssistServiceGetSnifPolicyWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Summary: Get sniffer policy Description: Get edge sniffer policy from GI-mothership.
+     * @param tenantId Specify tenant_id.
+     * @param edgeId Specify edge_id if known.
+     * @param policyCrc Provide CRC value of installed policy that sniffer is currently using.
+     */
+    public snifAssistServiceGetSnifPolicy(tenantId?: string, edgeId?: string, policyCrc?: number, _options?: Configuration): Observable<Snifassistv3StatusResponseBase> {
+        return this.snifAssistServiceGetSnifPolicyWithHttpInfo(tenantId, edgeId, policyCrc, _options).pipe(map((apiResponse: HttpInfo<Snifassistv3StatusResponseBase>) => apiResponse.data));
+    }
+
+    /**
+     * Summary: Post sniffer feedback Description: Post policy installation feedback to policy-builder service.
+     * @param snifassistv3PostSnifFeedbackRequest 
+     */
+    public snifAssistServicePostSnifFeedbackWithHttpInfo(snifassistv3PostSnifFeedbackRequest: Snifassistv3PostSnifFeedbackRequest, _options?: Configuration): Observable<HttpInfo<Snifassistv3StatusResponseBase>> {
+        const requestContextPromise = this.requestFactory.snifAssistServicePostSnifFeedback(snifassistv3PostSnifFeedbackRequest, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.snifAssistServicePostSnifFeedbackWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Summary: Post sniffer feedback Description: Post policy installation feedback to policy-builder service.
+     * @param snifassistv3PostSnifFeedbackRequest 
+     */
+    public snifAssistServicePostSnifFeedback(snifassistv3PostSnifFeedbackRequest: Snifassistv3PostSnifFeedbackRequest, _options?: Configuration): Observable<Snifassistv3StatusResponseBase> {
+        return this.snifAssistServicePostSnifFeedbackWithHttpInfo(snifassistv3PostSnifFeedbackRequest, _options).pipe(map((apiResponse: HttpInfo<Snifassistv3StatusResponseBase>) => apiResponse.data));
+    }
+
+    /**
      * Summary: Test regex Description: Match a text string with a regular expression using the same sniffer  code used in production to match a regex.
      * @param snifassistv3TestRegexRequest 
      */
@@ -13686,6 +15352,45 @@ export class ObservableTemplatesServiceApi {
      */
     public templatesServiceGetTemplates(integrationId?: string, filterIntegration?: Array<'UNDEFINED_INTEGRATION' | 'SMTP' | 'SNMP' | 'SYSLOG' | 'CASES' | 'SERVICE_NOW' | 'RESILIENT' | 'SOAR' | 'WEBHOOK' | 'SLACK' | 'TEAMS' | 'SMS' | 'JIRA'>, filterOrigin?: Array<'UNDEFINED_ORIGIN' | 'GENERAL_NOTIFICATION' | 'ANOMALY_NOTIFICATION' | 'DATAMART_NOTIFICATION' | 'FETCH_NOTIFICATION' | 'POLICY_ALERT_NOTIFICATION' | 'RECOMMENDATION_NOTIFICATION' | 'REPORTS_NOTIFICATION' | 'SCHEDULED_REPORT_NOTIFICATION' | 'SCHEDULED_AUDIT_NOTIFICATION' | 'WELCOME_NOTIFICATION' | 'EMAIL_HEADER_AND_FOOTER' | 'RISK_NOTIFICATION' | 'SCHEDULED_JOB_SUMMARY' | 'INCIDENT_NOTIFICATION' | 'MAINTENANCE_NOTIFICATION' | 'QSPM_RISK' | 'POLICY_IMPORT_NOTIFICATION'>, filterMimeType?: Array<'PLAIN_TEXT' | 'TEXT_HTML' | 'APPLICATION_CEF'>, filterTags?: Array<string>, filterEnabledOnly?: boolean, includeIntegrationName?: boolean, _options?: Configuration): Observable<Templatesv3GetTemplatesResponse> {
         return this.templatesServiceGetTemplatesWithHttpInfo(integrationId, filterIntegration, filterOrigin, filterMimeType, filterTags, filterEnabledOnly, includeIntegrationName, _options).pipe(map((apiResponse: HttpInfo<Templatesv3GetTemplatesResponse>) => apiResponse.data));
+    }
+
+    /**
+     * Summary: Get templates for edge Description: Return all templates based on supplied filters.
+     * @param integrationId Templates associated with a specific integration.
+     * @param filterOrigin Filter on a specific set of data origins; ignored if empty.
+     * @param filterEnabledOnly Filter on all templates instead of just the enabled templates.
+     * @param includeIntegrationName Include the Integration name in the returned templates.
+     * @param transformToGdpFormat Tranform template format to GDP style format.
+     */
+    public templatesServiceGetTemplatesForEdgeWithHttpInfo(integrationId?: string, filterOrigin?: Array<'UNDEFINED_ORIGIN' | 'GENERAL_NOTIFICATION' | 'ANOMALY_NOTIFICATION' | 'DATAMART_NOTIFICATION' | 'FETCH_NOTIFICATION' | 'POLICY_ALERT_NOTIFICATION' | 'RECOMMENDATION_NOTIFICATION' | 'REPORTS_NOTIFICATION' | 'SCHEDULED_REPORT_NOTIFICATION' | 'SCHEDULED_AUDIT_NOTIFICATION' | 'WELCOME_NOTIFICATION' | 'EMAIL_HEADER_AND_FOOTER' | 'RISK_NOTIFICATION' | 'SCHEDULED_JOB_SUMMARY' | 'INCIDENT_NOTIFICATION' | 'MAINTENANCE_NOTIFICATION' | 'QSPM_RISK' | 'POLICY_IMPORT_NOTIFICATION'>, filterEnabledOnly?: boolean, includeIntegrationName?: boolean, transformToGdpFormat?: boolean, _options?: Configuration): Observable<HttpInfo<Templatesv3GetTemplatesForEdgeResponse>> {
+        const requestContextPromise = this.requestFactory.templatesServiceGetTemplatesForEdge(integrationId, filterOrigin, filterEnabledOnly, includeIntegrationName, transformToGdpFormat, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.templatesServiceGetTemplatesForEdgeWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Summary: Get templates for edge Description: Return all templates based on supplied filters.
+     * @param integrationId Templates associated with a specific integration.
+     * @param filterOrigin Filter on a specific set of data origins; ignored if empty.
+     * @param filterEnabledOnly Filter on all templates instead of just the enabled templates.
+     * @param includeIntegrationName Include the Integration name in the returned templates.
+     * @param transformToGdpFormat Tranform template format to GDP style format.
+     */
+    public templatesServiceGetTemplatesForEdge(integrationId?: string, filterOrigin?: Array<'UNDEFINED_ORIGIN' | 'GENERAL_NOTIFICATION' | 'ANOMALY_NOTIFICATION' | 'DATAMART_NOTIFICATION' | 'FETCH_NOTIFICATION' | 'POLICY_ALERT_NOTIFICATION' | 'RECOMMENDATION_NOTIFICATION' | 'REPORTS_NOTIFICATION' | 'SCHEDULED_REPORT_NOTIFICATION' | 'SCHEDULED_AUDIT_NOTIFICATION' | 'WELCOME_NOTIFICATION' | 'EMAIL_HEADER_AND_FOOTER' | 'RISK_NOTIFICATION' | 'SCHEDULED_JOB_SUMMARY' | 'INCIDENT_NOTIFICATION' | 'MAINTENANCE_NOTIFICATION' | 'QSPM_RISK' | 'POLICY_IMPORT_NOTIFICATION'>, filterEnabledOnly?: boolean, includeIntegrationName?: boolean, transformToGdpFormat?: boolean, _options?: Configuration): Observable<Templatesv3GetTemplatesForEdgeResponse> {
+        return this.templatesServiceGetTemplatesForEdgeWithHttpInfo(integrationId, filterOrigin, filterEnabledOnly, includeIntegrationName, transformToGdpFormat, _options).pipe(map((apiResponse: HttpInfo<Templatesv3GetTemplatesForEdgeResponse>) => apiResponse.data));
     }
 
     /**
@@ -14600,7 +16305,7 @@ export class ObservableUniversalConnectorManagerApi {
     }
 
     /**
-     * Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium.
+     * Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in GDSC.
      */
     public universalConnectorManagerGetCertificateWithHttpInfo(_options?: Configuration): Observable<HttpInfo<Universalconnectormanagerv3FileResponse>> {
         const requestContextPromise = this.requestFactory.universalConnectorManagerGetCertificate(_options);
@@ -14622,7 +16327,7 @@ export class ObservableUniversalConnectorManagerApi {
     }
 
     /**
-     * Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium.
+     * Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in GDSC.
      */
     public universalConnectorManagerGetCertificate(_options?: Configuration): Observable<Universalconnectormanagerv3FileResponse> {
         return this.universalConnectorManagerGetCertificateWithHttpInfo(_options).pipe(map((apiResponse: HttpInfo<Universalconnectormanagerv3FileResponse>) => apiResponse.data));
@@ -14655,6 +16360,37 @@ export class ObservableUniversalConnectorManagerApi {
      */
     public universalConnectorManagerGetConnectors(_options?: Configuration): Observable<Universalconnectormanagerv3GetConnectorsResponse> {
         return this.universalConnectorManagerGetConnectorsWithHttpInfo(_options).pipe(map((apiResponse: HttpInfo<Universalconnectormanagerv3GetConnectorsResponse>) => apiResponse.data));
+    }
+
+    /**
+     * Gets information to setup the new Universal connection.
+     * @param pluginId UC plugin id.
+     */
+    public universalConnectorManagerGetUCSetupWithHttpInfo(pluginId: number, _options?: Configuration): Observable<HttpInfo<Universalconnectormanagerv3GetUCSetupResponse>> {
+        const requestContextPromise = this.requestFactory.universalConnectorManagerGetUCSetup(pluginId, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.universalConnectorManagerGetUCSetupWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Gets information to setup the new Universal connection.
+     * @param pluginId UC plugin id.
+     */
+    public universalConnectorManagerGetUCSetup(pluginId: number, _options?: Configuration): Observable<Universalconnectormanagerv3GetUCSetupResponse> {
+        return this.universalConnectorManagerGetUCSetupWithHttpInfo(pluginId, _options).pipe(map((apiResponse: HttpInfo<Universalconnectormanagerv3GetUCSetupResponse>) => apiResponse.data));
     }
 
     /**
@@ -14796,6 +16532,37 @@ export class ObservableWorkflowApi {
     }
 
     /**
+     * Summary: Create product entity Description: Create single product entity.
+     * @param workflowv3ProductEntity 
+     */
+    public workflowCreateProductEntityWithHttpInfo(workflowv3ProductEntity: Workflowv3ProductEntity, _options?: Configuration): Observable<HttpInfo<Workflowv3CreateProductEntityResponse>> {
+        const requestContextPromise = this.requestFactory.workflowCreateProductEntity(workflowv3ProductEntity, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.workflowCreateProductEntityWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Summary: Create product entity Description: Create single product entity.
+     * @param workflowv3ProductEntity 
+     */
+    public workflowCreateProductEntity(workflowv3ProductEntity: Workflowv3ProductEntity, _options?: Configuration): Observable<Workflowv3CreateProductEntityResponse> {
+        return this.workflowCreateProductEntityWithHttpInfo(workflowv3ProductEntity, _options).pipe(map((apiResponse: HttpInfo<Workflowv3CreateProductEntityResponse>) => apiResponse.data));
+    }
+
+    /**
      * Summary: Create task Description: Create single task within a parent case.
      * @param caseId Create tasks with common parent.
      * @param workflowv3CreateTaskRequest 
@@ -14826,6 +16593,68 @@ export class ObservableWorkflowApi {
      */
     public workflowCreateTask(caseId: string, workflowv3CreateTaskRequest: Workflowv3CreateTaskRequest, _options?: Configuration): Observable<Workflowv3CreateTaskResponse> {
         return this.workflowCreateTaskWithHttpInfo(caseId, workflowv3CreateTaskRequest, _options).pipe(map((apiResponse: HttpInfo<Workflowv3CreateTaskResponse>) => apiResponse.data));
+    }
+
+    /**
+     * Summary: Post event for processing by workflow rules Description: Find matching workflow rule and run it
+     * @param workflowv3WorkflowEvent 
+     */
+    public workflowCreateWorkflowEventWithHttpInfo(workflowv3WorkflowEvent: Workflowv3WorkflowEvent, _options?: Configuration): Observable<HttpInfo<Workflowv3WorkflowEventResponse>> {
+        const requestContextPromise = this.requestFactory.workflowCreateWorkflowEvent(workflowv3WorkflowEvent, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.workflowCreateWorkflowEventWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Summary: Post event for processing by workflow rules Description: Find matching workflow rule and run it
+     * @param workflowv3WorkflowEvent 
+     */
+    public workflowCreateWorkflowEvent(workflowv3WorkflowEvent: Workflowv3WorkflowEvent, _options?: Configuration): Observable<Workflowv3WorkflowEventResponse> {
+        return this.workflowCreateWorkflowEventWithHttpInfo(workflowv3WorkflowEvent, _options).pipe(map((apiResponse: HttpInfo<Workflowv3WorkflowEventResponse>) => apiResponse.data));
+    }
+
+    /**
+     * Summary: Delete a product entity Description: Delete a single product entity.
+     * @param entityId Unique id for the product entity
+     */
+    public workflowDeleteProductEntityWithHttpInfo(entityId: string, _options?: Configuration): Observable<HttpInfo<Workflowv3DeleteProductEntityResponse>> {
+        const requestContextPromise = this.requestFactory.workflowDeleteProductEntity(entityId, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.workflowDeleteProductEntityWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Summary: Delete a product entity Description: Delete a single product entity.
+     * @param entityId Unique id for the product entity
+     */
+    public workflowDeleteProductEntity(entityId: string, _options?: Configuration): Observable<Workflowv3DeleteProductEntityResponse> {
+        return this.workflowDeleteProductEntityWithHttpInfo(entityId, _options).pipe(map((apiResponse: HttpInfo<Workflowv3DeleteProductEntityResponse>) => apiResponse.data));
     }
 
     /**
@@ -14960,6 +16789,70 @@ export class ObservableWorkflowApi {
      */
     public workflowGetJobsCount(caseId: string, workflowv3GetJobsCountRequest: Workflowv3GetJobsCountRequest, _options?: Configuration): Observable<Workflowv3GetJobsCountResponse> {
         return this.workflowGetJobsCountWithHttpInfo(caseId, workflowv3GetJobsCountRequest, _options).pipe(map((apiResponse: HttpInfo<Workflowv3GetJobsCountResponse>) => apiResponse.data));
+    }
+
+    /**
+     * Summary: Get products and their associated event entities Description: Return a list of integrated products and their associated event entities
+     * @param offset Optional starting point for the page of data.
+     * @param limit Optional page size.
+     */
+    public workflowGetProductEntitiesWithHttpInfo(offset?: number, limit?: number, _options?: Configuration): Observable<HttpInfo<Workflowv3GetProductEntitiesResponse>> {
+        const requestContextPromise = this.requestFactory.workflowGetProductEntities(offset, limit, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.workflowGetProductEntitiesWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Summary: Get products and their associated event entities Description: Return a list of integrated products and their associated event entities
+     * @param offset Optional starting point for the page of data.
+     * @param limit Optional page size.
+     */
+    public workflowGetProductEntities(offset?: number, limit?: number, _options?: Configuration): Observable<Workflowv3GetProductEntitiesResponse> {
+        return this.workflowGetProductEntitiesWithHttpInfo(offset, limit, _options).pipe(map((apiResponse: HttpInfo<Workflowv3GetProductEntitiesResponse>) => apiResponse.data));
+    }
+
+    /**
+     * Summary: Get event entity field names, field labels, and field data types Description: Return a list of fields similar to report headers
+     * @param entityId Unique id for the product entity
+     */
+    public workflowGetProductEntityWithHttpInfo(entityId: string, _options?: Configuration): Observable<HttpInfo<Workflowv3ProductEntity>> {
+        const requestContextPromise = this.requestFactory.workflowGetProductEntity(entityId, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.workflowGetProductEntityWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Summary: Get event entity field names, field labels, and field data types Description: Return a list of fields similar to report headers
+     * @param entityId Unique id for the product entity
+     */
+    public workflowGetProductEntity(entityId: string, _options?: Configuration): Observable<Workflowv3ProductEntity> {
+        return this.workflowGetProductEntityWithHttpInfo(entityId, _options).pipe(map((apiResponse: HttpInfo<Workflowv3ProductEntity>) => apiResponse.data));
     }
 
     /**
@@ -15189,6 +17082,39 @@ export class ObservableWorkflowApi {
      */
     public workflowUpdateCases(workflowv3UpdateCasesRequest: Workflowv3UpdateCasesRequest, _options?: Configuration): Observable<Workflowv3UpdateCasesResponse> {
         return this.workflowUpdateCasesWithHttpInfo(workflowv3UpdateCasesRequest, _options).pipe(map((apiResponse: HttpInfo<Workflowv3UpdateCasesResponse>) => apiResponse.data));
+    }
+
+    /**
+     * Summary: Update a product entity Description: Update a single product entity.
+     * @param entityId Unique Entity id, required for update.
+     * @param workflowv3UpdateProductEntityRequest 
+     */
+    public workflowUpdateProductEntityWithHttpInfo(entityId: string, workflowv3UpdateProductEntityRequest: Workflowv3UpdateProductEntityRequest, _options?: Configuration): Observable<HttpInfo<Workflowv3UpdateProductEntityResponse>> {
+        const requestContextPromise = this.requestFactory.workflowUpdateProductEntity(entityId, workflowv3UpdateProductEntityRequest, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.workflowUpdateProductEntityWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Summary: Update a product entity Description: Update a single product entity.
+     * @param entityId Unique Entity id, required for update.
+     * @param workflowv3UpdateProductEntityRequest 
+     */
+    public workflowUpdateProductEntity(entityId: string, workflowv3UpdateProductEntityRequest: Workflowv3UpdateProductEntityRequest, _options?: Configuration): Observable<Workflowv3UpdateProductEntityResponse> {
+        return this.workflowUpdateProductEntityWithHttpInfo(entityId, workflowv3UpdateProductEntityRequest, _options).pipe(map((apiResponse: HttpInfo<Workflowv3UpdateProductEntityResponse>) => apiResponse.data));
     }
 
     /**

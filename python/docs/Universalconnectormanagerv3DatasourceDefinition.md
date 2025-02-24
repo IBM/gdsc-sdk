@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.universalconnectormanagerv3_datasource_definition import Universalconnectormanagerv3DatasourceDefinition
+from ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_datasource_definition import Universalconnectormanagerv3DatasourceDefinition
 
 # TODO update the JSON string below
 json = "{}"

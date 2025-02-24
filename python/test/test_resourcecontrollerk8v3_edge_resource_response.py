@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_edge_resource_response import Resourcecontrollerk8v3EdgeResourceResponse
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_edge_resource_response import Resourcecontrollerk8v3EdgeResourceResponse
 
 class TestResourcecontrollerk8v3EdgeResourceResponse(unittest.TestCase):
     """Resourcecontrollerk8v3EdgeResourceResponse unit test stubs"""

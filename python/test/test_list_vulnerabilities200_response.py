@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.list_vulnerabilities200_response import ListVulnerabilities200Response
+from ibm_gdsc_sdk_saas.models.list_vulnerabilities200_response import ListVulnerabilities200Response
 
 class TestListVulnerabilities200Response(unittest.TestCase):
     """ListVulnerabilities200Response unit test stubs"""
@@ -36,7 +36,7 @@ class TestListVulnerabilities200Response(unittest.TestCase):
         if include_optional:
             return ListVulnerabilities200Response(
                 results = [
-                    ibm_gdsc_sdk_software.models.vulnerability_list_item.VulnerabilityListItem(
+                    ibm_gdsc_sdk_saas.models.vulnerability_list_item.VulnerabilityListItem(
                         vulnerability_id = '963cd426-a387-458a-afed-e21b323f5810', 
                         type = 'public-facing', 
                         title = 'Sensitive data was copied between accounts', 
@@ -49,7 +49,7 @@ class TestListVulnerabilities200Response(unittest.TestCase):
                         compliance = [
                             'CPRA'
                             ], 
-                        affected_asset = ibm_gdsc_sdk_software.models.vulnerability_related_asset.VulnerabilityRelatedAsset(
+                        affected_asset = ibm_gdsc_sdk_saas.models.vulnerability_related_asset.VulnerabilityRelatedAsset(
                             asset_id = 'arn:aws:s3::123456789101:polar-bucket', 
                             asset_type = 's3', 
                             cloud_provider = 'aws', 
@@ -64,7 +64,7 @@ class TestListVulnerabilities200Response(unittest.TestCase):
         else:
             return ListVulnerabilities200Response(
                 results = [
-                    ibm_gdsc_sdk_software.models.vulnerability_list_item.VulnerabilityListItem(
+                    ibm_gdsc_sdk_saas.models.vulnerability_list_item.VulnerabilityListItem(
                         vulnerability_id = '963cd426-a387-458a-afed-e21b323f5810', 
                         type = 'public-facing', 
                         title = 'Sensitive data was copied between accounts', 
@@ -77,7 +77,7 @@ class TestListVulnerabilities200Response(unittest.TestCase):
                         compliance = [
                             'CPRA'
                             ], 
-                        affected_asset = ibm_gdsc_sdk_software.models.vulnerability_related_asset.VulnerabilityRelatedAsset(
+                        affected_asset = ibm_gdsc_sdk_saas.models.vulnerability_related_asset.VulnerabilityRelatedAsset(
                             asset_id = 'arn:aws:s3::123456789101:polar-bucket', 
                             asset_type = 's3', 
                             cloud_provider = 'aws', 

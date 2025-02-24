@@ -9,13 +9,13 @@ Name | Type | Description | Notes
 **name** | **str** | (Optional) A privilege name that the access-manager sees (for pre-defined privileges, use translation text). | [optional] 
 **privilege_id** | **str** | Permanent id of the privilege to be updated or created. | [optional] 
 **removable** | **bool** | (Optional) All pre-defined privileges are not removable. | [optional] 
-**roles** | **List[str]** | The array of Insights roles that this privilege belongs to. | [optional] 
+**roles** | **List[str]** | The array of GDSC roles that this privilege belongs to. | [optional] 
 **type** | **str** | (Optional) Type of privilege: report, classification, group, page, restapi, etc. | [optional] 
 
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.tenantuserv3_update_privilege_request import Tenantuserv3UpdatePrivilegeRequest
+from ibm_gdsc_sdk_saas.models.tenantuserv3_update_privilege_request import Tenantuserv3UpdatePrivilegeRequest
 
 # TODO update the JSON string below
 json = "{}"

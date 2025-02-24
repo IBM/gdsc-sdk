@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.healthcollectorv3_utilization_parameter_object import Healthcollectorv3UtilizationParameterObject
+from ibm_gdsc_sdk_saas.models.healthcollectorv3_utilization_parameter_object import Healthcollectorv3UtilizationParameterObject
 
 class TestHealthcollectorv3UtilizationParameterObject(unittest.TestCase):
     """Healthcollectorv3UtilizationParameterObject unit test stubs"""

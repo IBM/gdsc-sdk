@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.user_entitlement_info import UserEntitlementInfo
+from ibm_gdsc_sdk_saas.models.user_entitlement_info import UserEntitlementInfo
 
 class TestUserEntitlementInfo(unittest.TestCase):
     """UserEntitlementInfo unit test stubs"""

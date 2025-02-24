@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.edgeschedulerv3_get_edge_query_status_response import Edgeschedulerv3GetEdgeQueryStatusResponse
+from ibm_gdsc_sdk_saas.models.edgeschedulerv3_get_edge_query_status_response import Edgeschedulerv3GetEdgeQueryStatusResponse
 
 class TestEdgeschedulerv3GetEdgeQueryStatusResponse(unittest.TestCase):
     """Edgeschedulerv3GetEdgeQueryStatusResponse unit test stubs"""

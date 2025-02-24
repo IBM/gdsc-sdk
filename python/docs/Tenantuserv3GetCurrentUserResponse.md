@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.tenantuserv3_get_current_user_response import Tenantuserv3GetCurrentUserResponse
+from ibm_gdsc_sdk_saas.models.tenantuserv3_get_current_user_response import Tenantuserv3GetCurrentUserResponse
 
 # TODO update the JSON string below
 json = "{}"

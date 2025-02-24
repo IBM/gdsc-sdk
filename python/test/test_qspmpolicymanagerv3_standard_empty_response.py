@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.qspmpolicymanagerv3_standard_empty_response import Qspmpolicymanagerv3StandardEmptyResponse
+from ibm_gdsc_sdk_saas.models.qspmpolicymanagerv3_standard_empty_response import Qspmpolicymanagerv3StandardEmptyResponse
 
 class TestQspmpolicymanagerv3StandardEmptyResponse(unittest.TestCase):
     """Qspmpolicymanagerv3StandardEmptyResponse unit test stubs"""

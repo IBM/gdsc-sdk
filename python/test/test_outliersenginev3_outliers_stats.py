@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.outliersenginev3_outliers_stats import Outliersenginev3OutliersStats
+from ibm_gdsc_sdk_saas.models.outliersenginev3_outliers_stats import Outliersenginev3OutliersStats
 
 class TestOutliersenginev3OutliersStats(unittest.TestCase):
     """Outliersenginev3OutliersStats unit test stubs"""
@@ -36,7 +36,7 @@ class TestOutliersenginev3OutliersStats(unittest.TestCase):
         if include_optional:
             return Outliersenginev3OutliersStats(
                 outlier_type_stats_1h = [
-                    ibm_gdsc_sdk_software.models.outliersenginev3_outlier_type_stats.outliersenginev3OutlierTypeStats(
+                    ibm_gdsc_sdk_saas.models.outliersenginev3_outlier_type_stats.outliersenginev3OutlierTypeStats(
                         count = 56, 
                         type_diff_messages = True, 
                         type_fails = True, 
@@ -46,7 +46,7 @@ class TestOutliersenginev3OutliersStats(unittest.TestCase):
                         type_vulnerable_objects = True, )
                     ],
                 outlier_type_stats_24h = [
-                    ibm_gdsc_sdk_software.models.outliersenginev3_outlier_type_stats.outliersenginev3OutlierTypeStats(
+                    ibm_gdsc_sdk_saas.models.outliersenginev3_outlier_type_stats.outliersenginev3OutlierTypeStats(
                         count = 56, 
                         type_diff_messages = True, 
                         type_fails = True, 

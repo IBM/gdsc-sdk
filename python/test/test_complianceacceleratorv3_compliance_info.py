@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.complianceacceleratorv3_compliance_info import Complianceacceleratorv3ComplianceInfo
+from ibm_gdsc_sdk_saas.models.complianceacceleratorv3_compliance_info import Complianceacceleratorv3ComplianceInfo
 
 class TestComplianceacceleratorv3ComplianceInfo(unittest.TestCase):
     """Complianceacceleratorv3ComplianceInfo unit test stubs"""
@@ -35,17 +35,30 @@ class TestComplianceacceleratorv3ComplianceInfo(unittest.TestCase):
         model = Complianceacceleratorv3ComplianceInfo()
         if include_optional:
             return Complianceacceleratorv3ComplianceInfo(
-                options = ibm_gdsc_sdk_software.models.complianceacceleratorv3_options.complianceacceleratorv3Options(
-                    email_config = ibm_gdsc_sdk_software.models.complianceacceleratorv3_email_config.complianceacceleratorv3EmailConfig(
+                options = ibm_gdsc_sdk_saas.models.complianceacceleratorv3_options.complianceacceleratorv3Options(
+                    email_config = ibm_gdsc_sdk_saas.models.complianceacceleratorv3_email_config.complianceacceleratorv3EmailConfig(
                         integration_id = '', 
                         template_id = '', ), 
                     parent_groups = {
-                        'key' : ibm_gdsc_sdk_software.models.complianceacceleratorv3_group.complianceacceleratorv3Group(
+                        'key' : ibm_gdsc_sdk_saas.models.complianceacceleratorv3_group.complianceacceleratorv3Group(
                             desc = '', 
                             group_type_id = 56, 
                             id = 56, 
+                            ldap_config = ibm_gdsc_sdk_saas.models.groupbuilderv3_ldap_config.groupbuilderv3LdapConfig(
+                                attributes = [
+                                    ''
+                                    ], 
+                                bind_group_id = 56, 
+                                bind_password = '', 
+                                clear_group = True, 
+                                filter = '', 
+                                filter_scope = 56, 
+                                import_limit = 56, 
+                                ldap_group_name = '', 
+                                ldap_id = '', 
+                                member_prefix = '', ), 
                             members = [
-                                ibm_gdsc_sdk_software.models.complianceacceleratorv3_group_member.complianceacceleratorv3GroupMember(
+                                ibm_gdsc_sdk_saas.models.groupbuilderv3_group_member.groupbuilderv3GroupMember(
                                     member_id = '', 
                                     name = '', )
                                 ], 
@@ -53,7 +66,7 @@ class TestComplianceacceleratorv3ComplianceInfo(unittest.TestCase):
                                 ''
                                 ], 
                             members_to_delete = [
-                                ibm_gdsc_sdk_software.models.complianceacceleratorv3_group_member.complianceacceleratorv3GroupMember(
+                                ibm_gdsc_sdk_saas.models.groupbuilderv3_group_member.groupbuilderv3GroupMember(
                                     member_id = '', 
                                     name = '', )
                                 ], 
@@ -62,9 +75,9 @@ class TestComplianceacceleratorv3ComplianceInfo(unittest.TestCase):
                         }, 
                     policy_id = '', 
                     rules = {
-                        'key' : ibm_gdsc_sdk_software.models.complianceacceleratorv3_rule_and_action.complianceacceleratorv3RuleAndAction(
+                        'key' : ibm_gdsc_sdk_saas.models.complianceacceleratorv3_rule_and_action.complianceacceleratorv3RuleAndAction(
                             actions = {
-                                'key' : ibm_gdsc_sdk_software.models.complianceacceleratorv3_action.complianceacceleratorv3Action(
+                                'key' : ibm_gdsc_sdk_saas.models.complianceacceleratorv3_action.complianceacceleratorv3Action(
                                     notification_type = 'UNDEFINED_RECTYPE', 
                                     user_ids = [
                                         ''
@@ -72,7 +85,7 @@ class TestComplianceacceleratorv3ComplianceInfo(unittest.TestCase):
                                 }, 
                             rule_id = '', )
                         }, 
-                    syslog_config = ibm_gdsc_sdk_software.models.complianceacceleratorv3_syslog_config.complianceacceleratorv3SyslogConfig(
+                    syslog_config = ibm_gdsc_sdk_saas.models.complianceacceleratorv3_syslog_config.complianceacceleratorv3SyslogConfig(
                         host = '', 
                         include_q_radar = True, 
                         is_deletion = True, 
@@ -85,22 +98,22 @@ class TestComplianceacceleratorv3ComplianceInfo(unittest.TestCase):
                         'key' : 'UNDEFINED'
                         }, ),
                 workspaces = {
-                    'key' : ibm_gdsc_sdk_software.models.complianceacceleratorv3_workspace.complianceacceleratorv3Workspace(
-                        audit_info = ibm_gdsc_sdk_software.models.complianceacceleratorv3_audit_config.complianceacceleratorv3AuditConfig(
+                    'key' : ibm_gdsc_sdk_saas.models.complianceacceleratorv3_workspace.complianceacceleratorv3Workspace(
+                        audit_info = ibm_gdsc_sdk_saas.models.complianceacceleratorv3_audit_config.complianceacceleratorv3AuditConfig(
                             description = '', 
                             enabled = True, 
                             id = '', 
                             instructions = '', 
                             is_deletion = True, 
                             name = '', 
-                            owner = ibm_gdsc_sdk_software.models.schedulerv3_recipient.schedulerv3Recipient(
+                            owner = ibm_gdsc_sdk_saas.models.schedulerv3_recipient.schedulerv3Recipient(
                                 integration_id = '', 
                                 label = '', 
                                 template_id = '', 
                                 type = 'UNDEFINED_RECTYPE', 
                                 value = '', ), 
                             recipients = [
-                                ibm_gdsc_sdk_software.models.schedulerv3_recipient.schedulerv3Recipient(
+                                ibm_gdsc_sdk_saas.models.schedulerv3_recipient.schedulerv3Recipient(
                                     integration_id = '', 
                                     label = '', 
                                     template_id = '', 
@@ -108,7 +121,7 @@ class TestComplianceacceleratorv3ComplianceInfo(unittest.TestCase):
                                 ], 
                             report_key = '', 
                             run_once_now = True, 
-                            scheduler = ibm_gdsc_sdk_software.models.complianceacceleratorv3_audit_scheduler.complianceacceleratorv3AuditScheduler(
+                            scheduler = ibm_gdsc_sdk_saas.models.complianceacceleratorv3_audit_scheduler.complianceacceleratorv3AuditScheduler(
                                 begin_schedule = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                                 by_day_of_month = True, 
                                 day_of_month = '', 
@@ -124,18 +137,18 @@ class TestComplianceacceleratorv3ComplianceInfo(unittest.TestCase):
                                     ], 
                                 never_end = True, 
                                 repeat = 56, 
-                                repeat_begin = ibm_gdsc_sdk_software.models.schedulerv3_repeat_begin.schedulerv3RepeatBegin(
+                                repeat_begin = ibm_gdsc_sdk_saas.models.schedulerv3_repeat_begin.schedulerv3RepeatBegin(
                                     hour = 56, 
                                     minute = 56, 
                                     timezone = '', ), 
-                                repeat_end = ibm_gdsc_sdk_software.models.schedulerv3_repeat_end.schedulerv3RepeatEnd(
+                                repeat_end = ibm_gdsc_sdk_saas.models.schedulerv3_repeat_end.schedulerv3RepeatEnd(
                                     hour = 56, 
                                     minute = 56, 
                                     timezone = '', ), ), 
                             tasks = [
-                                ibm_gdsc_sdk_software.models.schedulerv3_scheduled_task.schedulerv3ScheduledTask(
+                                ibm_gdsc_sdk_saas.models.schedulerv3_scheduled_task.schedulerv3ScheduledTask(
                                     audit_type = 'UNDEFINED_TYPE', 
-                                    delivery_method = ibm_gdsc_sdk_software.models.schedulerv3_delivery_method.schedulerv3DeliveryMethod(
+                                    delivery_method = ibm_gdsc_sdk_saas.models.schedulerv3_delivery_method.schedulerv3DeliveryMethod(
                                         file_format = 'UNDEFINED_FORMAT', 
                                         report_time_zone = '', ), 
                                     distribution_rule_ids = [
@@ -144,18 +157,18 @@ class TestComplianceacceleratorv3ComplianceInfo(unittest.TestCase):
                                     email_subject = '', 
                                     instructions = '', 
                                     name = '', 
-                                    parameter = ibm_gdsc_sdk_software.models.schedulerv3_task_parameter.schedulerv3TaskParameter(
-                                        data_import_parameter = ibm_gdsc_sdk_software.models.schedulerv3_integration_parameter.schedulerv3IntegrationParameter(
+                                    parameter = ibm_gdsc_sdk_saas.models.schedulerv3_task_parameter.schedulerv3TaskParameter(
+                                        data_import_parameter = ibm_gdsc_sdk_saas.models.schedulerv3_integration_parameter.schedulerv3IntegrationParameter(
                                             extra_detail = '', 
                                             integration_id = '', 
                                             template_id = '', 
                                             value = '', ), 
-                                        report_parameter = ibm_gdsc_sdk_software.models.schedulerv3_report_parameter.schedulerv3ReportParameter(
+                                        report_parameter = ibm_gdsc_sdk_saas.models.schedulerv3_report_parameter.schedulerv3ReportParameter(
                                             extra_detail = '', 
                                             report_id = '', 
                                             report_name = '', 
                                             runtime_parameters = [
-                                                ibm_gdsc_sdk_software.models.reportsv3_run_time_parameter.reportsv3RunTimeParameter(
+                                                ibm_gdsc_sdk_saas.models.reportsv3_run_time_parameter.reportsv3RunTimeParameter(
                                                     key = '', 
                                                     label = '', 
                                                     operator_type = 'UNDEFINED_OPERATOR_TYPE', 
@@ -163,18 +176,19 @@ class TestComplianceacceleratorv3ComplianceInfo(unittest.TestCase):
                                                     runtime_parameter_type_length = 56, 
                                                     value = '', )
                                                 ], 
-                                            sync_execution_date = True, ), ), 
-                                    report_filters = ibm_gdsc_sdk_software.models.reportsv3_report_filter_brackets.reportsv3ReportFilterBrackets(
+                                            sync_execution_date = True, 
+                                            threshold = 56, ), ), 
+                                    report_filters = ibm_gdsc_sdk_saas.models.reportsv3_report_filter_brackets.reportsv3ReportFilterBrackets(
                                         brackets_id = 56, 
                                         filter_name = '', 
                                         filters_array = [
-                                            ibm_gdsc_sdk_software.models.reportsv3_report_filter.reportsv3ReportFilter(
-                                                brackets = ibm_gdsc_sdk_software.models.reportsv3_report_filter_brackets.reportsv3ReportFilterBrackets(
+                                            ibm_gdsc_sdk_saas.models.reportsv3_report_filter.reportsv3ReportFilter(
+                                                brackets = ibm_gdsc_sdk_saas.models.reportsv3_report_filter_brackets.reportsv3ReportFilterBrackets(
                                                     brackets_id = 56, 
                                                     filter_name = '', 
                                                     having_array = [
-                                                        ibm_gdsc_sdk_software.models.report_agg_filter_represents_a_report_aggregate_filter.ReportAggFilter represents a report aggregate filter(
-                                                            condition = ibm_gdsc_sdk_software.models.reportsv3_report_agg_filter_condition.reportsv3ReportAggFilterCondition(
+                                                        ibm_gdsc_sdk_saas.models.report_agg_filter_represents_a_report_aggregate_filter.ReportAggFilter represents a report aggregate filter(
+                                                            condition = ibm_gdsc_sdk_saas.models.reportsv3_report_agg_filter_condition.reportsv3ReportAggFilterCondition(
                                                                 aggregation_type = 'UNDEFINED_AGG_TYPE', 
                                                                 header_id = '', 
                                                                 header_name = '', 
@@ -184,14 +198,15 @@ class TestComplianceacceleratorv3ComplianceInfo(unittest.TestCase):
                                                     is_custom = True, 
                                                     option_type = 'UNDEFINED_OPTION_TYPE', 
                                                     sequence = 56, ), 
-                                                condition = ibm_gdsc_sdk_software.models.reportsv3_report_filter_condition.reportsv3ReportFilterCondition(
+                                                condition = ibm_gdsc_sdk_saas.models.reportsv3_report_filter_condition.reportsv3ReportFilterCondition(
                                                     case_insensitive = True, 
                                                     field_nls_translation_key = '', 
                                                     filter_id = 56, 
+                                                    group_type_id = 56, 
                                                     header_id = '', 
                                                     header_name = '', 
                                                     header_type = 'UNDEFINED_TYPE', 
-                                                    in_report_date_range = ibm_gdsc_sdk_software.models.reportsv3_date_range.reportsv3DateRange(
+                                                    in_report_date_range = ibm_gdsc_sdk_saas.models.reportsv3_date_range.reportsv3DateRange(
                                                         end_date = '', 
                                                         end_number = 56, 
                                                         end_unit = 'UNDEFINED_UINT_TYPE', 
@@ -204,27 +219,29 @@ class TestComplianceacceleratorv3ComplianceInfo(unittest.TestCase):
                                                     in_report_id = '', 
                                                     in_report_name = '', 
                                                     in_report_table_name = '', 
+                                                    is_tuple = True, 
                                                     parameter_type = 'UNDEFINED_PARAM_TYPE', 
                                                     schema_name = '', 
                                                     sequence = 56, 
                                                     table_name = '', 
+                                                    tuple_type = '', 
                                                     values = [
                                                         ''
                                                         ], ), )
                                             ], 
                                         having_array = [
-                                            ibm_gdsc_sdk_software.models.report_agg_filter_represents_a_report_aggregate_filter.ReportAggFilter represents a report aggregate filter()
+                                            ibm_gdsc_sdk_saas.models.report_agg_filter_represents_a_report_aggregate_filter.ReportAggFilter represents a report aggregate filter()
                                             ], 
                                         is_custom = True, 
                                         option_type = 'UNDEFINED_OPTION_TYPE', 
                                         sequence = 56, ), 
                                     scheduled_task_id = '', 
                                     workflow_investigation_links = [
-                                        ibm_gdsc_sdk_software.models.generic_configuration_item_reference.Generic configuration item reference(
+                                        ibm_gdsc_sdk_saas.models.generic_configuration_item_reference.Generic configuration item reference(
                                             display = '', 
                                             id = '', )
                                         ], 
-                                    workflow_response_template = ibm_gdsc_sdk_software.models.generic_configuration_item_reference.Generic configuration item reference(
+                                    workflow_response_template = ibm_gdsc_sdk_saas.models.generic_configuration_item_reference.Generic configuration item reference(
                                         display = '', 
                                         id = '', ), 
                                     workflow_type = 'REVIEW_NONE', 
@@ -233,17 +250,30 @@ class TestComplianceacceleratorv3ComplianceInfo(unittest.TestCase):
                                         ], )
                                 ], ), 
                         dashboards = [
-                            ibm_gdsc_sdk_software.models.complianceacceleratorv3_dashboard_object.complianceacceleratorv3DashboardObject(
+                            ibm_gdsc_sdk_saas.models.complianceacceleratorv3_dashboard_object.complianceacceleratorv3DashboardObject(
                                 id = '', 
                                 type = 'UNDEFINED_DASH', )
                             ], 
                         groups = {
-                            'key' : ibm_gdsc_sdk_software.models.complianceacceleratorv3_group.complianceacceleratorv3Group(
+                            'key' : ibm_gdsc_sdk_saas.models.complianceacceleratorv3_group.complianceacceleratorv3Group(
                                 desc = '', 
                                 group_type_id = 56, 
                                 id = 56, 
+                                ldap_config = ibm_gdsc_sdk_saas.models.groupbuilderv3_ldap_config.groupbuilderv3LdapConfig(
+                                    attributes = [
+                                        ''
+                                        ], 
+                                    bind_group_id = 56, 
+                                    bind_password = '', 
+                                    clear_group = True, 
+                                    filter = '', 
+                                    filter_scope = 56, 
+                                    import_limit = 56, 
+                                    ldap_group_name = '', 
+                                    ldap_id = '', 
+                                    member_prefix = '', ), 
                                 members = [
-                                    ibm_gdsc_sdk_software.models.complianceacceleratorv3_group_member.complianceacceleratorv3GroupMember(
+                                    ibm_gdsc_sdk_saas.models.groupbuilderv3_group_member.groupbuilderv3GroupMember(
                                         member_id = '', 
                                         name = '', )
                                     ], 
@@ -251,7 +281,7 @@ class TestComplianceacceleratorv3ComplianceInfo(unittest.TestCase):
                                     ''
                                     ], 
                                 members_to_delete = [
-                                    ibm_gdsc_sdk_software.models.complianceacceleratorv3_group_member.complianceacceleratorv3GroupMember(
+                                    ibm_gdsc_sdk_saas.models.groupbuilderv3_group_member.groupbuilderv3GroupMember(
                                         member_id = '', 
                                         name = '', )
                                     ], 
@@ -259,12 +289,12 @@ class TestComplianceacceleratorv3ComplianceInfo(unittest.TestCase):
                                 parent = True, )
                             }, 
                         reports_map = {
-                            'key' : ibm_gdsc_sdk_software.models.complianceacceleratorv3_reports.complianceacceleratorv3Reports(
+                            'key' : ibm_gdsc_sdk_saas.models.complianceacceleratorv3_reports.complianceacceleratorv3Reports(
                                 reports = [
-                                    ibm_gdsc_sdk_software.models.complianceacceleratorv3_report.complianceacceleratorv3Report(
+                                    ibm_gdsc_sdk_saas.models.complianceacceleratorv3_report.complianceacceleratorv3Report(
                                         description = '', 
                                         groups_needed = [
-                                            ibm_gdsc_sdk_software.models.complianceacceleratorv3_group.complianceacceleratorv3Group(
+                                            ibm_gdsc_sdk_saas.models.complianceacceleratorv3_group.complianceacceleratorv3Group(
                                                 desc = '', 
                                                 group_type_id = 56, 
                                                 id = 56, 
@@ -276,7 +306,7 @@ class TestComplianceacceleratorv3ComplianceInfo(unittest.TestCase):
                                             ], 
                                         report_id = '', 
                                         report_tags = [
-                                            ibm_gdsc_sdk_software.models.reportsv3_report_tag.reportsv3ReportTag(
+                                            ibm_gdsc_sdk_saas.models.reportsv3_report_tag.reportsv3ReportTag(
                                                 nls_key = '', 
                                                 nls_value = '', )
                                             ], 

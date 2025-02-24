@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_observation import Riskanalyticscontrollerv3Observation
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_observation import Riskanalyticscontrollerv3Observation
 
 class TestRiskanalyticscontrollerv3Observation(unittest.TestCase):
     """Riskanalyticscontrollerv3Observation unit test stubs"""

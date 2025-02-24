@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_risk_event_tuning_request import Riskanalyticscontrollerv3RiskEventTuningRequest
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_risk_event_tuning_request import Riskanalyticscontrollerv3RiskEventTuningRequest
 
 class TestRiskanalyticscontrollerv3RiskEventTuningRequest(unittest.TestCase):
     """Riskanalyticscontrollerv3RiskEventTuningRequest unit test stubs"""
@@ -36,7 +36,7 @@ class TestRiskanalyticscontrollerv3RiskEventTuningRequest(unittest.TestCase):
         if include_optional:
             return Riskanalyticscontrollerv3RiskEventTuningRequest(
                 excluded_items = [
-                    ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_excluded_item.riskanalyticscontrollerv3ExcludedItem(
+                    ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_excluded_item.riskanalyticscontrollerv3ExcludedItem(
                         excluded_item_type = 'UNDEFINED_EXCLUDED_ITEM_TYPE', 
                         key = '', )
                     ]

@@ -1,22 +1,22 @@
-# ibm_gdsc_sdk_software.GuardiumConnectorApi
+# ibm_gdsc_sdk_saas.GuardiumConnectorApi
 
 All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**guardium_connector_add_cm**](GuardiumConnectorApi.md#guardium_connector_add_cm) | **POST** /api/v3/central_managers | Summary: Add CM Description: Add a Central Manager to the tenant database.
-[**guardium_connector_add_datamarts**](GuardiumConnectorApi.md#guardium_connector_add_datamarts) | **POST** /api/v3/central_managers/{central_manager_id}/datamarts | Description: stores datamarts details from GDP
+[**guardium_connector_add_datamarts**](GuardiumConnectorApi.md#guardium_connector_add_datamarts) | **POST** /api/v3/central_managers/{central_manager_id}/datamarts | Description: stores datamarts details from GDP. (This API is called from GDP only)
 [**guardium_connector_add_dm_exclusion**](GuardiumConnectorApi.md#guardium_connector_add_dm_exclusion) | **POST** /api/v3/datamarts/exclusion_list | Summary: Add DM exclusion Description: Add datamart to exclusion list.
-[**guardium_connector_add_task**](GuardiumConnectorApi.md#guardium_connector_add_task) | **POST** /api/v3/central_managers/{central_manager_id}/tasks | Summary: Add task Description: Add a task to be executed on GDP.
+[**guardium_connector_add_task**](GuardiumConnectorApi.md#guardium_connector_add_task) | **POST** /api/v3/central_managers/{central_manager_id}/tasks | Summary: Add task Description: Add a task to be executed on GDP. (This API is called from GDP only)
 [**guardium_connector_block_user**](GuardiumConnectorApi.md#guardium_connector_block_user) | **POST** /api/v3/block_user | Summary: Block user Description: Block a database user on Guardium Data Protection or on a supported Database as a Service instance.
 [**guardium_connector_configure_aggregator_export**](GuardiumConnectorApi.md#guardium_connector_configure_aggregator_export) | **PUT** /api/v3/central_managers/{central_manager_id}/aggregator_config_export | Summary: Configure aggregator export Description: Configure datamart export from the Aggregators to GI.
 [**guardium_connector_configure_collector_export**](GuardiumConnectorApi.md#guardium_connector_configure_collector_export) | **PUT** /api/v3/central_managers/{central_manager_id}/collector_config_export | Summary: Configure collector export Description: Schedule export historical data for collectors.
 [**guardium_connector_configure_streaming**](GuardiumConnectorApi.md#guardium_connector_configure_streaming) | **POST** /api/v3/central_managers/{central_manager_id}/streaming | Summary: Configure streaming Description: Enable or disable streaming.
-[**guardium_connector_datamart_version_check**](GuardiumConnectorApi.md#guardium_connector_datamart_version_check) | **POST** /api/v3/central_managers/{central_manager_id}/datamart_version | Description: validates if central manager has datamart support for event model
+[**guardium_connector_datamart_version_check**](GuardiumConnectorApi.md#guardium_connector_datamart_version_check) | **POST** /api/v3/central_managers/{central_manager_id}/datamart_version | Description: validates if central manager has v5 datamart support. (This API is called from GDP only)
 [**guardium_connector_delete_cm**](GuardiumConnectorApi.md#guardium_connector_delete_cm) | **DELETE** /api/v3/central_managers/{central_manager_id} | Summary: Delete CM Description: Delete a Central Manager by ID (Name, Hostname or IP).
 [**guardium_connector_delete_dm_exclusion**](GuardiumConnectorApi.md#guardium_connector_delete_dm_exclusion) | **DELETE** /api/v3/datamarts/exclusion_list | Summary: Delete DM exclusion Description: Delete a datamart from exclusion list.
-[**guardium_connector_delete_task**](GuardiumConnectorApi.md#guardium_connector_delete_task) | **DELETE** /api/v3/central_managers/{central_manager_id}/tasks/{task_id} | Summary: Delete task Description: Delete a task by central manager id and task id.
-[**guardium_connector_delete_tasks**](GuardiumConnectorApi.md#guardium_connector_delete_tasks) | **DELETE** /api/v3/central_managers/{central_manager_id}/tasks | Summary: Delete tasks Description: Delete a central manager&#39;s tasks by central manager id.
+[**guardium_connector_delete_task**](GuardiumConnectorApi.md#guardium_connector_delete_task) | **DELETE** /api/v3/central_managers/{central_manager_id}/tasks/{task_id} | Summary: Delete task Description: Delete a task by central manager id and task id. (This API is called from GDP only)
+[**guardium_connector_delete_tasks**](GuardiumConnectorApi.md#guardium_connector_delete_tasks) | **DELETE** /api/v3/central_managers/{central_manager_id}/tasks | Summary: Delete tasks Description: Delete a central manager&#39;s tasks by central manager id. (This API is called from GDP only)
 [**guardium_connector_get_aggregators_config**](GuardiumConnectorApi.md#guardium_connector_get_aggregators_config) | **GET** /api/v3/central_managers/{central_manager_id}/aggregators_config | Summary: Get aggregators config Description: Return a list of managed units from the config collection in tenant database.
 [**guardium_connector_get_cms**](GuardiumConnectorApi.md#guardium_connector_get_cms) | **GET** /api/v3/central_managers | Summary: Get CMs Description: Return a list of Central Managers from the tenant database with additional processing.
 [**guardium_connector_get_cms_config**](GuardiumConnectorApi.md#guardium_connector_get_cms_config) | **GET** /api/v3/central_managers_config | Summary: Get CMs config Description: Return a list of Central Managers from the tenant database.
@@ -25,20 +25,20 @@ Method | HTTP request | Description
 [**guardium_connector_get_dm_exclusion**](GuardiumConnectorApi.md#guardium_connector_get_dm_exclusion) | **GET** /api/v3/datamarts/exclusion_list | Summary: Get DM exclusion Description: Return datamarts in the exclusion list.
 [**guardium_connector_get_gdp_policy_info**](GuardiumConnectorApi.md#guardium_connector_get_gdp_policy_info) | **GET** /api/v3/central_managers/{central_manager_id}/policies/info | Summary: Get guardium policy definition Description: returns the policy definition on the cm
 [**guardium_connector_get_gdp_policy_summaries**](GuardiumConnectorApi.md#guardium_connector_get_gdp_policy_summaries) | **GET** /api/v3/central_managers/{central_manager_id}/policies/summaries | Summary: Get guardium policy summary Description: returns the summaries of all policies on that central manager
-[**guardium_connector_get_health_info**](GuardiumConnectorApi.md#guardium_connector_get_health_info) | **GET** /api/v3/central_managers/{central_manager_id}/health_info | Summary: Get gealth info Description: Get health information from Guardium Data Protection central mamangers.
-[**guardium_connector_get_latest_dm_extraction_profile**](GuardiumConnectorApi.md#guardium_connector_get_latest_dm_extraction_profile) | **GET** /api/v3/central_managers/{central_manager_id}/datamart_extraction_profile | Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for Guardium.
+[**guardium_connector_get_health_info**](GuardiumConnectorApi.md#guardium_connector_get_health_info) | **GET** /api/v3/central_managers/{central_manager_id}/health_info | Summary: Get health info Description: Get health information from Guardium Data Protection central mamangers. (This API is for CMs registered in legacy pull mode. Supported on-premises only)
+[**guardium_connector_get_latest_dm_extraction_profile**](GuardiumConnectorApi.md#guardium_connector_get_latest_dm_extraction_profile) | **GET** /api/v3/central_managers/{central_manager_id}/datamart_extraction_profile | Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for GDSC.
 [**guardium_connector_get_streaming_status**](GuardiumConnectorApi.md#guardium_connector_get_streaming_status) | **GET** /api/v3/central_managers/{central_manager_id}/streaming | Summary: Get streaming status Description: Return the streaming configuration.
-[**guardium_connector_get_sync_dms**](GuardiumConnectorApi.md#guardium_connector_get_sync_dms) | **GET** /api/v3/central_managers/{central_manager_id}/sync | Summary: Get sync DMs Description: Return the list of tasks from a central manager.
+[**guardium_connector_get_sync_dms**](GuardiumConnectorApi.md#guardium_connector_get_sync_dms) | **GET** /api/v3/central_managers/{central_manager_id}/sync | Summary: Get sync DMs Description: Return the list of tasks from a central manager. (This API is called from GDP only)
 [**guardium_connector_get_task_types**](GuardiumConnectorApi.md#guardium_connector_get_task_types) | **GET** /api/v3/central_managers/task_types | Summary: Get task types Description: Return the list of supported task types.
-[**guardium_connector_get_tasks**](GuardiumConnectorApi.md#guardium_connector_get_tasks) | **GET** /api/v3/central_managers/{central_manager_id}/tasks | Summary: Get tasks Description: Return the list of tasks from a central manager.
-[**guardium_connector_run_gdp_report**](GuardiumConnectorApi.md#guardium_connector_run_gdp_report) | **POST** /api/v3/central_managers/{central_manager_id}/run_report | Summary: Run GDP report Description: Run GDP report.
-[**guardium_connector_setup_cm**](GuardiumConnectorApi.md#guardium_connector_setup_cm) | **POST** /api/v3/central_managers/setup | Summary: Setup CM Description: Set up the registration between a GDP Central manager and Guardium.
+[**guardium_connector_get_tasks**](GuardiumConnectorApi.md#guardium_connector_get_tasks) | **GET** /api/v3/central_managers/{central_manager_id}/tasks | Summary: Get tasks Description: Return the list of tasks from a central manager. (This API is called from GDP only)
+[**guardium_connector_run_gdp_report**](GuardiumConnectorApi.md#guardium_connector_run_gdp_report) | **POST** /api/v3/central_managers/{central_manager_id}/run_report | Summary: Run GDP report Description: Run GDP report. (This API is for CMs registered in legacy pull mode. Supported on-premises only)
+[**guardium_connector_setup_cm**](GuardiumConnectorApi.md#guardium_connector_setup_cm) | **POST** /api/v3/central_managers/setup | Summary: Setup CM Description: Set up the registration between a GDP Central manager and GDSC. (This API is called from GDP only)
 [**guardium_connector_setup_datamarts**](GuardiumConnectorApi.md#guardium_connector_setup_datamarts) | **POST** /api/v3/central_managers/{central_manager_id}/datamarts/setup | Description: setup custom datamart execution mode
-[**guardium_connector_task_error**](GuardiumConnectorApi.md#guardium_connector_task_error) | **POST** /api/v3/central_managers/{central_manager_id}/tasks/error | Summary: Task error Description: Log error messages from GDP task execution.
+[**guardium_connector_task_error**](GuardiumConnectorApi.md#guardium_connector_task_error) | **POST** /api/v3/central_managers/{central_manager_id}/tasks/error | Summary: Task error Description: Log error messages from GDP task execution. (This API is called from GDP only)
 [**guardium_connector_test_database_connection**](GuardiumConnectorApi.md#guardium_connector_test_database_connection) | **POST** /api/v3/test_database | Summary: Test database connection Description: Return database connection results.
 [**guardium_connector_update_dm_exclusion**](GuardiumConnectorApi.md#guardium_connector_update_dm_exclusion) | **PUT** /api/v3/datamarts/exclusion_list | Summary: Update DM exclusion Description: Update the atamart exclusion list.
-[**guardium_connector_update_streaming**](GuardiumConnectorApi.md#guardium_connector_update_streaming) | **PUT** /api/v3/central_managers/{central_manager_id}/streaming | Summary: Update streaming Description: Update streaming status into GI.
-[**guardium_connector_update_task**](GuardiumConnectorApi.md#guardium_connector_update_task) | **PUT** /api/v3/central_managers/{central_manager_id}/tasks/{task_id} | Summary: Update task Description: Update a task that gets executed on GDP.
+[**guardium_connector_update_streaming**](GuardiumConnectorApi.md#guardium_connector_update_streaming) | **PUT** /api/v3/central_managers/{central_manager_id}/streaming | Summary: Update streaming Description: Update streaming status into GI. (This API is called from GDP only)
+[**guardium_connector_update_task**](GuardiumConnectorApi.md#guardium_connector_update_task) | **PUT** /api/v3/central_managers/{central_manager_id}/tasks/{task_id} | Summary: Update task Description: Update a task that gets executed on GDP. (This API is called from GDP only)
 
 
 # **guardium_connector_add_cm**
@@ -52,15 +52,15 @@ Summary: Add CM Description: Add a Central Manager to the tenant database.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_add_cm_request import Guardiumconnectorv3AddCMRequest
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_add_cm_response import Guardiumconnectorv3AddCMResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_add_cm_request import Guardiumconnectorv3AddCMRequest
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_add_cm_response import Guardiumconnectorv3AddCMResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -70,7 +70,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -82,10 +82,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
-    guardiumconnectorv3_add_cm_request = ibm_gdsc_sdk_software.Guardiumconnectorv3AddCMRequest() # Guardiumconnectorv3AddCMRequest | 
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
+    guardiumconnectorv3_add_cm_request = ibm_gdsc_sdk_saas.Guardiumconnectorv3AddCMRequest() # Guardiumconnectorv3AddCMRequest | 
 
     try:
         # Summary: Add CM Description: Add a Central Manager to the tenant database.
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 # **guardium_connector_add_datamarts**
 > Guardiumconnectorv3AddDatamartsResponse guardium_connector_add_datamarts(central_manager_id, guardiumconnectorv3_add_datamarts_request)
 
-Description: stores datamarts details from GDP
+Description: stores datamarts details from GDP. (This API is called from GDP only)
 
 ### Example
 
@@ -138,15 +138,15 @@ Description: stores datamarts details from GDP
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_add_datamarts_request import Guardiumconnectorv3AddDatamartsRequest
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_add_datamarts_response import Guardiumconnectorv3AddDatamartsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_add_datamarts_request import Guardiumconnectorv3AddDatamartsRequest
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_add_datamarts_response import Guardiumconnectorv3AddDatamartsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -156,7 +156,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -168,14 +168,14 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | central manager
-    guardiumconnectorv3_add_datamarts_request = ibm_gdsc_sdk_software.Guardiumconnectorv3AddDatamartsRequest() # Guardiumconnectorv3AddDatamartsRequest | 
+    guardiumconnectorv3_add_datamarts_request = ibm_gdsc_sdk_saas.Guardiumconnectorv3AddDatamartsRequest() # Guardiumconnectorv3AddDatamartsRequest | 
 
     try:
-        # Description: stores datamarts details from GDP
+        # Description: stores datamarts details from GDP. (This API is called from GDP only)
         api_response = api_instance.guardium_connector_add_datamarts(central_manager_id, guardiumconnectorv3_add_datamarts_request)
         print("The response of GuardiumConnectorApi->guardium_connector_add_datamarts:\n")
         pprint(api_response)
@@ -226,15 +226,15 @@ Summary: Add DM exclusion Description: Add datamart to exclusion list.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_add_dm_exclusion_request import Guardiumconnectorv3AddDmExclusionRequest
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_add_dm_exclusion_response import Guardiumconnectorv3AddDmExclusionResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_add_dm_exclusion_request import Guardiumconnectorv3AddDmExclusionRequest
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_add_dm_exclusion_response import Guardiumconnectorv3AddDmExclusionResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -244,7 +244,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -256,10 +256,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
-    guardiumconnectorv3_add_dm_exclusion_request = ibm_gdsc_sdk_software.Guardiumconnectorv3AddDmExclusionRequest() # Guardiumconnectorv3AddDmExclusionRequest | 
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
+    guardiumconnectorv3_add_dm_exclusion_request = ibm_gdsc_sdk_saas.Guardiumconnectorv3AddDmExclusionRequest() # Guardiumconnectorv3AddDmExclusionRequest | 
 
     try:
         # Summary: Add DM exclusion Description: Add datamart to exclusion list.
@@ -304,7 +304,7 @@ Name | Type | Description  | Notes
 # **guardium_connector_add_task**
 > Guardiumconnectorv3AddTaskResponse guardium_connector_add_task(central_manager_id, guardiumconnectorv3_add_task_request)
 
-Summary: Add task Description: Add a task to be executed on GDP.
+Summary: Add task Description: Add a task to be executed on GDP. (This API is called from GDP only)
 
 ### Example
 
@@ -312,15 +312,15 @@ Summary: Add task Description: Add a task to be executed on GDP.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_add_task_request import Guardiumconnectorv3AddTaskRequest
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_add_task_response import Guardiumconnectorv3AddTaskResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_add_task_request import Guardiumconnectorv3AddTaskRequest
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_add_task_response import Guardiumconnectorv3AddTaskResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -330,7 +330,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -342,14 +342,14 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | ID of central manager.
-    guardiumconnectorv3_add_task_request = ibm_gdsc_sdk_software.Guardiumconnectorv3AddTaskRequest() # Guardiumconnectorv3AddTaskRequest | 
+    guardiumconnectorv3_add_task_request = ibm_gdsc_sdk_saas.Guardiumconnectorv3AddTaskRequest() # Guardiumconnectorv3AddTaskRequest | 
 
     try:
-        # Summary: Add task Description: Add a task to be executed on GDP.
+        # Summary: Add task Description: Add a task to be executed on GDP. (This API is called from GDP only)
         api_response = api_instance.guardium_connector_add_task(central_manager_id, guardiumconnectorv3_add_task_request)
         print("The response of GuardiumConnectorApi->guardium_connector_add_task:\n")
         pprint(api_response)
@@ -400,15 +400,15 @@ Summary: Block user Description: Block a database user on Guardium Data Protecti
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_block_user_request import Guardiumconnectorv3BlockUserRequest
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_block_user_response import Guardiumconnectorv3BlockUserResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_block_user_request import Guardiumconnectorv3BlockUserRequest
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_block_user_response import Guardiumconnectorv3BlockUserResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -418,7 +418,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -430,10 +430,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
-    guardiumconnectorv3_block_user_request = ibm_gdsc_sdk_software.Guardiumconnectorv3BlockUserRequest() # Guardiumconnectorv3BlockUserRequest | 
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
+    guardiumconnectorv3_block_user_request = ibm_gdsc_sdk_saas.Guardiumconnectorv3BlockUserRequest() # Guardiumconnectorv3BlockUserRequest | 
 
     try:
         # Summary: Block user Description: Block a database user on Guardium Data Protection or on a supported Database as a Service instance.
@@ -486,15 +486,15 @@ Summary: Configure aggregator export Description: Configure datamart export from
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_configure_aggregator_export_request import Guardiumconnectorv3ConfigureAggregatorExportRequest
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_configure_aggregator_export_response import Guardiumconnectorv3ConfigureAggregatorExportResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_configure_aggregator_export_request import Guardiumconnectorv3ConfigureAggregatorExportRequest
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_configure_aggregator_export_response import Guardiumconnectorv3ConfigureAggregatorExportResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -504,7 +504,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -516,11 +516,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | Central Manager ID.
-    guardiumconnectorv3_configure_aggregator_export_request = ibm_gdsc_sdk_software.Guardiumconnectorv3ConfigureAggregatorExportRequest() # Guardiumconnectorv3ConfigureAggregatorExportRequest | 
+    guardiumconnectorv3_configure_aggregator_export_request = ibm_gdsc_sdk_saas.Guardiumconnectorv3ConfigureAggregatorExportRequest() # Guardiumconnectorv3ConfigureAggregatorExportRequest | 
 
     try:
         # Summary: Configure aggregator export Description: Configure datamart export from the Aggregators to GI.
@@ -574,15 +574,15 @@ Summary: Configure collector export Description: Schedule export historical data
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_configure_collector_export_request import Guardiumconnectorv3ConfigureCollectorExportRequest
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_configure_collector_export_response import Guardiumconnectorv3ConfigureCollectorExportResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_configure_collector_export_request import Guardiumconnectorv3ConfigureCollectorExportRequest
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_configure_collector_export_response import Guardiumconnectorv3ConfigureCollectorExportResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -592,7 +592,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -604,11 +604,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | Central Manager ID.
-    guardiumconnectorv3_configure_collector_export_request = ibm_gdsc_sdk_software.Guardiumconnectorv3ConfigureCollectorExportRequest() # Guardiumconnectorv3ConfigureCollectorExportRequest | 
+    guardiumconnectorv3_configure_collector_export_request = ibm_gdsc_sdk_saas.Guardiumconnectorv3ConfigureCollectorExportRequest() # Guardiumconnectorv3ConfigureCollectorExportRequest | 
 
     try:
         # Summary: Configure collector export Description: Schedule export historical data for collectors.
@@ -662,15 +662,15 @@ Summary: Configure streaming Description: Enable or disable streaming.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_configure_streaming_request import Guardiumconnectorv3ConfigureStreamingRequest
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_configure_streaming_response import Guardiumconnectorv3ConfigureStreamingResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_configure_streaming_request import Guardiumconnectorv3ConfigureStreamingRequest
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_configure_streaming_response import Guardiumconnectorv3ConfigureStreamingResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -680,7 +680,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -692,11 +692,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | Central Manager ID.
-    guardiumconnectorv3_configure_streaming_request = ibm_gdsc_sdk_software.Guardiumconnectorv3ConfigureStreamingRequest() # Guardiumconnectorv3ConfigureStreamingRequest | 
+    guardiumconnectorv3_configure_streaming_request = ibm_gdsc_sdk_saas.Guardiumconnectorv3ConfigureStreamingRequest() # Guardiumconnectorv3ConfigureStreamingRequest | 
 
     try:
         # Summary: Configure streaming Description: Enable or disable streaming.
@@ -742,7 +742,7 @@ Name | Type | Description  | Notes
 # **guardium_connector_datamart_version_check**
 > Guardiumconnectorv3DatamartVersionResponse guardium_connector_datamart_version_check(central_manager_id, guardiumconnectorv3_datamart_version_request)
 
-Description: validates if central manager has datamart support for event model
+Description: validates if central manager has v5 datamart support. (This API is called from GDP only)
 
 ### Example
 
@@ -750,15 +750,15 @@ Description: validates if central manager has datamart support for event model
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_datamart_version_request import Guardiumconnectorv3DatamartVersionRequest
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_datamart_version_response import Guardiumconnectorv3DatamartVersionResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_datamart_version_request import Guardiumconnectorv3DatamartVersionRequest
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_datamart_version_response import Guardiumconnectorv3DatamartVersionResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -768,7 +768,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -780,14 +780,14 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | Central manager
-    guardiumconnectorv3_datamart_version_request = ibm_gdsc_sdk_software.Guardiumconnectorv3DatamartVersionRequest() # Guardiumconnectorv3DatamartVersionRequest | 
+    guardiumconnectorv3_datamart_version_request = ibm_gdsc_sdk_saas.Guardiumconnectorv3DatamartVersionRequest() # Guardiumconnectorv3DatamartVersionRequest | 
 
     try:
-        # Description: validates if central manager has datamart support for event model
+        # Description: validates if central manager has v5 datamart support. (This API is called from GDP only)
         api_response = api_instance.guardium_connector_datamart_version_check(central_manager_id, guardiumconnectorv3_datamart_version_request)
         print("The response of GuardiumConnectorApi->guardium_connector_datamart_version_check:\n")
         pprint(api_response)
@@ -838,14 +838,14 @@ Summary: Delete CM Description: Delete a Central Manager by ID (Name, Hostname o
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_delete_cm_response import Guardiumconnectorv3DeleteCMResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_delete_cm_response import Guardiumconnectorv3DeleteCMResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -855,7 +855,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -867,9 +867,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | Central Manager ID.
     force = 56 # int | Flag to force delete CM and associated tasks (0=validate CM is online before deleting, 1=force delete CM). (optional)
 
@@ -925,14 +925,14 @@ Summary: Delete DM exclusion Description: Delete a datamart from exclusion list.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_delete_dm_exclusion_response import Guardiumconnectorv3DeleteDmExclusionResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_delete_dm_exclusion_response import Guardiumconnectorv3DeleteDmExclusionResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -942,7 +942,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -954,9 +954,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
     datamart = 'datamart_example' # str | Datamart name. (optional)
 
     try:
@@ -1002,7 +1002,7 @@ Name | Type | Description  | Notes
 # **guardium_connector_delete_task**
 > Guardiumconnectorv3DeleteTaskResponse guardium_connector_delete_task(central_manager_id, task_id)
 
-Summary: Delete task Description: Delete a task by central manager id and task id.
+Summary: Delete task Description: Delete a task by central manager id and task id. (This API is called from GDP only)
 
 ### Example
 
@@ -1010,14 +1010,14 @@ Summary: Delete task Description: Delete a task by central manager id and task i
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_delete_task_response import Guardiumconnectorv3DeleteTaskResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_delete_task_response import Guardiumconnectorv3DeleteTaskResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1027,7 +1027,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1039,14 +1039,14 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | ID of central manager.
     task_id = 'task_id_example' # str | ID of task being deleted.
 
     try:
-        # Summary: Delete task Description: Delete a task by central manager id and task id.
+        # Summary: Delete task Description: Delete a task by central manager id and task id. (This API is called from GDP only)
         api_response = api_instance.guardium_connector_delete_task(central_manager_id, task_id)
         print("The response of GuardiumConnectorApi->guardium_connector_delete_task:\n")
         pprint(api_response)
@@ -1089,7 +1089,7 @@ Name | Type | Description  | Notes
 # **guardium_connector_delete_tasks**
 > Guardiumconnectorv3DeleteTasksResponse guardium_connector_delete_tasks(central_manager_id)
 
-Summary: Delete tasks Description: Delete a central manager's tasks by central manager id.
+Summary: Delete tasks Description: Delete a central manager's tasks by central manager id. (This API is called from GDP only)
 
 ### Example
 
@@ -1097,14 +1097,14 @@ Summary: Delete tasks Description: Delete a central manager's tasks by central m
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_delete_tasks_response import Guardiumconnectorv3DeleteTasksResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_delete_tasks_response import Guardiumconnectorv3DeleteTasksResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1114,7 +1114,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1126,13 +1126,13 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | ID of central manager.
 
     try:
-        # Summary: Delete tasks Description: Delete a central manager's tasks by central manager id.
+        # Summary: Delete tasks Description: Delete a central manager's tasks by central manager id. (This API is called from GDP only)
         api_response = api_instance.guardium_connector_delete_tasks(central_manager_id)
         print("The response of GuardiumConnectorApi->guardium_connector_delete_tasks:\n")
         pprint(api_response)
@@ -1182,14 +1182,14 @@ Summary: Get aggregators config Description: Return a list of managed units from
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_get_aggregators_config_response import Guardiumconnectorv3GetAggregatorsConfigResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_get_aggregators_config_response import Guardiumconnectorv3GetAggregatorsConfigResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1199,7 +1199,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1211,9 +1211,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | Central Manager ID.
 
     try:
@@ -1267,14 +1267,14 @@ Summary: Get CMs Description: Return a list of Central Managers from the tenant 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_get_cms_response import Guardiumconnectorv3GetCMsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_get_cms_response import Guardiumconnectorv3GetCMsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1284,7 +1284,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1296,9 +1296,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
     run_additional_checks = True # bool | Retrieve the streaming status for all Managed Units that are reporting to a particular Central Manager. (optional)
 
     try:
@@ -1352,14 +1352,14 @@ Summary: Get CMs config Description: Return a list of Central Managers from the 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_get_cms_config_response import Guardiumconnectorv3GetCMsConfigResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_get_cms_config_response import Guardiumconnectorv3GetCMsConfigResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1369,7 +1369,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1381,9 +1381,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
 
     try:
         # Summary: Get CMs config Description: Return a list of Central Managers from the tenant database.
@@ -1433,14 +1433,14 @@ Summary: Get collectors config Description: Return the list of collectors config
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_get_collectors_config_response import Guardiumconnectorv3GetCollectorsConfigResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_get_collectors_config_response import Guardiumconnectorv3GetCollectorsConfigResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1450,7 +1450,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1462,9 +1462,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | Central Manager ID.
 
     try:
@@ -1518,14 +1518,14 @@ Description: returns full list of supported datamarts including type (historical
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_get_datamarts_response import Guardiumconnectorv3GetDatamartsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_get_datamarts_response import Guardiumconnectorv3GetDatamartsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1535,7 +1535,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1547,9 +1547,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | central manager hostname
 
     try:
@@ -1603,14 +1603,14 @@ Summary: Get DM exclusion Description: Return datamarts in the exclusion list.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_get_dm_exclusion_response import Guardiumconnectorv3GetDmExclusionResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_get_dm_exclusion_response import Guardiumconnectorv3GetDmExclusionResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1620,7 +1620,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1632,9 +1632,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
 
     try:
         # Summary: Get DM exclusion Description: Return datamarts in the exclusion list.
@@ -1684,14 +1684,14 @@ Summary: Get guardium policy definition Description: returns the policy definiti
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_get_policy_info_response import Guardiumconnectorv3GetPolicyInfoResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_get_policy_info_response import Guardiumconnectorv3GetPolicyInfoResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1701,7 +1701,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1713,9 +1713,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | Central manager hostname
     policy_name = 'policy_name_example' # str | Policy name. (optional)
 
@@ -1771,14 +1771,14 @@ Summary: Get guardium policy summary Description: returns the summaries of all p
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_get_policy_summaries_response import Guardiumconnectorv3GetPolicySummariesResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_get_policy_summaries_response import Guardiumconnectorv3GetPolicySummariesResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1788,7 +1788,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1800,9 +1800,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | Central manager hostname
 
     try:
@@ -1848,7 +1848,7 @@ Name | Type | Description  | Notes
 # **guardium_connector_get_health_info**
 > Guardiumconnectorv3GetHealthInfoResponse guardium_connector_get_health_info(central_manager_id, use_fallback=use_fallback)
 
-Summary: Get gealth info Description: Get health information from Guardium Data Protection central mamangers.
+Summary: Get health info Description: Get health information from Guardium Data Protection central mamangers. (This API is for CMs registered in legacy pull mode. Supported on-premises only)
 
 ### Example
 
@@ -1856,14 +1856,14 @@ Summary: Get gealth info Description: Get health information from Guardium Data 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_get_health_info_response import Guardiumconnectorv3GetHealthInfoResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_get_health_info_response import Guardiumconnectorv3GetHealthInfoResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1873,7 +1873,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1885,14 +1885,14 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | Central Manager ID.
-    use_fallback = True # bool | Flag indicating if the older gdp api is to be called in case it doesn't support new api. (optional)
+    use_fallback = True # bool | Flag indicating if the older GDP api is to be called in case it doesn't support new api. (optional)
 
     try:
-        # Summary: Get gealth info Description: Get health information from Guardium Data Protection central mamangers.
+        # Summary: Get health info Description: Get health information from Guardium Data Protection central mamangers. (This API is for CMs registered in legacy pull mode. Supported on-premises only)
         api_response = api_instance.guardium_connector_get_health_info(central_manager_id, use_fallback=use_fallback)
         print("The response of GuardiumConnectorApi->guardium_connector_get_health_info:\n")
         pprint(api_response)
@@ -1908,7 +1908,7 @@ with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **central_manager_id** | **str**| Central Manager ID. | 
- **use_fallback** | **bool**| Flag indicating if the older gdp api is to be called in case it doesn&#39;t support new api. | [optional] 
+ **use_fallback** | **bool**| Flag indicating if the older GDP api is to be called in case it doesn&#39;t support new api. | [optional] 
 
 ### Return type
 
@@ -1935,7 +1935,7 @@ Name | Type | Description  | Notes
 # **guardium_connector_get_latest_dm_extraction_profile**
 > Guardiumconnectorv3GetLatestDMExtractionProfileResponse guardium_connector_get_latest_dm_extraction_profile(central_manager_id)
 
-Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for Guardium.
+Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for GDSC.
 
 ### Example
 
@@ -1943,14 +1943,14 @@ Summary: Get latest DM extraction profile Description: Return the Datamart Extra
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_get_latest_dm_extraction_profile_response import Guardiumconnectorv3GetLatestDMExtractionProfileResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_get_latest_dm_extraction_profile_response import Guardiumconnectorv3GetLatestDMExtractionProfileResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1960,7 +1960,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1972,13 +1972,13 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | Central Manager ID.
 
     try:
-        # Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for Guardium.
+        # Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for GDSC.
         api_response = api_instance.guardium_connector_get_latest_dm_extraction_profile(central_manager_id)
         print("The response of GuardiumConnectorApi->guardium_connector_get_latest_dm_extraction_profile:\n")
         pprint(api_response)
@@ -2028,14 +2028,14 @@ Summary: Get streaming status Description: Return the streaming configuration.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_get_streaming_status_response import Guardiumconnectorv3GetStreamingStatusResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_get_streaming_status_response import Guardiumconnectorv3GetStreamingStatusResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2045,7 +2045,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -2057,9 +2057,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | Central Manager ID.
 
     try:
@@ -2105,7 +2105,7 @@ Name | Type | Description  | Notes
 # **guardium_connector_get_sync_dms**
 > Guardiumconnectorv3GetSyncDMsResponse guardium_connector_get_sync_dms(central_manager_id)
 
-Summary: Get sync DMs Description: Return the list of tasks from a central manager.
+Summary: Get sync DMs Description: Return the list of tasks from a central manager. (This API is called from GDP only)
 
 ### Example
 
@@ -2113,14 +2113,14 @@ Summary: Get sync DMs Description: Return the list of tasks from a central manag
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_get_sync_dms_response import Guardiumconnectorv3GetSyncDMsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_get_sync_dms_response import Guardiumconnectorv3GetSyncDMsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2130,7 +2130,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -2142,13 +2142,13 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | ID of central manager.
 
     try:
-        # Summary: Get sync DMs Description: Return the list of tasks from a central manager.
+        # Summary: Get sync DMs Description: Return the list of tasks from a central manager. (This API is called from GDP only)
         api_response = api_instance.guardium_connector_get_sync_dms(central_manager_id)
         print("The response of GuardiumConnectorApi->guardium_connector_get_sync_dms:\n")
         pprint(api_response)
@@ -2198,14 +2198,14 @@ Summary: Get task types Description: Return the list of supported task types.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_get_task_types_response import Guardiumconnectorv3GetTaskTypesResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_get_task_types_response import Guardiumconnectorv3GetTaskTypesResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2215,7 +2215,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -2227,9 +2227,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
 
     try:
         # Summary: Get task types Description: Return the list of supported task types.
@@ -2271,7 +2271,7 @@ This endpoint does not need any parameter.
 # **guardium_connector_get_tasks**
 > Guardiumconnectorv3GetTasksResponse guardium_connector_get_tasks(central_manager_id, task_id=task_id, task_type=task_type, key_object=key_object)
 
-Summary: Get tasks Description: Return the list of tasks from a central manager.
+Summary: Get tasks Description: Return the list of tasks from a central manager. (This API is called from GDP only)
 
 ### Example
 
@@ -2279,14 +2279,14 @@ Summary: Get tasks Description: Return the list of tasks from a central manager.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_get_tasks_response import Guardiumconnectorv3GetTasksResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_get_tasks_response import Guardiumconnectorv3GetTasksResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2296,7 +2296,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -2308,16 +2308,16 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | ID of central manager.
     task_id = 'task_id_example' # str | ID of task. (optional)
     task_type = 'task_type_example' # str | Type of task. (optional)
     key_object = 'key_object_example' # str | Key object. (optional)
 
     try:
-        # Summary: Get tasks Description: Return the list of tasks from a central manager.
+        # Summary: Get tasks Description: Return the list of tasks from a central manager. (This API is called from GDP only)
         api_response = api_instance.guardium_connector_get_tasks(central_manager_id, task_id=task_id, task_type=task_type, key_object=key_object)
         print("The response of GuardiumConnectorApi->guardium_connector_get_tasks:\n")
         pprint(api_response)
@@ -2362,7 +2362,7 @@ Name | Type | Description  | Notes
 # **guardium_connector_run_gdp_report**
 > Guardiumconnectorv3RunGDPReportResponse guardium_connector_run_gdp_report(central_manager_id, guardiumconnectorv3_run_gdp_report_request)
 
-Summary: Run GDP report Description: Run GDP report.
+Summary: Run GDP report Description: Run GDP report. (This API is for CMs registered in legacy pull mode. Supported on-premises only)
 
 ### Example
 
@@ -2370,15 +2370,15 @@ Summary: Run GDP report Description: Run GDP report.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_run_gdp_report_request import Guardiumconnectorv3RunGDPReportRequest
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_run_gdp_report_response import Guardiumconnectorv3RunGDPReportResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_run_gdp_report_request import Guardiumconnectorv3RunGDPReportRequest
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_run_gdp_report_response import Guardiumconnectorv3RunGDPReportResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2388,7 +2388,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -2400,14 +2400,14 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | Central Manager ID.
-    guardiumconnectorv3_run_gdp_report_request = ibm_gdsc_sdk_software.Guardiumconnectorv3RunGDPReportRequest() # Guardiumconnectorv3RunGDPReportRequest | 
+    guardiumconnectorv3_run_gdp_report_request = ibm_gdsc_sdk_saas.Guardiumconnectorv3RunGDPReportRequest() # Guardiumconnectorv3RunGDPReportRequest | 
 
     try:
-        # Summary: Run GDP report Description: Run GDP report.
+        # Summary: Run GDP report Description: Run GDP report. (This API is for CMs registered in legacy pull mode. Supported on-premises only)
         api_response = api_instance.guardium_connector_run_gdp_report(central_manager_id, guardiumconnectorv3_run_gdp_report_request)
         print("The response of GuardiumConnectorApi->guardium_connector_run_gdp_report:\n")
         pprint(api_response)
@@ -2450,7 +2450,7 @@ Name | Type | Description  | Notes
 # **guardium_connector_setup_cm**
 > Guardiumconnectorv3SetupCMResponse guardium_connector_setup_cm(guardiumconnectorv3_setup_cm_request)
 
-Summary: Setup CM Description: Set up the registration between a GDP Central manager and Guardium.
+Summary: Setup CM Description: Set up the registration between a GDP Central manager and GDSC. (This API is called from GDP only)
 
 ### Example
 
@@ -2458,15 +2458,15 @@ Summary: Setup CM Description: Set up the registration between a GDP Central man
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_setup_cm_request import Guardiumconnectorv3SetupCMRequest
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_setup_cm_response import Guardiumconnectorv3SetupCMResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_setup_cm_request import Guardiumconnectorv3SetupCMRequest
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_setup_cm_response import Guardiumconnectorv3SetupCMResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2476,7 +2476,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -2488,13 +2488,13 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
-    guardiumconnectorv3_setup_cm_request = ibm_gdsc_sdk_software.Guardiumconnectorv3SetupCMRequest() # Guardiumconnectorv3SetupCMRequest | 
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
+    guardiumconnectorv3_setup_cm_request = ibm_gdsc_sdk_saas.Guardiumconnectorv3SetupCMRequest() # Guardiumconnectorv3SetupCMRequest | 
 
     try:
-        # Summary: Setup CM Description: Set up the registration between a GDP Central manager and Guardium.
+        # Summary: Setup CM Description: Set up the registration between a GDP Central manager and GDSC. (This API is called from GDP only)
         api_response = api_instance.guardium_connector_setup_cm(guardiumconnectorv3_setup_cm_request)
         print("The response of GuardiumConnectorApi->guardium_connector_setup_cm:\n")
         pprint(api_response)
@@ -2544,15 +2544,15 @@ Description: setup custom datamart execution mode
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_setup_datamarts_request import Guardiumconnectorv3SetupDatamartsRequest
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_setup_datamarts_response import Guardiumconnectorv3SetupDatamartsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_setup_datamarts_request import Guardiumconnectorv3SetupDatamartsRequest
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_setup_datamarts_response import Guardiumconnectorv3SetupDatamartsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2562,7 +2562,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -2574,11 +2574,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | central manager
-    guardiumconnectorv3_setup_datamarts_request = ibm_gdsc_sdk_software.Guardiumconnectorv3SetupDatamartsRequest() # Guardiumconnectorv3SetupDatamartsRequest | 
+    guardiumconnectorv3_setup_datamarts_request = ibm_gdsc_sdk_saas.Guardiumconnectorv3SetupDatamartsRequest() # Guardiumconnectorv3SetupDatamartsRequest | 
 
     try:
         # Description: setup custom datamart execution mode
@@ -2624,7 +2624,7 @@ Name | Type | Description  | Notes
 # **guardium_connector_task_error**
 > Guardiumconnectorv3TaskErrorResponse guardium_connector_task_error(central_manager_id, guardiumconnectorv3_task_error_request)
 
-Summary: Task error Description: Log error messages from GDP task execution.
+Summary: Task error Description: Log error messages from GDP task execution. (This API is called from GDP only)
 
 ### Example
 
@@ -2632,15 +2632,15 @@ Summary: Task error Description: Log error messages from GDP task execution.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_task_error_request import Guardiumconnectorv3TaskErrorRequest
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_task_error_response import Guardiumconnectorv3TaskErrorResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_task_error_request import Guardiumconnectorv3TaskErrorRequest
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_task_error_response import Guardiumconnectorv3TaskErrorResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2650,7 +2650,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -2662,14 +2662,14 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | ID of central manager.
-    guardiumconnectorv3_task_error_request = ibm_gdsc_sdk_software.Guardiumconnectorv3TaskErrorRequest() # Guardiumconnectorv3TaskErrorRequest | 
+    guardiumconnectorv3_task_error_request = ibm_gdsc_sdk_saas.Guardiumconnectorv3TaskErrorRequest() # Guardiumconnectorv3TaskErrorRequest | 
 
     try:
-        # Summary: Task error Description: Log error messages from GDP task execution.
+        # Summary: Task error Description: Log error messages from GDP task execution. (This API is called from GDP only)
         api_response = api_instance.guardium_connector_task_error(central_manager_id, guardiumconnectorv3_task_error_request)
         print("The response of GuardiumConnectorApi->guardium_connector_task_error:\n")
         pprint(api_response)
@@ -2719,15 +2719,15 @@ Summary: Test database connection Description: Return database connection result
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_database_connection_string_request import Guardiumconnectorv3DatabaseConnectionStringRequest
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_database_result_response import Guardiumconnectorv3DatabaseResultResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_database_connection_string_request import Guardiumconnectorv3DatabaseConnectionStringRequest
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_database_result_response import Guardiumconnectorv3DatabaseResultResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2743,10 +2743,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
-    guardiumconnectorv3_database_connection_string_request = ibm_gdsc_sdk_software.Guardiumconnectorv3DatabaseConnectionStringRequest() # Guardiumconnectorv3DatabaseConnectionStringRequest | 
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
+    guardiumconnectorv3_database_connection_string_request = ibm_gdsc_sdk_saas.Guardiumconnectorv3DatabaseConnectionStringRequest() # Guardiumconnectorv3DatabaseConnectionStringRequest | 
 
     try:
         # Summary: Test database connection Description: Return database connection results.
@@ -2799,15 +2799,15 @@ Summary: Update DM exclusion Description: Update the atamart exclusion list.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_update_dm_exclusion_request import Guardiumconnectorv3UpdateDmExclusionRequest
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_update_dm_exclusion_response import Guardiumconnectorv3UpdateDmExclusionResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_update_dm_exclusion_request import Guardiumconnectorv3UpdateDmExclusionRequest
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_update_dm_exclusion_response import Guardiumconnectorv3UpdateDmExclusionResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2817,7 +2817,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -2829,10 +2829,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
-    guardiumconnectorv3_update_dm_exclusion_request = ibm_gdsc_sdk_software.Guardiumconnectorv3UpdateDmExclusionRequest() # Guardiumconnectorv3UpdateDmExclusionRequest | 
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
+    guardiumconnectorv3_update_dm_exclusion_request = ibm_gdsc_sdk_saas.Guardiumconnectorv3UpdateDmExclusionRequest() # Guardiumconnectorv3UpdateDmExclusionRequest | 
 
     try:
         # Summary: Update DM exclusion Description: Update the atamart exclusion list.
@@ -2877,7 +2877,7 @@ Name | Type | Description  | Notes
 # **guardium_connector_update_streaming**
 > Guardiumconnectorv3UpdateStreamingResponse guardium_connector_update_streaming(central_manager_id, guardiumconnectorv3_update_streaming_request)
 
-Summary: Update streaming Description: Update streaming status into GI.
+Summary: Update streaming Description: Update streaming status into GI. (This API is called from GDP only)
 
 ### Example
 
@@ -2885,15 +2885,15 @@ Summary: Update streaming Description: Update streaming status into GI.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_update_streaming_request import Guardiumconnectorv3UpdateStreamingRequest
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_update_streaming_response import Guardiumconnectorv3UpdateStreamingResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_update_streaming_request import Guardiumconnectorv3UpdateStreamingRequest
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_update_streaming_response import Guardiumconnectorv3UpdateStreamingResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2903,7 +2903,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -2915,14 +2915,14 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | ID of central manager.
-    guardiumconnectorv3_update_streaming_request = ibm_gdsc_sdk_software.Guardiumconnectorv3UpdateStreamingRequest() # Guardiumconnectorv3UpdateStreamingRequest | 
+    guardiumconnectorv3_update_streaming_request = ibm_gdsc_sdk_saas.Guardiumconnectorv3UpdateStreamingRequest() # Guardiumconnectorv3UpdateStreamingRequest | 
 
     try:
-        # Summary: Update streaming Description: Update streaming status into GI.
+        # Summary: Update streaming Description: Update streaming status into GI. (This API is called from GDP only)
         api_response = api_instance.guardium_connector_update_streaming(central_manager_id, guardiumconnectorv3_update_streaming_request)
         print("The response of GuardiumConnectorApi->guardium_connector_update_streaming:\n")
         pprint(api_response)
@@ -2965,7 +2965,7 @@ Name | Type | Description  | Notes
 # **guardium_connector_update_task**
 > Guardiumconnectorv3UpdateTaskResponse guardium_connector_update_task(central_manager_id, task_id, guardiumconnectorv3_update_task_request)
 
-Summary: Update task Description: Update a task that gets executed on GDP.
+Summary: Update task Description: Update a task that gets executed on GDP. (This API is called from GDP only)
 
 ### Example
 
@@ -2973,15 +2973,15 @@ Summary: Update task Description: Update a task that gets executed on GDP.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_update_task_request import Guardiumconnectorv3UpdateTaskRequest
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_update_task_response import Guardiumconnectorv3UpdateTaskResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_update_task_request import Guardiumconnectorv3UpdateTaskRequest
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_update_task_response import Guardiumconnectorv3UpdateTaskResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2991,7 +2991,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -3003,15 +3003,15 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.GuardiumConnectorApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.GuardiumConnectorApi(api_client)
     central_manager_id = 'central_manager_id_example' # str | ID of central manager.
     task_id = 'task_id_example' # str | ID of task being updated.
-    guardiumconnectorv3_update_task_request = ibm_gdsc_sdk_software.Guardiumconnectorv3UpdateTaskRequest() # Guardiumconnectorv3UpdateTaskRequest | 
+    guardiumconnectorv3_update_task_request = ibm_gdsc_sdk_saas.Guardiumconnectorv3UpdateTaskRequest() # Guardiumconnectorv3UpdateTaskRequest | 
 
     try:
-        # Summary: Update task Description: Update a task that gets executed on GDP.
+        # Summary: Update task Description: Update a task that gets executed on GDP. (This API is called from GDP only)
         api_response = api_instance.guardium_connector_update_task(central_manager_id, task_id, guardiumconnectorv3_update_task_request)
         print("The response of GuardiumConnectorApi->guardium_connector_update_task:\n")
         pprint(api_response)

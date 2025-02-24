@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.workflowv3_task_edit import Workflowv3TaskEdit
+from ibm_gdsc_sdk_saas.models.workflowv3_task_edit import Workflowv3TaskEdit
 
 class TestWorkflowv3TaskEdit(unittest.TestCase):
     """Workflowv3TaskEdit unit test stubs"""
@@ -36,7 +36,7 @@ class TestWorkflowv3TaskEdit(unittest.TestCase):
         if include_optional:
             return Workflowv3TaskEdit(
                 assignments = [
-                    ibm_gdsc_sdk_software.models.workflowv3_entity.workflowv3Entity(
+                    ibm_gdsc_sdk_saas.models.workflowv3_entity.workflowv3Entity(
                         label = '', 
                         template_id = '', 
                         type = 'UNDEFINED_ENTITY_TYPE', 
@@ -49,14 +49,14 @@ class TestWorkflowv3TaskEdit(unittest.TestCase):
                     ],
                 description = '',
                 investigation_links = [
-                    ibm_gdsc_sdk_software.models.generic_configuration_item_reference.Generic configuration item reference(
+                    ibm_gdsc_sdk_saas.models.generic_configuration_item_reference.Generic configuration item reference(
                         display = '', 
                         id = '', 
                         type = '', )
                     ],
                 justification = '',
                 priority = 'UNDEFINED_PRIORITY',
-                response_template = ibm_gdsc_sdk_software.models.generic_configuration_item_reference.Generic configuration item reference(
+                response_template = ibm_gdsc_sdk_saas.models.generic_configuration_item_reference.Generic configuration item reference(
                     display = '', 
                     id = '', 
                     type = '', ),

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticsenginev3_update_lead_generator_config_request import Riskanalyticsenginev3UpdateLeadGeneratorConfigRequest
+from ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_update_lead_generator_config_request import Riskanalyticsenginev3UpdateLeadGeneratorConfigRequest
 
 class TestRiskanalyticsenginev3UpdateLeadGeneratorConfigRequest(unittest.TestCase):
     """Riskanalyticsenginev3UpdateLeadGeneratorConfigRequest unit test stubs"""
@@ -35,11 +35,11 @@ class TestRiskanalyticsenginev3UpdateLeadGeneratorConfigRequest(unittest.TestCas
         model = Riskanalyticsenginev3UpdateLeadGeneratorConfigRequest()
         if include_optional:
             return Riskanalyticsenginev3UpdateLeadGeneratorConfigRequest(
-                config = ibm_gdsc_sdk_software.models.riskanalyticsenginev3_lead_generator_config.riskanalyticsenginev3LeadGeneratorConfig(
+                config = ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_lead_generator_config.riskanalyticsenginev3LeadGeneratorConfig(
                     is_active = True, 
                     lead_generator_name = '', 
                     lead_generator_params = [
-                        ibm_gdsc_sdk_software.models.riskanalyticsenginev3_lead_generator_config_param_value.riskanalyticsenginev3LeadGeneratorConfigParamValue(
+                        ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_lead_generator_config_param_value.riskanalyticsenginev3LeadGeneratorConfigParamValue(
                             name = '', 
                             value = '', )
                         ], )

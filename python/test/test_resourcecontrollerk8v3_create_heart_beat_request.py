@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_create_heart_beat_request import Resourcecontrollerk8v3CreateHeartBeatRequest
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_create_heart_beat_request import Resourcecontrollerk8v3CreateHeartBeatRequest
 
 class TestResourcecontrollerk8v3CreateHeartBeatRequest(unittest.TestCase):
     """Resourcecontrollerk8v3CreateHeartBeatRequest unit test stubs"""

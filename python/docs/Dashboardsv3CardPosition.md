@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.dashboardsv3_card_position import Dashboardsv3CardPosition
+from ibm_gdsc_sdk_saas.models.dashboardsv3_card_position import Dashboardsv3CardPosition
 
 # TODO update the JSON string below
 json = "{}"

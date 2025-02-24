@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_extraction_profile import Guardiumconnectorv3ExtractionProfile
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_extraction_profile import Guardiumconnectorv3ExtractionProfile
 
 class TestGuardiumconnectorv3ExtractionProfile(unittest.TestCase):
     """Guardiumconnectorv3ExtractionProfile unit test stubs"""
@@ -38,7 +38,7 @@ class TestGuardiumconnectorv3ExtractionProfile(unittest.TestCase):
                 active = '',
                 category = '',
                 dms = [
-                    ibm_gdsc_sdk_software.models.datamarts_details_information.Datamarts details information(
+                    ibm_gdsc_sdk_saas.models.datamarts_details_information.Datamarts details information(
                         dm = '', 
                         dm_current_type = '', 
                         dm_default_type = '', 

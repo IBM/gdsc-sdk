@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.invite_user_body_params import InviteUserBodyParams
+from ibm_gdsc_sdk_saas.models.invite_user_body_params import InviteUserBodyParams
 
 class TestInviteUserBodyParams(unittest.TestCase):
     """InviteUserBodyParams unit test stubs"""

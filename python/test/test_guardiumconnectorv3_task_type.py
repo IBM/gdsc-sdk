@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_task_type import Guardiumconnectorv3TaskType
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_task_type import Guardiumconnectorv3TaskType
 
 class TestGuardiumconnectorv3TaskType(unittest.TestCase):
     """Guardiumconnectorv3TaskType unit test stubs"""

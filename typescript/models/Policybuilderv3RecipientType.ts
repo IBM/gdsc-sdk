@@ -13,7 +13,7 @@
 import { HttpFile } from '../http/http';
 
 /**
-* For email receivers either use user name or email address.   - EMAIL: External user will receive email only  - USER: Insights user will receive notification and email  - ROLE: Insights role will receive notification only  - TICKET: Assign any work to an external ticketing service such as ServiceNow or IBM Resilient  - SYSLOG: Syslog type for notification  - SNMP: SNMP type for notification  - SLACK: SLACK alert type for notification  - TEAMS: TEAMS (Microsoft teams) alert type for notification
+* For email receivers either use user name or email address.   - EMAIL: External user will receive email only  - USER: GDSC user will receive notification and email  - ROLE: GDSC role will receive notification only  - TICKET: Assign any work to an external ticketing service such as ServiceNow or IBM Resilient  - SYSLOG: Syslog type for notification  - SNMP: SNMP type for notification  - SLACK: SLACK alert type for notification  - TEAMS: TEAMS (Microsoft teams) alert type for notification
 */
 export enum Policybuilderv3RecipientType {
     UndefinedRectype = 'UNDEFINED_RECTYPE',

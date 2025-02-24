@@ -18,7 +18,7 @@ export class Resourcecontrollerk8v3CreateControllerRequest {
     */
     'description'?: string;
     /**
-    * // Controller object that needs to be added.   Controller controller = 1; The name of the controller.
+    * The name of the controller.
     */
     'name'?: string;
     'tenantId'?: string;

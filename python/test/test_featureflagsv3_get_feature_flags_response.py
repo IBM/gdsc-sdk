@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.featureflagsv3_get_feature_flags_response import Featureflagsv3GetFeatureFlagsResponse
+from ibm_gdsc_sdk_saas.models.featureflagsv3_get_feature_flags_response import Featureflagsv3GetFeatureFlagsResponse
 
 class TestFeatureflagsv3GetFeatureFlagsResponse(unittest.TestCase):
     """Featureflagsv3GetFeatureFlagsResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestFeatureflagsv3GetFeatureFlagsResponse(unittest.TestCase):
         if include_optional:
             return Featureflagsv3GetFeatureFlagsResponse(
                 feature_flags = {
-                    'key' : ibm_gdsc_sdk_software.models.featureflagsv3_feature_flag_value.featureflagsv3FeatureFlagValue(
+                    'key' : ibm_gdsc_sdk_saas.models.featureflagsv3_feature_flag_value.featureflagsv3FeatureFlagValue(
                         is_enabled = True, 
                         value = '', )
                     }

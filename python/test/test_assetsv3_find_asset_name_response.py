@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_find_asset_name_response import Assetsv3FindAssetNameResponse
+from ibm_gdsc_sdk_saas.models.assetsv3_find_asset_name_response import Assetsv3FindAssetNameResponse
 
 class TestAssetsv3FindAssetNameResponse(unittest.TestCase):
     """Assetsv3FindAssetNameResponse unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.schedulerv3_recipient import Schedulerv3Recipient
+from ibm_gdsc_sdk_saas.models.schedulerv3_recipient import Schedulerv3Recipient
 
 class TestSchedulerv3Recipient(unittest.TestCase):
     """Schedulerv3Recipient unit test stubs"""

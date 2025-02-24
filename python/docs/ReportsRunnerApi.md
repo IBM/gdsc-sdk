@@ -1,4 +1,4 @@
-# ibm_gdsc_sdk_software.ReportsRunnerApi
+# ibm_gdsc_sdk_saas.ReportsRunnerApi
 
 All URIs are relative to *http://localhost*
 
@@ -26,15 +26,15 @@ Summary: Get running queries Description: Get queries that are running more than
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_active_queries_request import Reportsrunnerv3GetActiveQueriesRequest
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_active_queries_response import Reportsrunnerv3GetActiveQueriesResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_get_active_queries_request import Reportsrunnerv3GetActiveQueriesRequest
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_get_active_queries_response import Reportsrunnerv3GetActiveQueriesResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -44,7 +44,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -56,10 +56,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsRunnerApi(api_client)
-    reportsrunnerv3_get_active_queries_request = ibm_gdsc_sdk_software.Reportsrunnerv3GetActiveQueriesRequest() # Reportsrunnerv3GetActiveQueriesRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ReportsRunnerApi(api_client)
+    reportsrunnerv3_get_active_queries_request = ibm_gdsc_sdk_saas.Reportsrunnerv3GetActiveQueriesRequest() # Reportsrunnerv3GetActiveQueriesRequest | 
 
     try:
         # Summary: Get running queries Description: Get queries that are running more than certain time
@@ -112,15 +112,15 @@ Summary: Get audit data count Description: Get audit data.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_audit_data_count_request import Reportsrunnerv3GetAuditDataCountRequest
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_report_data_count_response import Reportsrunnerv3GetReportDataCountResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_get_audit_data_count_request import Reportsrunnerv3GetAuditDataCountRequest
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_get_report_data_count_response import Reportsrunnerv3GetReportDataCountResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -130,7 +130,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -142,11 +142,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsRunnerApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsRunnerApi(api_client)
     report_id = 'report_id_example' # str | Optional: the ID of the Report we wish to run (e.g. 000000000000000000000905).
-    reportsrunnerv3_get_audit_data_count_request = ibm_gdsc_sdk_software.Reportsrunnerv3GetAuditDataCountRequest() # Reportsrunnerv3GetAuditDataCountRequest | 
+    reportsrunnerv3_get_audit_data_count_request = ibm_gdsc_sdk_saas.Reportsrunnerv3GetAuditDataCountRequest() # Reportsrunnerv3GetAuditDataCountRequest | 
 
     try:
         # Summary: Get audit data count Description: Get audit data.
@@ -200,15 +200,15 @@ Summary: Get chart data Description: Get Chart data by chart ID or by specifying
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_chart_data_request import Reportsrunnerv3GetChartDataRequest
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_chart_data_response import Reportsrunnerv3GetChartDataResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_get_chart_data_request import Reportsrunnerv3GetChartDataRequest
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_get_chart_data_response import Reportsrunnerv3GetChartDataResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -218,7 +218,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -230,10 +230,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsRunnerApi(api_client)
-    reportsrunnerv3_get_chart_data_request = ibm_gdsc_sdk_software.Reportsrunnerv3GetChartDataRequest() # Reportsrunnerv3GetChartDataRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ReportsRunnerApi(api_client)
+    reportsrunnerv3_get_chart_data_request = ibm_gdsc_sdk_saas.Reportsrunnerv3GetChartDataRequest() # Reportsrunnerv3GetChartDataRequest | 
 
     try:
         # Summary: Get chart data Description: Get Chart data by chart ID or by specifying report definition and chart settings.
@@ -286,15 +286,15 @@ Name | Type | Description  | Notes
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_chart_data_requestv2 import Reportsrunnerv3GetChartDataRequestv2
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_chart_data_responsev2 import Reportsrunnerv3GetChartDataResponsev2
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_get_chart_data_requestv2 import Reportsrunnerv3GetChartDataRequestv2
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_get_chart_data_responsev2 import Reportsrunnerv3GetChartDataResponsev2
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -304,7 +304,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -316,10 +316,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsRunnerApi(api_client)
-    reportsrunnerv3_get_chart_data_requestv2 = ibm_gdsc_sdk_software.Reportsrunnerv3GetChartDataRequestv2() # Reportsrunnerv3GetChartDataRequestv2 | 
+    api_instance = ibm_gdsc_sdk_saas.ReportsRunnerApi(api_client)
+    reportsrunnerv3_get_chart_data_requestv2 = ibm_gdsc_sdk_saas.Reportsrunnerv3GetChartDataRequestv2() # Reportsrunnerv3GetChartDataRequestv2 | 
 
     try:
         api_response = api_instance.reports_runner_get_chart_datav2(reportsrunnerv3_get_chart_data_requestv2)
@@ -371,15 +371,15 @@ Summary: Get report column facet Description: Get counts that is group by values
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_report_column_facet_request import Reportsrunnerv3GetReportColumnFacetRequest
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_report_column_facet_response import Reportsrunnerv3GetReportColumnFacetResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_get_report_column_facet_request import Reportsrunnerv3GetReportColumnFacetRequest
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_get_report_column_facet_response import Reportsrunnerv3GetReportColumnFacetResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -389,7 +389,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -401,10 +401,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsRunnerApi(api_client)
-    reportsrunnerv3_get_report_column_facet_request = ibm_gdsc_sdk_software.Reportsrunnerv3GetReportColumnFacetRequest() # Reportsrunnerv3GetReportColumnFacetRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ReportsRunnerApi(api_client)
+    reportsrunnerv3_get_report_column_facet_request = ibm_gdsc_sdk_saas.Reportsrunnerv3GetReportColumnFacetRequest() # Reportsrunnerv3GetReportColumnFacetRequest | 
 
     try:
         # Summary: Get report column facet Description: Get counts that is group by values for the selected column.
@@ -457,15 +457,15 @@ Summary: Get report data count Description: Get report data.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_report_data_count_request import Reportsrunnerv3GetReportDataCountRequest
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_report_data_count_response import Reportsrunnerv3GetReportDataCountResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_get_report_data_count_request import Reportsrunnerv3GetReportDataCountRequest
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_get_report_data_count_response import Reportsrunnerv3GetReportDataCountResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -475,7 +475,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -487,10 +487,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsRunnerApi(api_client)
-    reportsrunnerv3_get_report_data_count_request = ibm_gdsc_sdk_software.Reportsrunnerv3GetReportDataCountRequest() # Reportsrunnerv3GetReportDataCountRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ReportsRunnerApi(api_client)
+    reportsrunnerv3_get_report_data_count_request = ibm_gdsc_sdk_saas.Reportsrunnerv3GetReportDataCountRequest() # Reportsrunnerv3GetReportDataCountRequest | 
 
     try:
         # Summary: Get report data count Description: Get report data.
@@ -543,15 +543,15 @@ Summary: Run audit report Description: Run task report by SQL based ob report ID
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_run_audit_report_request import Reportsrunnerv3RunAuditReportRequest
-from ibm_gdsc_sdk_software.models.stream_result_of_reportsrunnerv3_run_report_response import StreamResultOfReportsrunnerv3RunReportResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_run_audit_report_request import Reportsrunnerv3RunAuditReportRequest
+from ibm_gdsc_sdk_saas.models.stream_result_of_reportsrunnerv3_run_report_response import StreamResultOfReportsrunnerv3RunReportResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -561,7 +561,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -573,11 +573,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsRunnerApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsRunnerApi(api_client)
     report_id = 'report_id_example' # str | The ID of the Report we wish to run (e.g. 000000000000000000000905).
-    reportsrunnerv3_run_audit_report_request = ibm_gdsc_sdk_software.Reportsrunnerv3RunAuditReportRequest() # Reportsrunnerv3RunAuditReportRequest | 
+    reportsrunnerv3_run_audit_report_request = ibm_gdsc_sdk_saas.Reportsrunnerv3RunAuditReportRequest() # Reportsrunnerv3RunAuditReportRequest | 
 
     try:
         # Summary: Run audit report Description: Run task report by SQL based ob report ID and filter definition.
@@ -631,15 +631,15 @@ Summary: Run report Description: Run report by report ID or by specifying report
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_run_report_request import Reportsrunnerv3RunReportRequest
-from ibm_gdsc_sdk_software.models.stream_result_of_reportsrunnerv3_run_report_response import StreamResultOfReportsrunnerv3RunReportResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_run_report_request import Reportsrunnerv3RunReportRequest
+from ibm_gdsc_sdk_saas.models.stream_result_of_reportsrunnerv3_run_report_response import StreamResultOfReportsrunnerv3RunReportResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -649,7 +649,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -661,10 +661,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsRunnerApi(api_client)
-    reportsrunnerv3_run_report_request = ibm_gdsc_sdk_software.Reportsrunnerv3RunReportRequest() # Reportsrunnerv3RunReportRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ReportsRunnerApi(api_client)
+    reportsrunnerv3_run_report_request = ibm_gdsc_sdk_saas.Reportsrunnerv3RunReportRequest() # Reportsrunnerv3RunReportRequest | 
 
     try:
         # Summary: Run report Description: Run report by report ID or by specifying report definition.
@@ -717,15 +717,15 @@ Summary: Stop query Description: Stop a query based on the id
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_stop_query_request import Reportsrunnerv3StopQueryRequest
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_stop_query_response import Reportsrunnerv3StopQueryResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_stop_query_request import Reportsrunnerv3StopQueryRequest
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_stop_query_response import Reportsrunnerv3StopQueryResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -735,7 +735,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -747,10 +747,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsRunnerApi(api_client)
-    reportsrunnerv3_stop_query_request = ibm_gdsc_sdk_software.Reportsrunnerv3StopQueryRequest() # Reportsrunnerv3StopQueryRequest | 
+    api_instance = ibm_gdsc_sdk_saas.ReportsRunnerApi(api_client)
+    reportsrunnerv3_stop_query_request = ibm_gdsc_sdk_saas.Reportsrunnerv3StopQueryRequest() # Reportsrunnerv3StopQueryRequest | 
 
     try:
         # Summary: Stop query Description: Stop a query based on the id

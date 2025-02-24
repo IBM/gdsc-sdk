@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.schedulerv3_workflow_type import Schedulerv3WorkflowType
+from ibm_gdsc_sdk_saas.models.schedulerv3_workflow_type import Schedulerv3WorkflowType
 
 class TestSchedulerv3WorkflowType(unittest.TestCase):
     """Schedulerv3WorkflowType unit test stubs"""

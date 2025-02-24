@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.list_data_resources_sort_parameter import ListDataResourcesSortParameter
+from ibm_gdsc_sdk_saas.models.list_data_resources_sort_parameter import ListDataResourcesSortParameter
 
 class TestListDataResourcesSortParameter(unittest.TestCase):
     """ListDataResourcesSortParameter unit test stubs"""

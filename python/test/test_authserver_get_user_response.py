@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.authserver_get_user_response import AuthserverGetUserResponse
+from ibm_gdsc_sdk_saas.models.authserver_get_user_response import AuthserverGetUserResponse
 
 class TestAuthserverGetUserResponse(unittest.TestCase):
     """AuthserverGetUserResponse unit test stubs"""
@@ -36,11 +36,11 @@ class TestAuthserverGetUserResponse(unittest.TestCase):
         if include_optional:
             return AuthserverGetUserResponse(
                 feature_flags = {
-                    'key' : ibm_gdsc_sdk_software.models.featureflagsv3_feature_flag_value.featureflagsv3FeatureFlagValue(
+                    'key' : ibm_gdsc_sdk_saas.models.featureflagsv3_feature_flag_value.featureflagsv3FeatureFlagValue(
                         is_enabled = True, 
                         value = '', )
                     },
-                user = ibm_gdsc_sdk_software.models.full_user_has_information_about_a_single_user_and_cumulative_privileges.FullUser has information about a single user and cumulative privileges(
+                user = ibm_gdsc_sdk_saas.models.full_user_has_information_about_a_single_user_and_cumulative_privileges.FullUser has information about a single user and cumulative privileges(
                     activation_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     directory_id = '', 
                     disabled = True, 

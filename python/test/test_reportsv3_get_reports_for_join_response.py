@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_get_reports_for_join_response import Reportsv3GetReportsForJoinResponse
+from ibm_gdsc_sdk_saas.models.reportsv3_get_reports_for_join_response import Reportsv3GetReportsForJoinResponse
 
 class TestReportsv3GetReportsForJoinResponse(unittest.TestCase):
     """Reportsv3GetReportsForJoinResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestReportsv3GetReportsForJoinResponse(unittest.TestCase):
         if include_optional:
             return Reportsv3GetReportsForJoinResponse(
                 reports_used_in_join = [
-                    ibm_gdsc_sdk_software.models.reportsv3_report_used_in_join.reportsv3ReportUsedInJoin(
+                    ibm_gdsc_sdk_saas.models.reportsv3_report_used_in_join.reportsv3ReportUsedInJoin(
                         id = '', 
                         name = '', 
                         used_join_header_ids = [

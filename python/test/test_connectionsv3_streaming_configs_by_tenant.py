@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_streaming_configs_by_tenant import Connectionsv3StreamingConfigsByTenant
+from ibm_gdsc_sdk_saas.models.connectionsv3_streaming_configs_by_tenant import Connectionsv3StreamingConfigsByTenant
 
 class TestConnectionsv3StreamingConfigsByTenant(unittest.TestCase):
     """Connectionsv3StreamingConfigsByTenant unit test stubs"""
@@ -36,10 +36,10 @@ class TestConnectionsv3StreamingConfigsByTenant(unittest.TestCase):
         if include_optional:
             return Connectionsv3StreamingConfigsByTenant(
                 mini_snif_endpoint = '',
-                streaming_configs = ibm_gdsc_sdk_software.models.connectionsv3_streaming_configs.connectionsv3StreamingConfigs(
+                streaming_configs = ibm_gdsc_sdk_saas.models.connectionsv3_streaming_configs.connectionsv3StreamingConfigs(
                     account_configs = [
-                        ibm_gdsc_sdk_software.models.connectionsv3_account_config.connectionsv3AccountConfig(
-                            account = ibm_gdsc_sdk_software.models.connectionsv3_account.connectionsv3Account(
+                        ibm_gdsc_sdk_saas.models.connectionsv3_account_config.connectionsv3AccountConfig(
+                            account = ibm_gdsc_sdk_saas.models.connectionsv3_account.connectionsv3Account(
                                 access_key = '', 
                                 authentication_type = '', 
                                 connection_type = '', 
@@ -49,9 +49,9 @@ class TestConnectionsv3StreamingConfigsByTenant(unittest.TestCase):
                             account_id = '', )
                         ], 
                     instance_configs = [
-                        ibm_gdsc_sdk_software.models.connectionsv3_stream_connection_config.connectionsv3StreamConnectionConfig(
+                        ibm_gdsc_sdk_saas.models.connectionsv3_stream_connection_config.connectionsv3StreamConnectionConfig(
                             connection_id = '', 
-                            stream_connection = ibm_gdsc_sdk_software.models.connectionsv3_stream_connection.connectionsv3StreamConnection(
+                            stream_connection = ibm_gdsc_sdk_saas.models.connectionsv3_stream_connection.connectionsv3StreamConnection(
                                 account_id = '', 
                                 account_name = '', 
                                 cluster_resource_id = '', 

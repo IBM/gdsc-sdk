@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_get_asset_topology_response import Assetsv3GetAssetTopologyResponse
+from ibm_gdsc_sdk_saas.models.assetsv3_get_asset_topology_response import Assetsv3GetAssetTopologyResponse
 
 class TestAssetsv3GetAssetTopologyResponse(unittest.TestCase):
     """Assetsv3GetAssetTopologyResponse unit test stubs"""
@@ -35,18 +35,19 @@ class TestAssetsv3GetAssetTopologyResponse(unittest.TestCase):
         model = Assetsv3GetAssetTopologyResponse()
         if include_optional:
             return Assetsv3GetAssetTopologyResponse(
-                mapped_entities = ibm_gdsc_sdk_software.models.assetsv3_mapped_entities.assetsv3MappedEntities(
-                    attributes = ibm_gdsc_sdk_software.models.assetsv3_attributes.assetsv3Attributes(
+                mapped_entities = ibm_gdsc_sdk_saas.models.assetsv3_mapped_entities.assetsv3MappedEntities(
+                    attributes = ibm_gdsc_sdk_saas.models.assetsv3_attributes.assetsv3Attributes(
                         critical_vulnerability_count = '', 
                         entity_id = '', 
                         entity_name = '', 
                         grouper_id = '', 
+                        has_training_data = True, 
                         major_vulnerability_count = '', 
                         sensitive_data_count = '', 
                         status_type = 'NA', 
                         type = '', ), 
                     children = [
-                        ibm_gdsc_sdk_software.models.assetsv3_mapped_entities.assetsv3MappedEntities(
+                        ibm_gdsc_sdk_saas.models.assetsv3_mapped_entities.assetsv3MappedEntities(
                             children = [
                                 
                                 ], 

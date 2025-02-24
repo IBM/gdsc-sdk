@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.streamsv3_list_aws_streams_response import Streamsv3ListAWSStreamsResponse
+from ibm_gdsc_sdk_saas.models.streamsv3_list_aws_streams_response import Streamsv3ListAWSStreamsResponse
 
 # TODO update the JSON string below
 json = "{}"

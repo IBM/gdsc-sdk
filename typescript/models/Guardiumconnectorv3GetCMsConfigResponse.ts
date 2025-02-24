@@ -15,7 +15,7 @@ import { Guardiumconnectorv3StatusResponseBase } from '../models/Guardiumconnect
 import { HttpFile } from '../http/http';
 
 /**
-* Retrieves the list of Central Managers registered to Guardium.
+* Retrieves the list of Central Managers registered to GDSC.
 */
 export class Guardiumconnectorv3GetCMsConfigResponse {
     /**

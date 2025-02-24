@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.tenantuserv3_user_state import Tenantuserv3UserState
+from ibm_gdsc_sdk_saas.models.tenantuserv3_user_state import Tenantuserv3UserState
 
 class TestTenantuserv3UserState(unittest.TestCase):
     """Tenantuserv3UserState unit test stubs"""

@@ -1,4 +1,4 @@
-import { AuthMethodsConfiguration, ServerConfiguration, Middleware, RequestContext, ResponseContext, createConfiguration, ReportsServiceApi} from '@ibm-gdsc/ibm-gdsc-sdk-software';
+import { AuthMethodsConfiguration, ServerConfiguration, Middleware, RequestContext, ResponseContext, createConfiguration, ReportsServiceApi} from '@ibm-gdsc/ibm-gdsc-sdk-saas';
 
 // Covers all auth methods included in your OpenAPI yaml definition
 // Go to the Guardium Security Center website and create an API key , copy the one start with "Basic" and then export here:

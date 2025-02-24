@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.jumpboxv3_search_users_request import Jumpboxv3SearchUsersRequest
+from ibm_gdsc_sdk_saas.models.jumpboxv3_search_users_request import Jumpboxv3SearchUsersRequest
 
 class TestJumpboxv3SearchUsersRequest(unittest.TestCase):
     """Jumpboxv3SearchUsersRequest unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_filter import Reportsrunnerv3Filter
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_filter import Reportsrunnerv3Filter
 
 class TestReportsrunnerv3Filter(unittest.TestCase):
     """Reportsrunnerv3Filter unit test stubs"""

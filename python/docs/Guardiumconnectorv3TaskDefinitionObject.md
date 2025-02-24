@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_task_definition_object import Guardiumconnectorv3TaskDefinitionObject
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_task_definition_object import Guardiumconnectorv3TaskDefinitionObject
 
 # TODO update the JSON string below
 json = "{}"

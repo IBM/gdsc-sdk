@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.sensitivity_summary import SensitivitySummary
+from ibm_gdsc_sdk_saas.models.sensitivity_summary import SensitivitySummary
 
 # TODO update the JSON string below
 json = "{}"

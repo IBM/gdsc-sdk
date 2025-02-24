@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.ecosystemv3_column_definition import Ecosystemv3ColumnDefinition
+from ibm_gdsc_sdk_saas.models.ecosystemv3_column_definition import Ecosystemv3ColumnDefinition
 
 class TestEcosystemv3ColumnDefinition(unittest.TestCase):
     """Ecosystemv3ColumnDefinition unit test stubs"""

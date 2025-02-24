@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.idp_metadata_url import IdpMetadataUrl
+from ibm_gdsc_sdk_saas.models.idp_metadata_url import IdpMetadataUrl
 
 # TODO update the JSON string below
 json = "{}"

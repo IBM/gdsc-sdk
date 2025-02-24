@@ -1,15 +1,15 @@
 import time
 import os
-import ibm_gdsc_sdk_software
-from ibm_gdsc_sdk_software.models.jumpboxv3_post_users_bulk_request import Jumpboxv3PostUsersBulkRequest
-from ibm_gdsc_sdk_software.models.jumpboxv3_post_users_bulk_response import Jumpboxv3PostUsersBulkResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas
+from ibm_gdsc_sdk_saas.models.jumpboxv3_post_users_bulk_request import Jumpboxv3PostUsersBulkRequest
+from ibm_gdsc_sdk_saas.models.jumpboxv3_post_users_bulk_response import Jumpboxv3PostUsersBulkResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
-from ibm_gdsc_sdk_software.models.jumpboxv3_user import Jumpboxv3User
+from ibm_gdsc_sdk_saas.models.jumpboxv3_user import Jumpboxv3User
 import json
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-# configuration = ibm_gdsc_sdk_software.Configuration(
+# configuration = ibm_gdsc_sdk_saas.Configuration(
 #     host = ""
 # )
 
@@ -20,7 +20,7 @@ import json
 # APIKEY=os.environ['APIKEY']
 # SECRET=os.environ['SECRET']
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = os.environ['URL'],
     username = os.environ['API_USERNAME'],
     password = os.environ['API_PASSWORD']
@@ -33,9 +33,9 @@ configuration.verify_ssl = False
 #configuration.api_key_prefix['ApiKeyAuth'] = 'Basic'
 # Enter a context with an instance of the API client
 
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.JumpboxServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.JumpboxServiceApi(api_client)
     # create an instance of Jumpboxv3User from a JSON string
     json = '{"users":[{"distinguished_name":"uid=00000000,c=us,ou=bluepages,o=ibm.com","roles":["admin","default"]}]}'
     # create an instance of Jumpboxv3PostUsersBulkRequest from a JSON string

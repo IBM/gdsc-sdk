@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.complianceacceleratorv3_hydrate_compliance_workspaces_request import Complianceacceleratorv3HydrateComplianceWorkspacesRequest
+from ibm_gdsc_sdk_saas.models.complianceacceleratorv3_hydrate_compliance_workspaces_request import Complianceacceleratorv3HydrateComplianceWorkspacesRequest
 
 class TestComplianceacceleratorv3HydrateComplianceWorkspacesRequest(unittest.TestCase):
     """Complianceacceleratorv3HydrateComplianceWorkspacesRequest unit test stubs"""

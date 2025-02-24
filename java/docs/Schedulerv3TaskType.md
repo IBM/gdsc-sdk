@@ -27,5 +27,9 @@
 
 * `EVENT` (value: `"EVENT"`)
 
+* `API_IMPORT` (value: `"API_IMPORT"`)
+
+* `JOB_SUMMARY` (value: `"JOB_SUMMARY"`)
+
 
 

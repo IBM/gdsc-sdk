@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.datamartprocessorv3_get_earliest_start_time_response import Datamartprocessorv3GetEarliestStartTimeResponse
+from ibm_gdsc_sdk_saas.models.datamartprocessorv3_get_earliest_start_time_response import Datamartprocessorv3GetEarliestStartTimeResponse
 
 class TestDatamartprocessorv3GetEarliestStartTimeResponse(unittest.TestCase):
     """Datamartprocessorv3GetEarliestStartTimeResponse unit test stubs"""
@@ -35,7 +35,7 @@ class TestDatamartprocessorv3GetEarliestStartTimeResponse(unittest.TestCase):
         model = Datamartprocessorv3GetEarliestStartTimeResponse()
         if include_optional:
             return Datamartprocessorv3GetEarliestStartTimeResponse(
-                status = ibm_gdsc_sdk_software.models.datamartprocessorv3_status_response_base.datamartprocessorv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.datamartprocessorv3_status_response_base.datamartprocessorv3StatusResponseBase(
                     message = '', 
                     status = '', ),
                 timestamp = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f')

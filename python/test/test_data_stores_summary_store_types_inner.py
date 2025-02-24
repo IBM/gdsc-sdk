@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.data_stores_summary_store_types_inner import DataStoresSummaryStoreTypesInner
+from ibm_gdsc_sdk_saas.models.data_stores_summary_store_types_inner import DataStoresSummaryStoreTypesInner
 
 class TestDataStoresSummaryStoreTypesInner(unittest.TestCase):
     """DataStoresSummaryStoreTypesInner unit test stubs"""

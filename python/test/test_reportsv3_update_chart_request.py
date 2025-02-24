@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_update_chart_request import Reportsv3UpdateChartRequest
+from ibm_gdsc_sdk_saas.models.reportsv3_update_chart_request import Reportsv3UpdateChartRequest
 
 class TestReportsv3UpdateChartRequest(unittest.TestCase):
     """Reportsv3UpdateChartRequest unit test stubs"""
@@ -36,7 +36,7 @@ class TestReportsv3UpdateChartRequest(unittest.TestCase):
         if include_optional:
             return Reportsv3UpdateChartRequest(
                 chart_id = '',
-                chart_settings = ibm_gdsc_sdk_software.models.reportsv3_chart_settings.reportsv3ChartSettings(
+                chart_settings = ibm_gdsc_sdk_saas.models.reportsv3_chart_settings.reportsv3ChartSettings(
                     chart_id = '', 
                     chart_title = '', 
                     chart_type = 'UNDEFINED_CHART_TYPE', 

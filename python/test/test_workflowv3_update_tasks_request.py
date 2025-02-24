@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.workflowv3_update_tasks_request import Workflowv3UpdateTasksRequest
+from ibm_gdsc_sdk_saas.models.workflowv3_update_tasks_request import Workflowv3UpdateTasksRequest
 
 class TestWorkflowv3UpdateTasksRequest(unittest.TestCase):
     """Workflowv3UpdateTasksRequest unit test stubs"""
@@ -37,9 +37,9 @@ class TestWorkflowv3UpdateTasksRequest(unittest.TestCase):
             return Workflowv3UpdateTasksRequest(
                 case_id = '',
                 tasks = [
-                    ibm_gdsc_sdk_software.models.workflowv3_task_edit.workflowv3TaskEdit(
+                    ibm_gdsc_sdk_saas.models.workflowv3_task_edit.workflowv3TaskEdit(
                         assignments = [
-                            ibm_gdsc_sdk_software.models.workflowv3_entity.workflowv3Entity(
+                            ibm_gdsc_sdk_saas.models.workflowv3_entity.workflowv3Entity(
                                 label = '', 
                                 template_id = '', 
                                 type = 'UNDEFINED_ENTITY_TYPE', 
@@ -52,13 +52,13 @@ class TestWorkflowv3UpdateTasksRequest(unittest.TestCase):
                             ], 
                         description = '', 
                         investigation_links = [
-                            ibm_gdsc_sdk_software.models.generic_configuration_item_reference.Generic configuration item reference(
+                            ibm_gdsc_sdk_saas.models.generic_configuration_item_reference.Generic configuration item reference(
                                 display = '', 
                                 id = '', )
                             ], 
                         justification = '', 
                         priority = 'UNDEFINED_PRIORITY', 
-                        response_template = ibm_gdsc_sdk_software.models.generic_configuration_item_reference.Generic configuration item reference(
+                        response_template = ibm_gdsc_sdk_saas.models.generic_configuration_item_reference.Generic configuration item reference(
                             display = '', 
                             id = '', ), 
                         review_action = '', 

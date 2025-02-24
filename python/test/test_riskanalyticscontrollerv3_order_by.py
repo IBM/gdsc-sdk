@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_order_by import Riskanalyticscontrollerv3OrderBy
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_order_by import Riskanalyticscontrollerv3OrderBy
 
 class TestRiskanalyticscontrollerv3OrderBy(unittest.TestCase):
     """Riskanalyticscontrollerv3OrderBy unit test stubs"""

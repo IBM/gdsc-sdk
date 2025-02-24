@@ -9,7 +9,6 @@ import {SecurityAuthentication} from '../auth/auth';
 
 
 import { Edgeschedulerv3GetEdgeQueryStatusResponse } from '../models/Edgeschedulerv3GetEdgeQueryStatusResponse';
-import { Edgeschedulerv3MonitoringPendingRequestForEdgeQueryRequest } from '../models/Edgeschedulerv3MonitoringPendingRequestForEdgeQueryRequest';
 import { Edgeschedulerv3ScheduleEdgeQueryRequest } from '../models/Edgeschedulerv3ScheduleEdgeQueryRequest';
 import { Edgeschedulerv3ScheduleEdgeQueryResponse } from '../models/Edgeschedulerv3ScheduleEdgeQueryResponse';
 import { RuntimeError } from '../models/RuntimeError';
@@ -22,25 +21,26 @@ export class EdgeSchedulerServiceApiRequestFactory extends BaseAPIRequestFactory
 
     /**
      * Summary: Get edge query status Description: Get the status of a queued edge query
-     * @param edgeId the id of the edge.
+     * @param edgeId the id of the edge
      * @param edgeResultReportId the id of the UC report being queried for.
      */
-    public async edgeSchedulerServiceGetEdgeQueryStatus(edgeId?: string, edgeResultReportId?: string, _options?: Configuration): Promise<RequestContext> {
+    public async edgeSchedulerServiceGetEdgeQueryStatus(edgeId: string, edgeResultReportId?: string, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
+
+        // verify required parameter 'edgeId' is not null or undefined
+        if (edgeId === null || edgeId === undefined) {
+            throw new RequiredError("EdgeSchedulerServiceApi", "edgeSchedulerServiceGetEdgeQueryStatus", "edgeId");
+        }
 
 
 
         // Path Params
-        const localVarPath = '/api/v3/edge/query/status';
+        const localVarPath = '/api/v3/edges/{edge_id}/query/status'
+            .replace('{' + 'edge_id' + '}', encodeURIComponent(String(edgeId)));
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
         requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
-
-        // Query Params
-        if (edgeId !== undefined) {
-            requestContext.setQueryParam("edge_id", ObjectSerializer.serialize(edgeId, "string", ""));
-        }
 
         // Query Params
         if (edgeResultReportId !== undefined) {
@@ -69,36 +69,25 @@ export class EdgeSchedulerServiceApiRequestFactory extends BaseAPIRequestFactory
     }
 
     /**
-     * Summary: Create workspace Description: monitor edge query pending request
-     * @param edgeschedulerv3MonitoringPendingRequestForEdgeQueryRequest 
+     * Summary: Monitor for a pending edge query request Description: monitor edge query pending request
+     * @param clientId edge client id to monitor edge query requests for.
      */
-    public async edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery(edgeschedulerv3MonitoringPendingRequestForEdgeQueryRequest: Edgeschedulerv3MonitoringPendingRequestForEdgeQueryRequest, _options?: Configuration): Promise<RequestContext> {
+    public async edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery(clientId?: string, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
-
-        // verify required parameter 'edgeschedulerv3MonitoringPendingRequestForEdgeQueryRequest' is not null or undefined
-        if (edgeschedulerv3MonitoringPendingRequestForEdgeQueryRequest === null || edgeschedulerv3MonitoringPendingRequestForEdgeQueryRequest === undefined) {
-            throw new RequiredError("EdgeSchedulerServiceApi", "edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery", "edgeschedulerv3MonitoringPendingRequestForEdgeQueryRequest");
-        }
 
 
         // Path Params
-        const localVarPath = '/api/v3/edge/query';
+        const localVarPath = '/api/v3/edges/query';
 
         // Make Request Context
-        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
         requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
 
+        // Query Params
+        if (clientId !== undefined) {
+            requestContext.setQueryParam("client_id", ObjectSerializer.serialize(clientId, "string", ""));
+        }
 
-        // Body Params
-        const contentType = ObjectSerializer.getPreferredMediaType([
-            "application/json"
-        ]);
-        requestContext.setHeaderParam("Content-Type", contentType);
-        const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(edgeschedulerv3MonitoringPendingRequestForEdgeQueryRequest, "Edgeschedulerv3MonitoringPendingRequestForEdgeQueryRequest", ""),
-            contentType
-        );
-        requestContext.setBody(serializedBody);
 
         let authMethod: SecurityAuthentication | undefined;
         // Apply auth methods
@@ -121,11 +110,18 @@ export class EdgeSchedulerServiceApiRequestFactory extends BaseAPIRequestFactory
     }
 
     /**
-     * Summary: Schedule an edge query  Description: Schedule an edge query via db2 queue
+     * Summary: Schedule an edge query  Description: Schedule an edge query via data warehouse queue
+     * @param edgeId the id of the edge
      * @param edgeschedulerv3ScheduleEdgeQueryRequest 
      */
-    public async edgeSchedulerServiceScheduleEdgeQuery(edgeschedulerv3ScheduleEdgeQueryRequest: Edgeschedulerv3ScheduleEdgeQueryRequest, _options?: Configuration): Promise<RequestContext> {
+    public async edgeSchedulerServiceScheduleEdgeQuery(edgeId: string, edgeschedulerv3ScheduleEdgeQueryRequest: Edgeschedulerv3ScheduleEdgeQueryRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
+
+        // verify required parameter 'edgeId' is not null or undefined
+        if (edgeId === null || edgeId === undefined) {
+            throw new RequiredError("EdgeSchedulerServiceApi", "edgeSchedulerServiceScheduleEdgeQuery", "edgeId");
+        }
+
 
         // verify required parameter 'edgeschedulerv3ScheduleEdgeQueryRequest' is not null or undefined
         if (edgeschedulerv3ScheduleEdgeQueryRequest === null || edgeschedulerv3ScheduleEdgeQueryRequest === undefined) {
@@ -134,7 +130,8 @@ export class EdgeSchedulerServiceApiRequestFactory extends BaseAPIRequestFactory
 
 
         // Path Params
-        const localVarPath = '/api/v3/edge/query/schedule';
+        const localVarPath = '/api/v3/edges/{edge_id}/query/schedule'
+            .replace('{' + 'edge_id' + '}', encodeURIComponent(String(edgeId)));
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.user_entitlements_user_sensitive_categories_options_user_id_parameter import UserEntitlementsUserSensitiveCategoriesOptionsUserIdParameter
+from ibm_gdsc_sdk_saas.models.user_entitlements_user_sensitive_categories_options_user_id_parameter import UserEntitlementsUserSensitiveCategoriesOptionsUserIdParameter
 
 # TODO update the JSON string below
 json = "{}"

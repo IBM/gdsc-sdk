@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_status_response_base import Policybuilderv3StatusResponseBase
+from ibm_gdsc_sdk_saas.models.policybuilderv3_status_response_base import Policybuilderv3StatusResponseBase
 
 class TestPolicybuilderv3StatusResponseBase(unittest.TestCase):
     """Policybuilderv3StatusResponseBase unit test stubs"""

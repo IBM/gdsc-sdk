@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.cloud_accounts_cloud_providers_analyzed_regions_options_request import CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest
+from ibm_gdsc_sdk_saas.models.cloud_accounts_cloud_providers_analyzed_regions_options_request import CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest
 
 # TODO update the JSON string below
 json = "{}"

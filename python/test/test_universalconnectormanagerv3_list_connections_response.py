@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.universalconnectormanagerv3_list_connections_response import Universalconnectormanagerv3ListConnectionsResponse
+from ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_list_connections_response import Universalconnectormanagerv3ListConnectionsResponse
 
 class TestUniversalconnectormanagerv3ListConnectionsResponse(unittest.TestCase):
     """Universalconnectormanagerv3ListConnectionsResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestUniversalconnectormanagerv3ListConnectionsResponse(unittest.TestCase):
         if include_optional:
             return Universalconnectormanagerv3ListConnectionsResponse(
                 connections = [
-                    ibm_gdsc_sdk_software.models.universalconnectormanagerv3_connection_summary.universalconnectormanagerv3ConnectionSummary(
+                    ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_connection_summary.universalconnectormanagerv3ConnectionSummary(
                         connection_alias = '', 
                         connection_changed = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         connection_config_id = '', 
@@ -44,27 +44,27 @@ class TestUniversalconnectormanagerv3ListConnectionsResponse(unittest.TestCase):
                         connection_filter_alias = '', 
                         connection_id = '', 
                         connection_input_alias = '', 
-                        connection_route = ibm_gdsc_sdk_software.models.universalconnectormanagerv3_connection_route.universalconnectormanagerv3ConnectionRoute(
+                        connection_route = ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_connection_route.universalconnectormanagerv3ConnectionRoute(
                             host = '', 
                             port = '', ), 
-                        connection_status = ibm_gdsc_sdk_software.models.universalconnectormanagerv3_connection_status.universalconnectormanagerv3ConnectionStatus(
+                        connection_status = ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_connection_status.universalconnectormanagerv3ConnectionStatus(
                             status = 'UC_OK', 
                             status_text = '', 
                             timestamp = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                             timestamp_last_ok = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), ), 
-                        user = ibm_gdsc_sdk_software.models.universalconnectormanagerv3_user.universalconnectormanagerv3User(
+                        user = ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_user.universalconnectormanagerv3User(
                             display_name = '', 
                             uid = '', 
                             user_id = '', ), )
                     ],
-                status = ibm_gdsc_sdk_software.models.the_`status`_type_defines_a_logical_error_model_that_is_suitable_for_different
+                status = ibm_gdsc_sdk_saas.models.the_`status`_type_defines_a_logical_error_model_that_is_suitable_for_different
 programming_environments,_including_rest_apis_and_rpc_apis/_it_is_used_by
 [g_rpc](https://github/com/grpc)/_the_error_model_is_designed_to_be:.The `Status` type defines a logical error model that is suitable for different
 programming environments, including REST APIs and RPC APIs. It is used by
 [gRPC](https://github.com/grpc). The error model is designed to be:(
                     code = 56, 
                     details = [
-                        ibm_gdsc_sdk_software.models.protobuf_any.protobufAny(
+                        ibm_gdsc_sdk_saas.models.protobuf_any.protobufAny(
                             type_url = '', 
                             value = 'YQ==', )
                         ], 

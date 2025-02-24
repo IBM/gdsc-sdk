@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_delete_connections_configs_response import Connectionsv3DeleteConnectionsConfigsResponse
+from ibm_gdsc_sdk_saas.models.connectionsv3_delete_connections_configs_response import Connectionsv3DeleteConnectionsConfigsResponse
 
 class TestConnectionsv3DeleteConnectionsConfigsResponse(unittest.TestCase):
     """Connectionsv3DeleteConnectionsConfigsResponse unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.scheduler_service_api import SchedulerServiceApi
+from ibm_gdsc_sdk_saas.api.scheduler_service_api import SchedulerServiceApi
 
 
 class TestSchedulerServiceApi(unittest.TestCase):

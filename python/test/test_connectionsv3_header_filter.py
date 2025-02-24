@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_header_filter import Connectionsv3HeaderFilter
+from ibm_gdsc_sdk_saas.models.connectionsv3_header_filter import Connectionsv3HeaderFilter
 
 class TestConnectionsv3HeaderFilter(unittest.TestCase):
     """Connectionsv3HeaderFilter unit test stubs"""

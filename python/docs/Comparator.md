@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.comparator import Comparator
+from ibm_gdsc_sdk_saas.models.comparator import Comparator
 
 # TODO update the JSON string below
 json = "{}"

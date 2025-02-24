@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**pluginUnderscoreJDBCUnderscoredriverUnderscorerequired** | **boolean** | JDBC driver required | [optional] [default to null]
 **pluginUnderscorealias** | **string** |  | [optional] [default to null]
 **pluginUnderscoreconfigurationUnderscorenotes** | **string** |  | [optional] [default to null]
 **pluginUnderscoredescription** | **string** |  | [optional] [default to null]

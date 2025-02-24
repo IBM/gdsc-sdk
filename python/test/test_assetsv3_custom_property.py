@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_custom_property import Assetsv3CustomProperty
+from ibm_gdsc_sdk_saas.models.assetsv3_custom_property import Assetsv3CustomProperty
 
 class TestAssetsv3CustomProperty(unittest.TestCase):
     """Assetsv3CustomProperty unit test stubs"""

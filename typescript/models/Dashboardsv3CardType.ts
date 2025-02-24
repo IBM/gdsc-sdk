@@ -63,5 +63,7 @@ export enum Dashboardsv3CardType {
     QspmProtocolCount = 'QSPM_PROTOCOL_COUNT',
     QspmEndpoints = 'QSPM_ENDPOINTS',
     QspmPolicyCompliance = 'QSPM_POLICY_COMPLIANCE',
-    QspmCertSignAlgorithms = 'QSPM_CERT_SIGN_ALGORITHMS'
+    QspmCertSignAlgorithms = 'QSPM_CERT_SIGN_ALGORITHMS',
+    MultiGroup = 'MULTI_GROUP',
+    EdgeGatewayHealth = 'EDGE_GATEWAY_HEALTH'
 }

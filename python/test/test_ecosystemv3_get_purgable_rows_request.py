@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.ecosystemv3_get_purgable_rows_request import Ecosystemv3GetPurgableRowsRequest
+from ibm_gdsc_sdk_saas.models.ecosystemv3_get_purgable_rows_request import Ecosystemv3GetPurgableRowsRequest
 
 class TestEcosystemv3GetPurgableRowsRequest(unittest.TestCase):
     """Ecosystemv3GetPurgableRowsRequest unit test stubs"""

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.snifassistv3_get_snif_config_response import Snifassistv3GetSnifConfigResponse
+from ibm_gdsc_sdk_saas.models.snifassistv3_get_snif_config_response import Snifassistv3GetSnifConfigResponse
 
 # TODO update the JSON string below
 json = "{}"

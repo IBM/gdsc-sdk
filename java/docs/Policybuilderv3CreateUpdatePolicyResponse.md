@@ -9,6 +9,7 @@ Return object for creating or updating a policy.
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**activationStatus** | **Integer** | activation_status identifier: 1001 -&gt; install with no issues, 1002-&gt; installed with issues, 1003 -&gt; not installed. |  [optional] |
+|**edgeActivationInfo** | [**Policybuilderv3EdgeActivationObject**](Policybuilderv3EdgeActivationObject.md) |  |  [optional] |
 |**installedFlag** | **Boolean** | Flag to indicate whether policy is installed or not. |  [optional] |
 |**policyId** | **String** | Policy id of the created or updated policy. |  [optional] |
 |**policyName** | **String** | Policy Name for the created or updated policy. |  [optional] |

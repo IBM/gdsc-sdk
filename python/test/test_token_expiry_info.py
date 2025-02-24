@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.token_expiry_info import TokenExpiryInfo
+from ibm_gdsc_sdk_saas.models.token_expiry_info import TokenExpiryInfo
 
 class TestTokenExpiryInfo(unittest.TestCase):
     """TokenExpiryInfo unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_sync_status_type import Policybuilderv3SyncStatusType
+from ibm_gdsc_sdk_saas.models.policybuilderv3_sync_status_type import Policybuilderv3SyncStatusType
 
 class TestPolicybuilderv3SyncStatusType(unittest.TestCase):
     """Policybuilderv3SyncStatusType unit test stubs"""

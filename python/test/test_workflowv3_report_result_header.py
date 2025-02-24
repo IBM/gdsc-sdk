@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.workflowv3_report_result_header import Workflowv3ReportResultHeader
+from ibm_gdsc_sdk_saas.models.workflowv3_report_result_header import Workflowv3ReportResultHeader
 
 class TestWorkflowv3ReportResultHeader(unittest.TestCase):
     """Workflowv3ReportResultHeader unit test stubs"""

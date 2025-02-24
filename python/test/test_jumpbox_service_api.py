@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.jumpbox_service_api import JumpboxServiceApi
+from ibm_gdsc_sdk_saas.api.jumpbox_service_api import JumpboxServiceApi
 
 
 class TestJumpboxServiceApi(unittest.TestCase):

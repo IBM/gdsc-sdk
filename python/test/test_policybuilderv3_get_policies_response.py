@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_get_policies_response import Policybuilderv3GetPoliciesResponse
+from ibm_gdsc_sdk_saas.models.policybuilderv3_get_policies_response import Policybuilderv3GetPoliciesResponse
 
 class TestPolicybuilderv3GetPoliciesResponse(unittest.TestCase):
     """Policybuilderv3GetPoliciesResponse unit test stubs"""
@@ -36,12 +36,19 @@ class TestPolicybuilderv3GetPoliciesResponse(unittest.TestCase):
         if include_optional:
             return Policybuilderv3GetPoliciesResponse(
                 policies = [
-                    ibm_gdsc_sdk_software.models.policybuilderv3_policy.policybuilderv3Policy(
+                    ibm_gdsc_sdk_saas.models.policybuilderv3_policy.policybuilderv3Policy(
                         activation_status = 56, 
                         contains_rule_types = [
                             'ACCESS'
                             ], 
                         control_flow = 'STANDARD', 
+                        edge_activation_info = [
+                            ibm_gdsc_sdk_saas.models.information_about_policy_activated_on_edge.Information about policy activated on edge(
+                                activation_order = 56, 
+                                activation_status = 'NOT_ACTIVATED', 
+                                activation_timestamp = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                                edge_id = '', )
+                            ], 
                         installed_flag = True, 
                         installed_order = 56, 
                         installed_timestamp = '', 
@@ -58,7 +65,7 @@ class TestPolicybuilderv3GetPoliciesResponse(unittest.TestCase):
                         ui_sequence = 56, 
                         version = 56, )
                     ],
-                status = ibm_gdsc_sdk_software.models.policybuilderv3_status_response_base.policybuilderv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.policybuilderv3_status_response_base.policybuilderv3StatusResponseBase(
                     message = '', 
                     status = '', )
             )

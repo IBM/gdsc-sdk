@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.healthcollectorv3_store_health_info_request import Healthcollectorv3StoreHealthInfoRequest
+from ibm_gdsc_sdk_saas.models.healthcollectorv3_store_health_info_request import Healthcollectorv3StoreHealthInfoRequest
 
 class TestHealthcollectorv3StoreHealthInfoRequest(unittest.TestCase):
     """Healthcollectorv3StoreHealthInfoRequest unit test stubs"""
@@ -37,26 +37,26 @@ class TestHealthcollectorv3StoreHealthInfoRequest(unittest.TestCase):
             return Healthcollectorv3StoreHealthInfoRequest(
                 central_manager_id = '',
                 data = [
-                    ibm_gdsc_sdk_software.models.healthcollectorv3_health_info_object.healthcollectorv3HealthInfoObject(
+                    ibm_gdsc_sdk_saas.models.healthcollectorv3_health_info_object.healthcollectorv3HealthInfoObject(
                         nodes = [
-                            ibm_gdsc_sdk_software.models.healthcollectorv3_managed_unit_object_gdp.healthcollectorv3ManagedUnitObjectGdp(
+                            ibm_gdsc_sdk_saas.models.healthcollectorv3_managed_unit_object_gdp.healthcollectorv3ManagedUnitObjectGdp(
                                 agg_health_status = 56, 
                                 connectivity = 56, 
-                                details = ibm_gdsc_sdk_software.models.healthcollectorv3_mu_details_obj_gdp.healthcollectorv3MUDetailsObjGdp(
+                                details = ibm_gdsc_sdk_saas.models.healthcollectorv3_mu_details_obj_gdp.healthcollectorv3MUDetailsObjGdp(
                                     agg_health_view_list = [
-                                        ibm_gdsc_sdk_software.models.healthcollectorv3_aggregation_details_object_gdp.healthcollectorv3AggregationDetailsObjectGdp(
+                                        ibm_gdsc_sdk_saas.models.healthcollectorv3_aggregation_details_object_gdp.healthcollectorv3AggregationDetailsObjectGdp(
                                             agg_action_error = '', 
                                             agg_action_health_status = 56, 
                                             agg_type = '', 
                                             error_code = 56, 
                                             unit = '', )
                                         ], 
-                                    connectivity_details = ibm_gdsc_sdk_software.models.healthcollectorv3_general_details_object.healthcollectorv3GeneralDetailsObject(
+                                    connectivity_details = ibm_gdsc_sdk_saas.models.healthcollectorv3_general_details_object.healthcollectorv3GeneralDetailsObject(
                                         err_messages = '', ), 
                                     general_err_messages = [
                                         ''
                                         ], 
-                                    utilization_scheme = ibm_gdsc_sdk_software.models.healthcollectorv3_utilization_parameter_object_gdp.healthcollectorv3UtilizationParameterObjectGdp(
+                                    utilization_scheme = ibm_gdsc_sdk_saas.models.healthcollectorv3_utilization_parameter_object_gdp.healthcollectorv3UtilizationParameterObjectGdp(
                                         analyzer_queue_value = 56, 
                                         error_messages_code = 56, 
                                         error_messages_value = '', 
@@ -90,9 +90,9 @@ class TestHealthcollectorv3StoreHealthInfoRequest(unittest.TestCase):
                                 version = '', )
                             ], 
                         staps = [
-                            ibm_gdsc_sdk_software.models.healthcollectorv3_stap_object_gdp.healthcollectorv3StapObjectGdp(
+                            ibm_gdsc_sdk_saas.models.healthcollectorv3_stap_object_gdp.healthcollectorv3StapObjectGdp(
                                 children = [
-                                    ibm_gdsc_sdk_software.models.healthcollectorv3_inspection_engine_object_gdp.healthcollectorv3InspectionEngineObjectGdp(
+                                    ibm_gdsc_sdk_saas.models.healthcollectorv3_inspection_engine_object_gdp.healthcollectorv3InspectionEngineObjectGdp(
                                         ie_status = 56, 
                                         inspection_engine = '', )
                                     ], 

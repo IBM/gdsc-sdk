@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.dashboardsv3_card_position import Dashboardsv3CardPosition
+from ibm_gdsc_sdk_saas.models.dashboardsv3_card_position import Dashboardsv3CardPosition
 
 class TestDashboardsv3CardPosition(unittest.TestCase):
     """Dashboardsv3CardPosition unit test stubs"""

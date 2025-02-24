@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.types_count_inner import TypesCountInner
+from ibm_gdsc_sdk_saas.models.types_count_inner import TypesCountInner
 
 class TestTypesCountInner(unittest.TestCase):
     """TypesCountInner unit test stubs"""

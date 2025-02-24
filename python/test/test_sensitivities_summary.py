@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.sensitivities_summary import SensitivitiesSummary
+from ibm_gdsc_sdk_saas.models.sensitivities_summary import SensitivitiesSummary
 
 class TestSensitivitiesSummary(unittest.TestCase):
     """SensitivitiesSummary unit test stubs"""
@@ -37,7 +37,7 @@ class TestSensitivitiesSummary(unittest.TestCase):
             return SensitivitiesSummary(
                 sensitivities_count = 120,
                 sensitivities_summary = [
-                    ibm_gdsc_sdk_software.models.sensitivity_summary.SensitivitySummary(
+                    ibm_gdsc_sdk_saas.models.sensitivity_summary.SensitivitySummary(
                         tag = 'BUSINESS_EMAIL_ADDRESS', 
                         count = 230, 
                         category = 'Personal', )
@@ -47,7 +47,7 @@ class TestSensitivitiesSummary(unittest.TestCase):
             return SensitivitiesSummary(
                 sensitivities_count = 120,
                 sensitivities_summary = [
-                    ibm_gdsc_sdk_software.models.sensitivity_summary.SensitivitySummary(
+                    ibm_gdsc_sdk_saas.models.sensitivity_summary.SensitivitySummary(
                         tag = 'BUSINESS_EMAIL_ADDRESS', 
                         count = 230, 
                         category = 'Personal', )

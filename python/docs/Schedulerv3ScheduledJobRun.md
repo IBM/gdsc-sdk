@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **query_from** | **str** |  | [optional] 
 **query_to** | **str** |  | [optional] 
 **queue_time** | **datetime** |  | [optional] 
+**result_size** | **int** |  | [optional] 
 **run_detail** | **str** |  | [optional] 
 **schedule_id** | **str** |  | [optional] 
 **start_time** | **datetime** |  | [optional] 
@@ -23,7 +24,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.schedulerv3_scheduled_job_run import Schedulerv3ScheduledJobRun
+from ibm_gdsc_sdk_saas.models.schedulerv3_scheduled_job_run import Schedulerv3ScheduledJobRun
 
 # TODO update the JSON string below
 json = "{}"

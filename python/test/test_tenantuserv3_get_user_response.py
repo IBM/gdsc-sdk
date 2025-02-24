@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.tenantuserv3_get_user_response import Tenantuserv3GetUserResponse
+from ibm_gdsc_sdk_saas.models.tenantuserv3_get_user_response import Tenantuserv3GetUserResponse
 
 class TestTenantuserv3GetUserResponse(unittest.TestCase):
     """Tenantuserv3GetUserResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestTenantuserv3GetUserResponse(unittest.TestCase):
         if include_optional:
             return Tenantuserv3GetUserResponse(
                 message = '',
-                user = ibm_gdsc_sdk_software.models.full_user_has_information_about_a_single_user_and_cumulative_privileges.FullUser has information about a single user and cumulative privileges(
+                user = ibm_gdsc_sdk_saas.models.full_user_has_information_about_a_single_user_and_cumulative_privileges.FullUser has information about a single user and cumulative privileges(
                     activation_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     directory_id = '', 
                     disabled = True, 

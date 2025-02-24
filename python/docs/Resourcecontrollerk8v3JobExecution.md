@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_job_execution import Resourcecontrollerk8v3JobExecution
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_job_execution import Resourcecontrollerk8v3JobExecution
 
 # TODO update the JSON string below
 json = "{}"

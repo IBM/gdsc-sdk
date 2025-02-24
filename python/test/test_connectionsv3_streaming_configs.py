@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_streaming_configs import Connectionsv3StreamingConfigs
+from ibm_gdsc_sdk_saas.models.connectionsv3_streaming_configs import Connectionsv3StreamingConfigs
 
 class TestConnectionsv3StreamingConfigs(unittest.TestCase):
     """Connectionsv3StreamingConfigs unit test stubs"""
@@ -36,8 +36,8 @@ class TestConnectionsv3StreamingConfigs(unittest.TestCase):
         if include_optional:
             return Connectionsv3StreamingConfigs(
                 account_configs = [
-                    ibm_gdsc_sdk_software.models.connectionsv3_account_config.connectionsv3AccountConfig(
-                        account = ibm_gdsc_sdk_software.models.connectionsv3_account.connectionsv3Account(
+                    ibm_gdsc_sdk_saas.models.connectionsv3_account_config.connectionsv3AccountConfig(
+                        account = ibm_gdsc_sdk_saas.models.connectionsv3_account.connectionsv3Account(
                             access_key = '', 
                             authentication_type = '', 
                             connection_type = '', 
@@ -47,9 +47,9 @@ class TestConnectionsv3StreamingConfigs(unittest.TestCase):
                         account_id = '', )
                     ],
                 instance_configs = [
-                    ibm_gdsc_sdk_software.models.connectionsv3_stream_connection_config.connectionsv3StreamConnectionConfig(
+                    ibm_gdsc_sdk_saas.models.connectionsv3_stream_connection_config.connectionsv3StreamConnectionConfig(
                         connection_id = '', 
-                        stream_connection = ibm_gdsc_sdk_software.models.connectionsv3_stream_connection.connectionsv3StreamConnection(
+                        stream_connection = ibm_gdsc_sdk_saas.models.connectionsv3_stream_connection.connectionsv3StreamConnection(
                             account_id = '', 
                             account_name = '', 
                             cluster_resource_id = '', 

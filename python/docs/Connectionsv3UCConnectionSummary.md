@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **alias** | **str** | Connection configuration nickname, set by dev/user (optional). | [optional] 
 **config_id** | **str** | Foreign key to the saved connection configuration by the user. | [optional] 
 **datasource_type** | **str** | Datasource type. | [optional] 
+**edge_deployment_server** | [**Connectionsv3EdgeDeploymentServer**](Connectionsv3EdgeDeploymentServer.md) |  | [optional] 
 **filter_alias** | **str** | Connector filter plugin alias (datasource, usually, like \&quot;MongoDB\&quot;). | [optional] 
 **host** | **str** | URI where related Universal connector service is running/listening. | [optional] 
 **input_alias** | **str** | Connection input plugin alias, like \&quot;Filebeat\&quot;. | [optional] 
@@ -21,7 +22,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.connectionsv3_uc_connection_summary import Connectionsv3UCConnectionSummary
+from ibm_gdsc_sdk_saas.models.connectionsv3_uc_connection_summary import Connectionsv3UCConnectionSummary
 
 # TODO update the JSON string below
 json = "{}"

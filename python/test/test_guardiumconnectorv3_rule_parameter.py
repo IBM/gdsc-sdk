@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_rule_parameter import Guardiumconnectorv3RuleParameter
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_rule_parameter import Guardiumconnectorv3RuleParameter
 
 class TestGuardiumconnectorv3RuleParameter(unittest.TestCase):
     """Guardiumconnectorv3RuleParameter unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticsmlclassificationv3_get_classifications_list_response import Riskanalyticsmlclassificationv3GetClassificationsListResponse
+from ibm_gdsc_sdk_saas.models.riskanalyticsmlclassificationv3_get_classifications_list_response import Riskanalyticsmlclassificationv3GetClassificationsListResponse
 
 class TestRiskanalyticsmlclassificationv3GetClassificationsListResponse(unittest.TestCase):
     """Riskanalyticsmlclassificationv3GetClassificationsListResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestRiskanalyticsmlclassificationv3GetClassificationsListResponse(unittest
         if include_optional:
             return Riskanalyticsmlclassificationv3GetClassificationsListResponse(
                 classifications = [
-                    ibm_gdsc_sdk_software.models.classification_definition.ClassificationDefinition(
+                    ibm_gdsc_sdk_saas.models.classification_definition.ClassificationDefinition(
                         classifications = [
                             ''
                             ], 

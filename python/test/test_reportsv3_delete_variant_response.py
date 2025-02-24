@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_delete_variant_response import Reportsv3DeleteVariantResponse
+from ibm_gdsc_sdk_saas.models.reportsv3_delete_variant_response import Reportsv3DeleteVariantResponse
 
 class TestReportsv3DeleteVariantResponse(unittest.TestCase):
     """Reportsv3DeleteVariantResponse unit test stubs"""

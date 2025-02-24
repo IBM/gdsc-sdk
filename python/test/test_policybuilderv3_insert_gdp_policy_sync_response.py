@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_insert_gdp_policy_sync_response import Policybuilderv3InsertGdpPolicySyncResponse
+from ibm_gdsc_sdk_saas.models.policybuilderv3_insert_gdp_policy_sync_response import Policybuilderv3InsertGdpPolicySyncResponse
 
 class TestPolicybuilderv3InsertGdpPolicySyncResponse(unittest.TestCase):
     """Policybuilderv3InsertGdpPolicySyncResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestPolicybuilderv3InsertGdpPolicySyncResponse(unittest.TestCase):
         if include_optional:
             return Policybuilderv3InsertGdpPolicySyncResponse(
                 gdp_policies = [
-                    ibm_gdsc_sdk_software.models.policybuilderv3_gdp_policy_sync_res.policybuilderv3GdpPolicySyncRes(
+                    ibm_gdsc_sdk_saas.models.policybuilderv3_gdp_policy_sync_res.policybuilderv3GdpPolicySyncRes(
                         central_manager = '', 
                         created_policy_id = '', 
                         gdp_synced_id = '', 
@@ -47,7 +47,7 @@ class TestPolicybuilderv3InsertGdpPolicySyncResponse(unittest.TestCase):
                         policy_name = '', 
                         sync_status = 'NO_SYNC_STATUS', )
                     ],
-                status = ibm_gdsc_sdk_software.models.policybuilderv3_status_response_base.policybuilderv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.policybuilderv3_status_response_base.policybuilderv3StatusResponseBase(
                     message = '', 
                     status = '', )
             )

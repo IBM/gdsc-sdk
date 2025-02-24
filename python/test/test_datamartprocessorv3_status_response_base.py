@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.datamartprocessorv3_status_response_base import Datamartprocessorv3StatusResponseBase
+from ibm_gdsc_sdk_saas.models.datamartprocessorv3_status_response_base import Datamartprocessorv3StatusResponseBase
 
 class TestDatamartprocessorv3StatusResponseBase(unittest.TestCase):
     """Datamartprocessorv3StatusResponseBase unit test stubs"""

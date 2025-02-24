@@ -22,6 +22,7 @@ export class Schedulerv3ScheduledJobRun {
     'queryFrom'?: string;
     'queryTo'?: string;
     'queueTime'?: Date;
+    'resultSize'?: number;
     'runDetail'?: string;
     'scheduleId'?: string;
     'startTime'?: Date;
@@ -74,6 +75,12 @@ export class Schedulerv3ScheduledJobRun {
             "baseName": "queue_time",
             "type": "Date",
             "format": "date-time"
+        },
+        {
+            "name": "resultSize",
+            "baseName": "result_size",
+            "type": "number",
+            "format": "int64"
         },
         {
             "name": "runDetail",

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.connectionsv3_stream_connection_config import Connectionsv3StreamConnectionConfig
+from ibm_gdsc_sdk_saas.models.connectionsv3_stream_connection_config import Connectionsv3StreamConnectionConfig
 
 # TODO update the JSON string below
 json = "{}"

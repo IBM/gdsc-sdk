@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.risk_analytics_controller_api import RiskAnalyticsControllerApi
+from ibm_gdsc_sdk_saas.api.risk_analytics_controller_api import RiskAnalyticsControllerApi
 
 
 class TestRiskAnalyticsControllerApi(unittest.TestCase):
@@ -50,7 +50,7 @@ class TestRiskAnalyticsControllerApi(unittest.TestCase):
     def test_risk_analytics_controller_get_risk_event_classifications_list(self) -> None:
         """Test case for risk_analytics_controller_get_risk_event_classifications_list
 
-        Summary: Get risk event classifications list Description: retrieves the ClassificationMatchDetails for a given risk id – classification that did not matched will be with class_value 0.
+        Summary: Get risk event classifications list Description: retrieves the ClassificationMatchDetails for a given risk id; classification that did not matched will be with class_value 0.
         """
         pass
 
@@ -127,7 +127,7 @@ class TestRiskAnalyticsControllerApi(unittest.TestCase):
     def test_risk_analytics_controller_set_user_ui_settings(self) -> None:
         """Test case for risk_analytics_controller_set_user_ui_settings
 
-        Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium.
+        Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to GDSC. Using this API to change a user settings may prevent the user from using the Risk Event function within GDSC.
         """
         pass
 

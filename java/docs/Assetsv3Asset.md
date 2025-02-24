@@ -28,6 +28,7 @@
 |**hostPort** | **String** |  |  [optional] |
 |**ip** | **String** |  |  [optional] |
 |**ipPort** | **String** |  |  [optional] |
+|**isSplittable** | **Boolean** |  |  [optional] |
 |**macAddress** | **String** |  |  [optional] |
 |**modelName** | **String** |  |  [optional] |
 |**monitoring** | **Assetsv3StatusType** |  |  [optional] |
@@ -43,6 +44,7 @@
 |**traffic** | **Assetsv3HealthType** |  |  [optional] |
 |**type** | **String** |  |  [optional] |
 |**userAccounts** | **List&lt;String&gt;** |  |  [optional] |
+|**vertexId** | **String** |  |  [optional] |
 
 
 

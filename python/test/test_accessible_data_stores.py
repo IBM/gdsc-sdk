@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.accessible_data_stores import AccessibleDataStores
+from ibm_gdsc_sdk_saas.models.accessible_data_stores import AccessibleDataStores
 
 class TestAccessibleDataStores(unittest.TestCase):
     """AccessibleDataStores unit test stubs"""
@@ -44,7 +44,7 @@ class TestAccessibleDataStores(unittest.TestCase):
                     'READ'
                     ],
                 sensitivities_summary = [
-                    ibm_gdsc_sdk_software.models.sensitivity_summary.SensitivitySummary(
+                    ibm_gdsc_sdk_saas.models.sensitivity_summary.SensitivitySummary(
                         tag = 'BUSINESS_EMAIL_ADDRESS', 
                         count = 230, 
                         category = 'Personal', )
@@ -61,7 +61,7 @@ class TestAccessibleDataStores(unittest.TestCase):
                     'READ'
                     ],
                 sensitivities_summary = [
-                    ibm_gdsc_sdk_software.models.sensitivity_summary.SensitivitySummary(
+                    ibm_gdsc_sdk_saas.models.sensitivity_summary.SensitivitySummary(
                         tag = 'BUSINESS_EMAIL_ADDRESS', 
                         count = 230, 
                         category = 'Personal', )

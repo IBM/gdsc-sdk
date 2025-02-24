@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_edge_activation_object import Policybuilderv3EdgeActivationObject
+from ibm_gdsc_sdk_saas.models.policybuilderv3_edge_activation_object import Policybuilderv3EdgeActivationObject
 
 class TestPolicybuilderv3EdgeActivationObject(unittest.TestCase):
     """Policybuilderv3EdgeActivationObject unit test stubs"""
@@ -35,9 +35,9 @@ class TestPolicybuilderv3EdgeActivationObject(unittest.TestCase):
         model = Policybuilderv3EdgeActivationObject()
         if include_optional:
             return Policybuilderv3EdgeActivationObject(
-                activatation_timestamp = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 activation_order = 56,
                 activation_status = 'NOT_ACTIVATED',
+                activation_timestamp = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 edge_id = ''
             )
         else:

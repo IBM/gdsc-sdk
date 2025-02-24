@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.featureflagsv3_feature_flag_overrides import Featureflagsv3FeatureFlagOverrides
+from ibm_gdsc_sdk_saas.models.featureflagsv3_feature_flag_overrides import Featureflagsv3FeatureFlagOverrides
 
 # TODO update the JSON string below
 json = "{}"

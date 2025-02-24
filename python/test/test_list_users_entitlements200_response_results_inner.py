@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.list_users_entitlements200_response_results_inner import ListUsersEntitlements200ResponseResultsInner
+from ibm_gdsc_sdk_saas.models.list_users_entitlements200_response_results_inner import ListUsersEntitlements200ResponseResultsInner
 
 class TestListUsersEntitlements200ResponseResultsInner(unittest.TestCase):
     """ListUsersEntitlements200ResponseResultsInner unit test stubs"""
@@ -45,7 +45,7 @@ class TestListUsersEntitlements200ResponseResultsInner(unittest.TestCase):
                     ''
                     ],
                 sensitive_categories = [
-                    ibm_gdsc_sdk_software.models.user_sensitive_categories_sensitive_categories_inner.UserSensitiveCategories_sensitiveCategories_inner(
+                    ibm_gdsc_sdk_saas.models.user_sensitive_categories_sensitive_categories_inner.UserSensitiveCategories_sensitiveCategories_inner(
                         count = 1.337, 
                         category = '', )
                     ]
@@ -62,7 +62,7 @@ class TestListUsersEntitlements200ResponseResultsInner(unittest.TestCase):
                     ''
                     ],
                 sensitive_categories = [
-                    ibm_gdsc_sdk_software.models.user_sensitive_categories_sensitive_categories_inner.UserSensitiveCategories_sensitiveCategories_inner(
+                    ibm_gdsc_sdk_saas.models.user_sensitive_categories_sensitive_categories_inner.UserSensitiveCategories_sensitiveCategories_inner(
                         count = 1.337, 
                         category = '', )
                     ],

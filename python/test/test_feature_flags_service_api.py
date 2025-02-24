@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.feature_flags_service_api import FeatureFlagsServiceApi
+from ibm_gdsc_sdk_saas.api.feature_flags_service_api import FeatureFlagsServiceApi
 
 
 class TestFeatureFlagsServiceApi(unittest.TestCase):

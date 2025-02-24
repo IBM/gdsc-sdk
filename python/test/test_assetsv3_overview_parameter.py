@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_overview_parameter import Assetsv3OverviewParameter
+from ibm_gdsc_sdk_saas.models.assetsv3_overview_parameter import Assetsv3OverviewParameter
 
 class TestAssetsv3OverviewParameter(unittest.TestCase):
     """Assetsv3OverviewParameter unit test stubs"""
@@ -38,7 +38,7 @@ class TestAssetsv3OverviewParameter(unittest.TestCase):
                 database_name = '',
                 db_id = '',
                 ip_host = [
-                    ibm_gdsc_sdk_software.models.assetsv3_ip_host.assetsv3IpHost(
+                    ibm_gdsc_sdk_saas.models.assetsv3_ip_host.assetsv3IpHost(
                         host = [
                             ''
                             ], 

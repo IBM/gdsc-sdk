@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.stream_result_of_edgeschedulerv3_monitoring_pending_request_for_edge_query_response import StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse
+from ibm_gdsc_sdk_saas.models.stream_result_of_edgeschedulerv3_monitoring_pending_request_for_edge_query_response import StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse
 
 class TestStreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse(unittest.TestCase):
     """StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse unit test stubs"""
@@ -35,9 +35,9 @@ class TestStreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryRespo
         model = StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse()
         if include_optional:
             return StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse(
-                error = ibm_gdsc_sdk_software.models.runtime_stream_error.runtimeStreamError(
+                error = ibm_gdsc_sdk_saas.models.runtime_stream_error.runtimeStreamError(
                     details = [
-                        ibm_gdsc_sdk_software.models.protobuf_any.protobufAny(
+                        ibm_gdsc_sdk_saas.models.protobuf_any.protobufAny(
                             type_url = '', 
                             value = 'YQ==', )
                         ], 
@@ -45,7 +45,7 @@ class TestStreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryRespo
                     http_code = 56, 
                     http_status = '', 
                     message = '', ),
-                result = ibm_gdsc_sdk_software.models.edgeschedulerv3_monitoring_pending_request_for_edge_query_response.edgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse(
+                result = ibm_gdsc_sdk_saas.models.edgeschedulerv3_monitoring_pending_request_for_edge_query_response.edgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse(
                     edge_result_report_id = '', 
                     heartbeat = '', 
                     query = '', )

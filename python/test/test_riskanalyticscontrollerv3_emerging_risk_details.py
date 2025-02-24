@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_emerging_risk_details import Riskanalyticscontrollerv3EmergingRiskDetails
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_emerging_risk_details import Riskanalyticscontrollerv3EmergingRiskDetails
 
 class TestRiskanalyticscontrollerv3EmergingRiskDetails(unittest.TestCase):
     """Riskanalyticscontrollerv3EmergingRiskDetails unit test stubs"""

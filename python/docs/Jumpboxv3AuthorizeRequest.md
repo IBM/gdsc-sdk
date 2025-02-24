@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.jumpboxv3_authorize_request import Jumpboxv3AuthorizeRequest
+from ibm_gdsc_sdk_saas.models.jumpboxv3_authorize_request import Jumpboxv3AuthorizeRequest
 
 # TODO update the JSON string below
 json = "{}"

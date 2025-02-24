@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_get_controller_commands_response import Resourcecontrollerk8v3GetControllerCommandsResponse
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_get_controller_commands_response import Resourcecontrollerk8v3GetControllerCommandsResponse
 
 class TestResourcecontrollerk8v3GetControllerCommandsResponse(unittest.TestCase):
     """Resourcecontrollerk8v3GetControllerCommandsResponse unit test stubs"""
@@ -36,8 +36,8 @@ class TestResourcecontrollerk8v3GetControllerCommandsResponse(unittest.TestCase)
         if include_optional:
             return Resourcecontrollerk8v3GetControllerCommandsResponse(
                 commands = [
-                    ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_controller_command.resourcecontrollerk8v3ControllerCommand(
-                        args = ibm_gdsc_sdk_software.models.args.args(), 
+                    ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_controller_command.resourcecontrollerk8v3ControllerCommand(
+                        args = ibm_gdsc_sdk_saas.models.args.args(), 
                         created = '', 
                         id = '', 
                         modified = '', 

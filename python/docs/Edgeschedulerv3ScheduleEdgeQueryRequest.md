@@ -5,15 +5,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**edge_id** | **str** |  | [optional] 
 **edge_query_end_time** | **datetime** | the upper bound of the UC query time range in format YYYY-MM-DDTHH:mm:ss.sssZ. | [optional] 
 **edge_query_start_time** | **datetime** | the lower bound of the UC query time range in format YYYY-MM-DDTHH:mm:ss.sssZ. | [optional] 
-**edge_id** | **str** |  | [optional] 
 **edge_result_report_id** | **str** |  | [optional] 
 
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.edgeschedulerv3_schedule_edge_query_request import Edgeschedulerv3ScheduleEdgeQueryRequest
+from ibm_gdsc_sdk_saas.models.edgeschedulerv3_schedule_edge_query_request import Edgeschedulerv3ScheduleEdgeQueryRequest
 
 # TODO update the JSON string below
 json = "{}"

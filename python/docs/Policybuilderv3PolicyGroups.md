@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.policybuilderv3_policy_groups import Policybuilderv3PolicyGroups
+from ibm_gdsc_sdk_saas.models.policybuilderv3_policy_groups import Policybuilderv3PolicyGroups
 
 # TODO update the JSON string below
 json = "{}"

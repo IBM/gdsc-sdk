@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.qspmpolicymanagerv3_notification_severity import Qspmpolicymanagerv3NotificationSeverity
+from ibm_gdsc_sdk_saas.models.qspmpolicymanagerv3_notification_severity import Qspmpolicymanagerv3NotificationSeverity
 
 class TestQspmpolicymanagerv3NotificationSeverity(unittest.TestCase):
     """Qspmpolicymanagerv3NotificationSeverity unit test stubs"""

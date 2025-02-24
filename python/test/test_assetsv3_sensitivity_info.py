@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_sensitivity_info import Assetsv3SensitivityInfo
+from ibm_gdsc_sdk_saas.models.assetsv3_sensitivity_info import Assetsv3SensitivityInfo
 
 class TestAssetsv3SensitivityInfo(unittest.TestCase):
     """Assetsv3SensitivityInfo unit test stubs"""

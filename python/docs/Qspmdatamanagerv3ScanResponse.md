@@ -15,13 +15,12 @@ Name | Type | Description | Notes
 **scan_percentage_completion** | **str** |  | [optional] 
 **scan_reg_ts** | **datetime** |  | [optional] 
 **scan_status** | **str** |  | [optional] 
-**scan_type** | **str** |  | [optional] 
 **user_email** | **str** |  | [optional] 
 
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.qspmdatamanagerv3_scan_response import Qspmdatamanagerv3ScanResponse
+from ibm_gdsc_sdk_saas.models.qspmdatamanagerv3_scan_response import Qspmdatamanagerv3ScanResponse
 
 # TODO update the JSON string below
 json = "{}"

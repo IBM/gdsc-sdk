@@ -7,12 +7,12 @@ Response object for group types mapping.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **status** | [**Groupbuilderv3StatusResponseBase**](Groupbuilderv3StatusResponseBase.md) |  | [optional] 
-**type_map** | **Dict[str, int]** | Map of gdp to gi group type mapping objects. | [optional] 
+**type_map** | **Dict[str, int]** | Map of GDP to gi group type mapping objects. | [optional] 
 
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.groupbuilderv3_get_group_type_mapping_response import Groupbuilderv3GetGroupTypeMappingResponse
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_get_group_type_mapping_response import Groupbuilderv3GetGroupTypeMappingResponse
 
 # TODO update the JSON string below
 json = "{}"

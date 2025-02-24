@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_entity_new_schema import Qspmpluginmanagerv3EntityNewSchema
+from ibm_gdsc_sdk_saas.models.qspmpluginmanagerv3_entity_new_schema import Qspmpluginmanagerv3EntityNewSchema
 
 # TODO update the JSON string below
 json = "{}"

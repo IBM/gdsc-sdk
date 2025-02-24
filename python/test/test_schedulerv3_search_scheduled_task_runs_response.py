@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.schedulerv3_search_scheduled_task_runs_response import Schedulerv3SearchScheduledTaskRunsResponse
+from ibm_gdsc_sdk_saas.models.schedulerv3_search_scheduled_task_runs_response import Schedulerv3SearchScheduledTaskRunsResponse
 
 class TestSchedulerv3SearchScheduledTaskRunsResponse(unittest.TestCase):
     """Schedulerv3SearchScheduledTaskRunsResponse unit test stubs"""
@@ -37,7 +37,7 @@ class TestSchedulerv3SearchScheduledTaskRunsResponse(unittest.TestCase):
             return Schedulerv3SearchScheduledTaskRunsResponse(
                 record_count = 56,
                 runs = [
-                    ibm_gdsc_sdk_software.models.scheduled_job_run.ScheduledJobRun(
+                    ibm_gdsc_sdk_saas.models.scheduled_job_run.ScheduledJobRun(
                         collection_id = '', 
                         end_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         job_id = '', 
@@ -45,6 +45,7 @@ class TestSchedulerv3SearchScheduledTaskRunsResponse(unittest.TestCase):
                         query_from = '', 
                         query_to = '', 
                         queue_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                        result_size = 56, 
                         run_detail = '', 
                         schedule_id = '', 
                         start_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 

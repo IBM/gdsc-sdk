@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.assetsv3_resources_vertex import Assetsv3ResourcesVertex
+from ibm_gdsc_sdk_saas.models.assetsv3_resources_vertex import Assetsv3ResourcesVertex
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.universalconnectormanagerv3_connectivity_state import Universalconnectormanagerv3ConnectivityState
+from ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_connectivity_state import Universalconnectormanagerv3ConnectivityState
 
 class TestUniversalconnectormanagerv3ConnectivityState(unittest.TestCase):
     """Universalconnectormanagerv3ConnectivityState unit test stubs"""

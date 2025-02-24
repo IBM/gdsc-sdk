@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.user_sensitive_categories_sensitive_categories_inner import UserSensitiveCategoriesSensitiveCategoriesInner
+from ibm_gdsc_sdk_saas.models.user_sensitive_categories_sensitive_categories_inner import UserSensitiveCategoriesSensitiveCategoriesInner
 
 # TODO update the JSON string below
 json = "{}"

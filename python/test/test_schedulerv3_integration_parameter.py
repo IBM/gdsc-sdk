@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.schedulerv3_integration_parameter import Schedulerv3IntegrationParameter
+from ibm_gdsc_sdk_saas.models.schedulerv3_integration_parameter import Schedulerv3IntegrationParameter
 
 class TestSchedulerv3IntegrationParameter(unittest.TestCase):
     """Schedulerv3IntegrationParameter unit test stubs"""

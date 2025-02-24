@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.assetsv3_find_asset_name_response import Assetsv3FindAssetNameResponse
+from ibm_gdsc_sdk_saas.models.assetsv3_find_asset_name_response import Assetsv3FindAssetNameResponse
 
 # TODO update the JSON string below
 json = "{}"

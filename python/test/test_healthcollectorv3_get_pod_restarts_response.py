@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.healthcollectorv3_get_pod_restarts_response import Healthcollectorv3GetPodRestartsResponse
+from ibm_gdsc_sdk_saas.models.healthcollectorv3_get_pod_restarts_response import Healthcollectorv3GetPodRestartsResponse
 
 class TestHealthcollectorv3GetPodRestartsResponse(unittest.TestCase):
     """Healthcollectorv3GetPodRestartsResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestHealthcollectorv3GetPodRestartsResponse(unittest.TestCase):
         if include_optional:
             return Healthcollectorv3GetPodRestartsResponse(
                 pod_restarts = [
-                    ibm_gdsc_sdk_software.models.healthcollectorv3_usage.healthcollectorv3Usage(
+                    ibm_gdsc_sdk_saas.models.healthcollectorv3_usage.healthcollectorv3Usage(
                         label = '', 
                         name = '', 
                         nls_key = '', 

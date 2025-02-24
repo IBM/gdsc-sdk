@@ -23,7 +23,7 @@ export class Policybuilderv3GdpPolicySyncRes {
     */
     'gdpSyncedId'?: string;
     /**
-    * Name for imported gdp policy.
+    * Name for imported GDP policy.
     */
     'importName'?: string;
     'lastStateChange'?: string;

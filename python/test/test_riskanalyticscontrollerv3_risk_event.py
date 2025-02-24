@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_risk_event import Riskanalyticscontrollerv3RiskEvent
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_risk_event import Riskanalyticscontrollerv3RiskEvent
 
 class TestRiskanalyticscontrollerv3RiskEvent(unittest.TestCase):
     """Riskanalyticscontrollerv3RiskEvent unit test stubs"""
@@ -44,7 +44,7 @@ class TestRiskanalyticscontrollerv3RiskEvent(unittest.TestCase):
                 emerging_risk = True,
                 from_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 justification = '',
-                pivot = ibm_gdsc_sdk_software.models.riskanalyticsenginev3_pivot.riskanalyticsenginev3Pivot(
+                pivot = ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_pivot.riskanalyticsenginev3Pivot(
                     database = '', 
                     database_source_field = 'UNDEFINED', 
                     db_user = '', 
@@ -56,7 +56,7 @@ class TestRiskanalyticscontrollerv3RiskEvent(unittest.TestCase):
                 severity = 56,
                 severity_level = 'UNDEFINED_SEVERITY_LEVEL',
                 short_observations = [
-                    ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_short_observation.riskanalyticscontrollerv3ShortObservation(
+                    ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_short_observation.riskanalyticscontrollerv3ShortObservation(
                         count = 56, 
                         type = 'UNDEFINED_OBSERVATION_TYPE', )
                     ],

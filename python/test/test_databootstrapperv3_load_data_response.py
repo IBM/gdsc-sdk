@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.databootstrapperv3_load_data_response import Databootstrapperv3LoadDataResponse
+from ibm_gdsc_sdk_saas.models.databootstrapperv3_load_data_response import Databootstrapperv3LoadDataResponse
 
 class TestDatabootstrapperv3LoadDataResponse(unittest.TestCase):
     """Databootstrapperv3LoadDataResponse unit test stubs"""

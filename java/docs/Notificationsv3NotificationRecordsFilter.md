@@ -9,6 +9,7 @@ NotificationRecordsFilter includes all fields used to filter the set of desired 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**endTime** | **OffsetDateTime** | Return records created before this time (&lt;). |  [optional] |
+|**limit** | **Long** | The max amount of rows to return for this single query. |  [optional] |
 |**originData** | **String** | Only return record that with the specified origin_data. |  [optional] |
 |**origins** | **List&lt;String&gt;** | Only return record that includes the specified origins. |  [optional] |
 |**startTime** | **OffsetDateTime** | Return records created at this time or later (&gt;&#x3D;). |  [optional] |

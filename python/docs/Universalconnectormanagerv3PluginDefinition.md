@@ -6,6 +6,7 @@ Plugin definition based on UCPluginDefinition.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**plugin_jdbc_driver_required** | **bool** |  | [optional] 
 **plugin_alias** | **str** | mongoDB. | [optional] 
 **plugin_configuration_notes** | **str** | Config noted. | [optional] 
 **plugin_description** | **str** | Description. | [optional] 
@@ -24,7 +25,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.universalconnectormanagerv3_plugin_definition import Universalconnectormanagerv3PluginDefinition
+from ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_plugin_definition import Universalconnectormanagerv3PluginDefinition
 
 # TODO update the JSON string below
 json = "{}"

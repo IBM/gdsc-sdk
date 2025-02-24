@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_get_chart_settingsv2_response import Reportsv3GetChartSettingsv2Response
+from ibm_gdsc_sdk_saas.models.reportsv3_get_chart_settingsv2_response import Reportsv3GetChartSettingsv2Response
 
 class TestReportsv3GetChartSettingsv2Response(unittest.TestCase):
     """Reportsv3GetChartSettingsv2Response unit test stubs"""
@@ -36,7 +36,7 @@ class TestReportsv3GetChartSettingsv2Response(unittest.TestCase):
         if include_optional:
             return Reportsv3GetChartSettingsv2Response(
                 chart_settings = [
-                    ibm_gdsc_sdk_software.models.reportsv3_chart_settingsv2.reportsv3ChartSettingsv2(
+                    ibm_gdsc_sdk_saas.models.reportsv3_chart_settingsv2.reportsv3ChartSettingsv2(
                         category_sequence_numbers = [
                             56
                             ], 

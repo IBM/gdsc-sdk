@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_policy_update import Policybuilderv3PolicyUpdate
+from ibm_gdsc_sdk_saas.models.policybuilderv3_policy_update import Policybuilderv3PolicyUpdate
 
 class TestPolicybuilderv3PolicyUpdate(unittest.TestCase):
     """Policybuilderv3PolicyUpdate unit test stubs"""
@@ -49,12 +49,12 @@ class TestPolicybuilderv3PolicyUpdate(unittest.TestCase):
                 policy_name = '',
                 policy_type = 'DATA_POLICY',
                 rules = [
-                    ibm_gdsc_sdk_software.models.policybuilderv3_rule.policybuilderv3Rule(
+                    ibm_gdsc_sdk_saas.models.policybuilderv3_rule.policybuilderv3Rule(
                         actions = [
-                            ibm_gdsc_sdk_software.models.policybuilderv3_action.policybuilderv3Action(
+                            ibm_gdsc_sdk_saas.models.policybuilderv3_action.policybuilderv3Action(
                                 action_name = '', 
                                 notifications = [
-                                    ibm_gdsc_sdk_software.models.policybuilderv3_target_receiver.policybuilderv3TargetReceiver(
+                                    ibm_gdsc_sdk_saas.models.policybuilderv3_target_receiver.policybuilderv3TargetReceiver(
                                         integration_id = '', 
                                         template_id = '', 
                                         type = 'UNDEFINED_RECTYPE', 
@@ -62,7 +62,7 @@ class TestPolicybuilderv3PolicyUpdate(unittest.TestCase):
                                     ], 
                                 order = 56, 
                                 parameters = [
-                                    ibm_gdsc_sdk_software.models.policybuilderv3_action_parameter.policybuilderv3ActionParameter(
+                                    ibm_gdsc_sdk_saas.models.policybuilderv3_action_parameter.policybuilderv3ActionParameter(
                                         parameter_name = '', 
                                         parameter_value = '', )
                                     ], 
@@ -75,14 +75,14 @@ class TestPolicybuilderv3PolicyUpdate(unittest.TestCase):
                             56
                             ], 
                         invalid_actions = [
-                            ibm_gdsc_sdk_software.models.policybuilderv3_action.policybuilderv3Action(
+                            ibm_gdsc_sdk_saas.models.policybuilderv3_action.policybuilderv3Action(
                                 action_name = '', 
                                 order = 56, 
                                 qr_defintion_id = 56, 
                                 ui_label = '', )
                             ], 
                         invalid_parameters = [
-                            ibm_gdsc_sdk_software.models.policybuilderv3_rule_parameter.policybuilderv3RuleParameter(
+                            ibm_gdsc_sdk_saas.models.policybuilderv3_rule_parameter.policybuilderv3RuleParameter(
                                 parameter_name = '', 
                                 parameter_operator = 'UNKNOWN_OPERATOR', 
                                 parameter_type = '', 
@@ -91,7 +91,7 @@ class TestPolicybuilderv3PolicyUpdate(unittest.TestCase):
                                 ui_label = '', )
                             ], 
                         parameters = [
-                            ibm_gdsc_sdk_software.models.policybuilderv3_rule_parameter.policybuilderv3RuleParameter(
+                            ibm_gdsc_sdk_saas.models.policybuilderv3_rule_parameter.policybuilderv3RuleParameter(
                                 parameter_name = '', 
                                 parameter_type = '', 
                                 parameter_value = '', 

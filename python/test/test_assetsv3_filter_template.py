@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_filter_template import Assetsv3FilterTemplate
+from ibm_gdsc_sdk_saas.models.assetsv3_filter_template import Assetsv3FilterTemplate
 
 class TestAssetsv3FilterTemplate(unittest.TestCase):
     """Assetsv3FilterTemplate unit test stubs"""
@@ -36,7 +36,7 @@ class TestAssetsv3FilterTemplate(unittest.TestCase):
         if include_optional:
             return Assetsv3FilterTemplate(
                 colummns_list = [
-                    ibm_gdsc_sdk_software.models.table_column___table_column_details_for_manage_assets_screen_used_to_save_in_preset.TableColumn - Table column details for manage assets screen used to save in preset(
+                    ibm_gdsc_sdk_saas.models.table_column___table_column_details_for_manage_assets_screen_used_to_save_in_preset.TableColumn - Table column details for manage assets screen used to save in preset(
                         default = True, 
                         default_order = 56, 
                         fixed = True, 
@@ -52,9 +52,9 @@ class TestAssetsv3FilterTemplate(unittest.TestCase):
                 description = '',
                 id = '',
                 selected_filters = [
-                    ibm_gdsc_sdk_software.models.filter_catagory___seleted_filter_catagory_details_for_appliying_on_assets_list_saved_in_template.FilterCatagory - Seleted Filter Catagory details for appliying on assets list saved in template(
+                    ibm_gdsc_sdk_saas.models.filter_catagory___seleted_filter_catagory_details_for_appliying_on_assets_list_saved_in_template.FilterCatagory - Seleted Filter Catagory details for appliying on assets list saved in template(
                         catagory_id = '', 
-                        date_range = ibm_gdsc_sdk_software.models.timeline_date_range___timel_line_data_range_object_for_ui_widget_for_appliying_on_assets_list.TimelineDateRange - Timel Line Data Range object for ui widget for appliying on assets list(
+                        date_range = ibm_gdsc_sdk_saas.models.timeline_date_range___timel_line_data_range_object_for_ui_widget_for_appliying_on_assets_list.TimelineDateRange - Timel Line Data Range object for ui widget for appliying on assets list(
                             end = '', 
                             end_number = 56, 
                             end_unit = '', 
@@ -65,9 +65,9 @@ class TestAssetsv3FilterTemplate(unittest.TestCase):
                             start_unit = '', 
                             type = '', ), 
                         selected_sub_catagory_list = [
-                            ibm_gdsc_sdk_software.models.filter_sub_query___filter_sub_query_of_a_filter_query_saved_in_template.FilterSubQuery - Filter Sub Query of a Filter Query saved in template(
+                            ibm_gdsc_sdk_saas.models.filter_sub_query___filter_sub_query_of_a_filter_query_saved_in_template.FilterSubQuery - Filter Sub Query of a Filter Query saved in template(
                                 selected_children_list = [
-                                    ibm_gdsc_sdk_software.models.filter_sub_catagory_child___child_values_under_filter_sub_category_of_a_filter_category_in_template.FilterSubCatagoryChild - child values under Filter Sub category of a Filter category in template(
+                                    ibm_gdsc_sdk_saas.models.filter_sub_catagory_child___child_values_under_filter_sub_category_of_a_filter_category_in_template.FilterSubCatagoryChild - child values under Filter Sub category of a Filter category in template(
                                         child_id = '', 
                                         child_name = '', )
                                     ], 

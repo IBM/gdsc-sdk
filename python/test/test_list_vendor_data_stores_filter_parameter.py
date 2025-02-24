@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.list_vendor_data_stores_filter_parameter import ListVendorDataStoresFilterParameter
+from ibm_gdsc_sdk_saas.models.list_vendor_data_stores_filter_parameter import ListVendorDataStoresFilterParameter
 
 class TestListVendorDataStoresFilterParameter(unittest.TestCase):
     """ListVendorDataStoresFilterParameter unit test stubs"""

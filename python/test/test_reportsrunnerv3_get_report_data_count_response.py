@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_report_data_count_response import Reportsrunnerv3GetReportDataCountResponse
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_get_report_data_count_response import Reportsrunnerv3GetReportDataCountResponse
 
 class TestReportsrunnerv3GetReportDataCountResponse(unittest.TestCase):
     """Reportsrunnerv3GetReportDataCountResponse unit test stubs"""

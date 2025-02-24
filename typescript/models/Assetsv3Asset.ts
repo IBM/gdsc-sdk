@@ -43,6 +43,7 @@ export class Assetsv3Asset {
     'hostPort'?: string;
     'ip'?: string;
     'ipPort'?: string;
+    'isSplittable'?: boolean;
     'macAddress'?: string;
     'modelName'?: string;
     'monitoring'?: Assetsv3StatusType;
@@ -58,6 +59,7 @@ export class Assetsv3Asset {
     'traffic'?: Assetsv3HealthType;
     'type'?: string;
     'userAccounts'?: Array<string>;
+    'vertexId'?: string;
 
     static readonly discriminator: string | undefined = undefined;
 
@@ -189,6 +191,12 @@ export class Assetsv3Asset {
             "format": ""
         },
         {
+            "name": "isSplittable",
+            "baseName": "is_splittable",
+            "type": "boolean",
+            "format": ""
+        },
+        {
             "name": "macAddress",
             "baseName": "mac_address",
             "type": "string",
@@ -276,6 +284,12 @@ export class Assetsv3Asset {
             "name": "userAccounts",
             "baseName": "user_accounts",
             "type": "Array<string>",
+            "format": ""
+        },
+        {
+            "name": "vertexId",
+            "baseName": "vertex_id",
+            "type": "string",
             "format": ""
         }    ];
 

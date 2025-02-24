@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_controller_status import Resourcecontrollerk8v3ControllerStatus
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_controller_status import Resourcecontrollerk8v3ControllerStatus
 
 # TODO update the JSON string below
 json = "{}"

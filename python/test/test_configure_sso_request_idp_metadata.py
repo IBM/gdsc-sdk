@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.configure_sso_request_idp_metadata import ConfigureSSORequestIdpMetadata
+from ibm_gdsc_sdk_saas.models.configure_sso_request_idp_metadata import ConfigureSSORequestIdpMetadata
 
 class TestConfigureSSORequestIdpMetadata(unittest.TestCase):
     """ConfigureSSORequestIdpMetadata unit test stubs"""

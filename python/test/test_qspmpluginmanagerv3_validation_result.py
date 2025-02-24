@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_validation_result import Qspmpluginmanagerv3ValidationResult
+from ibm_gdsc_sdk_saas.models.qspmpluginmanagerv3_validation_result import Qspmpluginmanagerv3ValidationResult
 
 class TestQspmpluginmanagerv3ValidationResult(unittest.TestCase):
     """Qspmpluginmanagerv3ValidationResult unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_update_asset_name_request import Assetsv3UpdateAssetNameRequest
+from ibm_gdsc_sdk_saas.models.assetsv3_update_asset_name_request import Assetsv3UpdateAssetNameRequest
 
 class TestAssetsv3UpdateAssetNameRequest(unittest.TestCase):
     """Assetsv3UpdateAssetNameRequest unit test stubs"""

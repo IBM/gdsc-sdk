@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.schedulerv3_task_type import Schedulerv3TaskType
+from ibm_gdsc_sdk_saas.models.schedulerv3_task_type import Schedulerv3TaskType
 
 class TestSchedulerv3TaskType(unittest.TestCase):
     """Schedulerv3TaskType unit test stubs"""

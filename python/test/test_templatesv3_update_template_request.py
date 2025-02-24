@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.templatesv3_update_template_request import Templatesv3UpdateTemplateRequest
+from ibm_gdsc_sdk_saas.models.templatesv3_update_template_request import Templatesv3UpdateTemplateRequest
 
 class TestTemplatesv3UpdateTemplateRequest(unittest.TestCase):
     """Templatesv3UpdateTemplateRequest unit test stubs"""
@@ -35,9 +35,9 @@ class TestTemplatesv3UpdateTemplateRequest(unittest.TestCase):
         model = Templatesv3UpdateTemplateRequest()
         if include_optional:
             return Templatesv3UpdateTemplateRequest(
-                template = ibm_gdsc_sdk_software.models.templatesv3_template.templatesv3Template(
+                template = ibm_gdsc_sdk_saas.models.templatesv3_template.templatesv3Template(
                     content = '', 
-                    default_recipient = ibm_gdsc_sdk_software.models.templatesv3_simple_recipient.templatesv3SimpleRecipient(
+                    default_recipient = ibm_gdsc_sdk_saas.models.templatesv3_simple_recipient.templatesv3SimpleRecipient(
                         recipient_type = 'USER', 
                         value = '', ), 
                     integration = 'UNDEFINED_INTEGRATION', 

@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **reportUnderscorename** | **string** |  | [optional] [default to null]
 **runtimeUnderscoreparameters** | [**array[Reportsv3RunTimeParameter]**](Reportsv3RunTimeParameter.md) |  | [optional] [default to null]
 **syncUnderscoreexecutionUnderscoredate** | **boolean** |  | [optional] [default to null]
+**threshold** | **integer** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

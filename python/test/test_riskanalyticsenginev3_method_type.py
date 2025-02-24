@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticsenginev3_method_type import Riskanalyticsenginev3MethodType
+from ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_method_type import Riskanalyticsenginev3MethodType
 
 class TestRiskanalyticsenginev3MethodType(unittest.TestCase):
     """Riskanalyticsenginev3MethodType unit test stubs"""

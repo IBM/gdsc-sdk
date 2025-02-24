@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_active_queries_response import Reportsrunnerv3GetActiveQueriesResponse
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_get_active_queries_response import Reportsrunnerv3GetActiveQueriesResponse
 
 class TestReportsrunnerv3GetActiveQueriesResponse(unittest.TestCase):
     """Reportsrunnerv3GetActiveQueriesResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestReportsrunnerv3GetActiveQueriesResponse(unittest.TestCase):
         if include_optional:
             return Reportsrunnerv3GetActiveQueriesResponse(
                 queries = [
-                    ibm_gdsc_sdk_software.models.active_query_is_the_detail_for_a_running_query.ActiveQuery is the detail for a running query(
+                    ibm_gdsc_sdk_saas.models.active_query_is_the_detail_for_a_running_query.ActiveQuery is the detail for a running query(
                         can_stop = True, 
                         detail = '', 
                         elapsed_time = 56, 

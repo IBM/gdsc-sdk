@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_connector_header import Connectionsv3ConnectorHeader
+from ibm_gdsc_sdk_saas.models.connectionsv3_connector_header import Connectionsv3ConnectorHeader
 
 class TestConnectionsv3ConnectorHeader(unittest.TestCase):
     """Connectionsv3ConnectorHeader unit test stubs"""

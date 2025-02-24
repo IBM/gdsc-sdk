@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_ip_vertex import Assetsv3IPVertex
+from ibm_gdsc_sdk_saas.models.assetsv3_ip_vertex import Assetsv3IPVertex
 
 class TestAssetsv3IPVertex(unittest.TestCase):
     """Assetsv3IPVertex unit test stubs"""
@@ -41,14 +41,14 @@ class TestAssetsv3IPVertex(unittest.TestCase):
                 description = '',
                 dns = '',
                 extended_properties = [
-                    ibm_gdsc_sdk_software.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
+                    ibm_gdsc_sdk_saas.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
                         data_type = '', 
                         key = '', 
                         value = '', )
                     ],
                 ip_address = '',
                 ip_port = [
-                    ibm_gdsc_sdk_software.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
+                    ibm_gdsc_sdk_saas.models.connection_edge___connection_edge_defined_from_one_vertex_to_another/_from_source_to_target_with_identifier_as_unqiue_identification.ConnectionEdge - Connection edge defined from one vertex to another. from source to target with identifier as unqiue identification(
                         identifier = '', )
                     ],
                 mac_address = '',

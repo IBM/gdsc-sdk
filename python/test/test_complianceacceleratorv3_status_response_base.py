@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.complianceacceleratorv3_status_response_base import Complianceacceleratorv3StatusResponseBase
+from ibm_gdsc_sdk_saas.models.complianceacceleratorv3_status_response_base import Complianceacceleratorv3StatusResponseBase
 
 class TestComplianceacceleratorv3StatusResponseBase(unittest.TestCase):
     """Complianceacceleratorv3StatusResponseBase unit test stubs"""

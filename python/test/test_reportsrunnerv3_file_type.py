@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_file_type import Reportsrunnerv3FileType
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_file_type import Reportsrunnerv3FileType
 
 class TestReportsrunnerv3FileType(unittest.TestCase):
     """Reportsrunnerv3FileType unit test stubs"""

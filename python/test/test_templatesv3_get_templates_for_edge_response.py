@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.templatesv3_get_templates_for_edge_response import Templatesv3GetTemplatesForEdgeResponse
+from ibm_gdsc_sdk_saas.models.templatesv3_get_templates_for_edge_response import Templatesv3GetTemplatesForEdgeResponse
 
 class TestTemplatesv3GetTemplatesForEdgeResponse(unittest.TestCase):
     """Templatesv3GetTemplatesForEdgeResponse unit test stubs"""
@@ -35,22 +35,22 @@ class TestTemplatesv3GetTemplatesForEdgeResponse(unittest.TestCase):
         model = Templatesv3GetTemplatesForEdgeResponse()
         if include_optional:
             return Templatesv3GetTemplatesForEdgeResponse(
-                status = ibm_gdsc_sdk_software.models.the_`status`_type_defines_a_logical_error_model_that_is_suitable_for_different
+                status = ibm_gdsc_sdk_saas.models.the_`status`_type_defines_a_logical_error_model_that_is_suitable_for_different
 programming_environments,_including_rest_apis_and_rpc_apis/_it_is_used_by
 [g_rpc](https://github/com/grpc)/_the_error_model_is_designed_to_be:.The `Status` type defines a logical error model that is suitable for different
 programming environments, including REST APIs and RPC APIs. It is used by
 [gRPC](https://github.com/grpc). The error model is designed to be:(
                     code = 56, 
                     details = [
-                        ibm_gdsc_sdk_software.models.protobuf_any.protobufAny(
+                        ibm_gdsc_sdk_saas.models.protobuf_any.protobufAny(
                             type_url = '', 
                             value = 'YQ==', )
                         ], 
                     message = '', ),
                 template = [
-                    ibm_gdsc_sdk_software.models.templatesv3_template.templatesv3Template(
+                    ibm_gdsc_sdk_saas.models.templatesv3_template.templatesv3Template(
                         content = '', 
-                        default_recipient = ibm_gdsc_sdk_software.models.templatesv3_simple_recipient.templatesv3SimpleRecipient(
+                        default_recipient = ibm_gdsc_sdk_saas.models.templatesv3_simple_recipient.templatesv3SimpleRecipient(
                             recipient_type = 'USER', 
                             value = '', ), 
                         integration = 'UNDEFINED_INTEGRATION', 

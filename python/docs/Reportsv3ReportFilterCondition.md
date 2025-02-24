@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **case_insensitive** | **bool** | Case Insensitive - Whether the condition is case insensitive or case sensitive. | [optional] 
 **field_nls_translation_key** | **str** |  | [optional] 
 **filter_id** | **int** |  | [optional] 
+**group_type_id** | **int** |  | [optional] 
 **header_id** | **str** |  | [optional] 
 **header_name** | **str** |  | [optional] 
 **header_type** | [**Reportsv3HeaderType**](Reportsv3HeaderType.md) |  | [optional] 
@@ -19,17 +20,19 @@ Name | Type | Description | Notes
 **in_report_id** | **str** |  | [optional] 
 **in_report_name** | **str** |  | [optional] 
 **in_report_table_name** | **str** |  | [optional] 
+**is_tuple** | **bool** |  | [optional] 
 **operator_type** | [**Reportsv3OperatorType**](Reportsv3OperatorType.md) |  | [optional] 
 **parameter_type** | [**Reportsv3ParameterType**](Reportsv3ParameterType.md) |  | [optional] 
 **schema_name** | **str** |  | [optional] 
 **sequence** | **int** |  | [optional] 
 **table_name** | **str** |  | [optional] 
+**tuple_type** | **str** |  | [optional] 
 **values** | **List[str]** |  | [optional] 
 
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.reportsv3_report_filter_condition import Reportsv3ReportFilterCondition
+from ibm_gdsc_sdk_saas.models.reportsv3_report_filter_condition import Reportsv3ReportFilterCondition
 
 # TODO update the JSON string below
 json = "{}"

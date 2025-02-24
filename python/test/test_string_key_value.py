@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.string_key_value import StringKeyValue
+from ibm_gdsc_sdk_saas.models.string_key_value import StringKeyValue
 
 class TestStringKeyValue(unittest.TestCase):
     """StringKeyValue unit test stubs"""

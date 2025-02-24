@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_stap_operation import Connectionsv3StapOperation
+from ibm_gdsc_sdk_saas.models.connectionsv3_stap_operation import Connectionsv3StapOperation
 
 class TestConnectionsv3StapOperation(unittest.TestCase):
     """Connectionsv3StapOperation unit test stubs"""

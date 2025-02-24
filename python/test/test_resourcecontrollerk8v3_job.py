@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_job import Resourcecontrollerk8v3Job
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_job import Resourcecontrollerk8v3Job
 
 class TestResourcecontrollerk8v3Job(unittest.TestCase):
     """Resourcecontrollerk8v3Job unit test stubs"""
@@ -36,7 +36,7 @@ class TestResourcecontrollerk8v3Job(unittest.TestCase):
         if include_optional:
             return Resourcecontrollerk8v3Job(
                 cluster_role_rules = [
-                    ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_rule.resourcecontrollerk8v3Rule(
+                    ibm_gdsc_sdk_saas.models.rule___controller_job_rule_struct.Rule - controller job rule struct(
                         api_groups = [
                             ''
                             ], 
@@ -51,25 +51,25 @@ class TestResourcecontrollerk8v3Job(unittest.TestCase):
                 command = [
                     ''
                     ],
-                container = ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_container.resourcecontrollerk8v3Container(
+                container = ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_container.resourcecontrollerk8v3Container(
                     image = '', 
                     image_fully_qualified = True, 
-                    resources = ibm_gdsc_sdk_software.models.container_resources_contains_the_resource_requirements_of_container.ContainerResources contains the resource requirements of container(
-                        limits = ibm_gdsc_sdk_software.models.container_resources_quantity_contains_the_resource_quantities_of_container.ContainerResourcesQuantity contains the resource quantities of container(
+                    resources = ibm_gdsc_sdk_saas.models.container_resources_contains_the_resource_requirements_of_container.ContainerResources contains the resource requirements of container(
+                        limits = ibm_gdsc_sdk_saas.models.container_resources_quantity_contains_the_resource_quantities_of_container.ContainerResourcesQuantity contains the resource quantities of container(
                             cpu = '', 
                             memory = '', ), 
-                        requests = ibm_gdsc_sdk_software.models.container_resources_quantity_contains_the_resource_quantities_of_container.ContainerResourcesQuantity contains the resource quantities of container(
+                        requests = ibm_gdsc_sdk_saas.models.container_resources_quantity_contains_the_resource_quantities_of_container.ContainerResourcesQuantity contains the resource quantities of container(
                             cpu = '', 
                             memory = '', ), ), ),
                 controller_id = '',
                 created = '',
-                cron = ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_cron.resourcecontrollerk8v3Cron(
+                cron = ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_cron.resourcecontrollerk8v3Cron(
                     schedule = '', ),
                 files = [
-                    ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_file.resourcecontrollerk8v3File(
+                    ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_file.resourcecontrollerk8v3File(
                         content = '', 
                         created = '', 
-                        description = ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_text_content.resourcecontrollerk8v3TextContent(
+                        description = ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_text_content.resourcecontrollerk8v3TextContent(
                             content = '', 
                             format = '', ), 
                         id = '', 
@@ -82,7 +82,7 @@ class TestResourcecontrollerk8v3Job(unittest.TestCase):
                 labels = {
                     'key' : ''
                     },
-                last_execution = ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_job_execution.resourcecontrollerk8v3JobExecution(
+                last_execution = ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_job_execution.resourcecontrollerk8v3JobExecution(
                     details = '', 
                     ended = '', 
                     id = '', 
@@ -94,7 +94,7 @@ class TestResourcecontrollerk8v3Job(unittest.TestCase):
                 modified = '',
                 name = '',
                 role_rules = [
-                    ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_rule.resourcecontrollerk8v3Rule(
+                    ibm_gdsc_sdk_saas.models.rule___controller_job_rule_struct.Rule - controller job rule struct(
                         api_groups = [
                             ''
                             ], 
@@ -108,7 +108,7 @@ class TestResourcecontrollerk8v3Job(unittest.TestCase):
                     ],
                 secret_key = '',
                 secrets = [
-                    ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_secret.resourcecontrollerk8v3Secret(
+                    ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_secret.resourcecontrollerk8v3Secret(
                         created = '', 
                         id = '', 
                         modified = '', 

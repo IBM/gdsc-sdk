@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.universalconnectormanagerv3_file import Universalconnectormanagerv3File
+from ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_file import Universalconnectormanagerv3File
 
 class TestUniversalconnectormanagerv3File(unittest.TestCase):
     """Universalconnectormanagerv3File unit test stubs"""

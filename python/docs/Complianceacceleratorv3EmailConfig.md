@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.complianceacceleratorv3_email_config import Complianceacceleratorv3EmailConfig
+from ibm_gdsc_sdk_saas.models.complianceacceleratorv3_email_config import Complianceacceleratorv3EmailConfig
 
 # TODO update the JSON string below
 json = "{}"

@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.vulnerabilities_by_data_store_filter_options import VulnerabilitiesByDataStoreFilterOptions
+from ibm_gdsc_sdk_saas.models.vulnerabilities_by_data_store_filter_options import VulnerabilitiesByDataStoreFilterOptions
 
 # TODO update the JSON string below
 json = "{}"

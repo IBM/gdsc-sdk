@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_run_time_parameter import Reportsv3RunTimeParameter
+from ibm_gdsc_sdk_saas.models.reportsv3_run_time_parameter import Reportsv3RunTimeParameter
 
 class TestReportsv3RunTimeParameter(unittest.TestCase):
     """Reportsv3RunTimeParameter unit test stubs"""

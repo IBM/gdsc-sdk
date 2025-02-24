@@ -5,6 +5,7 @@ All URIs are relative to **
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**qSPolicyManagerBatchStatusUpdate**](QSPolicyManagerApi.md#qSPolicyManagerBatchStatusUpdate) | **PUT** /api/v3/policy_manager/tickets/status | BatchStatusUpdate - trigger the batch to update the status of the Ticket .
+[**qSPolicyManagerConfigUpdate**](QSPolicyManagerApi.md#qSPolicyManagerConfigUpdate) | **PATCH** /api/v3/policy_manager/configs | ConfigUpdate - this function update Crypto Risk Factor Weight in Db2 as well as Mongodb.
 [**qSPolicyManagerCreateTicket**](QSPolicyManagerApi.md#qSPolicyManagerCreateTicket) | **POST** /api/v3/policy_manager/ticket | CreateTicket - Create a new Incident .
 [**qSPolicyManagerFetchFilesfromBuckets**](QSPolicyManagerApi.md#qSPolicyManagerFetchFilesfromBuckets) | **GET** /api/v3/policy_manager/os-files | FetchFilesfromBuckets - fetch the file(s) from bucket of the object storage
 [**qSPolicyManagerProcessPolicyDimentionRecords**](QSPolicyManagerApi.md#qSPolicyManagerProcessPolicyDimentionRecords) | **POST** /api/v3/policy_manager/policy/process | ProcessPolicyDimentionRecords - fetch the records from Policy Dimention and update Policy Fact table
@@ -32,6 +33,39 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Qspmpolicymanagerv3StandardEmptyResponse**](Qspmpolicymanagerv3StandardEmptyResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## qSPolicyManagerConfigUpdate
+
+ConfigUpdate - this function update Crypto Risk Factor Weight in Db2 as well as Mongodb.
+
+### Example
+
+```bash
+ qSPolicyManagerConfigUpdate
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **qspmpolicymanagerv3UpdateConfigsRequest** | [**Qspmpolicymanagerv3UpdateConfigsRequest**](Qspmpolicymanagerv3UpdateConfigsRequest.md) |  |
+
+### Return type
+
+[**Qspmpolicymanagerv3APIResonse**](Qspmpolicymanagerv3APIResonse.md)
 
 ### Authorization
 

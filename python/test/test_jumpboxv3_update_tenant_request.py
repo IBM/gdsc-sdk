@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.jumpboxv3_update_tenant_request import Jumpboxv3UpdateTenantRequest
+from ibm_gdsc_sdk_saas.models.jumpboxv3_update_tenant_request import Jumpboxv3UpdateTenantRequest
 
 class TestJumpboxv3UpdateTenantRequest(unittest.TestCase):
     """Jumpboxv3UpdateTenantRequest unit test stubs"""
@@ -36,9 +36,9 @@ class TestJumpboxv3UpdateTenantRequest(unittest.TestCase):
         if include_optional:
             return Jumpboxv3UpdateTenantRequest(
                 external_metadata = {
-                    'key' : ibm_gdsc_sdk_software.models.tenantuserv3_external_metadata.tenantuserv3ExternalMetadata(
+                    'key' : ibm_gdsc_sdk_saas.models.tenantuserv3_external_metadata.tenantuserv3ExternalMetadata(
                         add_ons = {
-                            'key' : ibm_gdsc_sdk_software.models.tenantuserv3_prometheus.tenantuserv3Prometheus(
+                            'key' : ibm_gdsc_sdk_saas.models.tenantuserv3_prometheus.tenantuserv3Prometheus(
                                 unit = '', 
                                 value = '', )
                             }, 

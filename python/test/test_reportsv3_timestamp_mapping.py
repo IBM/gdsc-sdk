@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_timestamp_mapping import Reportsv3TimestampMapping
+from ibm_gdsc_sdk_saas.models.reportsv3_timestamp_mapping import Reportsv3TimestampMapping
 
 class TestReportsv3TimestampMapping(unittest.TestCase):
     """Reportsv3TimestampMapping unit test stubs"""

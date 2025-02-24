@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticsenginev3_severity_level import Riskanalyticsenginev3SeverityLevel
+from ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_severity_level import Riskanalyticsenginev3SeverityLevel
 
 class TestRiskanalyticsenginev3SeverityLevel(unittest.TestCase):
     """Riskanalyticsenginev3SeverityLevel unit test stubs"""

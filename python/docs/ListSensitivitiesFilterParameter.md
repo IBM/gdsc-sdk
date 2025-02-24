@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.list_sensitivities_filter_parameter import ListSensitivitiesFilterParameter
+from ibm_gdsc_sdk_saas.models.list_sensitivities_filter_parameter import ListSensitivitiesFilterParameter
 
 # TODO update the JSON string below
 json = "{}"

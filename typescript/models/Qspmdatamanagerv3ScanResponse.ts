@@ -23,7 +23,6 @@ export class Qspmdatamanagerv3ScanResponse {
     'scanPercentageCompletion'?: string;
     'scanRegTs'?: Date;
     'scanStatus'?: string;
-    'scanType'?: string;
     'userEmail'?: string;
 
     static readonly discriminator: string | undefined = undefined;
@@ -86,12 +85,6 @@ export class Qspmdatamanagerv3ScanResponse {
         {
             "name": "scanStatus",
             "baseName": "scan_status",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "scanType",
-            "baseName": "scan_type",
             "type": "string",
             "format": ""
         },

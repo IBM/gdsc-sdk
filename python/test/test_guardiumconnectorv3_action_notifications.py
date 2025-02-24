@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_action_notifications import Guardiumconnectorv3ActionNotifications
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_action_notifications import Guardiumconnectorv3ActionNotifications
 
 class TestGuardiumconnectorv3ActionNotifications(unittest.TestCase):
     """Guardiumconnectorv3ActionNotifications unit test stubs"""

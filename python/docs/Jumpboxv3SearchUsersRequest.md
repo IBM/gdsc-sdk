@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.jumpboxv3_search_users_request import Jumpboxv3SearchUsersRequest
+from ibm_gdsc_sdk_saas.models.jumpboxv3_search_users_request import Jumpboxv3SearchUsersRequest
 
 # TODO update the JSON string below
 json = "{}"

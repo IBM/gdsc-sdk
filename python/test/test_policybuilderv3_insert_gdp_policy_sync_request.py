@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_insert_gdp_policy_sync_request import Policybuilderv3InsertGdpPolicySyncRequest
+from ibm_gdsc_sdk_saas.models.policybuilderv3_insert_gdp_policy_sync_request import Policybuilderv3InsertGdpPolicySyncRequest
 
 class TestPolicybuilderv3InsertGdpPolicySyncRequest(unittest.TestCase):
     """Policybuilderv3InsertGdpPolicySyncRequest unit test stubs"""
@@ -36,7 +36,7 @@ class TestPolicybuilderv3InsertGdpPolicySyncRequest(unittest.TestCase):
         if include_optional:
             return Policybuilderv3InsertGdpPolicySyncRequest(
                 gdp_policies = [
-                    ibm_gdsc_sdk_software.models.policybuilderv3_gdp_sync_entry.policybuilderv3GDPSyncEntry(
+                    ibm_gdsc_sdk_saas.models.policybuilderv3_gdp_sync_entry.policybuilderv3GDPSyncEntry(
                         cm_name = '', 
                         policy_name = '', 
                         policy_ui_name = '', )

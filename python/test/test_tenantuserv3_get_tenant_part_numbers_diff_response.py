@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.tenantuserv3_get_tenant_part_numbers_diff_response import Tenantuserv3GetTenantPartNumbersDiffResponse
+from ibm_gdsc_sdk_saas.models.tenantuserv3_get_tenant_part_numbers_diff_response import Tenantuserv3GetTenantPartNumbersDiffResponse
 
 class TestTenantuserv3GetTenantPartNumbersDiffResponse(unittest.TestCase):
     """Tenantuserv3GetTenantPartNumbersDiffResponse unit test stubs"""
@@ -37,7 +37,7 @@ class TestTenantuserv3GetTenantPartNumbersDiffResponse(unittest.TestCase):
             return Tenantuserv3GetTenantPartNumbersDiffResponse(
                 are_part_numbers_same = True,
                 tenant_capability_part_numbers_changes = {
-                    'key' : ibm_gdsc_sdk_software.models.tenant_capability_part_numbers_message_to_contain_what_part_number_are_being_removed/added.TenantCapabilityPartNumbers message to contain what part number are being removed/added(
+                    'key' : ibm_gdsc_sdk_saas.models.tenant_capability_part_numbers_message_to_contain_what_part_number_are_being_removed/added.TenantCapabilityPartNumbers message to contain what part number are being removed/added(
                         added_part_numbers = [
                             ''
                             ], 

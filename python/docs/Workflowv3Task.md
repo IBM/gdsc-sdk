@@ -32,7 +32,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.workflowv3_task import Workflowv3Task
+from ibm_gdsc_sdk_saas.models.workflowv3_task import Workflowv3Task
 
 # TODO update the JSON string below
 json = "{}"

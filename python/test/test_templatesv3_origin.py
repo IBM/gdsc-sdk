@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.templatesv3_origin import Templatesv3Origin
+from ibm_gdsc_sdk_saas.models.templatesv3_origin import Templatesv3Origin
 
 class TestTemplatesv3Origin(unittest.TestCase):
     """Templatesv3Origin unit test stubs"""

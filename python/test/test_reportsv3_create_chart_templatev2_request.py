@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_create_chart_templatev2_request import Reportsv3CreateChartTemplatev2Request
+from ibm_gdsc_sdk_saas.models.reportsv3_create_chart_templatev2_request import Reportsv3CreateChartTemplatev2Request
 
 class TestReportsv3CreateChartTemplatev2Request(unittest.TestCase):
     """Reportsv3CreateChartTemplatev2Request unit test stubs"""

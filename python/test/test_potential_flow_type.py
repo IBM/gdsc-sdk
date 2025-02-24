@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.potential_flow_type import PotentialFlowType
+from ibm_gdsc_sdk_saas.models.potential_flow_type import PotentialFlowType
 
 class TestPotentialFlowType(unittest.TestCase):
     """PotentialFlowType unit test stubs"""

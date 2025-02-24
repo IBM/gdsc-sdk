@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.groupbuilderv3_get_group_members_request import Groupbuilderv3GetGroupMembersRequest
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_get_group_members_request import Groupbuilderv3GetGroupMembersRequest
 
 # TODO update the JSON string below
 json = "{}"

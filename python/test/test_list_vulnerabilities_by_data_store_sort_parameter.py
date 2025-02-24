@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.list_vulnerabilities_by_data_store_sort_parameter import ListVulnerabilitiesByDataStoreSortParameter
+from ibm_gdsc_sdk_saas.models.list_vulnerabilities_by_data_store_sort_parameter import ListVulnerabilitiesByDataStoreSortParameter
 
 class TestListVulnerabilitiesByDataStoreSortParameter(unittest.TestCase):
     """ListVulnerabilitiesByDataStoreSortParameter unit test stubs"""

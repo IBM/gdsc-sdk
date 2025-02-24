@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_save_update_filter_template_response import Assetsv3SaveUpdateFilterTemplateResponse
+from ibm_gdsc_sdk_saas.models.assetsv3_save_update_filter_template_response import Assetsv3SaveUpdateFilterTemplateResponse
 
 class TestAssetsv3SaveUpdateFilterTemplateResponse(unittest.TestCase):
     """Assetsv3SaveUpdateFilterTemplateResponse unit test stubs"""

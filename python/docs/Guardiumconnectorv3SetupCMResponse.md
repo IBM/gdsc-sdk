@@ -1,6 +1,6 @@
 # Guardiumconnectorv3SetupCMResponse
 
-SetupCMResponse is the response after registering a GDP Central manager to Guardium.
+SetupCMResponse is the response after registering a GDP Central manager to GDSC.
 
 ## Properties
 
@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_setup_cm_response import Guardiumconnectorv3SetupCMResponse
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_setup_cm_response import Guardiumconnectorv3SetupCMResponse
 
 # TODO update the JSON string below
 json = "{}"

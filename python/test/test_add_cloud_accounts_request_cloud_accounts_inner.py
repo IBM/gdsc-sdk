@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.add_cloud_accounts_request_cloud_accounts_inner import AddCloudAccountsRequestCloudAccountsInner
+from ibm_gdsc_sdk_saas.models.add_cloud_accounts_request_cloud_accounts_inner import AddCloudAccountsRequestCloudAccountsInner
 
 class TestAddCloudAccountsRequestCloudAccountsInner(unittest.TestCase):
     """AddCloudAccountsRequestCloudAccountsInner unit test stubs"""

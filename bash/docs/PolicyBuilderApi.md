@@ -28,7 +28,7 @@ Description: Get all the receivers associated with actions.
 Description: Return a list of rule parameters and actions to the caller.
 [**policyBuilderInsertGdpPolicy**](PolicyBuilderApi.md#policyBuilderInsertGdpPolicy) | **POST** /api/v3/policies/sync_entry | Summary: Insert GDP policy sync entry
 Description: Inserts GDP policy&#39;s name into sync collection
-[**policyBuilderInsertGdpPolicyMetaData**](PolicyBuilderApi.md#policyBuilderInsertGdpPolicyMetaData) | **POST** /api/v3/central_managers/{central_manager_id}/policies/policy_metadata | Summary: Insert gdp policy summaries
+[**policyBuilderInsertGdpPolicyMetaData**](PolicyBuilderApi.md#policyBuilderInsertGdpPolicyMetaData) | **POST** /api/v3/central_managers/{central_manager_id}/policies/policy_metadata | Summary: Insert GDP policy summaries
 Description: Inserts GDP&#39;s CM&#39;s policy summary information into mogodb. (This API is called from GDP only)
 [**policyBuilderInstallPolicies**](PolicyBuilderApi.md#policyBuilderInstallPolicies) | **PUT** /api/v3/policies/install | Summary: Install policies
 Description: Activate Policies request performs activations.
@@ -446,7 +446,7 @@ Name | Type | Description  | Notes
 
 ## policyBuilderInsertGdpPolicyMetaData
 
-Summary: Insert gdp policy summaries
+Summary: Insert GDP policy summaries
 Description: Inserts GDP's CM's policy summary information into mogodb. (This API is called from GDP only)
 
 ### Example

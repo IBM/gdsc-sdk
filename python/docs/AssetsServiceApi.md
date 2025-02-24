@@ -1,4 +1,4 @@
-# ibm_gdsc_sdk_software.AssetsServiceApi
+# ibm_gdsc_sdk_saas.AssetsServiceApi
 
 All URIs are relative to *http://localhost*
 
@@ -44,15 +44,15 @@ AssetIngestion - Asset Ingestion Api to ingest assets from different application
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.assetsv3_asset_ingestion_request import Assetsv3AssetIngestionRequest
-from ibm_gdsc_sdk_software.models.assetsv3_asset_ingestion_response import Assetsv3AssetIngestionResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.assetsv3_asset_ingestion_request import Assetsv3AssetIngestionRequest
+from ibm_gdsc_sdk_saas.models.assetsv3_asset_ingestion_response import Assetsv3AssetIngestionResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -62,7 +62,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -74,10 +74,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AssetsServiceApi(api_client)
-    assetsv3_asset_ingestion_request = ibm_gdsc_sdk_software.Assetsv3AssetIngestionRequest() # Assetsv3AssetIngestionRequest | 
+    api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
+    assetsv3_asset_ingestion_request = ibm_gdsc_sdk_saas.Assetsv3AssetIngestionRequest() # Assetsv3AssetIngestionRequest | 
 
     try:
         # AssetIngestion - Asset Ingestion Api to ingest assets from different applications including asset extensibility assets.
@@ -130,14 +130,14 @@ AssetIngestionManualTrigger - Manual trigger for Scheduled Asset Ingestion of da
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.assetsv3_asset_ingestion_response import Assetsv3AssetIngestionResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.assetsv3_asset_ingestion_response import Assetsv3AssetIngestionResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -147,7 +147,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -159,9 +159,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AssetsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
     body = None # object | 
 
     try:
@@ -215,14 +215,14 @@ ClonePolicy - Clone a policy.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.assetsv3_clone_policy_request import Assetsv3ClonePolicyRequest
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.assetsv3_clone_policy_request import Assetsv3ClonePolicyRequest
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -232,7 +232,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -244,11 +244,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AssetsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
     policy_id = 'policy_id_example' # str | Policy id that needs to be cloned.
-    assetsv3_clone_policy_request = ibm_gdsc_sdk_software.Assetsv3ClonePolicyRequest() # Assetsv3ClonePolicyRequest | 
+    assetsv3_clone_policy_request = ibm_gdsc_sdk_saas.Assetsv3ClonePolicyRequest() # Assetsv3ClonePolicyRequest | 
 
     try:
         # ClonePolicy - Clone a policy.
@@ -302,15 +302,15 @@ CreateUpdatePolicy - Create/update new Policy.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.assetsv3_create_update_policy_request import Assetsv3CreateUpdatePolicyRequest
-from ibm_gdsc_sdk_software.models.assetsv3_create_update_policy_response import Assetsv3CreateUpdatePolicyResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.assetsv3_create_update_policy_request import Assetsv3CreateUpdatePolicyRequest
+from ibm_gdsc_sdk_saas.models.assetsv3_create_update_policy_response import Assetsv3CreateUpdatePolicyResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -320,7 +320,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -332,10 +332,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AssetsServiceApi(api_client)
-    assetsv3_create_update_policy_request = ibm_gdsc_sdk_software.Assetsv3CreateUpdatePolicyRequest() # Assetsv3CreateUpdatePolicyRequest | 
+    api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
+    assetsv3_create_update_policy_request = ibm_gdsc_sdk_saas.Assetsv3CreateUpdatePolicyRequest() # Assetsv3CreateUpdatePolicyRequest | 
 
     try:
         # CreateUpdatePolicy - Create/update new Policy.
@@ -388,14 +388,14 @@ DeleteFilterTemplateForAssets - Deleting a template using TemplateID in manage a
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.assetsv3_asset_filter_template_request import Assetsv3AssetFilterTemplateRequest
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.assetsv3_asset_filter_template_request import Assetsv3AssetFilterTemplateRequest
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -405,7 +405,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -417,11 +417,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AssetsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
     template_id = 'template_id_example' # str | template id to be deleted
-    assetsv3_asset_filter_template_request = ibm_gdsc_sdk_software.Assetsv3AssetFilterTemplateRequest() # Assetsv3AssetFilterTemplateRequest | 
+    assetsv3_asset_filter_template_request = ibm_gdsc_sdk_saas.Assetsv3AssetFilterTemplateRequest() # Assetsv3AssetFilterTemplateRequest | 
 
     try:
         # DeleteFilterTemplateForAssets - Deleting a template using TemplateID in manage assets.
@@ -475,13 +475,13 @@ DeletePolicies - Delete Policy returns response code and message.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -491,7 +491,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -503,9 +503,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AssetsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
     policy_ids = ['policy_ids_example'] # List[str] | Policy ids. (optional)
 
     try:
@@ -559,15 +559,15 @@ FetchAssetChangeLog - Fetch the logs for any actions performed on assets.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.assetsv3_fetch_asset_change_log_request import Assetsv3FetchAssetChangeLogRequest
-from ibm_gdsc_sdk_software.models.assetsv3_fetch_asset_change_log_response import Assetsv3FetchAssetChangeLogResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.assetsv3_fetch_asset_change_log_request import Assetsv3FetchAssetChangeLogRequest
+from ibm_gdsc_sdk_saas.models.assetsv3_fetch_asset_change_log_response import Assetsv3FetchAssetChangeLogResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -577,7 +577,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -589,10 +589,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AssetsServiceApi(api_client)
-    assetsv3_fetch_asset_change_log_request = ibm_gdsc_sdk_software.Assetsv3FetchAssetChangeLogRequest() # Assetsv3FetchAssetChangeLogRequest | 
+    api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
+    assetsv3_fetch_asset_change_log_request = ibm_gdsc_sdk_saas.Assetsv3FetchAssetChangeLogRequest() # Assetsv3FetchAssetChangeLogRequest | 
 
     try:
         # FetchAssetChangeLog - Fetch the logs for any actions performed on assets.
@@ -645,14 +645,14 @@ FetchAssetDashboard - Gets Filter Templates for Dshboard Widgets.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.assetsv3_fetch_asset_dashboard_response import Assetsv3FetchAssetDashboardResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.assetsv3_fetch_asset_dashboard_response import Assetsv3FetchAssetDashboardResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -662,7 +662,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -674,9 +674,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AssetsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
     widget_type = 'widget_type_example' # str | ID of the Dashboard Widget
     date_range_start = 'date_range_start_example' # str | start of date range for ui widget. (optional)
     date_range_end = 'date_range_end_example' # str | end of date range for ui widget. (optional)
@@ -752,15 +752,15 @@ FetchAssetList - Asset Fetch Api .
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.assetsv3_fetch_asset_list_request import Assetsv3FetchAssetListRequest
-from ibm_gdsc_sdk_software.models.assetsv3_fetch_asset_list_response import Assetsv3FetchAssetListResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.assetsv3_fetch_asset_list_request import Assetsv3FetchAssetListRequest
+from ibm_gdsc_sdk_saas.models.assetsv3_fetch_asset_list_response import Assetsv3FetchAssetListResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -770,7 +770,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -782,10 +782,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AssetsServiceApi(api_client)
-    assetsv3_fetch_asset_list_request = ibm_gdsc_sdk_software.Assetsv3FetchAssetListRequest() # Assetsv3FetchAssetListRequest | 
+    api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
+    assetsv3_fetch_asset_list_request = ibm_gdsc_sdk_saas.Assetsv3FetchAssetListRequest() # Assetsv3FetchAssetListRequest | 
 
     try:
         # FetchAssetList - Asset Fetch Api .
@@ -838,14 +838,14 @@ FetchAssetsForMergeSplit : Fetch assets for Merge and Split.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.assetsv3_fetch_assets_for_merge_split_response import Assetsv3FetchAssetsForMergeSplitResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.assetsv3_fetch_assets_for_merge_split_response import Assetsv3FetchAssetsForMergeSplitResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -855,7 +855,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -867,9 +867,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AssetsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
     asset_id = 'asset_id_example' # str | Asset grouper Id. (optional)
     page_number = 56 # int | Page number. (optional)
     page_size = 56 # int | Page size. (optional)
@@ -931,14 +931,14 @@ FindAssetName - Checks if the given Asset Name has already been assigned to an a
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.assetsv3_find_asset_name_response import Assetsv3FindAssetNameResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.assetsv3_find_asset_name_response import Assetsv3FindAssetNameResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -948,7 +948,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -960,9 +960,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AssetsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
     asset_name = 'asset_name_example' # str | Name of asset. (optional)
 
     try:
@@ -1016,14 +1016,14 @@ GetAssetOverview - Get asset overview widgets data for a particular asset.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.assetsv3_asset_overview_response import Assetsv3AssetOverviewResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.assetsv3_asset_overview_response import Assetsv3AssetOverviewResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1033,7 +1033,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1045,9 +1045,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AssetsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
     asset_id = 'asset_id_example' # str | Asset grouper Id. (optional)
     page_number = 56 # int | Page number. (optional)
     size = 56 # int | Page size. (optional)
@@ -1115,15 +1115,15 @@ GetAssetTopology- Get list of topology for a parent asset.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.assetsv3_get_asset_topology_request import Assetsv3GetAssetTopologyRequest
-from ibm_gdsc_sdk_software.models.assetsv3_get_asset_topology_response import Assetsv3GetAssetTopologyResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.assetsv3_get_asset_topology_request import Assetsv3GetAssetTopologyRequest
+from ibm_gdsc_sdk_saas.models.assetsv3_get_asset_topology_response import Assetsv3GetAssetTopologyResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1133,7 +1133,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1145,10 +1145,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AssetsServiceApi(api_client)
-    assetsv3_get_asset_topology_request = ibm_gdsc_sdk_software.Assetsv3GetAssetTopologyRequest() # Assetsv3GetAssetTopologyRequest | 
+    api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
+    assetsv3_get_asset_topology_request = ibm_gdsc_sdk_saas.Assetsv3GetAssetTopologyRequest() # Assetsv3GetAssetTopologyRequest | 
 
     try:
         # GetAssetTopology- Get list of topology for a parent asset.
@@ -1201,14 +1201,14 @@ GetFilterTemplateForAssets - Get list of filters query templates for manage asse
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.assetsv3_get_filter_template_response import Assetsv3GetFilterTemplateResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.assetsv3_get_filter_template_response import Assetsv3GetFilterTemplateResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1218,7 +1218,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1230,9 +1230,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AssetsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
     template_id = 'template_id_example' # str | template id to be deleted. (optional)
 
     try:
@@ -1286,14 +1286,14 @@ GetFiltersForAssets - Get a list of filters category and sub category with all d
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.assetsv3_get_filters_data_response import Assetsv3GetFiltersDataResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.assetsv3_get_filters_data_response import Assetsv3GetFiltersDataResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1303,7 +1303,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1315,9 +1315,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AssetsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
 
     try:
         # GetFiltersForAssets - Get a list of filters category and sub category with all data.
@@ -1367,14 +1367,14 @@ ListPolicy - List all policies.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.assetsv3_list_policy_response import Assetsv3ListPolicyResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.assetsv3_list_policy_response import Assetsv3ListPolicyResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1384,7 +1384,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1396,9 +1396,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AssetsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
 
     try:
         # ListPolicy - List all policies.
@@ -1448,14 +1448,14 @@ ListRule - List all rules for a policy.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.assetsv3_list_rule_response import Assetsv3ListRuleResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.assetsv3_list_rule_response import Assetsv3ListRuleResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1465,7 +1465,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1477,9 +1477,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AssetsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
     policy_id = 'policy_id_example' # str | Policy ID
 
     try:
@@ -1533,14 +1533,14 @@ ListTagDomains - Get Tag categories by request parameters .
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.assetsv3_list_tag_domains_response import Assetsv3ListTagDomainsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.assetsv3_list_tag_domains_response import Assetsv3ListTagDomainsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1550,7 +1550,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1562,9 +1562,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AssetsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
     dom_grouper = 'dom_grouper_example' # str | Optional: dom_grouper required if we want to fetch domains based on the group. (optional)
     purpose = 'purpose_example' # str | Optional: purpose required if we want to fetch domains based on the purpose. (optional)
     need_tag = True # bool | Optional: If we need Tag  based on the Domains. (optional)
@@ -1622,14 +1622,14 @@ ListTags - Get Tags for Manage Tags listing screen .
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.assetsv3_list_tags_response import Assetsv3ListTagsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.assetsv3_list_tags_response import Assetsv3ListTagsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1639,7 +1639,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1651,9 +1651,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AssetsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
     asset_id = ['asset_id_example'] # List[str] | asset id - Asset ID. (optional)
 
     try:
@@ -1707,14 +1707,14 @@ MergeOrSplitAssets - Merge or split the selected assets.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.assetsv3_merge_or_split_assets_request import Assetsv3MergeOrSplitAssetsRequest
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.assetsv3_merge_or_split_assets_request import Assetsv3MergeOrSplitAssetsRequest
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1724,7 +1724,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1736,10 +1736,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AssetsServiceApi(api_client)
-    assetsv3_merge_or_split_assets_request = ibm_gdsc_sdk_software.Assetsv3MergeOrSplitAssetsRequest() # Assetsv3MergeOrSplitAssetsRequest | 
+    api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
+    assetsv3_merge_or_split_assets_request = ibm_gdsc_sdk_saas.Assetsv3MergeOrSplitAssetsRequest() # Assetsv3MergeOrSplitAssetsRequest | 
 
     try:
         # MergeOrSplitAssets - Merge or split the selected assets.
@@ -1792,14 +1792,14 @@ SaveAssignedTags - Save Assigned Tags to TAG_DSDEF_MAP table.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.assetsv3_save_assigned_tags_request import Assetsv3SaveAssignedTagsRequest
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.assetsv3_save_assigned_tags_request import Assetsv3SaveAssignedTagsRequest
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1809,7 +1809,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1821,10 +1821,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AssetsServiceApi(api_client)
-    assetsv3_save_assigned_tags_request = ibm_gdsc_sdk_software.Assetsv3SaveAssignedTagsRequest() # Assetsv3SaveAssignedTagsRequest | 
+    api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
+    assetsv3_save_assigned_tags_request = ibm_gdsc_sdk_saas.Assetsv3SaveAssignedTagsRequest() # Assetsv3SaveAssignedTagsRequest | 
 
     try:
         # SaveAssignedTags - Save Assigned Tags to TAG_DSDEF_MAP table.
@@ -1877,14 +1877,14 @@ SaveTagConceptData - creates a custom tag
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.assetsv3_save_tag_concept_data_request import Assetsv3SaveTagConceptDataRequest
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.assetsv3_save_tag_concept_data_request import Assetsv3SaveTagConceptDataRequest
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1894,7 +1894,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1906,10 +1906,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AssetsServiceApi(api_client)
-    assetsv3_save_tag_concept_data_request = ibm_gdsc_sdk_software.Assetsv3SaveTagConceptDataRequest() # Assetsv3SaveTagConceptDataRequest | 
+    api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
+    assetsv3_save_tag_concept_data_request = ibm_gdsc_sdk_saas.Assetsv3SaveTagConceptDataRequest() # Assetsv3SaveTagConceptDataRequest | 
 
     try:
         # SaveTagConceptData - creates a custom tag
@@ -1962,14 +1962,14 @@ SaveTagDomainData - creates a custom category to be assigned to a tag
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.assetsv3_save_tag_domain_data_request import Assetsv3SaveTagDomainDataRequest
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.assetsv3_save_tag_domain_data_request import Assetsv3SaveTagDomainDataRequest
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1979,7 +1979,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1991,10 +1991,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AssetsServiceApi(api_client)
-    assetsv3_save_tag_domain_data_request = ibm_gdsc_sdk_software.Assetsv3SaveTagDomainDataRequest() # Assetsv3SaveTagDomainDataRequest | 
+    api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
+    assetsv3_save_tag_domain_data_request = ibm_gdsc_sdk_saas.Assetsv3SaveTagDomainDataRequest() # Assetsv3SaveTagDomainDataRequest | 
 
     try:
         # SaveTagDomainData - creates a custom category to be assigned to a tag
@@ -2047,15 +2047,15 @@ SaveUpdateFilterTemplateForAssets - Save/Update a filters query to use as templa
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.assetsv3_save_update_filter_template_request import Assetsv3SaveUpdateFilterTemplateRequest
-from ibm_gdsc_sdk_software.models.assetsv3_save_update_filter_template_response import Assetsv3SaveUpdateFilterTemplateResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.assetsv3_save_update_filter_template_request import Assetsv3SaveUpdateFilterTemplateRequest
+from ibm_gdsc_sdk_saas.models.assetsv3_save_update_filter_template_response import Assetsv3SaveUpdateFilterTemplateResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2065,7 +2065,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -2077,10 +2077,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AssetsServiceApi(api_client)
-    assetsv3_save_update_filter_template_request = ibm_gdsc_sdk_software.Assetsv3SaveUpdateFilterTemplateRequest() # Assetsv3SaveUpdateFilterTemplateRequest | 
+    api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
+    assetsv3_save_update_filter_template_request = ibm_gdsc_sdk_saas.Assetsv3SaveUpdateFilterTemplateRequest() # Assetsv3SaveUpdateFilterTemplateRequest | 
 
     try:
         # SaveUpdateFilterTemplateForAssets - Save/Update a filters query to use as template in manage assets along with reordering of template list.
@@ -2133,14 +2133,14 @@ SetBannerState - Set banner state for asset inventory page.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.assetsv3_set_banner_state_request import Assetsv3SetBannerStateRequest
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.assetsv3_set_banner_state_request import Assetsv3SetBannerStateRequest
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2150,7 +2150,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -2162,10 +2162,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AssetsServiceApi(api_client)
-    assetsv3_set_banner_state_request = ibm_gdsc_sdk_software.Assetsv3SetBannerStateRequest() # Assetsv3SetBannerStateRequest | 
+    api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
+    assetsv3_set_banner_state_request = ibm_gdsc_sdk_saas.Assetsv3SetBannerStateRequest() # Assetsv3SetBannerStateRequest | 
 
     try:
         # SetBannerState - Set banner state for asset inventory page.
@@ -2218,14 +2218,14 @@ UpdateAssetName - Udates the name of the asset as given by the user.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.assetsv3_update_asset_name_request import Assetsv3UpdateAssetNameRequest
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.assetsv3_update_asset_name_request import Assetsv3UpdateAssetNameRequest
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2235,7 +2235,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -2247,10 +2247,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AssetsServiceApi(api_client)
-    assetsv3_update_asset_name_request = ibm_gdsc_sdk_software.Assetsv3UpdateAssetNameRequest() # Assetsv3UpdateAssetNameRequest | 
+    api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
+    assetsv3_update_asset_name_request = ibm_gdsc_sdk_saas.Assetsv3UpdateAssetNameRequest() # Assetsv3UpdateAssetNameRequest | 
 
     try:
         # UpdateAssetName - Udates the name of the asset as given by the user.
@@ -2303,14 +2303,14 @@ UpdatePolicy - Update existing Policy status.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.assetsv3_update_policy_request import Assetsv3UpdatePolicyRequest
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.assetsv3_update_policy_request import Assetsv3UpdatePolicyRequest
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -2320,7 +2320,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -2332,10 +2332,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.AssetsServiceApi(api_client)
-    assetsv3_update_policy_request = ibm_gdsc_sdk_software.Assetsv3UpdatePolicyRequest() # Assetsv3UpdatePolicyRequest | 
+    api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
+    assetsv3_update_policy_request = ibm_gdsc_sdk_saas.Assetsv3UpdatePolicyRequest() # Assetsv3UpdatePolicyRequest | 
 
     try:
         # UpdatePolicy - Update existing Policy status.

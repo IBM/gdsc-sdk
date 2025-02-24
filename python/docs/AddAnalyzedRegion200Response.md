@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.add_analyzed_region200_response import AddAnalyzedRegion200Response
+from ibm_gdsc_sdk_saas.models.add_analyzed_region200_response import AddAnalyzedRegion200Response
 
 # TODO update the JSON string below
 json = "{}"

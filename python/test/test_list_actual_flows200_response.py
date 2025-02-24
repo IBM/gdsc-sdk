@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.list_actual_flows200_response import ListActualFlows200Response
+from ibm_gdsc_sdk_saas.models.list_actual_flows200_response import ListActualFlows200Response
 
 class TestListActualFlows200Response(unittest.TestCase):
     """ListActualFlows200Response unit test stubs"""
@@ -36,19 +36,19 @@ class TestListActualFlows200Response(unittest.TestCase):
         if include_optional:
             return ListActualFlows200Response(
                 results = [
-                    ibm_gdsc_sdk_software.models.actual_flow.ActualFlow(
+                    ibm_gdsc_sdk_saas.models.actual_flow.ActualFlow(
                         id = 'aaede660-6090-479a-b54f-12345678910', 
-                        source = ibm_gdsc_sdk_software.models.flow_node.FlowNode(
+                        source = ibm_gdsc_sdk_saas.models.flow_node.FlowNode(
                             id = 'arn:aws:ec2:us-east-1:1511931112324:instance/i-097079e7b15331234', 
                             name = 'instance/i-097079e7b15331234', 
                             type = 'ec2-instance', 
                             cloud_account_id = '151193111234', 
                             cloud_region = 'us-east-1', 
                             cloud_provider = 'aws', 
-                            resource = ibm_gdsc_sdk_software.models.flow_node_resource.FlowNode_resource(
+                            resource = ibm_gdsc_sdk_saas.models.flow_node_resource.FlowNode_resource(
                                 name = 'polar-corplex', ), 
                             vendor_id = 'abcd1234-ab12-ab12-ab12-1234123abcabc', ), 
-                        destination = ibm_gdsc_sdk_software.models.flow_node.FlowNode(
+                        destination = ibm_gdsc_sdk_saas.models.flow_node.FlowNode(
                             id = 'arn:aws:ec2:us-east-1:1511931112324:instance/i-097079e7b15331234', 
                             name = 'instance/i-097079e7b15331234', 
                             type = 'ec2-instance', 
@@ -67,19 +67,19 @@ class TestListActualFlows200Response(unittest.TestCase):
         else:
             return ListActualFlows200Response(
                 results = [
-                    ibm_gdsc_sdk_software.models.actual_flow.ActualFlow(
+                    ibm_gdsc_sdk_saas.models.actual_flow.ActualFlow(
                         id = 'aaede660-6090-479a-b54f-12345678910', 
-                        source = ibm_gdsc_sdk_software.models.flow_node.FlowNode(
+                        source = ibm_gdsc_sdk_saas.models.flow_node.FlowNode(
                             id = 'arn:aws:ec2:us-east-1:1511931112324:instance/i-097079e7b15331234', 
                             name = 'instance/i-097079e7b15331234', 
                             type = 'ec2-instance', 
                             cloud_account_id = '151193111234', 
                             cloud_region = 'us-east-1', 
                             cloud_provider = 'aws', 
-                            resource = ibm_gdsc_sdk_software.models.flow_node_resource.FlowNode_resource(
+                            resource = ibm_gdsc_sdk_saas.models.flow_node_resource.FlowNode_resource(
                                 name = 'polar-corplex', ), 
                             vendor_id = 'abcd1234-ab12-ab12-ab12-1234123abcabc', ), 
-                        destination = ibm_gdsc_sdk_software.models.flow_node.FlowNode(
+                        destination = ibm_gdsc_sdk_saas.models.flow_node.FlowNode(
                             id = 'arn:aws:ec2:us-east-1:1511931112324:instance/i-097079e7b15331234', 
                             name = 'instance/i-097079e7b15331234', 
                             type = 'ec2-instance', 

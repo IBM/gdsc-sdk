@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.add_analyzed_region200_response import AddAnalyzedRegion200Response
+from ibm_gdsc_sdk_saas.models.add_analyzed_region200_response import AddAnalyzedRegion200Response
 
 class TestAddAnalyzedRegion200Response(unittest.TestCase):
     """AddAnalyzedRegion200Response unit test stubs"""
@@ -42,7 +42,7 @@ class TestAddAnalyzedRegion200Response(unittest.TestCase):
                 vpc_id = '',
                 availability_zone = '',
                 installation_script = '',
-                validation_results = ibm_gdsc_sdk_software.models.analyzed_region_validation_results.AnalyzedRegionValidationResults(
+                validation_results = ibm_gdsc_sdk_saas.models.analyzed_region_validation_results.AnalyzedRegionValidationResults(
                     is_valid = True, 
                     error = 'Could not locate any public subnet in this region', 
                     status_code = 202, 

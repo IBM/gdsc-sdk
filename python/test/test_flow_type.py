@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.flow_type import FlowType
+from ibm_gdsc_sdk_saas.models.flow_type import FlowType
 
 class TestFlowType(unittest.TestCase):
     """FlowType unit test stubs"""

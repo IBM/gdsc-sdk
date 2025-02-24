@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.workflowv3_entity import Workflowv3Entity
+from ibm_gdsc_sdk_saas.models.workflowv3_entity import Workflowv3Entity
 
 class TestWorkflowv3Entity(unittest.TestCase):
     """Workflowv3Entity unit test stubs"""

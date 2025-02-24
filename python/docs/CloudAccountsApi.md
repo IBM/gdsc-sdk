@@ -1,4 +1,4 @@
-# ibm_gdsc_sdk_software.CloudAccountsApi
+# ibm_gdsc_sdk_saas.CloudAccountsApi
 
 All URIs are relative to *http://localhost*
 
@@ -39,15 +39,15 @@ Install a new analyzer in the specified region to enable data classification in 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.add_analyzed_region200_response import AddAnalyzedRegion200Response
-from ibm_gdsc_sdk_software.models.add_analyzed_region_request import AddAnalyzedRegionRequest
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.add_analyzed_region200_response import AddAnalyzedRegion200Response
+from ibm_gdsc_sdk_saas.models.add_analyzed_region_request import AddAnalyzedRegionRequest
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -63,10 +63,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.CloudAccountsApi(api_client)
-    add_analyzed_region_request = ibm_gdsc_sdk_software.AddAnalyzedRegionRequest() # AddAnalyzedRegionRequest | 
+    api_instance = ibm_gdsc_sdk_saas.CloudAccountsApi(api_client)
+    add_analyzed_region_request = ibm_gdsc_sdk_saas.AddAnalyzedRegionRequest() # AddAnalyzedRegionRequest | 
 
     try:
         # Add a new region for data classification
@@ -120,15 +120,15 @@ You can add a single or multiple cloud account connections from the same cloud p
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.add_cloud_accounts200_response import AddCloudAccounts200Response
-from ibm_gdsc_sdk_software.models.add_cloud_accounts_request import AddCloudAccountsRequest
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.add_cloud_accounts200_response import AddCloudAccounts200Response
+from ibm_gdsc_sdk_saas.models.add_cloud_accounts_request import AddCloudAccountsRequest
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -144,10 +144,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.CloudAccountsApi(api_client)
-    add_cloud_accounts_request = ibm_gdsc_sdk_software.AddCloudAccountsRequest() # AddCloudAccountsRequest | 
+    api_instance = ibm_gdsc_sdk_saas.CloudAccountsApi(api_client)
+    add_cloud_accounts_request = ibm_gdsc_sdk_saas.AddCloudAccountsRequest() # AddCloudAccountsRequest | 
 
     try:
         # Add cloud account connections to DSPM
@@ -201,14 +201,14 @@ Generate an Atlassian authentication URL for Confluence integration.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.auth_url import AuthUrl
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.auth_url import AuthUrl
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -224,9 +224,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.CloudAccountsApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.CloudAccountsApi(api_client)
 
     try:
         # Generate a Confluence authentication URL
@@ -277,14 +277,14 @@ Generate an Atlassian authentication URL for JIRA integration.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.auth_url import AuthUrl
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.auth_url import AuthUrl
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -300,9 +300,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.CloudAccountsApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.CloudAccountsApi(api_client)
 
     try:
         # Generate a JIRA authentication URL
@@ -353,14 +353,14 @@ Generate azure authorization url.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.auth_url import AuthUrl
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.auth_url import AuthUrl
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -376,9 +376,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.CloudAccountsApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.CloudAccountsApi(api_client)
     tenant_id = 'tenant_id_example' # str | Tenant Id of the new Azure account, GUID format. (optional)
 
     try:
@@ -433,14 +433,14 @@ Generate an administrator consent URL for Microsoft 365 integration.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.auth_url import AuthUrl
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.auth_url import AuthUrl
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -456,9 +456,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.CloudAccountsApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.CloudAccountsApi(api_client)
 
     try:
         # Generate a Microsoft 365 consent URL
@@ -509,14 +509,14 @@ Generate a Slack authentication URL.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.auth_url import AuthUrl
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.auth_url import AuthUrl
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -532,9 +532,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.CloudAccountsApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.CloudAccountsApi(api_client)
 
     try:
         # Generate a Slack authentication URL
@@ -585,15 +585,15 @@ Generate an administrator consent URL for Snowflake integration.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.auth_url import AuthUrl
-from ibm_gdsc_sdk_software.models.client_info import ClientInfo
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.auth_url import AuthUrl
+from ibm_gdsc_sdk_saas.models.client_info import ClientInfo
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -609,10 +609,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.CloudAccountsApi(api_client)
-    client_info = ibm_gdsc_sdk_software.ClientInfo() # ClientInfo | 
+    api_instance = ibm_gdsc_sdk_saas.CloudAccountsApi(api_client)
+    client_info = ibm_gdsc_sdk_saas.ClientInfo() # ClientInfo | 
 
     try:
         # Validate and Generate a Snowflake OAuth URL
@@ -666,15 +666,15 @@ Get the installation status of Guardium DSPM for a region.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.cloud_service_provider import CloudServiceProvider
-from ibm_gdsc_sdk_software.models.get_analyzed_region_status200_response import GetAnalyzedRegionStatus200Response
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.cloud_service_provider import CloudServiceProvider
+from ibm_gdsc_sdk_saas.models.get_analyzed_region_status200_response import GetAnalyzedRegionStatus200Response
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -690,10 +690,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.CloudAccountsApi(api_client)
-    cloud_provider = ibm_gdsc_sdk_software.CloudServiceProvider() # CloudServiceProvider | The cloud provider for the cloud account
+    api_instance = ibm_gdsc_sdk_saas.CloudAccountsApi(api_client)
+    cloud_provider = ibm_gdsc_sdk_saas.CloudServiceProvider() # CloudServiceProvider | The cloud provider for the cloud account
     region = 'europe-west1' # str | The region code
 
     try:
@@ -749,13 +749,13 @@ Get Azure admin consent status.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -771,9 +771,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.CloudAccountsApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.CloudAccountsApi(api_client)
 
     try:
         # Get Azure admin consent status
@@ -824,15 +824,15 @@ Get the installation status of a cloud account.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.cloud_account_installation_status import CloudAccountInstallationStatus
-from ibm_gdsc_sdk_software.models.cloud_service_provider import CloudServiceProvider
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.cloud_account_installation_status import CloudAccountInstallationStatus
+from ibm_gdsc_sdk_saas.models.cloud_service_provider import CloudServiceProvider
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -848,10 +848,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.CloudAccountsApi(api_client)
-    cloud_provider = ibm_gdsc_sdk_software.CloudServiceProvider() # CloudServiceProvider | The cloud provider of the cloud account
+    api_instance = ibm_gdsc_sdk_saas.CloudAccountsApi(api_client)
+    cloud_provider = ibm_gdsc_sdk_saas.CloudServiceProvider() # CloudServiceProvider | The cloud provider of the cloud account
     cloud_account_id = '12345678910' # str | The cloud account identifier
 
     try:
@@ -907,14 +907,14 @@ Get Snowflake Refresh Token Expiry date.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.token_expiry_info import TokenExpiryInfo
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.token_expiry_info import TokenExpiryInfo
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -930,9 +930,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.CloudAccountsApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.CloudAccountsApi(api_client)
     provider_id = 'provider_id_example' # str | The ID of the provider
 
     try:
@@ -987,14 +987,14 @@ Get a list of all the connected cloud accounts monitored by Guardium DSPM.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.linked_accounts import LinkedAccounts
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.linked_accounts import LinkedAccounts
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1010,9 +1010,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.CloudAccountsApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.CloudAccountsApi(api_client)
 
     try:
         # List cloud accounts connected to DSPM
@@ -1063,14 +1063,14 @@ Post cloud account ID connections to be removed from Guardium DSPM.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.service_provider import ServiceProvider
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.service_provider import ServiceProvider
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1086,11 +1086,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.CloudAccountsApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.CloudAccountsApi(api_client)
     account_ids = ['[\"1234567891011\"]'] # List[str] | 
-    service_provider = ibm_gdsc_sdk_software.ServiceProvider() # ServiceProvider | 
+    service_provider = ibm_gdsc_sdk_saas.ServiceProvider() # ServiceProvider | 
 
     try:
         # Post cloud account ID connections to be removed
@@ -1146,15 +1146,15 @@ Post cloud accounts IDs and get instructions to remove the accounts from the clo
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.remove_accounts_instructions200_response import RemoveAccountsInstructions200Response
-from ibm_gdsc_sdk_software.models.service_provider import ServiceProvider
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.remove_accounts_instructions200_response import RemoveAccountsInstructions200Response
+from ibm_gdsc_sdk_saas.models.service_provider import ServiceProvider
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1170,11 +1170,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.CloudAccountsApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.CloudAccountsApi(api_client)
     account_ids = ['[\"1234567891011\"]'] # List[str] | 
-    service_provider = ibm_gdsc_sdk_software.ServiceProvider() # ServiceProvider | 
+    service_provider = ibm_gdsc_sdk_saas.ServiceProvider() # ServiceProvider | 
 
     try:
         # Post cloud account IDs and get instructions to remove the accounts
@@ -1232,14 +1232,14 @@ Retrieve a service account ID to use it for Google Workspace authentication.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.service_account_client_id import ServiceAccountClientId
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.service_account_client_id import ServiceAccountClientId
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1255,9 +1255,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.CloudAccountsApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.CloudAccountsApi(api_client)
 
     try:
         # Get Google Workspace authentication
@@ -1308,14 +1308,14 @@ Generate Snowflake integration Script.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.script import Script
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.script import Script
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1331,9 +1331,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.CloudAccountsApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.CloudAccountsApi(api_client)
 
     try:
         # Generate Snowflake Integration Script
@@ -1384,15 +1384,15 @@ Submit admin email for service account authorization and return service-account 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.service_account_installation_status import ServiceAccountInstallationStatus
-from ibm_gdsc_sdk_software.models.submit_admin_email_params import SubmitAdminEmailParams
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.service_account_installation_status import ServiceAccountInstallationStatus
+from ibm_gdsc_sdk_saas.models.submit_admin_email_params import SubmitAdminEmailParams
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1408,10 +1408,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.CloudAccountsApi(api_client)
-    submit_admin_email_params = ibm_gdsc_sdk_software.SubmitAdminEmailParams() # SubmitAdminEmailParams | 
+    api_instance = ibm_gdsc_sdk_saas.CloudAccountsApi(api_client)
+    submit_admin_email_params = ibm_gdsc_sdk_saas.SubmitAdminEmailParams() # SubmitAdminEmailParams | 
 
     try:
         # Submit email for service account authorization
@@ -1465,15 +1465,15 @@ Submit customer information for Microsoft 365 integration.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.office365_tenant_info import Office365TenantInfo
-from ibm_gdsc_sdk_software.models.tenant_info import TenantInfo
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.office365_tenant_info import Office365TenantInfo
+from ibm_gdsc_sdk_saas.models.tenant_info import TenantInfo
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1489,10 +1489,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.CloudAccountsApi(api_client)
-    tenant_info = ibm_gdsc_sdk_software.TenantInfo() # TenantInfo | 
+    api_instance = ibm_gdsc_sdk_saas.CloudAccountsApi(api_client)
+    tenant_info = ibm_gdsc_sdk_saas.TenantInfo() # TenantInfo | 
 
     try:
         # Submit Microsoft 365 customer information
@@ -1546,14 +1546,14 @@ Submit a Slack authentication code.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.submit_auth_code import SubmitAuthCode
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.submit_auth_code import SubmitAuthCode
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1569,10 +1569,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.CloudAccountsApi(api_client)
-    submit_auth_code = ibm_gdsc_sdk_software.SubmitAuthCode() # SubmitAuthCode | 
+    api_instance = ibm_gdsc_sdk_saas.CloudAccountsApi(api_client)
+    submit_auth_code = ibm_gdsc_sdk_saas.SubmitAuthCode() # SubmitAuthCode | 
 
     try:
         # Submit a Slack authentication code
@@ -1626,14 +1626,14 @@ Storing code that is returned from Snowflake oAuth.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.auth_info import AuthInfo
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.auth_info import AuthInfo
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -1649,10 +1649,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.CloudAccountsApi(api_client)
-    auth_info = ibm_gdsc_sdk_software.AuthInfo() # AuthInfo | 
+    api_instance = ibm_gdsc_sdk_saas.CloudAccountsApi(api_client)
+    auth_info = ibm_gdsc_sdk_saas.AuthInfo() # AuthInfo | 
 
     try:
         # Submit Snowflake oAuth code

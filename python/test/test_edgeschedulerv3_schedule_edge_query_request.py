@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.edgeschedulerv3_schedule_edge_query_request import Edgeschedulerv3ScheduleEdgeQueryRequest
+from ibm_gdsc_sdk_saas.models.edgeschedulerv3_schedule_edge_query_request import Edgeschedulerv3ScheduleEdgeQueryRequest
 
 class TestEdgeschedulerv3ScheduleEdgeQueryRequest(unittest.TestCase):
     """Edgeschedulerv3ScheduleEdgeQueryRequest unit test stubs"""
@@ -35,9 +35,9 @@ class TestEdgeschedulerv3ScheduleEdgeQueryRequest(unittest.TestCase):
         model = Edgeschedulerv3ScheduleEdgeQueryRequest()
         if include_optional:
             return Edgeschedulerv3ScheduleEdgeQueryRequest(
+                edge_id = '',
                 edge_query_end_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 edge_query_start_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
-                edge_id = '',
                 edge_result_report_id = ''
             )
         else:

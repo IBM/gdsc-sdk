@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.qspmpolicymanagerv3_update_ticket_status_response import Qspmpolicymanagerv3UpdateTicketStatusResponse
+from ibm_gdsc_sdk_saas.models.qspmpolicymanagerv3_update_ticket_status_response import Qspmpolicymanagerv3UpdateTicketStatusResponse
 
 class TestQspmpolicymanagerv3UpdateTicketStatusResponse(unittest.TestCase):
     """Qspmpolicymanagerv3UpdateTicketStatusResponse unit test stubs"""

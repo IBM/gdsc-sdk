@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **jobUnderscoretype** | [**Reportsrunnerv3JobType**](Reportsrunnerv3JobType.md) |  | [optional] [default to null]
 **modelUnderscoretype** | [**Reportsv3ModelType**](Reportsv3ModelType.md) |  | [optional] [default to null]
 **offset** | **integer** |  | [optional] [default to null]
+**queryUnderscoreid** | **string** |  | [optional] [default to null]
 **reportUnderscoredefinition** | [**Reportsv3ReportDefinition**](Reportsv3ReportDefinition.md) |  | [optional] [default to null]
 **reportUnderscoreid** | **string** |  | [optional] [default to null]
 **runtimeUnderscoreparameterUnderscorelist** | [**array[Reportsv3RunTimeParameter]**](Reportsv3RunTimeParameter.md) |  | [optional] [default to null]

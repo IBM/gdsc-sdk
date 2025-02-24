@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.configure_sso_request_idp_metadata import ConfigureSSORequestIdpMetadata
+from ibm_gdsc_sdk_saas.models.configure_sso_request_idp_metadata import ConfigureSSORequestIdpMetadata
 
 # TODO update the JSON string below
 json = "{}"

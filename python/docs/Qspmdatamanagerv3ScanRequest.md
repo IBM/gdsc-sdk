@@ -12,13 +12,12 @@ Name | Type | Description | Notes
 **scan_desc** | **str** |  | [optional] 
 **scan_id** | **str** |  | [optional] 
 **scan_status** | **str** |  | [optional] 
-**scan_type** | **str** |  | [optional] 
 **user_email** | **str** |  | [optional] 
 
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.qspmdatamanagerv3_scan_request import Qspmdatamanagerv3ScanRequest
+from ibm_gdsc_sdk_saas.models.qspmdatamanagerv3_scan_request import Qspmdatamanagerv3ScanRequest
 
 # TODO update the JSON string below
 json = "{}"

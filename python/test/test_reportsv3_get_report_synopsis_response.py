@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_get_report_synopsis_response import Reportsv3GetReportSynopsisResponse
+from ibm_gdsc_sdk_saas.models.reportsv3_get_report_synopsis_response import Reportsv3GetReportSynopsisResponse
 
 class TestReportsv3GetReportSynopsisResponse(unittest.TestCase):
     """Reportsv3GetReportSynopsisResponse unit test stubs"""
@@ -35,7 +35,7 @@ class TestReportsv3GetReportSynopsisResponse(unittest.TestCase):
         model = Reportsv3GetReportSynopsisResponse()
         if include_optional:
             return Reportsv3GetReportSynopsisResponse(
-                report = ibm_gdsc_sdk_software.models.reportsv3_brief_report.reportsv3BriefReport(
+                report = ibm_gdsc_sdk_saas.models.reportsv3_brief_report.reportsv3BriefReport(
                     access_level = 56, 
                     category_id = '', 
                     creator_user_id = '', 
@@ -44,12 +44,12 @@ class TestReportsv3GetReportSynopsisResponse(unittest.TestCase):
                         ''
                         ], 
                     headers = [
-                        ibm_gdsc_sdk_software.models.reportsv3_display_header.reportsv3DisplayHeader(
-                            field_name = ibm_gdsc_sdk_software.models.reportsv3_field_name.reportsv3FieldName(
+                        ibm_gdsc_sdk_saas.models.reportsv3_display_header.reportsv3DisplayHeader(
+                            field_name = ibm_gdsc_sdk_saas.models.reportsv3_field_name.reportsv3FieldName(
                                 customized_value = '', 
                                 nls_key = '', 
                                 nls_value = '', ), 
-                            header_description = ibm_gdsc_sdk_software.models.reportsv3_header_description.reportsv3HeaderDescription(
+                            header_description = ibm_gdsc_sdk_saas.models.reportsv3_header_description.reportsv3HeaderDescription(
                                 nls_key = '', 
                                 nls_value = '', ), 
                             header_id = '', 
@@ -63,7 +63,7 @@ class TestReportsv3GetReportSynopsisResponse(unittest.TestCase):
                     report_id = '', 
                     report_name = '', 
                     report_tags = [
-                        ibm_gdsc_sdk_software.models.reportsv3_report_tag.reportsv3ReportTag(
+                        ibm_gdsc_sdk_saas.models.reportsv3_report_tag.reportsv3ReportTag(
                             nls_key = '', 
                             nls_value = '', )
                         ], 

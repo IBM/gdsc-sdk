@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_configure_aggregator_export_request import Guardiumconnectorv3ConfigureAggregatorExportRequest
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_configure_aggregator_export_request import Guardiumconnectorv3ConfigureAggregatorExportRequest
 
 class TestGuardiumconnectorv3ConfigureAggregatorExportRequest(unittest.TestCase):
     """Guardiumconnectorv3ConfigureAggregatorExportRequest unit test stubs"""

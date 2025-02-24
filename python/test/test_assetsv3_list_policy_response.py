@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_list_policy_response import Assetsv3ListPolicyResponse
+from ibm_gdsc_sdk_saas.models.assetsv3_list_policy_response import Assetsv3ListPolicyResponse
 
 class TestAssetsv3ListPolicyResponse(unittest.TestCase):
     """Assetsv3ListPolicyResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestAssetsv3ListPolicyResponse(unittest.TestCase):
         if include_optional:
             return Assetsv3ListPolicyResponse(
                 policy_list = [
-                    ibm_gdsc_sdk_software.models.assetsv3_policy.assetsv3Policy(
+                    ibm_gdsc_sdk_saas.models.assetsv3_policy.assetsv3Policy(
                         activation_status = 56, 
                         installed_flag = True, 
                         installed_timestamp = '', 

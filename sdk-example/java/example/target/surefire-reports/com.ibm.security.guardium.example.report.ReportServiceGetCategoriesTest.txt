@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.ibm.security.guardium.example.report.ReportServiceGetCategoriesTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.077 s -- in com.ibm.security.guardium.example.report.ReportServiceGetCategoriesTest

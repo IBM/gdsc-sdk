@@ -10,7 +10,6 @@ Name | Type | Description | Notes
 **runUnderscoreforUnderscoreallUnderscorescans** | **boolean** | Flag indicating whether the plugin should run for all scans | [optional] [default to null]
 **scanUnderscoredesc** | **string** | Description of the scan | [optional] [default to null]
 **scanUnderscoreid** | **string** | Unique identifier for the scan | [optional] [default to null]
-**scanUnderscoretype** | **string** | Type of scan being performed | [optional] [default to null]
 **userUnderscoreemail** | **string** | Email address of the user initiating the scan | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

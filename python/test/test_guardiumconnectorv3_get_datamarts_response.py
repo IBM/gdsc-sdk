@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_get_datamarts_response import Guardiumconnectorv3GetDatamartsResponse
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_get_datamarts_response import Guardiumconnectorv3GetDatamartsResponse
 
 class TestGuardiumconnectorv3GetDatamartsResponse(unittest.TestCase):
     """Guardiumconnectorv3GetDatamartsResponse unit test stubs"""
@@ -36,11 +36,11 @@ class TestGuardiumconnectorv3GetDatamartsResponse(unittest.TestCase):
         if include_optional:
             return Guardiumconnectorv3GetDatamartsResponse(
                 extraction_profile = [
-                    ibm_gdsc_sdk_software.models.extraction_profile_contains_the_datamart_details_of_latest_supported_extraction_profile.ExtractionProfile contains the datamart details of latest supported extraction profile(
+                    ibm_gdsc_sdk_saas.models.extraction_profile_contains_the_datamart_details_of_latest_supported_extraction_profile.ExtractionProfile contains the datamart details of latest supported extraction profile(
                         active = '', 
                         category = '', 
                         dms = [
-                            ibm_gdsc_sdk_software.models.datamarts_details_information.Datamarts details information(
+                            ibm_gdsc_sdk_saas.models.datamarts_details_information.Datamarts details information(
                                 dm = '', 
                                 dm_current_type = '', 
                                 dm_default_type = '', 
@@ -49,7 +49,7 @@ class TestGuardiumconnectorv3GetDatamartsResponse(unittest.TestCase):
                             ], 
                         profile_name = '', )
                     ],
-                status = ibm_gdsc_sdk_software.models.guardiumconnectorv3_status_response_base.guardiumconnectorv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.guardiumconnectorv3_status_response_base.guardiumconnectorv3StatusResponseBase(
                     message = '', 
                     status = '', )
             )

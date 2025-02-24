@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.streamsv3_check_azure_event_hub_response import Streamsv3CheckAzureEventHubResponse
+from ibm_gdsc_sdk_saas.models.streamsv3_check_azure_event_hub_response import Streamsv3CheckAzureEventHubResponse
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.user_sensitive_categories_sensitive_categories_inner import UserSensitiveCategoriesSensitiveCategoriesInner
+from ibm_gdsc_sdk_saas.models.user_sensitive_categories_sensitive_categories_inner import UserSensitiveCategoriesSensitiveCategoriesInner
 
 class TestUserSensitiveCategoriesSensitiveCategoriesInner(unittest.TestCase):
     """UserSensitiveCategoriesSensitiveCategoriesInner unit test stubs"""

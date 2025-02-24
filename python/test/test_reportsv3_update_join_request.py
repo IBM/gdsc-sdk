@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_update_join_request import Reportsv3UpdateJoinRequest
+from ibm_gdsc_sdk_saas.models.reportsv3_update_join_request import Reportsv3UpdateJoinRequest
 
 class TestReportsv3UpdateJoinRequest(unittest.TestCase):
     """Reportsv3UpdateJoinRequest unit test stubs"""
@@ -35,10 +35,10 @@ class TestReportsv3UpdateJoinRequest(unittest.TestCase):
         model = Reportsv3UpdateJoinRequest()
         if include_optional:
             return Reportsv3UpdateJoinRequest(
-                join_def = ibm_gdsc_sdk_software.models.reportsv3_join_definition.reportsv3JoinDefinition(
+                join_def = ibm_gdsc_sdk_saas.models.reportsv3_join_definition.reportsv3JoinDefinition(
                     category_id = '', 
                     header_pair_list = [
-                        ibm_gdsc_sdk_software.models.header_pair___pair_of_source_and_target_report_headers_being_joined_on.HeaderPair - pair of source and target report headers being joined on(
+                        ibm_gdsc_sdk_saas.models.header_pair___pair_of_source_and_target_report_headers_being_joined_on.HeaderPair - pair of source and target report headers being joined on(
                             source_header_id = '', 
                             target_header_id = '', )
                         ], 

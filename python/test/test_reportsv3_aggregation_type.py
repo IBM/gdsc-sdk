@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_aggregation_type import Reportsv3AggregationType
+from ibm_gdsc_sdk_saas.models.reportsv3_aggregation_type import Reportsv3AggregationType
 
 class TestReportsv3AggregationType(unittest.TestCase):
     """Reportsv3AggregationType unit test stubs"""

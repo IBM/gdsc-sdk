@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.schedulerv3_get_distribution_rules_response import Schedulerv3GetDistributionRulesResponse
+from ibm_gdsc_sdk_saas.models.schedulerv3_get_distribution_rules_response import Schedulerv3GetDistributionRulesResponse
 
 class TestSchedulerv3GetDistributionRulesResponse(unittest.TestCase):
     """Schedulerv3GetDistributionRulesResponse unit test stubs"""

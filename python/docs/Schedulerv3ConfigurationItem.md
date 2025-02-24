@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.schedulerv3_configuration_item import Schedulerv3ConfigurationItem
+from ibm_gdsc_sdk_saas.models.schedulerv3_configuration_item import Schedulerv3ConfigurationItem
 
 # TODO update the JSON string below
 json = "{}"

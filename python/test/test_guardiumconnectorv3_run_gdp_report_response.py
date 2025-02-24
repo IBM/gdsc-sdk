@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_run_gdp_report_response import Guardiumconnectorv3RunGDPReportResponse
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_run_gdp_report_response import Guardiumconnectorv3RunGDPReportResponse
 
 class TestGuardiumconnectorv3RunGDPReportResponse(unittest.TestCase):
     """Guardiumconnectorv3RunGDPReportResponse unit test stubs"""
@@ -36,14 +36,14 @@ class TestGuardiumconnectorv3RunGDPReportResponse(unittest.TestCase):
         if include_optional:
             return Guardiumconnectorv3RunGDPReportResponse(
                 report_data = [
-                    ibm_gdsc_sdk_software.models.guardiumconnectorv3_gdp_report_result_row.guardiumconnectorv3GDPReportResultRow(
+                    ibm_gdsc_sdk_saas.models.guardiumconnectorv3_gdp_report_result_row.guardiumconnectorv3GDPReportResultRow(
                         columns = [
-                            ibm_gdsc_sdk_software.models.guardiumconnectorv3_gdp_report_result_column.guardiumconnectorv3GDPReportResultColumn(
+                            ibm_gdsc_sdk_saas.models.guardiumconnectorv3_gdp_report_result_column.guardiumconnectorv3GDPReportResultColumn(
                                 column_name = '', 
                                 column_value = '', )
                             ], )
                     ],
-                status = ibm_gdsc_sdk_software.models.guardiumconnectorv3_status_response_base.guardiumconnectorv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.guardiumconnectorv3_status_response_base.guardiumconnectorv3StatusResponseBase(
                     message = '', 
                     status = '', )
             )

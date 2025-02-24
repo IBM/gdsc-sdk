@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_get_latest_dm_extraction_profile_response import Guardiumconnectorv3GetLatestDMExtractionProfileResponse
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_get_latest_dm_extraction_profile_response import Guardiumconnectorv3GetLatestDMExtractionProfileResponse
 
 class TestGuardiumconnectorv3GetLatestDMExtractionProfileResponse(unittest.TestCase):
     """Guardiumconnectorv3GetLatestDMExtractionProfileResponse unit test stubs"""

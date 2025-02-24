@@ -1,14 +1,14 @@
 import time
 import os
-import ibm_gdsc_sdk_software
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_run_report_request import Reportsrunnerv3RunReportRequest
-from ibm_gdsc_sdk_software.models.stream_result_of_reportsrunnerv3_run_report_response import StreamResultOfReportsrunnerv3RunReportResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_run_report_request import Reportsrunnerv3RunReportRequest
+from ibm_gdsc_sdk_saas.models.stream_result_of_reportsrunnerv3_run_report_response import StreamResultOfReportsrunnerv3RunReportResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 import json
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-# configuration = ibm_gdsc_sdk_software.Configuration(
+# configuration = ibm_gdsc_sdk_saas.Configuration(
 #     host = ""
 # )
 
@@ -19,7 +19,7 @@ import json
 # APIKEY=os.environ['APIKEY']
 # SECRET=os.environ['SECRET']
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = os.environ['URL'],
     username = os.environ['API_USERNAME'],
     password = os.environ['API_PASSWORD']
@@ -33,9 +33,9 @@ configuration.verify_ssl = False
 #configuration.api_key_prefix['ApiKeyAuth'] = 'Basic'
 # Enter a context with an instance of the API client
 
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.ReportsRunnerApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.ReportsRunnerApi(api_client)
     # TODO update the JSON string below
     FETCH_SIZE = 10
     OFFSET=0

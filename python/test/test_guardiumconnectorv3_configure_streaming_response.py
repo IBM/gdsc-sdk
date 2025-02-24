@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_configure_streaming_response import Guardiumconnectorv3ConfigureStreamingResponse
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_configure_streaming_response import Guardiumconnectorv3ConfigureStreamingResponse
 
 class TestGuardiumconnectorv3ConfigureStreamingResponse(unittest.TestCase):
     """Guardiumconnectorv3ConfigureStreamingResponse unit test stubs"""
@@ -35,7 +35,7 @@ class TestGuardiumconnectorv3ConfigureStreamingResponse(unittest.TestCase):
         model = Guardiumconnectorv3ConfigureStreamingResponse()
         if include_optional:
             return Guardiumconnectorv3ConfigureStreamingResponse(
-                status = ibm_gdsc_sdk_software.models.guardiumconnectorv3_status_response_base.guardiumconnectorv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.guardiumconnectorv3_status_response_base.guardiumconnectorv3StatusResponseBase(
                     message = '', 
                     status = '', )
             )

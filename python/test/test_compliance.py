@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.compliance import Compliance
+from ibm_gdsc_sdk_saas.models.compliance import Compliance
 
 class TestCompliance(unittest.TestCase):
     """Compliance unit test stubs"""

@@ -1,4 +1,4 @@
-# ibm_gdsc_sdk_software.JumpboxServiceApi
+# ibm_gdsc_sdk_saas.JumpboxServiceApi
 
 All URIs are relative to *http://localhost*
 
@@ -29,15 +29,15 @@ Summary: Authorize Description: Authenticate a user and return a JWT.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.jumpboxv3_authorize_request import Jumpboxv3AuthorizeRequest
-from ibm_gdsc_sdk_software.models.jumpboxv3_authorize_response import Jumpboxv3AuthorizeResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.jumpboxv3_authorize_request import Jumpboxv3AuthorizeRequest
+from ibm_gdsc_sdk_saas.models.jumpboxv3_authorize_response import Jumpboxv3AuthorizeResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -47,7 +47,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -59,10 +59,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.JumpboxServiceApi(api_client)
-    jumpboxv3_authorize_request = ibm_gdsc_sdk_software.Jumpboxv3AuthorizeRequest() # Jumpboxv3AuthorizeRequest | 
+    api_instance = ibm_gdsc_sdk_saas.JumpboxServiceApi(api_client)
+    jumpboxv3_authorize_request = ibm_gdsc_sdk_saas.Jumpboxv3AuthorizeRequest() # Jumpboxv3AuthorizeRequest | 
 
     try:
         # Summary: Authorize Description: Authenticate a user and return a JWT.
@@ -114,13 +114,13 @@ Summary: Delete tenant Description: Delete a tenant.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -136,9 +136,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.JumpboxServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.JumpboxServiceApi(api_client)
     tenant_id = 'tenant_id_example' # str | Tenant id.
     is_permanent_delete = True # bool | Delete tenant permanently if true. (optional)
     var_async = True # bool | Async. (optional)
@@ -196,13 +196,13 @@ Summary: Delete user Description: Delete the user.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -212,7 +212,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -224,9 +224,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.JumpboxServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.JumpboxServiceApi(api_client)
     user_id = 'user_id_example' # str | The user id.
 
     try:
@@ -279,14 +279,14 @@ Summary: Get tenant Description: Get a tenant.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.jumpboxv3_get_tenant_response import Jumpboxv3GetTenantResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.jumpboxv3_get_tenant_response import Jumpboxv3GetTenantResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -302,9 +302,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.JumpboxServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.JumpboxServiceApi(api_client)
     tenant_id = 'tenant_id_example' # str | Tenant id.
     include_inactive = True # bool | Include inactive. (optional)
     include_not_ready = True # bool | Include tenants that are not ready(are in state of being created or deleted). (optional)
@@ -362,14 +362,14 @@ Summary: Get tenants Description: Get all tenant base on UID.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.jumpboxv3_get_tenants_response import Jumpboxv3GetTenantsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.jumpboxv3_get_tenants_response import Jumpboxv3GetTenantsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -379,7 +379,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -391,9 +391,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.JumpboxServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.JumpboxServiceApi(api_client)
     uid = 'uid_example' # str | Email. (optional)
     external_id = 'external_id_example' # str | External id. (optional)
     include_inactive = True # bool | Include inactive. (optional)
@@ -453,14 +453,14 @@ Summary: Get users Description: Get all users base on a tenantID.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.tenantuserv3_get_users_response import Tenantuserv3GetUsersResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.tenantuserv3_get_users_response import Tenantuserv3GetUsersResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -470,7 +470,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -482,9 +482,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.JumpboxServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.JumpboxServiceApi(api_client)
     uid = 'uid_example' # str | Email. (optional)
 
     try:
@@ -538,15 +538,15 @@ Summary: Post tenants Description: Create a tenant.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.jumpboxv3_post_tenants_request import Jumpboxv3PostTenantsRequest
-from ibm_gdsc_sdk_software.models.jumpboxv3_post_tenants_response import Jumpboxv3PostTenantsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.jumpboxv3_post_tenants_request import Jumpboxv3PostTenantsRequest
+from ibm_gdsc_sdk_saas.models.jumpboxv3_post_tenants_response import Jumpboxv3PostTenantsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -556,7 +556,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -568,10 +568,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.JumpboxServiceApi(api_client)
-    jumpboxv3_post_tenants_request = ibm_gdsc_sdk_software.Jumpboxv3PostTenantsRequest() # Jumpboxv3PostTenantsRequest | 
+    api_instance = ibm_gdsc_sdk_saas.JumpboxServiceApi(api_client)
+    jumpboxv3_post_tenants_request = ibm_gdsc_sdk_saas.Jumpboxv3PostTenantsRequest() # Jumpboxv3PostTenantsRequest | 
 
     try:
         # Summary: Post tenants Description: Create a tenant.
@@ -624,15 +624,15 @@ Summary: Post users Description: Create users.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.jumpboxv3_post_users_bulk_request import Jumpboxv3PostUsersBulkRequest
-from ibm_gdsc_sdk_software.models.jumpboxv3_post_users_bulk_response import Jumpboxv3PostUsersBulkResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.jumpboxv3_post_users_bulk_request import Jumpboxv3PostUsersBulkRequest
+from ibm_gdsc_sdk_saas.models.jumpboxv3_post_users_bulk_response import Jumpboxv3PostUsersBulkResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -642,7 +642,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -654,10 +654,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.JumpboxServiceApi(api_client)
-    jumpboxv3_post_users_bulk_request = ibm_gdsc_sdk_software.Jumpboxv3PostUsersBulkRequest() # Jumpboxv3PostUsersBulkRequest | 
+    api_instance = ibm_gdsc_sdk_saas.JumpboxServiceApi(api_client)
+    jumpboxv3_post_users_bulk_request = ibm_gdsc_sdk_saas.Jumpboxv3PostUsersBulkRequest() # Jumpboxv3PostUsersBulkRequest | 
 
     try:
         # Summary: Post users Description: Create users.
@@ -710,15 +710,15 @@ Summary: Search users Description: Search for all users matching the provided st
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.jumpboxv3_search_users_request import Jumpboxv3SearchUsersRequest
-from ibm_gdsc_sdk_software.models.jumpboxv3_search_users_response import Jumpboxv3SearchUsersResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.jumpboxv3_search_users_request import Jumpboxv3SearchUsersRequest
+from ibm_gdsc_sdk_saas.models.jumpboxv3_search_users_response import Jumpboxv3SearchUsersResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -728,7 +728,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -740,10 +740,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.JumpboxServiceApi(api_client)
-    jumpboxv3_search_users_request = ibm_gdsc_sdk_software.Jumpboxv3SearchUsersRequest() # Jumpboxv3SearchUsersRequest | 
+    api_instance = ibm_gdsc_sdk_saas.JumpboxServiceApi(api_client)
+    jumpboxv3_search_users_request = ibm_gdsc_sdk_saas.Jumpboxv3SearchUsersRequest() # Jumpboxv3SearchUsersRequest | 
 
     try:
         # Summary: Search users Description: Search for all users matching the provided string.
@@ -796,15 +796,15 @@ Summary: Test user Description: Test a user lookup to a given LDAP.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.jumpboxv3_test_user_request import Jumpboxv3TestUserRequest
-from ibm_gdsc_sdk_software.models.jumpboxv3_test_user_response import Jumpboxv3TestUserResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.jumpboxv3_test_user_request import Jumpboxv3TestUserRequest
+from ibm_gdsc_sdk_saas.models.jumpboxv3_test_user_response import Jumpboxv3TestUserResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -814,7 +814,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -826,10 +826,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.JumpboxServiceApi(api_client)
-    jumpboxv3_test_user_request = ibm_gdsc_sdk_software.Jumpboxv3TestUserRequest() # Jumpboxv3TestUserRequest | 
+    api_instance = ibm_gdsc_sdk_saas.JumpboxServiceApi(api_client)
+    jumpboxv3_test_user_request = ibm_gdsc_sdk_saas.Jumpboxv3TestUserRequest() # Jumpboxv3TestUserRequest | 
 
     try:
         # Summary: Test user Description: Test a user lookup to a given LDAP.
@@ -881,15 +881,15 @@ Summary: Update tenant Description: Update a tenant.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.jumpboxv3_update_tenant_request import Jumpboxv3UpdateTenantRequest
-from ibm_gdsc_sdk_software.models.jumpboxv3_update_tenant_response import Jumpboxv3UpdateTenantResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.jumpboxv3_update_tenant_request import Jumpboxv3UpdateTenantRequest
+from ibm_gdsc_sdk_saas.models.jumpboxv3_update_tenant_response import Jumpboxv3UpdateTenantResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -905,11 +905,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.JumpboxServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.JumpboxServiceApi(api_client)
     tenant_id = 'tenant_id_example' # str | Tenant id.
-    jumpboxv3_update_tenant_request = ibm_gdsc_sdk_software.Jumpboxv3UpdateTenantRequest() # Jumpboxv3UpdateTenantRequest | 
+    jumpboxv3_update_tenant_request = ibm_gdsc_sdk_saas.Jumpboxv3UpdateTenantRequest() # Jumpboxv3UpdateTenantRequest | 
 
     try:
         # Summary: Update tenant Description: Update a tenant.
@@ -963,15 +963,15 @@ Summary: Update users Description: Update an array of users.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.jumpboxv3_update_users_bulk_request import Jumpboxv3UpdateUsersBulkRequest
-from ibm_gdsc_sdk_software.models.jumpboxv3_update_users_bulk_response import Jumpboxv3UpdateUsersBulkResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.jumpboxv3_update_users_bulk_request import Jumpboxv3UpdateUsersBulkRequest
+from ibm_gdsc_sdk_saas.models.jumpboxv3_update_users_bulk_response import Jumpboxv3UpdateUsersBulkResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -981,7 +981,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -993,10 +993,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.JumpboxServiceApi(api_client)
-    jumpboxv3_update_users_bulk_request = ibm_gdsc_sdk_software.Jumpboxv3UpdateUsersBulkRequest() # Jumpboxv3UpdateUsersBulkRequest | 
+    api_instance = ibm_gdsc_sdk_saas.JumpboxServiceApi(api_client)
+    jumpboxv3_update_users_bulk_request = ibm_gdsc_sdk_saas.Jumpboxv3UpdateUsersBulkRequest() # Jumpboxv3UpdateUsersBulkRequest | 
 
     try:
         # Summary: Update users Description: Update an array of users.

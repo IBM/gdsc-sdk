@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_tag_category import Assetsv3TagCategory
+from ibm_gdsc_sdk_saas.models.assetsv3_tag_category import Assetsv3TagCategory
 
 class TestAssetsv3TagCategory(unittest.TestCase):
     """Assetsv3TagCategory unit test stubs"""
@@ -46,7 +46,7 @@ class TestAssetsv3TagCategory(unittest.TestCase):
                 properties = '',
                 purpose = '',
                 tags = [
-                    ibm_gdsc_sdk_software.models.base_tag_concept_object.Base Tag concept object(
+                    ibm_gdsc_sdk_saas.models.base_tag_concept_object.Base Tag concept object(
                         creation_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         creation_time_utc = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         description = '', 

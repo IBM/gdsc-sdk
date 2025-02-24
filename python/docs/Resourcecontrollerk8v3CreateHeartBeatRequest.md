@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_create_heart_beat_request import Resourcecontrollerk8v3CreateHeartBeatRequest
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_create_heart_beat_request import Resourcecontrollerk8v3CreateHeartBeatRequest
 
 # TODO update the JSON string below
 json = "{}"

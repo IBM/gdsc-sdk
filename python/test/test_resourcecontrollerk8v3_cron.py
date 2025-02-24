@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_cron import Resourcecontrollerk8v3Cron
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_cron import Resourcecontrollerk8v3Cron
 
 class TestResourcecontrollerk8v3Cron(unittest.TestCase):
     """Resourcecontrollerk8v3Cron unit test stubs"""

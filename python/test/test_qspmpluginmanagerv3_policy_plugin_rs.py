@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.qspmpluginmanagerv3_policy_plugin_rs import Qspmpluginmanagerv3PolicyPluginRS
+from ibm_gdsc_sdk_saas.models.qspmpluginmanagerv3_policy_plugin_rs import Qspmpluginmanagerv3PolicyPluginRS
 
 class TestQspmpluginmanagerv3PolicyPluginRS(unittest.TestCase):
     """Qspmpluginmanagerv3PolicyPluginRS unit test stubs"""

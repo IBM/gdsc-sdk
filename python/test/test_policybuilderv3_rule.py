@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_rule import Policybuilderv3Rule
+from ibm_gdsc_sdk_saas.models.policybuilderv3_rule import Policybuilderv3Rule
 
 class TestPolicybuilderv3Rule(unittest.TestCase):
     """Policybuilderv3Rule unit test stubs"""
@@ -36,10 +36,10 @@ class TestPolicybuilderv3Rule(unittest.TestCase):
         if include_optional:
             return Policybuilderv3Rule(
                 actions = [
-                    ibm_gdsc_sdk_software.models.policybuilderv3_action.policybuilderv3Action(
+                    ibm_gdsc_sdk_saas.models.policybuilderv3_action.policybuilderv3Action(
                         action_name = '', 
                         notifications = [
-                            ibm_gdsc_sdk_software.models.policybuilderv3_target_receiver.policybuilderv3TargetReceiver(
+                            ibm_gdsc_sdk_saas.models.policybuilderv3_target_receiver.policybuilderv3TargetReceiver(
                                 integration_id = '', 
                                 template_id = '', 
                                 type = 'UNDEFINED_RECTYPE', 
@@ -47,7 +47,7 @@ class TestPolicybuilderv3Rule(unittest.TestCase):
                             ], 
                         order = 56, 
                         parameters = [
-                            ibm_gdsc_sdk_software.models.policybuilderv3_action_parameter.policybuilderv3ActionParameter(
+                            ibm_gdsc_sdk_saas.models.policybuilderv3_action_parameter.policybuilderv3ActionParameter(
                                 parameter_name = '', 
                                 parameter_value = '', )
                             ], 
@@ -60,10 +60,10 @@ class TestPolicybuilderv3Rule(unittest.TestCase):
                     56
                     ],
                 invalid_actions = [
-                    ibm_gdsc_sdk_software.models.policybuilderv3_action.policybuilderv3Action(
+                    ibm_gdsc_sdk_saas.models.policybuilderv3_action.policybuilderv3Action(
                         action_name = '', 
                         notifications = [
-                            ibm_gdsc_sdk_software.models.policybuilderv3_target_receiver.policybuilderv3TargetReceiver(
+                            ibm_gdsc_sdk_saas.models.policybuilderv3_target_receiver.policybuilderv3TargetReceiver(
                                 integration_id = '', 
                                 template_id = '', 
                                 type = 'UNDEFINED_RECTYPE', 
@@ -71,7 +71,7 @@ class TestPolicybuilderv3Rule(unittest.TestCase):
                             ], 
                         order = 56, 
                         parameters = [
-                            ibm_gdsc_sdk_software.models.policybuilderv3_action_parameter.policybuilderv3ActionParameter(
+                            ibm_gdsc_sdk_saas.models.policybuilderv3_action_parameter.policybuilderv3ActionParameter(
                                 parameter_name = '', 
                                 parameter_value = '', )
                             ], 
@@ -80,7 +80,7 @@ class TestPolicybuilderv3Rule(unittest.TestCase):
                         ui_label = '', )
                     ],
                 invalid_parameters = [
-                    ibm_gdsc_sdk_software.models.policybuilderv3_rule_parameter.policybuilderv3RuleParameter(
+                    ibm_gdsc_sdk_saas.models.policybuilderv3_rule_parameter.policybuilderv3RuleParameter(
                         parameter_name = '', 
                         parameter_operator = 'UNKNOWN_OPERATOR', 
                         parameter_type = '', 
@@ -89,7 +89,7 @@ class TestPolicybuilderv3Rule(unittest.TestCase):
                         ui_label = '', )
                     ],
                 parameters = [
-                    ibm_gdsc_sdk_software.models.policybuilderv3_rule_parameter.policybuilderv3RuleParameter(
+                    ibm_gdsc_sdk_saas.models.policybuilderv3_rule_parameter.policybuilderv3RuleParameter(
                         parameter_name = '', 
                         parameter_operator = 'UNKNOWN_OPERATOR', 
                         parameter_type = '', 

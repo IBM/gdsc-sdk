@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticsenginev3_classification_observation import Riskanalyticsenginev3ClassificationObservation
+from ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_classification_observation import Riskanalyticsenginev3ClassificationObservation
 
 class TestRiskanalyticsenginev3ClassificationObservation(unittest.TestCase):
     """Riskanalyticsenginev3ClassificationObservation unit test stubs"""

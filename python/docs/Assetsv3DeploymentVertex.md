@@ -26,7 +26,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.assetsv3_deployment_vertex import Assetsv3DeploymentVertex
+from ibm_gdsc_sdk_saas.models.assetsv3_deployment_vertex import Assetsv3DeploymentVertex
 
 # TODO update the JSON string below
 json = "{}"

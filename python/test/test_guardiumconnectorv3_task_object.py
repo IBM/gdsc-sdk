@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_task_object import Guardiumconnectorv3TaskObject
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_task_object import Guardiumconnectorv3TaskObject
 
 class TestGuardiumconnectorv3TaskObject(unittest.TestCase):
     """Guardiumconnectorv3TaskObject unit test stubs"""
@@ -36,16 +36,16 @@ class TestGuardiumconnectorv3TaskObject(unittest.TestCase):
         if include_optional:
             return Guardiumconnectorv3TaskObject(
                 sub_tasks = [
-                    ibm_gdsc_sdk_software.models.guardiumconnectorv3_sub_task_object.guardiumconnectorv3SubTaskObject(
+                    ibm_gdsc_sdk_saas.models.guardiumconnectorv3_sub_task_object.guardiumconnectorv3SubTaskObject(
                         id = '', 
                         interval = '', 
                         params = [
-                            ibm_gdsc_sdk_software.models.guardiumconnectorv3_task_params_object.guardiumconnectorv3TaskParamsObject(
+                            ibm_gdsc_sdk_saas.models.guardiumconnectorv3_task_params_object.guardiumconnectorv3TaskParamsObject(
                                 arg_name = '', 
                                 arg_value = '', )
                             ], )
                     ],
-                task_definition = ibm_gdsc_sdk_software.models.guardiumconnectorv3_task_definition_object.guardiumconnectorv3TaskDefinitionObject(
+                task_definition = ibm_gdsc_sdk_saas.models.guardiumconnectorv3_task_definition_object.guardiumconnectorv3TaskDefinitionObject(
                     execution_trigger = 56, 
                     interval = '', 
                     is_blocker_task = 56, 

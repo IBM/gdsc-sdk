@@ -20,7 +20,6 @@ export class Qspmdatamanagerv3ScanRequest {
     'scanDesc'?: string;
     'scanId'?: string;
     'scanStatus'?: string;
-    'scanType'?: string;
     'userEmail'?: string;
 
     static readonly discriminator: string | undefined = undefined;
@@ -65,12 +64,6 @@ export class Qspmdatamanagerv3ScanRequest {
         {
             "name": "scanStatus",
             "baseName": "scan_status",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "scanType",
-            "baseName": "scan_type",
             "type": "string",
             "format": ""
         },

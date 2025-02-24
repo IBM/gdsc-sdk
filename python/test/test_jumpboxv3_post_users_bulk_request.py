@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.jumpboxv3_post_users_bulk_request import Jumpboxv3PostUsersBulkRequest
+from ibm_gdsc_sdk_saas.models.jumpboxv3_post_users_bulk_request import Jumpboxv3PostUsersBulkRequest
 
 class TestJumpboxv3PostUsersBulkRequest(unittest.TestCase):
     """Jumpboxv3PostUsersBulkRequest unit test stubs"""
@@ -36,7 +36,7 @@ class TestJumpboxv3PostUsersBulkRequest(unittest.TestCase):
         if include_optional:
             return Jumpboxv3PostUsersBulkRequest(
                 users = [
-                    ibm_gdsc_sdk_software.models.jumpboxv3_user.jumpboxv3User(
+                    ibm_gdsc_sdk_saas.models.jumpboxv3_user.jumpboxv3User(
                         activation_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         directory_id = '', 
                         disabled = True, 

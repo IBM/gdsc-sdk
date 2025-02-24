@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_audit_data_count_request import Reportsrunnerv3GetAuditDataCountRequest
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_get_audit_data_count_request import Reportsrunnerv3GetAuditDataCountRequest
 
 # TODO update the JSON string below
 json = "{}"

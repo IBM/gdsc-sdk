@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_update_task_response import Guardiumconnectorv3UpdateTaskResponse
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_update_task_response import Guardiumconnectorv3UpdateTaskResponse
 
 # TODO update the JSON string below
 json = "{}"

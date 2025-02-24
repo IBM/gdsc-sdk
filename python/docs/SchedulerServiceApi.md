@@ -1,4 +1,4 @@
-# ibm_gdsc_sdk_software.SchedulerServiceApi
+# ibm_gdsc_sdk_saas.SchedulerServiceApi
 
 All URIs are relative to *http://localhost*
 
@@ -28,15 +28,15 @@ Summary: Create scheduled job Description: Create a new scheduled job with tasks
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.schedulerv3_create_scheduled_job_request import Schedulerv3CreateScheduledJobRequest
-from ibm_gdsc_sdk_software.models.schedulerv3_create_scheduled_job_response import Schedulerv3CreateScheduledJobResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.schedulerv3_create_scheduled_job_request import Schedulerv3CreateScheduledJobRequest
+from ibm_gdsc_sdk_saas.models.schedulerv3_create_scheduled_job_response import Schedulerv3CreateScheduledJobResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -46,7 +46,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -58,10 +58,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.SchedulerServiceApi(api_client)
-    schedulerv3_create_scheduled_job_request = ibm_gdsc_sdk_software.Schedulerv3CreateScheduledJobRequest() # Schedulerv3CreateScheduledJobRequest | 
+    api_instance = ibm_gdsc_sdk_saas.SchedulerServiceApi(api_client)
+    schedulerv3_create_scheduled_job_request = ibm_gdsc_sdk_saas.Schedulerv3CreateScheduledJobRequest() # Schedulerv3CreateScheduledJobRequest | 
 
     try:
         # Summary: Create scheduled job Description: Create a new scheduled job with tasks.
@@ -114,14 +114,14 @@ Summary: Delete scheduled job Description: Delete a single scheduled job.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.schedulerv3_delete_scheduled_job_response import Schedulerv3DeleteScheduledJobResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.schedulerv3_delete_scheduled_job_response import Schedulerv3DeleteScheduledJobResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -131,7 +131,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -143,9 +143,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.SchedulerServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.SchedulerServiceApi(api_client)
     schedule_id = 'schedule_id_example' # str | Unique ID, required for delete.
 
     try:
@@ -199,14 +199,14 @@ Summary: Get dependencies Description: returns IDs of distribution rules, respon
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.schedulerv3_get_dependencies_response import Schedulerv3GetDependenciesResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.schedulerv3_get_dependencies_response import Schedulerv3GetDependenciesResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -216,7 +216,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -228,9 +228,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.SchedulerServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.SchedulerServiceApi(api_client)
     config_type = 'config_type_example' # str | specify the configuration entry type: Distribution.Rule, workflow_investigation_link, workflow_response_template, etc. (optional)
 
     try:
@@ -284,14 +284,14 @@ Summary: Get distribution rules Description: Return a list of distribution rule 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.schedulerv3_get_distribution_rules_response import Schedulerv3GetDistributionRulesResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.schedulerv3_get_distribution_rules_response import Schedulerv3GetDistributionRulesResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -301,7 +301,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -313,9 +313,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.SchedulerServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.SchedulerServiceApi(api_client)
 
     try:
         # Summary: Get distribution rules Description: Return a list of distribution rule IDs that are used by the scheduler Distribution rules can't be edited if it is used by a scheduled job.
@@ -365,14 +365,14 @@ Summary: Get scheduled job Description: Return a single ScheduledJob in detail.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.schedulerv3_get_scheduled_job_response import Schedulerv3GetScheduledJobResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.schedulerv3_get_scheduled_job_response import Schedulerv3GetScheduledJobResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -382,7 +382,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -394,9 +394,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.SchedulerServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.SchedulerServiceApi(api_client)
     schedule_id = 'schedule_id_example' # str | Used to return a single scheduledjob.
 
     try:
@@ -450,14 +450,14 @@ Summary: Get scheduled jobs Description: Return a list of scheduled jobs and the
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.schedulerv3_scheduled_job_summary_response import Schedulerv3ScheduledJobSummaryResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.schedulerv3_scheduled_job_summary_response import Schedulerv3ScheduledJobSummaryResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -467,7 +467,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -479,9 +479,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.SchedulerServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.SchedulerServiceApi(api_client)
     offset = 56 # int | Optional: the amount to offset the rows by for pagination. (optional)
     limit = 56 # int | Optional: the max amount of rows to return for pagination. (optional)
 
@@ -537,15 +537,15 @@ Summary: Get schedules by report Description: Return an array of scheduled job I
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.schedulerv3_get_schedules_by_report_request import Schedulerv3GetSchedulesByReportRequest
-from ibm_gdsc_sdk_software.models.schedulerv3_get_schedules_by_report_response import Schedulerv3GetSchedulesByReportResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.schedulerv3_get_schedules_by_report_request import Schedulerv3GetSchedulesByReportRequest
+from ibm_gdsc_sdk_saas.models.schedulerv3_get_schedules_by_report_response import Schedulerv3GetSchedulesByReportResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -555,7 +555,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -567,11 +567,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.SchedulerServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.SchedulerServiceApi(api_client)
     report_id = 'report_id_example' # str | Report ID for the scheduled report.
-    schedulerv3_get_schedules_by_report_request = ibm_gdsc_sdk_software.Schedulerv3GetSchedulesByReportRequest() # Schedulerv3GetSchedulesByReportRequest | 
+    schedulerv3_get_schedules_by_report_request = ibm_gdsc_sdk_saas.Schedulerv3GetSchedulesByReportRequest() # Schedulerv3GetSchedulesByReportRequest | 
 
     try:
         # Summary: Get schedules by report Description: Return an array of scheduled job IDs that run the report_id.  An empty array is returned if the report_id is not scheduled.
@@ -625,14 +625,14 @@ Summary: Get tags Description: Return an array of all the unique tags from sched
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.schedulerv3_get_tags_response import Schedulerv3GetTagsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.schedulerv3_get_tags_response import Schedulerv3GetTagsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -642,7 +642,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -654,9 +654,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.SchedulerServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.SchedulerServiceApi(api_client)
 
     try:
         # Summary: Get tags Description: Return an array of all the unique tags from scheduled jobs.
@@ -706,15 +706,15 @@ Summary: Search scheduled jobs Description: Return a filtered list of scheduled 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.schedulerv3_scheduled_job_summary_response import Schedulerv3ScheduledJobSummaryResponse
-from ibm_gdsc_sdk_software.models.schedulerv3_search_scheduled_jobs_request import Schedulerv3SearchScheduledJobsRequest
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.schedulerv3_scheduled_job_summary_response import Schedulerv3ScheduledJobSummaryResponse
+from ibm_gdsc_sdk_saas.models.schedulerv3_search_scheduled_jobs_request import Schedulerv3SearchScheduledJobsRequest
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -724,7 +724,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -736,10 +736,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.SchedulerServiceApi(api_client)
-    schedulerv3_search_scheduled_jobs_request = ibm_gdsc_sdk_software.Schedulerv3SearchScheduledJobsRequest() # Schedulerv3SearchScheduledJobsRequest | 
+    api_instance = ibm_gdsc_sdk_saas.SchedulerServiceApi(api_client)
+    schedulerv3_search_scheduled_jobs_request = ibm_gdsc_sdk_saas.Schedulerv3SearchScheduledJobsRequest() # Schedulerv3SearchScheduledJobsRequest | 
 
     try:
         # Summary: Search scheduled jobs Description: Return a filtered list of scheduled jobs and the linked tasks.
@@ -792,15 +792,15 @@ Summary: Search scheduled task runs Description: Return a list of scheduled task
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.schedulerv3_search_scheduled_task_runs_request import Schedulerv3SearchScheduledTaskRunsRequest
-from ibm_gdsc_sdk_software.models.schedulerv3_search_scheduled_task_runs_response import Schedulerv3SearchScheduledTaskRunsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.schedulerv3_search_scheduled_task_runs_request import Schedulerv3SearchScheduledTaskRunsRequest
+from ibm_gdsc_sdk_saas.models.schedulerv3_search_scheduled_task_runs_response import Schedulerv3SearchScheduledTaskRunsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -810,7 +810,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -822,10 +822,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.SchedulerServiceApi(api_client)
-    schedulerv3_search_scheduled_task_runs_request = ibm_gdsc_sdk_software.Schedulerv3SearchScheduledTaskRunsRequest() # Schedulerv3SearchScheduledTaskRunsRequest | 
+    api_instance = ibm_gdsc_sdk_saas.SchedulerServiceApi(api_client)
+    schedulerv3_search_scheduled_task_runs_request = ibm_gdsc_sdk_saas.Schedulerv3SearchScheduledTaskRunsRequest() # Schedulerv3SearchScheduledTaskRunsRequest | 
 
     try:
         # Summary: Search scheduled task runs Description: Return a list of scheduled task run, start date, end date, status
@@ -878,15 +878,15 @@ Summary: Update scheduled job Description: Update a single schedule job.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.schedulerv3_update_scheduled_job_request import Schedulerv3UpdateScheduledJobRequest
-from ibm_gdsc_sdk_software.models.schedulerv3_update_scheduled_job_response import Schedulerv3UpdateScheduledJobResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.schedulerv3_update_scheduled_job_request import Schedulerv3UpdateScheduledJobRequest
+from ibm_gdsc_sdk_saas.models.schedulerv3_update_scheduled_job_response import Schedulerv3UpdateScheduledJobResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -896,7 +896,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -908,11 +908,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.SchedulerServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.SchedulerServiceApi(api_client)
     schedule_id = 'schedule_id_example' # str | Unique ID, required for update.
-    schedulerv3_update_scheduled_job_request = ibm_gdsc_sdk_software.Schedulerv3UpdateScheduledJobRequest() # Schedulerv3UpdateScheduledJobRequest | 
+    schedulerv3_update_scheduled_job_request = ibm_gdsc_sdk_saas.Schedulerv3UpdateScheduledJobRequest() # Schedulerv3UpdateScheduledJobRequest | 
 
     try:
         # Summary: Update scheduled job Description: Update a single schedule job.

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.datamartprocessorv3_dm_extraction_logs_request import Datamartprocessorv3DMExtractionLogsRequest
+from ibm_gdsc_sdk_saas.models.datamartprocessorv3_dm_extraction_logs_request import Datamartprocessorv3DMExtractionLogsRequest
 
 class TestDatamartprocessorv3DMExtractionLogsRequest(unittest.TestCase):
     """Datamartprocessorv3DMExtractionLogsRequest unit test stubs"""

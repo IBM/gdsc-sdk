@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.complianceacceleratorv3_report import Complianceacceleratorv3Report
+from ibm_gdsc_sdk_saas.models.complianceacceleratorv3_report import Complianceacceleratorv3Report
 
 # TODO update the JSON string below
 json = "{}"

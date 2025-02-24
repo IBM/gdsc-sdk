@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.outliersenginev3_analysis_performance_stats import Outliersenginev3AnalysisPerformanceStats
+from ibm_gdsc_sdk_saas.models.outliersenginev3_analysis_performance_stats import Outliersenginev3AnalysisPerformanceStats
 
 class TestOutliersenginev3AnalysisPerformanceStats(unittest.TestCase):
     """Outliersenginev3AnalysisPerformanceStats unit test stubs"""

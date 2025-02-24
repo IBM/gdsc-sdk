@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.qs_data_manager_api import QSDataManagerApi
+from ibm_gdsc_sdk_saas.api.qs_data_manager_api import QSDataManagerApi
 
 
 class TestQSDataManagerApi(unittest.TestCase):
@@ -30,6 +30,13 @@ class TestQSDataManagerApi(unittest.TestCase):
         """Test case for q_s_data_manager_get_master_data
 
         Summary: master data for all entities Description: Retrieves All Dimension and Fact tables data.
+        """
+        pass
+
+    def test_q_s_data_manager_get_plugin_data(self) -> None:
+        """Test case for q_s_data_manager_get_plugin_data
+
+        Summary: Plugins Details Description: Retrieves All plugins information.
         """
         pass
 

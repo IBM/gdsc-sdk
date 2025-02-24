@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_get_group_members_response import Guardiumconnectorv3GetGroupMembersResponse
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_get_group_members_response import Guardiumconnectorv3GetGroupMembersResponse
 
 class TestGuardiumconnectorv3GetGroupMembersResponse(unittest.TestCase):
     """Guardiumconnectorv3GetGroupMembersResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestGuardiumconnectorv3GetGroupMembersResponse(unittest.TestCase):
         if include_optional:
             return Guardiumconnectorv3GetGroupMembersResponse(
                 groups = [
-                    ibm_gdsc_sdk_software.models.guardiumconnectorv3_group.guardiumconnectorv3Group(
+                    ibm_gdsc_sdk_saas.models.guardiumconnectorv3_group.guardiumconnectorv3Group(
                         application = '', 
                         description = '', 
                         group_id = 56, 
@@ -44,12 +44,12 @@ class TestGuardiumconnectorv3GetGroupMembersResponse(unittest.TestCase):
                         hierarchical = True, 
                         member_count = 56, 
                         members = [
-                            ibm_gdsc_sdk_software.models.guardiumconnectorv3_group_member.guardiumconnectorv3GroupMember(
+                            ibm_gdsc_sdk_saas.models.guardiumconnectorv3_group_member.guardiumconnectorv3GroupMember(
                                 description = '', 
                                 member_id = 56, )
                             ], 
                         nested_group_members = [
-                            ibm_gdsc_sdk_software.models.guardiumconnectorv3_nested_group_member.guardiumconnectorv3NestedGroupMember(
+                            ibm_gdsc_sdk_saas.models.guardiumconnectorv3_nested_group_member.guardiumconnectorv3NestedGroupMember(
                                 description = '', 
                                 group_id = 56, 
                                 member_id = 56, )
@@ -58,7 +58,7 @@ class TestGuardiumconnectorv3GetGroupMembersResponse(unittest.TestCase):
                         tuples = '', 
                         type = 56, )
                     ],
-                status = ibm_gdsc_sdk_software.models.guardiumconnectorv3_status_response_base.guardiumconnectorv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.guardiumconnectorv3_status_response_base.guardiumconnectorv3StatusResponseBase(
                     message = '', 
                     status = '', )
             )

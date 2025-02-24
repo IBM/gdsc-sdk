@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.list_actual_flows_sort_parameter import ListActualFlowsSortParameter
+from ibm_gdsc_sdk_saas.models.list_actual_flows_sort_parameter import ListActualFlowsSortParameter
 
 class TestListActualFlowsSortParameter(unittest.TestCase):
     """ListActualFlowsSortParameter unit test stubs"""

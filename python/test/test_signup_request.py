@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.signup_request import SignupRequest
+from ibm_gdsc_sdk_saas.models.signup_request import SignupRequest
 
 class TestSignupRequest(unittest.TestCase):
     """SignupRequest unit test stubs"""

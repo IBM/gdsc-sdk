@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_status_response_base import Guardiumconnectorv3StatusResponseBase
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_status_response_base import Guardiumconnectorv3StatusResponseBase
 
 class TestGuardiumconnectorv3StatusResponseBase(unittest.TestCase):
     """Guardiumconnectorv3StatusResponseBase unit test stubs"""

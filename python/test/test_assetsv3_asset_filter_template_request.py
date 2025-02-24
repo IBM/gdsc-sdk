@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_asset_filter_template_request import Assetsv3AssetFilterTemplateRequest
+from ibm_gdsc_sdk_saas.models.assetsv3_asset_filter_template_request import Assetsv3AssetFilterTemplateRequest
 
 class TestAssetsv3AssetFilterTemplateRequest(unittest.TestCase):
     """Assetsv3AssetFilterTemplateRequest unit test stubs"""

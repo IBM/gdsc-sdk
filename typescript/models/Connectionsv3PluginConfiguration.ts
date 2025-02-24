@@ -16,6 +16,9 @@ import { HttpFile } from '../http/http';
 export class Connectionsv3PluginConfiguration {
     'datasourceType'?: string;
     'developerName'?: string;
+    'documentLink'?: string;
+    'gdpPackageLink'?: string;
+    'giPackageLink'?: string;
     'id'?: string;
     'lastModified'?: Date;
     'logfile'?: string;
@@ -24,6 +27,8 @@ export class Connectionsv3PluginConfiguration {
     'records'?: Array<Connectionsv3PluginRecord>;
     'state'?: string;
     'supportedInputs'?: Array<string>;
+    'version'?: string;
+    'versionTested'?: string;
 
     static readonly discriminator: string | undefined = undefined;
 
@@ -37,6 +42,24 @@ export class Connectionsv3PluginConfiguration {
         {
             "name": "developerName",
             "baseName": "developer_name",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "documentLink",
+            "baseName": "document_link",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "gdpPackageLink",
+            "baseName": "gdp_package_link",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "giPackageLink",
+            "baseName": "gi_package_link",
             "type": "string",
             "format": ""
         },
@@ -86,6 +109,18 @@ export class Connectionsv3PluginConfiguration {
             "name": "supportedInputs",
             "baseName": "supported_inputs",
             "type": "Array<string>",
+            "format": ""
+        },
+        {
+            "name": "version",
+            "baseName": "version",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "versionTested",
+            "baseName": "version_tested",
+            "type": "string",
             "format": ""
         }    ];
 

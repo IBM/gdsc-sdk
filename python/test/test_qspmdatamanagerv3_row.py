@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.qspmdatamanagerv3_row import Qspmdatamanagerv3Row
+from ibm_gdsc_sdk_saas.models.qspmdatamanagerv3_row import Qspmdatamanagerv3Row
 
 class TestQspmdatamanagerv3Row(unittest.TestCase):
     """Qspmdatamanagerv3Row unit test stubs"""

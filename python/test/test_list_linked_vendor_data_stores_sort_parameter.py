@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.list_linked_vendor_data_stores_sort_parameter import ListLinkedVendorDataStoresSortParameter
+from ibm_gdsc_sdk_saas.models.list_linked_vendor_data_stores_sort_parameter import ListLinkedVendorDataStoresSortParameter
 
 class TestListLinkedVendorDataStoresSortParameter(unittest.TestCase):
     """ListLinkedVendorDataStoresSortParameter unit test stubs"""

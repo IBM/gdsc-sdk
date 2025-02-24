@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.set_question_body_params import SetQuestionBodyParams
+from ibm_gdsc_sdk_saas.models.set_question_body_params import SetQuestionBodyParams
 
 class TestSetQuestionBodyParams(unittest.TestCase):
     """SetQuestionBodyParams unit test stubs"""

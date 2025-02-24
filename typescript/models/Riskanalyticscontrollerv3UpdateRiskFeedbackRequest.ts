@@ -19,6 +19,9 @@ export class Riskanalyticscontrollerv3UpdateRiskFeedbackRequest {
     'comment'?: string;
     'feedbackClassificationKey'?: string;
     'originalClassificationKey'?: string;
+    /**
+    * One or more risk id. This API can be called for multiple risks, only if all of them are from the same category.
+    */
     'riskIds'?: Array<number>;
 
     static readonly discriminator: string | undefined = undefined;

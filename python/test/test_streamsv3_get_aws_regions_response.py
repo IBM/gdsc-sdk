@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.streamsv3_get_aws_regions_response import Streamsv3GetAWSRegionsResponse
+from ibm_gdsc_sdk_saas.models.streamsv3_get_aws_regions_response import Streamsv3GetAWSRegionsResponse
 
 class TestStreamsv3GetAWSRegionsResponse(unittest.TestCase):
     """Streamsv3GetAWSRegionsResponse unit test stubs"""

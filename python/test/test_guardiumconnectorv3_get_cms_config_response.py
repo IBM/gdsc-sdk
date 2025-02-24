@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_get_cms_config_response import Guardiumconnectorv3GetCMsConfigResponse
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_get_cms_config_response import Guardiumconnectorv3GetCMsConfigResponse
 
 class TestGuardiumconnectorv3GetCMsConfigResponse(unittest.TestCase):
     """Guardiumconnectorv3GetCMsConfigResponse unit test stubs"""
@@ -36,9 +36,9 @@ class TestGuardiumconnectorv3GetCMsConfigResponse(unittest.TestCase):
         if include_optional:
             return Guardiumconnectorv3GetCMsConfigResponse(
                 cms = [
-                    ibm_gdsc_sdk_software.models.guardiumconnectorv3_cm.guardiumconnectorv3CM(
+                    ibm_gdsc_sdk_saas.models.guardiumconnectorv3_cm.guardiumconnectorv3CM(
                         attributes = [
-                            ibm_gdsc_sdk_software.models.guardiumconnectorv3_attribute.guardiumconnectorv3Attribute(
+                            ibm_gdsc_sdk_saas.models.guardiumconnectorv3_attribute.guardiumconnectorv3Attribute(
                                 name = '', 
                                 value = '', )
                             ], 
@@ -54,7 +54,7 @@ class TestGuardiumconnectorv3GetCMsConfigResponse(unittest.TestCase):
                         status = '', 
                         support_custom_dm_type_setup = '', )
                     ],
-                status = ibm_gdsc_sdk_software.models.guardiumconnectorv3_status_response_base.guardiumconnectorv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.guardiumconnectorv3_status_response_base.guardiumconnectorv3StatusResponseBase(
                     message = '', 
                     status = '', )
             )

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.configure_sso_request import ConfigureSSORequest
+from ibm_gdsc_sdk_saas.models.configure_sso_request import ConfigureSSORequest
 
 class TestConfigureSSORequest(unittest.TestCase):
     """ConfigureSSORequest unit test stubs"""

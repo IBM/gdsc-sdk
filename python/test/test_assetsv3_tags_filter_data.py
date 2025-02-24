@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_tags_filter_data import Assetsv3TagsFilterData
+from ibm_gdsc_sdk_saas.models.assetsv3_tags_filter_data import Assetsv3TagsFilterData
 
 class TestAssetsv3TagsFilterData(unittest.TestCase):
     """Assetsv3TagsFilterData unit test stubs"""
@@ -38,7 +38,7 @@ class TestAssetsv3TagsFilterData(unittest.TestCase):
                 tag_category = '',
                 tag_category_id = '',
                 tags_data = [
-                    ibm_gdsc_sdk_software.models.tags_data.Tags Data(
+                    ibm_gdsc_sdk_saas.models.tags_data.Tags Data(
                         tag_id = '', 
                         tag_name = '', )
                     ]

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.simple_recipient_simple_recipient_type import SimpleRecipientSimpleRecipientType
+from ibm_gdsc_sdk_saas.models.simple_recipient_simple_recipient_type import SimpleRecipientSimpleRecipientType
 
 class TestSimpleRecipientSimpleRecipientType(unittest.TestCase):
     """SimpleRecipientSimpleRecipientType unit test stubs"""

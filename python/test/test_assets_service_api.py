@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.assets_service_api import AssetsServiceApi
+from ibm_gdsc_sdk_saas.api.assets_service_api import AssetsServiceApi
 
 
 class TestAssetsServiceApi(unittest.TestCase):

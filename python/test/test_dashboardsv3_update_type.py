@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.dashboardsv3_update_type import Dashboardsv3UpdateType
+from ibm_gdsc_sdk_saas.models.dashboardsv3_update_type import Dashboardsv3UpdateType
 
 class TestDashboardsv3UpdateType(unittest.TestCase):
     """Dashboardsv3UpdateType unit test stubs"""

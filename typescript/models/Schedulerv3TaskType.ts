@@ -23,5 +23,7 @@ export enum Schedulerv3TaskType {
     DataExport = 'DATA_EXPORT',
     AliasRepopulate = 'ALIAS_REPOPULATE',
     WorkflowCreate = 'WORKFLOW_CREATE',
-    Event = 'EVENT'
+    Event = 'EVENT',
+    ApiImport = 'API_IMPORT',
+    JobSummary = 'JOB_SUMMARY'
 }

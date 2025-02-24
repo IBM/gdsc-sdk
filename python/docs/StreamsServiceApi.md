@@ -1,4 +1,4 @@
-# ibm_gdsc_sdk_software.StreamsServiceApi
+# ibm_gdsc_sdk_saas.StreamsServiceApi
 
 All URIs are relative to *http://localhost*
 
@@ -22,15 +22,15 @@ Summary: Check AWS credentials Description: Service to verify AWS credentials.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.streamsv3_check_aws_credentials_request import Streamsv3CheckAWSCredentialsRequest
-from ibm_gdsc_sdk_software.models.streamsv3_check_aws_credentials_response import Streamsv3CheckAWSCredentialsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.streamsv3_check_aws_credentials_request import Streamsv3CheckAWSCredentialsRequest
+from ibm_gdsc_sdk_saas.models.streamsv3_check_aws_credentials_response import Streamsv3CheckAWSCredentialsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -40,7 +40,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -52,10 +52,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.StreamsServiceApi(api_client)
-    streamsv3_check_aws_credentials_request = ibm_gdsc_sdk_software.Streamsv3CheckAWSCredentialsRequest() # Streamsv3CheckAWSCredentialsRequest | 
+    api_instance = ibm_gdsc_sdk_saas.StreamsServiceApi(api_client)
+    streamsv3_check_aws_credentials_request = ibm_gdsc_sdk_saas.Streamsv3CheckAWSCredentialsRequest() # Streamsv3CheckAWSCredentialsRequest | 
 
     try:
         # Summary: Check AWS credentials Description: Service to verify AWS credentials.
@@ -108,15 +108,15 @@ Summary: Check Azure event hub Description: Service to check Azure event hub.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.streamsv3_check_azure_event_hub_request import Streamsv3CheckAzureEventHubRequest
-from ibm_gdsc_sdk_software.models.streamsv3_check_azure_event_hub_response import Streamsv3CheckAzureEventHubResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.streamsv3_check_azure_event_hub_request import Streamsv3CheckAzureEventHubRequest
+from ibm_gdsc_sdk_saas.models.streamsv3_check_azure_event_hub_response import Streamsv3CheckAzureEventHubResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -126,7 +126,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -138,10 +138,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.StreamsServiceApi(api_client)
-    streamsv3_check_azure_event_hub_request = ibm_gdsc_sdk_software.Streamsv3CheckAzureEventHubRequest() # Streamsv3CheckAzureEventHubRequest | 
+    api_instance = ibm_gdsc_sdk_saas.StreamsServiceApi(api_client)
+    streamsv3_check_azure_event_hub_request = ibm_gdsc_sdk_saas.Streamsv3CheckAzureEventHubRequest() # Streamsv3CheckAzureEventHubRequest | 
 
     try:
         # Summary: Check Azure event hub Description: Service to check Azure event hub.
@@ -193,15 +193,15 @@ Summary: Check Azure storage string Description: Service to verify Azure storage
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.streamsv3_check_azure_storage_string_request import Streamsv3CheckAzureStorageStringRequest
-from ibm_gdsc_sdk_software.models.streamsv3_check_azure_storage_string_response import Streamsv3CheckAzureStorageStringResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.streamsv3_check_azure_storage_string_request import Streamsv3CheckAzureStorageStringRequest
+from ibm_gdsc_sdk_saas.models.streamsv3_check_azure_storage_string_response import Streamsv3CheckAzureStorageStringResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -217,10 +217,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.StreamsServiceApi(api_client)
-    streamsv3_check_azure_storage_string_request = ibm_gdsc_sdk_software.Streamsv3CheckAzureStorageStringRequest() # Streamsv3CheckAzureStorageStringRequest | 
+    api_instance = ibm_gdsc_sdk_saas.StreamsServiceApi(api_client)
+    streamsv3_check_azure_storage_string_request = ibm_gdsc_sdk_saas.Streamsv3CheckAzureStorageStringRequest() # Streamsv3CheckAzureStorageStringRequest | 
 
     try:
         # Summary: Check Azure storage string Description: Service to verify Azure storage connection.
@@ -273,14 +273,14 @@ Summary: Get AWS regions Description: Service to get AWS regions.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.streamsv3_get_aws_regions_response import Streamsv3GetAWSRegionsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.streamsv3_get_aws_regions_response import Streamsv3GetAWSRegionsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -290,7 +290,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -302,9 +302,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.StreamsServiceApi(api_client)
+    api_instance = ibm_gdsc_sdk_saas.StreamsServiceApi(api_client)
 
     try:
         # Summary: Get AWS regions Description: Service to get AWS regions.
@@ -354,15 +354,15 @@ Summary: List AWS streams Description: Service to list AWS Kinesis streams.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import ibm_gdsc_sdk_software,os
-from ibm_gdsc_sdk_software.models.streamsv3_list_aws_streams_request import Streamsv3ListAWSStreamsRequest
-from ibm_gdsc_sdk_software.models.streamsv3_list_aws_streams_response import Streamsv3ListAWSStreamsResponse
-from ibm_gdsc_sdk_software.rest import ApiException
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.streamsv3_list_aws_streams_request import Streamsv3ListAWSStreamsRequest
+from ibm_gdsc_sdk_saas.models.streamsv3_list_aws_streams_response import Streamsv3ListAWSStreamsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     host = "http://localhost"
 )
 
@@ -372,7 +372,7 @@ configuration = ibm_gdsc_sdk_software.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = ibm_gdsc_sdk_software.Configuration(
+configuration = ibm_gdsc_sdk_saas.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -384,10 +384,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ibm_gdsc_sdk_software.ApiClient(configuration) as api_client:
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ibm_gdsc_sdk_software.StreamsServiceApi(api_client)
-    streamsv3_list_aws_streams_request = ibm_gdsc_sdk_software.Streamsv3ListAWSStreamsRequest() # Streamsv3ListAWSStreamsRequest | 
+    api_instance = ibm_gdsc_sdk_saas.StreamsServiceApi(api_client)
+    streamsv3_list_aws_streams_request = ibm_gdsc_sdk_saas.Streamsv3ListAWSStreamsRequest() # Streamsv3ListAWSStreamsRequest | 
 
     try:
         # Summary: List AWS streams Description: Service to list AWS Kinesis streams.

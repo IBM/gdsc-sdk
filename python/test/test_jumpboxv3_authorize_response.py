@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.jumpboxv3_authorize_response import Jumpboxv3AuthorizeResponse
+from ibm_gdsc_sdk_saas.models.jumpboxv3_authorize_response import Jumpboxv3AuthorizeResponse
 
 class TestJumpboxv3AuthorizeResponse(unittest.TestCase):
     """Jumpboxv3AuthorizeResponse unit test stubs"""

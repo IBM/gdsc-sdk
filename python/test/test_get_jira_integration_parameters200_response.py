@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.get_jira_integration_parameters200_response import GetJiraIntegrationParameters200Response
+from ibm_gdsc_sdk_saas.models.get_jira_integration_parameters200_response import GetJiraIntegrationParameters200Response
 
 class TestGetJiraIntegrationParameters200Response(unittest.TestCase):
     """GetJiraIntegrationParameters200Response unit test stubs"""

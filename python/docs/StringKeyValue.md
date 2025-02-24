@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.string_key_value import StringKeyValue
+from ibm_gdsc_sdk_saas.models.string_key_value import StringKeyValue
 
 # TODO update the JSON string below
 json = "{}"

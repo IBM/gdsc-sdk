@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_list_tags_response import Assetsv3ListTagsResponse
+from ibm_gdsc_sdk_saas.models.assetsv3_list_tags_response import Assetsv3ListTagsResponse
 
 class TestAssetsv3ListTagsResponse(unittest.TestCase):
     """Assetsv3ListTagsResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestAssetsv3ListTagsResponse(unittest.TestCase):
         if include_optional:
             return Assetsv3ListTagsResponse(
                 assigned = [
-                    ibm_gdsc_sdk_software.models.assigned_tags.Assigned tags(
+                    ibm_gdsc_sdk_saas.models.assigned_tags.Assigned tags(
                         asset_id = [
                             ''
                             ], 
@@ -47,14 +47,14 @@ class TestAssetsv3ListTagsResponse(unittest.TestCase):
                         tag_names = '', )
                     ],
                 suggestions = [
-                    ibm_gdsc_sdk_software.models.suggested_tags.Suggested tags(
+                    ibm_gdsc_sdk_saas.models.suggested_tags.Suggested tags(
                         domain_id = '', 
                         tag_category = '', 
                         tag_id = '', 
                         tag_names = '', )
                     ],
                 unassigned = [
-                    ibm_gdsc_sdk_software.models.unassigned_tags.Unassigned tags(
+                    ibm_gdsc_sdk_saas.models.unassigned_tags.Unassigned tags(
                         domain_id = '', 
                         tag_category = '', 
                         tag_id = '', 

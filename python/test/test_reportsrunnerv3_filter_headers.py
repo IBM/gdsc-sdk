@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_filter_headers import Reportsrunnerv3FilterHeaders
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_filter_headers import Reportsrunnerv3FilterHeaders
 
 class TestReportsrunnerv3FilterHeaders(unittest.TestCase):
     """Reportsrunnerv3FilterHeaders unit test stubs"""
@@ -36,7 +36,7 @@ class TestReportsrunnerv3FilterHeaders(unittest.TestCase):
         if include_optional:
             return Reportsrunnerv3FilterHeaders(
                 filters = [
-                    ibm_gdsc_sdk_software.models.reportsrunnerv3_filter.reportsrunnerv3Filter(
+                    ibm_gdsc_sdk_saas.models.reportsrunnerv3_filter.reportsrunnerv3Filter(
                         count = 56, 
                         value = '', )
                     ],

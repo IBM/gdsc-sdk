@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.universalconnectormanagerv3_plugins_list_response import Universalconnectormanagerv3PluginsListResponse
+from ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_plugins_list_response import Universalconnectormanagerv3PluginsListResponse
 
 class TestUniversalconnectormanagerv3PluginsListResponse(unittest.TestCase):
     """Universalconnectormanagerv3PluginsListResponse unit test stubs"""
@@ -36,7 +36,8 @@ class TestUniversalconnectormanagerv3PluginsListResponse(unittest.TestCase):
         if include_optional:
             return Universalconnectormanagerv3PluginsListResponse(
                 plugins = [
-                    ibm_gdsc_sdk_software.models.universalconnectormanagerv3_plugin_definition.universalconnectormanagerv3PluginDefinition(
+                    ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_plugin_definition.universalconnectormanagerv3PluginDefinition(
+                        plugin_jdbc_driver_required = True, 
                         plugin_alias = '', 
                         plugin_configuration_notes = '', 
                         plugin_description = '', 
@@ -51,7 +52,7 @@ class TestUniversalconnectormanagerv3PluginsListResponse(unittest.TestCase):
                             ''
                             ], 
                         supported_datasources = [
-                            ibm_gdsc_sdk_software.models.universalconnectormanagerv3_datasource_type.universalconnectormanagerv3DatasourceType(
+                            ibm_gdsc_sdk_saas.models.universalconnectormanagerv3_datasource_type.universalconnectormanagerv3DatasourceType(
                                 supported_versions = [
                                     ''
                                     ], 
@@ -60,14 +61,14 @@ class TestUniversalconnectormanagerv3PluginsListResponse(unittest.TestCase):
                         upload_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         upload_user = '', )
                     ],
-                status = ibm_gdsc_sdk_software.models.the_`status`_type_defines_a_logical_error_model_that_is_suitable_for_different
+                status = ibm_gdsc_sdk_saas.models.the_`status`_type_defines_a_logical_error_model_that_is_suitable_for_different
 programming_environments,_including_rest_apis_and_rpc_apis/_it_is_used_by
 [g_rpc](https://github/com/grpc)/_the_error_model_is_designed_to_be:.The `Status` type defines a logical error model that is suitable for different
 programming environments, including REST APIs and RPC APIs. It is used by
 [gRPC](https://github.com/grpc). The error model is designed to be:(
                     code = 56, 
                     details = [
-                        ibm_gdsc_sdk_software.models.protobuf_any.protobufAny(
+                        ibm_gdsc_sdk_saas.models.protobuf_any.protobufAny(
                             type_url = '', 
                             value = 'YQ==', )
                         ], 

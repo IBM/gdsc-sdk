@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.user_stores200_response import UserStores200Response
+from ibm_gdsc_sdk_saas.models.user_stores200_response import UserStores200Response
 
 class TestUserStores200Response(unittest.TestCase):
     """UserStores200Response unit test stubs"""
@@ -36,7 +36,7 @@ class TestUserStores200Response(unittest.TestCase):
         if include_optional:
             return UserStores200Response(
                 results = [
-                    ibm_gdsc_sdk_software.models.accessible_data_stores.AccessibleDataStores(
+                    ibm_gdsc_sdk_saas.models.accessible_data_stores.AccessibleDataStores(
                         id = '', 
                         name = '', 
                         type = '', 
@@ -46,7 +46,7 @@ class TestUserStores200Response(unittest.TestCase):
                             'READ'
                             ], 
                         sensitivities_summary = [
-                            ibm_gdsc_sdk_software.models.sensitivity_summary.SensitivitySummary(
+                            ibm_gdsc_sdk_saas.models.sensitivity_summary.SensitivitySummary(
                                 tag = 'BUSINESS_EMAIL_ADDRESS', 
                                 count = 230, 
                                 category = 'Personal', )
@@ -57,7 +57,7 @@ class TestUserStores200Response(unittest.TestCase):
         else:
             return UserStores200Response(
                 results = [
-                    ibm_gdsc_sdk_software.models.accessible_data_stores.AccessibleDataStores(
+                    ibm_gdsc_sdk_saas.models.accessible_data_stores.AccessibleDataStores(
                         id = '', 
                         name = '', 
                         type = '', 
@@ -67,7 +67,7 @@ class TestUserStores200Response(unittest.TestCase):
                             'READ'
                             ], 
                         sensitivities_summary = [
-                            ibm_gdsc_sdk_software.models.sensitivity_summary.SensitivitySummary(
+                            ibm_gdsc_sdk_saas.models.sensitivity_summary.SensitivitySummary(
                                 tag = 'BUSINESS_EMAIL_ADDRESS', 
                                 count = 230, 
                                 category = 'Personal', )

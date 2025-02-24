@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_update_connections_configs_request import Connectionsv3UpdateConnectionsConfigsRequest
+from ibm_gdsc_sdk_saas.models.connectionsv3_update_connections_configs_request import Connectionsv3UpdateConnectionsConfigsRequest
 
 class TestConnectionsv3UpdateConnectionsConfigsRequest(unittest.TestCase):
     """Connectionsv3UpdateConnectionsConfigsRequest unit test stubs"""
@@ -36,9 +36,9 @@ class TestConnectionsv3UpdateConnectionsConfigsRequest(unittest.TestCase):
         if include_optional:
             return Connectionsv3UpdateConnectionsConfigsRequest(
                 stream_connection_configs = [
-                    ibm_gdsc_sdk_software.models.connectionsv3_stream_connection_config.connectionsv3StreamConnectionConfig(
+                    ibm_gdsc_sdk_saas.models.connectionsv3_stream_connection_config.connectionsv3StreamConnectionConfig(
                         connection_id = '', 
-                        stream_connection = ibm_gdsc_sdk_software.models.connectionsv3_stream_connection.connectionsv3StreamConnection(
+                        stream_connection = ibm_gdsc_sdk_saas.models.connectionsv3_stream_connection.connectionsv3StreamConnection(
                             account_id = '', 
                             account_name = '', 
                             cluster_resource_id = '', 
@@ -61,12 +61,15 @@ class TestConnectionsv3UpdateConnectionsConfigsRequest(unittest.TestCase):
                     ],
                 type = 'UNDEFINED_TYPE',
                 uc_connection_configs = [
-                    ibm_gdsc_sdk_software.models.connectionsv3_uc_connection_config.connectionsv3UCConnectionConfig(
+                    ibm_gdsc_sdk_saas.models.connectionsv3_uc_connection_config.connectionsv3UCConnectionConfig(
                         connection_id = '', 
-                        uc_connection_summary = ibm_gdsc_sdk_software.models.connectionsv3_uc_connection_summary.connectionsv3UCConnectionSummary(
+                        uc_connection_summary = ibm_gdsc_sdk_saas.models.connectionsv3_uc_connection_summary.connectionsv3UCConnectionSummary(
                             alias = '', 
                             config_id = '', 
                             datasource_type = '', 
+                            edge_deployment_server = ibm_gdsc_sdk_saas.models.edge_deployment_server_type.Edge deployment server type(
+                                id = '', 
+                                name = '', ), 
                             filter_alias = '', 
                             host = '', 
                             input_alias = '', 

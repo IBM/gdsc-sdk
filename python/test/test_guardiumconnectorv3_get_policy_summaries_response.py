@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_get_policy_summaries_response import Guardiumconnectorv3GetPolicySummariesResponse
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_get_policy_summaries_response import Guardiumconnectorv3GetPolicySummariesResponse
 
 class TestGuardiumconnectorv3GetPolicySummariesResponse(unittest.TestCase):
     """Guardiumconnectorv3GetPolicySummariesResponse unit test stubs"""
@@ -36,14 +36,14 @@ class TestGuardiumconnectorv3GetPolicySummariesResponse(unittest.TestCase):
         if include_optional:
             return Guardiumconnectorv3GetPolicySummariesResponse(
                 policy_data = [
-                    ibm_gdsc_sdk_software.models.gdp_policy_summary_format.GDP policy summary format(
+                    ibm_gdsc_sdk_saas.models.gdp_policy_summary_format.GDP policy summary format(
                         id = 56, 
                         policy_description = '', 
                         policy_rules_count = 56, 
                         policy_sub_type = '', 
                         policy_type = '', )
                     ],
-                status = ibm_gdsc_sdk_software.models.guardiumconnectorv3_status_response_base.guardiumconnectorv3StatusResponseBase(
+                status = ibm_gdsc_sdk_saas.models.guardiumconnectorv3_status_response_base.guardiumconnectorv3StatusResponseBase(
                     message = '', 
                     status = '', )
             )

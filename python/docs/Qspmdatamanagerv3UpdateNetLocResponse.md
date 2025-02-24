@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.qspmdatamanagerv3_update_net_loc_response import Qspmdatamanagerv3UpdateNetLocResponse
+from ibm_gdsc_sdk_saas.models.qspmdatamanagerv3_update_net_loc_response import Qspmdatamanagerv3UpdateNetLocResponse
 
 # TODO update the JSON string below
 json = "{}"

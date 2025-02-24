@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_port_vertex import Assetsv3PortVertex
+from ibm_gdsc_sdk_saas.models.assetsv3_port_vertex import Assetsv3PortVertex
 
 class TestAssetsv3PortVertex(unittest.TestCase):
     """Assetsv3PortVertex unit test stubs"""
@@ -37,7 +37,7 @@ class TestAssetsv3PortVertex(unittest.TestCase):
             return Assetsv3PortVertex(
                 description = '',
                 extended_properties = [
-                    ibm_gdsc_sdk_software.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
+                    ibm_gdsc_sdk_saas.models.custom_property___custom_property_of_a_vertex_to_be_represnted_as_key_value_pairs.CustomProperty - Custom property of a vertex to be represnted as key value pairs(
                         data_type = '', 
                         key = '', 
                         value = '', )

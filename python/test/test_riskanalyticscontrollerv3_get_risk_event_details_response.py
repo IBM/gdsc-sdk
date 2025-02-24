@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_get_risk_event_details_response import Riskanalyticscontrollerv3GetRiskEventDetailsResponse
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_get_risk_event_details_response import Riskanalyticscontrollerv3GetRiskEventDetailsResponse
 
 class TestRiskanalyticscontrollerv3GetRiskEventDetailsResponse(unittest.TestCase):
     """Riskanalyticscontrollerv3GetRiskEventDetailsResponse unit test stubs"""
@@ -35,7 +35,7 @@ class TestRiskanalyticscontrollerv3GetRiskEventDetailsResponse(unittest.TestCase
         model = Riskanalyticscontrollerv3GetRiskEventDetailsResponse()
         if include_optional:
             return Riskanalyticscontrollerv3GetRiskEventDetailsResponse(
-                emerging_risk_details = ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_emerging_risk_details.riskanalyticscontrollerv3EmergingRiskDetails(
+                emerging_risk_details = ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_emerging_risk_details.riskanalyticscontrollerv3EmergingRiskDetails(
                     end_max_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     end_max_value = 56, 
                     peak_max_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
@@ -45,14 +45,14 @@ class TestRiskanalyticscontrollerv3GetRiskEventDetailsResponse(unittest.TestCase
                     start_max_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     start_max_value = 56, ),
                 observations = [
-                    ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_observation.riskanalyticscontrollerv3Observation(
+                    ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_observation.riskanalyticscontrollerv3Observation(
                         lead_feature_id = 56, 
                         observation_description = '', 
                         observation_id = 56, 
                         observation_type = 'UNDEFINED_OBSERVATION_TYPE', 
                         time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), )
                     ],
-                risk_event = ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_risk_event.riskanalyticscontrollerv3RiskEvent(
+                risk_event = ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_risk_event.riskanalyticscontrollerv3RiskEvent(
                     categorization_confidence = 1.337, 
                     categorization_modified = True, 
                     category_description = '', 
@@ -62,7 +62,7 @@ class TestRiskanalyticscontrollerv3GetRiskEventDetailsResponse(unittest.TestCase
                     emerging_risk = True, 
                     from_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     justification = '', 
-                    pivot = ibm_gdsc_sdk_software.models.riskanalyticsenginev3_pivot.riskanalyticsenginev3Pivot(
+                    pivot = ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_pivot.riskanalyticsenginev3Pivot(
                         database = '', 
                         database_source_field = 'UNDEFINED', 
                         db_user = '', 
@@ -74,7 +74,7 @@ class TestRiskanalyticscontrollerv3GetRiskEventDetailsResponse(unittest.TestCase
                     severity = 56, 
                     severity_level = 'UNDEFINED_SEVERITY_LEVEL', 
                     short_observations = [
-                        ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_short_observation.riskanalyticscontrollerv3ShortObservation(
+                        ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_short_observation.riskanalyticscontrollerv3ShortObservation(
                             count = 56, )
                         ], 
                     status = 'UNDEFINED_STATUS', 

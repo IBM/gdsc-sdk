@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_group_member import Guardiumconnectorv3GroupMember
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_group_member import Guardiumconnectorv3GroupMember
 
 class TestGuardiumconnectorv3GroupMember(unittest.TestCase):
     """Guardiumconnectorv3GroupMember unit test stubs"""

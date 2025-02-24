@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.list_users_entitlements200_response import ListUsersEntitlements200Response
+from ibm_gdsc_sdk_saas.models.list_users_entitlements200_response import ListUsersEntitlements200Response
 
 class TestListUsersEntitlements200Response(unittest.TestCase):
     """ListUsersEntitlements200Response unit test stubs"""

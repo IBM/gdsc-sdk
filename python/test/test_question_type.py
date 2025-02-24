@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.question_type import QuestionType
+from ibm_gdsc_sdk_saas.models.question_type import QuestionType
 
 class TestQuestionType(unittest.TestCase):
     """QuestionType unit test stubs"""

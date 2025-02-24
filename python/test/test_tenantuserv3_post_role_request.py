@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.tenantuserv3_post_role_request import Tenantuserv3PostRoleRequest
+from ibm_gdsc_sdk_saas.models.tenantuserv3_post_role_request import Tenantuserv3PostRoleRequest
 
 class TestTenantuserv3PostRoleRequest(unittest.TestCase):
     """Tenantuserv3PostRoleRequest unit test stubs"""
@@ -35,7 +35,7 @@ class TestTenantuserv3PostRoleRequest(unittest.TestCase):
         model = Tenantuserv3PostRoleRequest()
         if include_optional:
             return Tenantuserv3PostRoleRequest(
-                role = ibm_gdsc_sdk_software.models.tenantuserv3_role.tenantuserv3Role(
+                role = ibm_gdsc_sdk_saas.models.tenantuserv3_role.tenantuserv3Role(
                     description = '', 
                     icp_roles = [
                         ''

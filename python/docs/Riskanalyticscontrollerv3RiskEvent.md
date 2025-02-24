@@ -27,7 +27,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_risk_event import Riskanalyticscontrollerv3RiskEvent
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_risk_event import Riskanalyticscontrollerv3RiskEvent
 
 # TODO update the JSON string below
 json = "{}"

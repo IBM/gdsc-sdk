@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsrunnerv3_get_audit_data_count_request import Reportsrunnerv3GetAuditDataCountRequest
+from ibm_gdsc_sdk_saas.models.reportsrunnerv3_get_audit_data_count_request import Reportsrunnerv3GetAuditDataCountRequest
 
 class TestReportsrunnerv3GetAuditDataCountRequest(unittest.TestCase):
     """Reportsrunnerv3GetAuditDataCountRequest unit test stubs"""
@@ -36,17 +36,17 @@ class TestReportsrunnerv3GetAuditDataCountRequest(unittest.TestCase):
         if include_optional:
             return Reportsrunnerv3GetAuditDataCountRequest(
                 job_id = '',
-                report_filters = ibm_gdsc_sdk_software.models.reportsv3_report_filter_brackets.reportsv3ReportFilterBrackets(
+                report_filters = ibm_gdsc_sdk_saas.models.reportsv3_report_filter_brackets.reportsv3ReportFilterBrackets(
                     brackets_id = 56, 
                     filter_name = '', 
                     filters_array = [
-                        ibm_gdsc_sdk_software.models.reportsv3_report_filter.reportsv3ReportFilter(
-                            brackets = ibm_gdsc_sdk_software.models.reportsv3_report_filter_brackets.reportsv3ReportFilterBrackets(
+                        ibm_gdsc_sdk_saas.models.reportsv3_report_filter.reportsv3ReportFilter(
+                            brackets = ibm_gdsc_sdk_saas.models.reportsv3_report_filter_brackets.reportsv3ReportFilterBrackets(
                                 brackets_id = 56, 
                                 filter_name = '', 
                                 having_array = [
-                                    ibm_gdsc_sdk_software.models.report_agg_filter_represents_a_report_aggregate_filter.ReportAggFilter represents a report aggregate filter(
-                                        condition = ibm_gdsc_sdk_software.models.reportsv3_report_agg_filter_condition.reportsv3ReportAggFilterCondition(
+                                    ibm_gdsc_sdk_saas.models.report_agg_filter_represents_a_report_aggregate_filter.ReportAggFilter represents a report aggregate filter(
+                                        condition = ibm_gdsc_sdk_saas.models.reportsv3_report_agg_filter_condition.reportsv3ReportAggFilterCondition(
                                             aggregation_type = 'UNDEFINED_AGG_TYPE', 
                                             header_id = '', 
                                             header_name = '', 
@@ -57,14 +57,15 @@ class TestReportsrunnerv3GetAuditDataCountRequest(unittest.TestCase):
                                 is_custom = True, 
                                 option_type = 'UNDEFINED_OPTION_TYPE', 
                                 sequence = 56, ), 
-                            condition = ibm_gdsc_sdk_software.models.reportsv3_report_filter_condition.reportsv3ReportFilterCondition(
+                            condition = ibm_gdsc_sdk_saas.models.reportsv3_report_filter_condition.reportsv3ReportFilterCondition(
                                 case_insensitive = True, 
                                 field_nls_translation_key = '', 
                                 filter_id = 56, 
+                                group_type_id = 56, 
                                 header_id = '', 
                                 header_name = '', 
                                 header_type = 'UNDEFINED_TYPE', 
-                                in_report_date_range = ibm_gdsc_sdk_software.models.reportsv3_date_range.reportsv3DateRange(
+                                in_report_date_range = ibm_gdsc_sdk_saas.models.reportsv3_date_range.reportsv3DateRange(
                                     end_date = '', 
                                     end_number = 56, 
                                     end_unit = 'UNDEFINED_UINT_TYPE', 
@@ -78,16 +79,18 @@ class TestReportsrunnerv3GetAuditDataCountRequest(unittest.TestCase):
                                 in_report_id = '', 
                                 in_report_name = '', 
                                 in_report_table_name = '', 
+                                is_tuple = True, 
                                 parameter_type = 'UNDEFINED_PARAM_TYPE', 
                                 schema_name = '', 
                                 sequence = 56, 
                                 table_name = '', 
+                                tuple_type = '', 
                                 values = [
                                     ''
                                     ], ), )
                         ], 
                     having_array = [
-                        ibm_gdsc_sdk_software.models.report_agg_filter_represents_a_report_aggregate_filter.ReportAggFilter represents a report aggregate filter()
+                        ibm_gdsc_sdk_saas.models.report_agg_filter_represents_a_report_aggregate_filter.ReportAggFilter represents a report aggregate filter()
                         ], 
                     is_custom = True, 
                     option_type = 'UNDEFINED_OPTION_TYPE', 

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.assetsv3_child_category import Assetsv3ChildCategory
+from ibm_gdsc_sdk_saas.models.assetsv3_child_category import Assetsv3ChildCategory
 
 # TODO update the JSON string below
 json = "{}"

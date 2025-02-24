@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.groupbuilderv3_get_import_groups_response import Groupbuilderv3GetImportGroupsResponse
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_get_import_groups_response import Groupbuilderv3GetImportGroupsResponse
 
 # TODO update the JSON string below
 json = "{}"

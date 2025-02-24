@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_policy import Policybuilderv3Policy
+from ibm_gdsc_sdk_saas.models.policybuilderv3_policy import Policybuilderv3Policy
 
 class TestPolicybuilderv3Policy(unittest.TestCase):
     """Policybuilderv3Policy unit test stubs"""
@@ -40,6 +40,13 @@ class TestPolicybuilderv3Policy(unittest.TestCase):
                     'ACCESS'
                     ],
                 control_flow = 'STANDARD',
+                edge_activation_info = [
+                    ibm_gdsc_sdk_saas.models.information_about_policy_activated_on_edge.Information about policy activated on edge(
+                        activation_order = 56, 
+                        activation_status = 'NOT_ACTIVATED', 
+                        activation_timestamp = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                        edge_id = '', )
+                    ],
                 installed_flag = True,
                 installed_order = 56,
                 installed_timestamp = '',

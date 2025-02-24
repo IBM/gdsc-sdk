@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.workflowv3_filter_operator import Workflowv3FilterOperator
+from ibm_gdsc_sdk_saas.models.workflowv3_filter_operator import Workflowv3FilterOperator
 
 class TestWorkflowv3FilterOperator(unittest.TestCase):
     """Workflowv3FilterOperator unit test stubs"""

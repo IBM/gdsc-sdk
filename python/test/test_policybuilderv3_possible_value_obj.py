@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_possible_value_obj import Policybuilderv3PossibleValueObj
+from ibm_gdsc_sdk_saas.models.policybuilderv3_possible_value_obj import Policybuilderv3PossibleValueObj
 
 class TestPolicybuilderv3PossibleValueObj(unittest.TestCase):
     """Policybuilderv3PossibleValueObj unit test stubs"""

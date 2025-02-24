@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.workflowv3_create_task_request import Workflowv3CreateTaskRequest
+from ibm_gdsc_sdk_saas.models.workflowv3_create_task_request import Workflowv3CreateTaskRequest
 
 class TestWorkflowv3CreateTaskRequest(unittest.TestCase):
     """Workflowv3CreateTaskRequest unit test stubs"""
@@ -36,10 +36,10 @@ class TestWorkflowv3CreateTaskRequest(unittest.TestCase):
         if include_optional:
             return Workflowv3CreateTaskRequest(
                 case_id = '',
-                task = ibm_gdsc_sdk_software.models.workflowv3_task_create.workflowv3TaskCreate(
+                task = ibm_gdsc_sdk_saas.models.workflowv3_task_create.workflowv3TaskCreate(
                     alt_id = '', 
                     assignments = [
-                        ibm_gdsc_sdk_software.models.workflowv3_entity.workflowv3Entity(
+                        ibm_gdsc_sdk_saas.models.workflowv3_entity.workflowv3Entity(
                             label = '', 
                             template_id = '', 
                             type = 'UNDEFINED_ENTITY_TYPE', 
@@ -52,11 +52,11 @@ class TestWorkflowv3CreateTaskRequest(unittest.TestCase):
                         ], 
                     description = '', 
                     investigation_links = [
-                        ibm_gdsc_sdk_software.models.generic_configuration_item_reference.Generic configuration item reference(
+                        ibm_gdsc_sdk_saas.models.generic_configuration_item_reference.Generic configuration item reference(
                             display = '', 
                             id = '', )
                         ], 
-                    origin = ibm_gdsc_sdk_software.models.origininating_job_identification.Origininating job identification(
+                    origin = ibm_gdsc_sdk_saas.models.origininating_job_identification.Origininating job identification(
                         date_next = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         date_start = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         description = '', 
@@ -64,19 +64,19 @@ class TestWorkflowv3CreateTaskRequest(unittest.TestCase):
                         name = '', 
                         scheduled_job_id = '', ), 
                     priority = 'UNDEFINED_PRIORITY', 
-                    report_result = ibm_gdsc_sdk_software.models.workflowv3_report_result.workflowv3ReportResult(
+                    report_result = ibm_gdsc_sdk_saas.models.workflowv3_report_result.workflowv3ReportResult(
                         headers = [
-                            ibm_gdsc_sdk_software.models.workflowv3_report_result_header.workflowv3ReportResultHeader(
+                            ibm_gdsc_sdk_saas.models.workflowv3_report_result_header.workflowv3ReportResultHeader(
                                 header = '', 
                                 key = '', )
                             ], 
                         rows = [
-                            ibm_gdsc_sdk_software.models.workflowv3_report_result_row.workflowv3ReportResultRow(
+                            ibm_gdsc_sdk_saas.models.workflowv3_report_result_row.workflowv3ReportResultRow(
                                 row = {
                                     'key' : ''
                                     }, )
                             ], ), 
-                    response_template = ibm_gdsc_sdk_software.models.generic_configuration_item_reference.Generic configuration item reference(
+                    response_template = ibm_gdsc_sdk_saas.models.generic_configuration_item_reference.Generic configuration item reference(
                         display = '', 
                         id = '', ), 
                     status = 'UNDEFINED_STATUS', 

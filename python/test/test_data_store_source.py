@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.data_store_source import DataStoreSource
+from ibm_gdsc_sdk_saas.models.data_store_source import DataStoreSource
 
 class TestDataStoreSource(unittest.TestCase):
     """DataStoreSource unit test stubs"""

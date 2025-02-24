@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_category_field import Reportsv3CategoryField
+from ibm_gdsc_sdk_saas.models.reportsv3_category_field import Reportsv3CategoryField
 
 class TestReportsv3CategoryField(unittest.TestCase):
     """Reportsv3CategoryField unit test stubs"""

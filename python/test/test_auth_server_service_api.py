@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.auth_server_service_api import AuthServerServiceApi
+from ibm_gdsc_sdk_saas.api.auth_server_service_api import AuthServerServiceApi
 
 
 class TestAuthServerServiceApi(unittest.TestCase):

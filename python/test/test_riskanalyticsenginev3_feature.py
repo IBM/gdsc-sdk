@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticsenginev3_feature import Riskanalyticsenginev3Feature
+from ibm_gdsc_sdk_saas.models.riskanalyticsenginev3_feature import Riskanalyticsenginev3Feature
 
 class TestRiskanalyticsenginev3Feature(unittest.TestCase):
     """Riskanalyticsenginev3Feature unit test stubs"""

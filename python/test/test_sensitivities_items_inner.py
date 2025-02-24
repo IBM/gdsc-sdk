@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.sensitivities_items_inner import SensitivitiesItemsInner
+from ibm_gdsc_sdk_saas.models.sensitivities_items_inner import SensitivitiesItemsInner
 
 class TestSensitivitiesItemsInner(unittest.TestCase):
     """SensitivitiesItemsInner unit test stubs"""

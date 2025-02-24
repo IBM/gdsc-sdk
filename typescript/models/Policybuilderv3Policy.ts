@@ -11,6 +11,7 @@
  */
 
 import { Policybuilderv3ControlFlow } from '../models/Policybuilderv3ControlFlow';
+import { Policybuilderv3EdgeActivationObject } from '../models/Policybuilderv3EdgeActivationObject';
 import { Policybuilderv3ImportIssue } from '../models/Policybuilderv3ImportIssue';
 import { Policybuilderv3ImportState } from '../models/Policybuilderv3ImportState';
 import { Policybuilderv3PolicyType } from '../models/Policybuilderv3PolicyType';
@@ -30,6 +31,7 @@ export class Policybuilderv3Policy {
     */
     'containsRuleTypes'?: Array<Policybuilderv3RuleType>;
     'controlFlow'?: Policybuilderv3ControlFlow;
+    'edgeActivationInfo'?: Array<Policybuilderv3EdgeActivationObject>;
     /**
     * Flag to indicate whether policy is installed or not.
     */
@@ -101,6 +103,12 @@ export class Policybuilderv3Policy {
             "name": "controlFlow",
             "baseName": "control_flow",
             "type": "Policybuilderv3ControlFlow",
+            "format": ""
+        },
+        {
+            "name": "edgeActivationInfo",
+            "baseName": "edge_activation_info",
+            "type": "Array<Policybuilderv3EdgeActivationObject>",
             "format": ""
         },
         {

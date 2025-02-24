@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.vulnerabilities_filter_options import VulnerabilitiesFilterOptions
+from ibm_gdsc_sdk_saas.models.vulnerabilities_filter_options import VulnerabilitiesFilterOptions
 
 class TestVulnerabilitiesFilterOptions(unittest.TestCase):
     """VulnerabilitiesFilterOptions unit test stubs"""
@@ -50,7 +50,7 @@ class TestVulnerabilitiesFilterOptions(unittest.TestCase):
                 threat_categories = [
                     'Security'
                     ],
-                affected_data_store = ibm_gdsc_sdk_software.models.vulnerability_affected_data_store_filter_options.VulnerabilityAffectedDataStoreFilterOptions(
+                affected_data_store = ibm_gdsc_sdk_saas.models.vulnerability_affected_data_store_filter_options.VulnerabilityAffectedDataStoreFilterOptions(
                     data_store_ids = ["arn:aws:s3::123456789101:polar-bucket","arn:aws:s3::123456789101:polar-bucket2"], 
                     data_store_types = ["s3","s3"], 
                     cloud_providers = [

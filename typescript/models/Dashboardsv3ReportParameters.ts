@@ -22,6 +22,7 @@ export class Dashboardsv3ReportParameters {
     * End.
     */
     'end'?: string;
+    'groupIds'?: Array<number>;
     /**
     * Parameters id.
     */
@@ -64,6 +65,12 @@ export class Dashboardsv3ReportParameters {
             "baseName": "end",
             "type": "string",
             "format": ""
+        },
+        {
+            "name": "groupIds",
+            "baseName": "group_ids",
+            "type": "Array<number>",
+            "format": "int32"
         },
         {
             "name": "id",

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_tag_categories_data import Assetsv3TagCategoriesData
+from ibm_gdsc_sdk_saas.models.assetsv3_tag_categories_data import Assetsv3TagCategoriesData
 
 class TestAssetsv3TagCategoriesData(unittest.TestCase):
     """Assetsv3TagCategoriesData unit test stubs"""

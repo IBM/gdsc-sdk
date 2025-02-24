@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.operator import Operator
+from ibm_gdsc_sdk_saas.models.operator import Operator
 
 class TestOperator(unittest.TestCase):
     """Operator unit test stubs"""

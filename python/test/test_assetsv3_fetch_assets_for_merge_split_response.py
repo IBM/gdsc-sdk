@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_fetch_assets_for_merge_split_response import Assetsv3FetchAssetsForMergeSplitResponse
+from ibm_gdsc_sdk_saas.models.assetsv3_fetch_assets_for_merge_split_response import Assetsv3FetchAssetsForMergeSplitResponse
 
 class TestAssetsv3FetchAssetsForMergeSplitResponse(unittest.TestCase):
     """Assetsv3FetchAssetsForMergeSplitResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestAssetsv3FetchAssetsForMergeSplitResponse(unittest.TestCase):
         if include_optional:
             return Assetsv3FetchAssetsForMergeSplitResponse(
                 assets = [
-                    ibm_gdsc_sdk_software.models.asset_details_to_return_in_merge_and_split_response.Asset details to return in Merge and Split Response(
+                    ibm_gdsc_sdk_saas.models.asset_details_to_return_in_merge_and_split_response.Asset details to return in Merge and Split Response(
                         asset_id = 56, 
                         asset_name = '', 
                         database_name = '', 

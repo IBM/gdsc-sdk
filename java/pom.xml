@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.ibm.gdsc.sdk</groupId>
-    <artifactId>com.ibm.gdsc.sdk.software</artifactId>
+    <groupId>com.ibm.security.guardium</groupId>
+    <artifactId>com.ibm.security.guardium.saas</artifactId>
     <packaging>jar</packaging>
-    <name>com.ibm.gdsc.sdk.software</name>
-    <version>3.6.1</version>
+    <name>com.ibm.security.guardium.saas</name>
+    <version>3.0.20250224</version>
     <url>https://github.com/openapitools/openapi-generator</url>
     <description>OpenAPI Java</description>
     <scm>

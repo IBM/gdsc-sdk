@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.groupbuilderv3_get_group_members_request import Groupbuilderv3GetGroupMembersRequest
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_get_group_members_request import Groupbuilderv3GetGroupMembersRequest
 
 class TestGroupbuilderv3GetGroupMembersRequest(unittest.TestCase):
     """Groupbuilderv3GetGroupMembersRequest unit test stubs"""

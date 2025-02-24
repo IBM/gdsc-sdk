@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_control_flow import Policybuilderv3ControlFlow
+from ibm_gdsc_sdk_saas.models.policybuilderv3_control_flow import Policybuilderv3ControlFlow
 
 class TestPolicybuilderv3ControlFlow(unittest.TestCase):
     """Policybuilderv3ControlFlow unit test stubs"""

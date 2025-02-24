@@ -11,17 +11,16 @@
  */
 
 import { Riskanalyticscontrollerv3DetailToCount } from '../models/Riskanalyticscontrollerv3DetailToCount';
+import { Riskanalyticscontrollerv3FindingReferenceLink } from '../models/Riskanalyticscontrollerv3FindingReferenceLink';
 import { HttpFile } from '../http/http';
 
 export class Riskanalyticscontrollerv3FindingDetails {
-    /**
-    * Finding details counts (for violation, exception) - Optional.
-    */
     'counts'?: Array<Riskanalyticscontrollerv3DetailToCount>;
-    /**
-    * Finding examples (for outlier, activity) - Optional.
-    */
     'findingExamples'?: Array<string>;
+    /**
+    * Finding links/references; used outlier with high volume type, and in policy violations; each reference contains a deep link filters to the report.
+    */
+    'findingReferences'?: Array<Riskanalyticscontrollerv3FindingReferenceLink>;
 
     static readonly discriminator: string | undefined = undefined;
 
@@ -36,6 +35,12 @@ export class Riskanalyticscontrollerv3FindingDetails {
             "name": "findingExamples",
             "baseName": "finding_examples",
             "type": "Array<string>",
+            "format": ""
+        },
+        {
+            "name": "findingReferences",
+            "baseName": "finding_references",
+            "type": "Array<Riskanalyticscontrollerv3FindingReferenceLink>",
             "format": ""
         }    ];
 

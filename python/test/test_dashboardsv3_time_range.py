@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.dashboardsv3_time_range import Dashboardsv3TimeRange
+from ibm_gdsc_sdk_saas.models.dashboardsv3_time_range import Dashboardsv3TimeRange
 
 class TestDashboardsv3TimeRange(unittest.TestCase):
     """Dashboardsv3TimeRange unit test stubs"""

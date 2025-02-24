@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_parameter_relation_ship import Policybuilderv3ParameterRelationShip
+from ibm_gdsc_sdk_saas.models.policybuilderv3_parameter_relation_ship import Policybuilderv3ParameterRelationShip
 
 class TestPolicybuilderv3ParameterRelationShip(unittest.TestCase):
     """Policybuilderv3ParameterRelationShip unit test stubs"""

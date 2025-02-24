@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.list_sensitivities200_response import ListSensitivities200Response
+from ibm_gdsc_sdk_saas.models.list_sensitivities200_response import ListSensitivities200Response
 
 class TestListSensitivities200Response(unittest.TestCase):
     """ListSensitivities200Response unit test stubs"""
@@ -36,7 +36,7 @@ class TestListSensitivities200Response(unittest.TestCase):
         if include_optional:
             return ListSensitivities200Response(
                 results = [
-                    ibm_gdsc_sdk_software.models.sensitivity_list_item.SensitivityListItem(
+                    ibm_gdsc_sdk_saas.models.sensitivity_list_item.SensitivityListItem(
                         sensitivity_id = '151193111234', 
                         tag = 'Business Email Address', 
                         query = '', 
@@ -51,7 +51,7 @@ class TestListSensitivities200Response(unittest.TestCase):
         else:
             return ListSensitivities200Response(
                 results = [
-                    ibm_gdsc_sdk_software.models.sensitivity_list_item.SensitivityListItem(
+                    ibm_gdsc_sdk_saas.models.sensitivity_list_item.SensitivityListItem(
                         sensitivity_id = '151193111234', 
                         tag = 'Business Email Address', 
                         query = '', 

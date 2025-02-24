@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.cloud_accounts_api import CloudAccountsApi
+from ibm_gdsc_sdk_saas.api.cloud_accounts_api import CloudAccountsApi
 
 
 class TestCloudAccountsApi(unittest.TestCase):

@@ -8,7 +8,7 @@ Response object for group types mapping.
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**groupMap** | **Map&lt;String, Integer&gt;** | Map of gdp to gi group type mapping objects. |  [optional] |
+|**groupMap** | **Map&lt;String, Integer&gt;** | Map of GDP to gi group type mapping objects. |  [optional] |
 |**status** | [**Groupbuilderv3StatusResponseBase**](Groupbuilderv3StatusResponseBase.md) |  |  [optional] |
 
 

@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **central_manager** | **str** |  | [optional] 
 **created_policy_id** | **str** |  | [optional] 
 **gdp_synced_id** | **str** | Sync id of the created or updated sync policy. | [optional] 
-**import_name** | **str** | Name for imported gdp policy. | [optional] 
+**import_name** | **str** | Name for imported GDP policy. | [optional] 
 **last_state_change** | **str** |  | [optional] 
 **policy_import_issue** | [**Policybuilderv3ImportIssue**](Policybuilderv3ImportIssue.md) |  | [optional] 
 **policy_import_state** | [**Policybuilderv3ImportState**](Policybuilderv3ImportState.md) |  | [optional] 
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.policybuilderv3_gdp_policy_sync_res import Policybuilderv3GdpPolicySyncRes
+from ibm_gdsc_sdk_saas.models.policybuilderv3_gdp_policy_sync_res import Policybuilderv3GdpPolicySyncRes
 
 # TODO update the JSON string below
 json = "{}"

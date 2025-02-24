@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.groupbuilderv3_status_response_base import Groupbuilderv3StatusResponseBase
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_status_response_base import Groupbuilderv3StatusResponseBase
 
 class TestGroupbuilderv3StatusResponseBase(unittest.TestCase):
     """Groupbuilderv3StatusResponseBase unit test stubs"""

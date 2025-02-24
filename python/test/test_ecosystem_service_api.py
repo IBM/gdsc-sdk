@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.ecosystem_service_api import EcosystemServiceApi
+from ibm_gdsc_sdk_saas.api.ecosystem_service_api import EcosystemServiceApi
 
 
 class TestEcosystemServiceApi(unittest.TestCase):
@@ -79,6 +79,13 @@ class TestEcosystemServiceApi(unittest.TestCase):
         """Test case for ecosystem_service_purge_data
 
         Summary: Purge data Description: Purge data.
+        """
+        pass
+
+    def test_ecosystem_service_test_integration(self) -> None:
+        """Test case for ecosystem_service_test_integration
+
+        Summary: Test integration Description: Test the integration connection with the arguments passed in the TestIntegrationRequest.  When possible a test message is sent to the integration to ensure it is functional. Currently this API only supports API_IMPORT type integrations
         """
         pass
 

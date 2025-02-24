@@ -34,6 +34,10 @@ export class Schedulerv3ReportParameter {
     * Optional: Flag if sync query_from_date when running this report.
     */
     'syncExecutionDate'?: boolean;
+    /**
+    * Optional: threshold count for creating tickets or other integration messages. Default is 1. If there is one row of data from a report, send message.
+    */
+    'threshold'?: number;
 
     static readonly discriminator: string | undefined = undefined;
 
@@ -67,6 +71,12 @@ export class Schedulerv3ReportParameter {
             "baseName": "sync_execution_date",
             "type": "boolean",
             "format": ""
+        },
+        {
+            "name": "threshold",
+            "baseName": "threshold",
+            "type": "number",
+            "format": "int64"
         }    ];
 
     static getAttributeTypeMap() {

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.policybuilderv3_get_policy_names_from_rule_ids_request import Policybuilderv3GetPolicyNamesFromRuleIDsRequest
+from ibm_gdsc_sdk_saas.models.policybuilderv3_get_policy_names_from_rule_ids_request import Policybuilderv3GetPolicyNamesFromRuleIDsRequest
 
 class TestPolicybuilderv3GetPolicyNamesFromRuleIDsRequest(unittest.TestCase):
     """Policybuilderv3GetPolicyNamesFromRuleIDsRequest unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.dashboardsv3_card import Dashboardsv3Card
+from ibm_gdsc_sdk_saas.models.dashboardsv3_card import Dashboardsv3Card
 
 class TestDashboardsv3Card(unittest.TestCase):
     """Dashboardsv3Card unit test stubs"""
@@ -36,7 +36,7 @@ class TestDashboardsv3Card(unittest.TestCase):
         if include_optional:
             return Dashboardsv3Card(
                 card_id = '',
-                card_position = ibm_gdsc_sdk_software.models.dashboardsv3_card_position.dashboardsv3CardPosition(
+                card_position = ibm_gdsc_sdk_saas.models.dashboardsv3_card_position.dashboardsv3CardPosition(
                     height = 1.337, 
                     width = 1.337, 
                     x_position = 1.337, 
@@ -45,10 +45,13 @@ class TestDashboardsv3Card(unittest.TestCase):
                 excluded_global_filter_ids = [
                     ''
                     ],
-                report_parameters = ibm_gdsc_sdk_software.models.dashboardsv3_report_parameters.dashboardsv3ReportParameters(
+                report_parameters = ibm_gdsc_sdk_saas.models.dashboardsv3_report_parameters.dashboardsv3ReportParameters(
                     end = '', 
+                    group_ids = [
+                        56
+                        ], 
                     id = '', 
-                    local_time_filter = ibm_gdsc_sdk_software.models.dashboardsv3_time_range.dashboardsv3TimeRange(
+                    local_time_filter = ibm_gdsc_sdk_saas.models.dashboardsv3_time_range.dashboardsv3TimeRange(
                         end = '', 
                         range = '', 
                         start = '', ), 
@@ -58,7 +61,7 @@ class TestDashboardsv3Card(unittest.TestCase):
                     regulation = '', 
                     start = '', 
                     tags = [
-                        ibm_gdsc_sdk_software.models.reportsv3_report_tag.reportsv3ReportTag(
+                        ibm_gdsc_sdk_saas.models.reportsv3_report_tag.reportsv3ReportTag(
                             nls_key = '', 
                             nls_value = '', )
                         ], 

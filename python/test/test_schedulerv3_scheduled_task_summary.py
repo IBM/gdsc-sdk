@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.schedulerv3_scheduled_task_summary import Schedulerv3ScheduledTaskSummary
+from ibm_gdsc_sdk_saas.models.schedulerv3_scheduled_task_summary import Schedulerv3ScheduledTaskSummary
 
 class TestSchedulerv3ScheduledTaskSummary(unittest.TestCase):
     """Schedulerv3ScheduledTaskSummary unit test stubs"""

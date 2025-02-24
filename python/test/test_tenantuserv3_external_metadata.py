@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.tenantuserv3_external_metadata import Tenantuserv3ExternalMetadata
+from ibm_gdsc_sdk_saas.models.tenantuserv3_external_metadata import Tenantuserv3ExternalMetadata
 
 class TestTenantuserv3ExternalMetadata(unittest.TestCase):
     """Tenantuserv3ExternalMetadata unit test stubs"""
@@ -36,7 +36,7 @@ class TestTenantuserv3ExternalMetadata(unittest.TestCase):
         if include_optional:
             return Tenantuserv3ExternalMetadata(
                 add_ons = {
-                    'key' : ibm_gdsc_sdk_software.models.tenantuserv3_prometheus.tenantuserv3Prometheus(
+                    'key' : ibm_gdsc_sdk_saas.models.tenantuserv3_prometheus.tenantuserv3Prometheus(
                         unit = '', 
                         value = '', )
                     },

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_plugin_configuration import Connectionsv3PluginConfiguration
+from ibm_gdsc_sdk_saas.models.connectionsv3_plugin_configuration import Connectionsv3PluginConfiguration
 
 class TestConnectionsv3PluginConfiguration(unittest.TestCase):
     """Connectionsv3PluginConfiguration unit test stubs"""
@@ -37,20 +37,25 @@ class TestConnectionsv3PluginConfiguration(unittest.TestCase):
             return Connectionsv3PluginConfiguration(
                 datasource_type = '',
                 developer_name = '',
+                document_link = '',
+                gdp_package_link = '',
+                gi_package_link = '',
                 id = '',
                 last_modified = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 logfile = '',
                 name = '',
                 readme = '',
                 records = [
-                    ibm_gdsc_sdk_software.models.name_and_value_for_each_plugin_record.name and value for each plugin record(
+                    ibm_gdsc_sdk_saas.models.name_and_value_for_each_plugin_record.name and value for each plugin record(
                         guard_record_name = '', 
                         value = '', )
                     ],
                 state = '',
                 supported_inputs = [
                     ''
-                    ]
+                    ],
+                version = '',
+                version_tested = ''
             )
         else:
             return Connectionsv3PluginConfiguration(

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticsmlclassificationv3_get_classification_model_response import Riskanalyticsmlclassificationv3GetClassificationModelResponse
+from ibm_gdsc_sdk_saas.models.riskanalyticsmlclassificationv3_get_classification_model_response import Riskanalyticsmlclassificationv3GetClassificationModelResponse
 
 class TestRiskanalyticsmlclassificationv3GetClassificationModelResponse(unittest.TestCase):
     """Riskanalyticsmlclassificationv3GetClassificationModelResponse unit test stubs"""
@@ -36,13 +36,13 @@ class TestRiskanalyticsmlclassificationv3GetClassificationModelResponse(unittest
         if include_optional:
             return Riskanalyticsmlclassificationv3GetClassificationModelResponse(
                 model = [
-                    ibm_gdsc_sdk_software.models.riskanalyticsmlclassificationv3_class_model_explained.riskanalyticsmlclassificationv3ClassModelExplained(
+                    ibm_gdsc_sdk_saas.models.riskanalyticsmlclassificationv3_class_model_explained.riskanalyticsmlclassificationv3ClassModelExplained(
                         class_confidence = 1.337, 
                         class_key = '', 
                         rule_sets = [
-                            ibm_gdsc_sdk_software.models.riskanalyticsmlclassificationv3_rule_set_list.riskanalyticsmlclassificationv3RuleSetList(
+                            ibm_gdsc_sdk_saas.models.riskanalyticsmlclassificationv3_rule_set_list.riskanalyticsmlclassificationv3RuleSetList(
                                 rule_set_list = [
-                                    ibm_gdsc_sdk_software.models.a_rule_of_classification_model.A rule of classification model(
+                                    ibm_gdsc_sdk_saas.models.a_rule_of_classification_model.A rule of classification model(
                                         feature_name = '', 
                                         operator = '', 
                                         value = 1.337, )

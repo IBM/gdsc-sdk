@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.assetsv3_asset_change_log import Assetsv3AssetChangeLog
+from ibm_gdsc_sdk_saas.models.assetsv3_asset_change_log import Assetsv3AssetChangeLog
 
 class TestAssetsv3AssetChangeLog(unittest.TestCase):
     """Assetsv3AssetChangeLog unit test stubs"""
@@ -38,7 +38,7 @@ class TestAssetsv3AssetChangeLog(unittest.TestCase):
                 action_taken = '',
                 activity = '',
                 after = [
-                    ibm_gdsc_sdk_software.models.assetsv3_before_after.assetsv3BeforeAfter(
+                    ibm_gdsc_sdk_saas.models.assetsv3_before_after.assetsv3BeforeAfter(
                         asset_id = '', 
                         asset_name = '', 
                         rule_id = '', 
@@ -47,7 +47,7 @@ class TestAssetsv3AssetChangeLog(unittest.TestCase):
                         tag_name = '', )
                     ],
                 before = [
-                    ibm_gdsc_sdk_software.models.assetsv3_before_after.assetsv3BeforeAfter(
+                    ibm_gdsc_sdk_saas.models.assetsv3_before_after.assetsv3BeforeAfter(
                         asset_id = '', 
                         asset_name = '', 
                         rule_id = '', 
@@ -58,7 +58,7 @@ class TestAssetsv3AssetChangeLog(unittest.TestCase):
                 var_date = '',
                 performed_by = '',
                 rule = [
-                    ibm_gdsc_sdk_software.models.rule_logged.Rule logged(
+                    ibm_gdsc_sdk_saas.models.rule_logged.Rule logged(
                         rule_id = '', 
                         rule_name = '', )
                     ]

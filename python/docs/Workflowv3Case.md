@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.workflowv3_case import Workflowv3Case
+from ibm_gdsc_sdk_saas.models.workflowv3_case import Workflowv3Case
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.add_analyzed_region_request import AddAnalyzedRegionRequest
+from ibm_gdsc_sdk_saas.models.add_analyzed_region_request import AddAnalyzedRegionRequest
 
 class TestAddAnalyzedRegionRequest(unittest.TestCase):
     """AddAnalyzedRegionRequest unit test stubs"""
@@ -41,7 +41,7 @@ class TestAddAnalyzedRegionRequest(unittest.TestCase):
                     ''
                     ],
                 customer_tags = [
-                    ibm_gdsc_sdk_software.models.tags.Tags(
+                    ibm_gdsc_sdk_saas.models.tags.Tags(
                         key = 'Owner', 
                         value = 'polarsec', )
                     ]

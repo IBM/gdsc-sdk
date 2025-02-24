@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.connectionsv3_update_banner_state_request import Connectionsv3UpdateBannerStateRequest
+from ibm_gdsc_sdk_saas.models.connectionsv3_update_banner_state_request import Connectionsv3UpdateBannerStateRequest
 
 class TestConnectionsv3UpdateBannerStateRequest(unittest.TestCase):
     """Connectionsv3UpdateBannerStateRequest unit test stubs"""

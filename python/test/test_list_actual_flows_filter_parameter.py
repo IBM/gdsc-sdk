@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.list_actual_flows_filter_parameter import ListActualFlowsFilterParameter
+from ibm_gdsc_sdk_saas.models.list_actual_flows_filter_parameter import ListActualFlowsFilterParameter
 
 class TestListActualFlowsFilterParameter(unittest.TestCase):
     """ListActualFlowsFilterParameter unit test stubs"""
@@ -52,10 +52,10 @@ class TestListActualFlowsFilterParameter(unittest.TestCase):
                 access_types = [
                     'READ'
                     ],
-                last_seen = ibm_gdsc_sdk_software.models.comparator.Comparator(
+                last_seen = ibm_gdsc_sdk_saas.models.comparator.Comparator(
                     value = 1.337, 
                     operator = 'gt', ),
-                first_seen = ibm_gdsc_sdk_software.models.comparator.Comparator(
+                first_seen = ibm_gdsc_sdk_saas.models.comparator.Comparator(
                     value = 1.337, 
                     operator = 'gt', )
             )

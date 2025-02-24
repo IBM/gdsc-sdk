@@ -19,6 +19,10 @@ import { HttpFile } from '../http/http';
 */
 export class Snifassistv3SnifAssistResponse {
     /**
+    * Specify batch number if Type is POLICY or GROUP_UPDATE.
+    */
+    'batchNum'?: string;
+    /**
     * Data field if any.
     */
     'data'?: string;
@@ -40,6 +44,12 @@ export class Snifassistv3SnifAssistResponse {
     static readonly discriminator: string | undefined = undefined;
 
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "batchNum",
+            "baseName": "batch_num",
+            "type": "string",
+            "format": "int64"
+        },
         {
             "name": "data",
             "baseName": "data",

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.vendor_summary import VendorSummary
+from ibm_gdsc_sdk_saas.models.vendor_summary import VendorSummary
 
 class TestVendorSummary(unittest.TestCase):
     """VendorSummary unit test stubs"""
@@ -35,12 +35,12 @@ class TestVendorSummary(unittest.TestCase):
         model = VendorSummary()
         if include_optional:
             return VendorSummary(
-                customer_account_details = ibm_gdsc_sdk_software.models.cloud_account_details.CloudAccountDetails(
+                customer_account_details = ibm_gdsc_sdk_saas.models.cloud_account_details.CloudAccountDetails(
                     cloud_account_id = '123456789101', 
                     cloud_account_name = 'corplex', 
                     service_provider = 'aws', ),
                 sensitivities_summary = [
-                    ibm_gdsc_sdk_software.models.sensitivity_summary.SensitivitySummary(
+                    ibm_gdsc_sdk_saas.models.sensitivity_summary.SensitivitySummary(
                         tag = 'BUSINESS_EMAIL_ADDRESS', 
                         count = 230, 
                         category = 'Personal', )
@@ -49,12 +49,12 @@ class TestVendorSummary(unittest.TestCase):
             )
         else:
             return VendorSummary(
-                customer_account_details = ibm_gdsc_sdk_software.models.cloud_account_details.CloudAccountDetails(
+                customer_account_details = ibm_gdsc_sdk_saas.models.cloud_account_details.CloudAccountDetails(
                     cloud_account_id = '123456789101', 
                     cloud_account_name = 'corplex', 
                     service_provider = 'aws', ),
                 sensitivities_summary = [
-                    ibm_gdsc_sdk_software.models.sensitivity_summary.SensitivitySummary(
+                    ibm_gdsc_sdk_saas.models.sensitivity_summary.SensitivitySummary(
                         tag = 'BUSINESS_EMAIL_ADDRESS', 
                         count = 230, 
                         category = 'Personal', )

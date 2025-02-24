@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.notificationsv3_get_folders_request import Notificationsv3GetFoldersRequest
+from ibm_gdsc_sdk_saas.models.notificationsv3_get_folders_request import Notificationsv3GetFoldersRequest
 
 class TestNotificationsv3GetFoldersRequest(unittest.TestCase):
     """Notificationsv3GetFoldersRequest unit test stubs"""

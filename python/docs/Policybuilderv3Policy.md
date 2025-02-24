@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **activation_status** | **int** | activation_status identifier: 1001 -&gt; install with no issues, 1002-&gt; installed with issues, 1003 -&gt; not installed. | [optional] 
 **contains_rule_types** | [**List[Policybuilderv3RuleType]**](Policybuilderv3RuleType.md) | Indicates different type of rule types contained by the policy. | [optional] 
 **control_flow** | [**Policybuilderv3ControlFlow**](Policybuilderv3ControlFlow.md) |  | [optional] 
+**edge_activation_info** | [**List[Policybuilderv3EdgeActivationObject]**](Policybuilderv3EdgeActivationObject.md) |  | [optional] 
 **installed_flag** | **bool** | Flag to indicate whether policy is installed or not. | [optional] 
 **installed_order** | **int** | Variable to indicate the order of the installed policy. | [optional] 
 **installed_timestamp** | **str** | Timestamp to indicate when the policy was installed. | [optional] 
@@ -28,7 +29,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.policybuilderv3_policy import Policybuilderv3Policy
+from ibm_gdsc_sdk_saas.models.policybuilderv3_policy import Policybuilderv3Policy
 
 # TODO update the JSON string below
 json = "{}"

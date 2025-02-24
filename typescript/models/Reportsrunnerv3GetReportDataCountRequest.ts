@@ -22,6 +22,10 @@ import { HttpFile } from '../http/http';
 export class Reportsrunnerv3GetReportDataCountRequest {
     'dateRange'?: Reportsv3DateRange;
     'modelType'?: Reportsv3ModelType;
+    /**
+    * Optional: query_id is used to uniquely identify a query. It can be later used to stop the same query.
+    */
+    'queryId'?: string;
     'reportDefinition'?: Reportsv3ReportDefinition;
     /**
     * Optional: the ID of the Report we wish to run (e.g. 000000000000000000000905).
@@ -49,6 +53,12 @@ export class Reportsrunnerv3GetReportDataCountRequest {
             "name": "modelType",
             "baseName": "model_type",
             "type": "Reportsv3ModelType",
+            "format": ""
+        },
+        {
+            "name": "queryId",
+            "baseName": "query_id",
+            "type": "string",
             "format": ""
         },
         {

@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.assetsv3_timeline_date_range import Assetsv3TimelineDateRange
+from ibm_gdsc_sdk_saas.models.assetsv3_timeline_date_range import Assetsv3TimelineDateRange
 
 # TODO update the JSON string below
 json = "{}"

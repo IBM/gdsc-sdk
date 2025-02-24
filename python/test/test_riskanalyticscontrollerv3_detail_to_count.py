@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.riskanalyticscontrollerv3_detail_to_count import Riskanalyticscontrollerv3DetailToCount
+from ibm_gdsc_sdk_saas.models.riskanalyticscontrollerv3_detail_to_count import Riskanalyticscontrollerv3DetailToCount
 
 class TestRiskanalyticscontrollerv3DetailToCount(unittest.TestCase):
     """Riskanalyticscontrollerv3DetailToCount unit test stubs"""

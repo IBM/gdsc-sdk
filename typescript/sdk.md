@@ -1,146 +1,3 @@
-# .AnalyticsEventsServiceApi
-
-All URIs are relative to *http://localhost*
-
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**analyticsEventsServiceDeleteCacheKey**](AnalyticsEventsServiceApi.md#analyticsEventsServiceDeleteCacheKey) | **DELETE** /api/v3/eventscache/{cache_key} | Summary: Delete cache key Description: Return delete key result message.
-[**analyticsEventsServicePostQSAdvisorRisk**](AnalyticsEventsServiceApi.md#analyticsEventsServicePostQSAdvisorRisk) | **POST** /api/v3/risk/qs_advisor | Summary: For QS Advisor risk notification only Description: Sends QS Advisor risk notification with recipients and returns a status
-
-
-# **analyticsEventsServiceDeleteCacheKey**
-> Analyticseventsv3DeleteCacheKeyResponse analyticsEventsServiceDeleteCacheKey(analyticseventsv3DeleteCacheKeyRequest)
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .AnalyticsEventsServiceApi(configuration);
-
-let body:.AnalyticsEventsServiceApiAnalyticsEventsServiceDeleteCacheKeyRequest = {
-  // string | The cache key to delete.
-  cacheKey: "cache_key_example",
-  // Analyticseventsv3DeleteCacheKeyRequest
-  analyticseventsv3DeleteCacheKeyRequest: {
-    cacheKey: "cacheKey_example",
-  },
-};
-
-apiInstance.analyticsEventsServiceDeleteCacheKey(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **analyticseventsv3DeleteCacheKeyRequest** | **Analyticseventsv3DeleteCacheKeyRequest**|  |
- **cacheKey** | [**string**] | The cache key to delete. | defaults to undefined
-
-
-### Return type
-
-**Analyticseventsv3DeleteCacheKeyResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **analyticsEventsServicePostQSAdvisorRisk**
-> Analyticseventsv3PostQSAdvisorRiskResponse analyticsEventsServicePostQSAdvisorRisk(analyticseventsv3PostQSAdvisorRiskRequest)
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .AnalyticsEventsServiceApi(configuration);
-
-let body:.AnalyticsEventsServiceApiAnalyticsEventsServicePostQSAdvisorRiskRequest = {
-  // Analyticseventsv3PostQSAdvisorRiskRequest
-  analyticseventsv3PostQSAdvisorRiskRequest: {
-    origin: "UNDEFINED_ORIGIN",
-    originData: "originData_example",
-    targetReceivers: [
-      {
-        integrationId: "integrationId_example",
-        label: "label_example",
-        templateId: "templateId_example",
-        type: "UNDEFINED_RECTYPE",
-        value: "value_example",
-      },
-    ],
-    templateData: {
-      "key": "key_example",
-    },
-    title: "title_example",
-  },
-};
-
-apiInstance.analyticsEventsServicePostQSAdvisorRisk(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **analyticseventsv3PostQSAdvisorRiskRequest** | **Analyticseventsv3PostQSAdvisorRiskRequest**|  |
-
-
-### Return type
-
-**Analyticseventsv3PostQSAdvisorRiskResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-
-
-
-
 # .AssetsServiceApi
 
 All URIs are relative to *http://localhost*
@@ -4135,6 +3992,20 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorCreateWorkspaceRequest = 
             desc: "desc_example",
             groupTypeId: 1,
             id: 1,
+            ldapConfig: {
+              attributes: [
+                "attributes_example",
+              ],
+              bindGroupId: 1,
+              bindPassword: "bindPassword_example",
+              clearGroup: true,
+              filter: "filter_example",
+              filterScope: 1,
+              importLimit: 1,
+              ldapGroupName: "ldapGroupName_example",
+              ldapId: "ldapId_example",
+              memberPrefix: "memberPrefix_example",
+            },
             members: [
               {
                 memberId: "memberId_example",
@@ -4271,6 +4142,7 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorCreateWorkspaceRequest = 
                       },
                     ],
                     syncExecutionDate: true,
+                    threshold: 1,
                   },
                 },
                 recipients: [
@@ -4292,6 +4164,7 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorCreateWorkspaceRequest = 
                         caseInsensitive: true,
                         fieldNlsTranslationKey: "fieldNlsTranslationKey_example",
                         filterId: 1,
+                        groupTypeId: 1,
                         headerId: "headerId_example",
                         headerName: "headerName_example",
                         headerType: "UNDEFINED_TYPE",
@@ -4310,11 +4183,13 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorCreateWorkspaceRequest = 
                         inReportId: "inReportId_example",
                         inReportName: "inReportName_example",
                         inReportTableName: "inReportTableName_example",
+                        isTuple: true,
                         operatorType: "UNDEFINED_OPERATOR_TYPE",
                         parameterType: "UNDEFINED_PARAM_TYPE",
                         schemaName: "schemaName_example",
                         sequence: 1,
                         tableName: "tableName_example",
+                        tupleType: "tupleType_example",
                         values: [
                           "values_example",
                         ],
@@ -4369,6 +4244,20 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorCreateWorkspaceRequest = 
               desc: "desc_example",
               groupTypeId: 1,
               id: 1,
+              ldapConfig: {
+                attributes: [
+                  "attributes_example",
+                ],
+                bindGroupId: 1,
+                bindPassword: "bindPassword_example",
+                clearGroup: true,
+                filter: "filter_example",
+                filterScope: 1,
+                importLimit: 1,
+                ldapGroupName: "ldapGroupName_example",
+                ldapId: "ldapId_example",
+                memberPrefix: "memberPrefix_example",
+              },
               members: [
                 {
                   memberId: "memberId_example",
@@ -4398,6 +4287,20 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorCreateWorkspaceRequest = 
                       desc: "desc_example",
                       groupTypeId: 1,
                       id: 1,
+                      ldapConfig: {
+                        attributes: [
+                          "attributes_example",
+                        ],
+                        bindGroupId: 1,
+                        bindPassword: "bindPassword_example",
+                        clearGroup: true,
+                        filter: "filter_example",
+                        filterScope: 1,
+                        importLimit: 1,
+                        ldapGroupName: "ldapGroupName_example",
+                        ldapId: "ldapId_example",
+                        memberPrefix: "memberPrefix_example",
+                      },
                       members: [
                         {
                           memberId: "memberId_example",
@@ -4422,6 +4325,20 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorCreateWorkspaceRequest = 
                       desc: "desc_example",
                       groupTypeId: 1,
                       id: 1,
+                      ldapConfig: {
+                        attributes: [
+                          "attributes_example",
+                        ],
+                        bindGroupId: 1,
+                        bindPassword: "bindPassword_example",
+                        clearGroup: true,
+                        filter: "filter_example",
+                        filterScope: 1,
+                        importLimit: 1,
+                        ldapGroupName: "ldapGroupName_example",
+                        ldapId: "ldapId_example",
+                        memberPrefix: "memberPrefix_example",
+                      },
                       members: [
                         {
                           memberId: "memberId_example",
@@ -4568,7 +4485,10 @@ import * as fs from 'fs';
 const configuration = .createConfiguration();
 const apiInstance = new .ComplianceAcceleratorApi(configuration);
 
-let body:any = {};
+let body:.ComplianceAcceleratorApiComplianceAcceleratorGetComplianceInfoRequest = {
+  // boolean | gives compliance workspace data without reaching out to other services - meant to be quicker for dashboards. (optional)
+  isBrief: true,
+};
 
 apiInstance.complianceAcceleratorGetComplianceInfo(body).then((data:any) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -4577,7 +4497,10 @@ apiInstance.complianceAcceleratorGetComplianceInfo(body).then((data:any) => {
 
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **isBrief** | [**boolean**] | gives compliance workspace data without reaching out to other services - meant to be quicker for dashboards. | (optional) defaults to undefined
 
 
 ### Return type
@@ -4686,6 +4609,20 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorStoreComplianceInfoReques
             desc: "desc_example",
             groupTypeId: 1,
             id: 1,
+            ldapConfig: {
+              attributes: [
+                "attributes_example",
+              ],
+              bindGroupId: 1,
+              bindPassword: "bindPassword_example",
+              clearGroup: true,
+              filter: "filter_example",
+              filterScope: 1,
+              importLimit: 1,
+              ldapGroupName: "ldapGroupName_example",
+              ldapId: "ldapId_example",
+              memberPrefix: "memberPrefix_example",
+            },
             members: [
               {
                 memberId: "memberId_example",
@@ -4822,6 +4759,7 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorStoreComplianceInfoReques
                       },
                     ],
                     syncExecutionDate: true,
+                    threshold: 1,
                   },
                 },
                 recipients: [
@@ -4843,6 +4781,7 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorStoreComplianceInfoReques
                         caseInsensitive: true,
                         fieldNlsTranslationKey: "fieldNlsTranslationKey_example",
                         filterId: 1,
+                        groupTypeId: 1,
                         headerId: "headerId_example",
                         headerName: "headerName_example",
                         headerType: "UNDEFINED_TYPE",
@@ -4861,11 +4800,13 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorStoreComplianceInfoReques
                         inReportId: "inReportId_example",
                         inReportName: "inReportName_example",
                         inReportTableName: "inReportTableName_example",
+                        isTuple: true,
                         operatorType: "UNDEFINED_OPERATOR_TYPE",
                         parameterType: "UNDEFINED_PARAM_TYPE",
                         schemaName: "schemaName_example",
                         sequence: 1,
                         tableName: "tableName_example",
+                        tupleType: "tupleType_example",
                         values: [
                           "values_example",
                         ],
@@ -4920,6 +4861,20 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorStoreComplianceInfoReques
               desc: "desc_example",
               groupTypeId: 1,
               id: 1,
+              ldapConfig: {
+                attributes: [
+                  "attributes_example",
+                ],
+                bindGroupId: 1,
+                bindPassword: "bindPassword_example",
+                clearGroup: true,
+                filter: "filter_example",
+                filterScope: 1,
+                importLimit: 1,
+                ldapGroupName: "ldapGroupName_example",
+                ldapId: "ldapId_example",
+                memberPrefix: "memberPrefix_example",
+              },
               members: [
                 {
                   memberId: "memberId_example",
@@ -4949,6 +4904,20 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorStoreComplianceInfoReques
                       desc: "desc_example",
                       groupTypeId: 1,
                       id: 1,
+                      ldapConfig: {
+                        attributes: [
+                          "attributes_example",
+                        ],
+                        bindGroupId: 1,
+                        bindPassword: "bindPassword_example",
+                        clearGroup: true,
+                        filter: "filter_example",
+                        filterScope: 1,
+                        importLimit: 1,
+                        ldapGroupName: "ldapGroupName_example",
+                        ldapId: "ldapId_example",
+                        memberPrefix: "memberPrefix_example",
+                      },
                       members: [
                         {
                           memberId: "memberId_example",
@@ -4973,6 +4942,20 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorStoreComplianceInfoReques
                       desc: "desc_example",
                       groupTypeId: 1,
                       id: 1,
+                      ldapConfig: {
+                        attributes: [
+                          "attributes_example",
+                        ],
+                        bindGroupId: 1,
+                        bindPassword: "bindPassword_example",
+                        clearGroup: true,
+                        filter: "filter_example",
+                        filterScope: 1,
+                        importLimit: 1,
+                        ldapGroupName: "ldapGroupName_example",
+                        ldapId: "ldapId_example",
+                        memberPrefix: "memberPrefix_example",
+                      },
                       members: [
                         {
                           memberId: "memberId_example",
@@ -5064,6 +5047,7 @@ Method | HTTP request | Description
 [**connectionsServiceDeleteConnectionsConfigs**](ConnectionsServiceApi.md#connectionsServiceDeleteConnectionsConfigs) | **DELETE** /api/v3/connections/configs/{connection_id} | Summary: Delete connections configs Description: Delete Connection config by connection id.
 [**connectionsServiceDeleteConnector**](ConnectionsServiceApi.md#connectionsServiceDeleteConnector) | **DELETE** /api/v3/connections/{connection_id} | Summary: Delete connector Description: Delete a Connection.
 [**connectionsServiceDeletePlugin**](ConnectionsServiceApi.md#connectionsServiceDeletePlugin) | **DELETE** /api/v3/connections/plugins/{id} | Summary: Delete plugin. Description: Delete plugin.
+[**connectionsServiceGeneratePackage**](ConnectionsServiceApi.md#connectionsServiceGeneratePackage) | **PUT** /api/v3/connections/plugins/{id}/package | Summary: Generate package. Description: Generate package.
 [**connectionsServiceGetBannerState**](ConnectionsServiceApi.md#connectionsServiceGetBannerState) | **GET** /api/v3/connections/banner | Summary: Get banner state for object verb page.  Description: Get banner state for object verb page.
 [**connectionsServiceGetConnectionsAccounts**](ConnectionsServiceApi.md#connectionsServiceGetConnectionsAccounts) | **GET** /api/v3/connections/accounts | Summary: Get Connections accounts Description: Get Connections acccounts.
 [**connectionsServiceGetConnectionsConfigs**](ConnectionsServiceApi.md#connectionsServiceGetConnectionsConfigs) | **GET** /api/v3/connections/configs | Summary: Get connections configs Description: Get Connection config by connection type.
@@ -5082,6 +5066,7 @@ Method | HTTP request | Description
 [**connectionsServiceUpdateConnectors**](ConnectionsServiceApi.md#connectionsServiceUpdateConnectors) | **PUT** /api/v3/connections | Summary: Update connectors Description: Update a list of Connectors.
 [**connectionsServiceUpdatePlugin**](ConnectionsServiceApi.md#connectionsServiceUpdatePlugin) | **PUT** /api/v3/connections/plugins/{id} | Summary: Update plugin. Description: Update plugin.
 [**connectionsServiceUpdateSettings**](ConnectionsServiceApi.md#connectionsServiceUpdateSettings) | **PUT** /api/v3/connections/settings | Summary: Update settings Description: Update Settings.
+[**connectionsServiceValidateAwsConnection**](ConnectionsServiceApi.md#connectionsServiceValidateAwsConnection) | **POST** /api/v3/connections/validate/aws | Summary: Validate an AWS connection. Description: Validate an AWS connection.
 
 
 # **connectionsServiceCreateConnectionsAccounts**
@@ -5192,6 +5177,10 @@ let body:.ConnectionsServiceApiConnectionsServiceCreateConnectionsConfigsRequest
       alias: "alias_example",
       configId: "configId_example",
       datasourceType: "datasourceType_example",
+      edgeDeploymentServer: {
+        id: "id_example",
+        name: "name_example",
+      },
       filterAlias: "filterAlias_example",
       host: "host_example",
       inputAlias: "inputAlias_example",
@@ -5258,6 +5247,7 @@ let body:.ConnectionsServiceApiConnectionsServiceCreatePluginRequest = {
   connectionsv3CreatePluginRequest: {
     datasourceType: "datasourceType_example",
     developerName: "developerName_example",
+    documentLink: "documentLink_example",
     logfile: "logfile_example",
     name: "name_example",
     readme: "readme_example",
@@ -5270,6 +5260,8 @@ let body:.ConnectionsServiceApiConnectionsServiceCreatePluginRequest = {
     supportedInputs: [
       "supportedInputs_example",
     ],
+    version: "version_example",
+    versionTested: "versionTested_example",
   },
 };
 
@@ -5588,6 +5580,83 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **connectionsServiceGeneratePackage**
+> Connectionsv3GeneratePackageResponse connectionsServiceGeneratePackage(connectionsv3GeneratePackageRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ConnectionsServiceApi(configuration);
+
+let body:.ConnectionsServiceApiConnectionsServiceGeneratePackageRequest = {
+  // string | id
+  id: "id_example",
+  // Connectionsv3GeneratePackageRequest
+  connectionsv3GeneratePackageRequest: {
+    datasourceType: "datasourceType_example",
+    developerName: "developerName_example",
+    documentLink: "documentLink_example",
+    id: "id_example",
+    logfile: "logfile_example",
+    name: "name_example",
+    readme: "readme_example",
+    records: [
+      {
+        guardRecordName: "guardRecordName_example",
+        value: "value_example",
+      },
+    ],
+    state: "state_example",
+    supportedInputs: [
+      "supportedInputs_example",
+    ],
+    version: "version_example",
+    versionTested: "versionTested_example",
+  },
+};
+
+apiInstance.connectionsServiceGeneratePackage(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **connectionsv3GeneratePackageRequest** | **Connectionsv3GeneratePackageRequest**|  |
+ **id** | [**string**] | id | defaults to undefined
+
+
+### Return type
+
+**Connectionsv3GeneratePackageResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -6430,6 +6499,10 @@ let body:.ConnectionsServiceApiConnectionsServiceUpdateConnectionsConfigsRequest
           alias: "alias_example",
           configId: "configId_example",
           datasourceType: "datasourceType_example",
+          edgeDeploymentServer: {
+            id: "id_example",
+            name: "name_example",
+          },
           filterAlias: "filterAlias_example",
           host: "host_example",
           inputAlias: "inputAlias_example",
@@ -6572,6 +6645,7 @@ let body:.ConnectionsServiceApiConnectionsServiceUpdatePluginRequest = {
   connectionsv3UpdatePluginRequest: {
     datasourceType: "datasourceType_example",
     developerName: "developerName_example",
+    documentLink: "documentLink_example",
     id: "id_example",
     logfile: "logfile_example",
     name: "name_example",
@@ -6586,6 +6660,8 @@ let body:.ConnectionsServiceApiConnectionsServiceUpdatePluginRequest = {
     supportedInputs: [
       "supportedInputs_example",
     ],
+    version: "version_example",
+    versionTested: "versionTested_example",
   },
 };
 
@@ -6700,6 +6776,68 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **connectionsServiceValidateAwsConnection**
+> Connectionsv3ValidateConnectionResponse connectionsServiceValidateAwsConnection(connectionsv3ValidateAwsConnectionRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ConnectionsServiceApi(configuration);
+
+let body:.ConnectionsServiceApiConnectionsServiceValidateAwsConnectionRequest = {
+  // Connectionsv3ValidateAwsConnectionRequest
+  connectionsv3ValidateAwsConnectionRequest: {
+    accessKey: "accessKey_example",
+    groupName: "groupName_example",
+    inputPluginType: "inputPluginType_example",
+    logStream: "logStream_example",
+    queueUrl: "queueUrl_example",
+    region: "region_example",
+    secretKey: "secretKey_example",
+  },
+};
+
+apiInstance.connectionsServiceValidateAwsConnection(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **connectionsv3ValidateAwsConnectionRequest** | **Connectionsv3ValidateAwsConnectionRequest**|  |
+
+
+### Return type
+
+**Connectionsv3ValidateConnectionResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 
 
 
@@ -6748,6 +6886,9 @@ let body:.DashboardsServiceApiDashboardsServiceCreateDashboardRequest = {
         ],
         reportParameters: {
           end: "end_example",
+          groupIds: [
+            1,
+          ],
           id: "id_example",
           localTimeFilter: {
             end: "end_example",
@@ -6977,6 +7118,9 @@ let body:.DashboardsServiceApiDashboardsServiceUpdateDashboardRequest = {
           ],
           reportParameters: {
             end: "end_example",
+            groupIds: [
+              1,
+            ],
             id: "id_example",
             localTimeFilter: {
               end: "end_example",
@@ -9831,6 +9975,7 @@ Method | HTTP request | Description
 [**ecosystemServiceGetDatasets**](EcosystemServiceApi.md#ecosystemServiceGetDatasets) | **GET** /api/v3/integrations/datasets | Summary: Get datasets Description: Return dataset list that matches the specified filter.
 [**ecosystemServiceGetPurgableRows**](EcosystemServiceApi.md#ecosystemServiceGetPurgableRows) | **POST** /api/v3/integrations/purge | Summary: Get purgable rows Description: Check the number of rows that can be purged.
 [**ecosystemServicePurgeData**](EcosystemServiceApi.md#ecosystemServicePurgeData) | **DELETE** /api/v3/integrations/datasets/data | Summary: Purge data Description: Purge data.
+[**ecosystemServiceTestIntegration**](EcosystemServiceApi.md#ecosystemServiceTestIntegration) | **POST** /api/v3/integrations/setup/test | Summary: Test integration Description: Test the integration connection with the arguments passed in the TestIntegrationRequest.  When possible a test message is sent to the integration to ensure it is functional. Currently this API only supports API_IMPORT type integrations
 
 
 # **ecosystemServiceCreateDataset**
@@ -10340,6 +10485,253 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **ecosystemServiceTestIntegration**
+> Ecosystemv3TestIntegrationResponse ecosystemServiceTestIntegration(ecosystemv3TestIntegrationRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .EcosystemServiceApi(configuration);
+
+let body:.EcosystemServiceApiEcosystemServiceTestIntegrationRequest = {
+  // Ecosystemv3TestIntegrationRequest
+  ecosystemv3TestIntegrationRequest: {
+    integrationType: "integrationType_example",
+    options: {
+      "key": "key_example",
+    },
+  },
+};
+
+apiInstance.ecosystemServiceTestIntegration(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ecosystemv3TestIntegrationRequest** | **Ecosystemv3TestIntegrationRequest**|  |
+
+
+### Return type
+
+**Ecosystemv3TestIntegrationResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+
+
+
+
+# .EdgeSchedulerServiceApi
+
+All URIs are relative to *http://localhost*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**edgeSchedulerServiceGetEdgeQueryStatus**](EdgeSchedulerServiceApi.md#edgeSchedulerServiceGetEdgeQueryStatus) | **GET** /api/v3/edges/{edge_id}/query/status | Summary: Get edge query status Description: Get the status of a queued edge query
+[**edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery**](EdgeSchedulerServiceApi.md#edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery) | **GET** /api/v3/edges/query | Summary: Monitor for a pending edge query request Description: monitor edge query pending request
+[**edgeSchedulerServiceScheduleEdgeQuery**](EdgeSchedulerServiceApi.md#edgeSchedulerServiceScheduleEdgeQuery) | **POST** /api/v3/edges/{edge_id}/query/schedule | Summary: Schedule an edge query  Description: Schedule an edge query via data warehouse queue
+
+
+# **edgeSchedulerServiceGetEdgeQueryStatus**
+> Edgeschedulerv3GetEdgeQueryStatusResponse edgeSchedulerServiceGetEdgeQueryStatus()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .EdgeSchedulerServiceApi(configuration);
+
+let body:.EdgeSchedulerServiceApiEdgeSchedulerServiceGetEdgeQueryStatusRequest = {
+  // string | the id of the edge
+  edgeId: "edge_id_example",
+  // string | the id of the UC report being queried for. (optional)
+  edgeResultReportId: "edge_result_report_id_example",
+};
+
+apiInstance.edgeSchedulerServiceGetEdgeQueryStatus(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **edgeId** | [**string**] | the id of the edge | defaults to undefined
+ **edgeResultReportId** | [**string**] | the id of the UC report being queried for. | (optional) defaults to undefined
+
+
+### Return type
+
+**Edgeschedulerv3GetEdgeQueryStatusResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery**
+> StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .EdgeSchedulerServiceApi(configuration);
+
+let body:.EdgeSchedulerServiceApiEdgeSchedulerServiceMonitoringPendingRequestForEdgeQueryRequest = {
+  // string | edge client id to monitor edge query requests for. (optional)
+  clientId: "client_id_example",
+};
+
+apiInstance.edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **clientId** | [**string**] | edge client id to monitor edge query requests for. | (optional) defaults to undefined
+
+
+### Return type
+
+**StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response.(streaming responses) |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **edgeSchedulerServiceScheduleEdgeQuery**
+> Edgeschedulerv3ScheduleEdgeQueryResponse edgeSchedulerServiceScheduleEdgeQuery(edgeschedulerv3ScheduleEdgeQueryRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .EdgeSchedulerServiceApi(configuration);
+
+let body:.EdgeSchedulerServiceApiEdgeSchedulerServiceScheduleEdgeQueryRequest = {
+  // string | the id of the edge
+  edgeId: "edge_id_example",
+  // Edgeschedulerv3ScheduleEdgeQueryRequest
+  edgeschedulerv3ScheduleEdgeQueryRequest: {
+    edgeId: "edgeId_example",
+    edgeQueryEndTime: new Date('1970-01-01T00:00:00.00Z'),
+    edgeQueryStartTime: new Date('1970-01-01T00:00:00.00Z'),
+    edgeResultReportId: "edgeResultReportId_example",
+  },
+};
+
+apiInstance.edgeSchedulerServiceScheduleEdgeQuery(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **edgeschedulerv3ScheduleEdgeQueryRequest** | **Edgeschedulerv3ScheduleEdgeQueryRequest**|  |
+ **edgeId** | [**string**] | the id of the edge | defaults to undefined
+
+
+### Return type
+
+**Edgeschedulerv3ScheduleEdgeQueryResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 
 
 
@@ -10609,8 +11001,8 @@ Method | HTTP request | Description
 [**groupBuilderExportGroup**](GroupBuilderApi.md#groupBuilderExportGroup) | **POST** /api/v3/groups_export | Summary: Export group Description: Export group content to a file based on a group ID.
 [**groupBuilderGetGroupDetails**](GroupBuilderApi.md#groupBuilderGetGroupDetails) | **GET** /api/v3/groups/{group_id} | Summary: Get group details Description: Get details of group specified by group ID.
 [**groupBuilderGetGroupMembers**](GroupBuilderApi.md#groupBuilderGetGroupMembers) | **POST** /api/v3/groups/search | Summary: Get group members Description: Get members of all the group ids provided in the request. To be consumed by policy builder ms.
-[**groupBuilderGetGroupSyncMapping**](GroupBuilderApi.md#groupBuilderGetGroupSyncMapping) | **GET** /api/v3/groups/mappings/sync | Summary: Get gdp to gi group mapping Description: Get insights to gdp group sync mapping.
-[**groupBuilderGetGroupTypeMapping**](GroupBuilderApi.md#groupBuilderGetGroupTypeMapping) | **GET** /api/v3/groups-mappings | Summary: Get group type mapping Description: Get insights to gdp group types mapping.
+[**groupBuilderGetGroupSyncMapping**](GroupBuilderApi.md#groupBuilderGetGroupSyncMapping) | **GET** /api/v3/groups/mappings/sync | Summary: Get GDP to gi group mapping Description: Get GDSC to GDP group sync mapping.
+[**groupBuilderGetGroupTypeMapping**](GroupBuilderApi.md#groupBuilderGetGroupTypeMapping) | **GET** /api/v3/groups-mappings | Summary: Get group type mapping Description: Get GDSC to GDP group types mapping.
 [**groupBuilderGetGroupTypes**](GroupBuilderApi.md#groupBuilderGetGroupTypes) | **GET** /api/v3/group_types | Summary: Get group types Description: Get a list of available group types.
 [**groupBuilderGetGroups**](GroupBuilderApi.md#groupBuilderGetGroups) | **GET** /api/v3/groups | Summary: Get groups Description: Get a list of imported group members.
 [**groupBuilderGetImportGroups**](GroupBuilderApi.md#groupBuilderGetImportGroups) | **GET** /api/v3/groups_import | Summary: Get import groups Description: Get unsynchronized groups from a central manager.
@@ -11700,18 +12092,18 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**guardiumConnectorAddCM**](GuardiumConnectorApi.md#guardiumConnectorAddCM) | **POST** /api/v3/central_managers | Summary: Add CM Description: Add a Central Manager to the tenant database.
-[**guardiumConnectorAddDatamarts**](GuardiumConnectorApi.md#guardiumConnectorAddDatamarts) | **POST** /api/v3/central_managers/{central_manager_id}/datamarts | Description: stores datamarts details from GDP
+[**guardiumConnectorAddDatamarts**](GuardiumConnectorApi.md#guardiumConnectorAddDatamarts) | **POST** /api/v3/central_managers/{central_manager_id}/datamarts | Description: stores datamarts details from GDP. (This API is called from GDP only)
 [**guardiumConnectorAddDmExclusion**](GuardiumConnectorApi.md#guardiumConnectorAddDmExclusion) | **POST** /api/v3/datamarts/exclusion_list | Summary: Add DM exclusion Description: Add datamart to exclusion list.
-[**guardiumConnectorAddTask**](GuardiumConnectorApi.md#guardiumConnectorAddTask) | **POST** /api/v3/central_managers/{central_manager_id}/tasks | Summary: Add task Description: Add a task to be executed on GDP.
+[**guardiumConnectorAddTask**](GuardiumConnectorApi.md#guardiumConnectorAddTask) | **POST** /api/v3/central_managers/{central_manager_id}/tasks | Summary: Add task Description: Add a task to be executed on GDP. (This API is called from GDP only)
 [**guardiumConnectorBlockUser**](GuardiumConnectorApi.md#guardiumConnectorBlockUser) | **POST** /api/v3/block_user | Summary: Block user Description: Block a database user on Guardium Data Protection or on a supported Database as a Service instance.
 [**guardiumConnectorConfigureAggregatorExport**](GuardiumConnectorApi.md#guardiumConnectorConfigureAggregatorExport) | **PUT** /api/v3/central_managers/{central_manager_id}/aggregator_config_export | Summary: Configure aggregator export Description: Configure datamart export from the Aggregators to GI.
 [**guardiumConnectorConfigureCollectorExport**](GuardiumConnectorApi.md#guardiumConnectorConfigureCollectorExport) | **PUT** /api/v3/central_managers/{central_manager_id}/collector_config_export | Summary: Configure collector export Description: Schedule export historical data for collectors.
 [**guardiumConnectorConfigureStreaming**](GuardiumConnectorApi.md#guardiumConnectorConfigureStreaming) | **POST** /api/v3/central_managers/{central_manager_id}/streaming | Summary: Configure streaming Description: Enable or disable streaming.
-[**guardiumConnectorDatamartVersionCheck**](GuardiumConnectorApi.md#guardiumConnectorDatamartVersionCheck) | **POST** /api/v3/central_managers/{central_manager_id}/datamart_version | Description: validates if central manager has datamart support for event model
+[**guardiumConnectorDatamartVersionCheck**](GuardiumConnectorApi.md#guardiumConnectorDatamartVersionCheck) | **POST** /api/v3/central_managers/{central_manager_id}/datamart_version | Description: validates if central manager has v5 datamart support. (This API is called from GDP only)
 [**guardiumConnectorDeleteCM**](GuardiumConnectorApi.md#guardiumConnectorDeleteCM) | **DELETE** /api/v3/central_managers/{central_manager_id} | Summary: Delete CM Description: Delete a Central Manager by ID (Name, Hostname or IP).
 [**guardiumConnectorDeleteDmExclusion**](GuardiumConnectorApi.md#guardiumConnectorDeleteDmExclusion) | **DELETE** /api/v3/datamarts/exclusion_list | Summary: Delete DM exclusion Description: Delete a datamart from exclusion list.
-[**guardiumConnectorDeleteTask**](GuardiumConnectorApi.md#guardiumConnectorDeleteTask) | **DELETE** /api/v3/central_managers/{central_manager_id}/tasks/{task_id} | Summary: Delete task Description: Delete a task by central manager id and task id.
-[**guardiumConnectorDeleteTasks**](GuardiumConnectorApi.md#guardiumConnectorDeleteTasks) | **DELETE** /api/v3/central_managers/{central_manager_id}/tasks | Summary: Delete tasks Description: Delete a central manager\&#39;s tasks by central manager id.
+[**guardiumConnectorDeleteTask**](GuardiumConnectorApi.md#guardiumConnectorDeleteTask) | **DELETE** /api/v3/central_managers/{central_manager_id}/tasks/{task_id} | Summary: Delete task Description: Delete a task by central manager id and task id. (This API is called from GDP only)
+[**guardiumConnectorDeleteTasks**](GuardiumConnectorApi.md#guardiumConnectorDeleteTasks) | **DELETE** /api/v3/central_managers/{central_manager_id}/tasks | Summary: Delete tasks Description: Delete a central manager\&#39;s tasks by central manager id. (This API is called from GDP only)
 [**guardiumConnectorGetAggregatorsConfig**](GuardiumConnectorApi.md#guardiumConnectorGetAggregatorsConfig) | **GET** /api/v3/central_managers/{central_manager_id}/aggregators_config | Summary: Get aggregators config Description: Return a list of managed units from the config collection in tenant database.
 [**guardiumConnectorGetCMs**](GuardiumConnectorApi.md#guardiumConnectorGetCMs) | **GET** /api/v3/central_managers | Summary: Get CMs Description: Return a list of Central Managers from the tenant database with additional processing.
 [**guardiumConnectorGetCMsConfig**](GuardiumConnectorApi.md#guardiumConnectorGetCMsConfig) | **GET** /api/v3/central_managers_config | Summary: Get CMs config Description: Return a list of Central Managers from the tenant database.
@@ -11720,20 +12112,20 @@ Method | HTTP request | Description
 [**guardiumConnectorGetDmExclusion**](GuardiumConnectorApi.md#guardiumConnectorGetDmExclusion) | **GET** /api/v3/datamarts/exclusion_list | Summary: Get DM exclusion Description: Return datamarts in the exclusion list.
 [**guardiumConnectorGetGdpPolicyInfo**](GuardiumConnectorApi.md#guardiumConnectorGetGdpPolicyInfo) | **GET** /api/v3/central_managers/{central_manager_id}/policies/info | Summary: Get guardium policy definition Description: returns the policy definition on the cm
 [**guardiumConnectorGetGdpPolicySummaries**](GuardiumConnectorApi.md#guardiumConnectorGetGdpPolicySummaries) | **GET** /api/v3/central_managers/{central_manager_id}/policies/summaries | Summary: Get guardium policy summary Description: returns the summaries of all policies on that central manager
-[**guardiumConnectorGetHealthInfo**](GuardiumConnectorApi.md#guardiumConnectorGetHealthInfo) | **GET** /api/v3/central_managers/{central_manager_id}/health_info | Summary: Get gealth info Description: Get health information from Guardium Data Protection central mamangers.
-[**guardiumConnectorGetLatestDMExtractionProfile**](GuardiumConnectorApi.md#guardiumConnectorGetLatestDMExtractionProfile) | **GET** /api/v3/central_managers/{central_manager_id}/datamart_extraction_profile | Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for Guardium.
+[**guardiumConnectorGetHealthInfo**](GuardiumConnectorApi.md#guardiumConnectorGetHealthInfo) | **GET** /api/v3/central_managers/{central_manager_id}/health_info | Summary: Get health info Description: Get health information from Guardium Data Protection central mamangers. (This API is for CMs registered in legacy pull mode. Supported on-premises only)
+[**guardiumConnectorGetLatestDMExtractionProfile**](GuardiumConnectorApi.md#guardiumConnectorGetLatestDMExtractionProfile) | **GET** /api/v3/central_managers/{central_manager_id}/datamart_extraction_profile | Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for GDSC.
 [**guardiumConnectorGetStreamingStatus**](GuardiumConnectorApi.md#guardiumConnectorGetStreamingStatus) | **GET** /api/v3/central_managers/{central_manager_id}/streaming | Summary: Get streaming status Description: Return the streaming configuration.
-[**guardiumConnectorGetSyncDMs**](GuardiumConnectorApi.md#guardiumConnectorGetSyncDMs) | **GET** /api/v3/central_managers/{central_manager_id}/sync | Summary: Get sync DMs Description: Return the list of tasks from a central manager.
+[**guardiumConnectorGetSyncDMs**](GuardiumConnectorApi.md#guardiumConnectorGetSyncDMs) | **GET** /api/v3/central_managers/{central_manager_id}/sync | Summary: Get sync DMs Description: Return the list of tasks from a central manager. (This API is called from GDP only)
 [**guardiumConnectorGetTaskTypes**](GuardiumConnectorApi.md#guardiumConnectorGetTaskTypes) | **GET** /api/v3/central_managers/task_types | Summary: Get task types Description: Return the list of supported task types.
-[**guardiumConnectorGetTasks**](GuardiumConnectorApi.md#guardiumConnectorGetTasks) | **GET** /api/v3/central_managers/{central_manager_id}/tasks | Summary: Get tasks Description: Return the list of tasks from a central manager.
-[**guardiumConnectorRunGDPReport**](GuardiumConnectorApi.md#guardiumConnectorRunGDPReport) | **POST** /api/v3/central_managers/{central_manager_id}/run_report | Summary: Run GDP report Description: Run GDP report.
-[**guardiumConnectorSetupCM**](GuardiumConnectorApi.md#guardiumConnectorSetupCM) | **POST** /api/v3/central_managers/setup | Summary: Setup CM Description: Set up the registration between a GDP Central manager and Guardium.
+[**guardiumConnectorGetTasks**](GuardiumConnectorApi.md#guardiumConnectorGetTasks) | **GET** /api/v3/central_managers/{central_manager_id}/tasks | Summary: Get tasks Description: Return the list of tasks from a central manager. (This API is called from GDP only)
+[**guardiumConnectorRunGDPReport**](GuardiumConnectorApi.md#guardiumConnectorRunGDPReport) | **POST** /api/v3/central_managers/{central_manager_id}/run_report | Summary: Run GDP report Description: Run GDP report. (This API is for CMs registered in legacy pull mode. Supported on-premises only)
+[**guardiumConnectorSetupCM**](GuardiumConnectorApi.md#guardiumConnectorSetupCM) | **POST** /api/v3/central_managers/setup | Summary: Setup CM Description: Set up the registration between a GDP Central manager and GDSC. (This API is called from GDP only)
 [**guardiumConnectorSetupDatamarts**](GuardiumConnectorApi.md#guardiumConnectorSetupDatamarts) | **POST** /api/v3/central_managers/{central_manager_id}/datamarts/setup | Description: setup custom datamart execution mode
-[**guardiumConnectorTaskError**](GuardiumConnectorApi.md#guardiumConnectorTaskError) | **POST** /api/v3/central_managers/{central_manager_id}/tasks/error | Summary: Task error Description: Log error messages from GDP task execution.
+[**guardiumConnectorTaskError**](GuardiumConnectorApi.md#guardiumConnectorTaskError) | **POST** /api/v3/central_managers/{central_manager_id}/tasks/error | Summary: Task error Description: Log error messages from GDP task execution. (This API is called from GDP only)
 [**guardiumConnectorTestDatabaseConnection**](GuardiumConnectorApi.md#guardiumConnectorTestDatabaseConnection) | **POST** /api/v3/test_database | Summary: Test database connection Description: Return database connection results.
 [**guardiumConnectorUpdateDmExclusion**](GuardiumConnectorApi.md#guardiumConnectorUpdateDmExclusion) | **PUT** /api/v3/datamarts/exclusion_list | Summary: Update DM exclusion Description: Update the atamart exclusion list.
-[**guardiumConnectorUpdateStreaming**](GuardiumConnectorApi.md#guardiumConnectorUpdateStreaming) | **PUT** /api/v3/central_managers/{central_manager_id}/streaming | Summary: Update streaming Description: Update streaming status into GI.
-[**guardiumConnectorUpdateTask**](GuardiumConnectorApi.md#guardiumConnectorUpdateTask) | **PUT** /api/v3/central_managers/{central_manager_id}/tasks/{task_id} | Summary: Update task Description: Update a task that gets executed on GDP.
+[**guardiumConnectorUpdateStreaming**](GuardiumConnectorApi.md#guardiumConnectorUpdateStreaming) | **PUT** /api/v3/central_managers/{central_manager_id}/streaming | Summary: Update streaming Description: Update streaming status into GI. (This API is called from GDP only)
+[**guardiumConnectorUpdateTask**](GuardiumConnectorApi.md#guardiumConnectorUpdateTask) | **PUT** /api/v3/central_managers/{central_manager_id}/tasks/{task_id} | Summary: Update task Description: Update a task that gets executed on GDP. (This API is called from GDP only)
 
 
 # **guardiumConnectorAddCM**
@@ -12978,7 +13370,7 @@ const apiInstance = new .GuardiumConnectorApi(configuration);
 let body:.GuardiumConnectorApiGuardiumConnectorGetHealthInfoRequest = {
   // string | Central Manager ID.
   centralManagerId: "central_manager_id_example",
-  // boolean | Flag indicating if the older gdp api is to be called in case it doesn\'t support new api. (optional)
+  // boolean | Flag indicating if the older GDP api is to be called in case it doesn\'t support new api. (optional)
   useFallback: true,
 };
 
@@ -12993,7 +13385,7 @@ apiInstance.guardiumConnectorGetHealthInfo(body).then((data:any) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **centralManagerId** | [**string**] | Central Manager ID. | defaults to undefined
- **useFallback** | [**boolean**] | Flag indicating if the older gdp api is to be called in case it doesn\&#39;t support new api. | (optional) defaults to undefined
+ **useFallback** | [**boolean**] | Flag indicating if the older GDP api is to be called in case it doesn\&#39;t support new api. | (optional) defaults to undefined
 
 
 ### Return type
@@ -13829,7 +14221,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**healthCollectorGetDataWarehouseUsage**](HealthCollectorApi.md#healthCollectorGetDataWarehouseUsage) | **GET** /api/v3/metrics/warehouse/{type} | Summary: Get data warehouse usage info Description: Get information from Db2 related to usage
+[**healthCollectorGetDataWarehouseUsage**](HealthCollectorApi.md#healthCollectorGetDataWarehouseUsage) | **GET** /api/v3/metrics/warehouse/{type} | Summary: Get data warehouse usage info Description: Get information from data warehouse related to usage
 [**healthCollectorGetGDPHealthInfo**](HealthCollectorApi.md#healthCollectorGetGDPHealthInfo) | **GET** /api/v3/health | Summary: Get GDP health info Description: Get information from MongoDB for Guardium central managers using health-connector service.
 [**healthCollectorGetHistoricalHealthInfo**](HealthCollectorApi.md#healthCollectorGetHistoricalHealthInfo) | **GET** /api/v3/health/history | Summary: Get historical health info Description: Retrieve historical s-tap related statistics from health-collector service.
 [**healthCollectorGetObjectStorageUsage**](HealthCollectorApi.md#healthCollectorGetObjectStorageUsage) | **GET** /api/v3/metrics/object_storage/{type} | Summary: Get object storage usage info Description: Get information from object storage about tenant bucket usage
@@ -15301,8 +15693,10 @@ Method | HTTP request | Description
 [**notificationsServiceGetNotificationRecord**](NotificationsServiceApi.md#notificationsServiceGetNotificationRecord) | **GET** /api/v3/notifications/details/{notification_id} | Summary: Get notification record Description: Return notifications record with the specified ID.
 [**notificationsServiceGetNotificationRecords**](NotificationsServiceApi.md#notificationsServiceGetNotificationRecords) | **GET** /api/v3/notifications | Summary: Get notification records Description: Return notifications records that match the specified filter.
 [**notificationsServiceGetTicketStatus**](NotificationsServiceApi.md#notificationsServiceGetTicketStatus) | **GET** /api/v3/integrations/ticket/status | Summary: Get ticket status Description: Get the status of the given ticket
+[**notificationsServicePostNotificationRecord**](NotificationsServiceApi.md#notificationsServicePostNotificationRecord) | **POST** /api/v3/notifications | Summary: For PostNotificationRecord notification only Description: Sends notification with recipients and returns a status
+[**notificationsServiceSearchNotificationRecords**](NotificationsServiceApi.md#notificationsServiceSearchNotificationRecords) | **POST** /api/v3/notifications/search | Summary: Search notification records Description: Return notification records using pipeline of filters
 [**notificationsServiceTestIntegration**](NotificationsServiceApi.md#notificationsServiceTestIntegration) | **POST** /api/v3/integrations/test | Summary: Test integration Description: Test the integration connection with the arguments passed in the TestIntegrationRequest.  When possible a test message is sent to the integration to ensure it is functional.
-[**notificationsServiceUpdateNotificationRecord**](NotificationsServiceApi.md#notificationsServiceUpdateNotificationRecord) | **POST** /api/v3/notifications | Summary: Update notification record Description: Update a notification record with the specified values.  The ID field is required and must match an existing notification. All fields other than the ID are optional. Creation timestamp, user and other administrative fields can not updated.
+[**notificationsServiceUpdateNotificationRecord**](NotificationsServiceApi.md#notificationsServiceUpdateNotificationRecord) | **PUT** /api/v3/notifications | Summary: Update notification record Description: Update a notification record with the specified values.  The ID field is required and must match an existing notification. All fields other than the ID are optional. Creation timestamp, user and other administrative fields can not updated.
 
 
 # **notificationsServiceCreateTicket**
@@ -15559,6 +15953,8 @@ let body:.NotificationsServiceApiNotificationsServiceGetNotificationRecordsReque
   ],
   // string | Only return record that with the specified origin_data. (optional)
   filterOriginData: "filter.origin_data_example",
+  // number | The max amount of rows to return for this single query. (optional)
+  filterLimit: 1,
   // number | The amount to offset the rows by for pagination. (optional)
   offset: 1,
   // number | The max amount of rows to return for pagination. (optional)
@@ -15582,6 +15978,7 @@ Name | Type | Description  | Notes
  **filterState** | [**&#39;INCLUDE_ALL&#39; | &#39;UNREAD_ONLY&#39; | &#39;READ_ONLY&#39; | &#39;COMPLETE_ONLY&#39; | &#39;NOT_COMPLETE&#39;**]**Array<&#39;INCLUDE_ALL&#39; &#124; &#39;UNREAD_ONLY&#39; &#124; &#39;READ_ONLY&#39; &#124; &#39;COMPLETE_ONLY&#39; &#124; &#39;NOT_COMPLETE&#39;>** | Only return record that include the specified state. | (optional) defaults to 'INCLUDE_ALL'
  **filterOrigins** | **Array&lt;string&gt;** | Only return record that includes the specified origins. | (optional) defaults to undefined
  **filterOriginData** | [**string**] | Only return record that with the specified origin_data. | (optional) defaults to undefined
+ **filterLimit** | [**number**] | The max amount of rows to return for this single query. | (optional) defaults to undefined
  **offset** | [**number**] | The amount to offset the rows by for pagination. | (optional) defaults to undefined
  **limit** | [**number**] | The max amount of rows to return for pagination. | (optional) defaults to undefined
  **includeFilterCounts** | [**boolean**] | Computing the filter counts is relatively expensive, only compute when needed. | (optional) defaults to undefined
@@ -15655,6 +16052,144 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **notificationsServicePostNotificationRecord**
+> Notificationsv3PostNotificationRecordResponse notificationsServicePostNotificationRecord(notificationsv3PostNotificationRecordRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .NotificationsServiceApi(configuration);
+
+let body:.NotificationsServiceApiNotificationsServicePostNotificationRecordRequest = {
+  // Notificationsv3PostNotificationRecordRequest
+  notificationsv3PostNotificationRecordRequest: {
+    origin: "UNDEFINED_ORIGIN",
+    originData: "originData_example",
+    targetReceivers: [
+      {
+        integrationId: "integrationId_example",
+        label: "label_example",
+        templateId: "templateId_example",
+        type: "UNDEFINED_RECTYPE",
+        value: "value_example",
+      },
+    ],
+    templateData: {
+      "key": "key_example",
+    },
+    title: "title_example",
+  },
+};
+
+apiInstance.notificationsServicePostNotificationRecord(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **notificationsv3PostNotificationRecordRequest** | **Notificationsv3PostNotificationRecordRequest**|  |
+
+
+### Return type
+
+**Notificationsv3PostNotificationRecordResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **notificationsServiceSearchNotificationRecords**
+> Notificationsv3SearchNotificationRecordsResponse notificationsServiceSearchNotificationRecords(notificationsv3SearchNotificationRecordsRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .NotificationsServiceApi(configuration);
+
+let body:.NotificationsServiceApiNotificationsServiceSearchNotificationRecordsRequest = {
+  // Notificationsv3SearchNotificationRecordsRequest
+  notificationsv3SearchNotificationRecordsRequest: {
+    filters: [
+      {
+        endTime: new Date('1970-01-01T00:00:00.00Z'),
+        limit: 1,
+        originData: "originData_example",
+        origins: [
+          "origins_example",
+        ],
+        startTime: new Date('1970-01-01T00:00:00.00Z'),
+        state: "INCLUDE_ALL",
+      },
+    ],
+    operator: "OPERATOR_AND",
+  },
+};
+
+apiInstance.notificationsServiceSearchNotificationRecords(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **notificationsv3SearchNotificationRecordsRequest** | **Notificationsv3SearchNotificationRecordsRequest**|  |
+
+
+### Return type
+
+**Notificationsv3SearchNotificationRecordsResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -16210,7 +16745,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**pipelineconfigServiceDeleteTenantResources**](PipelineconfigServiceApi.md#pipelineconfigServiceDeleteTenantResources) | **DELETE** /api/v3/resources/{tenant_id}/{resource} | Summary: Delete a tenant resource Description: Delete tenant specific resources such as db2, mongo, postgres and s3.
+[**pipelineconfigServiceDeleteTenantResources**](PipelineconfigServiceApi.md#pipelineconfigServiceDeleteTenantResources) | **DELETE** /api/v3/resources/{tenant_id}/{resource} | Summary: Delete a tenant resource Description: Delete tenant specific resources such as data warehouse, mongo, postgres and s3.
 
 
 # **pipelineconfigServiceDeleteTenantResources**
@@ -16292,7 +16827,7 @@ Method | HTTP request | Description
 [**policyBuilderGetReceivers**](PolicyBuilderApi.md#policyBuilderGetReceivers) | **GET** /api/v3/policies/receivers | Summary: Get receivers Description: Get all the receivers associated with actions.
 [**policyBuilderGetRuleMetadata**](PolicyBuilderApi.md#policyBuilderGetRuleMetadata) | **GET** /api/v3/rules/metadata | Summary: Get rule metadata Description: Return a list of rule parameters and actions to the caller.
 [**policyBuilderInsertGdpPolicy**](PolicyBuilderApi.md#policyBuilderInsertGdpPolicy) | **POST** /api/v3/policies/sync_entry | Summary: Insert GDP policy sync entry Description: Inserts GDP policy\&#39;s name into sync collection
-[**policyBuilderInsertGdpPolicyMetaData**](PolicyBuilderApi.md#policyBuilderInsertGdpPolicyMetaData) | **POST** /api/v3/central_managers/{central_manager_id}/policies/policy_metadata | Summary: Insert gdp policy summaries Description: Inserts GDP\&#39;s CM\&#39;s policy summary information into mogodb. (This API is called from GDP only)
+[**policyBuilderInsertGdpPolicyMetaData**](PolicyBuilderApi.md#policyBuilderInsertGdpPolicyMetaData) | **POST** /api/v3/central_managers/{central_manager_id}/policies/policy_metadata | Summary: Insert GDP policy summaries Description: Inserts GDP\&#39;s CM\&#39;s policy summary information into mogodb. (This API is called from GDP only)
 [**policyBuilderInstallPolicies**](PolicyBuilderApi.md#policyBuilderInstallPolicies) | **PUT** /api/v3/policies/install | Summary: Install policies Description: Activate Policies request performs activations.
 [**policyBuilderIntegrationCheck**](PolicyBuilderApi.md#policyBuilderIntegrationCheck) | **GET** /api/v3/policies/integration_check/{integration_id} | Summary: Integration check Description: Check if integration id is being used in policies.
 [**policyBuilderPoliciesGroups**](PolicyBuilderApi.md#policyBuilderPoliciesGroups) | **GET** /api/v3/policies/groups | Summary: Policies groups Description: Get policy groups.
@@ -17150,6 +17685,7 @@ let body:.PolicyBuilderApiPolicyBuilderInstallPoliciesRequest = {
     performInstallation: true,
     policyList: [
       {
+        edgeIdentifier: "edgeIdentifier_example",
         installationSequence: 1,
         policyId: "policyId_example",
         uiSequence: 1,
@@ -17508,6 +18044,143 @@ Name | Type | Description  | Notes
 
 
 
+# .QSDataLoaderApi
+
+All URIs are relative to *http://localhost*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**qSDataLoaderQSfileValidator**](QSDataLoaderApi.md#qSDataLoaderQSfileValidator) | **POST** /api/v3/data/validation | QSfileValidator - validate the files before insert happend .
+[**qSDataLoaderUploadSyntheticDataLoader**](QSDataLoaderApi.md#qSDataLoaderUploadSyntheticDataLoader) | **POST** /api/v3/data/synthetic | UploadSyntheticDataLoader - Insert data into Db after read from .sql file .
+
+
+# **qSDataLoaderQSfileValidator**
+> Qsdataloaderv3QSfileValidatorResonse qSDataLoaderQSfileValidator(qsdataloaderv3QSfileValidatorRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .QSDataLoaderApi(configuration);
+
+let body:.QSDataLoaderApiQSDataLoaderQSfileValidatorRequest = {
+  // Qsdataloaderv3QSfileValidatorRequest
+  qsdataloaderv3QSfileValidatorRequest: {
+    externalParam: {
+      applicationFileName: "applicationFileName_example",
+      bucketName: "bucketName_example",
+      explorerFileName: "explorerFileName_example",
+      folderName: "folderName_example",
+      networkFileName: "networkFileName_example",
+      policyFileName: "policyFileName_example",
+    },
+    orgId: "orgId_example",
+    pluginId: "pluginId_example",
+    runForAllScans: true,
+    scanDesc: "scanDesc_example",
+    scanId: "scanId_example",
+    userEmail: "userEmail_example",
+  },
+};
+
+apiInstance.qSDataLoaderQSfileValidator(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **qsdataloaderv3QSfileValidatorRequest** | **Qsdataloaderv3QSfileValidatorRequest**|  |
+
+
+### Return type
+
+**Qsdataloaderv3QSfileValidatorResonse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **qSDataLoaderUploadSyntheticDataLoader**
+> Qsdataloaderv3QSyntheticDataLoaderResonse qSDataLoaderUploadSyntheticDataLoader(body)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .QSDataLoaderApi(configuration);
+
+let body:.QSDataLoaderApiQSDataLoaderUploadSyntheticDataLoaderRequest = {
+  // any
+  body: {},
+};
+
+apiInstance.qSDataLoaderUploadSyntheticDataLoader(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | **any**|  |
+
+
+### Return type
+
+**Qsdataloaderv3QSyntheticDataLoaderResonse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+
+
+
+
 # .QSDataManagerApi
 
 All URIs are relative to *http://localhost*
@@ -17515,6 +18188,7 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**qSDataManagerGetMasterData**](QSDataManagerApi.md#qSDataManagerGetMasterData) | **GET** /api/v3/datamanager/master-data | Summary: master data for all entities Description: Retrieves All Dimension and Fact tables data.
+[**qSDataManagerGetPluginData**](QSDataManagerApi.md#qSDataManagerGetPluginData) | **GET** /api/v3/datamanager/plugin | Summary: Plugins Details Description: Retrieves All plugins information.
 [**qSDataManagerRegisterScan**](QSDataManagerApi.md#qSDataManagerRegisterScan) | **POST** /api/v3/datamanager/scan | Summary: Insert ScanDetails Description: Register new data into scan dimension table.
 [**qSDataManagerRetrieveScan**](QSDataManagerApi.md#qSDataManagerRetrieveScan) | **GET** /api/v3/datamanager/scan/{scan_id}/data | Summary: Fetch ScanDetails Description: Fetch details from scan dimension table.
 
@@ -17567,6 +18241,54 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **qSDataManagerGetPluginData**
+> Qspmdatamanagerv3PluginDataResponse qSDataManagerGetPluginData()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .QSDataManagerApi(configuration);
+
+let body:any = {};
+
+apiInstance.qSDataManagerGetPluginData(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+
+### Return type
+
+**Qspmdatamanagerv3PluginDataResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **qSDataManagerRegisterScan**
 > Qspmdatamanagerv3ScanResponse qSDataManagerRegisterScan(qspmdatamanagerv3ScanRequest)
 
@@ -17591,7 +18313,6 @@ let body:.QSDataManagerApiQSDataManagerRegisterScanRequest = {
     scanDesc: "scanDesc_example",
     scanId: "scanId_example",
     scanStatus: "scanStatus_example",
-    scanType: "scanType_example",
     userEmail: "userEmail_example",
   },
 };
@@ -17730,7 +18451,6 @@ let body:.QSPluginManagerApiQSPluginManagerInvokeAppProvRequest = {
     runForAllScans: true,
     scanDesc: "scanDesc_example",
     scanId: "scanId_example",
-    scanType: "scanType_example",
     userEmail: "userEmail_example",
   },
 };
@@ -17799,7 +18519,6 @@ let body:.QSPluginManagerApiQSPluginManagerInvokeExplorerV1Request = {
     runForAllScans: true,
     scanDesc: "scanDesc_example",
     scanId: "scanId_example",
-    scanType: "scanType_example",
     userEmail: "userEmail_example",
   },
 };
@@ -17868,7 +18587,6 @@ let body:.QSPluginManagerApiQSPluginManagerInvokeExplorerV2Request = {
     runForAllScans: true,
     scanDesc: "scanDesc_example",
     scanId: "scanId_example",
-    scanType: "scanType_example",
     userEmail: "userEmail_example",
   },
 };
@@ -17937,7 +18655,6 @@ let body:.QSPluginManagerApiQSPluginManagerInvokePluginRequest = {
     runForAllScans: true,
     scanDesc: "scanDesc_example",
     scanId: "scanId_example",
-    scanType: "scanType_example",
     userEmail: "userEmail_example",
   },
 };
@@ -18005,7 +18722,6 @@ let body:.QSPluginManagerApiQSPluginManagerInvokePolicyRequest = {
     runForAllScans: true,
     scanDesc: "scanDesc_example",
     scanId: "scanId_example",
-    scanType: "scanType_example",
     userEmail: "userEmail_example",
   },
 };
@@ -18057,6 +18773,7 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**qSPolicyManagerBatchStatusUpdate**](QSPolicyManagerApi.md#qSPolicyManagerBatchStatusUpdate) | **PUT** /api/v3/policy_manager/tickets/status | BatchStatusUpdate - trigger the batch to update the status of the Ticket .
+[**qSPolicyManagerConfigUpdate**](QSPolicyManagerApi.md#qSPolicyManagerConfigUpdate) | **PATCH** /api/v3/policy_manager/configs | ConfigUpdate - this function update Crypto Risk Factor Weight in Db2 as well as Mongodb.
 [**qSPolicyManagerCreateTicket**](QSPolicyManagerApi.md#qSPolicyManagerCreateTicket) | **POST** /api/v3/policy_manager/ticket | CreateTicket - Create a new Incident .
 [**qSPolicyManagerFetchFilesfromBuckets**](QSPolicyManagerApi.md#qSPolicyManagerFetchFilesfromBuckets) | **GET** /api/v3/policy_manager/os-files | FetchFilesfromBuckets - fetch the file(s) from bucket of the object storage
 [**qSPolicyManagerProcessPolicyDimentionRecords**](QSPolicyManagerApi.md#qSPolicyManagerProcessPolicyDimentionRecords) | **POST** /api/v3/policy_manager/policy/process | ProcessPolicyDimentionRecords - fetch the records from Policy Dimention and update Policy Fact table
@@ -18098,6 +18815,65 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Qspmpolicymanagerv3StandardEmptyResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **qSPolicyManagerConfigUpdate**
+> Qspmpolicymanagerv3APIResonse qSPolicyManagerConfigUpdate(qspmpolicymanagerv3UpdateConfigsRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .QSPolicyManagerApi(configuration);
+
+let body:.QSPolicyManagerApiQSPolicyManagerConfigUpdateRequest = {
+  // Qspmpolicymanagerv3UpdateConfigsRequest
+  qspmpolicymanagerv3UpdateConfigsRequest: {
+    id: "id_example",
+    options: {
+      "key": 3.14,
+    },
+  },
+};
+
+apiInstance.qSPolicyManagerConfigUpdate(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **qspmpolicymanagerv3UpdateConfigsRequest** | **Qspmpolicymanagerv3UpdateConfigsRequest**|  |
+
+
+### Return type
+
+**Qspmpolicymanagerv3APIResonse**
 
 ### Authorization
 
@@ -18457,6 +19233,7 @@ let body:.ReportsRunnerApiReportsRunnerGetAuditDataCountRequest = {
             caseInsensitive: true,
             fieldNlsTranslationKey: "fieldNlsTranslationKey_example",
             filterId: 1,
+            groupTypeId: 1,
             headerId: "headerId_example",
             headerName: "headerName_example",
             headerType: "UNDEFINED_TYPE",
@@ -18475,11 +19252,13 @@ let body:.ReportsRunnerApiReportsRunnerGetAuditDataCountRequest = {
             inReportId: "inReportId_example",
             inReportName: "inReportName_example",
             inReportTableName: "inReportTableName_example",
+            isTuple: true,
             operatorType: "UNDEFINED_OPERATOR_TYPE",
             parameterType: "UNDEFINED_PARAM_TYPE",
             schemaName: "schemaName_example",
             sequence: 1,
             tableName: "tableName_example",
+            tupleType: "tupleType_example",
             values: [
               "values_example",
             ],
@@ -18610,6 +19389,7 @@ let body:.ReportsRunnerApiReportsRunnerGetChartDataRequest = {
               caseInsensitive: true,
               fieldNlsTranslationKey: "fieldNlsTranslationKey_example",
               filterId: 1,
+              groupTypeId: 1,
               headerId: "headerId_example",
               headerName: "headerName_example",
               headerType: "UNDEFINED_TYPE",
@@ -18628,11 +19408,13 @@ let body:.ReportsRunnerApiReportsRunnerGetChartDataRequest = {
               inReportId: "inReportId_example",
               inReportName: "inReportName_example",
               inReportTableName: "inReportTableName_example",
+              isTuple: true,
               operatorType: "UNDEFINED_OPERATOR_TYPE",
               parameterType: "UNDEFINED_PARAM_TYPE",
               schemaName: "schemaName_example",
               sequence: 1,
               tableName: "tableName_example",
+              tupleType: "tupleType_example",
               values: [
                 "values_example",
               ],
@@ -18826,6 +19608,7 @@ let body:.ReportsRunnerApiReportsRunnerGetChartDatav2Request = {
               caseInsensitive: true,
               fieldNlsTranslationKey: "fieldNlsTranslationKey_example",
               filterId: 1,
+              groupTypeId: 1,
               headerId: "headerId_example",
               headerName: "headerName_example",
               headerType: "UNDEFINED_TYPE",
@@ -18844,11 +19627,13 @@ let body:.ReportsRunnerApiReportsRunnerGetChartDatav2Request = {
               inReportId: "inReportId_example",
               inReportName: "inReportName_example",
               inReportTableName: "inReportTableName_example",
+              isTuple: true,
               operatorType: "UNDEFINED_OPERATOR_TYPE",
               parameterType: "UNDEFINED_PARAM_TYPE",
               schemaName: "schemaName_example",
               sequence: 1,
               tableName: "tableName_example",
+              tupleType: "tupleType_example",
               values: [
                 "values_example",
               ],
@@ -19060,6 +19845,7 @@ let body:.ReportsRunnerApiReportsRunnerGetReportColumnFacetRequest = {
               caseInsensitive: true,
               fieldNlsTranslationKey: "fieldNlsTranslationKey_example",
               filterId: 1,
+              groupTypeId: 1,
               headerId: "headerId_example",
               headerName: "headerName_example",
               headerType: "UNDEFINED_TYPE",
@@ -19078,11 +19864,13 @@ let body:.ReportsRunnerApiReportsRunnerGetReportColumnFacetRequest = {
               inReportId: "inReportId_example",
               inReportName: "inReportName_example",
               inReportTableName: "inReportTableName_example",
+              isTuple: true,
               operatorType: "UNDEFINED_OPERATOR_TYPE",
               parameterType: "UNDEFINED_PARAM_TYPE",
               schemaName: "schemaName_example",
               sequence: 1,
               tableName: "tableName_example",
+              tupleType: "tupleType_example",
               values: [
                 "values_example",
               ],
@@ -19236,6 +20024,7 @@ let body:.ReportsRunnerApiReportsRunnerGetReportDataCountRequest = {
       type: "UNDEFINED_DATE_RANGE_TYPE",
     },
     modelType: "UNDEFINED_MODEL_TYPE",
+    queryId: "queryId_example",
     reportDefinition: {
       categoryId: "categoryId_example",
       creationTime: new Date('1970-01-01T00:00:00.00Z'),
@@ -19266,6 +20055,7 @@ let body:.ReportsRunnerApiReportsRunnerGetReportDataCountRequest = {
               caseInsensitive: true,
               fieldNlsTranslationKey: "fieldNlsTranslationKey_example",
               filterId: 1,
+              groupTypeId: 1,
               headerId: "headerId_example",
               headerName: "headerName_example",
               headerType: "UNDEFINED_TYPE",
@@ -19284,11 +20074,13 @@ let body:.ReportsRunnerApiReportsRunnerGetReportDataCountRequest = {
               inReportId: "inReportId_example",
               inReportName: "inReportName_example",
               inReportTableName: "inReportTableName_example",
+              isTuple: true,
               operatorType: "UNDEFINED_OPERATOR_TYPE",
               parameterType: "UNDEFINED_PARAM_TYPE",
               schemaName: "schemaName_example",
               sequence: 1,
               tableName: "tableName_example",
+              tupleType: "tupleType_example",
               values: [
                 "values_example",
               ],
@@ -19450,6 +20242,7 @@ let body:.ReportsRunnerApiReportsRunnerRunAuditReportRequest = {
             caseInsensitive: true,
             fieldNlsTranslationKey: "fieldNlsTranslationKey_example",
             filterId: 1,
+            groupTypeId: 1,
             headerId: "headerId_example",
             headerName: "headerName_example",
             headerType: "UNDEFINED_TYPE",
@@ -19468,11 +20261,13 @@ let body:.ReportsRunnerApiReportsRunnerRunAuditReportRequest = {
             inReportId: "inReportId_example",
             inReportName: "inReportName_example",
             inReportTableName: "inReportTableName_example",
+            isTuple: true,
             operatorType: "UNDEFINED_OPERATOR_TYPE",
             parameterType: "UNDEFINED_PARAM_TYPE",
             schemaName: "schemaName_example",
             sequence: 1,
             tableName: "tableName_example",
+            tupleType: "tupleType_example",
             values: [
               "values_example",
             ],
@@ -19570,6 +20365,7 @@ let body:.ReportsRunnerApiReportsRunnerRunReportRequest = {
     jobType: "UNDEFINED_JOB_TYPE",
     modelType: "UNDEFINED_MODEL_TYPE",
     offset: 1,
+    queryId: "queryId_example",
     reportDefinition: {
       categoryId: "categoryId_example",
       creationTime: new Date('1970-01-01T00:00:00.00Z'),
@@ -19600,6 +20396,7 @@ let body:.ReportsRunnerApiReportsRunnerRunReportRequest = {
               caseInsensitive: true,
               fieldNlsTranslationKey: "fieldNlsTranslationKey_example",
               filterId: 1,
+              groupTypeId: 1,
               headerId: "headerId_example",
               headerName: "headerName_example",
               headerType: "UNDEFINED_TYPE",
@@ -19618,11 +20415,13 @@ let body:.ReportsRunnerApiReportsRunnerRunReportRequest = {
               inReportId: "inReportId_example",
               inReportName: "inReportName_example",
               inReportTableName: "inReportTableName_example",
+              isTuple: true,
               operatorType: "UNDEFINED_OPERATOR_TYPE",
               parameterType: "UNDEFINED_PARAM_TYPE",
               schemaName: "schemaName_example",
               sequence: 1,
               tableName: "tableName_example",
+              tupleType: "tupleType_example",
               values: [
                 "values_example",
               ],
@@ -20323,6 +21122,7 @@ let body:.ReportsServiceApiReportsServiceCreateReportRequest = {
               caseInsensitive: true,
               fieldNlsTranslationKey: "fieldNlsTranslationKey_example",
               filterId: 1,
+              groupTypeId: 1,
               headerId: "headerId_example",
               headerName: "headerName_example",
               headerType: "UNDEFINED_TYPE",
@@ -20341,11 +21141,13 @@ let body:.ReportsServiceApiReportsServiceCreateReportRequest = {
               inReportId: "inReportId_example",
               inReportName: "inReportName_example",
               inReportTableName: "inReportTableName_example",
+              isTuple: true,
               operatorType: "UNDEFINED_OPERATOR_TYPE",
               parameterType: "UNDEFINED_PARAM_TYPE",
               schemaName: "schemaName_example",
               sequence: 1,
               tableName: "tableName_example",
+              tupleType: "tupleType_example",
               values: [
                 "values_example",
               ],
@@ -21446,6 +22248,7 @@ let body:.ReportsServiceApiReportsServiceGetQueryByReportDefinitionRequest = {
               caseInsensitive: true,
               fieldNlsTranslationKey: "fieldNlsTranslationKey_example",
               filterId: 1,
+              groupTypeId: 1,
               headerId: "headerId_example",
               headerName: "headerName_example",
               headerType: "UNDEFINED_TYPE",
@@ -21464,11 +22267,13 @@ let body:.ReportsServiceApiReportsServiceGetQueryByReportDefinitionRequest = {
               inReportId: "inReportId_example",
               inReportName: "inReportName_example",
               inReportTableName: "inReportTableName_example",
+              isTuple: true,
               operatorType: "UNDEFINED_OPERATOR_TYPE",
               parameterType: "UNDEFINED_PARAM_TYPE",
               schemaName: "schemaName_example",
               sequence: 1,
               tableName: "tableName_example",
+              tupleType: "tupleType_example",
               values: [
                 "values_example",
               ],
@@ -22749,6 +23554,7 @@ let body:.ReportsServiceApiReportsServiceUpdateReportRequest = {
               caseInsensitive: true,
               fieldNlsTranslationKey: "fieldNlsTranslationKey_example",
               filterId: 1,
+              groupTypeId: 1,
               headerId: "headerId_example",
               headerName: "headerName_example",
               headerType: "UNDEFINED_TYPE",
@@ -22767,11 +23573,13 @@ let body:.ReportsServiceApiReportsServiceUpdateReportRequest = {
               inReportId: "inReportId_example",
               inReportName: "inReportName_example",
               inReportTableName: "inReportTableName_example",
+              isTuple: true,
               operatorType: "UNDEFINED_OPERATOR_TYPE",
               parameterType: "UNDEFINED_PARAM_TYPE",
               schemaName: "schemaName_example",
               sequence: 1,
               tableName: "tableName_example",
+              tupleType: "tupleType_example",
               values: [
                 "values_example",
               ],
@@ -22956,6 +23764,2381 @@ Name | Type | Description  | Notes
 
 
 
+# .ResourceControllerK8ServiceApi
+
+All URIs are relative to *http://localhost*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**resourceControllerK8ServiceCreateController**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceCreateController) | **POST** /api/v3/edge_manager/controllers | CreateController - Add a new controller.
+[**resourceControllerK8ServiceCreateHeartBeat**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceCreateHeartBeat) | **POST** /api/v3/edge_manager/controllers/{controller_id}/heartbeat | CreateHeartBeat - Create a heartbeat for the controller.
+[**resourceControllerK8ServiceCreateHeartBeatEx**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceCreateHeartBeatEx) | **POST** /api/v3/edge_manager/controllers/{controller_id}/heartbeat_ex | CreateHeartBeatEx - Create a heartbeat for the controller with extended information.
+[**resourceControllerK8ServiceCreateJob**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceCreateJob) | **POST** /api/v3/edge_manager/jobs | //////////////////////////////////////////////////////////////// Interface to the controllers and apps api in the App-Manager microservice CreateJob - Create a job definition. Files and secrets contained within will also be created.
+[**resourceControllerK8ServiceCreateJobExecution**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceCreateJobExecution) | **POST** /api/v3/edge_manager/job_executions | CreateJobExecution - Create a job execution.
+[**resourceControllerK8ServiceCreateKeypair**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceCreateKeypair) | **POST** /api/v3/edge_manager/controllers/{controller_id}/keypair | CreateKeypair - Create a new keypair for the controller.
+[**resourceControllerK8ServiceDeleteController**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceDeleteController) | **DELETE** /api/v3/edge_manager/controllers/{controller_id} | DeleteController - Delete a controller.
+[**resourceControllerK8ServiceDeleteEdgeTenant**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceDeleteEdgeTenant) | **DELETE** /api/v3/edge_manager/tenants/{tenant_id} | DeleteEdgeTenant - deletes an edge tenant providing edge tenant id
+[**resourceControllerK8ServiceDeleteEdgeTenantRequest**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceDeleteEdgeTenantRequest) | **DELETE** /api/v3/edges | DeleteEdgeTenantRequest to deletes gi and tnt CR on edge
+[**resourceControllerK8ServiceDeleteJob**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceDeleteJob) | **DELETE** /api/v3/edge_manager/jobs/{job_id} | DeleteJob - Delete a job.
+[**resourceControllerK8ServiceDownloadControllerLogs**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceDownloadControllerLogs) | **POST** /api/v3/edge_manager/controllers/{controller_id}/logs | DownloadControllerLogs - Download the controller logs for a running controller.
+[**resourceControllerK8ServiceGetControllerApps**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetControllerApps) | **GET** /api/v3/edge_manager/controllers/{controller_id}/apps | GetControllerApps - Get the apps for the given controller.
+[**resourceControllerK8ServiceGetControllerCommands**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetControllerCommands) | **GET** /api/v3/edge_manager/controllers/{controller_id}/commands | GetControllerCommands - Get the commands for the controller to execute.
+[**resourceControllerK8ServiceGetControllerJobs**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetControllerJobs) | **GET** /api/v3/edge_manager/controllers/{controller_id}/jobs | GetControllerJobs - Get the jobs for the controller to execute.
+[**resourceControllerK8ServiceGetControllerStatus**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetControllerStatus) | **GET** /api/v3/edge_manager/controllers/{controller_id}/status | GetControllerStatus - Get the status for the given controller.
+[**resourceControllerK8ServiceGetControllers**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetControllers) | **GET** /api/v3/edge_manager/tenants/{tenant_id}/controllers | GetControllers - Get the controllers for the given tenant.
+[**resourceControllerK8ServiceGetControllersWithStatus**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetControllersWithStatus) | **GET** /api/v3/edge_manager/tenants/{tenant_id}/controller_status | GetControllersWithStatus - Get the controllers for the given tenant with computed status.
+[**resourceControllerK8ServiceGetJob**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetJob) | **GET** /api/v3/edge_manager/jobs/{job_id} | GetJob - Get the job.
+[**resourceControllerK8ServiceGetJobExecution**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetJobExecution) | **GET** /api/v3/edge_manager/job_executions/{jobexe_id} | GetJobExecution - Get a job execution.
+[**resourceControllerK8ServiceGetJobExecutions**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetJobExecutions) | **GET** /api/v3/edge_manager/jobs/{job_id}/executions | GetJobExecutions - Get the job executions.
+[**resourceControllerK8ServiceGetJobStatus**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetJobStatus) | **GET** /api/v3/edge_manager/jobs/{job_id}/status | GetJobStatus - Get the job\&#39;s status.
+[**resourceControllerK8ServiceGetTenantApp**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetTenantApp) | **GET** /api/v3/edge_manager/tenants/{tenant_id}/apps/{app_name} | GetTenantApp - Get a specific app for the given tenant.
+[**resourceControllerK8ServiceGetTenantApps**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetTenantApps) | **GET** /api/v3/edge_manager/tenants/{tenant_id}/apps | GetTenantApps - Get the apps for the given tenant.
+[**resourceControllerK8ServiceGetTenantJobs**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetTenantJobs) | **GET** /api/v3/edge_manager/tenants/{tenant_id}/jobs | GetTenantJobs - Get jobs for the given tenant.
+[**resourceControllerK8ServiceGetVersion**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetVersion) | **GET** /api/v3/edge_manager/system/version | GetVersion - Get the system version information for the service.
+[**resourceControllerK8ServiceInstallEdgeTenantRequest**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceInstallEdgeTenantRequest) | **POST** /api/v3/edges | InstallEdgeTenantRequest to Create gi and tnt CRs on edge
+[**resourceControllerK8ServiceQueryControllerLogs**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceQueryControllerLogs) | **POST** /api/v3/edge_manager/controllers/{controller_id}/logs/query | QueryControllerLogs - Query for the controller logs for a running controller.
+[**resourceControllerK8ServiceUpdateCommand**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateCommand) | **PUT** /api/v3/edge_manager/commands/{id} | UpdateCommand - Update the command.
+[**resourceControllerK8ServiceUpdateController**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateController) | **PUT** /api/v3/edge_manager/controllers/{id} | UpdateController - Update an existing controller.
+[**resourceControllerK8ServiceUpdateControllerStatus**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateControllerStatus) | **PUT** /api/v3/edge_manager/controllers/{id}/status | UpdateControllerStatus - Updates the status for the given controller.
+[**resourceControllerK8ServiceUpdateEdgeTenantRequest**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateEdgeTenantRequest) | **PATCH** /api/v3/edges/{edge_id} | UpdateEdgeTenantRequest to update gi and tnt CRs on edge
+[**resourceControllerK8ServiceUpdateJob**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateJob) | **PUT** /api/v3/edge_manager/jobs/{id} | UpdateJob - Update a job.
+[**resourceControllerK8ServiceUpdateJobExecution**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateJobExecution) | **PUT** /api/v3/edge_manager/job_executions/{id} | UpdateJobExecution - Update a job execution.
+[**resourceControllerK8ServiceUpdateJobStatus**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateJobStatus) | **PUT** /api/v3/edge_manager/jobs/{job_id}/status | UpdateJobStatus - Updates the status for the given Job.
+
+
+# **resourceControllerK8ServiceCreateController**
+> Resourcecontrollerk8v3Controller resourceControllerK8ServiceCreateController(resourcecontrollerk8v3CreateControllerRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceCreateControllerRequest = {
+  // Resourcecontrollerk8v3CreateControllerRequest
+  resourcecontrollerk8v3CreateControllerRequest: {
+    description: "description_example",
+    name: "name_example",
+    tenantId: "tenantId_example",
+  },
+};
+
+apiInstance.resourceControllerK8ServiceCreateController(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **resourcecontrollerk8v3CreateControllerRequest** | **Resourcecontrollerk8v3CreateControllerRequest**|  |
+
+
+### Return type
+
+**Resourcecontrollerk8v3Controller**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceCreateHeartBeat**
+> Resourcecontrollerk8v3CreateHeartBeatResponse resourceControllerK8ServiceCreateHeartBeat(resourcecontrollerk8v3CreateHeartBeatRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceCreateHeartBeatRequest = {
+  // string | The ID of the controller to invoke a heartbeat on.
+  controllerId: "controller_id_example",
+  // Resourcecontrollerk8v3CreateHeartBeatRequest
+  resourcecontrollerk8v3CreateHeartBeatRequest: {
+    controllerId: "controllerId_example",
+  },
+};
+
+apiInstance.resourceControllerK8ServiceCreateHeartBeat(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **resourcecontrollerk8v3CreateHeartBeatRequest** | **Resourcecontrollerk8v3CreateHeartBeatRequest**|  |
+ **controllerId** | [**string**] | The ID of the controller to invoke a heartbeat on. | defaults to undefined
+
+
+### Return type
+
+**Resourcecontrollerk8v3CreateHeartBeatResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceCreateHeartBeatEx**
+> Resourcecontrollerk8v3CreateHeartBeatExResponse resourceControllerK8ServiceCreateHeartBeatEx(resourcecontrollerk8v3ControllerHeartbeat)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceCreateHeartBeatExRequest = {
+  // string | Optional: controller id
+  controllerId: "controller_id_example",
+  // Resourcecontrollerk8v3ControllerHeartbeat
+  resourcecontrollerk8v3ControllerHeartbeat: {
+    capability: {
+      "key": true,
+    },
+    controllerId: "controllerId_example",
+    controllerVersion: {
+      build: "build_example",
+      major: "major_example",
+      micro: "micro_example",
+      minor: "minor_example",
+      version: "version_example",
+    },
+    resources: {
+      allocatable: {
+        "key": "key_example",
+      },
+      node: "node_example",
+      timestamp: "timestamp_example",
+      usage: {
+        "key": "key_example",
+      },
+      window: "window_example",
+    },
+  },
+};
+
+apiInstance.resourceControllerK8ServiceCreateHeartBeatEx(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **resourcecontrollerk8v3ControllerHeartbeat** | **Resourcecontrollerk8v3ControllerHeartbeat**|  |
+ **controllerId** | [**string**] | Optional: controller id | defaults to undefined
+
+
+### Return type
+
+**Resourcecontrollerk8v3CreateHeartBeatExResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceCreateJob**
+> Resourcecontrollerk8v3Job resourceControllerK8ServiceCreateJob(resourcecontrollerk8v3Job)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceCreateJobRequest = {
+  // Resourcecontrollerk8v3Job
+  resourcecontrollerk8v3Job: {
+    clusterRoleRules: [
+      {
+        apiGroups: [
+          "apiGroups_example",
+        ],
+        id: "id_example",
+        resources: [
+          "resources_example",
+        ],
+        verbs: [
+          "verbs_example",
+        ],
+      },
+    ],
+    command: [
+      "command_example",
+    ],
+    container: {
+      image: "image_example",
+      imageFullyQualified: true,
+      resources: {
+        limits: {
+          cpu: "cpu_example",
+          memory: "memory_example",
+        },
+        requests: {
+          cpu: "cpu_example",
+          memory: "memory_example",
+        },
+      },
+    },
+    controllerId: "controllerId_example",
+    created: "created_example",
+    cron: {
+      schedule: "schedule_example",
+    },
+    files: [
+      {
+        content: "content_example",
+        created: "created_example",
+        description: {
+          content: "content_example",
+          format: "format_example",
+        },
+        id: "id_example",
+        modified: "modified_example",
+        name: "name_example",
+        path: "path_example",
+        type: "type_example",
+      },
+    ],
+    id: "id_example",
+    labels: {
+      "key": "key_example",
+    },
+    lastExecution: {
+      details: "details_example",
+      ended: "ended_example",
+      id: "id_example",
+      jobId: "jobId_example",
+      modified: "modified_example",
+      name: "name_example",
+      started: "started_example",
+      status: "status_example",
+    },
+    modified: "modified_example",
+    name: "name_example",
+    roleRules: [
+      {
+        apiGroups: [
+          "apiGroups_example",
+        ],
+        id: "id_example",
+        resources: [
+          "resources_example",
+        ],
+        verbs: [
+          "verbs_example",
+        ],
+      },
+    ],
+    secretKey: "secretKey_example",
+    secrets: [
+      {
+        created: "created_example",
+        id: "id_example",
+        modified: "modified_example",
+        name: "name_example",
+        _protected: true,
+        value: "value_example",
+      },
+    ],
+    status: "status_example",
+  },
+};
+
+apiInstance.resourceControllerK8ServiceCreateJob(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **resourcecontrollerk8v3Job** | **Resourcecontrollerk8v3Job**|  |
+
+
+### Return type
+
+**Resourcecontrollerk8v3Job**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceCreateJobExecution**
+> Resourcecontrollerk8v3JobExecution resourceControllerK8ServiceCreateJobExecution(resourcecontrollerk8v3JobExecution)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceCreateJobExecutionRequest = {
+  // Resourcecontrollerk8v3JobExecution
+  resourcecontrollerk8v3JobExecution: {
+    details: "details_example",
+    ended: "ended_example",
+    id: "id_example",
+    jobId: "jobId_example",
+    modified: "modified_example",
+    name: "name_example",
+    started: "started_example",
+    status: "status_example",
+  },
+};
+
+apiInstance.resourceControllerK8ServiceCreateJobExecution(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **resourcecontrollerk8v3JobExecution** | **Resourcecontrollerk8v3JobExecution**|  |
+
+
+### Return type
+
+**Resourcecontrollerk8v3JobExecution**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceCreateKeypair**
+> Resourcecontrollerk8v3CreateKeypairResponse resourceControllerK8ServiceCreateKeypair(resourcecontrollerk8v3CreateKeypairRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceCreateKeypairRequest = {
+  // string | The ID of the controller to get app tests for.
+  controllerId: "controller_id_example",
+  // Resourcecontrollerk8v3CreateKeypairRequest
+  resourcecontrollerk8v3CreateKeypairRequest: {
+    controllerId: "controllerId_example",
+  },
+};
+
+apiInstance.resourceControllerK8ServiceCreateKeypair(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **resourcecontrollerk8v3CreateKeypairRequest** | **Resourcecontrollerk8v3CreateKeypairRequest**|  |
+ **controllerId** | [**string**] | The ID of the controller to get app tests for. | defaults to undefined
+
+
+### Return type
+
+**Resourcecontrollerk8v3CreateKeypairResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceDeleteController**
+> Resourcecontrollerk8v3DeleteControllerResponse resourceControllerK8ServiceDeleteController(resourcecontrollerk8v3DeleteControllerRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceDeleteControllerRequest = {
+  // string | The ID of the controller to get the status.
+  controllerId: "controller_id_example",
+  // Resourcecontrollerk8v3DeleteControllerRequest
+  resourcecontrollerk8v3DeleteControllerRequest: {
+    controllerId: "controllerId_example",
+  },
+};
+
+apiInstance.resourceControllerK8ServiceDeleteController(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **resourcecontrollerk8v3DeleteControllerRequest** | **Resourcecontrollerk8v3DeleteControllerRequest**|  |
+ **controllerId** | [**string**] | The ID of the controller to get the status. | defaults to undefined
+
+
+### Return type
+
+**Resourcecontrollerk8v3DeleteControllerResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceDeleteEdgeTenant**
+> Resourcecontrollerk8v3DeleteEdgeTenantResponse resourceControllerK8ServiceDeleteEdgeTenant(resourcecontrollerk8v3DeleteEdgeTenantRequestApphost)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceDeleteEdgeTenantRequest = {
+  // string | ID of the tenant to delete
+  tenantId: "tenant_id_example",
+  // Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost
+  resourcecontrollerk8v3DeleteEdgeTenantRequestApphost: {
+    tenantId: "tenantId_example",
+  },
+};
+
+apiInstance.resourceControllerK8ServiceDeleteEdgeTenant(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **resourcecontrollerk8v3DeleteEdgeTenantRequestApphost** | **Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost**|  |
+ **tenantId** | [**string**] | ID of the tenant to delete | defaults to undefined
+
+
+### Return type
+
+**Resourcecontrollerk8v3DeleteEdgeTenantResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceDeleteEdgeTenantRequest**
+> Resourcecontrollerk8v3EdgeResourceResponse resourceControllerK8ServiceDeleteEdgeTenantRequest()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceDeleteEdgeTenantRequestRequest = {
+  // string | Tenant ID for the redge request. (optional)
+  tenantId: "tenant_id_example",
+  // string | ID of the edge system. (optional)
+  edgeId: "edge_id_example",
+  // string | Edge gateway ID. (optional)
+  edgeName: "edge_name_example",
+};
+
+apiInstance.resourceControllerK8ServiceDeleteEdgeTenantRequest(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tenantId** | [**string**] | Tenant ID for the redge request. | (optional) defaults to undefined
+ **edgeId** | [**string**] | ID of the edge system. | (optional) defaults to undefined
+ **edgeName** | [**string**] | Edge gateway ID. | (optional) defaults to undefined
+
+
+### Return type
+
+**Resourcecontrollerk8v3EdgeResourceResponse**
+
+### Authorization
+
+[ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceDeleteJob**
+> Resourcecontrollerk8v3DeleteJobResponse resourceControllerK8ServiceDeleteJob(resourcecontrollerk8v3DeleteJobRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceDeleteJobRequest = {
+  // string | ID of the job that needs to be deleted.
+  jobId: "job_id_example",
+  // Resourcecontrollerk8v3DeleteJobRequest
+  resourcecontrollerk8v3DeleteJobRequest: {
+    jobId: "jobId_example",
+  },
+};
+
+apiInstance.resourceControllerK8ServiceDeleteJob(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **resourcecontrollerk8v3DeleteJobRequest** | **Resourcecontrollerk8v3DeleteJobRequest**|  |
+ **jobId** | [**string**] | ID of the job that needs to be deleted. | defaults to undefined
+
+
+### Return type
+
+**Resourcecontrollerk8v3DeleteJobResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceDownloadControllerLogs**
+> Resourcecontrollerk8v3DownloadControllerLogsResponse resourceControllerK8ServiceDownloadControllerLogs(resourcecontrollerk8v3DownloadControllerLogsRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceDownloadControllerLogsRequest = {
+  // string | The ID of the controller to download logs for.
+  controllerId: "controller_id_example",
+  // Resourcecontrollerk8v3DownloadControllerLogsRequest
+  resourcecontrollerk8v3DownloadControllerLogsRequest: {
+    controllerId: "controllerId_example",
+    endDate: "endDate_example",
+    identifier: "identifier_example",
+    previous: true,
+    startDate: "startDate_example",
+  },
+};
+
+apiInstance.resourceControllerK8ServiceDownloadControllerLogs(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **resourcecontrollerk8v3DownloadControllerLogsRequest** | **Resourcecontrollerk8v3DownloadControllerLogsRequest**|  |
+ **controllerId** | [**string**] | The ID of the controller to download logs for. | defaults to undefined
+
+
+### Return type
+
+**Resourcecontrollerk8v3DownloadControllerLogsResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceGetControllerApps**
+> Resourcecontrollerk8v3GetControllerAppsResponse resourceControllerK8ServiceGetControllerApps()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceGetControllerAppsRequest = {
+  // string | The ID of the controller to get apps for.
+  controllerId: "controller_id_example",
+  // string | Only get the apps if any were modified since the given date. (optional)
+  modifiedSince: "modified_since_example",
+};
+
+apiInstance.resourceControllerK8ServiceGetControllerApps(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **controllerId** | [**string**] | The ID of the controller to get apps for. | defaults to undefined
+ **modifiedSince** | [**string**] | Only get the apps if any were modified since the given date. | (optional) defaults to undefined
+
+
+### Return type
+
+**Resourcecontrollerk8v3GetControllerAppsResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceGetControllerCommands**
+> Resourcecontrollerk8v3GetControllerCommandsResponse resourceControllerK8ServiceGetControllerCommands()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceGetControllerCommandsRequest = {
+  // string | The ID of the controller to get commands for.
+  controllerId: "controller_id_example",
+};
+
+apiInstance.resourceControllerK8ServiceGetControllerCommands(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **controllerId** | [**string**] | The ID of the controller to get commands for. | defaults to undefined
+
+
+### Return type
+
+**Resourcecontrollerk8v3GetControllerCommandsResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceGetControllerJobs**
+> Resourcecontrollerk8v3GetControllerJobsResponse resourceControllerK8ServiceGetControllerJobs()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceGetControllerJobsRequest = {
+  // string | The ID of the controller to get jobs for.
+  controllerId: "controller_id_example",
+  // string | Optional: Only get the jobs if any were modified since the given date. (optional)
+  modifiedSince: "modified_since_example",
+};
+
+apiInstance.resourceControllerK8ServiceGetControllerJobs(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **controllerId** | [**string**] | The ID of the controller to get jobs for. | defaults to undefined
+ **modifiedSince** | [**string**] | Optional: Only get the jobs if any were modified since the given date. | (optional) defaults to undefined
+
+
+### Return type
+
+**Resourcecontrollerk8v3GetControllerJobsResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceGetControllerStatus**
+> Resourcecontrollerk8v3ControllerStatus resourceControllerK8ServiceGetControllerStatus()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceGetControllerStatusRequest = {
+  // string | The ID of the controller to get the status.
+  controllerId: "controller_id_example",
+};
+
+apiInstance.resourceControllerK8ServiceGetControllerStatus(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **controllerId** | [**string**] | The ID of the controller to get the status. | defaults to undefined
+
+
+### Return type
+
+**Resourcecontrollerk8v3ControllerStatus**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceGetControllers**
+> Resourcecontrollerk8v3GetControllersResponse resourceControllerK8ServiceGetControllers()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceGetControllersRequest = {
+  // string | The ID of the tenant to get controllers for.
+  tenantId: "tenant_id_example",
+  // boolean | Used to indicate the caller wants the local controller. (optional)
+  wantLocal: true,
+};
+
+apiInstance.resourceControllerK8ServiceGetControllers(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tenantId** | [**string**] | The ID of the tenant to get controllers for. | defaults to undefined
+ **wantLocal** | [**boolean**] | Used to indicate the caller wants the local controller. | (optional) defaults to undefined
+
+
+### Return type
+
+**Resourcecontrollerk8v3GetControllersResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceGetControllersWithStatus**
+> Resourcecontrollerk8v3GetControllersWithStatusResponse resourceControllerK8ServiceGetControllersWithStatus()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceGetControllersWithStatusRequest = {
+  // string | The ID of the tenant to get controllers for.
+  tenantId: "tenant_id_example",
+  // boolean | Used to indicate the caller wants the local controller. (optional)
+  wantLocal: true,
+  // string | \"ALL\": for getting all controllers; <controller_id>: for getting single controller. (optional)
+  controllerId: "controller_id_example",
+};
+
+apiInstance.resourceControllerK8ServiceGetControllersWithStatus(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tenantId** | [**string**] | The ID of the tenant to get controllers for. | defaults to undefined
+ **wantLocal** | [**boolean**] | Used to indicate the caller wants the local controller. | (optional) defaults to undefined
+ **controllerId** | [**string**] | \&quot;ALL\&quot;: for getting all controllers; &lt;controller_id&gt;: for getting single controller. | (optional) defaults to undefined
+
+
+### Return type
+
+**Resourcecontrollerk8v3GetControllersWithStatusResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceGetJob**
+> Resourcecontrollerk8v3Job resourceControllerK8ServiceGetJob()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceGetJobRequest = {
+  // string | The ID of the job to get.
+  jobId: "job_id_example",
+  // boolean | Optional: True to return secret values, false otherwise. (optional)
+  wantSecretValues: true,
+};
+
+apiInstance.resourceControllerK8ServiceGetJob(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **jobId** | [**string**] | The ID of the job to get. | defaults to undefined
+ **wantSecretValues** | [**boolean**] | Optional: True to return secret values, false otherwise. | (optional) defaults to undefined
+
+
+### Return type
+
+**Resourcecontrollerk8v3Job**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceGetJobExecution**
+> Resourcecontrollerk8v3JobExecution resourceControllerK8ServiceGetJobExecution()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceGetJobExecutionRequest = {
+  // string | The ID of the job execution to get.
+  jobexeId: "jobexe_id_example",
+};
+
+apiInstance.resourceControllerK8ServiceGetJobExecution(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **jobexeId** | [**string**] | The ID of the job execution to get. | defaults to undefined
+
+
+### Return type
+
+**Resourcecontrollerk8v3JobExecution**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceGetJobExecutions**
+> Resourcecontrollerk8v3GetJobExecutionsResponse resourceControllerK8ServiceGetJobExecutions()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceGetJobExecutionsRequest = {
+  // string | The ID of the job to get status.
+  jobId: "job_id_example",
+};
+
+apiInstance.resourceControllerK8ServiceGetJobExecutions(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **jobId** | [**string**] | The ID of the job to get status. | defaults to undefined
+
+
+### Return type
+
+**Resourcecontrollerk8v3GetJobExecutionsResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceGetJobStatus**
+> Resourcecontrollerk8v3JobStatusDTO resourceControllerK8ServiceGetJobStatus()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceGetJobStatusRequest = {
+  // string | The ID of the job to get status.
+  jobId: "job_id_example",
+};
+
+apiInstance.resourceControllerK8ServiceGetJobStatus(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **jobId** | [**string**] | The ID of the job to get status. | defaults to undefined
+
+
+### Return type
+
+**Resourcecontrollerk8v3JobStatusDTO**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceGetTenantApp**
+> Resourcecontrollerk8v3App resourceControllerK8ServiceGetTenantApp()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceGetTenantAppRequest = {
+  // string | The ID of the tenant to get apps for.
+  tenantId: "tenant_id_example",
+  // string | The name of the app to get.
+  appName: "app_name_example",
+  // string | Optional: specify a return level for the data. This will control the amount of data returned. (optional)
+  returnLevel: "return_level_example",
+};
+
+apiInstance.resourceControllerK8ServiceGetTenantApp(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tenantId** | [**string**] | The ID of the tenant to get apps for. | defaults to undefined
+ **appName** | [**string**] | The name of the app to get. | defaults to undefined
+ **returnLevel** | [**string**] | Optional: specify a return level for the data. This will control the amount of data returned. | (optional) defaults to undefined
+
+
+### Return type
+
+**Resourcecontrollerk8v3App**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceGetTenantApps**
+> Resourcecontrollerk8v3GetTenantAppsResponse resourceControllerK8ServiceGetTenantApps()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceGetTenantAppsRequest = {
+  // string | The ID of the tenant to get apps for.
+  tenantId: "tenant_id_example",
+  // string | Optional: specify a return level for the data. This will control the amount of data returned. (optional)
+  returnLevel: "return_level_example",
+};
+
+apiInstance.resourceControllerK8ServiceGetTenantApps(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tenantId** | [**string**] | The ID of the tenant to get apps for. | defaults to undefined
+ **returnLevel** | [**string**] | Optional: specify a return level for the data. This will control the amount of data returned. | (optional) defaults to undefined
+
+
+### Return type
+
+**Resourcecontrollerk8v3GetTenantAppsResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceGetTenantJobs**
+> Resourcecontrollerk8v3GetTenantJobsResponse resourceControllerK8ServiceGetTenantJobs()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceGetTenantJobsRequest = {
+  // string | The ID of the tenant to get jobs for.
+  tenantId: "tenant_id_example",
+};
+
+apiInstance.resourceControllerK8ServiceGetTenantJobs(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tenantId** | [**string**] | The ID of the tenant to get jobs for. | defaults to undefined
+
+
+### Return type
+
+**Resourcecontrollerk8v3GetTenantJobsResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceGetVersion**
+> Resourcecontrollerk8v3Version resourceControllerK8ServiceGetVersion()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:any = {};
+
+apiInstance.resourceControllerK8ServiceGetVersion(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+
+### Return type
+
+**Resourcecontrollerk8v3Version**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceInstallEdgeTenantRequest**
+> Resourcecontrollerk8v3EdgeResourceResponse resourceControllerK8ServiceInstallEdgeTenantRequest(resourcecontrollerk8v3EdgeTenantRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceInstallEdgeTenantRequestRequest = {
+  // Resourcecontrollerk8v3EdgeTenantRequest
+  resourcecontrollerk8v3EdgeTenantRequest: {
+    edgeId: "edgeId_example",
+    edgeName: "edgeName_example",
+    edgeVersion: "edgeVersion_example",
+    hostname: "hostname_example",
+    licenseType: "licenseType_example",
+    rsyslog: "rsyslog_example",
+    size: "size_example",
+    storageClassName: "storageClassName_example",
+    storageClassNameRwo: "storageClassNameRwo_example",
+    tenantId: "tenantId_example",
+  },
+};
+
+apiInstance.resourceControllerK8ServiceInstallEdgeTenantRequest(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **resourcecontrollerk8v3EdgeTenantRequest** | **Resourcecontrollerk8v3EdgeTenantRequest**|  |
+
+
+### Return type
+
+**Resourcecontrollerk8v3EdgeResourceResponse**
+
+### Authorization
+
+[ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceQueryControllerLogs**
+> Resourcecontrollerk8v3QueryControllerLogsResponse resourceControllerK8ServiceQueryControllerLogs(resourcecontrollerk8v3QueryControllerLogsRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceQueryControllerLogsRequest = {
+  // string | The ID of the controller to get logs for.
+  controllerId: "controller_id_example",
+  // Resourcecontrollerk8v3QueryControllerLogsRequest
+  resourcecontrollerk8v3QueryControllerLogsRequest: {
+    controllerId: "controllerId_example",
+    queryLogs: {
+      endDate: "endDate_example",
+      previous: true,
+      startDate: "startDate_example",
+    },
+  },
+};
+
+apiInstance.resourceControllerK8ServiceQueryControllerLogs(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **resourcecontrollerk8v3QueryControllerLogsRequest** | **Resourcecontrollerk8v3QueryControllerLogsRequest**|  |
+ **controllerId** | [**string**] | The ID of the controller to get logs for. | defaults to undefined
+
+
+### Return type
+
+**Resourcecontrollerk8v3QueryControllerLogsResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceUpdateCommand**
+> Resourcecontrollerk8v3ControllerCommand resourceControllerK8ServiceUpdateCommand(resourcecontrollerk8v3ControllerCommand)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateCommandRequest = {
+  // string | The ID of the command.
+  id: "id_example",
+  // Resourcecontrollerk8v3ControllerCommand
+  resourcecontrollerk8v3ControllerCommand: {
+    args: {},
+    created: "created_example",
+    id: "id_example",
+    modified: "modified_example",
+    result: "result_example",
+    status: "status_example",
+    type: "type_example",
+  },
+};
+
+apiInstance.resourceControllerK8ServiceUpdateCommand(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **resourcecontrollerk8v3ControllerCommand** | **Resourcecontrollerk8v3ControllerCommand**|  |
+ **id** | [**string**] | The ID of the command. | defaults to undefined
+
+
+### Return type
+
+**Resourcecontrollerk8v3ControllerCommand**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceUpdateController**
+> Resourcecontrollerk8v3Controller resourceControllerK8ServiceUpdateController(resourcecontrollerk8v3Controller)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateControllerRequest = {
+  // string | Optional: The internal ID of the controller.
+  id: "id_example",
+  // Resourcecontrollerk8v3Controller
+  resourcecontrollerk8v3Controller: {
+    appIds: [
+      "appIds_example",
+    ],
+    apps: [
+      {
+        container: {
+          image: "image_example",
+          imageFullyQualified: true,
+          resources: {
+            limits: {
+              cpu: "cpu_example",
+              memory: "memory_example",
+            },
+            requests: {
+              cpu: "cpu_example",
+              memory: "memory_example",
+            },
+          },
+        },
+        created: "created_example",
+        deployment: {
+          controllerId: "controllerId_example",
+          details: "details_example",
+          modified: "modified_example",
+          replicas: 1,
+          status: "status_example",
+        },
+        emptyDir: "emptyDir_example",
+        fileIds: [
+          "fileIds_example",
+        ],
+        files: [
+          {
+            appId: "appId_example",
+            content: "content_example",
+            created: "created_example",
+            description: {
+              content: "content_example",
+              format: "format_example",
+            },
+            id: "id_example",
+            mimeType: "mimeType_example",
+            modified: "modified_example",
+            name: "name_example",
+            path: "path_example",
+            restartApp: true,
+          },
+        ],
+        hpa: {
+          maxReplicas: "maxReplicas_example",
+          minReplicas: "minReplicas_example",
+          targetCpuUtilizationPercentage: "targetCpuUtilizationPercentage_example",
+        },
+        id: "id_example",
+        initContainers: [
+          {
+            command: [
+              "command_example",
+            ],
+            image: "image_example",
+            name: "name_example",
+          },
+        ],
+        modified: "modified_example",
+        name: "name_example",
+        secrets: [
+          {
+            appId: "appId_example",
+            created: "created_example",
+            id: "id_example",
+            modified: "modified_example",
+            name: "name_example",
+            _protected: true,
+            value: "value_example",
+          },
+        ],
+        status: "status_example",
+        tenantId: "tenantId_example",
+        tenantUuid: "tenantUuid_example",
+      },
+    ],
+    capability: {
+      "key": true,
+    },
+    created: "created_example",
+    description: {
+      content: "content_example",
+      format: "format_example",
+    },
+    id: "id_example",
+    keypair: {
+      _private: "_private_example",
+    },
+    lastHeartbeat: "lastHeartbeat_example",
+    local: true,
+    modified: "modified_example",
+    name: "name_example",
+    resources: {
+      allocatable: {
+        "key": "key_example",
+      },
+      node: "node_example",
+      timestamp: "timestamp_example",
+      usage: {
+        "key": "key_example",
+      },
+      window: "window_example",
+    },
+    sinceLastHeartbeat: "sinceLastHeartbeat_example",
+    status: "status_example",
+    tenantId: "tenantId_example",
+    tenantUuid: "tenantUuid_example",
+    version: {
+      build: "build_example",
+      major: "major_example",
+      micro: "micro_example",
+      minor: "minor_example",
+      version: "version_example",
+    },
+  },
+};
+
+apiInstance.resourceControllerK8ServiceUpdateController(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **resourcecontrollerk8v3Controller** | **Resourcecontrollerk8v3Controller**|  |
+ **id** | [**string**] | Optional: The internal ID of the controller. | defaults to undefined
+
+
+### Return type
+
+**Resourcecontrollerk8v3Controller**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceUpdateControllerStatus**
+> Resourcecontrollerk8v3ControllerStatus resourceControllerK8ServiceUpdateControllerStatus(resourcecontrollerk8v3ControllerStatus)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateControllerStatusRequest = {
+  // string | The internal ID of the controller.
+  id: "id_example",
+  // Resourcecontrollerk8v3ControllerStatus
+  resourcecontrollerk8v3ControllerStatus: {
+    id: "id_example",
+    modified: "modified_example",
+    status: "status_example",
+    version: {
+      build: "build_example",
+      major: "major_example",
+      micro: "micro_example",
+      minor: "minor_example",
+      version: "version_example",
+    },
+  },
+};
+
+apiInstance.resourceControllerK8ServiceUpdateControllerStatus(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **resourcecontrollerk8v3ControllerStatus** | **Resourcecontrollerk8v3ControllerStatus**|  |
+ **id** | [**string**] | The internal ID of the controller. | defaults to undefined
+
+
+### Return type
+
+**Resourcecontrollerk8v3ControllerStatus**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceUpdateEdgeTenantRequest**
+> Resourcecontrollerk8v3EdgeResourceResponse resourceControllerK8ServiceUpdateEdgeTenantRequest(resourcecontrollerk8v3EdgeTenantRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateEdgeTenantRequestRequest = {
+  // string | ID of the edge system
+  edgeId: "edge_id_example",
+  // Resourcecontrollerk8v3EdgeTenantRequest
+  resourcecontrollerk8v3EdgeTenantRequest: {
+    edgeId: "edgeId_example",
+    edgeName: "edgeName_example",
+    edgeVersion: "edgeVersion_example",
+    hostname: "hostname_example",
+    licenseType: "licenseType_example",
+    rsyslog: "rsyslog_example",
+    size: "size_example",
+    storageClassName: "storageClassName_example",
+    storageClassNameRwo: "storageClassNameRwo_example",
+    tenantId: "tenantId_example",
+  },
+};
+
+apiInstance.resourceControllerK8ServiceUpdateEdgeTenantRequest(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **resourcecontrollerk8v3EdgeTenantRequest** | **Resourcecontrollerk8v3EdgeTenantRequest**|  |
+ **edgeId** | [**string**] | ID of the edge system | defaults to undefined
+
+
+### Return type
+
+**Resourcecontrollerk8v3EdgeResourceResponse**
+
+### Authorization
+
+[ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceUpdateJob**
+> Resourcecontrollerk8v3Job resourceControllerK8ServiceUpdateJob(resourcecontrollerk8v3Job)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateJobRequest = {
+  // string | The ID of the job.
+  id: "id_example",
+  // Resourcecontrollerk8v3Job
+  resourcecontrollerk8v3Job: {
+    clusterRoleRules: [
+      {
+        apiGroups: [
+          "apiGroups_example",
+        ],
+        id: "id_example",
+        resources: [
+          "resources_example",
+        ],
+        verbs: [
+          "verbs_example",
+        ],
+      },
+    ],
+    command: [
+      "command_example",
+    ],
+    container: {
+      image: "image_example",
+      imageFullyQualified: true,
+      resources: {
+        limits: {
+          cpu: "cpu_example",
+          memory: "memory_example",
+        },
+        requests: {
+          cpu: "cpu_example",
+          memory: "memory_example",
+        },
+      },
+    },
+    controllerId: "controllerId_example",
+    created: "created_example",
+    cron: {
+      schedule: "schedule_example",
+    },
+    files: [
+      {
+        content: "content_example",
+        created: "created_example",
+        description: {
+          content: "content_example",
+          format: "format_example",
+        },
+        id: "id_example",
+        modified: "modified_example",
+        name: "name_example",
+        path: "path_example",
+        type: "type_example",
+      },
+    ],
+    id: "id_example",
+    labels: {
+      "key": "key_example",
+    },
+    lastExecution: {
+      details: "details_example",
+      ended: "ended_example",
+      id: "id_example",
+      jobId: "jobId_example",
+      modified: "modified_example",
+      name: "name_example",
+      started: "started_example",
+      status: "status_example",
+    },
+    modified: "modified_example",
+    name: "name_example",
+    roleRules: [
+      {
+        apiGroups: [
+          "apiGroups_example",
+        ],
+        id: "id_example",
+        resources: [
+          "resources_example",
+        ],
+        verbs: [
+          "verbs_example",
+        ],
+      },
+    ],
+    secretKey: "secretKey_example",
+    secrets: [
+      {
+        created: "created_example",
+        id: "id_example",
+        modified: "modified_example",
+        name: "name_example",
+        _protected: true,
+        value: "value_example",
+      },
+    ],
+    status: "status_example",
+  },
+};
+
+apiInstance.resourceControllerK8ServiceUpdateJob(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **resourcecontrollerk8v3Job** | **Resourcecontrollerk8v3Job**|  |
+ **id** | [**string**] | The ID of the job. | defaults to undefined
+
+
+### Return type
+
+**Resourcecontrollerk8v3Job**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceUpdateJobExecution**
+> Resourcecontrollerk8v3JobExecution resourceControllerK8ServiceUpdateJobExecution(resourcecontrollerk8v3UpdateJobExecutionRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateJobExecutionRequest = {
+  // string | The ID of the job execution to update.
+  id: "id_example",
+  // Resourcecontrollerk8v3UpdateJobExecutionRequest
+  resourcecontrollerk8v3UpdateJobExecutionRequest: {
+    details: "details_example",
+    ended: "ended_example",
+    id: "id_example",
+    jobId: "jobId_example",
+    modified: "modified_example",
+    name: "name_example",
+    started: "started_example",
+    status: "status_example",
+  },
+};
+
+apiInstance.resourceControllerK8ServiceUpdateJobExecution(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **resourcecontrollerk8v3UpdateJobExecutionRequest** | **Resourcecontrollerk8v3UpdateJobExecutionRequest**|  |
+ **id** | [**string**] | The ID of the job execution to update. | defaults to undefined
+
+
+### Return type
+
+**Resourcecontrollerk8v3JobExecution**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **resourceControllerK8ServiceUpdateJobStatus**
+> Resourcecontrollerk8v3JobStatusDTO resourceControllerK8ServiceUpdateJobStatus(resourcecontrollerk8v3UpdateJobStatusRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
+
+let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateJobStatusRequest = {
+  // string | The ID of the job to get status.
+  jobId: "job_id_example",
+  // Resourcecontrollerk8v3UpdateJobStatusRequest
+  resourcecontrollerk8v3UpdateJobStatusRequest: {
+    jobId: "jobId_example",
+    modified: "modified_example",
+    status: "status_example",
+  },
+};
+
+apiInstance.resourceControllerK8ServiceUpdateJobStatus(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **resourcecontrollerk8v3UpdateJobStatusRequest** | **Resourcecontrollerk8v3UpdateJobStatusRequest**|  |
+ **jobId** | [**string**] | The ID of the job to get status. | defaults to undefined
+
+
+### Return type
+
+**Resourcecontrollerk8v3JobStatusDTO**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+
+
+
+
 # .RiskAnalyticsControllerApi
 
 All URIs are relative to *http://localhost*
@@ -22965,18 +26148,18 @@ Method | HTTP request | Description
 [**riskAnalyticsControllerEnableDisableRiskEventFeedback**](RiskAnalyticsControllerApi.md#riskAnalyticsControllerEnableDisableRiskEventFeedback) | **PUT** /api/v3/risk_feedback/status | Summary: Enable disable risk rvent feedback Description: Enable or disable the collect feedback process.
 [**riskAnalyticsControllerEnableDisableRiskEventProcess**](RiskAnalyticsControllerApi.md#riskAnalyticsControllerEnableDisableRiskEventProcess) | **PUT** /api/v3/risk_process/status | Summary: Enable disable risk event process Description: Enable or disable the risk event process.
 [**riskAnalyticsControllerGetAllClassificationsList**](RiskAnalyticsControllerApi.md#riskAnalyticsControllerGetAllClassificationsList) | **GET** /api/v3/risk_events/classifications | Summary: Get all classifications Description: Get all possible classifications for a risk event.
-[**riskAnalyticsControllerGetRiskEventClassificationsList**](RiskAnalyticsControllerApi.md#riskAnalyticsControllerGetRiskEventClassificationsList) | **GET** /api/v3/risk_events/feedback/{risk_id} | Summary: Get risk event classifications list Description: retrieves the ClassificationMatchDetails for a given risk id – classification that did not matched will be with class_value 0.
-[**riskAnalyticsControllerGetRiskEventDataForSummarization**](RiskAnalyticsControllerApi.md#riskAnalyticsControllerGetRiskEventDataForSummarization) | **GET** /api/v3/risk_events/summarization/data/{risk_id} | Summary: Get risk event data needed for summarization task Description: Retrieve the full information about this risk event including all findings data
-[**riskAnalyticsControllerGetRiskEventDetails**](RiskAnalyticsControllerApi.md#riskAnalyticsControllerGetRiskEventDetails) | **GET** /api/v3/risk_events/details/{risk_id} | Summary: Get risk event details Description: Return the details of a risk event, including risk general info and a list of observations.
+[**riskAnalyticsControllerGetRiskEventClassificationsList**](RiskAnalyticsControllerApi.md#riskAnalyticsControllerGetRiskEventClassificationsList) | **GET** /api/v3/risk_events/{risk_id}/feedback | Summary: Get risk event classifications list Description: retrieves the ClassificationMatchDetails for a given risk id; classification that did not matched will be with class_value 0.
+[**riskAnalyticsControllerGetRiskEventDataForSummarization**](RiskAnalyticsControllerApi.md#riskAnalyticsControllerGetRiskEventDataForSummarization) | **GET** /api/v3/risk_events/{risk_id}/summarization/data | Summary: Get risk event data needed for summarization task Description: Retrieve the full information about this risk event including all findings data
+[**riskAnalyticsControllerGetRiskEventDetails**](RiskAnalyticsControllerApi.md#riskAnalyticsControllerGetRiskEventDetails) | **GET** /api/v3/risk_events/{risk_id}/details | Summary: Get risk event details Description: Return the details of a risk event, including risk general info and a list of observations.
 [**riskAnalyticsControllerGetRiskEventProcessStatus**](RiskAnalyticsControllerApi.md#riskAnalyticsControllerGetRiskEventProcessStatus) | **GET** /api/v3/risk_process/status | Summary: Get risk event process status Description: Get the risk event process status.
 [**riskAnalyticsControllerGetRiskEventRow**](RiskAnalyticsControllerApi.md#riskAnalyticsControllerGetRiskEventRow) | **GET** /api/v3/risk_events | Summary: Get risk event row Description: Return a list of risk events.
-[**riskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetails**](RiskAnalyticsControllerApi.md#riskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetails) | **PUT** /api/v3/risk_events/va/{risk_id} | Summary: Get vulnerability assessment details for a given risk event Description: Retrieve the information about failed VA tests for assets database and db user
+[**riskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetails**](RiskAnalyticsControllerApi.md#riskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetails) | **PUT** /api/v3/risk_events/{risk_id}/va | Summary: Get vulnerability assessment details for a given risk event Description: Retrieve the information about failed VA tests for assets database and db user
 [**riskAnalyticsControllerGetRiskFeedback**](RiskAnalyticsControllerApi.md#riskAnalyticsControllerGetRiskFeedback) | **GET** /api/v3/risk_events/feedback | Summary: Get risk feedback Description: Get all feedbacks that are in status NEW/WIP and change them to status WIP.
 [**riskAnalyticsControllerGetRiskObservationDetails**](RiskAnalyticsControllerApi.md#riskAnalyticsControllerGetRiskObservationDetails) | **GET** /api/v3/risk_events/observations | Summary: Get risk observation details Description: Return details of a single risk observation.
 [**riskAnalyticsControllerGetUserUISettings**](RiskAnalyticsControllerApi.md#riskAnalyticsControllerGetUserUISettings) | **GET** /api/v3/risk_events/user_ui_settings | Summary: Get user UI settings Description: Get the user settings by user id to display the risk in the UI.
 [**riskAnalyticsControllerRiskEventTuning**](RiskAnalyticsControllerApi.md#riskAnalyticsControllerRiskEventTuning) | **PUT** /api/v3/risk_events/tuning | Summary: Risk event tuning Description: Perform tuning risk event actions.
 [**riskAnalyticsControllerSetRiskEventStatus**](RiskAnalyticsControllerApi.md#riskAnalyticsControllerSetRiskEventStatus) | **PUT** /api/v3/risk_events/status | Summary: Set risk event status Description: Update the risk status and justification.
-[**riskAnalyticsControllerSetUserUISettings**](RiskAnalyticsControllerApi.md#riskAnalyticsControllerSetUserUISettings) | **PUT** /api/v3/risk_events/user_ui_settings | Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to Guardium. Using this API to change a user settings may prevent the user from using the Risk Event function within Guardium.
+[**riskAnalyticsControllerSetUserUISettings**](RiskAnalyticsControllerApi.md#riskAnalyticsControllerSetUserUISettings) | **PUT** /api/v3/risk_events/user_ui_settings | Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to GDSC. Using this API to change a user settings may prevent the user from using the Risk Event function within GDSC.
 [**riskAnalyticsControllerUpdateRiskFeedback**](RiskAnalyticsControllerApi.md#riskAnalyticsControllerUpdateRiskFeedback) | **PUT** /api/v3/risk_events/feedback | Summary: Update risk feedback Description: Provide feedback for one or more risk events
 
 
@@ -23914,7 +27097,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**riskAnalyticsDataProcessorGetRiskContext**](RiskAnalyticsDataProcessorApi.md#riskAnalyticsDataProcessorGetRiskContext) | **GET** /api/v3/risk_events/context/{risk_id} | Summary: Get Risk Event Context Description: Retrieve the context of the given risk ID. This context will be used for LLM interactions.
+[**riskAnalyticsDataProcessorGetRiskContext**](RiskAnalyticsDataProcessorApi.md#riskAnalyticsDataProcessorGetRiskContext) | **GET** /api/v3/risk_events/{risk_id}/context | Summary: Get Risk Event Context Description: Retrieve the context of the given risk ID. This context will be used for LLM interactions.
 [**riskAnalyticsDataProcessorGetRiskPredefinedQuestions**](RiskAnalyticsDataProcessorApi.md#riskAnalyticsDataProcessorGetRiskPredefinedQuestions) | **GET** /api/v3/risk_events/{risk_id}/questions | Summary: Get Risk Event Predefined Questions Description: Retrieve the Predefined Questions of the given risk ID. This Predefined Questions will be used quick actions recommendations.
 
 
@@ -24351,6 +27534,7 @@ let body:.SchedulerServiceApiSchedulerServiceCreateScheduledJobRequest = {
               },
             ],
             syncExecutionDate: true,
+            threshold: 1,
           },
         },
         recipients: [
@@ -24372,6 +27556,7 @@ let body:.SchedulerServiceApiSchedulerServiceCreateScheduledJobRequest = {
                 caseInsensitive: true,
                 fieldNlsTranslationKey: "fieldNlsTranslationKey_example",
                 filterId: 1,
+                groupTypeId: 1,
                 headerId: "headerId_example",
                 headerName: "headerName_example",
                 headerType: "UNDEFINED_TYPE",
@@ -24390,11 +27575,13 @@ let body:.SchedulerServiceApiSchedulerServiceCreateScheduledJobRequest = {
                 inReportId: "inReportId_example",
                 inReportName: "inReportName_example",
                 inReportTableName: "inReportTableName_example",
+                isTuple: true,
                 operatorType: "UNDEFINED_OPERATOR_TYPE",
                 parameterType: "UNDEFINED_PARAM_TYPE",
                 schemaName: "schemaName_example",
                 sequence: 1,
                 tableName: "tableName_example",
+                tupleType: "tupleType_example",
                 values: [
                   "values_example",
                 ],
@@ -25098,6 +28285,7 @@ let body:.SchedulerServiceApiSchedulerServiceUpdateScheduledJobRequest = {
                 },
               ],
               syncExecutionDate: true,
+              threshold: 1,
             },
           },
           recipients: [
@@ -25119,6 +28307,7 @@ let body:.SchedulerServiceApiSchedulerServiceUpdateScheduledJobRequest = {
                   caseInsensitive: true,
                   fieldNlsTranslationKey: "fieldNlsTranslationKey_example",
                   filterId: 1,
+                  groupTypeId: 1,
                   headerId: "headerId_example",
                   headerName: "headerName_example",
                   headerType: "UNDEFINED_TYPE",
@@ -25137,11 +28326,13 @@ let body:.SchedulerServiceApiSchedulerServiceUpdateScheduledJobRequest = {
                   inReportId: "inReportId_example",
                   inReportName: "inReportName_example",
                   inReportTableName: "inReportTableName_example",
+                  isTuple: true,
                   operatorType: "UNDEFINED_OPERATOR_TYPE",
                   parameterType: "UNDEFINED_PARAM_TYPE",
                   schemaName: "schemaName_example",
                   sequence: 1,
                   tableName: "tableName_example",
+                  tupleType: "tupleType_example",
                   values: [
                     "values_example",
                   ],
@@ -25237,8 +28428,199 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**snifAssistServiceGetSnifConfig**](SnifAssistServiceApi.md#snifAssistServiceGetSnifConfig) | **GET** /api/v3/snif/config | Summary: Get sniffer configuration parameters Description: Get edge sniffer configuration parameters from GI-mothership.
+[**snifAssistServiceGetSnifPolicy**](SnifAssistServiceApi.md#snifAssistServiceGetSnifPolicy) | **GET** /api/v3/snif/policy | Summary: Get sniffer policy Description: Get edge sniffer policy from GI-mothership.
+[**snifAssistServicePostSnifFeedback**](SnifAssistServiceApi.md#snifAssistServicePostSnifFeedback) | **POST** /api/v3/snif/feedback | Summary: Post sniffer feedback Description: Post policy installation feedback to policy-builder service.
 [**snifAssistServiceTestRegex**](SnifAssistServiceApi.md#snifAssistServiceTestRegex) | **POST** /api/v3/snif/test_regex | Summary: Test regex Description: Match a text string with a regular expression using the same sniffer  code used in production to match a regex.
 
+
+# **snifAssistServiceGetSnifConfig**
+> Snifassistv3GetSnifConfigResponse snifAssistServiceGetSnifConfig()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .SnifAssistServiceApi(configuration);
+
+let body:.SnifAssistServiceApiSnifAssistServiceGetSnifConfigRequest = {
+  // string | Provide tenant_id. (optional)
+  tenantId: "tenant_id_example",
+  // string | Provide edge_id. (optional)
+  edgeId: "edge_id_example",
+  // string | Provide configuration type. (optional)
+  configType: "config_type_example",
+  // string | Specify config_id provided by configuration service. (optional)
+  configId: "config_id_example",
+  // number | Provide CRC value of configuration parameters that sniffer is currently using. (optional)
+  configurationParametersCrc: 1,
+};
+
+apiInstance.snifAssistServiceGetSnifConfig(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tenantId** | [**string**] | Provide tenant_id. | (optional) defaults to undefined
+ **edgeId** | [**string**] | Provide edge_id. | (optional) defaults to undefined
+ **configType** | [**string**] | Provide configuration type. | (optional) defaults to undefined
+ **configId** | [**string**] | Specify config_id provided by configuration service. | (optional) defaults to undefined
+ **configurationParametersCrc** | [**number**] | Provide CRC value of configuration parameters that sniffer is currently using. | (optional) defaults to undefined
+
+
+### Return type
+
+**Snifassistv3GetSnifConfigResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **snifAssistServiceGetSnifPolicy**
+> Snifassistv3StatusResponseBase snifAssistServiceGetSnifPolicy()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .SnifAssistServiceApi(configuration);
+
+let body:.SnifAssistServiceApiSnifAssistServiceGetSnifPolicyRequest = {
+  // string | Specify tenant_id. (optional)
+  tenantId: "tenant_id_example",
+  // string | Specify edge_id if known. (optional)
+  edgeId: "edge_id_example",
+  // number | Provide CRC value of installed policy that sniffer is currently using. (optional)
+  policyCrc: 1,
+};
+
+apiInstance.snifAssistServiceGetSnifPolicy(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tenantId** | [**string**] | Specify tenant_id. | (optional) defaults to undefined
+ **edgeId** | [**string**] | Specify edge_id if known. | (optional) defaults to undefined
+ **policyCrc** | [**number**] | Provide CRC value of installed policy that sniffer is currently using. | (optional) defaults to undefined
+
+
+### Return type
+
+**Snifassistv3StatusResponseBase**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **snifAssistServicePostSnifFeedback**
+> Snifassistv3StatusResponseBase snifAssistServicePostSnifFeedback(snifassistv3PostSnifFeedbackRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .SnifAssistServiceApi(configuration);
+
+let body:.SnifAssistServiceApiSnifAssistServicePostSnifFeedbackRequest = {
+  // Snifassistv3PostSnifFeedbackRequest
+  snifassistv3PostSnifFeedbackRequest: {
+    edgeId: "edgeId_example",
+    snifFeedback: {
+      batchNum: "batchNum_example",
+      message: "message_example",
+      status: "SUCCEEDED",
+    },
+    tenantId: "tenantId_example",
+  },
+};
+
+apiInstance.snifAssistServicePostSnifFeedback(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **snifassistv3PostSnifFeedbackRequest** | **Snifassistv3PostSnifFeedbackRequest**|  |
+
+
+### Return type
+
+**Snifassistv3StatusResponseBase**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **snifAssistServiceTestRegex**
 > Snifassistv3StatusResponseBase snifAssistServiceTestRegex(snifassistv3TestRegexRequest)
@@ -25625,6 +29007,7 @@ Method | HTTP request | Description
 [**templatesServiceGetOriginFields**](TemplatesServiceApi.md#templatesServiceGetOriginFields) | **GET** /api/v3/templates/origins/{origin}/fields | Summary: Get origin fields Description: Return the fields available with a specific origin.
 [**templatesServiceGetTemplate**](TemplatesServiceApi.md#templatesServiceGetTemplate) | **GET** /api/v3/templates/{template_id} | Summary: Get template Description: Return a specific template by id.
 [**templatesServiceGetTemplates**](TemplatesServiceApi.md#templatesServiceGetTemplates) | **GET** /api/v3/templates | Summary: Get templates Description: Return all templates based on supplied filters.
+[**templatesServiceGetTemplatesForEdge**](TemplatesServiceApi.md#templatesServiceGetTemplatesForEdge) | **GET** /api/v3/templates/edge | Summary: Get templates for edge Description: Return all templates based on supplied filters.
 [**templatesServiceTestTemplate**](TemplatesServiceApi.md#templatesServiceTestTemplate) | **POST** /api/v3/templates/test | Summary: Test template Description: Analyze a specified template to ensure will function correctly when utilized.
 [**templatesServiceTransformTemplate**](TemplatesServiceApi.md#templatesServiceTransformTemplate) | **POST** /api/v3/templates/transform | Summary: Transform template Description: Process the specified template and returns the Title and Content based on supplied data.
 [**templatesServiceTransformTemplateJSON**](TemplatesServiceApi.md#templatesServiceTransformTemplateJSON) | **POST** /api/v3/templates/transformjson | Summary: Transform template JSON Description: Process the specified template and returns the Title and Content based on supplied json data string.
@@ -26105,6 +29488,74 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Templatesv3GetTemplatesResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **templatesServiceGetTemplatesForEdge**
+> Templatesv3GetTemplatesForEdgeResponse templatesServiceGetTemplatesForEdge()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .TemplatesServiceApi(configuration);
+
+let body:.TemplatesServiceApiTemplatesServiceGetTemplatesForEdgeRequest = {
+  // string | Templates associated with a specific integration. (optional)
+  integrationId: "integration_id_example",
+  // Array<'UNDEFINED_ORIGIN' | 'GENERAL_NOTIFICATION' | 'ANOMALY_NOTIFICATION' | 'DATAMART_NOTIFICATION' | 'FETCH_NOTIFICATION' | 'POLICY_ALERT_NOTIFICATION' | 'RECOMMENDATION_NOTIFICATION' | 'REPORTS_NOTIFICATION' | 'SCHEDULED_REPORT_NOTIFICATION' | 'SCHEDULED_AUDIT_NOTIFICATION' | 'WELCOME_NOTIFICATION' | 'EMAIL_HEADER_AND_FOOTER' | 'RISK_NOTIFICATION' | 'SCHEDULED_JOB_SUMMARY' | 'INCIDENT_NOTIFICATION' | 'MAINTENANCE_NOTIFICATION' | 'QSPM_RISK' | 'POLICY_IMPORT_NOTIFICATION'> | Filter on a specific set of data origins; ignored if empty. (optional)
+  filterOrigin: [
+    "UNDEFINED_ORIGIN",
+  ],
+  // boolean | Filter on all templates instead of just the enabled templates. (optional)
+  filterEnabledOnly: true,
+  // boolean | Include the Integration name in the returned templates. (optional)
+  includeIntegrationName: true,
+  // boolean | Tranform template format to GDP style format. (optional)
+  transformToGdpFormat: true,
+};
+
+apiInstance.templatesServiceGetTemplatesForEdge(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **integrationId** | [**string**] | Templates associated with a specific integration. | (optional) defaults to undefined
+ **filterOrigin** | **Array<&#39;UNDEFINED_ORIGIN&#39; &#124; &#39;GENERAL_NOTIFICATION&#39; &#124; &#39;ANOMALY_NOTIFICATION&#39; &#124; &#39;DATAMART_NOTIFICATION&#39; &#124; &#39;FETCH_NOTIFICATION&#39; &#124; &#39;POLICY_ALERT_NOTIFICATION&#39; &#124; &#39;RECOMMENDATION_NOTIFICATION&#39; &#124; &#39;REPORTS_NOTIFICATION&#39; &#124; &#39;SCHEDULED_REPORT_NOTIFICATION&#39; &#124; &#39;SCHEDULED_AUDIT_NOTIFICATION&#39; &#124; &#39;WELCOME_NOTIFICATION&#39; &#124; &#39;EMAIL_HEADER_AND_FOOTER&#39; &#124; &#39;RISK_NOTIFICATION&#39; &#124; &#39;SCHEDULED_JOB_SUMMARY&#39; &#124; &#39;INCIDENT_NOTIFICATION&#39; &#124; &#39;MAINTENANCE_NOTIFICATION&#39; &#124; &#39;QSPM_RISK&#39; &#124; &#39;POLICY_IMPORT_NOTIFICATION&#39;>** | Filter on a specific set of data origins; ignored if empty. | (optional) defaults to undefined
+ **filterEnabledOnly** | [**boolean**] | Filter on all templates instead of just the enabled templates. | (optional) defaults to undefined
+ **includeIntegrationName** | [**boolean**] | Include the Integration name in the returned templates. | (optional) defaults to undefined
+ **transformToGdpFormat** | [**boolean**] | Tranform template format to GDP style format. | (optional) defaults to undefined
+
+
+### Return type
+
+**Templatesv3GetTemplatesForEdgeResponse**
 
 ### Authorization
 
@@ -27804,8 +31255,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**universalConnectorManagerGetCertificate**](UniversalConnectorManagerApi.md#universalConnectorManagerGetCertificate) | **GET** /api/v3/certificates | Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in Guardium.
+[**universalConnectorManagerGetCertificate**](UniversalConnectorManagerApi.md#universalConnectorManagerGetCertificate) | **GET** /api/v3/certificates | Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in GDSC.
 [**universalConnectorManagerGetConnectors**](UniversalConnectorManagerApi.md#universalConnectorManagerGetConnectors) | **GET** /api/v3/connectors | Summary: Get connectors Description: Get all the connectors Universal Connector can support. Includes a list of event pipelines (input--filter pairs), along with the supported data source types and platforms.
+[**universalConnectorManagerGetUCSetup**](UniversalConnectorManagerApi.md#universalConnectorManagerGetUCSetup) | **GET** /api/v3/universal_connections/configurations/{plugin_id} | Gets information to setup the new Universal connection.
 [**universalConnectorManagerListConnectionsSummary**](UniversalConnectorManagerApi.md#universalConnectorManagerListConnectionsSummary) | **GET** /api/v3/universal_connections | Summary: List connections summary Description: List a summary of Universal Connector configured connections (AKA datasources).
 [**universalConnectorManagerPluginsList**](UniversalConnectorManagerApi.md#universalConnectorManagerPluginsList) | **GET** /api/v3/plugins | Summary: Plugins list Description: List of all universal connector plugins.
 [**universalConnectorManagerUploadPlugin**](UniversalConnectorManagerApi.md#universalConnectorManagerUploadPlugin) | **POST** /api/v3/plugins | Summary: Upload plugin Description: Upload a plugin-package for Universal Connector.
@@ -27888,6 +31340,60 @@ This endpoint does not need any parameter.
 ### Return type
 
 **Universalconnectormanagerv3GetConnectorsResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **universalConnectorManagerGetUCSetup**
+> Universalconnectormanagerv3GetUCSetupResponse universalConnectorManagerGetUCSetup()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .UniversalConnectorManagerApi(configuration);
+
+let body:.UniversalConnectorManagerApiUniversalConnectorManagerGetUCSetupRequest = {
+  // number | UC plugin id.
+  pluginId: 1,
+};
+
+apiInstance.universalConnectorManagerGetUCSetup(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pluginId** | [**number**] | UC plugin id. | defaults to undefined
+
+
+### Return type
+
+**Universalconnectormanagerv3GetUCSetupResponse**
 
 ### Authorization
 
@@ -28070,11 +31576,16 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**workflowCreateCase**](WorkflowApi.md#workflowCreateCase) | **POST** /api/v3/cases | Summary: Create case Description: Create single case.
+[**workflowCreateProductEntity**](WorkflowApi.md#workflowCreateProductEntity) | **POST** /api/v3/workflow/productentities | Summary: Create product entity Description: Create single product entity.
 [**workflowCreateTask**](WorkflowApi.md#workflowCreateTask) | **POST** /api/v3/cases/{case_id}/tasks | Summary: Create task Description: Create single task within a parent case.
+[**workflowCreateWorkflowEvent**](WorkflowApi.md#workflowCreateWorkflowEvent) | **POST** /api/v3/workflow/event | Summary: Post event for processing by workflow rules Description: Find matching workflow rule and run it
+[**workflowDeleteProductEntity**](WorkflowApi.md#workflowDeleteProductEntity) | **DELETE** /api/v3/workflow/productentities/{entity_id} | Summary: Delete a product entity Description: Delete a single product entity.
 [**workflowGetCases**](WorkflowApi.md#workflowGetCases) | **GET** /api/v3/cases | Summary: Get cases Description: Return all cases requested.
 [**workflowGetCasesCount**](WorkflowApi.md#workflowGetCasesCount) | **POST** /api/v3/cases/count | Summary: Get cases count Description: Get case count.
 [**workflowGetFilename**](WorkflowApi.md#workflowGetFilename) | **GET** /api/v3/cases/{case_id}/tasks/{task_id}/filename | Summary: Get filename Description: Return filename associated with the task referenced in the associated context record.
 [**workflowGetJobsCount**](WorkflowApi.md#workflowGetJobsCount) | **POST** /api/v3/cases/{case_id}/jobs/count | Summary: Get jobs count Description: Get jobs count.
+[**workflowGetProductEntities**](WorkflowApi.md#workflowGetProductEntities) | **GET** /api/v3/workflow/productentities | Summary: Get products and their associated event entities Description: Return a list of integrated products and their associated event entities
+[**workflowGetProductEntity**](WorkflowApi.md#workflowGetProductEntity) | **GET** /api/v3/workflow/productentities/{entity_id} | Summary: Get event entity field names, field labels, and field data types Description: Return a list of fields similar to report headers
 [**workflowGetReportResult**](WorkflowApi.md#workflowGetReportResult) | **GET** /api/v3/cases/{case_id}/tasks/{task_id}/result | Summary: Get report result Description: Return a page of results.
 [**workflowGetTasks**](WorkflowApi.md#workflowGetTasks) | **GET** /api/v3/cases/{case_id}/tasks | Summary: Get tasks Description: Return all tasks requested.
 [**workflowGetTasksCount**](WorkflowApi.md#workflowGetTasksCount) | **POST** /api/v3/cases/{case_id}/tasks/count | Summary: Get cases count Description: Get case count.
@@ -28082,6 +31593,7 @@ Method | HTTP request | Description
 [**workflowSearchReports**](WorkflowApi.md#workflowSearchReports) | **POST** /api/v3/cases/reports | Summary: Get a list of report IDs Description: Returns a list of report IDs referenced in all cases and tasks
 [**workflowSearchTasks**](WorkflowApi.md#workflowSearchTasks) | **POST** /api/v3/cases/{case_id}/tasks/search | Summary: Search cases Description: Return a subset of cases.
 [**workflowUpdateCases**](WorkflowApi.md#workflowUpdateCases) | **PUT** /api/v3/cases | Summary: Update cases Description: Update multiple cases in one request.
+[**workflowUpdateProductEntity**](WorkflowApi.md#workflowUpdateProductEntity) | **PUT** /api/v3/workflow/productentities/{entity_id} | Summary: Update a product entity Description: Update a single product entity.
 [**workflowUpdateTasks**](WorkflowApi.md#workflowUpdateTasks) | **PUT** /api/v3/cases/{case_id}/tasks | Summary: Update tasks Description: Update multiple tasks for the same parent in one request.
 
 
@@ -28141,6 +31653,110 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Workflowv3CreateCaseResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **workflowCreateProductEntity**
+> Workflowv3CreateProductEntityResponse workflowCreateProductEntity(workflowv3ProductEntity)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .WorkflowApi(configuration);
+
+let body:.WorkflowApiWorkflowCreateProductEntityRequest = {
+  // Workflowv3ProductEntity
+  workflowv3ProductEntity: {
+    entity: {
+      disabled: true,
+      entityId: "entityId_example",
+      entityLabel: "entityLabel_example",
+      featureFlag: "featureFlag_example",
+      preventDelete: true,
+      privilegeId: "privilegeId_example",
+      privilegeType: "privilegeType_example",
+      productId: "productId_example",
+      productLabel: "productLabel_example",
+      templateOrigin: "templateOrigin_example",
+      workflow: {
+        auditType: "UNDEFINED_TYPE",
+        configTypes: [
+          "configTypes_example",
+        ],
+        workflowInvestigationLinks: [
+          {
+            display: "display_example",
+            id: "id_example",
+            type: "type_example",
+          },
+        ],
+        workflowResponseTemplate: {
+          display: "display_example",
+          id: "id_example",
+          type: "type_example",
+        },
+        workflowUniqueFields: [
+          "workflowUniqueFields_example",
+        ],
+      },
+    },
+    headers: [
+      {
+        choices: [
+          {
+            disabled: true,
+            label: "label_example",
+            name: "name_example",
+          },
+        ],
+        groupTypeId: 1,
+        hideFromView: true,
+        key: "key_example",
+        type: "STRING",
+        value: "value_example",
+      },
+    ],
+  },
+};
+
+apiInstance.workflowCreateProductEntity(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **workflowv3ProductEntity** | **Workflowv3ProductEntity**|  |
+
+
+### Return type
+
+**Workflowv3CreateProductEntityResponse**
 
 ### Authorization
 
@@ -28266,6 +31882,123 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **workflowCreateWorkflowEvent**
+> Workflowv3WorkflowEventResponse workflowCreateWorkflowEvent(workflowv3WorkflowEvent)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .WorkflowApi(configuration);
+
+let body:.WorkflowApiWorkflowCreateWorkflowEventRequest = {
+  // Workflowv3WorkflowEvent
+  workflowv3WorkflowEvent: {
+    data: {
+      "key": "key_example",
+    },
+    entityId: "entityId_example",
+    href: "href_example",
+    severity: "UNDEFINED_PRIORITY",
+    tenantId: "tenantId_example",
+    title: "title_example",
+  },
+};
+
+apiInstance.workflowCreateWorkflowEvent(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **workflowv3WorkflowEvent** | **Workflowv3WorkflowEvent**|  |
+
+
+### Return type
+
+**Workflowv3WorkflowEventResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **workflowDeleteProductEntity**
+> Workflowv3DeleteProductEntityResponse workflowDeleteProductEntity()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .WorkflowApi(configuration);
+
+let body:.WorkflowApiWorkflowDeleteProductEntityRequest = {
+  // string | Unique id for the product entity
+  entityId: "entity_id_example",
+};
+
+apiInstance.workflowDeleteProductEntity(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **entityId** | [**string**] | Unique id for the product entity | defaults to undefined
+
+
+### Return type
+
+**Workflowv3DeleteProductEntityResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 
@@ -28562,6 +32295,117 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **workflowGetProductEntities**
+> Workflowv3GetProductEntitiesResponse workflowGetProductEntities()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .WorkflowApi(configuration);
+
+let body:.WorkflowApiWorkflowGetProductEntitiesRequest = {
+  // number | Optional starting point for the page of data. (optional)
+  offset: 1,
+  // number | Optional page size. (optional)
+  limit: 1,
+};
+
+apiInstance.workflowGetProductEntities(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **offset** | [**number**] | Optional starting point for the page of data. | (optional) defaults to undefined
+ **limit** | [**number**] | Optional page size. | (optional) defaults to undefined
+
+
+### Return type
+
+**Workflowv3GetProductEntitiesResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **workflowGetProductEntity**
+> Workflowv3ProductEntity workflowGetProductEntity()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .WorkflowApi(configuration);
+
+let body:.WorkflowApiWorkflowGetProductEntityRequest = {
+  // string | Unique id for the product entity
+  entityId: "entity_id_example",
+};
+
+apiInstance.workflowGetProductEntity(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **entityId** | [**string**] | Unique id for the product entity | defaults to undefined
+
+
+### Return type
+
+**Workflowv3ProductEntity**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 
@@ -29117,6 +32961,116 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Workflowv3UpdateCasesResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **workflowUpdateProductEntity**
+> Workflowv3UpdateProductEntityResponse workflowUpdateProductEntity(workflowv3UpdateProductEntityRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .WorkflowApi(configuration);
+
+let body:.WorkflowApiWorkflowUpdateProductEntityRequest = {
+  // string | Unique Entity id, required for update.
+  entityId: "entity_id_example",
+  // Workflowv3UpdateProductEntityRequest
+  workflowv3UpdateProductEntityRequest: {
+    entityId: "entityId_example",
+    productEntity: {
+      entity: {
+        disabled: true,
+        entityId: "entityId_example",
+        entityLabel: "entityLabel_example",
+        featureFlag: "featureFlag_example",
+        preventDelete: true,
+        privilegeId: "privilegeId_example",
+        privilegeType: "privilegeType_example",
+        productId: "productId_example",
+        productLabel: "productLabel_example",
+        templateOrigin: "templateOrigin_example",
+        workflow: {
+          auditType: "UNDEFINED_TYPE",
+          configTypes: [
+            "configTypes_example",
+          ],
+          workflowInvestigationLinks: [
+            {
+              display: "display_example",
+              id: "id_example",
+              type: "type_example",
+            },
+          ],
+          workflowResponseTemplate: {
+            display: "display_example",
+            id: "id_example",
+            type: "type_example",
+          },
+          workflowUniqueFields: [
+            "workflowUniqueFields_example",
+          ],
+        },
+      },
+      headers: [
+        {
+          choices: [
+            {
+              disabled: true,
+              label: "label_example",
+              name: "name_example",
+            },
+          ],
+          groupTypeId: 1,
+          hideFromView: true,
+          key: "key_example",
+          type: "STRING",
+          value: "value_example",
+        },
+      ],
+    },
+  },
+};
+
+apiInstance.workflowUpdateProductEntity(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **workflowv3UpdateProductEntityRequest** | **Workflowv3UpdateProductEntityRequest**|  |
+ **entityId** | [**string**] | Unique Entity id, required for update. | defaults to undefined
+
+
+### Return type
+
+**Workflowv3UpdateProductEntityResponse**
 
 ### Authorization
 

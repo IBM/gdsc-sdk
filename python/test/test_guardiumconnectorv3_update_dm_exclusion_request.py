@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.guardiumconnectorv3_update_dm_exclusion_request import Guardiumconnectorv3UpdateDmExclusionRequest
+from ibm_gdsc_sdk_saas.models.guardiumconnectorv3_update_dm_exclusion_request import Guardiumconnectorv3UpdateDmExclusionRequest
 
 class TestGuardiumconnectorv3UpdateDmExclusionRequest(unittest.TestCase):
     """Guardiumconnectorv3UpdateDmExclusionRequest unit test stubs"""

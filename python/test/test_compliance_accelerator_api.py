@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.api.compliance_accelerator_api import ComplianceAcceleratorApi
+from ibm_gdsc_sdk_saas.api.compliance_accelerator_api import ComplianceAcceleratorApi
 
 
 class TestComplianceAcceleratorApi(unittest.TestCase):

@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.healthcollectorv3_get_top_gdp_collectors_response import Healthcollectorv3GetTopGDPCollectorsResponse
+from ibm_gdsc_sdk_saas.models.healthcollectorv3_get_top_gdp_collectors_response import Healthcollectorv3GetTopGDPCollectorsResponse
 
 class TestHealthcollectorv3GetTopGDPCollectorsResponse(unittest.TestCase):
     """Healthcollectorv3GetTopGDPCollectorsResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestHealthcollectorv3GetTopGDPCollectorsResponse(unittest.TestCase):
         if include_optional:
             return Healthcollectorv3GetTopGDPCollectorsResponse(
                 top_gdp_collectors = [
-                    ibm_gdsc_sdk_software.models.healthcollectorv3_usage.healthcollectorv3Usage(
+                    ibm_gdsc_sdk_saas.models.healthcollectorv3_usage.healthcollectorv3Usage(
                         label = '', 
                         name = '', 
                         nls_key = '', 

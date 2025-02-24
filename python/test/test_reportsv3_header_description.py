@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.reportsv3_header_description import Reportsv3HeaderDescription
+from ibm_gdsc_sdk_saas.models.reportsv3_header_description import Reportsv3HeaderDescription
 
 class TestReportsv3HeaderDescription(unittest.TestCase):
     """Reportsv3HeaderDescription unit test stubs"""

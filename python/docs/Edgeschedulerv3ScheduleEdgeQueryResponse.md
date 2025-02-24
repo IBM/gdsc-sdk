@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ibm_gdsc_sdk_software.models.edgeschedulerv3_schedule_edge_query_response import Edgeschedulerv3ScheduleEdgeQueryResponse
+from ibm_gdsc_sdk_saas.models.edgeschedulerv3_schedule_edge_query_response import Edgeschedulerv3ScheduleEdgeQueryResponse
 
 # TODO update the JSON string below
 json = "{}"

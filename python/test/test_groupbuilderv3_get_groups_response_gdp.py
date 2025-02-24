@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.groupbuilderv3_get_groups_response_gdp import Groupbuilderv3GetGroupsResponseGdp
+from ibm_gdsc_sdk_saas.models.groupbuilderv3_get_groups_response_gdp import Groupbuilderv3GetGroupsResponseGdp
 
 class TestGroupbuilderv3GetGroupsResponseGdp(unittest.TestCase):
     """Groupbuilderv3GetGroupsResponseGdp unit test stubs"""

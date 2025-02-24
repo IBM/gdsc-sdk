@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.complianceacceleratorv3_reports import Complianceacceleratorv3Reports
+from ibm_gdsc_sdk_saas.models.complianceacceleratorv3_reports import Complianceacceleratorv3Reports
 
 class TestComplianceacceleratorv3Reports(unittest.TestCase):
     """Complianceacceleratorv3Reports unit test stubs"""
@@ -36,15 +36,28 @@ class TestComplianceacceleratorv3Reports(unittest.TestCase):
         if include_optional:
             return Complianceacceleratorv3Reports(
                 reports = [
-                    ibm_gdsc_sdk_software.models.complianceacceleratorv3_report.complianceacceleratorv3Report(
+                    ibm_gdsc_sdk_saas.models.complianceacceleratorv3_report.complianceacceleratorv3Report(
                         description = '', 
                         groups_needed = [
-                            ibm_gdsc_sdk_software.models.complianceacceleratorv3_group.complianceacceleratorv3Group(
+                            ibm_gdsc_sdk_saas.models.complianceacceleratorv3_group.complianceacceleratorv3Group(
                                 desc = '', 
                                 group_type_id = 56, 
                                 id = 56, 
+                                ldap_config = ibm_gdsc_sdk_saas.models.groupbuilderv3_ldap_config.groupbuilderv3LdapConfig(
+                                    attributes = [
+                                        ''
+                                        ], 
+                                    bind_group_id = 56, 
+                                    bind_password = '', 
+                                    clear_group = True, 
+                                    filter = '', 
+                                    filter_scope = 56, 
+                                    import_limit = 56, 
+                                    ldap_group_name = '', 
+                                    ldap_id = '', 
+                                    member_prefix = '', ), 
                                 members = [
-                                    ibm_gdsc_sdk_software.models.complianceacceleratorv3_group_member.complianceacceleratorv3GroupMember(
+                                    ibm_gdsc_sdk_saas.models.groupbuilderv3_group_member.groupbuilderv3GroupMember(
                                         member_id = '', 
                                         name = '', )
                                     ], 
@@ -52,7 +65,7 @@ class TestComplianceacceleratorv3Reports(unittest.TestCase):
                                     ''
                                     ], 
                                 members_to_delete = [
-                                    ibm_gdsc_sdk_software.models.complianceacceleratorv3_group_member.complianceacceleratorv3GroupMember(
+                                    ibm_gdsc_sdk_saas.models.groupbuilderv3_group_member.groupbuilderv3GroupMember(
                                         member_id = '', 
                                         name = '', )
                                     ], 
@@ -60,7 +73,7 @@ class TestComplianceacceleratorv3Reports(unittest.TestCase):
                                 parent = True, )
                             ], 
                         groups_present = [
-                            ibm_gdsc_sdk_software.models.complianceacceleratorv3_group.complianceacceleratorv3Group(
+                            ibm_gdsc_sdk_saas.models.complianceacceleratorv3_group.complianceacceleratorv3Group(
                                 desc = '', 
                                 group_type_id = 56, 
                                 id = 56, 
@@ -69,7 +82,7 @@ class TestComplianceacceleratorv3Reports(unittest.TestCase):
                             ], 
                         report_id = '', 
                         report_tags = [
-                            ibm_gdsc_sdk_software.models.reportsv3_report_tag.reportsv3ReportTag(
+                            ibm_gdsc_sdk_saas.models.reportsv3_report_tag.reportsv3ReportTag(
                                 nls_key = '', 
                                 nls_value = '', )
                             ], 

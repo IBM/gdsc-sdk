@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.notificationsv3_template_property import Notificationsv3TemplateProperty
+from ibm_gdsc_sdk_saas.models.notificationsv3_template_property import Notificationsv3TemplateProperty
 
 class TestNotificationsv3TemplateProperty(unittest.TestCase):
     """Notificationsv3TemplateProperty unit test stubs"""

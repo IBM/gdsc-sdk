@@ -14,7 +14,7 @@
 
 import unittest
 
-from ibm_gdsc_sdk_software.models.resourcecontrollerk8v3_app_hpa import Resourcecontrollerk8v3AppHpa
+from ibm_gdsc_sdk_saas.models.resourcecontrollerk8v3_app_hpa import Resourcecontrollerk8v3AppHpa
 
 class TestResourcecontrollerk8v3AppHpa(unittest.TestCase):
     """Resourcecontrollerk8v3AppHpa unit test stubs"""
