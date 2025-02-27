@@ -23,7 +23,7 @@ from setuptools import setup, find_packages  # noqa: H301
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 NAME = "ibm-gdsc-sdk-saas"
-VERSION = "3.0.20250224"
+VERSION = "3.0.20250227"
 PYTHON_REQUIRES = ">=3.7"
 REQUIRES = [
     "urllib3 >= 1.25.3, < 2.1.0",

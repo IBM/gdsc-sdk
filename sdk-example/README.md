@@ -15,6 +15,6 @@ Before you begin, make sure you meet below requirements and follow the steps :
 
 - [Python examples](/sdk-example/python/)
 - [Typescript examples](/sdk-example/typescript/src)
-- [Java examples](/sdk-example/java/example/src/main/java/com/ibm/gdsc/sdk/example)
+- [Java examples](/sdk-example/java/example)
 - [cURL examples](/sdk-example/bash/)
 

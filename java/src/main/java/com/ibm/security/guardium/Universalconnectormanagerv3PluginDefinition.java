@@ -53,7 +53,7 @@ import com.ibm.security.JSON;
 /**
  * Plugin definition based on UCPluginDefinition.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-24T18:44:53.377644Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
 public class Universalconnectormanagerv3PluginDefinition {
   public static final String SERIALIZED_NAME_PLUGIN_J_D_B_C_DRIVER_REQUIRED = "plugin_JDBC_driver_required";
   @SerializedName(SERIALIZED_NAME_PLUGIN_J_D_B_C_DRIVER_REQUIRED)

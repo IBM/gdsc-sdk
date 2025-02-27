@@ -52,7 +52,7 @@ import com.ibm.security.JSON;
 /**
  * ChartDisplayLayout has Chart matadata , rows and headers.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-24T18:44:53.377644Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
 public class Reportsv3ChartDisplayLayout {
   public static final String SERIALIZED_NAME_CHART_HEADERS = "chart_headers";
   @SerializedName(SERIALIZED_NAME_CHART_HEADERS)

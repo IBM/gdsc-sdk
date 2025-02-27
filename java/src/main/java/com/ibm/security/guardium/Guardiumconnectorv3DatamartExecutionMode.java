@@ -49,7 +49,7 @@ import com.ibm.security.JSON;
 /**
  * Guardiumconnectorv3DatamartExecutionMode
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-24T18:44:53.377644Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
 public class Guardiumconnectorv3DatamartExecutionMode {
   public static final String SERIALIZED_NAME_DM_EXEC_DEFAULT_MODE = "dm_exec_default_mode";
   @SerializedName(SERIALIZED_NAME_DM_EXEC_DEFAULT_MODE)

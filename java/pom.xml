@@ -5,14 +5,7 @@
     <artifactId>com.ibm.security.guardium.saas</artifactId>
     <packaging>jar</packaging>
     <name>com.ibm.security.guardium.saas</name>
-    <version>3.0.20250224</version>
-    <url>https://github.com/openapitools/openapi-generator</url>
-    <description>OpenAPI Java</description>
-    <scm>
-        <connection>scm:git:git@github.com:openapitools/openapi-generator.git</connection>
-        <developerConnection>scm:git:git@github.com:openapitools/openapi-generator.git</developerConnection>
-        <url>https://github.com/openapitools/openapi-generator</url>
-    </scm>
+    <version>3.0.20250227</version>
 
   <licenses>
    <license>
@@ -21,15 +14,6 @@
     <distribution>repo</distribution>
     </license>
   </licenses>
-
-    <developers>
-        <developer>
-            <name>OpenAPI-Generator Contributors</name>
-            <email>team@openapitools.org</email>
-            <organization>OpenAPITools.org</organization>
-            <organizationUrl>http://openapitools.org</organizationUrl>
-        </developer>
-    </developers>
 
     <build>
         <plugins>
@@ -341,29 +325,4 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spotless.version>2.43.0</spotless.version>
     </properties>
-  <repositories>
-        <repository>
-            <id>mavenlocal</id>
-            <name>artifactory-dal10-01-node-21.swg-devops.com-releases</name>
-            <url>https://na.artifactory.swg-devops.com/artifactory/sec-guardium-next-gen-maven-local</url>
-        </repository>
-        <repository>
-            <id>central</id>
-            <name>central</name>
-            <url>https://repo.maven.apache.org/maven2/</url>
-        </repository>
- </repositories>
- <distributionManagement>
-        <repository>
-            <id>mavenlocal</id>
-            <name>artifactory-dal10-01-node-21.swg-devops.com-releases</name>
-            <url>https://na.artifactory.swg-devops.com/artifactory/sec-guardium-next-gen-maven-local</url>
-        </repository>
-        <snapshotRepository>
-            <id>localsnapshots</id>
-            <name>artifactory-dal10-01-node-21.swg-devops.com-snapshots</name>
-            <url>https://na.artifactory.swg-devops.com/artifactory/sec-guardium-next-gen-maven-local</url>
-        </snapshotRepository>
-        
-   </distributionManagement>
 </project>

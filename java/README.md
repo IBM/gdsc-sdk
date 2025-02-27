@@ -30,7 +30,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ibm.security.guardium</groupId>
   <artifactId>com.ibm.security.guardium.saas</artifactId>
-  <version>3.0.20250224</version>
+  <version>3.0.20250227</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -46,7 +46,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.ibm.security.guardium:com.ibm.security.guardium.saas:3.0.20250224"
+     implementation "com.ibm.security.guardium:com.ibm.security.guardium.saas:3.0.20250227"
   }
 ```
 
@@ -60,7 +60,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/com.ibm.security.guardium.saas-3.0.20250224.jar`
+* `target/com.ibm.security.guardium.saas-3.0.20250227.jar`
 * `target/lib/*.jar`
 
 ## Getting Started

@@ -54,7 +54,7 @@ import com.ibm.security.JSON;
 /**
  * A request to update a specific notification with the specified fields. The ID field is required, all other fields are optional. Specified fields will be used to included in the persisted NotificationRecord.  If no fields are specified then the  notification record update is not performed.  If the ID is not specified an error is returned.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-24T18:44:53.377644Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
 public class Notificationsv3UpdateNotificationRecordRequest {
   public static final String SERIALIZED_NAME_NOTIFICATION_ID = "notification_id";
   @SerializedName(SERIALIZED_NAME_NOTIFICATION_ID)

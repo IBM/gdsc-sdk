@@ -14,7 +14,7 @@
 """  # noqa: E501
 
 
-__version__ = "3.0.20250224"
+__version__ = "3.0.20250227"
 
 # import apis into sdk package
 from ibm_gdsc_sdk_saas.api.assets_service_api import AssetsServiceApi

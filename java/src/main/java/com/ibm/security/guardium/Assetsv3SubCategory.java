@@ -52,7 +52,7 @@ import com.ibm.security.JSON;
 /**
  * SubCategory - Sub Category Data for Manage Asset Filter Panel.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-24T18:44:53.377644Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
 public class Assetsv3SubCategory {
   public static final String SERIALIZED_NAME_CHILDREN_CATEGORY = "children_category";
   @SerializedName(SERIALIZED_NAME_CHILDREN_CATEGORY)

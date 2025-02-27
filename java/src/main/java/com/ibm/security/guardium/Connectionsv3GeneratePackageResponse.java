@@ -50,7 +50,7 @@ import com.ibm.security.JSON;
 /**
  * Connectionsv3GeneratePackageResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-24T18:44:53.377644Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
 public class Connectionsv3GeneratePackageResponse {
   public static final String SERIALIZED_NAME_GDP_PACKAGE_LINK = "gdp_package_link";
   @SerializedName(SERIALIZED_NAME_GDP_PACKAGE_LINK)

@@ -50,7 +50,7 @@ import com.ibm.security.JSON;
 /**
  * Qspmdatamanagerv3AppData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-24T18:44:53.377644Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
 public class Qspmdatamanagerv3AppData {
   public static final String SERIALIZED_NAME_APP_CLIENT_SPECIFIC = "app_client_specific";
   @SerializedName(SERIALIZED_NAME_APP_CLIENT_SPECIFIC)

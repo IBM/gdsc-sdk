@@ -52,7 +52,7 @@ import com.ibm.security.JSON;
 /**
  * GetRiskEventRowResponse is the response object for GetRiskEventRow API.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-24T18:44:53.377644Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
 public class Riskanalyticscontrollerv3GetRiskEventRowResponse {
   public static final String SERIALIZED_NAME_LIMIT_REACHED = "limit_reached";
   @SerializedName(SERIALIZED_NAME_LIMIT_REACHED)

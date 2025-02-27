@@ -51,7 +51,7 @@ import com.ibm.security.JSON;
 /**
  * ReportResultRow - contains one row of data mapped to header key.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-24T18:44:53.377644Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
 public class Workflowv3ReportResultRow {
   public static final String SERIALIZED_NAME_ROW = "row";
   @SerializedName(SERIALIZED_NAME_ROW)

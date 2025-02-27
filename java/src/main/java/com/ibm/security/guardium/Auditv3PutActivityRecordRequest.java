@@ -49,7 +49,7 @@ import com.ibm.security.JSON;
 /**
  * PutActivityRecord creates an activity log record.  All fields are optional.  Specified fields will be used to included in the persisted ActivityRecord.  If no fields are specified then no activity log record is persisted.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-24T18:44:53.377644Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
 public class Auditv3PutActivityRecordRequest {
   public static final String SERIALIZED_NAME_ACTION_TAKEN = "action_taken";
   @SerializedName(SERIALIZED_NAME_ACTION_TAKEN)

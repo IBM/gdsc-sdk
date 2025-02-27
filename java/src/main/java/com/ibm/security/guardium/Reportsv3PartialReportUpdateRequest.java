@@ -53,7 +53,7 @@ import com.ibm.security.JSON;
 /**
  * UpdatePartialReportRequest is the argument type used to update a report with partial information using the UpdatePartialReport() api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-24T18:44:53.377644Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
 public class Reportsv3PartialReportUpdateRequest {
   public static final String SERIALIZED_NAME_DEFAULT_CHART_EXPANDED = "default_chart_expanded";
   @SerializedName(SERIALIZED_NAME_DEFAULT_CHART_EXPANDED)

@@ -59,7 +59,7 @@ import com.google.gson.JsonParseException;
 
 import com.ibm.security.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-24T18:44:53.377644Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
 public class ConfigureSSORequestIdpMetadata extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(ConfigureSSORequestIdpMetadata.class.getName());
 

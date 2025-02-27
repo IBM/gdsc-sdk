@@ -54,7 +54,7 @@ import com.ibm.security.JSON;
 /**
  * VulnerabilitiesSummaryAffectedDataStoreSummary
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-24T18:44:53.377644Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
 public class VulnerabilitiesSummaryAffectedDataStoreSummary {
   public static final String SERIALIZED_NAME_CLOUD_ACCOUNT_IDS_COUNT = "cloudAccountIdsCount";
   @SerializedName(SERIALIZED_NAME_CLOUD_ACCOUNT_IDS_COUNT)

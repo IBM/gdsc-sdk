@@ -49,7 +49,7 @@ import com.ibm.security.JSON;
 /**
  * UpdateReportResponse contains the report id and schedule flag of the updated report from the UpdateReport() api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-24T18:44:53.377644Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
 public class Reportsv3UpdateReportResponse {
   public static final String SERIALIZED_NAME_IS_SCHEDULED = "is_scheduled";
   @SerializedName(SERIALIZED_NAME_IS_SCHEDULED)

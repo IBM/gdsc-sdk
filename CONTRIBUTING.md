@@ -1,5 +1,5 @@
 ## Contributing In General
-Our project welcomes external contributions. To contribute code or documentation, please submit a [pull request](https://github.com/IBM/guardium-sdk/pulls).
+Our project welcomes external contributions. To contribute code or documentation, please submit a [pull request](https://github.com/IBM/gdsc-sdk/pulls).
 
 A good way to familiarize yourself with the codebase and contribution process is
 to look for and tackle low-hanging fruit in the  [issue tracker][issues].
@@ -32,15 +32,15 @@ If you just started to work on a new plug-in or a fix, please follow the [fork a
 
 1. Fork this public repository using the Fork button, go to the page of the fork repository you just created, and press the Code button: Copy the fork URL, and add it as another remote in your existing project (first time only):  
     ```
-    git remote add myfork https://github.com/IBM/guardium-sdk.git
+    git remote add myfork https://github.com/IBM/gdsc-sdk.git
     git remote -v
     ```
 2. Sync your repositories by running `git remote update` or `git fetch myfork`
 
-3. Checkout the branch where your commits were made, like _master_, and find the commits that you added. If it's a range of sequential commits, mark only the first and last commits. For example: 
+3. Checkout the branch where your commits were made, like _main_, and find the commits that you added. If it's a range of sequential commits, mark only the first and last commits. For example: 
     
     ```
-    git checkout master
+    git checkout main
     git log -- filter-plugin/pluginx
     ```
 
@@ -112,7 +112,7 @@ Feel free to [create an issue][issues] to question or discuss anything with us. 
 Coming soon ...
 
 <!-- links -->
-[issues]: https://github.com/IBM/guardium-sdk/issues
+[issues]: https://github.com/IBM/gdsc-sdk/issues
 
 [DCO]: https://developercertificate.org/
 

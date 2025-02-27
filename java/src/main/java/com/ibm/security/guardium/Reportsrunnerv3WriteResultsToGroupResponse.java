@@ -49,7 +49,7 @@ import com.ibm.security.JSON;
 /**
  * WriteResultsToGroupResponse is the return type of the WriteResultsToGroupByReportID() and WriteResultsToGroupByDefinition() apis.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-24T18:44:53.377644Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
 public class Reportsrunnerv3WriteResultsToGroupResponse {
   public static final String SERIALIZED_NAME_JOB_ID = "job_id";
   @SerializedName(SERIALIZED_NAME_JOB_ID)

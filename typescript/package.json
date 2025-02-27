@@ -1,6 +1,6 @@
 {
   "name":"@ibm-gdsc/ibm-gdsc-sdk-saas",
-  "version": "3.0.20250224",
+  "version": "3.0.20250227",
   "description": "IBM Guardium Data Security Center SDK",
   "author": "IBM GDSC Team <c3cvp8ch@ca.ibm.com>",
 "homepage": "https://github.com/IBM/gdsc-sdk/tree/main",
@@ -36,9 +36,5 @@
   "devDependencies": {
     "typescript": "^4.0",
     "@types/url-parse": "1.4.4"
-  }
-,
-  "publishConfig": {
-    "registry": "https://na.artifactory.swg-devops.com/artifactory/api/npm/sec-common-npm-local/"
   }
 }

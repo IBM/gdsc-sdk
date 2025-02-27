@@ -49,7 +49,7 @@ import com.ibm.security.JSON;
 /**
  * Get folders from the integratioin provided. The configuration properties vary by integration and must match the required content.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-24T18:44:53.377644Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
 public class Notificationsv3GetFoldersRequest {
   public static final String SERIALIZED_NAME_FOLDER_NAME = "folder_name";
   @SerializedName(SERIALIZED_NAME_FOLDER_NAME)
