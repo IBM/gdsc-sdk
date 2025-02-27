@@ -1,0 +1,35 @@
+
+
+# Schedulerv3TaskType
+
+## Enum
+
+
+* `UNDEFINED_JOBTYPE` (value: `"UNDEFINED_JOBTYPE"`)
+
+* `REPORT` (value: `"REPORT"`)
+
+* `DATA_IMPORT` (value: `"DATA_IMPORT"`)
+
+* `GROUP_IMPORT` (value: `"GROUP_IMPORT"`)
+
+* `CLASSIFIER` (value: `"CLASSIFIER"`)
+
+* `VULNERABILITY_ASSESSMENT` (value: `"VULNERABILITY_ASSESSMENT"`)
+
+* `VULNERABILITY_ROLLUP` (value: `"VULNERABILITY_ROLLUP"`)
+
+* `DATA_EXPORT` (value: `"DATA_EXPORT"`)
+
+* `ALIAS_REPOPULATE` (value: `"ALIAS_REPOPULATE"`)
+
+* `WORKFLOW_CREATE` (value: `"WORKFLOW_CREATE"`)
+
+* `EVENT` (value: `"EVENT"`)
+
+* `API_IMPORT` (value: `"API_IMPORT"`)
+
+* `JOB_SUMMARY` (value: `"JOB_SUMMARY"`)
+
+
+

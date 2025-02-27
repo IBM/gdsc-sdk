@@ -1,0 +1,33 @@
+
+
+# Snifassistv3SnifAssistType
+
+## Enum
+
+
+* `VERSION_NOT_SUPPORTED` (value: `"VERSION_NOT_SUPPORTED"`)
+
+* `POLICY` (value: `"POLICY"`)
+
+* `CONFIGURATION_PARAMETERS` (value: `"CONFIGURATION_PARAMETERS"`)
+
+* `GROUP_UPDATE` (value: `"GROUP_UPDATE"`)
+
+* `SNIF_REGISTER` (value: `"SNIF_REGISTER"`)
+
+* `STAP_CONFIG` (value: `"STAP_CONFIG"`)
+
+* `STAP_CONFIG_ACK` (value: `"STAP_CONFIG_ACK"`)
+
+* `STAP_CONFIG_DELETE` (value: `"STAP_CONFIG_DELETE"`)
+
+* `STAP_CONFIG_DELETE_ACK` (value: `"STAP_CONFIG_DELETE_ACK"`)
+
+* `STAP_HEARTBEAT` (value: `"STAP_HEARTBEAT"`)
+
+* `STAP_COMMAND` (value: `"STAP_COMMAND"`)
+
+* `SNIF_FEEDBACK` (value: `"SNIF_FEEDBACK"`)
+
+
+

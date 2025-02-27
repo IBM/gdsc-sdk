@@ -1,0 +1,19 @@
+
+
+# Connectionsv3Status
+
+## Enum
+
+
+* `UNDEFINED_STATUS` (value: `"UNDEFINED_STATUS"`)
+
+* `STATUS_HEALTHY` (value: `"STATUS_HEALTHY"`)
+
+* `STATUS_UNHEALTHY` (value: `"STATUS_UNHEALTHY"`)
+
+* `STATUS_DISABLED` (value: `"STATUS_DISABLED"`)
+
+* `STATUS_INITIALIZING` (value: `"STATUS_INITIALIZING"`)
+
+
+

@@ -1,0 +1,40 @@
+{
+  "name":"@ibm-gdsc/ibm-gdsc-sdk-saas",
+  "version": "3.0.20250227",
+  "description": "IBM Guardium Data Security Center SDK",
+  "author": "IBM GDSC Team <c3cvp8ch@ca.ibm.com>",
+"homepage": "https://github.com/IBM/gdsc-sdk/tree/main",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IBM/gdsc-sdk.git"
+  },
+  "keywords": [
+    "fetch",
+    "typescript",
+    "openapi-client",
+    "openapi-generator"
+  ],
+  "license": "Apache License, Version 2.0",
+  "main": "./dist/index.js",
+  "type": "commonjs",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.js"
+    }
+  },
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "whatwg-fetch": "^3.0.0",
+    "es6-promise": "^4.2.4",
+    "url-parse": "^1.4.3"
+  },
+  "devDependencies": {
+    "typescript": "^4.0",
+    "@types/url-parse": "1.4.4"
+  }
+}
