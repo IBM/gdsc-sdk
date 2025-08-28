@@ -4,7 +4,7 @@ apply plugin: 'java'
 apply plugin: 'com.diffplug.spotless'
 
 group = 'com.ibm.security.guardium'
-version = '3.0.20250227'
+version = '3.0.20250703'
 
 buildscript {
     repositories {

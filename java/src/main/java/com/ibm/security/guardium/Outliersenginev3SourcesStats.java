@@ -49,7 +49,7 @@ import com.ibm.security.JSON;
 /**
  * Statistics about the different sources seen. Mainly related to the number of data source users.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
 public class Outliersenginev3SourcesStats {
   public static final String SERIALIZED_NAME_DATASOURCE_AVG_USERS = "datasource_avg_users";
   @SerializedName(SERIALIZED_NAME_DATASOURCE_AVG_USERS)

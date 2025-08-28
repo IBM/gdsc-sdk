@@ -118,7 +118,7 @@ public class DataVulnerabilitiesApi {
         Object localVarPostBody = addCommentBody;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments"
+        String localVarPath = "/api/v2/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments"
             .replace("{" + "vulnerabilityId" + "}", localVarApiClient.escapeString(vulnerabilityId.toString()))
             .replace("{" + "statusId" + "}", localVarApiClient.escapeString(statusId.toString()));
 
@@ -263,7 +263,7 @@ public class DataVulnerabilitiesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/vulnerabilities/summary";
+        String localVarPath = "/api/v2/dspm/vulnerabilities/summary";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -388,7 +388,7 @@ public class DataVulnerabilitiesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/vulnerabilities/{vulnerabilityId}"
+        String localVarPath = "/api/v2/dspm/vulnerabilities/{vulnerabilityId}"
             .replace("{" + "vulnerabilityId" + "}", localVarApiClient.escapeString(vulnerabilityId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -518,7 +518,7 @@ public class DataVulnerabilitiesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/vulnerabilities";
+        String localVarPath = "/api/v2/dspm/vulnerabilities";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -667,7 +667,7 @@ public class DataVulnerabilitiesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/vulnerabilities/byDataStore";
+        String localVarPath = "/api/v2/dspm/vulnerabilities/byDataStore";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -815,7 +815,7 @@ public class DataVulnerabilitiesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments/{commentId}"
+        String localVarPath = "/api/v2/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments/{commentId}"
             .replace("{" + "vulnerabilityId" + "}", localVarApiClient.escapeString(vulnerabilityId.toString()))
             .replace("{" + "statusId" + "}", localVarApiClient.escapeString(statusId.toString()))
             .replace("{" + "commentId" + "}", localVarApiClient.escapeString(commentId.toString()));
@@ -957,7 +957,7 @@ public class DataVulnerabilitiesApi {
         Object localVarPostBody = setVulnerabilityStatusRequest;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/vulnerabilities/{vulnerabilityId}/statuses"
+        String localVarPath = "/api/v2/dspm/vulnerabilities/{vulnerabilityId}/statuses"
             .replace("{" + "vulnerabilityId" + "}", localVarApiClient.escapeString(vulnerabilityId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -1096,7 +1096,7 @@ public class DataVulnerabilitiesApi {
         Object localVarPostBody = updateCommentBody;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments/{commentId}"
+        String localVarPath = "/api/v2/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments/{commentId}"
             .replace("{" + "vulnerabilityId" + "}", localVarApiClient.escapeString(vulnerabilityId.toString()))
             .replace("{" + "statusId" + "}", localVarApiClient.escapeString(statusId.toString()))
             .replace("{" + "commentId" + "}", localVarApiClient.escapeString(commentId.toString()));

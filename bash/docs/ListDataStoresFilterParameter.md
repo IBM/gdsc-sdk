@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **cloudAccountIds** | **array[string]** |  | [optional] [default to null]
 **cloudRegions** | **array[string]** |  | [optional] [default to null]
 **labels** | **array[string]** |  | [optional] [default to null]
-**classificationStatuses** | [**array[ClassificationStatus]**](ClassificationStatus.md) |  | [optional] [default to null]
+**classificationStatuses** | [**array[StoreClassificationStatus]**](StoreClassificationStatus.md) |  | [optional] [default to null]
 **sensitivityTags** | **array[string]** |  | [optional] [default to null]
 **sensitivityCategories** | [**array[SensitivityCategory]**](SensitivityCategory.md) |  | [optional] [default to null]
 **compliances** | [**array[Compliance]**](Compliance.md) |  | [optional] [default to null]

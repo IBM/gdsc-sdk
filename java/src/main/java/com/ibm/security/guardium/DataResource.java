@@ -51,7 +51,7 @@ import com.ibm.security.JSON;
 /**
  * DataResource
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
 public class DataResource {
   public static final String SERIALIZED_NAME_DATA_RESOURCE_ID = "dataResourceId";
   @SerializedName(SERIALIZED_NAME_DATA_RESOURCE_ID)
@@ -100,6 +100,10 @@ public class DataResource {
   public static final String SERIALIZED_NAME_STATS = "stats";
   @SerializedName(SERIALIZED_NAME_STATS)
   private DataResourceStats stats;
+
+  public static final String SERIALIZED_NAME_PATH = "path";
+  @SerializedName(SERIALIZED_NAME_PATH)
+  private String path;
 
   public DataResource() {
   }
@@ -332,6 +336,25 @@ public class DataResource {
   }
 
 
+  public DataResource path(String path) {
+    this.path = path;
+    return this;
+  }
+
+   /**
+   * Get path
+   * @return path
+  **/
+  @javax.annotation.Nullable
+  public String getPath() {
+    return path;
+  }
+
+  public void setPath(String path) {
+    this.path = path;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -353,12 +376,13 @@ public class DataResource {
         Objects.equals(this.modificationTime, dataResource.modificationTime) &&
         Objects.equals(this.isReviewed, dataResource.isReviewed) &&
         Objects.equals(this.link, dataResource.link) &&
-        Objects.equals(this.stats, dataResource.stats);
+        Objects.equals(this.stats, dataResource.stats) &&
+        Objects.equals(this.path, dataResource.path);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(dataResourceId, dataResourceName, dataStoreId, dataResourceType, dataResourceOwner, sizeInBytes, sizeFormatted, creationTime, modificationTime, isReviewed, link, stats);
+    return Objects.hash(dataResourceId, dataResourceName, dataStoreId, dataResourceType, dataResourceOwner, sizeInBytes, sizeFormatted, creationTime, modificationTime, isReviewed, link, stats, path);
   }
 
   @Override
@@ -377,6 +401,7 @@ public class DataResource {
     sb.append("    isReviewed: ").append(toIndentedString(isReviewed)).append("\n");
     sb.append("    link: ").append(toIndentedString(link)).append("\n");
     sb.append("    stats: ").append(toIndentedString(stats)).append("\n");
+    sb.append("    path: ").append(toIndentedString(path)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -411,6 +436,7 @@ public class DataResource {
     openapiFields.add("isReviewed");
     openapiFields.add("link");
     openapiFields.add("stats");
+    openapiFields.add("path");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -478,6 +504,9 @@ public class DataResource {
       // validate the optional field `stats`
       if (jsonObj.get("stats") != null && !jsonObj.get("stats").isJsonNull()) {
         DataResourceStats.validateJsonElement(jsonObj.get("stats"));
+      }
+      if ((jsonObj.get("path") != null && !jsonObj.get("path").isJsonNull()) && !jsonObj.get("path").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `path` to be a primitive type in the JSON string but got `%s`", jsonObj.get("path").toString()));
       }
   }
 

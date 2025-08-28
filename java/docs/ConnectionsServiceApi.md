@@ -32,6 +32,8 @@ All URIs are relative to *http://localhost*
 | [**connectionsServiceUpdatePlugin**](ConnectionsServiceApi.md#connectionsServiceUpdatePlugin) | **PUT** /api/v3/connections/plugins/{id} | Summary: Update plugin. Description: Update plugin. |
 | [**connectionsServiceUpdateSettings**](ConnectionsServiceApi.md#connectionsServiceUpdateSettings) | **PUT** /api/v3/connections/settings | Summary: Update settings Description: Update Settings. |
 | [**connectionsServiceValidateAwsConnection**](ConnectionsServiceApi.md#connectionsServiceValidateAwsConnection) | **POST** /api/v3/connections/validate/aws | Summary: Validate an AWS connection. Description: Validate an AWS connection. |
+| [**connectionsServiceValidateAzureConnection**](ConnectionsServiceApi.md#connectionsServiceValidateAzureConnection) | **POST** /api/v3/connections/validate/azure | Summary: Validate an Azure connection. Description: Validate an Azure connection. |
+| [**connectionsServiceValidateGcpConnection**](ConnectionsServiceApi.md#connectionsServiceValidateGcpConnection) | **POST** /api/v3/connections/validate/gcp | Summary: Validate a GCP connection. Description: Validate a GCP connection. |
 
 
 <a id="connectionsServiceCreateConnectionsAccounts"></a>
@@ -2042,6 +2044,152 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **connectionsv3ValidateAwsConnectionRequest** | [**Connectionsv3ValidateAwsConnectionRequest**](Connectionsv3ValidateAwsConnectionRequest.md)|  | |
+
+### Return type
+
+[**Connectionsv3ValidateConnectionResponse**](Connectionsv3ValidateConnectionResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
+<a id="connectionsServiceValidateAzureConnection"></a>
+# **connectionsServiceValidateAzureConnection**
+> Connectionsv3ValidateConnectionResponse connectionsServiceValidateAzureConnection(connectionsv3ValidateAzureConnectionRequest)
+
+Summary: Validate an Azure connection. Description: Validate an Azure connection.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ConnectionsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    ConnectionsServiceApi apiInstance = new ConnectionsServiceApi(defaultClient);
+    Connectionsv3ValidateAzureConnectionRequest connectionsv3ValidateAzureConnectionRequest = new Connectionsv3ValidateAzureConnectionRequest(); // Connectionsv3ValidateAzureConnectionRequest | 
+    try {
+      Connectionsv3ValidateConnectionResponse result = apiInstance.connectionsServiceValidateAzureConnection(connectionsv3ValidateAzureConnectionRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ConnectionsServiceApi#connectionsServiceValidateAzureConnection");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **connectionsv3ValidateAzureConnectionRequest** | [**Connectionsv3ValidateAzureConnectionRequest**](Connectionsv3ValidateAzureConnectionRequest.md)|  | |
+
+### Return type
+
+[**Connectionsv3ValidateConnectionResponse**](Connectionsv3ValidateConnectionResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
+<a id="connectionsServiceValidateGcpConnection"></a>
+# **connectionsServiceValidateGcpConnection**
+> Connectionsv3ValidateConnectionResponse connectionsServiceValidateGcpConnection(connectionsv3ValidateGcpConnectionRequest)
+
+Summary: Validate a GCP connection. Description: Validate a GCP connection.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ConnectionsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    ConnectionsServiceApi apiInstance = new ConnectionsServiceApi(defaultClient);
+    Connectionsv3ValidateGcpConnectionRequest connectionsv3ValidateGcpConnectionRequest = new Connectionsv3ValidateGcpConnectionRequest(); // Connectionsv3ValidateGcpConnectionRequest | 
+    try {
+      Connectionsv3ValidateConnectionResponse result = apiInstance.connectionsServiceValidateGcpConnection(connectionsv3ValidateGcpConnectionRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ConnectionsServiceApi#connectionsServiceValidateGcpConnection");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **connectionsv3ValidateGcpConnectionRequest** | [**Connectionsv3ValidateGcpConnectionRequest**](Connectionsv3ValidateGcpConnectionRequest.md)|  | |
 
 ### Return type
 

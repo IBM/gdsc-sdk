@@ -19,11 +19,11 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.ibm.security.guardium.ClassificationStatus;
 import com.ibm.security.guardium.Compliance;
 import com.ibm.security.guardium.DataStoreEncryptionStatus;
 import com.ibm.security.guardium.SensitivityCategory;
 import com.ibm.security.guardium.ServiceProvider;
+import com.ibm.security.guardium.StoreClassificationStatus;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -56,7 +56,7 @@ import com.ibm.security.JSON;
 /**
  * ListDataStoresFilterParameter
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
 public class ListDataStoresFilterParameter {
   /**
    * Gets or Sets storeTypesFamily
@@ -140,7 +140,7 @@ public class ListDataStoresFilterParameter {
 
   public static final String SERIALIZED_NAME_CLASSIFICATION_STATUSES = "classificationStatuses";
   @SerializedName(SERIALIZED_NAME_CLASSIFICATION_STATUSES)
-  private List<ClassificationStatus> classificationStatuses = new ArrayList<>();
+  private List<StoreClassificationStatus> classificationStatuses = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SENSITIVITY_TAGS = "sensitivityTags";
   @SerializedName(SERIALIZED_NAME_SENSITIVITY_TAGS)
@@ -358,12 +358,12 @@ public class ListDataStoresFilterParameter {
   }
 
 
-  public ListDataStoresFilterParameter classificationStatuses(List<ClassificationStatus> classificationStatuses) {
+  public ListDataStoresFilterParameter classificationStatuses(List<StoreClassificationStatus> classificationStatuses) {
     this.classificationStatuses = classificationStatuses;
     return this;
   }
 
-  public ListDataStoresFilterParameter addClassificationStatusesItem(ClassificationStatus classificationStatusesItem) {
+  public ListDataStoresFilterParameter addClassificationStatusesItem(StoreClassificationStatus classificationStatusesItem) {
     if (this.classificationStatuses == null) {
       this.classificationStatuses = new ArrayList<>();
     }
@@ -376,11 +376,11 @@ public class ListDataStoresFilterParameter {
    * @return classificationStatuses
   **/
   @javax.annotation.Nullable
-  public List<ClassificationStatus> getClassificationStatuses() {
+  public List<StoreClassificationStatus> getClassificationStatuses() {
     return classificationStatuses;
   }
 
-  public void setClassificationStatuses(List<ClassificationStatus> classificationStatuses) {
+  public void setClassificationStatuses(List<StoreClassificationStatus> classificationStatuses) {
     this.classificationStatuses = classificationStatuses;
   }
 

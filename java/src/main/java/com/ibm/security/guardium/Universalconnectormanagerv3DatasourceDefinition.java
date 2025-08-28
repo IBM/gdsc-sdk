@@ -50,7 +50,7 @@ import com.ibm.security.JSON;
 /**
  * Datasource Definition encapsulates all data necessary for a handling datasource in Universal Connector.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
 public class Universalconnectormanagerv3DatasourceDefinition {
   public static final String SERIALIZED_NAME_DATASOURCE_FILTER = "datasource_filter";
   @SerializedName(SERIALIZED_NAME_DATASOURCE_FILTER)

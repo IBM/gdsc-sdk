@@ -45,7 +45,7 @@ export class DataMovementsApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataMovements/actualFlows/{id}'
+        const localVarPath = '/api/v2/dspm/dataMovements/actualFlows/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
 
         // Make Request Context
@@ -78,7 +78,7 @@ export class DataMovementsApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataMovements/actualFlows/summary';
+        const localVarPath = '/api/v2/dspm/dataMovements/actualFlows/summary';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -120,7 +120,7 @@ export class DataMovementsApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataMovements/potentialFlows/{flowId}'
+        const localVarPath = '/api/v2/dspm/dataMovements/potentialFlows/{flowId}'
             .replace('{' + 'flowId' + '}', encodeURIComponent(String(flowId)));
 
         // Make Request Context
@@ -158,7 +158,7 @@ export class DataMovementsApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataMovements/potentialFlows/paths/{flowPathId}'
+        const localVarPath = '/api/v2/dspm/dataMovements/potentialFlows/paths/{flowPathId}'
             .replace('{' + 'flowPathId' + '}', encodeURIComponent(String(flowPathId)));
 
         // Make Request Context
@@ -191,7 +191,7 @@ export class DataMovementsApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataMovements/potentialFlows/summary';
+        const localVarPath = '/api/v2/dspm/dataMovements/potentialFlows/summary';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -234,7 +234,7 @@ export class DataMovementsApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataMovements/actualFlowPaths';
+        const localVarPath = '/api/v2/dspm/dataMovements/actualFlowPaths';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -292,7 +292,7 @@ export class DataMovementsApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataMovements/actualFlows';
+        const localVarPath = '/api/v2/dspm/dataMovements/actualFlows';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -348,7 +348,7 @@ export class DataMovementsApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataMovements/potentialFlows';
+        const localVarPath = '/api/v2/dspm/dataMovements/potentialFlows';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -399,7 +399,7 @@ export class DataMovementsApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataMovements/potentialFlows/paths';
+        const localVarPath = '/api/v2/dspm/dataMovements/potentialFlows/paths';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);

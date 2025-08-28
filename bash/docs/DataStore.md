@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **cloudAccountDetails** | [**CloudAccountDetails**](CloudAccountDetails.md) |  | [default to null]
 **cloudRegion** | **string** |  | [optional] [default to null]
 **country** | **string** |  | [optional] [default to null]
-**classificationStatus** | [**ClassificationStatus**](ClassificationStatus.md) |  | [optional] [default to null]
+**classificationStatus** | [**StoreClassificationStatus**](StoreClassificationStatus.md) |  | [optional] [default to null]
 **encryptionStatus** | [**DataStoreEncryptionStatus**](DataStoreEncryptionStatus.md) |  | [optional] [default to null]
 **customData** | [**array[StringKeyValue]**](StringKeyValue.md) |  | [optional] [default to null]
 **label** | **string** |  | [optional] [default to null]

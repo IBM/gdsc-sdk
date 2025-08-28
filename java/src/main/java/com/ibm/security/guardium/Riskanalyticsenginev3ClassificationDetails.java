@@ -53,7 +53,7 @@ import com.ibm.security.JSON;
 /**
  * ClassificationDetails message an additional info for the classification the UI.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
 public class Riskanalyticsenginev3ClassificationDetails {
   public static final String SERIALIZED_NAME_CLASS_DESCRIPTION_NLS = "class_description_nls";
   @SerializedName(SERIALIZED_NAME_CLASS_DESCRIPTION_NLS)

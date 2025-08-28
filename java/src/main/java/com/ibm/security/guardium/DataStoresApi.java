@@ -112,7 +112,7 @@ public class DataStoresApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataStores/{dataStoreId}"
+        String localVarPath = "/api/v2/dspm/dataStores/{dataStoreId}"
             .replace("{" + "dataStoreId" + "}", localVarApiClient.escapeString(dataStoreId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -239,7 +239,7 @@ public class DataStoresApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataStores/summary";
+        String localVarPath = "/api/v2/dspm/dataStores/summary";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -365,7 +365,7 @@ public class DataStoresApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataStores/labels";
+        String localVarPath = "/api/v2/dspm/dataStores/labels";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -500,7 +500,7 @@ public class DataStoresApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataStores";
+        String localVarPath = "/api/v2/dspm/dataStores";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -647,7 +647,7 @@ public class DataStoresApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataStores/cloudTags/keys";
+        String localVarPath = "/api/v2/dspm/dataStores/cloudTags/keys";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -786,7 +786,7 @@ public class DataStoresApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataStores/cloudTags/values";
+        String localVarPath = "/api/v2/dspm/dataStores/cloudTags/values";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -935,7 +935,7 @@ public class DataStoresApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataStores/filters/name";
+        String localVarPath = "/api/v2/dspm/dataStores/filters/name";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1065,7 +1065,7 @@ public class DataStoresApi {
         Object localVarPostBody = rescanDataStoreRequest;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataStores/rescan";
+        String localVarPath = "/api/v2/dspm/dataStores/rescan";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1189,7 +1189,7 @@ public class DataStoresApi {
         Object localVarPostBody = setDataStoreLabelRequest;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataStores/{dataStoreId}/labels"
+        String localVarPath = "/api/v2/dspm/dataStores/{dataStoreId}/labels"
             .replace("{" + "dataStoreId" + "}", localVarApiClient.escapeString(dataStoreId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -1321,7 +1321,7 @@ public class DataStoresApi {
         Object localVarPostBody = updateCustodianBody;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataStores/custodian";
+        String localVarPath = "/api/v2/dspm/dataStores/custodian";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();

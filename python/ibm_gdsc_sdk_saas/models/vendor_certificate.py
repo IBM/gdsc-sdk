@@ -32,8 +32,8 @@ class VendorCertificate(BaseModel):
     @field_validator('certificate_name')
     def certificate_name_validate_enum(cls, value):
         """Validates the enum"""
-        if value not in set(['PCI', 'HIPAA', 'GDPR', 'SOX', 'FISMA', 'LBA', 'ISO 27001', 'ISO 27018', 'NIST', 'SOC 2', 'CCPA', 'PCI DSS', 'FedRAMP']):
-            raise ValueError("must be one of enum values ('PCI', 'HIPAA', 'GDPR', 'SOX', 'FISMA', 'LBA', 'ISO 27001', 'ISO 27018', 'NIST', 'SOC 2', 'CCPA', 'PCI DSS', 'FedRAMP')")
+        if value not in set(['PCI', 'HIPAA', 'GDPR', 'SOX', 'FISMA', 'LBA', 'GLBA', 'ISO 27001', 'ISO 27018', 'NIST', 'SOC 2', 'CCPA', 'PCI DSS', 'FedRAMP']):
+            raise ValueError("must be one of enum values ('PCI', 'HIPAA', 'GDPR', 'SOX', 'FISMA', 'LBA', 'GLBA', 'ISO 27001', 'ISO 27018', 'NIST', 'SOC 2', 'CCPA', 'PCI DSS', 'FedRAMP')")
         return value
 
     model_config = ConfigDict(

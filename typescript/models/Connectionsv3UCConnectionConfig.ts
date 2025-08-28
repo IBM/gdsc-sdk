@@ -14,7 +14,7 @@ import { Connectionsv3UCConnectionSummary } from '../models/Connectionsv3UCConne
 import { HttpFile } from '../http/http';
 
 /**
-* UC connection config with connecion id.
+* UC connection config with connection id.
 */
 export class Connectionsv3UCConnectionConfig {
     /**

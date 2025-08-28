@@ -31,12 +31,15 @@ import com.ibm.security.guardium.AddAnalyzedRegion200Response;
 import com.ibm.security.guardium.AddAnalyzedRegionRequest;
 import com.ibm.security.guardium.AddCloudAccounts200Response;
 import com.ibm.security.guardium.AddCloudAccountsRequest;
+import com.ibm.security.guardium.AuthCode;
 import com.ibm.security.guardium.AuthInfo;
 import com.ibm.security.guardium.AuthUrl;
 import com.ibm.security.guardium.Authenticate400Response;
 import com.ibm.security.guardium.ClientInfo;
 import com.ibm.security.guardium.CloudAccountInstallationStatus;
 import com.ibm.security.guardium.CloudServiceProvider;
+import com.ibm.security.guardium.DBMetadataInfo;
+import com.ibm.security.guardium.DbInfo;
 import com.ibm.security.guardium.GetAnalyzedRegionStatus200Response;
 import com.ibm.security.guardium.LinkedAccounts;
 import com.ibm.security.guardium.Office365TenantInfo;
@@ -123,7 +126,7 @@ public class CloudAccountsApi {
         Object localVarPostBody = addAnalyzedRegionRequest;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/cloudAccounts/cloudProviders/analyzedRegions";
+        String localVarPath = "/api/v2/dspm/cloudAccounts/cloudProviders/analyzedRegions";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -250,7 +253,7 @@ public class CloudAccountsApi {
         Object localVarPostBody = addCloudAccountsRequest;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/cloudAccounts/cloudProviders";
+        String localVarPath = "/api/v2/dspm/cloudAccounts/cloudProviders";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -376,7 +379,7 @@ public class CloudAccountsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/cloudAccounts/saasApps/atlassian-confluence/generateAuthUrl";
+        String localVarPath = "/api/v2/dspm/cloudAccounts/saasApps/atlassian-confluence/generateAuthUrl";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -493,7 +496,7 @@ public class CloudAccountsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/cloudAccounts/saasApps/atlassian-jira/generateAuthUrl";
+        String localVarPath = "/api/v2/dspm/cloudAccounts/saasApps/atlassian-jira/generateAuthUrl";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -611,7 +614,7 @@ public class CloudAccountsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/cloudAccounts/azure/generateAuthUrl";
+        String localVarPath = "/api/v2/dspm/cloudAccounts/azure/generateAuthUrl";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -735,7 +738,7 @@ public class CloudAccountsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/cloudAccounts/saasApps/office365/generateAuthUrl";
+        String localVarPath = "/api/v2/dspm/cloudAccounts/saasApps/office365/generateAuthUrl";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -824,6 +827,123 @@ public class CloudAccountsApi {
         return localVarCall;
     }
     /**
+     * Build call for generateSalesforceAuthUrl
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call generateSalesforceAuthUrlCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v2/dspm/cloudAccounts/saasApps/salesforce/generateAuthUrl";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call generateSalesforceAuthUrlValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return generateSalesforceAuthUrlCall(_callback);
+
+    }
+
+    /**
+     * Generate a Salesforce consent URL
+     * Generate an administrator consent URL for Salesforce integration.
+     * @return AuthUrl
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
+     </table>
+     */
+    public AuthUrl generateSalesforceAuthUrl() throws ApiException {
+        ApiResponse<AuthUrl> localVarResp = generateSalesforceAuthUrlWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Generate a Salesforce consent URL
+     * Generate an administrator consent URL for Salesforce integration.
+     * @return ApiResponse&lt;AuthUrl&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
+     </table>
+     */
+    public ApiResponse<AuthUrl> generateSalesforceAuthUrlWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = generateSalesforceAuthUrlValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<AuthUrl>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Generate a Salesforce consent URL (asynchronously)
+     * Generate an administrator consent URL for Salesforce integration.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call generateSalesforceAuthUrlAsync(final ApiCallback<AuthUrl> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = generateSalesforceAuthUrlValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<AuthUrl>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for generateSlackAuthUrl
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -852,7 +972,7 @@ public class CloudAccountsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/cloudAccounts/saasApps/slack/generateAuthUrl";
+        String localVarPath = "/api/v2/dspm/cloudAccounts/saasApps/slack/generateAuthUrl";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -970,7 +1090,7 @@ public class CloudAccountsApi {
         Object localVarPostBody = clientInfo;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/cloudAccounts/saasApps/snowflake/generateAuthUrl";
+        String localVarPath = "/api/v2/dspm/cloudAccounts/saasApps/snowflake/generateAuthUrl";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1098,7 +1218,7 @@ public class CloudAccountsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/cloudAccounts/cloudProviders/analyzedRegions/status";
+        String localVarPath = "/api/v2/dspm/cloudAccounts/cloudProviders/analyzedRegions/status";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1239,7 +1359,7 @@ public class CloudAccountsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/cloudAccounts/azure/getAdminConsentStatus";
+        String localVarPath = "/api/v2/dspm/cloudAccounts/azure/getAdminConsentStatus";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1358,7 +1478,7 @@ public class CloudAccountsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/cloudAccounts/{cloudProvider}/{cloudAccountId}/installationStatus"
+        String localVarPath = "/api/v2/dspm/cloudAccounts/{cloudProvider}/{cloudAccountId}/installationStatus"
             .replace("{" + "cloudProvider" + "}", localVarApiClient.escapeString(cloudProvider.toString()))
             .replace("{" + "cloudAccountId" + "}", localVarApiClient.escapeString(cloudAccountId.toString()));
 
@@ -1465,6 +1585,133 @@ public class CloudAccountsApi {
         return localVarCall;
     }
     /**
+     * Build call for getDatabaseMetadata
+     * @param dbInfo  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getDatabaseMetadataCall(DbInfo dbInfo, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = dbInfo;
+
+        // create path and map variables
+        String localVarPath = "/api/v2/dspm/cloudAccounts/saasApps/snowflake/getDatabaseMetadata";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getDatabaseMetadataValidateBeforeCall(DbInfo dbInfo, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'dbInfo' is set
+        if (dbInfo == null) {
+            throw new ApiException("Missing the required parameter 'dbInfo' when calling getDatabaseMetadata(Async)");
+        }
+
+        return getDatabaseMetadataCall(dbInfo, _callback);
+
+    }
+
+    /**
+     * Get the metadata details of snowflake database.
+     * Get the metadata details of snowflake database from saas-asset-store.
+     * @param dbInfo  (required)
+     * @return DBMetadataInfo
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
+     </table>
+     */
+    public DBMetadataInfo getDatabaseMetadata(DbInfo dbInfo) throws ApiException {
+        ApiResponse<DBMetadataInfo> localVarResp = getDatabaseMetadataWithHttpInfo(dbInfo);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Get the metadata details of snowflake database.
+     * Get the metadata details of snowflake database from saas-asset-store.
+     * @param dbInfo  (required)
+     * @return ApiResponse&lt;DBMetadataInfo&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
+     </table>
+     */
+    public ApiResponse<DBMetadataInfo> getDatabaseMetadataWithHttpInfo(DbInfo dbInfo) throws ApiException {
+        okhttp3.Call localVarCall = getDatabaseMetadataValidateBeforeCall(dbInfo, null);
+        Type localVarReturnType = new TypeToken<DBMetadataInfo>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Get the metadata details of snowflake database. (asynchronously)
+     * Get the metadata details of snowflake database from saas-asset-store.
+     * @param dbInfo  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getDatabaseMetadataAsync(DbInfo dbInfo, final ApiCallback<DBMetadataInfo> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getDatabaseMetadataValidateBeforeCall(dbInfo, _callback);
+        Type localVarReturnType = new TypeToken<DBMetadataInfo>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for getRefreshTokenExpiry
      * @param providerId The ID of the provider (required)
      * @param _callback Callback for upload/download progress
@@ -1494,7 +1741,7 @@ public class CloudAccountsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/cloudAccounts/saasApps/snowflake/getRefreshTokenExpiry/{providerId}"
+        String localVarPath = "/api/v2/dspm/cloudAccounts/saasApps/snowflake/getRefreshTokenExpiry/{providerId}"
             .replace("{" + "providerId" + "}", localVarApiClient.escapeString(providerId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -1620,7 +1867,7 @@ public class CloudAccountsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/cloudAccounts/linkedAccounts";
+        String localVarPath = "/api/v2/dspm/cloudAccounts/linkedAccounts";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1742,7 +1989,7 @@ public class CloudAccountsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/cloudAccounts/removeAccounts";
+        String localVarPath = "/api/v2/dspm/cloudAccounts/removeAccounts";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1893,7 +2140,7 @@ public class CloudAccountsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/cloudAccounts/removeAccountsInstructions";
+        String localVarPath = "/api/v2/dspm/cloudAccounts/removeAccountsInstructions";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2043,7 +2290,7 @@ public class CloudAccountsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/cloudAccounts/saasApps/google/retrieveServiceAccountId";
+        String localVarPath = "/api/v2/dspm/cloudAccounts/saasApps/google/retrieveServiceAccountId";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2160,7 +2407,7 @@ public class CloudAccountsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/cloudAccounts/saasApps/snowflake/snowflakeIntegrationScript";
+        String localVarPath = "/api/v2/dspm/cloudAccounts/saasApps/snowflake/snowflakeIntegrationScript";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2278,7 +2525,7 @@ public class CloudAccountsApi {
         Object localVarPostBody = submitAdminEmailParams;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/cloudAccounts/saasApps/google/submitAdminEmail";
+        String localVarPath = "/api/v2/dspm/cloudAccounts/saasApps/google/submitAdminEmail";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2405,7 +2652,7 @@ public class CloudAccountsApi {
         Object localVarPostBody = tenantInfo;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/cloudAccounts/saasApps/office365/submitTenantInfo";
+        String localVarPath = "/api/v2/dspm/cloudAccounts/saasApps/office365/submitTenantInfo";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2503,6 +2750,141 @@ public class CloudAccountsApi {
         return localVarCall;
     }
     /**
+     * Build call for submitSalesforceAuthCode
+     * @param authCode  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
+        <tr><td> 403 </td><td> Forbidden </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call submitSalesforceAuthCodeCall(AuthCode authCode, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = authCode;
+
+        // create path and map variables
+        String localVarPath = "/api/v2/dspm/cloudAccounts/saasApps/salesforce/submitAuthCodeInfo";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call submitSalesforceAuthCodeValidateBeforeCall(AuthCode authCode, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'authCode' is set
+        if (authCode == null) {
+            throw new ApiException("Missing the required parameter 'authCode' when calling submitSalesforceAuthCode(Async)");
+        }
+
+        return submitSalesforceAuthCodeCall(authCode, _callback);
+
+    }
+
+    /**
+     * Submit Salesforce customer information
+     * Submit customer information for Salesforce integration.
+     * @param authCode  (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
+        <tr><td> 403 </td><td> Forbidden </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  -  </td></tr>
+     </table>
+     */
+    public void submitSalesforceAuthCode(AuthCode authCode) throws ApiException {
+        submitSalesforceAuthCodeWithHttpInfo(authCode);
+    }
+
+    /**
+     * Submit Salesforce customer information
+     * Submit customer information for Salesforce integration.
+     * @param authCode  (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
+        <tr><td> 403 </td><td> Forbidden </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Void> submitSalesforceAuthCodeWithHttpInfo(AuthCode authCode) throws ApiException {
+        okhttp3.Call localVarCall = submitSalesforceAuthCodeValidateBeforeCall(authCode, null);
+        return localVarApiClient.execute(localVarCall);
+    }
+
+    /**
+     * Submit Salesforce customer information (asynchronously)
+     * Submit customer information for Salesforce integration.
+     * @param authCode  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
+        <tr><td> 403 </td><td> Forbidden </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call submitSalesforceAuthCodeAsync(AuthCode authCode, final ApiCallback<Void> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = submitSalesforceAuthCodeValidateBeforeCall(authCode, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for submitSlackAuthCode
      * @param submitAuthCode  (required)
      * @param _callback Callback for upload/download progress
@@ -2532,7 +2914,7 @@ public class CloudAccountsApi {
         Object localVarPostBody = submitAuthCode;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/cloudAccounts/saasApps/slack/submitAuthCode";
+        String localVarPath = "/api/v2/dspm/cloudAccounts/saasApps/slack/submitAuthCode";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2662,7 +3044,7 @@ public class CloudAccountsApi {
         Object localVarPostBody = authInfo;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/cloudAccounts/saasApps/snowflake/submitAuthCode";
+        String localVarPath = "/api/v2/dspm/cloudAccounts/saasApps/snowflake/submitAuthCode";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();

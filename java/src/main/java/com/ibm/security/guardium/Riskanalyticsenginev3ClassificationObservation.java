@@ -49,7 +49,7 @@ import com.ibm.security.JSON;
 /**
  * ClassificationObservation is a pair of key and value of observation that were found for this classification.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
 public class Riskanalyticsenginev3ClassificationObservation {
   public static final String SERIALIZED_NAME_IS_SUPPORTING_OBSERVATION = "is_supporting_observation";
   @SerializedName(SERIALIZED_NAME_IS_SUPPORTING_OBSERVATION)

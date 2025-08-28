@@ -18,6 +18,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.ibm.security.guardium.Reportsv3AggregationType;
 import com.ibm.security.guardium.Reportsv3FieldName;
 import com.ibm.security.guardium.Reportsv3HeaderDescription;
 import java.io.IOException;
@@ -37,6 +38,14 @@ public class Reportsv3DisplayHeaderTest {
     @Test
     public void testReportsv3DisplayHeader() {
         // TODO: test Reportsv3DisplayHeader
+    }
+
+    /**
+     * Test the property 'aggregationType'
+     */
+    @Test
+    public void aggregationTypeTest() {
+        // TODO: test aggregationType
     }
 
     /**

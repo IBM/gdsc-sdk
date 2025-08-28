@@ -62,6 +62,7 @@ class TestTenantuserv3GetUserTenantResponse(unittest.TestCase):
                         settings = {
                             'key' : ''
                             }, 
+                        status = '', 
                         tenant_capabilities = {
                             'key' : True
                             }, 
@@ -75,6 +76,7 @@ class TestTenantuserv3GetUserTenantResponse(unittest.TestCase):
                             is_ready = True, 
                             name = '', 
                             part_number = '', 
+                            status = '', 
                             tenant_capabilities = {
                                 'key' : True
                                 }, 

@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_data_store**](DataStoresApi.md#get_data_store) | **GET** /api/v1/dspm/dataStores/{dataStoreId} | Get a data store by its ID
-[**get_data_stores_summary**](DataStoresApi.md#get_data_stores_summary) | **GET** /api/v1/dspm/dataStores/summary | Get summary of data stores
-[**list_all_data_stores_labels**](DataStoresApi.md#list_all_data_stores_labels) | **GET** /api/v1/dspm/dataStores/labels | List labels of data stores.
-[**list_data_stores**](DataStoresApi.md#list_data_stores) | **GET** /api/v1/dspm/dataStores | List data stores
-[**list_data_stores_cloud_tags_keys**](DataStoresApi.md#list_data_stores_cloud_tags_keys) | **GET** /api/v1/dspm/dataStores/cloudTags/keys | List the cloud tag keys of data stores that can be filtered on the basis of prefixes.
-[**list_data_stores_cloud_tags_values**](DataStoresApi.md#list_data_stores_cloud_tags_values) | **GET** /api/v1/dspm/dataStores/cloudTags/values | List the cloud tag values of data stores that can be filtered on the basis of prefixes and cloud tag key names.
-[**list_data_stores_names**](DataStoresApi.md#list_data_stores_names) | **GET** /api/v1/dspm/dataStores/filters/name | List name of filterable data stores
-[**rescan_data_store**](DataStoresApi.md#rescan_data_store) | **POST** /api/v1/dspm/dataStores/rescan | Post data store rescan request
-[**set_data_store_label**](DataStoresApi.md#set_data_store_label) | **PUT** /api/v1/dspm/dataStores/{dataStoreId}/labels | Label a data store with an existing or new label
-[**update_datastore_custodian**](DataStoresApi.md#update_datastore_custodian) | **POST** /api/v1/dspm/dataStores/custodian | Update the name of a Data store custodian
+[**get_data_store**](DataStoresApi.md#get_data_store) | **GET** /api/v2/dspm/dataStores/{dataStoreId} | Get a data store by its ID
+[**get_data_stores_summary**](DataStoresApi.md#get_data_stores_summary) | **GET** /api/v2/dspm/dataStores/summary | Get summary of data stores
+[**list_all_data_stores_labels**](DataStoresApi.md#list_all_data_stores_labels) | **GET** /api/v2/dspm/dataStores/labels | List labels of data stores.
+[**list_data_stores**](DataStoresApi.md#list_data_stores) | **GET** /api/v2/dspm/dataStores | List data stores
+[**list_data_stores_cloud_tags_keys**](DataStoresApi.md#list_data_stores_cloud_tags_keys) | **GET** /api/v2/dspm/dataStores/cloudTags/keys | List the cloud tag keys of data stores that can be filtered on the basis of prefixes.
+[**list_data_stores_cloud_tags_values**](DataStoresApi.md#list_data_stores_cloud_tags_values) | **GET** /api/v2/dspm/dataStores/cloudTags/values | List the cloud tag values of data stores that can be filtered on the basis of prefixes and cloud tag key names.
+[**list_data_stores_names**](DataStoresApi.md#list_data_stores_names) | **GET** /api/v2/dspm/dataStores/filters/name | List name of filterable data stores
+[**rescan_data_store**](DataStoresApi.md#rescan_data_store) | **POST** /api/v2/dspm/dataStores/rescan | Post data store rescan request
+[**set_data_store_label**](DataStoresApi.md#set_data_store_label) | **PUT** /api/v2/dspm/dataStores/{dataStoreId}/labels | Label a data store with an existing or new label
+[**update_datastore_custodian**](DataStoresApi.md#update_datastore_custodian) | **POST** /api/v2/dspm/dataStores/custodian | Update the name of a Data store custodian
 
 
 # **get_data_store**

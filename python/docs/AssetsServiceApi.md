@@ -6,7 +6,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**assets_service_asset_ingestion**](AssetsServiceApi.md#assets_service_asset_ingestion) | **POST** /api/v3/assets/ingestion | AssetIngestion - Asset Ingestion Api to ingest assets from different applications including asset extensibility assets.
 [**assets_service_asset_ingestion_manual_trigger**](AssetsServiceApi.md#assets_service_asset_ingestion_manual_trigger) | **POST** /api/v3/assets/ingestion/trigger | AssetIngestionManualTrigger - Manual trigger for Scheduled Asset Ingestion of databases.
+[**assets_service_cancel_csv_import**](AssetsServiceApi.md#assets_service_cancel_csv_import) | **DELETE** /api/v3/assets/csv/cancel/{csv_id} | CancelCSVImport - Cancel the import of CSV and update the status in import log table
 [**assets_service_clone_policy**](AssetsServiceApi.md#assets_service_clone_policy) | **POST** /api/v3/assets/policies/{policy_id}/clone | ClonePolicy - Clone a policy.
+[**assets_service_compare_csvto_existing_assets**](AssetsServiceApi.md#assets_service_compare_csvto_existing_assets) | **GET** /api/v3/assets/csv/compare/{csv_id} | CompareCSVToExistingAssets - Compare CSV with existing assets and return list of assets(existing/to be imported/both) on demand from csv.
 [**assets_service_create_update_policy**](AssetsServiceApi.md#assets_service_create_update_policy) | **POST** /api/v3/assets/policies | CreateUpdatePolicy - Create/update new Policy.
 [**assets_service_delete_filter_template_for_assets**](AssetsServiceApi.md#assets_service_delete_filter_template_for_assets) | **DELETE** /api/v3/assets/filters/template/{template_id} | DeleteFilterTemplateForAssets - Deleting a template using TemplateID in manage assets.
 [**assets_service_delete_policies**](AssetsServiceApi.md#assets_service_delete_policies) | **DELETE** /api/v3/assets/policies | DeletePolicies - Delete Policy returns response code and message.
@@ -19,6 +21,7 @@ Method | HTTP request | Description
 [**assets_service_get_asset_topology**](AssetsServiceApi.md#assets_service_get_asset_topology) | **POST** /api/v3/assets/topology | GetAssetTopology- Get list of topology for a parent asset.
 [**assets_service_get_filter_template_for_assets**](AssetsServiceApi.md#assets_service_get_filter_template_for_assets) | **GET** /api/v3/assets/filters/templates | GetFilterTemplateForAssets - Get list of filters query templates for manage assets.
 [**assets_service_get_filters_for_assets**](AssetsServiceApi.md#assets_service_get_filters_for_assets) | **GET** /api/v3/assets/filters | GetFiltersForAssets - Get a list of filters category and sub category with all data.
+[**assets_service_import_csv**](AssetsServiceApi.md#assets_service_import_csv) | **POST** /api/v3/assets/csv/import/{csv_id} | ImportCSV - Start the async asset import from CSV by starting the db procedure and send notification at the end.
 [**assets_service_list_policy**](AssetsServiceApi.md#assets_service_list_policy) | **GET** /api/v3/assets/policies | ListPolicy - List all policies.
 [**assets_service_list_rule**](AssetsServiceApi.md#assets_service_list_rule) | **GET** /api/v3/assets/policies/{policy_id}/rules | ListRule - List all rules for a policy.
 [**assets_service_list_tag_domains**](AssetsServiceApi.md#assets_service_list_tag_domains) | **GET** /api/v3/assets/tags/categories | ListTagDomains - Get Tag categories by request parameters .
@@ -204,6 +207,90 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **assets_service_cancel_csv_import**
+> object assets_service_cancel_csv_import(csv_id)
+
+CancelCSVImport - Cancel the import of CSV and update the status in import log table
+
+### Example
+
+* Basic Authentication (BasicAuth):
+* Api Key Authentication (ApiKeyAuth):
+
+```python
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ibm_gdsc_sdk_saas.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure HTTP basic authorization: BasicAuth
+configuration = ibm_gdsc_sdk_saas.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
+    csv_id = 'csv_id_example' # str | unique id of the csv
+
+    try:
+        # CancelCSVImport - Cancel the import of CSV and update the status in import log table
+        api_response = api_instance.assets_service_cancel_csv_import(csv_id)
+        print("The response of AssetsServiceApi->assets_service_cancel_csv_import:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling AssetsServiceApi->assets_service_cancel_csv_import: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **csv_id** | **str**| unique id of the csv | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **assets_service_clone_policy**
 > object assets_service_clone_policy(policy_id, assetsv3_clone_policy_request)
 
@@ -280,6 +367,99 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **assets_service_compare_csvto_existing_assets**
+> Assetsv3CompareCSVResponse assets_service_compare_csvto_existing_assets(csv_id, rows_required=rows_required, page_number=page_number, page_size=page_size, template_type=template_type)
+
+CompareCSVToExistingAssets - Compare CSV with existing assets and return list of assets(existing/to be imported/both) on demand from csv.
+
+### Example
+
+* Basic Authentication (BasicAuth):
+* Api Key Authentication (ApiKeyAuth):
+
+```python
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.assetsv3_compare_csv_response import Assetsv3CompareCSVResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ibm_gdsc_sdk_saas.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure HTTP basic authorization: BasicAuth
+configuration = ibm_gdsc_sdk_saas.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
+    csv_id = 'csv_id_example' # str | unique id of the csv
+    rows_required = 'rows_required_example' # str | which rows are required, existing or new or all. (optional)
+    page_number = 56 # int | page number. (optional)
+    page_size = 56 # int | page size. (optional)
+    template_type = 'DATABASE' # str | Asset CSV template type.   - DATABASE: Template for database (optional) (default to 'DATABASE')
+
+    try:
+        # CompareCSVToExistingAssets - Compare CSV with existing assets and return list of assets(existing/to be imported/both) on demand from csv.
+        api_response = api_instance.assets_service_compare_csvto_existing_assets(csv_id, rows_required=rows_required, page_number=page_number, page_size=page_size, template_type=template_type)
+        print("The response of AssetsServiceApi->assets_service_compare_csvto_existing_assets:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling AssetsServiceApi->assets_service_compare_csvto_existing_assets: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **csv_id** | **str**| unique id of the csv | 
+ **rows_required** | **str**| which rows are required, existing or new or all. | [optional] 
+ **page_number** | **int**| page number. | [optional] 
+ **page_size** | **int**| page size. | [optional] 
+ **template_type** | **str**| Asset CSV template type.   - DATABASE: Template for database | [optional] [default to &#39;DATABASE&#39;]
+
+### Return type
+
+[**Assetsv3CompareCSVResponse**](Assetsv3CompareCSVResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 ### HTTP response details
@@ -378,7 +558,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **assets_service_delete_filter_template_for_assets**
-> object assets_service_delete_filter_template_for_assets(template_id, assetsv3_asset_filter_template_request)
+> object assets_service_delete_filter_template_for_assets(template_id)
 
 DeleteFilterTemplateForAssets - Deleting a template using TemplateID in manage assets.
 
@@ -389,7 +569,6 @@ DeleteFilterTemplateForAssets - Deleting a template using TemplateID in manage a
 
 ```python
 import ibm_gdsc_sdk_saas,os
-from ibm_gdsc_sdk_saas.models.assetsv3_asset_filter_template_request import Assetsv3AssetFilterTemplateRequest
 from ibm_gdsc_sdk_saas.rest import ApiException
 from pprint import pprint
 
@@ -421,11 +600,10 @@ with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
     template_id = 'template_id_example' # str | template id to be deleted
-    assetsv3_asset_filter_template_request = ibm_gdsc_sdk_saas.Assetsv3AssetFilterTemplateRequest() # Assetsv3AssetFilterTemplateRequest | 
 
     try:
         # DeleteFilterTemplateForAssets - Deleting a template using TemplateID in manage assets.
-        api_response = api_instance.assets_service_delete_filter_template_for_assets(template_id, assetsv3_asset_filter_template_request)
+        api_response = api_instance.assets_service_delete_filter_template_for_assets(template_id)
         print("The response of AssetsServiceApi->assets_service_delete_filter_template_for_assets:\n")
         pprint(api_response)
     except Exception as e:
@@ -440,7 +618,6 @@ with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **template_id** | **str**| template id to be deleted | 
- **assetsv3_asset_filter_template_request** | [**Assetsv3AssetFilterTemplateRequest**](Assetsv3AssetFilterTemplateRequest.md)|  | 
 
 ### Return type
 
@@ -452,7 +629,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 ### HTTP response details
@@ -1055,7 +1232,7 @@ with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     ip = 'ip_example' # str | Asset IP. (optional)
     host = 'host_example' # str | Asset Host. (optional)
     database = 'database_example' # str | Database Name. (optional)
-    asset_entity_type = 'asset_entity_type_example' # str | asset ntity type. (optional)
+    asset_entity_type = 'asset_entity_type_example' # str | asset entity type. (optional)
 
     try:
         # GetAssetOverview - Get asset overview widgets data for a particular asset.
@@ -1080,7 +1257,7 @@ Name | Type | Description  | Notes
  **ip** | **str**| Asset IP. | [optional] 
  **host** | **str**| Asset Host. | [optional] 
  **database** | **str**| Database Name. | [optional] 
- **asset_entity_type** | **str**| asset ntity type. | [optional] 
+ **asset_entity_type** | **str**| asset entity type. | [optional] 
 
 ### Return type
 
@@ -1345,6 +1522,94 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **assets_service_import_csv**
+> Assetsv3ImportCSVResponse assets_service_import_csv(csv_id, assetsv3_import_csv_request)
+
+ImportCSV - Start the async asset import from CSV by starting the db procedure and send notification at the end.
+
+### Example
+
+* Basic Authentication (BasicAuth):
+* Api Key Authentication (ApiKeyAuth):
+
+```python
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.assetsv3_import_csv_request import Assetsv3ImportCSVRequest
+from ibm_gdsc_sdk_saas.models.assetsv3_import_csv_response import Assetsv3ImportCSVResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ibm_gdsc_sdk_saas.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure HTTP basic authorization: BasicAuth
+configuration = ibm_gdsc_sdk_saas.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ibm_gdsc_sdk_saas.AssetsServiceApi(api_client)
+    csv_id = 'csv_id_example' # str | unique id of the csv
+    assetsv3_import_csv_request = ibm_gdsc_sdk_saas.Assetsv3ImportCSVRequest() # Assetsv3ImportCSVRequest | 
+
+    try:
+        # ImportCSV - Start the async asset import from CSV by starting the db procedure and send notification at the end.
+        api_response = api_instance.assets_service_import_csv(csv_id, assetsv3_import_csv_request)
+        print("The response of AssetsServiceApi->assets_service_import_csv:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling AssetsServiceApi->assets_service_import_csv: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **csv_id** | **str**| unique id of the csv | 
+ **assetsv3_import_csv_request** | [**Assetsv3ImportCSVRequest**](Assetsv3ImportCSVRequest.md)|  | 
+
+### Return type
+
+[**Assetsv3ImportCSVResponse**](Assetsv3ImportCSVResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details

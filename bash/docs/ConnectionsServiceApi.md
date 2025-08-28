@@ -60,6 +60,10 @@ Description: Update plugin.
 Description: Update Settings.
 [**connectionsServiceValidateAwsConnection**](ConnectionsServiceApi.md#connectionsServiceValidateAwsConnection) | **POST** /api/v3/connections/validate/aws | Summary: Validate an AWS connection.
 Description: Validate an AWS connection.
+[**connectionsServiceValidateAzureConnection**](ConnectionsServiceApi.md#connectionsServiceValidateAzureConnection) | **POST** /api/v3/connections/validate/azure | Summary: Validate an Azure connection.
+Description: Validate an Azure connection.
+[**connectionsServiceValidateGcpConnection**](ConnectionsServiceApi.md#connectionsServiceValidateGcpConnection) | **POST** /api/v3/connections/validate/gcp | Summary: Validate a GCP connection.
+Description: Validate a GCP connection.
 
 
 
@@ -984,6 +988,74 @@ Description: Validate an AWS connection.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **connectionsv3ValidateAwsConnectionRequest** | [**Connectionsv3ValidateAwsConnectionRequest**](Connectionsv3ValidateAwsConnectionRequest.md) |  |
+
+### Return type
+
+[**Connectionsv3ValidateConnectionResponse**](Connectionsv3ValidateConnectionResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## connectionsServiceValidateAzureConnection
+
+Summary: Validate an Azure connection.
+Description: Validate an Azure connection.
+
+### Example
+
+```bash
+ connectionsServiceValidateAzureConnection
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **connectionsv3ValidateAzureConnectionRequest** | [**Connectionsv3ValidateAzureConnectionRequest**](Connectionsv3ValidateAzureConnectionRequest.md) |  |
+
+### Return type
+
+[**Connectionsv3ValidateConnectionResponse**](Connectionsv3ValidateConnectionResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## connectionsServiceValidateGcpConnection
+
+Summary: Validate a GCP connection.
+Description: Validate a GCP connection.
+
+### Example
+
+```bash
+ connectionsServiceValidateGcpConnection
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **connectionsv3ValidateGcpConnectionRequest** | [**Connectionsv3ValidateGcpConnectionRequest**](Connectionsv3ValidateGcpConnectionRequest.md) |  |
 
 ### Return type
 

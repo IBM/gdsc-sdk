@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **is_reviewed** | **bool** |  | [optional] 
 **link** | **str** |  | [optional] 
 **stats** | [**DataResourceStats**](DataResourceStats.md) |  | [optional] 
+**path** | **str** |  | [optional] 
 
 ## Example
 

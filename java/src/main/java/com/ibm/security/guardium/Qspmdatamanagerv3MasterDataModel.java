@@ -51,7 +51,7 @@ import com.ibm.security.JSON;
 /**
  * Qspmdatamanagerv3MasterDataModel
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
 public class Qspmdatamanagerv3MasterDataModel {
   public static final String SERIALIZED_NAME_CREATION_TS = "creation_ts";
   @SerializedName(SERIALIZED_NAME_CREATION_TS)

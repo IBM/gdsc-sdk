@@ -19,11 +19,11 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from ibm_gdsc_sdk_saas.models.classification_status import ClassificationStatus
 from ibm_gdsc_sdk_saas.models.compliance import Compliance
 from ibm_gdsc_sdk_saas.models.data_store_encryption_status import DataStoreEncryptionStatus
 from ibm_gdsc_sdk_saas.models.sensitivity_category import SensitivityCategory
 from ibm_gdsc_sdk_saas.models.service_provider import ServiceProvider
+from ibm_gdsc_sdk_saas.models.store_classification_status import StoreClassificationStatus
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -38,7 +38,7 @@ class ListDataStoresFilterParameter(BaseModel):
     cloud_account_ids: Optional[List[StrictStr]] = Field(default=None, alias="cloudAccountIds")
     cloud_regions: Optional[List[StrictStr]] = Field(default=None, alias="cloudRegions")
     labels: Optional[List[StrictStr]] = None
-    classification_statuses: Optional[List[ClassificationStatus]] = Field(default=None, alias="classificationStatuses")
+    classification_statuses: Optional[List[StoreClassificationStatus]] = Field(default=None, alias="classificationStatuses")
     sensitivity_tags: Optional[List[StrictStr]] = Field(default=None, alias="sensitivityTags")
     sensitivity_categories: Optional[List[SensitivityCategory]] = Field(default=None, alias="sensitivityCategories")
     compliances: Optional[List[Compliance]] = None

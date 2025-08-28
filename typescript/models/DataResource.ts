@@ -26,6 +26,7 @@ export class DataResource {
     'isReviewed'?: boolean;
     'link'?: string;
     'stats'?: DataResourceStats;
+    'path'?: string;
 
     static readonly discriminator: string | undefined = undefined;
 
@@ -100,6 +101,12 @@ export class DataResource {
             "name": "stats",
             "baseName": "stats",
             "type": "DataResourceStats",
+            "format": ""
+        },
+        {
+            "name": "path",
+            "baseName": "path",
+            "type": "string",
             "format": ""
         }    ];
 

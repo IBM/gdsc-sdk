@@ -10,11 +10,11 @@
  * Do not edit the class manually.
  */
 
-import { ClassificationStatus } from '../models/ClassificationStatus';
 import { CloudAccountDetails } from '../models/CloudAccountDetails';
 import { DataStoreEncryptionStatus } from '../models/DataStoreEncryptionStatus';
 import { DataStoreSource } from '../models/DataStoreSource';
 import { DataStoreStats } from '../models/DataStoreStats';
+import { StoreClassificationStatus } from '../models/StoreClassificationStatus';
 import { StringKeyValue } from '../models/StringKeyValue';
 import { HttpFile } from '../http/http';
 
@@ -25,7 +25,7 @@ export class DataStore {
     'cloudAccountDetails': CloudAccountDetails;
     'cloudRegion'?: string;
     'country'?: string;
-    'classificationStatus'?: ClassificationStatus;
+    'classificationStatus'?: StoreClassificationStatus;
     'encryptionStatus'?: DataStoreEncryptionStatus;
     'customData'?: Array<StringKeyValue>;
     'label'?: string;
@@ -83,7 +83,7 @@ export class DataStore {
         {
             "name": "classificationStatus",
             "baseName": "classificationStatus",
-            "type": "ClassificationStatus",
+            "type": "StoreClassificationStatus",
             "format": ""
         },
         {

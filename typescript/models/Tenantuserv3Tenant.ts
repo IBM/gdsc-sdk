@@ -46,6 +46,7 @@ export class Tenantuserv3Tenant {
     * Settings pertaining to all users of this tenant.
     */
     'settings'?: { [key: string]: string; };
+    'status'?: string;
     'tenantCapabilities'?: { [key: string]: boolean; };
     /**
     * The unique id for the tenant object.
@@ -105,6 +106,12 @@ export class Tenantuserv3Tenant {
             "name": "settings",
             "baseName": "settings",
             "type": "{ [key: string]: string; }",
+            "format": ""
+        },
+        {
+            "name": "status",
+            "baseName": "status",
+            "type": "string",
             "format": ""
         },
         {

@@ -51,7 +51,13 @@ class TestLinkedVendor(unittest.TestCase):
                             certificate_name = 'PCI', )
                         ], ),
                 total_accounts = 11,
-                is_sensitive = True
+                is_sensitive = True,
+                sensitivity_summary = [
+                    ibm_gdsc_sdk_saas.models.sensitivity_summary.SensitivitySummary(
+                        tag = 'BUSINESS_EMAIL_ADDRESS', 
+                        count = 230, 
+                        category = 'Personal', )
+                    ]
             )
         else:
             return LinkedVendor(

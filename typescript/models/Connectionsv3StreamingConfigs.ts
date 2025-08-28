@@ -19,7 +19,7 @@ import { HttpFile } from '../http/http';
 */
 export class Connectionsv3StreamingConfigs {
     /**
-    * Accounts infomation.
+    * Accounts information.
     */
     'accountConfigs'?: Array<Connectionsv3AccountConfig>;
     /**

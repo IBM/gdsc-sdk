@@ -20,6 +20,8 @@ import { Policybuilderv3GetPolicyDetailsResponse } from '../models/Policybuilder
 import { Policybuilderv3GetPolicyNamesFromRuleIDsRequest } from '../models/Policybuilderv3GetPolicyNamesFromRuleIDsRequest';
 import { Policybuilderv3GetPolicyNamesFromRuleIDsResponse } from '../models/Policybuilderv3GetPolicyNamesFromRuleIDsResponse';
 import { Policybuilderv3GetPolicySyncListResponse } from '../models/Policybuilderv3GetPolicySyncListResponse';
+import { Policybuilderv3GetPolicyVersionResponse } from '../models/Policybuilderv3GetPolicyVersionResponse';
+import { Policybuilderv3GetPolicyVersionsInfoResponse } from '../models/Policybuilderv3GetPolicyVersionsInfoResponse';
 import { Policybuilderv3GetReceiversResponse } from '../models/Policybuilderv3GetReceiversResponse';
 import { Policybuilderv3GetRuleValidationRequest } from '../models/Policybuilderv3GetRuleValidationRequest';
 import { Policybuilderv3InsertGdpPolicyMetaDataRequest } from '../models/Policybuilderv3InsertGdpPolicyMetaDataRequest';
@@ -403,6 +405,98 @@ export class PolicyBuilderApiRequestFactory extends BaseAPIRequestFactory {
 
         // Path Params
         const localVarPath = '/api/v3/policies/sync_list';
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        let authMethod: SecurityAuthentication | undefined;
+        // Apply auth methods
+        authMethod = _config.authMethods["BasicAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        // Apply auth methods
+        authMethod = _config.authMethods["ApiKeyAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Summary: Get a particular version of the policy Description: Returns a particular version of policy and response code and message
+     * @param policyId Policy id of the requested policy
+     * @param version Requested version number of the policy
+     */
+    public async policyBuilderGetPolicyVersion(policyId: string, version: number, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'policyId' is not null or undefined
+        if (policyId === null || policyId === undefined) {
+            throw new RequiredError("PolicyBuilderApi", "policyBuilderGetPolicyVersion", "policyId");
+        }
+
+
+        // verify required parameter 'version' is not null or undefined
+        if (version === null || version === undefined) {
+            throw new RequiredError("PolicyBuilderApi", "policyBuilderGetPolicyVersion", "version");
+        }
+
+
+        // Path Params
+        const localVarPath = '/api/v3/policies/{policy_id}/details/versions/{version}'
+            .replace('{' + 'policy_id' + '}', encodeURIComponent(String(policyId)))
+            .replace('{' + 'version' + '}', encodeURIComponent(String(version)));
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        let authMethod: SecurityAuthentication | undefined;
+        // Apply auth methods
+        authMethod = _config.authMethods["BasicAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        // Apply auth methods
+        authMethod = _config.authMethods["ApiKeyAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Summary: Gets policy versions info Description: Returns information of all versions of a policy and response code and message
+     * @param policyId Policy id of the requested policy
+     */
+    public async policyBuilderGetPolicyVersionsInfo(policyId: string, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'policyId' is not null or undefined
+        if (policyId === null || policyId === undefined) {
+            throw new RequiredError("PolicyBuilderApi", "policyBuilderGetPolicyVersionsInfo", "policyId");
+        }
+
+
+        // Path Params
+        const localVarPath = '/api/v3/policies/{policy_id}/versions/metdata'
+            .replace('{' + 'policy_id' + '}', encodeURIComponent(String(policyId)));
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -884,6 +978,58 @@ export class PolicyBuilderApiRequestFactory extends BaseAPIRequestFactory {
         return requestContext;
     }
 
+    /**
+     * Summary: Update policy Description: Update Policy returns response code and message.
+     * @param policybuilderv3CreateUpdatePolicyRequest 
+     */
+    public async policyBuilderUpdatePolicy(policybuilderv3CreateUpdatePolicyRequest: Policybuilderv3CreateUpdatePolicyRequest, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'policybuilderv3CreateUpdatePolicyRequest' is not null or undefined
+        if (policybuilderv3CreateUpdatePolicyRequest === null || policybuilderv3CreateUpdatePolicyRequest === undefined) {
+            throw new RequiredError("PolicyBuilderApi", "policyBuilderUpdatePolicy", "policybuilderv3CreateUpdatePolicyRequest");
+        }
+
+
+        // Path Params
+        const localVarPath = '/api/v3/policies';
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.PUT);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        // Body Params
+        const contentType = ObjectSerializer.getPreferredMediaType([
+            "application/json"
+        ]);
+        requestContext.setHeaderParam("Content-Type", contentType);
+        const serializedBody = ObjectSerializer.stringify(
+            ObjectSerializer.serialize(policybuilderv3CreateUpdatePolicyRequest, "Policybuilderv3CreateUpdatePolicyRequest", ""),
+            contentType
+        );
+        requestContext.setBody(serializedBody);
+
+        let authMethod: SecurityAuthentication | undefined;
+        // Apply auth methods
+        authMethod = _config.authMethods["BasicAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        // Apply auth methods
+        authMethod = _config.authMethods["ApiKeyAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
 }
 
 export class PolicyBuilderApiResponseProcessor {
@@ -1216,6 +1362,78 @@ export class PolicyBuilderApiResponseProcessor {
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
      *
+     * @params response Response returned by the server for a request to policyBuilderGetPolicyVersion
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async policyBuilderGetPolicyVersionWithHttpInfo(response: ResponseContext): Promise<HttpInfo<Policybuilderv3GetPolicyVersionResponse >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: Policybuilderv3GetPolicyVersionResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Policybuilderv3GetPolicyVersionResponse", ""
+            ) as Policybuilderv3GetPolicyVersionResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("0", response.httpStatusCode)) {
+            const body: RuntimeError = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RuntimeError", ""
+            ) as RuntimeError;
+            throw new ApiException<RuntimeError>(response.httpStatusCode, "An unexpected error response.", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: Policybuilderv3GetPolicyVersionResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Policybuilderv3GetPolicyVersionResponse", ""
+            ) as Policybuilderv3GetPolicyVersionResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to policyBuilderGetPolicyVersionsInfo
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async policyBuilderGetPolicyVersionsInfoWithHttpInfo(response: ResponseContext): Promise<HttpInfo<Policybuilderv3GetPolicyVersionsInfoResponse >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: Policybuilderv3GetPolicyVersionsInfoResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Policybuilderv3GetPolicyVersionsInfoResponse", ""
+            ) as Policybuilderv3GetPolicyVersionsInfoResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("0", response.httpStatusCode)) {
+            const body: RuntimeError = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RuntimeError", ""
+            ) as RuntimeError;
+            throw new ApiException<RuntimeError>(response.httpStatusCode, "An unexpected error response.", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: Policybuilderv3GetPolicyVersionsInfoResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Policybuilderv3GetPolicyVersionsInfoResponse", ""
+            ) as Policybuilderv3GetPolicyVersionsInfoResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
      * @params response Response returned by the server for a request to policyBuilderGetReceivers
      * @throws ApiException if the response code was not in [200, 299]
      */
@@ -1530,6 +1748,42 @@ export class PolicyBuilderApiResponseProcessor {
                 ObjectSerializer.parse(await response.body.text(), contentType),
                 "Policybuilderv3StorePolicyGdpResponse", ""
             ) as Policybuilderv3StorePolicyGdpResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to policyBuilderUpdatePolicy
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async policyBuilderUpdatePolicyWithHttpInfo(response: ResponseContext): Promise<HttpInfo<Policybuilderv3CreateUpdatePolicyResponse >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: Policybuilderv3CreateUpdatePolicyResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Policybuilderv3CreateUpdatePolicyResponse", ""
+            ) as Policybuilderv3CreateUpdatePolicyResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("0", response.httpStatusCode)) {
+            const body: RuntimeError = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RuntimeError", ""
+            ) as RuntimeError;
+            throw new ApiException<RuntimeError>(response.httpStatusCode, "An unexpected error response.", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: Policybuilderv3CreateUpdatePolicyResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Policybuilderv3CreateUpdatePolicyResponse", ""
+            ) as Policybuilderv3CreateUpdatePolicyResponse;
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
         }
 

@@ -37,7 +37,7 @@ export class ThirdPartyVendorsApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/linkedVendors/{vendorId}/cloudAccounts'
+        const localVarPath = '/api/v2/dspm/linkedVendors/{vendorId}/cloudAccounts'
             .replace('{' + 'vendorId' + '}', encodeURIComponent(String(vendorId)));
 
         // Make Request Context
@@ -75,7 +75,7 @@ export class ThirdPartyVendorsApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/linkedVendors/{vendorId}'
+        const localVarPath = '/api/v2/dspm/linkedVendors/{vendorId}'
             .replace('{' + 'vendorId' + '}', encodeURIComponent(String(vendorId)));
 
         // Make Request Context
@@ -121,7 +121,7 @@ export class ThirdPartyVendorsApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/linkedVendors/{vendorId}/dataStores'
+        const localVarPath = '/api/v2/dspm/linkedVendors/{vendorId}/dataStores'
             .replace('{' + 'vendorId' + '}', encodeURIComponent(String(vendorId)));
 
         // Make Request Context
@@ -172,7 +172,7 @@ export class ThirdPartyVendorsApiRequestFactory extends BaseAPIRequestFactory {
         let _config = _options || this.configuration;
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/linkedVendors';
+        const localVarPath = '/api/v2/dspm/linkedVendors';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -204,7 +204,7 @@ export class ThirdPartyVendorsApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/linkedVendors/trustedAssets';
+        const localVarPath = '/api/v2/dspm/linkedVendors/trustedAssets';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);

@@ -13,7 +13,7 @@
 |**cloudAccountDetails** | [**CloudAccountDetails**](CloudAccountDetails.md) |  |  |
 |**cloudRegion** | **String** |  |  [optional] |
 |**country** | **String** |  |  [optional] |
-|**classificationStatus** | **ClassificationStatus** |  |  [optional] |
+|**classificationStatus** | **StoreClassificationStatus** |  |  [optional] |
 |**encryptionStatus** | **DataStoreEncryptionStatus** |  |  [optional] |
 |**customData** | [**List&lt;StringKeyValue&gt;**](StringKeyValue.md) |  |  [optional] |
 |**label** | **String** |  |  [optional] |

@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **policy_id** | **str** | Policy Id. | [optional] 
 **policy_name** | **str** | Policy Name. | [optional] 
 **policy_type** | [**Policybuilderv3PolicyType**](Policybuilderv3PolicyType.md) |  | [optional] 
+**product_id** | [**Policybuilderv3ProductType**](Policybuilderv3ProductType.md) |  | [optional] 
 **rules** | [**List[Policybuilderv3Rule]**](Policybuilderv3Rule.md) |  | [optional] 
 **rules_on_flat** | **bool** | Flag to indicate whether the policy has rules on flat enabled or not. | [optional] 
 **template** | **bool** | Flag to indicate whether the policy is a template policy or not. | [optional] 

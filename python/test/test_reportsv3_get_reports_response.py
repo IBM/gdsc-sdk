@@ -49,6 +49,7 @@ class TestReportsv3GetReportsResponse(unittest.TestCase):
                             ], 
                         headers = [
                             ibm_gdsc_sdk_saas.models.reportsv3_display_header.reportsv3DisplayHeader(
+                                aggregation_type = 'UNDEFINED_AGG_TYPE', 
                                 field_name = ibm_gdsc_sdk_saas.models.reportsv3_field_name.reportsv3FieldName(
                                     customized_value = '', 
                                     nls_key = '', 

@@ -49,7 +49,7 @@ import com.ibm.security.JSON;
 /**
  * Returns the download file name associated with the specified notification or an empty string if there is no download. file name associated with the specified notification.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
 public class Notificationsv3GetNotificationFilenameResponse {
   public static final String SERIALIZED_NAME_FILENAME = "filename";
   @SerializedName(SERIALIZED_NAME_FILENAME)

@@ -32,6 +32,7 @@ class Policybuilderv3ParameterOperator(str, Enum):
     IN_GROUP = 'IN_GROUP'
     NOT_IN_GROUP = 'NOT_IN_GROUP'
     EVERY_MEMBER_IN_GROUP = 'EVERY_MEMBER_IN_GROUP'
+    IN_REPORT = 'IN_REPORT'
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:

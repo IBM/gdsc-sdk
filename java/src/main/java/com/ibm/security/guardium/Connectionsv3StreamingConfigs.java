@@ -53,7 +53,7 @@ import com.ibm.security.JSON;
 /**
  * List of account configs and streaming connection configs.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
 public class Connectionsv3StreamingConfigs {
   public static final String SERIALIZED_NAME_ACCOUNT_CONFIGS = "account_configs";
   @SerializedName(SERIALIZED_NAME_ACCOUNT_CONFIGS)
@@ -80,7 +80,7 @@ public class Connectionsv3StreamingConfigs {
   }
 
    /**
-   * Accounts infomation.
+   * Accounts information.
    * @return accountConfigs
   **/
   @javax.annotation.Nullable

@@ -29,16 +29,25 @@ import java.io.IOException;
 
 import com.ibm.security.guardium.Jumpboxv3AuthorizeRequest;
 import com.ibm.security.guardium.Jumpboxv3AuthorizeResponse;
+import com.ibm.security.guardium.Jumpboxv3DeleteAccountResponse;
+import com.ibm.security.guardium.Jumpboxv3GetAccountResponse;
+import com.ibm.security.guardium.Jumpboxv3GetAccountsResponse;
 import com.ibm.security.guardium.Jumpboxv3GetTenantResponse;
 import com.ibm.security.guardium.Jumpboxv3GetTenantsResponse;
+import com.ibm.security.guardium.Jumpboxv3PostAccountRequest;
+import com.ibm.security.guardium.Jumpboxv3PostAccountResponse;
 import com.ibm.security.guardium.Jumpboxv3PostTenantsRequest;
 import com.ibm.security.guardium.Jumpboxv3PostTenantsResponse;
 import com.ibm.security.guardium.Jumpboxv3PostUsersBulkRequest;
 import com.ibm.security.guardium.Jumpboxv3PostUsersBulkResponse;
+import com.ibm.security.guardium.Jumpboxv3ResumeAccountResponse;
 import com.ibm.security.guardium.Jumpboxv3SearchUsersRequest;
 import com.ibm.security.guardium.Jumpboxv3SearchUsersResponse;
+import com.ibm.security.guardium.Jumpboxv3SuspendAccountResponse;
 import com.ibm.security.guardium.Jumpboxv3TestUserRequest;
 import com.ibm.security.guardium.Jumpboxv3TestUserResponse;
+import com.ibm.security.guardium.Jumpboxv3UpdateAccountRequest;
+import com.ibm.security.guardium.Jumpboxv3UpdateAccountResponse;
 import com.ibm.security.guardium.Jumpboxv3UpdateTenantRequest;
 import com.ibm.security.guardium.Jumpboxv3UpdateTenantResponse;
 import com.ibm.security.guardium.Jumpboxv3UpdateUsersBulkRequest;
@@ -213,6 +222,133 @@ public class JumpboxServiceApi {
 
         okhttp3.Call localVarCall = jumpboxServiceAuthorizeValidateBeforeCall(jumpboxv3AuthorizeRequest, _callback);
         Type localVarReturnType = new TypeToken<Jumpboxv3AuthorizeResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for jumpboxServiceDeleteAccount
+     * @param accountId Account id. (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call jumpboxServiceDeleteAccountCall(String accountId, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/accounts/{account_id}"
+            .replace("{" + "account_id" + "}", localVarApiClient.escapeString(accountId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call jumpboxServiceDeleteAccountValidateBeforeCall(String accountId, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'accountId' is set
+        if (accountId == null) {
+            throw new ApiException("Missing the required parameter 'accountId' when calling jumpboxServiceDeleteAccount(Async)");
+        }
+
+        return jumpboxServiceDeleteAccountCall(accountId, _callback);
+
+    }
+
+    /**
+     * Summary: Delete account Description: Delete an account.
+     * 
+     * @param accountId Account id. (required)
+     * @return Jumpboxv3DeleteAccountResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Jumpboxv3DeleteAccountResponse jumpboxServiceDeleteAccount(String accountId) throws ApiException {
+        ApiResponse<Jumpboxv3DeleteAccountResponse> localVarResp = jumpboxServiceDeleteAccountWithHttpInfo(accountId);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Delete account Description: Delete an account.
+     * 
+     * @param accountId Account id. (required)
+     * @return ApiResponse&lt;Jumpboxv3DeleteAccountResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Jumpboxv3DeleteAccountResponse> jumpboxServiceDeleteAccountWithHttpInfo(String accountId) throws ApiException {
+        okhttp3.Call localVarCall = jumpboxServiceDeleteAccountValidateBeforeCall(accountId, null);
+        Type localVarReturnType = new TypeToken<Jumpboxv3DeleteAccountResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Delete account Description: Delete an account. (asynchronously)
+     * 
+     * @param accountId Account id. (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call jumpboxServiceDeleteAccountAsync(String accountId, final ApiCallback<Jumpboxv3DeleteAccountResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = jumpboxServiceDeleteAccountValidateBeforeCall(accountId, _callback);
+        Type localVarReturnType = new TypeToken<Jumpboxv3DeleteAccountResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -483,6 +619,298 @@ public class JumpboxServiceApi {
 
         okhttp3.Call localVarCall = jumpboxServiceDeleteUserValidateBeforeCall(userId, _callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for jumpboxServiceGetAccount
+     * @param accountId Account id. (required)
+     * @param includeInactive Include inactive. (optional)
+     * @param includeNotReady Include tenants that are not ready(are in state of being created or deleted). (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call jumpboxServiceGetAccountCall(String accountId, Boolean includeInactive, Boolean includeNotReady, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/accounts/{account_id}"
+            .replace("{" + "account_id" + "}", localVarApiClient.escapeString(accountId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (includeInactive != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("include_inactive", includeInactive));
+        }
+
+        if (includeNotReady != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("include_not_ready", includeNotReady));
+        }
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call jumpboxServiceGetAccountValidateBeforeCall(String accountId, Boolean includeInactive, Boolean includeNotReady, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'accountId' is set
+        if (accountId == null) {
+            throw new ApiException("Missing the required parameter 'accountId' when calling jumpboxServiceGetAccount(Async)");
+        }
+
+        return jumpboxServiceGetAccountCall(accountId, includeInactive, includeNotReady, _callback);
+
+    }
+
+    /**
+     * Summary: Get account Description: Get an account.
+     * 
+     * @param accountId Account id. (required)
+     * @param includeInactive Include inactive. (optional)
+     * @param includeNotReady Include tenants that are not ready(are in state of being created or deleted). (optional)
+     * @return Jumpboxv3GetAccountResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Jumpboxv3GetAccountResponse jumpboxServiceGetAccount(String accountId, Boolean includeInactive, Boolean includeNotReady) throws ApiException {
+        ApiResponse<Jumpboxv3GetAccountResponse> localVarResp = jumpboxServiceGetAccountWithHttpInfo(accountId, includeInactive, includeNotReady);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Get account Description: Get an account.
+     * 
+     * @param accountId Account id. (required)
+     * @param includeInactive Include inactive. (optional)
+     * @param includeNotReady Include tenants that are not ready(are in state of being created or deleted). (optional)
+     * @return ApiResponse&lt;Jumpboxv3GetAccountResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Jumpboxv3GetAccountResponse> jumpboxServiceGetAccountWithHttpInfo(String accountId, Boolean includeInactive, Boolean includeNotReady) throws ApiException {
+        okhttp3.Call localVarCall = jumpboxServiceGetAccountValidateBeforeCall(accountId, includeInactive, includeNotReady, null);
+        Type localVarReturnType = new TypeToken<Jumpboxv3GetAccountResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Get account Description: Get an account. (asynchronously)
+     * 
+     * @param accountId Account id. (required)
+     * @param includeInactive Include inactive. (optional)
+     * @param includeNotReady Include tenants that are not ready(are in state of being created or deleted). (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call jumpboxServiceGetAccountAsync(String accountId, Boolean includeInactive, Boolean includeNotReady, final ApiCallback<Jumpboxv3GetAccountResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = jumpboxServiceGetAccountValidateBeforeCall(accountId, includeInactive, includeNotReady, _callback);
+        Type localVarReturnType = new TypeToken<Jumpboxv3GetAccountResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for jumpboxServiceGetAccounts
+     * @param uid Email. (optional)
+     * @param externalId External id. (optional)
+     * @param includeInactive Include inactive. (optional)
+     * @param includeNotReady Include tenants that are not ready(are in state of being created or deleted). (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call jumpboxServiceGetAccountsCall(String uid, String externalId, Boolean includeInactive, Boolean includeNotReady, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/accounts";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (uid != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("uid", uid));
+        }
+
+        if (externalId != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("external_id", externalId));
+        }
+
+        if (includeInactive != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("include_inactive", includeInactive));
+        }
+
+        if (includeNotReady != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("include_not_ready", includeNotReady));
+        }
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call jumpboxServiceGetAccountsValidateBeforeCall(String uid, String externalId, Boolean includeInactive, Boolean includeNotReady, final ApiCallback _callback) throws ApiException {
+        return jumpboxServiceGetAccountsCall(uid, externalId, includeInactive, includeNotReady, _callback);
+
+    }
+
+    /**
+     * Summary: Get accounts Description: Get all accounts based on UID.
+     * 
+     * @param uid Email. (optional)
+     * @param externalId External id. (optional)
+     * @param includeInactive Include inactive. (optional)
+     * @param includeNotReady Include tenants that are not ready(are in state of being created or deleted). (optional)
+     * @return Jumpboxv3GetAccountsResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Jumpboxv3GetAccountsResponse jumpboxServiceGetAccounts(String uid, String externalId, Boolean includeInactive, Boolean includeNotReady) throws ApiException {
+        ApiResponse<Jumpboxv3GetAccountsResponse> localVarResp = jumpboxServiceGetAccountsWithHttpInfo(uid, externalId, includeInactive, includeNotReady);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Get accounts Description: Get all accounts based on UID.
+     * 
+     * @param uid Email. (optional)
+     * @param externalId External id. (optional)
+     * @param includeInactive Include inactive. (optional)
+     * @param includeNotReady Include tenants that are not ready(are in state of being created or deleted). (optional)
+     * @return ApiResponse&lt;Jumpboxv3GetAccountsResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Jumpboxv3GetAccountsResponse> jumpboxServiceGetAccountsWithHttpInfo(String uid, String externalId, Boolean includeInactive, Boolean includeNotReady) throws ApiException {
+        okhttp3.Call localVarCall = jumpboxServiceGetAccountsValidateBeforeCall(uid, externalId, includeInactive, includeNotReady, null);
+        Type localVarReturnType = new TypeToken<Jumpboxv3GetAccountsResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Get accounts Description: Get all accounts based on UID. (asynchronously)
+     * 
+     * @param uid Email. (optional)
+     * @param externalId External id. (optional)
+     * @param includeInactive Include inactive. (optional)
+     * @param includeNotReady Include tenants that are not ready(are in state of being created or deleted). (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call jumpboxServiceGetAccountsAsync(String uid, String externalId, Boolean includeInactive, Boolean includeNotReady, final ApiCallback<Jumpboxv3GetAccountsResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = jumpboxServiceGetAccountsValidateBeforeCall(uid, externalId, includeInactive, includeNotReady, _callback);
+        Type localVarReturnType = new TypeToken<Jumpboxv3GetAccountsResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -904,6 +1332,133 @@ public class JumpboxServiceApi {
         return localVarCall;
     }
     /**
+     * Build call for jumpboxServicePostAccount
+     * @param jumpboxv3PostAccountRequest  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call jumpboxServicePostAccountCall(Jumpboxv3PostAccountRequest jumpboxv3PostAccountRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = jumpboxv3PostAccountRequest;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/accounts";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call jumpboxServicePostAccountValidateBeforeCall(Jumpboxv3PostAccountRequest jumpboxv3PostAccountRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'jumpboxv3PostAccountRequest' is set
+        if (jumpboxv3PostAccountRequest == null) {
+            throw new ApiException("Missing the required parameter 'jumpboxv3PostAccountRequest' when calling jumpboxServicePostAccount(Async)");
+        }
+
+        return jumpboxServicePostAccountCall(jumpboxv3PostAccountRequest, _callback);
+
+    }
+
+    /**
+     * Summary: Post account Description: Create an Account.
+     * 
+     * @param jumpboxv3PostAccountRequest  (required)
+     * @return Jumpboxv3PostAccountResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Jumpboxv3PostAccountResponse jumpboxServicePostAccount(Jumpboxv3PostAccountRequest jumpboxv3PostAccountRequest) throws ApiException {
+        ApiResponse<Jumpboxv3PostAccountResponse> localVarResp = jumpboxServicePostAccountWithHttpInfo(jumpboxv3PostAccountRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Post account Description: Create an Account.
+     * 
+     * @param jumpboxv3PostAccountRequest  (required)
+     * @return ApiResponse&lt;Jumpboxv3PostAccountResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Jumpboxv3PostAccountResponse> jumpboxServicePostAccountWithHttpInfo(Jumpboxv3PostAccountRequest jumpboxv3PostAccountRequest) throws ApiException {
+        okhttp3.Call localVarCall = jumpboxServicePostAccountValidateBeforeCall(jumpboxv3PostAccountRequest, null);
+        Type localVarReturnType = new TypeToken<Jumpboxv3PostAccountResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Post account Description: Create an Account. (asynchronously)
+     * 
+     * @param jumpboxv3PostAccountRequest  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call jumpboxServicePostAccountAsync(Jumpboxv3PostAccountRequest jumpboxv3PostAccountRequest, final ApiCallback<Jumpboxv3PostAccountResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = jumpboxServicePostAccountValidateBeforeCall(jumpboxv3PostAccountRequest, _callback);
+        Type localVarReturnType = new TypeToken<Jumpboxv3PostAccountResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for jumpboxServicePostTenants
      * @param jumpboxv3PostTenantsRequest  (required)
      * @param _callback Callback for upload/download progress
@@ -1158,6 +1713,133 @@ public class JumpboxServiceApi {
         return localVarCall;
     }
     /**
+     * Build call for jumpboxServiceResumeAccount
+     * @param accountId account_id represents the user&#39;s account ID (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call jumpboxServiceResumeAccountCall(String accountId, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/accounts/{account_id}/resume"
+            .replace("{" + "account_id" + "}", localVarApiClient.escapeString(accountId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call jumpboxServiceResumeAccountValidateBeforeCall(String accountId, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'accountId' is set
+        if (accountId == null) {
+            throw new ApiException("Missing the required parameter 'accountId' when calling jumpboxServiceResumeAccount(Async)");
+        }
+
+        return jumpboxServiceResumeAccountCall(accountId, _callback);
+
+    }
+
+    /**
+     * Summary: Resume account Description: Resume an account.
+     * 
+     * @param accountId account_id represents the user&#39;s account ID (required)
+     * @return Jumpboxv3ResumeAccountResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Jumpboxv3ResumeAccountResponse jumpboxServiceResumeAccount(String accountId) throws ApiException {
+        ApiResponse<Jumpboxv3ResumeAccountResponse> localVarResp = jumpboxServiceResumeAccountWithHttpInfo(accountId);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Resume account Description: Resume an account.
+     * 
+     * @param accountId account_id represents the user&#39;s account ID (required)
+     * @return ApiResponse&lt;Jumpboxv3ResumeAccountResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Jumpboxv3ResumeAccountResponse> jumpboxServiceResumeAccountWithHttpInfo(String accountId) throws ApiException {
+        okhttp3.Call localVarCall = jumpboxServiceResumeAccountValidateBeforeCall(accountId, null);
+        Type localVarReturnType = new TypeToken<Jumpboxv3ResumeAccountResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Resume account Description: Resume an account. (asynchronously)
+     * 
+     * @param accountId account_id represents the user&#39;s account ID (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call jumpboxServiceResumeAccountAsync(String accountId, final ApiCallback<Jumpboxv3ResumeAccountResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = jumpboxServiceResumeAccountValidateBeforeCall(accountId, _callback);
+        Type localVarReturnType = new TypeToken<Jumpboxv3ResumeAccountResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for jumpboxServiceSearchUsers
      * @param jumpboxv3SearchUsersRequest  (required)
      * @param _callback Callback for upload/download progress
@@ -1285,6 +1967,133 @@ public class JumpboxServiceApi {
         return localVarCall;
     }
     /**
+     * Build call for jumpboxServiceSuspendAccount
+     * @param accountId account_id represents the user&#39;s account ID (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call jumpboxServiceSuspendAccountCall(String accountId, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/accounts/{account_id}/suspend"
+            .replace("{" + "account_id" + "}", localVarApiClient.escapeString(accountId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call jumpboxServiceSuspendAccountValidateBeforeCall(String accountId, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'accountId' is set
+        if (accountId == null) {
+            throw new ApiException("Missing the required parameter 'accountId' when calling jumpboxServiceSuspendAccount(Async)");
+        }
+
+        return jumpboxServiceSuspendAccountCall(accountId, _callback);
+
+    }
+
+    /**
+     * Summary: Suspend Account Description: Suspend an account
+     * 
+     * @param accountId account_id represents the user&#39;s account ID (required)
+     * @return Jumpboxv3SuspendAccountResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Jumpboxv3SuspendAccountResponse jumpboxServiceSuspendAccount(String accountId) throws ApiException {
+        ApiResponse<Jumpboxv3SuspendAccountResponse> localVarResp = jumpboxServiceSuspendAccountWithHttpInfo(accountId);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Suspend Account Description: Suspend an account
+     * 
+     * @param accountId account_id represents the user&#39;s account ID (required)
+     * @return ApiResponse&lt;Jumpboxv3SuspendAccountResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Jumpboxv3SuspendAccountResponse> jumpboxServiceSuspendAccountWithHttpInfo(String accountId) throws ApiException {
+        okhttp3.Call localVarCall = jumpboxServiceSuspendAccountValidateBeforeCall(accountId, null);
+        Type localVarReturnType = new TypeToken<Jumpboxv3SuspendAccountResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Suspend Account Description: Suspend an account (asynchronously)
+     * 
+     * @param accountId account_id represents the user&#39;s account ID (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call jumpboxServiceSuspendAccountAsync(String accountId, final ApiCallback<Jumpboxv3SuspendAccountResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = jumpboxServiceSuspendAccountValidateBeforeCall(accountId, _callback);
+        Type localVarReturnType = new TypeToken<Jumpboxv3SuspendAccountResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for jumpboxServiceTestUser
      * @param jumpboxv3TestUserRequest  (required)
      * @param _callback Callback for upload/download progress
@@ -1408,6 +2217,143 @@ public class JumpboxServiceApi {
 
         okhttp3.Call localVarCall = jumpboxServiceTestUserValidateBeforeCall(jumpboxv3TestUserRequest, _callback);
         Type localVarReturnType = new TypeToken<Jumpboxv3TestUserResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for jumpboxServiceUpdateAccount
+     * @param accountId Account id. (required)
+     * @param jumpboxv3UpdateAccountRequest  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call jumpboxServiceUpdateAccountCall(String accountId, Jumpboxv3UpdateAccountRequest jumpboxv3UpdateAccountRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = jumpboxv3UpdateAccountRequest;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/accounts/{account_id}"
+            .replace("{" + "account_id" + "}", localVarApiClient.escapeString(accountId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call jumpboxServiceUpdateAccountValidateBeforeCall(String accountId, Jumpboxv3UpdateAccountRequest jumpboxv3UpdateAccountRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'accountId' is set
+        if (accountId == null) {
+            throw new ApiException("Missing the required parameter 'accountId' when calling jumpboxServiceUpdateAccount(Async)");
+        }
+
+        // verify the required parameter 'jumpboxv3UpdateAccountRequest' is set
+        if (jumpboxv3UpdateAccountRequest == null) {
+            throw new ApiException("Missing the required parameter 'jumpboxv3UpdateAccountRequest' when calling jumpboxServiceUpdateAccount(Async)");
+        }
+
+        return jumpboxServiceUpdateAccountCall(accountId, jumpboxv3UpdateAccountRequest, _callback);
+
+    }
+
+    /**
+     * Summary: Update Account Description: Updates an account.
+     * 
+     * @param accountId Account id. (required)
+     * @param jumpboxv3UpdateAccountRequest  (required)
+     * @return Jumpboxv3UpdateAccountResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Jumpboxv3UpdateAccountResponse jumpboxServiceUpdateAccount(String accountId, Jumpboxv3UpdateAccountRequest jumpboxv3UpdateAccountRequest) throws ApiException {
+        ApiResponse<Jumpboxv3UpdateAccountResponse> localVarResp = jumpboxServiceUpdateAccountWithHttpInfo(accountId, jumpboxv3UpdateAccountRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Update Account Description: Updates an account.
+     * 
+     * @param accountId Account id. (required)
+     * @param jumpboxv3UpdateAccountRequest  (required)
+     * @return ApiResponse&lt;Jumpboxv3UpdateAccountResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Jumpboxv3UpdateAccountResponse> jumpboxServiceUpdateAccountWithHttpInfo(String accountId, Jumpboxv3UpdateAccountRequest jumpboxv3UpdateAccountRequest) throws ApiException {
+        okhttp3.Call localVarCall = jumpboxServiceUpdateAccountValidateBeforeCall(accountId, jumpboxv3UpdateAccountRequest, null);
+        Type localVarReturnType = new TypeToken<Jumpboxv3UpdateAccountResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Update Account Description: Updates an account. (asynchronously)
+     * 
+     * @param accountId Account id. (required)
+     * @param jumpboxv3UpdateAccountRequest  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call jumpboxServiceUpdateAccountAsync(String accountId, Jumpboxv3UpdateAccountRequest jumpboxv3UpdateAccountRequest, final ApiCallback<Jumpboxv3UpdateAccountResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = jumpboxServiceUpdateAccountValidateBeforeCall(accountId, jumpboxv3UpdateAccountRequest, _callback);
+        Type localVarReturnType = new TypeToken<Jumpboxv3UpdateAccountResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

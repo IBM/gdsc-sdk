@@ -50,7 +50,7 @@ import com.ibm.security.JSON;
 /**
  * An activity log record indicates who, what, when, where, and why something happened.  For the purposes of this service: who   &#x3D; The unique user ID for the user that performed the operation. what  &#x3D; The operation performed (CRUD operation or other action taken). when  &#x3D; The time the operation, request, or event occurred. where &#x3D; The context in which the operation was performed. why   &#x3D; Details about the operation being performed. which &#x3D; The unique service record id for the service that recorded the event. actor &#x3D; When available track the actor that performed the activity.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
 public class Auditv3ActivityRecord {
   public static final String SERIALIZED_NAME_ACTION_TAKEN = "action_taken";
   @SerializedName(SERIALIZED_NAME_ACTION_TAKEN)

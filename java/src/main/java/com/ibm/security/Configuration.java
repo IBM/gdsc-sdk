@@ -13,9 +13,9 @@
 
 package com.ibm.security;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
 public class Configuration {
-    public static final String VERSION = "3.0.20250227";
+    public static final String VERSION = "3.0.20250703";
 
     private static ApiClient defaultApiClient = new ApiClient();
 

@@ -111,7 +111,7 @@ public class DataResourcesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataResources/{dataResourceId}"
+        String localVarPath = "/api/v2/dspm/dataResources/{dataResourceId}"
             .replace("{" + "dataResourceId" + "}", localVarApiClient.escapeString(dataResourceId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -239,7 +239,7 @@ public class DataResourcesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataResources/summary";
+        String localVarPath = "/api/v2/dspm/dataResources/summary";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -375,7 +375,7 @@ public class DataResourcesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataResources";
+        String localVarPath = "/api/v2/dspm/dataResources";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -529,7 +529,7 @@ public class DataResourcesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataResources/names";
+        String localVarPath = "/api/v2/dspm/dataResources/names";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -667,7 +667,7 @@ public class DataResourcesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataResources/{dataResourceId}/removeResource"
+        String localVarPath = "/api/v2/dspm/dataResources/{dataResourceId}/removeResource"
             .replace("{" + "dataResourceId" + "}", localVarApiClient.escapeString(dataResourceId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -806,7 +806,7 @@ public class DataResourcesApi {
         Object localVarPostBody = updateResourceReviewBody;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataResources/{dataResourceId}/reviewed"
+        String localVarPath = "/api/v2/dspm/dataResources/{dataResourceId}/reviewed"
             .replace("{" + "dataResourceId" + "}", localVarApiClient.escapeString(dataResourceId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();

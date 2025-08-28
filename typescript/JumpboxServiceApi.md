@@ -5,15 +5,22 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**jumpboxServiceAuthorize**](JumpboxServiceApi.md#jumpboxServiceAuthorize) | **POST** /api/v3/authorization | Summary: Authorize Description: Authenticate a user and return a JWT.
+[**jumpboxServiceDeleteAccount**](JumpboxServiceApi.md#jumpboxServiceDeleteAccount) | **DELETE** /api/v3/accounts/{account_id} | Summary: Delete account Description: Delete an account.
 [**jumpboxServiceDeleteTenant**](JumpboxServiceApi.md#jumpboxServiceDeleteTenant) | **DELETE** /api/v3/tenants/{tenant_id} | Summary: Delete tenant Description: Delete a tenant.
 [**jumpboxServiceDeleteUser**](JumpboxServiceApi.md#jumpboxServiceDeleteUser) | **DELETE** /api/v3/users/{user_id} | Summary: Delete user Description: Delete the user.
+[**jumpboxServiceGetAccount**](JumpboxServiceApi.md#jumpboxServiceGetAccount) | **GET** /api/v3/accounts/{account_id} | Summary: Get account Description: Get an account.
+[**jumpboxServiceGetAccounts**](JumpboxServiceApi.md#jumpboxServiceGetAccounts) | **GET** /api/v3/accounts | Summary: Get accounts Description: Get all accounts based on UID.
 [**jumpboxServiceGetTenant**](JumpboxServiceApi.md#jumpboxServiceGetTenant) | **GET** /api/v3/tenants/{tenant_id} | Summary: Get tenant Description: Get a tenant.
 [**jumpboxServiceGetTenants**](JumpboxServiceApi.md#jumpboxServiceGetTenants) | **GET** /api/v3/tenants | Summary: Get tenants Description: Get all tenant base on UID.
 [**jumpboxServiceGetUsers**](JumpboxServiceApi.md#jumpboxServiceGetUsers) | **GET** /api/v3/users | Summary: Get users Description: Get all users base on a tenantID.
+[**jumpboxServicePostAccount**](JumpboxServiceApi.md#jumpboxServicePostAccount) | **POST** /api/v3/accounts | Summary: Post account Description: Create an Account.
 [**jumpboxServicePostTenants**](JumpboxServiceApi.md#jumpboxServicePostTenants) | **POST** /api/v3/tenants | Summary: Post tenants Description: Create a tenant.
 [**jumpboxServicePostUsers**](JumpboxServiceApi.md#jumpboxServicePostUsers) | **POST** /api/v3/users | Summary: Post users Description: Create users.
+[**jumpboxServiceResumeAccount**](JumpboxServiceApi.md#jumpboxServiceResumeAccount) | **PATCH** /api/v3/accounts/{account_id}/resume | Summary: Resume account Description: Resume an account.
 [**jumpboxServiceSearchUsers**](JumpboxServiceApi.md#jumpboxServiceSearchUsers) | **POST** /api/v3/users/search | Summary: Search users Description: Search for all users matching the provided string.
+[**jumpboxServiceSuspendAccount**](JumpboxServiceApi.md#jumpboxServiceSuspendAccount) | **PATCH** /api/v3/accounts/{account_id}/suspend | Summary: Suspend Account Description: Suspend an account
 [**jumpboxServiceTestUser**](JumpboxServiceApi.md#jumpboxServiceTestUser) | **POST** /api/v3/users/test | Summary: Test user Description: Test a user lookup to a given LDAP.
+[**jumpboxServiceUpdateAccount**](JumpboxServiceApi.md#jumpboxServiceUpdateAccount) | **PATCH** /api/v3/accounts/{account_id} | Summary: Update Account Description: Updates an account.
 [**jumpboxServiceUpdateTenant**](JumpboxServiceApi.md#jumpboxServiceUpdateTenant) | **PATCH** /api/v3/tenants/{tenant_id} | Summary: Update tenant Description: Update a tenant.
 [**jumpboxServiceUpdateUsers**](JumpboxServiceApi.md#jumpboxServiceUpdateUsers) | **PATCH** /api/v3/users | Summary: Update users Description: Update an array of users.
 
@@ -71,6 +78,60 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **jumpboxServiceDeleteAccount**
+> Jumpboxv3DeleteAccountResponse jumpboxServiceDeleteAccount()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .JumpboxServiceApi(configuration);
+
+let body:.JumpboxServiceApiJumpboxServiceDeleteAccountRequest = {
+  // string | Account id.
+  accountId: "account_id_example",
+};
+
+apiInstance.jumpboxServiceDeleteAccount(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountId** | [**string**] | Account id. | defaults to undefined
+
+
+### Return type
+
+**Jumpboxv3DeleteAccountResponse**
+
+### Authorization
+
+[ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 
@@ -177,6 +238,129 @@ Name | Type | Description  | Notes
 ### Return type
 
 **any**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **jumpboxServiceGetAccount**
+> Jumpboxv3GetAccountResponse jumpboxServiceGetAccount()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .JumpboxServiceApi(configuration);
+
+let body:.JumpboxServiceApiJumpboxServiceGetAccountRequest = {
+  // string | Account id.
+  accountId: "account_id_example",
+  // boolean | Include inactive. (optional)
+  includeInactive: true,
+  // boolean | Include tenants that are not ready(are in state of being created or deleted). (optional)
+  includeNotReady: true,
+};
+
+apiInstance.jumpboxServiceGetAccount(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountId** | [**string**] | Account id. | defaults to undefined
+ **includeInactive** | [**boolean**] | Include inactive. | (optional) defaults to undefined
+ **includeNotReady** | [**boolean**] | Include tenants that are not ready(are in state of being created or deleted). | (optional) defaults to undefined
+
+
+### Return type
+
+**Jumpboxv3GetAccountResponse**
+
+### Authorization
+
+[ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **jumpboxServiceGetAccounts**
+> Jumpboxv3GetAccountsResponse jumpboxServiceGetAccounts()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .JumpboxServiceApi(configuration);
+
+let body:.JumpboxServiceApiJumpboxServiceGetAccountsRequest = {
+  // string | Email. (optional)
+  uid: "uid_example",
+  // string | External id. (optional)
+  externalId: "external_id_example",
+  // boolean | Include inactive. (optional)
+  includeInactive: true,
+  // boolean | Include tenants that are not ready(are in state of being created or deleted). (optional)
+  includeNotReady: true,
+};
+
+apiInstance.jumpboxServiceGetAccounts(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uid** | [**string**] | Email. | (optional) defaults to undefined
+ **externalId** | [**string**] | External id. | (optional) defaults to undefined
+ **includeInactive** | [**boolean**] | Include inactive. | (optional) defaults to undefined
+ **includeNotReady** | [**boolean**] | Include tenants that are not ready(are in state of being created or deleted). | (optional) defaults to undefined
+
+
+### Return type
+
+**Jumpboxv3GetAccountsResponse**
 
 ### Authorization
 
@@ -373,6 +557,82 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **jumpboxServicePostAccount**
+> Jumpboxv3PostAccountResponse jumpboxServicePostAccount(jumpboxv3PostAccountRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .JumpboxServiceApi(configuration);
+
+let body:.JumpboxServiceApiJumpboxServicePostAccountRequest = {
+  // Jumpboxv3PostAccountRequest
+  jumpboxv3PostAccountRequest: {
+    externalId: "externalId_example",
+    externalMetadata: {
+      "key": {
+        addOns: {
+          "key": {
+            unit: "unit_example",
+            value: "value_example",
+          },
+        },
+        crn: "crn_example",
+        expirationDate: new Date('1970-01-01T00:00:00.00Z'),
+        instanceId: "instanceId_example",
+        partNumber: "partNumber_example",
+        planId: "planId_example",
+        serviceId: "serviceId_example",
+        subscriptionId: "subscriptionId_example",
+      },
+    },
+    name: "name_example",
+    partNumber: "partNumber_example",
+    uid: "uid_example",
+  },
+};
+
+apiInstance.jumpboxServicePostAccount(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **jumpboxv3PostAccountRequest** | **Jumpboxv3PostAccountRequest**|  |
+
+
+### Return type
+
+**Jumpboxv3PostAccountResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **jumpboxServicePostTenants**
 > Jumpboxv3PostTenantsResponse jumpboxServicePostTenants(jumpboxv3PostTenantsRequest)
 
@@ -525,6 +785,60 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **jumpboxServiceResumeAccount**
+> Jumpboxv3ResumeAccountResponse jumpboxServiceResumeAccount()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .JumpboxServiceApi(configuration);
+
+let body:.JumpboxServiceApiJumpboxServiceResumeAccountRequest = {
+  // string | account_id represents the user\'s account ID
+  accountId: "account_id_example",
+};
+
+apiInstance.jumpboxServiceResumeAccount(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountId** | [**string**] | account_id represents the user\&#39;s account ID | defaults to undefined
+
+
+### Return type
+
+**Jumpboxv3ResumeAccountResponse**
+
+### Authorization
+
+[ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **jumpboxServiceSearchUsers**
 > Jumpboxv3SearchUsersResponse jumpboxServiceSearchUsers(jumpboxv3SearchUsersRequest)
 
@@ -581,6 +895,60 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **jumpboxServiceSuspendAccount**
+> Jumpboxv3SuspendAccountResponse jumpboxServiceSuspendAccount()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .JumpboxServiceApi(configuration);
+
+let body:.JumpboxServiceApiJumpboxServiceSuspendAccountRequest = {
+  // string | account_id represents the user\'s account ID
+  accountId: "account_id_example",
+};
+
+apiInstance.jumpboxServiceSuspendAccount(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountId** | [**string**] | account_id represents the user\&#39;s account ID | defaults to undefined
+
+
+### Return type
+
+**Jumpboxv3SuspendAccountResponse**
+
+### Authorization
+
+[ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **jumpboxServiceTestUser**
 > Jumpboxv3TestUserResponse jumpboxServiceTestUser(jumpboxv3TestUserRequest)
 
@@ -623,6 +991,87 @@ Name | Type | Description  | Notes
 ### Authorization
 
 [BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **jumpboxServiceUpdateAccount**
+> Jumpboxv3UpdateAccountResponse jumpboxServiceUpdateAccount(jumpboxv3UpdateAccountRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .JumpboxServiceApi(configuration);
+
+let body:.JumpboxServiceApiJumpboxServiceUpdateAccountRequest = {
+  // string | Account id.
+  accountId: "account_id_example",
+  // Jumpboxv3UpdateAccountRequest
+  jumpboxv3UpdateAccountRequest: {
+    accountId: "accountId_example",
+    externalMetadata: {
+      "key": {
+        addOns: {
+          "key": {
+            unit: "unit_example",
+            value: "value_example",
+          },
+        },
+        crn: "crn_example",
+        expirationDate: new Date('1970-01-01T00:00:00.00Z'),
+        instanceId: "instanceId_example",
+        partNumber: "partNumber_example",
+        planId: "planId_example",
+        serviceId: "serviceId_example",
+        subscriptionId: "subscriptionId_example",
+      },
+    },
+    isInactive: true,
+    isReady: true,
+    name: "name_example",
+    partNumber: "partNumber_example",
+    uid: "uid_example",
+  },
+};
+
+apiInstance.jumpboxServiceUpdateAccount(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **jumpboxv3UpdateAccountRequest** | **Jumpboxv3UpdateAccountRequest**|  |
+ **accountId** | [**string**] | Account id. | defaults to undefined
+
+
+### Return type
+
+**Jumpboxv3UpdateAccountResponse**
+
+### Authorization
+
+[ApiKeyAuth](README.md#ApiKeyAuth)
 
 ### HTTP request headers
 

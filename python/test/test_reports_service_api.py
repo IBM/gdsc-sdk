@@ -54,10 +54,24 @@ class TestReportsServiceApi(unittest.TestCase):
         """
         pass
 
+    def test_reports_service_create_control(self) -> None:
+        """Test case for reports_service_create_control
+
+        Summary: Create Control. Description: Create a unique Control.
+        """
+        pass
+
     def test_reports_service_create_fields_by_category(self) -> None:
         """Test case for reports_service_create_fields_by_category
 
         Summary - Create fields by category Description: Cteate category fields based on provided properties.
+        """
+        pass
+
+    def test_reports_service_create_grade(self) -> None:
+        """Test case for reports_service_create_grade
+
+        Summary: Create Grade. Description: Create a unique Grade.
         """
         pass
 
@@ -68,10 +82,38 @@ class TestReportsServiceApi(unittest.TestCase):
         """
         pass
 
+    def test_reports_service_create_measure(self) -> None:
+        """Test case for reports_service_create_measure
+
+        Summary: Create measure. Description: Create a unique measure.
+        """
+        pass
+
+    def test_reports_service_create_metric(self) -> None:
+        """Test case for reports_service_create_metric
+
+        Summary: Create metric. Description: Create a unique metric.
+        """
+        pass
+
+    def test_reports_service_create_program(self) -> None:
+        """Test case for reports_service_create_program
+
+        Summary: Create Program. Description: Create a unique Program.
+        """
+        pass
+
     def test_reports_service_create_report(self) -> None:
         """Test case for reports_service_create_report
 
         Summary: Create report Description: Create custom report based on provided properties.
+        """
+        pass
+
+    def test_reports_service_create_requirement(self) -> None:
+        """Test case for reports_service_create_requirement
+
+        Summary: Create Requirement. Description: Create a unique Requirement.
         """
         pass
 
@@ -110,10 +152,24 @@ class TestReportsServiceApi(unittest.TestCase):
         """
         pass
 
+    def test_reports_service_delete_control(self) -> None:
+        """Test case for reports_service_delete_control
+
+        Summary: Delete Control Description: Delete a Control.
+        """
+        pass
+
     def test_reports_service_delete_fields_by_category(self) -> None:
         """Test case for reports_service_delete_fields_by_category
 
         Summary - Delete fields by category Description: Delete category fields based on provided properties.
+        """
+        pass
+
+    def test_reports_service_delete_grade(self) -> None:
+        """Test case for reports_service_delete_grade
+
+        Summary: Delete Grade Description: Delete a Grade.
         """
         pass
 
@@ -124,10 +180,38 @@ class TestReportsServiceApi(unittest.TestCase):
         """
         pass
 
+    def test_reports_service_delete_measure(self) -> None:
+        """Test case for reports_service_delete_measure
+
+        Summary: Delete measure Description: Delete a measure.
+        """
+        pass
+
+    def test_reports_service_delete_metric(self) -> None:
+        """Test case for reports_service_delete_metric
+
+        Summary: Delete metric Description: Delete a metric.
+        """
+        pass
+
+    def test_reports_service_delete_program(self) -> None:
+        """Test case for reports_service_delete_program
+
+        Summary: Delete Program Description: Delete a Program.
+        """
+        pass
+
     def test_reports_service_delete_report(self) -> None:
         """Test case for reports_service_delete_report
 
         Summary: Delete report Description: Delete a custom report.
+        """
+        pass
+
+    def test_reports_service_delete_requirement(self) -> None:
+        """Test case for reports_service_delete_requirement
+
+        Summary: Delete Requirement Description: Delete a Requirement.
         """
         pass
 
@@ -166,6 +250,13 @@ class TestReportsServiceApi(unittest.TestCase):
         """
         pass
 
+    def test_reports_service_get_controls(self) -> None:
+        """Test case for reports_service_get_controls
+
+        Summary: Get controls Description: Get a list of controls with all data.
+        """
+        pass
+
     def test_reports_service_get_fields_by_categories(self) -> None:
         """Test case for reports_service_get_fields_by_categories
 
@@ -180,10 +271,38 @@ class TestReportsServiceApi(unittest.TestCase):
         """
         pass
 
+    def test_reports_service_get_grades(self) -> None:
+        """Test case for reports_service_get_grades
+
+        Summary: Get grades Description: Get a list of grades with all data.
+        """
+        pass
+
     def test_reports_service_get_joins(self) -> None:
         """Test case for reports_service_get_joins
 
         Summary: Get all joins Description: Get all custom joins.
+        """
+        pass
+
+    def test_reports_service_get_measures(self) -> None:
+        """Test case for reports_service_get_measures
+
+        Summary: Get measures Description: Get a list of measures with all data.
+        """
+        pass
+
+    def test_reports_service_get_metrics(self) -> None:
+        """Test case for reports_service_get_metrics
+
+        Summary: Get metrics Description: Get a list of metrics with all data.
+        """
+        pass
+
+    def test_reports_service_get_programs(self) -> None:
+        """Test case for reports_service_get_programs
+
+        Summary: Get controls Description: Get a list of controls with all data.
         """
         pass
 
@@ -250,6 +369,13 @@ class TestReportsServiceApi(unittest.TestCase):
         """
         pass
 
+    def test_reports_service_get_requirements(self) -> None:
+        """Test case for reports_service_get_requirements
+
+        Summary: Get requirements Description: Get a list of requirements with all data.
+        """
+        pass
+
     def test_reports_service_get_variant(self) -> None:
         """Test case for reports_service_get_variant
 
@@ -275,6 +401,13 @@ class TestReportsServiceApi(unittest.TestCase):
         """Test case for reports_service_partial_report_update
 
         Summary: Partial report update Description: Update a custom report with partial information.
+        """
+        pass
+
+    def test_reports_service_run_grades(self) -> None:
+        """Test case for reports_service_run_grades
+
+        Summary: Refresh metrics via grades. Description: Refresh metrics via grades.
         """
         pass
 
@@ -306,6 +439,20 @@ class TestReportsServiceApi(unittest.TestCase):
         """
         pass
 
+    def test_reports_service_update_control(self) -> None:
+        """Test case for reports_service_update_control
+
+        Summary: Update Control. Description: Update a Control.
+        """
+        pass
+
+    def test_reports_service_update_grade(self) -> None:
+        """Test case for reports_service_update_grade
+
+        Summary: Update Grade. Description: Update a Grade.
+        """
+        pass
+
     def test_reports_service_update_join(self) -> None:
         """Test case for reports_service_update_join
 
@@ -313,10 +460,38 @@ class TestReportsServiceApi(unittest.TestCase):
         """
         pass
 
+    def test_reports_service_update_measure(self) -> None:
+        """Test case for reports_service_update_measure
+
+        Summary: Update measure. Description: Update a measure.
+        """
+        pass
+
+    def test_reports_service_update_metric(self) -> None:
+        """Test case for reports_service_update_metric
+
+        Summary: Update metric. Description: Update a metric.
+        """
+        pass
+
+    def test_reports_service_update_program(self) -> None:
+        """Test case for reports_service_update_program
+
+        Summary: Update Program. Description: Update a Program.
+        """
+        pass
+
     def test_reports_service_update_report(self) -> None:
         """Test case for reports_service_update_report
 
         Summary: Update report Description: Update a custom report.
+        """
+        pass
+
+    def test_reports_service_update_requirement(self) -> None:
+        """Test case for reports_service_update_requirement
+
+        Summary: Update Requirement. Description: Update a Requirement.
         """
         pass
 

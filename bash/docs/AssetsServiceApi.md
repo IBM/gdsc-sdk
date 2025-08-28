@@ -6,7 +6,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**assetsServiceAssetIngestion**](AssetsServiceApi.md#assetsServiceAssetIngestion) | **POST** /api/v3/assets/ingestion | AssetIngestion - Asset Ingestion Api to ingest assets from different applications including asset extensibility assets.
 [**assetsServiceAssetIngestionManualTrigger**](AssetsServiceApi.md#assetsServiceAssetIngestionManualTrigger) | **POST** /api/v3/assets/ingestion/trigger | AssetIngestionManualTrigger - Manual trigger for Scheduled Asset Ingestion of databases.
+[**assetsServiceCancelCSVImport**](AssetsServiceApi.md#assetsServiceCancelCSVImport) | **DELETE** /api/v3/assets/csv/cancel/{csv_id} | CancelCSVImport - Cancel the import of CSV and update the status in import log table
 [**assetsServiceClonePolicy**](AssetsServiceApi.md#assetsServiceClonePolicy) | **POST** /api/v3/assets/policies/{policy_id}/clone | ClonePolicy - Clone a policy.
+[**assetsServiceCompareCSVToExistingAssets**](AssetsServiceApi.md#assetsServiceCompareCSVToExistingAssets) | **GET** /api/v3/assets/csv/compare/{csv_id} | CompareCSVToExistingAssets - Compare CSV with existing assets and return list of assets(existing/to be imported/both) on demand from csv.
 [**assetsServiceCreateUpdatePolicy**](AssetsServiceApi.md#assetsServiceCreateUpdatePolicy) | **POST** /api/v3/assets/policies | CreateUpdatePolicy - Create/update new Policy.
 [**assetsServiceDeleteFilterTemplateForAssets**](AssetsServiceApi.md#assetsServiceDeleteFilterTemplateForAssets) | **DELETE** /api/v3/assets/filters/template/{template_id} | DeleteFilterTemplateForAssets - Deleting a template using TemplateID in manage assets.
 [**assetsServiceDeletePolicies**](AssetsServiceApi.md#assetsServiceDeletePolicies) | **DELETE** /api/v3/assets/policies | DeletePolicies - Delete Policy returns response code and message.
@@ -19,6 +21,7 @@ Method | HTTP request | Description
 [**assetsServiceGetAssetTopology**](AssetsServiceApi.md#assetsServiceGetAssetTopology) | **POST** /api/v3/assets/topology | GetAssetTopology- Get list of topology for a parent asset.
 [**assetsServiceGetFilterTemplateForAssets**](AssetsServiceApi.md#assetsServiceGetFilterTemplateForAssets) | **GET** /api/v3/assets/filters/templates | GetFilterTemplateForAssets - Get list of filters query templates for manage assets.
 [**assetsServiceGetFiltersForAssets**](AssetsServiceApi.md#assetsServiceGetFiltersForAssets) | **GET** /api/v3/assets/filters | GetFiltersForAssets - Get a list of filters category and sub category with all data.
+[**assetsServiceImportCSV**](AssetsServiceApi.md#assetsServiceImportCSV) | **POST** /api/v3/assets/csv/import/{csv_id} | ImportCSV - Start the async asset import from CSV by starting the db procedure and send notification at the end.
 [**assetsServiceListPolicy**](AssetsServiceApi.md#assetsServiceListPolicy) | **GET** /api/v3/assets/policies | ListPolicy - List all policies.
 [**assetsServiceListRule**](AssetsServiceApi.md#assetsServiceListRule) | **GET** /api/v3/assets/policies/{policy_id}/rules | ListRule - List all rules for a policy.
 [**assetsServiceListTagDomains**](AssetsServiceApi.md#assetsServiceListTagDomains) | **GET** /api/v3/assets/tags/categories | ListTagDomains - Get Tag categories by request parameters .
@@ -100,6 +103,39 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
+## assetsServiceCancelCSVImport
+
+CancelCSVImport - Cancel the import of CSV and update the status in import log table
+
+### Example
+
+```bash
+ assetsServiceCancelCSVImport csv_id=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **csvId** | **string** | unique id of the csv | [default to null]
+
+### Return type
+
+**map**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
 ## assetsServiceClonePolicy
 
 ClonePolicy - Clone a policy.
@@ -129,6 +165,45 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## assetsServiceCompareCSVToExistingAssets
+
+CompareCSVToExistingAssets - Compare CSV with existing assets and return list of assets(existing/to be imported/both) on demand from csv.
+
+### Example
+
+```bash
+ assetsServiceCompareCSVToExistingAssets csv_id=value  rows_required=value  page_number=value  page_size=value  template_type=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **csvId** | **string** | unique id of the csv | [default to null]
+ **rowsRequired** | **string** | which rows are required, existing or new or all. | [optional] [default to null]
+ **pageNumber** | **integer** | page number. | [optional] [default to null]
+ **pageSize** | **integer** | page size. | [optional] [default to null]
+ **templateType** | **string** | Asset CSV template type.
+
+ - DATABASE: Template for database | [optional] [default to DATABASE]
+
+### Return type
+
+[**Assetsv3CompareCSVResponse**](Assetsv3CompareCSVResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -183,7 +258,6 @@ DeleteFilterTemplateForAssets - Deleting a template using TemplateID in manage a
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **templateId** | **string** | template id to be deleted | [default to null]
- **assetsv3AssetFilterTemplateRequest** | [**Assetsv3AssetFilterTemplateRequest**](Assetsv3AssetFilterTemplateRequest.md) |  |
 
 ### Return type
 
@@ -195,7 +269,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
+- **Content-Type**: Not Applicable
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -441,7 +515,7 @@ Name | Type | Description  | Notes
  **ip** | **string** | Asset IP. | [optional] [default to null]
  **host** | **string** | Asset Host. | [optional] [default to null]
  **database** | **string** | Database Name. | [optional] [default to null]
- **assetEntityType** | **string** | asset ntity type. | [optional] [default to null]
+ **assetEntityType** | **string** | asset entity type. | [optional] [default to null]
 
 ### Return type
 
@@ -550,6 +624,40 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## assetsServiceImportCSV
+
+ImportCSV - Start the async asset import from CSV by starting the db procedure and send notification at the end.
+
+### Example
+
+```bash
+ assetsServiceImportCSV csv_id=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **csvId** | **string** | unique id of the csv | [default to null]
+ **assetsv3ImportCSVRequest** | [**Assetsv3ImportCSVRequest**](Assetsv3ImportCSVRequest.md) |  |
+
+### Return type
+
+[**Assetsv3ImportCSVResponse**](Assetsv3ImportCSVResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

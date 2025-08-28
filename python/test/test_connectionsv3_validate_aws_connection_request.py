@@ -36,9 +36,9 @@ class TestConnectionsv3ValidateAwsConnectionRequest(unittest.TestCase):
         if include_optional:
             return Connectionsv3ValidateAwsConnectionRequest(
                 access_key = '',
+                bucket_name = '',
                 group_name = '',
                 input_plugin_type = '',
-                log_stream = '',
                 queue_url = '',
                 region = '',
                 secret_key = ''

@@ -20,6 +20,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.ibm.security.guardium.Policybuilderv3ControlFlow;
 import com.ibm.security.guardium.Policybuilderv3PolicyType;
+import com.ibm.security.guardium.Policybuilderv3ProductType;
 import com.ibm.security.guardium.Policybuilderv3Rule;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -128,6 +129,14 @@ public class Policybuilderv3PolicyUpdateTest {
     @Test
     public void policyTypeTest() {
         // TODO: test policyType
+    }
+
+    /**
+     * Test the property 'productId'
+     */
+    @Test
+    public void productIdTest() {
+        // TODO: test productId
     }
 
     /**

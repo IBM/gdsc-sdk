@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **cloud_account_ids** | **List[str]** |  | [optional] 
 **cloud_regions** | **List[str]** |  | [optional] 
 **labels** | **List[str]** |  | [optional] 
-**classification_statuses** | [**List[ClassificationStatus]**](ClassificationStatus.md) |  | [optional] 
+**classification_statuses** | [**List[StoreClassificationStatus]**](StoreClassificationStatus.md) |  | [optional] 
 **sensitivity_tags** | **List[str]** |  | [optional] 
 **sensitivity_categories** | [**List[SensitivityCategory]**](SensitivityCategory.md) |  | [optional] 
 **compliances** | [**List[Compliance]**](Compliance.md) |  | [optional] 

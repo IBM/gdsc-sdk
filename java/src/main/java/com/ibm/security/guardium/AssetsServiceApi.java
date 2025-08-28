@@ -27,11 +27,11 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.ibm.security.guardium.Assetsv3AssetFilterTemplateRequest;
 import com.ibm.security.guardium.Assetsv3AssetIngestionRequest;
 import com.ibm.security.guardium.Assetsv3AssetIngestionResponse;
 import com.ibm.security.guardium.Assetsv3AssetOverviewResponse;
 import com.ibm.security.guardium.Assetsv3ClonePolicyRequest;
+import com.ibm.security.guardium.Assetsv3CompareCSVResponse;
 import com.ibm.security.guardium.Assetsv3CreateUpdatePolicyRequest;
 import com.ibm.security.guardium.Assetsv3CreateUpdatePolicyResponse;
 import com.ibm.security.guardium.Assetsv3FetchAssetChangeLogRequest;
@@ -45,6 +45,8 @@ import com.ibm.security.guardium.Assetsv3GetAssetTopologyRequest;
 import com.ibm.security.guardium.Assetsv3GetAssetTopologyResponse;
 import com.ibm.security.guardium.Assetsv3GetFilterTemplateResponse;
 import com.ibm.security.guardium.Assetsv3GetFiltersDataResponse;
+import com.ibm.security.guardium.Assetsv3ImportCSVRequest;
+import com.ibm.security.guardium.Assetsv3ImportCSVResponse;
 import com.ibm.security.guardium.Assetsv3ListPolicyResponse;
 import com.ibm.security.guardium.Assetsv3ListRuleResponse;
 import com.ibm.security.guardium.Assetsv3ListTagDomainsResponse;
@@ -358,6 +360,133 @@ public class AssetsServiceApi {
         return localVarCall;
     }
     /**
+     * Build call for assetsServiceCancelCSVImport
+     * @param csvId unique id of the csv (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call assetsServiceCancelCSVImportCall(String csvId, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/assets/csv/cancel/{csv_id}"
+            .replace("{" + "csv_id" + "}", localVarApiClient.escapeString(csvId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call assetsServiceCancelCSVImportValidateBeforeCall(String csvId, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'csvId' is set
+        if (csvId == null) {
+            throw new ApiException("Missing the required parameter 'csvId' when calling assetsServiceCancelCSVImport(Async)");
+        }
+
+        return assetsServiceCancelCSVImportCall(csvId, _callback);
+
+    }
+
+    /**
+     * CancelCSVImport - Cancel the import of CSV and update the status in import log table
+     * 
+     * @param csvId unique id of the csv (required)
+     * @return Object
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Object assetsServiceCancelCSVImport(String csvId) throws ApiException {
+        ApiResponse<Object> localVarResp = assetsServiceCancelCSVImportWithHttpInfo(csvId);
+        return localVarResp.getData();
+    }
+
+    /**
+     * CancelCSVImport - Cancel the import of CSV and update the status in import log table
+     * 
+     * @param csvId unique id of the csv (required)
+     * @return ApiResponse&lt;Object&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Object> assetsServiceCancelCSVImportWithHttpInfo(String csvId) throws ApiException {
+        okhttp3.Call localVarCall = assetsServiceCancelCSVImportValidateBeforeCall(csvId, null);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * CancelCSVImport - Cancel the import of CSV and update the status in import log table (asynchronously)
+     * 
+     * @param csvId unique id of the csv (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call assetsServiceCancelCSVImportAsync(String csvId, final ApiCallback<Object> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = assetsServiceCancelCSVImportValidateBeforeCall(csvId, _callback);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for assetsServiceClonePolicy
      * @param policyId Policy id that needs to be cloned. (required)
      * @param assetsv3ClonePolicyRequest  (required)
@@ -495,6 +624,165 @@ public class AssetsServiceApi {
         return localVarCall;
     }
     /**
+     * Build call for assetsServiceCompareCSVToExistingAssets
+     * @param csvId unique id of the csv (required)
+     * @param rowsRequired which rows are required, existing or new or all. (optional)
+     * @param pageNumber page number. (optional)
+     * @param pageSize page size. (optional)
+     * @param templateType Asset CSV template type.   - DATABASE: Template for database (optional, default to DATABASE)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call assetsServiceCompareCSVToExistingAssetsCall(String csvId, String rowsRequired, Long pageNumber, Long pageSize, String templateType, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/assets/csv/compare/{csv_id}"
+            .replace("{" + "csv_id" + "}", localVarApiClient.escapeString(csvId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (rowsRequired != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("rows_required", rowsRequired));
+        }
+
+        if (pageNumber != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("page_number", pageNumber));
+        }
+
+        if (pageSize != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("page_size", pageSize));
+        }
+
+        if (templateType != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("template_type", templateType));
+        }
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call assetsServiceCompareCSVToExistingAssetsValidateBeforeCall(String csvId, String rowsRequired, Long pageNumber, Long pageSize, String templateType, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'csvId' is set
+        if (csvId == null) {
+            throw new ApiException("Missing the required parameter 'csvId' when calling assetsServiceCompareCSVToExistingAssets(Async)");
+        }
+
+        return assetsServiceCompareCSVToExistingAssetsCall(csvId, rowsRequired, pageNumber, pageSize, templateType, _callback);
+
+    }
+
+    /**
+     * CompareCSVToExistingAssets - Compare CSV with existing assets and return list of assets(existing/to be imported/both) on demand from csv.
+     * 
+     * @param csvId unique id of the csv (required)
+     * @param rowsRequired which rows are required, existing or new or all. (optional)
+     * @param pageNumber page number. (optional)
+     * @param pageSize page size. (optional)
+     * @param templateType Asset CSV template type.   - DATABASE: Template for database (optional, default to DATABASE)
+     * @return Assetsv3CompareCSVResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Assetsv3CompareCSVResponse assetsServiceCompareCSVToExistingAssets(String csvId, String rowsRequired, Long pageNumber, Long pageSize, String templateType) throws ApiException {
+        ApiResponse<Assetsv3CompareCSVResponse> localVarResp = assetsServiceCompareCSVToExistingAssetsWithHttpInfo(csvId, rowsRequired, pageNumber, pageSize, templateType);
+        return localVarResp.getData();
+    }
+
+    /**
+     * CompareCSVToExistingAssets - Compare CSV with existing assets and return list of assets(existing/to be imported/both) on demand from csv.
+     * 
+     * @param csvId unique id of the csv (required)
+     * @param rowsRequired which rows are required, existing or new or all. (optional)
+     * @param pageNumber page number. (optional)
+     * @param pageSize page size. (optional)
+     * @param templateType Asset CSV template type.   - DATABASE: Template for database (optional, default to DATABASE)
+     * @return ApiResponse&lt;Assetsv3CompareCSVResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Assetsv3CompareCSVResponse> assetsServiceCompareCSVToExistingAssetsWithHttpInfo(String csvId, String rowsRequired, Long pageNumber, Long pageSize, String templateType) throws ApiException {
+        okhttp3.Call localVarCall = assetsServiceCompareCSVToExistingAssetsValidateBeforeCall(csvId, rowsRequired, pageNumber, pageSize, templateType, null);
+        Type localVarReturnType = new TypeToken<Assetsv3CompareCSVResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * CompareCSVToExistingAssets - Compare CSV with existing assets and return list of assets(existing/to be imported/both) on demand from csv. (asynchronously)
+     * 
+     * @param csvId unique id of the csv (required)
+     * @param rowsRequired which rows are required, existing or new or all. (optional)
+     * @param pageNumber page number. (optional)
+     * @param pageSize page size. (optional)
+     * @param templateType Asset CSV template type.   - DATABASE: Template for database (optional, default to DATABASE)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call assetsServiceCompareCSVToExistingAssetsAsync(String csvId, String rowsRequired, Long pageNumber, Long pageSize, String templateType, final ApiCallback<Assetsv3CompareCSVResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = assetsServiceCompareCSVToExistingAssetsValidateBeforeCall(csvId, rowsRequired, pageNumber, pageSize, templateType, _callback);
+        Type localVarReturnType = new TypeToken<Assetsv3CompareCSVResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for assetsServiceCreateUpdatePolicy
      * @param assetsv3CreateUpdatePolicyRequest  (required)
      * @param _callback Callback for upload/download progress
@@ -624,7 +912,6 @@ public class AssetsServiceApi {
     /**
      * Build call for assetsServiceDeleteFilterTemplateForAssets
      * @param templateId template id to be deleted (required)
-     * @param assetsv3AssetFilterTemplateRequest  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -635,7 +922,7 @@ public class AssetsServiceApi {
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceDeleteFilterTemplateForAssetsCall(String templateId, Assetsv3AssetFilterTemplateRequest assetsv3AssetFilterTemplateRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call assetsServiceDeleteFilterTemplateForAssetsCall(String templateId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -649,7 +936,7 @@ public class AssetsServiceApi {
             basePath = null;
         }
 
-        Object localVarPostBody = assetsv3AssetFilterTemplateRequest;
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/api/v3/assets/filters/template/{template_id}"
@@ -670,7 +957,6 @@ public class AssetsServiceApi {
         }
 
         final String[] localVarContentTypes = {
-            "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -682,18 +968,13 @@ public class AssetsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call assetsServiceDeleteFilterTemplateForAssetsValidateBeforeCall(String templateId, Assetsv3AssetFilterTemplateRequest assetsv3AssetFilterTemplateRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call assetsServiceDeleteFilterTemplateForAssetsValidateBeforeCall(String templateId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'templateId' is set
         if (templateId == null) {
             throw new ApiException("Missing the required parameter 'templateId' when calling assetsServiceDeleteFilterTemplateForAssets(Async)");
         }
 
-        // verify the required parameter 'assetsv3AssetFilterTemplateRequest' is set
-        if (assetsv3AssetFilterTemplateRequest == null) {
-            throw new ApiException("Missing the required parameter 'assetsv3AssetFilterTemplateRequest' when calling assetsServiceDeleteFilterTemplateForAssets(Async)");
-        }
-
-        return assetsServiceDeleteFilterTemplateForAssetsCall(templateId, assetsv3AssetFilterTemplateRequest, _callback);
+        return assetsServiceDeleteFilterTemplateForAssetsCall(templateId, _callback);
 
     }
 
@@ -701,7 +982,6 @@ public class AssetsServiceApi {
      * DeleteFilterTemplateForAssets - Deleting a template using TemplateID in manage assets.
      * 
      * @param templateId template id to be deleted (required)
-     * @param assetsv3AssetFilterTemplateRequest  (required)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -711,8 +991,8 @@ public class AssetsServiceApi {
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Object assetsServiceDeleteFilterTemplateForAssets(String templateId, Assetsv3AssetFilterTemplateRequest assetsv3AssetFilterTemplateRequest) throws ApiException {
-        ApiResponse<Object> localVarResp = assetsServiceDeleteFilterTemplateForAssetsWithHttpInfo(templateId, assetsv3AssetFilterTemplateRequest);
+    public Object assetsServiceDeleteFilterTemplateForAssets(String templateId) throws ApiException {
+        ApiResponse<Object> localVarResp = assetsServiceDeleteFilterTemplateForAssetsWithHttpInfo(templateId);
         return localVarResp.getData();
     }
 
@@ -720,7 +1000,6 @@ public class AssetsServiceApi {
      * DeleteFilterTemplateForAssets - Deleting a template using TemplateID in manage assets.
      * 
      * @param templateId template id to be deleted (required)
-     * @param assetsv3AssetFilterTemplateRequest  (required)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -730,8 +1009,8 @@ public class AssetsServiceApi {
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> assetsServiceDeleteFilterTemplateForAssetsWithHttpInfo(String templateId, Assetsv3AssetFilterTemplateRequest assetsv3AssetFilterTemplateRequest) throws ApiException {
-        okhttp3.Call localVarCall = assetsServiceDeleteFilterTemplateForAssetsValidateBeforeCall(templateId, assetsv3AssetFilterTemplateRequest, null);
+    public ApiResponse<Object> assetsServiceDeleteFilterTemplateForAssetsWithHttpInfo(String templateId) throws ApiException {
+        okhttp3.Call localVarCall = assetsServiceDeleteFilterTemplateForAssetsValidateBeforeCall(templateId, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -740,7 +1019,6 @@ public class AssetsServiceApi {
      * DeleteFilterTemplateForAssets - Deleting a template using TemplateID in manage assets. (asynchronously)
      * 
      * @param templateId template id to be deleted (required)
-     * @param assetsv3AssetFilterTemplateRequest  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -751,9 +1029,9 @@ public class AssetsServiceApi {
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceDeleteFilterTemplateForAssetsAsync(String templateId, Assetsv3AssetFilterTemplateRequest assetsv3AssetFilterTemplateRequest, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call assetsServiceDeleteFilterTemplateForAssetsAsync(String templateId, final ApiCallback<Object> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = assetsServiceDeleteFilterTemplateForAssetsValidateBeforeCall(templateId, assetsv3AssetFilterTemplateRequest, _callback);
+        okhttp3.Call localVarCall = assetsServiceDeleteFilterTemplateForAssetsValidateBeforeCall(templateId, _callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -1643,7 +1921,7 @@ public class AssetsServiceApi {
      * @param ip Asset IP. (optional)
      * @param host Asset Host. (optional)
      * @param database Database Name. (optional)
-     * @param assetEntityType asset ntity type. (optional)
+     * @param assetEntityType asset entity type. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1746,7 +2024,7 @@ public class AssetsServiceApi {
      * @param ip Asset IP. (optional)
      * @param host Asset Host. (optional)
      * @param database Database Name. (optional)
-     * @param assetEntityType asset ntity type. (optional)
+     * @param assetEntityType asset entity type. (optional)
      * @return Assetsv3AssetOverviewResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1771,7 +2049,7 @@ public class AssetsServiceApi {
      * @param ip Asset IP. (optional)
      * @param host Asset Host. (optional)
      * @param database Database Name. (optional)
-     * @param assetEntityType asset ntity type. (optional)
+     * @param assetEntityType asset entity type. (optional)
      * @return ApiResponse&lt;Assetsv3AssetOverviewResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1797,7 +2075,7 @@ public class AssetsServiceApi {
      * @param ip Asset IP. (optional)
      * @param host Asset Host. (optional)
      * @param database Database Name. (optional)
-     * @param assetEntityType asset ntity type. (optional)
+     * @param assetEntityType asset entity type. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -2181,6 +2459,143 @@ public class AssetsServiceApi {
 
         okhttp3.Call localVarCall = assetsServiceGetFiltersForAssetsValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<Assetsv3GetFiltersDataResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for assetsServiceImportCSV
+     * @param csvId unique id of the csv (required)
+     * @param assetsv3ImportCSVRequest  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call assetsServiceImportCSVCall(String csvId, Assetsv3ImportCSVRequest assetsv3ImportCSVRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = assetsv3ImportCSVRequest;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/assets/csv/import/{csv_id}"
+            .replace("{" + "csv_id" + "}", localVarApiClient.escapeString(csvId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call assetsServiceImportCSVValidateBeforeCall(String csvId, Assetsv3ImportCSVRequest assetsv3ImportCSVRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'csvId' is set
+        if (csvId == null) {
+            throw new ApiException("Missing the required parameter 'csvId' when calling assetsServiceImportCSV(Async)");
+        }
+
+        // verify the required parameter 'assetsv3ImportCSVRequest' is set
+        if (assetsv3ImportCSVRequest == null) {
+            throw new ApiException("Missing the required parameter 'assetsv3ImportCSVRequest' when calling assetsServiceImportCSV(Async)");
+        }
+
+        return assetsServiceImportCSVCall(csvId, assetsv3ImportCSVRequest, _callback);
+
+    }
+
+    /**
+     * ImportCSV - Start the async asset import from CSV by starting the db procedure and send notification at the end.
+     * 
+     * @param csvId unique id of the csv (required)
+     * @param assetsv3ImportCSVRequest  (required)
+     * @return Assetsv3ImportCSVResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Assetsv3ImportCSVResponse assetsServiceImportCSV(String csvId, Assetsv3ImportCSVRequest assetsv3ImportCSVRequest) throws ApiException {
+        ApiResponse<Assetsv3ImportCSVResponse> localVarResp = assetsServiceImportCSVWithHttpInfo(csvId, assetsv3ImportCSVRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * ImportCSV - Start the async asset import from CSV by starting the db procedure and send notification at the end.
+     * 
+     * @param csvId unique id of the csv (required)
+     * @param assetsv3ImportCSVRequest  (required)
+     * @return ApiResponse&lt;Assetsv3ImportCSVResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Assetsv3ImportCSVResponse> assetsServiceImportCSVWithHttpInfo(String csvId, Assetsv3ImportCSVRequest assetsv3ImportCSVRequest) throws ApiException {
+        okhttp3.Call localVarCall = assetsServiceImportCSVValidateBeforeCall(csvId, assetsv3ImportCSVRequest, null);
+        Type localVarReturnType = new TypeToken<Assetsv3ImportCSVResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * ImportCSV - Start the async asset import from CSV by starting the db procedure and send notification at the end. (asynchronously)
+     * 
+     * @param csvId unique id of the csv (required)
+     * @param assetsv3ImportCSVRequest  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call assetsServiceImportCSVAsync(String csvId, Assetsv3ImportCSVRequest assetsv3ImportCSVRequest, final ApiCallback<Assetsv3ImportCSVResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = assetsServiceImportCSVValidateBeforeCall(csvId, assetsv3ImportCSVRequest, _callback);
+        Type localVarReturnType = new TypeToken<Assetsv3ImportCSVResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

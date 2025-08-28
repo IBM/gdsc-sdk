@@ -27,8 +27,12 @@ class Policybuilderv3ActivationStatus(str, Enum):
     allowed enum values
     """
     NOT_ACTIVATED = 'NOT_ACTIVATED'
-    ACTIVATED = 'ACTIVATED'
-    ACTIVATED_WITH_ISSUES = 'ACTIVATED_WITH_ISSUES'
+    ACTIVE = 'ACTIVE'
+    ISSUES = 'ISSUES'
+    INACTIVE = 'INACTIVE'
+    IN_PROGRESS = 'IN_PROGRESS'
+    FAILURE = 'FAILURE'
+    TERMINATED = 'TERMINATED'
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:

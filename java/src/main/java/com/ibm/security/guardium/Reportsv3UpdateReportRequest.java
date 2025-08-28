@@ -51,7 +51,7 @@ import com.ibm.security.JSON;
 /**
  * UpdateReportRequest is the argument type used to update a report using the UpdateReport() api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
 public class Reportsv3UpdateReportRequest {
   public static final String SERIALIZED_NAME_CHART_SETTINGS = "chart_settings";
   @SerializedName(SERIALIZED_NAME_CHART_SETTINGS)

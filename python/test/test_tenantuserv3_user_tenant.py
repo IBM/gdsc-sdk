@@ -60,6 +60,7 @@ class TestTenantuserv3UserTenant(unittest.TestCase):
                     settings = {
                         'key' : ''
                         }, 
+                    status = '', 
                     tenant_capabilities = {
                         'key' : True
                         }, 
@@ -91,6 +92,7 @@ class TestTenantuserv3UserTenant(unittest.TestCase):
                         settings = {
                             'key' : ''
                             }, 
+                        status = '', 
                         tenant_capabilities = {
                             'key' : True
                             }, 

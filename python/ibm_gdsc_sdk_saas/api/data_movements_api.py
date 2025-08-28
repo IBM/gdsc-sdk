@@ -297,7 +297,7 @@ class DataMovementsApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/dataMovements/actualFlows/{id}',
+            resource_path='/api/v2/dspm/dataMovements/actualFlows/{id}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -560,7 +560,7 @@ class DataMovementsApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/dataMovements/actualFlows/summary',
+            resource_path='/api/v2/dspm/dataMovements/actualFlows/summary',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -821,7 +821,7 @@ class DataMovementsApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/dataMovements/potentialFlows/{flowId}',
+            resource_path='/api/v2/dspm/dataMovements/potentialFlows/{flowId}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1082,7 +1082,7 @@ class DataMovementsApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/dataMovements/potentialFlows/paths/{flowPathId}',
+            resource_path='/api/v2/dspm/dataMovements/potentialFlows/paths/{flowPathId}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1345,7 +1345,7 @@ class DataMovementsApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/dataMovements/potentialFlows/summary',
+            resource_path='/api/v2/dspm/dataMovements/potentialFlows/summary',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1659,7 +1659,7 @@ class DataMovementsApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/dataMovements/actualFlowPaths',
+            resource_path='/api/v2/dspm/dataMovements/actualFlowPaths',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1973,7 +1973,7 @@ class DataMovementsApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/dataMovements/actualFlows',
+            resource_path='/api/v2/dspm/dataMovements/actualFlows',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -2270,7 +2270,7 @@ class DataMovementsApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/dataMovements/potentialFlows',
+            resource_path='/api/v2/dspm/dataMovements/potentialFlows',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -2567,7 +2567,7 @@ class DataMovementsApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/dataMovements/potentialFlows/paths',
+            resource_path='/api/v2/dspm/dataMovements/potentialFlows/paths',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,

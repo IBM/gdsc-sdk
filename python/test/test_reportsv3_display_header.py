@@ -35,6 +35,7 @@ class TestReportsv3DisplayHeader(unittest.TestCase):
         model = Reportsv3DisplayHeader()
         if include_optional:
             return Reportsv3DisplayHeader(
+                aggregation_type = 'UNDEFINED_AGG_TYPE',
                 field_name = ibm_gdsc_sdk_saas.models.reportsv3_field_name.reportsv3FieldName(
                     customized_value = '', 
                     nls_key = '', 
