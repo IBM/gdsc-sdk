@@ -46,6 +46,14 @@ public class Connectionsv3ValidateAwsConnectionRequestTest {
     }
 
     /**
+     * Test the property 'bucketName'
+     */
+    @Test
+    public void bucketNameTest() {
+        // TODO: test bucketName
+    }
+
+    /**
      * Test the property 'groupName'
      */
     @Test
@@ -59,14 +67,6 @@ public class Connectionsv3ValidateAwsConnectionRequestTest {
     @Test
     public void inputPluginTypeTest() {
         // TODO: test inputPluginType
-    }
-
-    /**
-     * Test the property 'logStream'
-     */
-    @Test
-    public void logStreamTest() {
-        // TODO: test logStream
     }
 
     /**

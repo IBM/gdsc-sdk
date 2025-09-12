@@ -6,9 +6,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **access_key** | **str** |  | [optional] 
+**bucket_name** | **str** |  | [optional] 
 **group_name** | **str** |  | [optional] 
-**input_plugin_type** | **str** | aws connection input type as Cloudwatch, SQS, ... | [optional] 
-**log_stream** | **str** |  | [optional] 
+**input_plugin_type** | **str** | aws connection input type as Cloudwatch, SQS, S3, ... | [optional] 
 **queue_url** | **str** |  | [optional] 
 **region** | **str** |  | [optional] 
 **secret_key** | **str** |  | [optional] 

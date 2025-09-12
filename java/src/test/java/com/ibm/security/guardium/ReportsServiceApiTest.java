@@ -22,29 +22,58 @@ import com.ibm.security.guardium.Reportsv3CreateChartTemplatev2Request;
 import com.ibm.security.guardium.Reportsv3CreateChartTemplatev2Response;
 import com.ibm.security.guardium.Reportsv3CreateChartv2Request;
 import com.ibm.security.guardium.Reportsv3CreateChartv2Response;
+import com.ibm.security.guardium.Reportsv3CreateControlRequest;
+import com.ibm.security.guardium.Reportsv3CreateControlResponse;
 import com.ibm.security.guardium.Reportsv3CreateFieldsByCategoryRequest;
 import com.ibm.security.guardium.Reportsv3CreateFieldsByCategoryResponse;
+import com.ibm.security.guardium.Reportsv3CreateGradeRequest;
+import com.ibm.security.guardium.Reportsv3CreateGradeResponse;
 import com.ibm.security.guardium.Reportsv3CreateJoinRequest;
 import com.ibm.security.guardium.Reportsv3CreateJoinResponse;
+import com.ibm.security.guardium.Reportsv3CreateMeasureRequest;
+import com.ibm.security.guardium.Reportsv3CreateMeasureResponse;
+import com.ibm.security.guardium.Reportsv3CreateMetricRequest;
+import com.ibm.security.guardium.Reportsv3CreateMetricResponse;
+import com.ibm.security.guardium.Reportsv3CreateProgramRequest;
+import com.ibm.security.guardium.Reportsv3CreateProgramResponse;
 import com.ibm.security.guardium.Reportsv3CreateReportRequest;
 import com.ibm.security.guardium.Reportsv3CreateReportResponse;
+import com.ibm.security.guardium.Reportsv3CreateRequirementRequest;
+import com.ibm.security.guardium.Reportsv3CreateRequirementResponse;
 import com.ibm.security.guardium.Reportsv3CreateVariantRequest;
 import com.ibm.security.guardium.Reportsv3CreateVariantResponse;
 import com.ibm.security.guardium.Reportsv3DeleteCategoryResponse;
 import com.ibm.security.guardium.Reportsv3DeleteChartResponse;
 import com.ibm.security.guardium.Reportsv3DeleteChartTemplatev2Response;
 import com.ibm.security.guardium.Reportsv3DeleteChartv2Response;
+import com.ibm.security.guardium.Reportsv3DeleteControlRequest;
+import com.ibm.security.guardium.Reportsv3DeleteControlResponse;
 import com.ibm.security.guardium.Reportsv3DeleteFieldsByCategoryResponse;
+import com.ibm.security.guardium.Reportsv3DeleteGradeRequest;
+import com.ibm.security.guardium.Reportsv3DeleteGradeResponse;
 import com.ibm.security.guardium.Reportsv3DeleteJoinResponse;
+import com.ibm.security.guardium.Reportsv3DeleteMeasureRequest;
+import com.ibm.security.guardium.Reportsv3DeleteMeasureResponse;
+import com.ibm.security.guardium.Reportsv3DeleteMetricRequest;
+import com.ibm.security.guardium.Reportsv3DeleteMetricResponse;
+import com.ibm.security.guardium.Reportsv3DeleteProgramRequest;
+import com.ibm.security.guardium.Reportsv3DeleteProgramResponse;
 import com.ibm.security.guardium.Reportsv3DeleteReportResponse;
+import com.ibm.security.guardium.Reportsv3DeleteRequirementRequest;
+import com.ibm.security.guardium.Reportsv3DeleteRequirementResponse;
 import com.ibm.security.guardium.Reportsv3DeleteVariantResponse;
 import com.ibm.security.guardium.Reportsv3GetCategoriesResponse;
 import com.ibm.security.guardium.Reportsv3GetChartSettingsResponse;
 import com.ibm.security.guardium.Reportsv3GetChartSettingsv2Response;
 import com.ibm.security.guardium.Reportsv3GetChartTemplatesv2Response;
+import com.ibm.security.guardium.Reportsv3GetControlsResponse;
 import com.ibm.security.guardium.Reportsv3GetFieldsByCategoriesResponse;
 import com.ibm.security.guardium.Reportsv3GetFieldsByCategoryResponse;
+import com.ibm.security.guardium.Reportsv3GetGradesResponse;
 import com.ibm.security.guardium.Reportsv3GetJoinsResponse;
+import com.ibm.security.guardium.Reportsv3GetMeasuresResponse;
+import com.ibm.security.guardium.Reportsv3GetMetricsResponse;
+import com.ibm.security.guardium.Reportsv3GetProgramsResponse;
 import com.ibm.security.guardium.Reportsv3GetQueryByReportDefinitionRequest;
 import com.ibm.security.guardium.Reportsv3GetQueryByReportIDRequest;
 import com.ibm.security.guardium.Reportsv3GetReportDefinitionResponse;
@@ -55,12 +84,15 @@ import com.ibm.security.guardium.Reportsv3GetReportTimestampHeaderResponse;
 import com.ibm.security.guardium.Reportsv3GetReportsForJoinResponse;
 import com.ibm.security.guardium.Reportsv3GetReportsResponse;
 import com.ibm.security.guardium.Reportsv3GetReportsTagsResponse;
+import com.ibm.security.guardium.Reportsv3GetRequirementsResponse;
 import com.ibm.security.guardium.Reportsv3GetVariantResponse;
 import com.ibm.security.guardium.Reportsv3GetVariantsResponse;
 import com.ibm.security.guardium.Reportsv3PartialChartUpdateRequest;
 import com.ibm.security.guardium.Reportsv3PartialChartUpdateResponse;
 import com.ibm.security.guardium.Reportsv3PartialReportUpdateRequest;
 import com.ibm.security.guardium.Reportsv3PartialReportUpdateResponse;
+import com.ibm.security.guardium.Reportsv3RunGradesRequest;
+import com.ibm.security.guardium.Reportsv3RunGradesResponse;
 import com.ibm.security.guardium.Reportsv3RunReportResponse;
 import com.ibm.security.guardium.Reportsv3RunVariantOperationRequest;
 import com.ibm.security.guardium.Reportsv3RunVariantOperationResponse;
@@ -69,10 +101,22 @@ import com.ibm.security.guardium.Reportsv3UpdateChartRequest;
 import com.ibm.security.guardium.Reportsv3UpdateChartResponse;
 import com.ibm.security.guardium.Reportsv3UpdateChartv2Request;
 import com.ibm.security.guardium.Reportsv3UpdateChartv2Response;
+import com.ibm.security.guardium.Reportsv3UpdateControlRequest;
+import com.ibm.security.guardium.Reportsv3UpdateControlResponse;
+import com.ibm.security.guardium.Reportsv3UpdateGradeRequest;
+import com.ibm.security.guardium.Reportsv3UpdateGradeResponse;
 import com.ibm.security.guardium.Reportsv3UpdateJoinRequest;
 import com.ibm.security.guardium.Reportsv3UpdateJoinResponse;
+import com.ibm.security.guardium.Reportsv3UpdateMeasureRequest;
+import com.ibm.security.guardium.Reportsv3UpdateMeasureResponse;
+import com.ibm.security.guardium.Reportsv3UpdateMetricRequest;
+import com.ibm.security.guardium.Reportsv3UpdateMetricResponse;
+import com.ibm.security.guardium.Reportsv3UpdateProgramRequest;
+import com.ibm.security.guardium.Reportsv3UpdateProgramResponse;
 import com.ibm.security.guardium.Reportsv3UpdateReportRequest;
 import com.ibm.security.guardium.Reportsv3UpdateReportResponse;
+import com.ibm.security.guardium.Reportsv3UpdateRequirementRequest;
+import com.ibm.security.guardium.Reportsv3UpdateRequirementResponse;
 import com.ibm.security.guardium.Reportsv3UpdateVariantOverrideRequest;
 import com.ibm.security.guardium.Reportsv3UpdateVariantOverrideResponse;
 import com.ibm.security.guardium.RuntimeError;
@@ -141,6 +185,18 @@ public class ReportsServiceApiTest {
     }
 
     /**
+     * Summary: Create Control. Description: Create a unique Control.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void reportsServiceCreateControlTest() throws ApiException {
+        Reportsv3CreateControlRequest reportsv3CreateControlRequest = null;
+        Reportsv3CreateControlResponse response = api.reportsServiceCreateControl(reportsv3CreateControlRequest);
+        // TODO: test validations
+    }
+
+    /**
      * Summary - Create fields by category Description: Cteate category fields based on provided properties.
      *
      * @throws ApiException if the Api call fails
@@ -149,6 +205,18 @@ public class ReportsServiceApiTest {
     public void reportsServiceCreateFieldsByCategoryTest() throws ApiException {
         Reportsv3CreateFieldsByCategoryRequest reportsv3CreateFieldsByCategoryRequest = null;
         Reportsv3CreateFieldsByCategoryResponse response = api.reportsServiceCreateFieldsByCategory(reportsv3CreateFieldsByCategoryRequest);
+        // TODO: test validations
+    }
+
+    /**
+     * Summary: Create Grade. Description: Create a unique Grade.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void reportsServiceCreateGradeTest() throws ApiException {
+        Reportsv3CreateGradeRequest reportsv3CreateGradeRequest = null;
+        Reportsv3CreateGradeResponse response = api.reportsServiceCreateGrade(reportsv3CreateGradeRequest);
         // TODO: test validations
     }
 
@@ -165,6 +233,42 @@ public class ReportsServiceApiTest {
     }
 
     /**
+     * Summary: Create measure. Description: Create a unique measure.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void reportsServiceCreateMeasureTest() throws ApiException {
+        Reportsv3CreateMeasureRequest reportsv3CreateMeasureRequest = null;
+        Reportsv3CreateMeasureResponse response = api.reportsServiceCreateMeasure(reportsv3CreateMeasureRequest);
+        // TODO: test validations
+    }
+
+    /**
+     * Summary: Create metric. Description: Create a unique metric.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void reportsServiceCreateMetricTest() throws ApiException {
+        Reportsv3CreateMetricRequest reportsv3CreateMetricRequest = null;
+        Reportsv3CreateMetricResponse response = api.reportsServiceCreateMetric(reportsv3CreateMetricRequest);
+        // TODO: test validations
+    }
+
+    /**
+     * Summary: Create Program. Description: Create a unique Program.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void reportsServiceCreateProgramTest() throws ApiException {
+        Reportsv3CreateProgramRequest reportsv3CreateProgramRequest = null;
+        Reportsv3CreateProgramResponse response = api.reportsServiceCreateProgram(reportsv3CreateProgramRequest);
+        // TODO: test validations
+    }
+
+    /**
      * Summary: Create report Description: Create custom report based on provided properties.
      *
      * @throws ApiException if the Api call fails
@@ -173,6 +277,18 @@ public class ReportsServiceApiTest {
     public void reportsServiceCreateReportTest() throws ApiException {
         Reportsv3CreateReportRequest reportsv3CreateReportRequest = null;
         Reportsv3CreateReportResponse response = api.reportsServiceCreateReport(reportsv3CreateReportRequest);
+        // TODO: test validations
+    }
+
+    /**
+     * Summary: Create Requirement. Description: Create a unique Requirement.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void reportsServiceCreateRequirementTest() throws ApiException {
+        Reportsv3CreateRequirementRequest reportsv3CreateRequirementRequest = null;
+        Reportsv3CreateRequirementResponse response = api.reportsServiceCreateRequirement(reportsv3CreateRequirementRequest);
         // TODO: test validations
     }
 
@@ -238,6 +354,19 @@ public class ReportsServiceApiTest {
     }
 
     /**
+     * Summary: Delete Control Description: Delete a Control.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void reportsServiceDeleteControlTest() throws ApiException {
+        Integer controlId = null;
+        Reportsv3DeleteControlRequest reportsv3DeleteControlRequest = null;
+        Reportsv3DeleteControlResponse response = api.reportsServiceDeleteControl(controlId, reportsv3DeleteControlRequest);
+        // TODO: test validations
+    }
+
+    /**
      * Summary - Delete fields by category Description: Delete category fields based on provided properties.
      *
      * @throws ApiException if the Api call fails
@@ -247,6 +376,19 @@ public class ReportsServiceApiTest {
         List<String> headerIds = null;
         String tableName = null;
         Reportsv3DeleteFieldsByCategoryResponse response = api.reportsServiceDeleteFieldsByCategory(headerIds, tableName);
+        // TODO: test validations
+    }
+
+    /**
+     * Summary: Delete Grade Description: Delete a Grade.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void reportsServiceDeleteGradeTest() throws ApiException {
+        Integer gradeId = null;
+        Reportsv3DeleteGradeRequest reportsv3DeleteGradeRequest = null;
+        Reportsv3DeleteGradeResponse response = api.reportsServiceDeleteGrade(gradeId, reportsv3DeleteGradeRequest);
         // TODO: test validations
     }
 
@@ -263,6 +405,45 @@ public class ReportsServiceApiTest {
     }
 
     /**
+     * Summary: Delete measure Description: Delete a measure.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void reportsServiceDeleteMeasureTest() throws ApiException {
+        Integer measureId = null;
+        Reportsv3DeleteMeasureRequest reportsv3DeleteMeasureRequest = null;
+        Reportsv3DeleteMeasureResponse response = api.reportsServiceDeleteMeasure(measureId, reportsv3DeleteMeasureRequest);
+        // TODO: test validations
+    }
+
+    /**
+     * Summary: Delete metric Description: Delete a metric.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void reportsServiceDeleteMetricTest() throws ApiException {
+        Integer metricId = null;
+        Reportsv3DeleteMetricRequest reportsv3DeleteMetricRequest = null;
+        Reportsv3DeleteMetricResponse response = api.reportsServiceDeleteMetric(metricId, reportsv3DeleteMetricRequest);
+        // TODO: test validations
+    }
+
+    /**
+     * Summary: Delete Program Description: Delete a Program.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void reportsServiceDeleteProgramTest() throws ApiException {
+        Integer programId = null;
+        Reportsv3DeleteProgramRequest reportsv3DeleteProgramRequest = null;
+        Reportsv3DeleteProgramResponse response = api.reportsServiceDeleteProgram(programId, reportsv3DeleteProgramRequest);
+        // TODO: test validations
+    }
+
+    /**
      * Summary: Delete report Description: Delete a custom report.
      *
      * @throws ApiException if the Api call fails
@@ -271,6 +452,19 @@ public class ReportsServiceApiTest {
     public void reportsServiceDeleteReportTest() throws ApiException {
         String reportId = null;
         Reportsv3DeleteReportResponse response = api.reportsServiceDeleteReport(reportId);
+        // TODO: test validations
+    }
+
+    /**
+     * Summary: Delete Requirement Description: Delete a Requirement.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void reportsServiceDeleteRequirementTest() throws ApiException {
+        Integer requirementId = null;
+        Reportsv3DeleteRequirementRequest reportsv3DeleteRequirementRequest = null;
+        Reportsv3DeleteRequirementResponse response = api.reportsServiceDeleteRequirement(requirementId, reportsv3DeleteRequirementRequest);
         // TODO: test validations
     }
 
@@ -336,6 +530,17 @@ public class ReportsServiceApiTest {
     }
 
     /**
+     * Summary: Get controls Description: Get a list of controls with all data.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void reportsServiceGetControlsTest() throws ApiException {
+        Reportsv3GetControlsResponse response = api.reportsServiceGetControls();
+        // TODO: test validations
+    }
+
+    /**
      * Summary: Get fields by categories Description: Get all category related fields or all possible fields based on a list of categories.
      *
      * @throws ApiException if the Api call fails
@@ -362,6 +567,17 @@ public class ReportsServiceApiTest {
     }
 
     /**
+     * Summary: Get grades Description: Get a list of grades with all data.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void reportsServiceGetGradesTest() throws ApiException {
+        Reportsv3GetGradesResponse response = api.reportsServiceGetGrades();
+        // TODO: test validations
+    }
+
+    /**
      * Summary: Get all joins Description: Get all custom joins.
      *
      * @throws ApiException if the Api call fails
@@ -370,6 +586,39 @@ public class ReportsServiceApiTest {
     public void reportsServiceGetJoinsTest() throws ApiException {
         String categoryId = null;
         Reportsv3GetJoinsResponse response = api.reportsServiceGetJoins(categoryId);
+        // TODO: test validations
+    }
+
+    /**
+     * Summary: Get measures Description: Get a list of measures with all data.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void reportsServiceGetMeasuresTest() throws ApiException {
+        Reportsv3GetMeasuresResponse response = api.reportsServiceGetMeasures();
+        // TODO: test validations
+    }
+
+    /**
+     * Summary: Get metrics Description: Get a list of metrics with all data.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void reportsServiceGetMetricsTest() throws ApiException {
+        Reportsv3GetMetricsResponse response = api.reportsServiceGetMetrics();
+        // TODO: test validations
+    }
+
+    /**
+     * Summary: Get controls Description: Get a list of controls with all data.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void reportsServiceGetProgramsTest() throws ApiException {
+        Reportsv3GetProgramsResponse response = api.reportsServiceGetPrograms();
         // TODO: test validations
     }
 
@@ -483,6 +732,17 @@ public class ReportsServiceApiTest {
     }
 
     /**
+     * Summary: Get requirements Description: Get a list of requirements with all data.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void reportsServiceGetRequirementsTest() throws ApiException {
+        Reportsv3GetRequirementsResponse response = api.reportsServiceGetRequirements();
+        // TODO: test validations
+    }
+
+    /**
      * Summary: Get a variant Description: Get a given variant
      *
      * @throws ApiException if the Api call fails
@@ -528,6 +788,18 @@ public class ReportsServiceApiTest {
         String reportId = null;
         Reportsv3PartialReportUpdateRequest reportsv3PartialReportUpdateRequest = null;
         Reportsv3PartialReportUpdateResponse response = api.reportsServicePartialReportUpdate(reportId, reportsv3PartialReportUpdateRequest);
+        // TODO: test validations
+    }
+
+    /**
+     * Summary: Refresh metrics via grades. Description: Refresh metrics via grades.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void reportsServiceRunGradesTest() throws ApiException {
+        Reportsv3RunGradesRequest reportsv3RunGradesRequest = null;
+        Reportsv3RunGradesResponse response = api.reportsServiceRunGrades(reportsv3RunGradesRequest);
         // TODO: test validations
     }
 
@@ -582,6 +854,32 @@ public class ReportsServiceApiTest {
     }
 
     /**
+     * Summary: Update Control. Description: Update a Control.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void reportsServiceUpdateControlTest() throws ApiException {
+        Integer controlId = null;
+        Reportsv3UpdateControlRequest reportsv3UpdateControlRequest = null;
+        Reportsv3UpdateControlResponse response = api.reportsServiceUpdateControl(controlId, reportsv3UpdateControlRequest);
+        // TODO: test validations
+    }
+
+    /**
+     * Summary: Update Grade. Description: Update a Grade.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void reportsServiceUpdateGradeTest() throws ApiException {
+        Integer gradeId = null;
+        Reportsv3UpdateGradeRequest reportsv3UpdateGradeRequest = null;
+        Reportsv3UpdateGradeResponse response = api.reportsServiceUpdateGrade(gradeId, reportsv3UpdateGradeRequest);
+        // TODO: test validations
+    }
+
+    /**
      * Summary: Update a join Description: Update a custom join
      *
      * @throws ApiException if the Api call fails
@@ -595,6 +893,45 @@ public class ReportsServiceApiTest {
     }
 
     /**
+     * Summary: Update measure. Description: Update a measure.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void reportsServiceUpdateMeasureTest() throws ApiException {
+        Integer measureId = null;
+        Reportsv3UpdateMeasureRequest reportsv3UpdateMeasureRequest = null;
+        Reportsv3UpdateMeasureResponse response = api.reportsServiceUpdateMeasure(measureId, reportsv3UpdateMeasureRequest);
+        // TODO: test validations
+    }
+
+    /**
+     * Summary: Update metric. Description: Update a metric.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void reportsServiceUpdateMetricTest() throws ApiException {
+        Integer metricId = null;
+        Reportsv3UpdateMetricRequest reportsv3UpdateMetricRequest = null;
+        Reportsv3UpdateMetricResponse response = api.reportsServiceUpdateMetric(metricId, reportsv3UpdateMetricRequest);
+        // TODO: test validations
+    }
+
+    /**
+     * Summary: Update Program. Description: Update a Program.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void reportsServiceUpdateProgramTest() throws ApiException {
+        Integer programId = null;
+        Reportsv3UpdateProgramRequest reportsv3UpdateProgramRequest = null;
+        Reportsv3UpdateProgramResponse response = api.reportsServiceUpdateProgram(programId, reportsv3UpdateProgramRequest);
+        // TODO: test validations
+    }
+
+    /**
      * Summary: Update report Description: Update a custom report.
      *
      * @throws ApiException if the Api call fails
@@ -604,6 +941,19 @@ public class ReportsServiceApiTest {
         String reportId = null;
         Reportsv3UpdateReportRequest reportsv3UpdateReportRequest = null;
         Reportsv3UpdateReportResponse response = api.reportsServiceUpdateReport(reportId, reportsv3UpdateReportRequest);
+        // TODO: test validations
+    }
+
+    /**
+     * Summary: Update Requirement. Description: Update a Requirement.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void reportsServiceUpdateRequirementTest() throws ApiException {
+        Integer requirementId = null;
+        Reportsv3UpdateRequirementRequest reportsv3UpdateRequirementRequest = null;
+        Reportsv3UpdateRequirementResponse response = api.reportsServiceUpdateRequirement(requirementId, reportsv3UpdateRequirementRequest);
         // TODO: test validations
     }
 

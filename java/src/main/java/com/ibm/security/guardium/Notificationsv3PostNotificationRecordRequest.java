@@ -19,8 +19,8 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.ibm.security.guardium.Notificationsv3Origin;
 import com.ibm.security.guardium.Schedulerv3Recipient;
-import com.ibm.security.guardium.Templatesv3Origin;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -55,11 +55,11 @@ import com.ibm.security.JSON;
 /**
  * Notificationsv3PostNotificationRecordRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
 public class Notificationsv3PostNotificationRecordRequest {
   public static final String SERIALIZED_NAME_ORIGIN = "origin";
   @SerializedName(SERIALIZED_NAME_ORIGIN)
-  private Templatesv3Origin origin = Templatesv3Origin.UNDEFINED_ORIGIN;
+  private Notificationsv3Origin origin = Notificationsv3Origin.UNDEFINED_ORIGIN;
 
   public static final String SERIALIZED_NAME_ORIGIN_DATA = "origin_data";
   @SerializedName(SERIALIZED_NAME_ORIGIN_DATA)
@@ -80,7 +80,7 @@ public class Notificationsv3PostNotificationRecordRequest {
   public Notificationsv3PostNotificationRecordRequest() {
   }
 
-  public Notificationsv3PostNotificationRecordRequest origin(Templatesv3Origin origin) {
+  public Notificationsv3PostNotificationRecordRequest origin(Notificationsv3Origin origin) {
     this.origin = origin;
     return this;
   }
@@ -90,11 +90,11 @@ public class Notificationsv3PostNotificationRecordRequest {
    * @return origin
   **/
   @javax.annotation.Nullable
-  public Templatesv3Origin getOrigin() {
+  public Notificationsv3Origin getOrigin() {
     return origin;
   }
 
-  public void setOrigin(Templatesv3Origin origin) {
+  public void setOrigin(Notificationsv3Origin origin) {
     this.origin = origin;
   }
 
@@ -277,7 +277,7 @@ public class Notificationsv3PostNotificationRecordRequest {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the optional field `origin`
       if (jsonObj.get("origin") != null && !jsonObj.get("origin").isJsonNull()) {
-        Templatesv3Origin.validateJsonElement(jsonObj.get("origin"));
+        Notificationsv3Origin.validateJsonElement(jsonObj.get("origin"));
       }
       if ((jsonObj.get("origin_data") != null && !jsonObj.get("origin_data").isJsonNull()) && !jsonObj.get("origin_data").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `origin_data` to be a primitive type in the JSON string but got `%s`", jsonObj.get("origin_data").toString()));

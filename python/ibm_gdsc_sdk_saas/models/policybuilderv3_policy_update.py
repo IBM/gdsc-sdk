@@ -21,6 +21,7 @@ from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, Strict
 from typing import Any, ClassVar, Dict, List, Optional
 from ibm_gdsc_sdk_saas.models.policybuilderv3_control_flow import Policybuilderv3ControlFlow
 from ibm_gdsc_sdk_saas.models.policybuilderv3_policy_type import Policybuilderv3PolicyType
+from ibm_gdsc_sdk_saas.models.policybuilderv3_product_type import Policybuilderv3ProductType
 from ibm_gdsc_sdk_saas.models.policybuilderv3_rule import Policybuilderv3Rule
 from typing import Optional, Set
 from typing_extensions import Self
@@ -40,11 +41,12 @@ class Policybuilderv3PolicyUpdate(BaseModel):
     policy_id: Optional[StrictStr] = Field(default=None, description="Policy Id.")
     policy_name: Optional[StrictStr] = Field(default=None, description="Policy Name.")
     policy_type: Optional[Policybuilderv3PolicyType] = None
+    product_id: Optional[Policybuilderv3ProductType] = None
     rules: Optional[List[Policybuilderv3Rule]] = None
     rules_on_flat: Optional[StrictBool] = Field(default=None, description="Flag to indicate whether the policy has rules on flat enabled or not.")
     template: Optional[StrictBool] = Field(default=None, description="Flag to indicate whether the policy is a template policy or not.")
     version: Optional[StrictInt] = Field(default=None, description="Version of the policy.")
-    __properties: ClassVar[List[str]] = ["activation_status", "control_flow", "deletedRuleIds", "installed_flag", "installed_order", "installed_timestamp", "last_edited_timestamp", "log_flat", "policy_id", "policy_name", "policy_type", "rules", "rules_on_flat", "template", "version"]
+    __properties: ClassVar[List[str]] = ["activation_status", "control_flow", "deletedRuleIds", "installed_flag", "installed_order", "installed_timestamp", "last_edited_timestamp", "log_flat", "policy_id", "policy_name", "policy_type", "product_id", "rules", "rules_on_flat", "template", "version"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -115,6 +117,7 @@ class Policybuilderv3PolicyUpdate(BaseModel):
             "policy_id": obj.get("policy_id"),
             "policy_name": obj.get("policy_name"),
             "policy_type": obj.get("policy_type"),
+            "product_id": obj.get("product_id"),
             "rules": [Policybuilderv3Rule.from_dict(_item) for _item in obj["rules"]] if obj.get("rules") is not None else None,
             "rules_on_flat": obj.get("rules_on_flat"),
             "template": obj.get("template"),

@@ -50,7 +50,7 @@ import com.ibm.security.JSON;
 /**
  * Structure for AWS/Azure Connection.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
 public class Connectionsv3StreamConnection {
   public static final String SERIALIZED_NAME_ACCOUNT_ID = "account_id";
   @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
@@ -289,7 +289,7 @@ public class Connectionsv3StreamConnection {
   }
 
    /**
-   * Optional: Namespace provided if the coonnection type is Azure.
+   * Optional: Namespace provided if the connection type is Azure.
    * @return namespace
   **/
   @javax.annotation.Nullable
@@ -346,7 +346,7 @@ public class Connectionsv3StreamConnection {
   }
 
    /**
-   * Optional: the provider provided if the coonnection type is Azure.
+   * Optional: the provider provided if the connection type is Azure.
    * @return provider
   **/
   @javax.annotation.Nullable
@@ -365,7 +365,7 @@ public class Connectionsv3StreamConnection {
   }
 
    /**
-   * Optional: the region provided if the coonnection type is AWS.
+   * Optional: the region provided if the connection type is AWS.
    * @return region
   **/
   @javax.annotation.Nullable
@@ -460,7 +460,7 @@ public class Connectionsv3StreamConnection {
   }
 
    /**
-   * Optional: Storage connection string must be proovided if the coonnection type is Azure.
+   * Optional: Storage connection string must be provided if the connection type is Azure.
    * @return storageConnectionString
   **/
   @javax.annotation.Nullable

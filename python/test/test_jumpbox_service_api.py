@@ -33,6 +33,13 @@ class TestJumpboxServiceApi(unittest.TestCase):
         """
         pass
 
+    def test_jumpbox_service_delete_account(self) -> None:
+        """Test case for jumpbox_service_delete_account
+
+        Summary: Delete account Description: Delete an account.
+        """
+        pass
+
     def test_jumpbox_service_delete_tenant(self) -> None:
         """Test case for jumpbox_service_delete_tenant
 
@@ -44,6 +51,20 @@ class TestJumpboxServiceApi(unittest.TestCase):
         """Test case for jumpbox_service_delete_user
 
         Summary: Delete user Description: Delete the user.
+        """
+        pass
+
+    def test_jumpbox_service_get_account(self) -> None:
+        """Test case for jumpbox_service_get_account
+
+        Summary: Get account Description: Get an account.
+        """
+        pass
+
+    def test_jumpbox_service_get_accounts(self) -> None:
+        """Test case for jumpbox_service_get_accounts
+
+        Summary: Get accounts Description: Get all accounts based on UID.
         """
         pass
 
@@ -68,6 +89,13 @@ class TestJumpboxServiceApi(unittest.TestCase):
         """
         pass
 
+    def test_jumpbox_service_post_account(self) -> None:
+        """Test case for jumpbox_service_post_account
+
+        Summary: Post account Description: Create an Account.
+        """
+        pass
+
     def test_jumpbox_service_post_tenants(self) -> None:
         """Test case for jumpbox_service_post_tenants
 
@@ -82,6 +110,13 @@ class TestJumpboxServiceApi(unittest.TestCase):
         """
         pass
 
+    def test_jumpbox_service_resume_account(self) -> None:
+        """Test case for jumpbox_service_resume_account
+
+        Summary: Resume account Description: Resume an account.
+        """
+        pass
+
     def test_jumpbox_service_search_users(self) -> None:
         """Test case for jumpbox_service_search_users
 
@@ -89,10 +124,24 @@ class TestJumpboxServiceApi(unittest.TestCase):
         """
         pass
 
+    def test_jumpbox_service_suspend_account(self) -> None:
+        """Test case for jumpbox_service_suspend_account
+
+        Summary: Suspend Account Description: Suspend an account
+        """
+        pass
+
     def test_jumpbox_service_test_user(self) -> None:
         """Test case for jumpbox_service_test_user
 
         Summary: Test user Description: Test a user lookup to a given LDAP.
+        """
+        pass
+
+    def test_jumpbox_service_update_account(self) -> None:
+        """Test case for jumpbox_service_update_account
+
+        Summary: Update Account Description: Updates an account.
         """
         pass
 

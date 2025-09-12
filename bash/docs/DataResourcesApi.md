@@ -4,12 +4,12 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getDataResource**](DataResourcesApi.md#getDataResource) | **GET** /api/v1/dspm/dataResources/{dataResourceId} | Get a specific data resource by its ID
-[**getDataResourcesSummary**](DataResourcesApi.md#getDataResourcesSummary) | **GET** /api/v1/dspm/dataResources/summary | Data resources summary
-[**listDataResources**](DataResourcesApi.md#listDataResources) | **GET** /api/v1/dspm/dataResources | List data resources that match a given filter
-[**listDataResourcesNames**](DataResourcesApi.md#listDataResourcesNames) | **GET** /api/v1/dspm/dataResources/names | List names of data resources
-[**removeResource**](DataResourcesApi.md#removeResource) | **DELETE** /api/v1/dspm/dataResources/{dataResourceId}/removeResource | Remove resource from DSPM
-[**updateResourceReviewStatus**](DataResourcesApi.md#updateResourceReviewStatus) | **PUT** /api/v1/dspm/dataResources/{dataResourceId}/reviewed | Set review status of a data resource
+[**getDataResource**](DataResourcesApi.md#getDataResource) | **GET** /api/v2/dspm/dataResources/{dataResourceId} | Get a specific data resource by its ID
+[**getDataResourcesSummary**](DataResourcesApi.md#getDataResourcesSummary) | **GET** /api/v2/dspm/dataResources/summary | Data resources summary
+[**listDataResources**](DataResourcesApi.md#listDataResources) | **GET** /api/v2/dspm/dataResources | List data resources that match a given filter
+[**listDataResourcesNames**](DataResourcesApi.md#listDataResourcesNames) | **GET** /api/v2/dspm/dataResources/names | List names of data resources
+[**removeResource**](DataResourcesApi.md#removeResource) | **DELETE** /api/v2/dspm/dataResources/{dataResourceId}/removeResource | Remove resource from DSPM
+[**updateResourceReviewStatus**](DataResourcesApi.md#updateResourceReviewStatus) | **PUT** /api/v2/dspm/dataResources/{dataResourceId}/reviewed | Set review status of a data resource
 
 
 

@@ -2,7 +2,7 @@
 
 # Connectionsv3StreamConnectionConfig
 
-Stream connection config with connecion id.
+Stream connection config with connection id.
 
 ## Properties
 

@@ -60,6 +60,7 @@ class TestTenantuserv3GetTenantResponse(unittest.TestCase):
                     settings = {
                         'key' : ''
                         }, 
+                    status = '', 
                     tenant_capabilities = {
                         'key' : True
                         }, 

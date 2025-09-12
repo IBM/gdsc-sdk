@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_data_resource**](DataResourcesApi.md#get_data_resource) | **GET** /api/v1/dspm/dataResources/{dataResourceId} | Get a specific data resource by its ID
-[**get_data_resources_summary**](DataResourcesApi.md#get_data_resources_summary) | **GET** /api/v1/dspm/dataResources/summary | Data resources summary
-[**list_data_resources**](DataResourcesApi.md#list_data_resources) | **GET** /api/v1/dspm/dataResources | List data resources that match a given filter
-[**list_data_resources_names**](DataResourcesApi.md#list_data_resources_names) | **GET** /api/v1/dspm/dataResources/names | List names of data resources
-[**remove_resource**](DataResourcesApi.md#remove_resource) | **DELETE** /api/v1/dspm/dataResources/{dataResourceId}/removeResource | Remove resource from DSPM
-[**update_resource_review_status**](DataResourcesApi.md#update_resource_review_status) | **PUT** /api/v1/dspm/dataResources/{dataResourceId}/reviewed | Set review status of a data resource
+[**get_data_resource**](DataResourcesApi.md#get_data_resource) | **GET** /api/v2/dspm/dataResources/{dataResourceId} | Get a specific data resource by its ID
+[**get_data_resources_summary**](DataResourcesApi.md#get_data_resources_summary) | **GET** /api/v2/dspm/dataResources/summary | Data resources summary
+[**list_data_resources**](DataResourcesApi.md#list_data_resources) | **GET** /api/v2/dspm/dataResources | List data resources that match a given filter
+[**list_data_resources_names**](DataResourcesApi.md#list_data_resources_names) | **GET** /api/v2/dspm/dataResources/names | List names of data resources
+[**remove_resource**](DataResourcesApi.md#remove_resource) | **DELETE** /api/v2/dspm/dataResources/{dataResourceId}/removeResource | Remove resource from DSPM
+[**update_resource_review_status**](DataResourcesApi.md#update_resource_review_status) | **PUT** /api/v2/dspm/dataResources/{dataResourceId}/reviewed | Set review status of a data resource
 
 
 # **get_data_resource**

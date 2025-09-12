@@ -6,7 +6,9 @@ All URIs are relative to *http://localhost*
 |------------- | ------------- | -------------|
 | [**assetsServiceAssetIngestion**](AssetsServiceApi.md#assetsServiceAssetIngestion) | **POST** /api/v3/assets/ingestion | AssetIngestion - Asset Ingestion Api to ingest assets from different applications including asset extensibility assets. |
 | [**assetsServiceAssetIngestionManualTrigger**](AssetsServiceApi.md#assetsServiceAssetIngestionManualTrigger) | **POST** /api/v3/assets/ingestion/trigger | AssetIngestionManualTrigger - Manual trigger for Scheduled Asset Ingestion of databases. |
+| [**assetsServiceCancelCSVImport**](AssetsServiceApi.md#assetsServiceCancelCSVImport) | **DELETE** /api/v3/assets/csv/cancel/{csv_id} | CancelCSVImport - Cancel the import of CSV and update the status in import log table |
 | [**assetsServiceClonePolicy**](AssetsServiceApi.md#assetsServiceClonePolicy) | **POST** /api/v3/assets/policies/{policy_id}/clone | ClonePolicy - Clone a policy. |
+| [**assetsServiceCompareCSVToExistingAssets**](AssetsServiceApi.md#assetsServiceCompareCSVToExistingAssets) | **GET** /api/v3/assets/csv/compare/{csv_id} | CompareCSVToExistingAssets - Compare CSV with existing assets and return list of assets(existing/to be imported/both) on demand from csv. |
 | [**assetsServiceCreateUpdatePolicy**](AssetsServiceApi.md#assetsServiceCreateUpdatePolicy) | **POST** /api/v3/assets/policies | CreateUpdatePolicy - Create/update new Policy. |
 | [**assetsServiceDeleteFilterTemplateForAssets**](AssetsServiceApi.md#assetsServiceDeleteFilterTemplateForAssets) | **DELETE** /api/v3/assets/filters/template/{template_id} | DeleteFilterTemplateForAssets - Deleting a template using TemplateID in manage assets. |
 | [**assetsServiceDeletePolicies**](AssetsServiceApi.md#assetsServiceDeletePolicies) | **DELETE** /api/v3/assets/policies | DeletePolicies - Delete Policy returns response code and message. |
@@ -19,6 +21,7 @@ All URIs are relative to *http://localhost*
 | [**assetsServiceGetAssetTopology**](AssetsServiceApi.md#assetsServiceGetAssetTopology) | **POST** /api/v3/assets/topology | GetAssetTopology- Get list of topology for a parent asset. |
 | [**assetsServiceGetFilterTemplateForAssets**](AssetsServiceApi.md#assetsServiceGetFilterTemplateForAssets) | **GET** /api/v3/assets/filters/templates | GetFilterTemplateForAssets - Get list of filters query templates for manage assets. |
 | [**assetsServiceGetFiltersForAssets**](AssetsServiceApi.md#assetsServiceGetFiltersForAssets) | **GET** /api/v3/assets/filters | GetFiltersForAssets - Get a list of filters category and sub category with all data. |
+| [**assetsServiceImportCSV**](AssetsServiceApi.md#assetsServiceImportCSV) | **POST** /api/v3/assets/csv/import/{csv_id} | ImportCSV - Start the async asset import from CSV by starting the db procedure and send notification at the end. |
 | [**assetsServiceListPolicy**](AssetsServiceApi.md#assetsServiceListPolicy) | **GET** /api/v3/assets/policies | ListPolicy - List all policies. |
 | [**assetsServiceListRule**](AssetsServiceApi.md#assetsServiceListRule) | **GET** /api/v3/assets/policies/{policy_id}/rules | ListRule - List all rules for a policy. |
 | [**assetsServiceListTagDomains**](AssetsServiceApi.md#assetsServiceListTagDomains) | **GET** /api/v3/assets/tags/categories | ListTagDomains - Get Tag categories by request parameters . |
@@ -179,6 +182,79 @@ public class Example {
 | **200** | A successful response. |  -  |
 | **0** | An unexpected error response. |  -  |
 
+<a id="assetsServiceCancelCSVImport"></a>
+# **assetsServiceCancelCSVImport**
+> Object assetsServiceCancelCSVImport(csvId)
+
+CancelCSVImport - Cancel the import of CSV and update the status in import log table
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.AssetsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    AssetsServiceApi apiInstance = new AssetsServiceApi(defaultClient);
+    String csvId = "csvId_example"; // String | unique id of the csv
+    try {
+      Object result = apiInstance.assetsServiceCancelCSVImport(csvId);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling AssetsServiceApi#assetsServiceCancelCSVImport");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **csvId** | **String**| unique id of the csv | |
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
 <a id="assetsServiceClonePolicy"></a>
 # **assetsServiceClonePolicy**
 > Object assetsServiceClonePolicy(policyId, assetsv3ClonePolicyRequest)
@@ -246,6 +322,87 @@ public class Example {
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
+<a id="assetsServiceCompareCSVToExistingAssets"></a>
+# **assetsServiceCompareCSVToExistingAssets**
+> Assetsv3CompareCSVResponse assetsServiceCompareCSVToExistingAssets(csvId, rowsRequired, pageNumber, pageSize, templateType)
+
+CompareCSVToExistingAssets - Compare CSV with existing assets and return list of assets(existing/to be imported/both) on demand from csv.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.AssetsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    AssetsServiceApi apiInstance = new AssetsServiceApi(defaultClient);
+    String csvId = "csvId_example"; // String | unique id of the csv
+    String rowsRequired = "rowsRequired_example"; // String | which rows are required, existing or new or all.
+    Long pageNumber = 56L; // Long | page number.
+    Long pageSize = 56L; // Long | page size.
+    String templateType = "DATABASE"; // String | Asset CSV template type.   - DATABASE: Template for database
+    try {
+      Assetsv3CompareCSVResponse result = apiInstance.assetsServiceCompareCSVToExistingAssets(csvId, rowsRequired, pageNumber, pageSize, templateType);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling AssetsServiceApi#assetsServiceCompareCSVToExistingAssets");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **csvId** | **String**| unique id of the csv | |
+| **rowsRequired** | **String**| which rows are required, existing or new or all. | [optional] |
+| **pageNumber** | **Long**| page number. | [optional] |
+| **pageSize** | **Long**| page size. | [optional] |
+| **templateType** | **String**| Asset CSV template type.   - DATABASE: Template for database | [optional] [default to DATABASE] [enum: DATABASE] |
+
+### Return type
+
+[**Assetsv3CompareCSVResponse**](Assetsv3CompareCSVResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 ### HTTP response details
@@ -329,7 +486,7 @@ public class Example {
 
 <a id="assetsServiceDeleteFilterTemplateForAssets"></a>
 # **assetsServiceDeleteFilterTemplateForAssets**
-> Object assetsServiceDeleteFilterTemplateForAssets(templateId, assetsv3AssetFilterTemplateRequest)
+> Object assetsServiceDeleteFilterTemplateForAssets(templateId)
 
 DeleteFilterTemplateForAssets - Deleting a template using TemplateID in manage assets.
 
@@ -361,9 +518,8 @@ public class Example {
 
     AssetsServiceApi apiInstance = new AssetsServiceApi(defaultClient);
     String templateId = "templateId_example"; // String | template id to be deleted
-    Assetsv3AssetFilterTemplateRequest assetsv3AssetFilterTemplateRequest = new Assetsv3AssetFilterTemplateRequest(); // Assetsv3AssetFilterTemplateRequest | 
     try {
-      Object result = apiInstance.assetsServiceDeleteFilterTemplateForAssets(templateId, assetsv3AssetFilterTemplateRequest);
+      Object result = apiInstance.assetsServiceDeleteFilterTemplateForAssets(templateId);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling AssetsServiceApi#assetsServiceDeleteFilterTemplateForAssets");
@@ -381,7 +537,6 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **templateId** | **String**| template id to be deleted | |
-| **assetsv3AssetFilterTemplateRequest** | [**Assetsv3AssetFilterTemplateRequest**](Assetsv3AssetFilterTemplateRequest.md)|  | |
 
 ### Return type
 
@@ -393,7 +548,7 @@ public class Example {
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 ### HTTP response details
@@ -910,7 +1065,7 @@ public class Example {
     String ip = "ip_example"; // String | Asset IP.
     String host = "host_example"; // String | Asset Host.
     String database = "database_example"; // String | Database Name.
-    String assetEntityType = "assetEntityType_example"; // String | asset ntity type.
+    String assetEntityType = "assetEntityType_example"; // String | asset entity type.
     try {
       Assetsv3AssetOverviewResponse result = apiInstance.assetsServiceGetAssetOverview(assetId, pageNumber, size, widget, ip, host, database, assetEntityType);
       System.out.println(result);
@@ -936,7 +1091,7 @@ public class Example {
 | **ip** | **String**| Asset IP. | [optional] |
 | **host** | **String**| Asset Host. | [optional] |
 | **database** | **String**| Database Name. | [optional] |
-| **assetEntityType** | **String**| asset ntity type. | [optional] |
+| **assetEntityType** | **String**| asset entity type. | [optional] |
 
 ### Return type
 
@@ -1164,6 +1319,81 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
+<a id="assetsServiceImportCSV"></a>
+# **assetsServiceImportCSV**
+> Assetsv3ImportCSVResponse assetsServiceImportCSV(csvId, assetsv3ImportCSVRequest)
+
+ImportCSV - Start the async asset import from CSV by starting the db procedure and send notification at the end.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.AssetsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    AssetsServiceApi apiInstance = new AssetsServiceApi(defaultClient);
+    String csvId = "csvId_example"; // String | unique id of the csv
+    Assetsv3ImportCSVRequest assetsv3ImportCSVRequest = new Assetsv3ImportCSVRequest(); // Assetsv3ImportCSVRequest | 
+    try {
+      Assetsv3ImportCSVResponse result = apiInstance.assetsServiceImportCSV(csvId, assetsv3ImportCSVRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling AssetsServiceApi#assetsServiceImportCSV");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **csvId** | **String**| unique id of the csv | |
+| **assetsv3ImportCSVRequest** | [**Assetsv3ImportCSVRequest**](Assetsv3ImportCSVRequest.md)|  | |
+
+### Return type
+
+[**Assetsv3ImportCSVResponse**](Assetsv3ImportCSVResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details

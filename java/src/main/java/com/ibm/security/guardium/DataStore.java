@@ -19,11 +19,11 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.ibm.security.guardium.ClassificationStatus;
 import com.ibm.security.guardium.CloudAccountDetails;
 import com.ibm.security.guardium.DataStoreEncryptionStatus;
 import com.ibm.security.guardium.DataStoreSource;
 import com.ibm.security.guardium.DataStoreStats;
+import com.ibm.security.guardium.StoreClassificationStatus;
 import com.ibm.security.guardium.StringKeyValue;
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -58,7 +58,7 @@ import com.ibm.security.JSON;
 /**
  * DataStore
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
 public class DataStore {
   public static final String SERIALIZED_NAME_DATA_STORE_ID = "dataStoreId";
   @SerializedName(SERIALIZED_NAME_DATA_STORE_ID)
@@ -86,7 +86,7 @@ public class DataStore {
 
   public static final String SERIALIZED_NAME_CLASSIFICATION_STATUS = "classificationStatus";
   @SerializedName(SERIALIZED_NAME_CLASSIFICATION_STATUS)
-  private ClassificationStatus classificationStatus;
+  private StoreClassificationStatus classificationStatus;
 
   public static final String SERIALIZED_NAME_ENCRYPTION_STATUS = "encryptionStatus";
   @SerializedName(SERIALIZED_NAME_ENCRYPTION_STATUS)
@@ -261,7 +261,7 @@ public class DataStore {
   }
 
 
-  public DataStore classificationStatus(ClassificationStatus classificationStatus) {
+  public DataStore classificationStatus(StoreClassificationStatus classificationStatus) {
     this.classificationStatus = classificationStatus;
     return this;
   }
@@ -271,11 +271,11 @@ public class DataStore {
    * @return classificationStatus
   **/
   @javax.annotation.Nullable
-  public ClassificationStatus getClassificationStatus() {
+  public StoreClassificationStatus getClassificationStatus() {
     return classificationStatus;
   }
 
-  public void setClassificationStatus(ClassificationStatus classificationStatus) {
+  public void setClassificationStatus(StoreClassificationStatus classificationStatus) {
     this.classificationStatus = classificationStatus;
   }
 
@@ -724,7 +724,7 @@ public class DataStore {
       }
       // validate the optional field `classificationStatus`
       if (jsonObj.get("classificationStatus") != null && !jsonObj.get("classificationStatus").isJsonNull()) {
-        ClassificationStatus.validateJsonElement(jsonObj.get("classificationStatus"));
+        StoreClassificationStatus.validateJsonElement(jsonObj.get("classificationStatus"));
       }
       // validate the optional field `encryptionStatus`
       if (jsonObj.get("encryptionStatus") != null && !jsonObj.get("encryptionStatus").isJsonNull()) {

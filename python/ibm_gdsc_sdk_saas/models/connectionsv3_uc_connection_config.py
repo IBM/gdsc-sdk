@@ -25,7 +25,7 @@ from typing_extensions import Self
 
 class Connectionsv3UCConnectionConfig(BaseModel):
     """
-    UC connection config with connecion id.
+    UC connection config with connection id.
     """ # noqa: E501
     connection_id: Optional[StrictStr] = Field(default=None, description="Connection id.")
     uc_connection_summary: Optional[Connectionsv3UCConnectionSummary] = None

@@ -113,7 +113,7 @@ public class ThirdPartyVendorsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/linkedVendors/{vendorId}/cloudAccounts"
+        String localVarPath = "/api/v2/dspm/linkedVendors/{vendorId}/cloudAccounts"
             .replace("{" + "vendorId" + "}", localVarApiClient.escapeString(vendorId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -249,7 +249,7 @@ public class ThirdPartyVendorsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/linkedVendors/{vendorId}"
+        String localVarPath = "/api/v2/dspm/linkedVendors/{vendorId}"
             .replace("{" + "vendorId" + "}", localVarApiClient.escapeString(vendorId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -380,7 +380,7 @@ public class ThirdPartyVendorsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/linkedVendors/{vendorId}/dataStores"
+        String localVarPath = "/api/v2/dspm/linkedVendors/{vendorId}/dataStores"
             .replace("{" + "vendorId" + "}", localVarApiClient.escapeString(vendorId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -534,7 +534,7 @@ public class ThirdPartyVendorsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/linkedVendors";
+        String localVarPath = "/api/v2/dspm/linkedVendors";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -652,7 +652,7 @@ public class ThirdPartyVendorsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/linkedVendors/trustedAssets";
+        String localVarPath = "/api/v2/dspm/linkedVendors/trustedAssets";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();

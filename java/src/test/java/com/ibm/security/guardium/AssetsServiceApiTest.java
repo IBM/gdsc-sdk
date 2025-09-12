@@ -14,11 +14,11 @@
 package com.ibm.security.guardium;
 
 import com.ibm.security.ApiException;
-import com.ibm.security.guardium.Assetsv3AssetFilterTemplateRequest;
 import com.ibm.security.guardium.Assetsv3AssetIngestionRequest;
 import com.ibm.security.guardium.Assetsv3AssetIngestionResponse;
 import com.ibm.security.guardium.Assetsv3AssetOverviewResponse;
 import com.ibm.security.guardium.Assetsv3ClonePolicyRequest;
+import com.ibm.security.guardium.Assetsv3CompareCSVResponse;
 import com.ibm.security.guardium.Assetsv3CreateUpdatePolicyRequest;
 import com.ibm.security.guardium.Assetsv3CreateUpdatePolicyResponse;
 import com.ibm.security.guardium.Assetsv3FetchAssetChangeLogRequest;
@@ -32,6 +32,8 @@ import com.ibm.security.guardium.Assetsv3GetAssetTopologyRequest;
 import com.ibm.security.guardium.Assetsv3GetAssetTopologyResponse;
 import com.ibm.security.guardium.Assetsv3GetFilterTemplateResponse;
 import com.ibm.security.guardium.Assetsv3GetFiltersDataResponse;
+import com.ibm.security.guardium.Assetsv3ImportCSVRequest;
+import com.ibm.security.guardium.Assetsv3ImportCSVResponse;
 import com.ibm.security.guardium.Assetsv3ListPolicyResponse;
 import com.ibm.security.guardium.Assetsv3ListRuleResponse;
 import com.ibm.security.guardium.Assetsv3ListTagDomainsResponse;
@@ -87,6 +89,18 @@ public class AssetsServiceApiTest {
     }
 
     /**
+     * CancelCSVImport - Cancel the import of CSV and update the status in import log table
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void assetsServiceCancelCSVImportTest() throws ApiException {
+        String csvId = null;
+        Object response = api.assetsServiceCancelCSVImport(csvId);
+        // TODO: test validations
+    }
+
+    /**
      * ClonePolicy - Clone a policy.
      *
      * @throws ApiException if the Api call fails
@@ -96,6 +110,22 @@ public class AssetsServiceApiTest {
         String policyId = null;
         Assetsv3ClonePolicyRequest assetsv3ClonePolicyRequest = null;
         Object response = api.assetsServiceClonePolicy(policyId, assetsv3ClonePolicyRequest);
+        // TODO: test validations
+    }
+
+    /**
+     * CompareCSVToExistingAssets - Compare CSV with existing assets and return list of assets(existing/to be imported/both) on demand from csv.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void assetsServiceCompareCSVToExistingAssetsTest() throws ApiException {
+        String csvId = null;
+        String rowsRequired = null;
+        Long pageNumber = null;
+        Long pageSize = null;
+        String templateType = null;
+        Assetsv3CompareCSVResponse response = api.assetsServiceCompareCSVToExistingAssets(csvId, rowsRequired, pageNumber, pageSize, templateType);
         // TODO: test validations
     }
 
@@ -119,8 +149,7 @@ public class AssetsServiceApiTest {
     @Test
     public void assetsServiceDeleteFilterTemplateForAssetsTest() throws ApiException {
         String templateId = null;
-        Assetsv3AssetFilterTemplateRequest assetsv3AssetFilterTemplateRequest = null;
-        Object response = api.assetsServiceDeleteFilterTemplateForAssets(templateId, assetsv3AssetFilterTemplateRequest);
+        Object response = api.assetsServiceDeleteFilterTemplateForAssets(templateId);
         // TODO: test validations
     }
 
@@ -262,6 +291,19 @@ public class AssetsServiceApiTest {
     @Test
     public void assetsServiceGetFiltersForAssetsTest() throws ApiException {
         Assetsv3GetFiltersDataResponse response = api.assetsServiceGetFiltersForAssets();
+        // TODO: test validations
+    }
+
+    /**
+     * ImportCSV - Start the async asset import from CSV by starting the db procedure and send notification at the end.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void assetsServiceImportCSVTest() throws ApiException {
+        String csvId = null;
+        Assetsv3ImportCSVRequest assetsv3ImportCSVRequest = null;
+        Assetsv3ImportCSVResponse response = api.assetsServiceImportCSV(csvId, assetsv3ImportCSVRequest);
         // TODO: test validations
     }
 

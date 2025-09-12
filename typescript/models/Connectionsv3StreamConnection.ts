@@ -50,7 +50,7 @@ export class Connectionsv3StreamConnection {
     */
     'name'?: string;
     /**
-    * Optional: Namespace provided if the coonnection type is Azure.
+    * Optional: Namespace provided if the connection type is Azure.
     */
     'namespace'?: string;
     /**
@@ -62,11 +62,11 @@ export class Connectionsv3StreamConnection {
     */
     'port'?: string;
     /**
-    * Optional: the provider provided if the coonnection type is Azure.
+    * Optional: the provider provided if the connection type is Azure.
     */
     'provider'?: string;
     /**
-    * Optional: the region provided if the coonnection type is AWS.
+    * Optional: the region provided if the connection type is AWS.
     */
     'region'?: string;
     /**
@@ -83,7 +83,7 @@ export class Connectionsv3StreamConnection {
     */
     'statusTimestamp'?: string;
     /**
-    * Optional: Storage connection string must be proovided if the coonnection type is Azure.
+    * Optional: Storage connection string must be provided if the connection type is Azure.
     */
     'storageConnectionString'?: string;
     /**

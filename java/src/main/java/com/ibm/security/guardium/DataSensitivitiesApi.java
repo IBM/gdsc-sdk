@@ -108,7 +108,7 @@ public class DataSensitivitiesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/sensitivities/summary";
+        String localVarPath = "/api/v2/dspm/sensitivities/summary";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -233,7 +233,7 @@ public class DataSensitivitiesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/sensitivities/{sensitivityId}"
+        String localVarPath = "/api/v2/dspm/sensitivities/{sensitivityId}"
             .replace("{" + "sensitivityId" + "}", localVarApiClient.escapeString(sensitivityId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -363,7 +363,7 @@ public class DataSensitivitiesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/sensitivities";
+        String localVarPath = "/api/v2/dspm/sensitivities";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();

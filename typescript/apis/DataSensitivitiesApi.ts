@@ -30,7 +30,7 @@ export class DataSensitivitiesApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/sensitivities/summary';
+        const localVarPath = '/api/v2/dspm/sensitivities/summary';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -72,7 +72,7 @@ export class DataSensitivitiesApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/sensitivities/{sensitivityId}'
+        const localVarPath = '/api/v2/dspm/sensitivities/{sensitivityId}'
             .replace('{' + 'sensitivityId' + '}', encodeURIComponent(String(sensitivityId)));
 
         // Make Request Context
@@ -111,7 +111,7 @@ export class DataSensitivitiesApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/sensitivities';
+        const localVarPath = '/api/v2/dspm/sensitivities';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);

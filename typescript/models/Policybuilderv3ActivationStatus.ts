@@ -14,6 +14,10 @@ import { HttpFile } from '../http/http';
 
 export enum Policybuilderv3ActivationStatus {
     NotActivated = 'NOT_ACTIVATED',
-    Activated = 'ACTIVATED',
-    ActivatedWithIssues = 'ACTIVATED_WITH_ISSUES'
+    Active = 'ACTIVE',
+    Issues = 'ISSUES',
+    Inactive = 'INACTIVE',
+    InProgress = 'IN_PROGRESS',
+    Failure = 'FAILURE',
+    Terminated = 'TERMINATED'
 }

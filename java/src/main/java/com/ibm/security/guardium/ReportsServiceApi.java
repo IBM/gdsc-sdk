@@ -35,29 +35,58 @@ import com.ibm.security.guardium.Reportsv3CreateChartTemplatev2Request;
 import com.ibm.security.guardium.Reportsv3CreateChartTemplatev2Response;
 import com.ibm.security.guardium.Reportsv3CreateChartv2Request;
 import com.ibm.security.guardium.Reportsv3CreateChartv2Response;
+import com.ibm.security.guardium.Reportsv3CreateControlRequest;
+import com.ibm.security.guardium.Reportsv3CreateControlResponse;
 import com.ibm.security.guardium.Reportsv3CreateFieldsByCategoryRequest;
 import com.ibm.security.guardium.Reportsv3CreateFieldsByCategoryResponse;
+import com.ibm.security.guardium.Reportsv3CreateGradeRequest;
+import com.ibm.security.guardium.Reportsv3CreateGradeResponse;
 import com.ibm.security.guardium.Reportsv3CreateJoinRequest;
 import com.ibm.security.guardium.Reportsv3CreateJoinResponse;
+import com.ibm.security.guardium.Reportsv3CreateMeasureRequest;
+import com.ibm.security.guardium.Reportsv3CreateMeasureResponse;
+import com.ibm.security.guardium.Reportsv3CreateMetricRequest;
+import com.ibm.security.guardium.Reportsv3CreateMetricResponse;
+import com.ibm.security.guardium.Reportsv3CreateProgramRequest;
+import com.ibm.security.guardium.Reportsv3CreateProgramResponse;
 import com.ibm.security.guardium.Reportsv3CreateReportRequest;
 import com.ibm.security.guardium.Reportsv3CreateReportResponse;
+import com.ibm.security.guardium.Reportsv3CreateRequirementRequest;
+import com.ibm.security.guardium.Reportsv3CreateRequirementResponse;
 import com.ibm.security.guardium.Reportsv3CreateVariantRequest;
 import com.ibm.security.guardium.Reportsv3CreateVariantResponse;
 import com.ibm.security.guardium.Reportsv3DeleteCategoryResponse;
 import com.ibm.security.guardium.Reportsv3DeleteChartResponse;
 import com.ibm.security.guardium.Reportsv3DeleteChartTemplatev2Response;
 import com.ibm.security.guardium.Reportsv3DeleteChartv2Response;
+import com.ibm.security.guardium.Reportsv3DeleteControlRequest;
+import com.ibm.security.guardium.Reportsv3DeleteControlResponse;
 import com.ibm.security.guardium.Reportsv3DeleteFieldsByCategoryResponse;
+import com.ibm.security.guardium.Reportsv3DeleteGradeRequest;
+import com.ibm.security.guardium.Reportsv3DeleteGradeResponse;
 import com.ibm.security.guardium.Reportsv3DeleteJoinResponse;
+import com.ibm.security.guardium.Reportsv3DeleteMeasureRequest;
+import com.ibm.security.guardium.Reportsv3DeleteMeasureResponse;
+import com.ibm.security.guardium.Reportsv3DeleteMetricRequest;
+import com.ibm.security.guardium.Reportsv3DeleteMetricResponse;
+import com.ibm.security.guardium.Reportsv3DeleteProgramRequest;
+import com.ibm.security.guardium.Reportsv3DeleteProgramResponse;
 import com.ibm.security.guardium.Reportsv3DeleteReportResponse;
+import com.ibm.security.guardium.Reportsv3DeleteRequirementRequest;
+import com.ibm.security.guardium.Reportsv3DeleteRequirementResponse;
 import com.ibm.security.guardium.Reportsv3DeleteVariantResponse;
 import com.ibm.security.guardium.Reportsv3GetCategoriesResponse;
 import com.ibm.security.guardium.Reportsv3GetChartSettingsResponse;
 import com.ibm.security.guardium.Reportsv3GetChartSettingsv2Response;
 import com.ibm.security.guardium.Reportsv3GetChartTemplatesv2Response;
+import com.ibm.security.guardium.Reportsv3GetControlsResponse;
 import com.ibm.security.guardium.Reportsv3GetFieldsByCategoriesResponse;
 import com.ibm.security.guardium.Reportsv3GetFieldsByCategoryResponse;
+import com.ibm.security.guardium.Reportsv3GetGradesResponse;
 import com.ibm.security.guardium.Reportsv3GetJoinsResponse;
+import com.ibm.security.guardium.Reportsv3GetMeasuresResponse;
+import com.ibm.security.guardium.Reportsv3GetMetricsResponse;
+import com.ibm.security.guardium.Reportsv3GetProgramsResponse;
 import com.ibm.security.guardium.Reportsv3GetQueryByReportDefinitionRequest;
 import com.ibm.security.guardium.Reportsv3GetQueryByReportIDRequest;
 import com.ibm.security.guardium.Reportsv3GetReportDefinitionResponse;
@@ -68,12 +97,15 @@ import com.ibm.security.guardium.Reportsv3GetReportTimestampHeaderResponse;
 import com.ibm.security.guardium.Reportsv3GetReportsForJoinResponse;
 import com.ibm.security.guardium.Reportsv3GetReportsResponse;
 import com.ibm.security.guardium.Reportsv3GetReportsTagsResponse;
+import com.ibm.security.guardium.Reportsv3GetRequirementsResponse;
 import com.ibm.security.guardium.Reportsv3GetVariantResponse;
 import com.ibm.security.guardium.Reportsv3GetVariantsResponse;
 import com.ibm.security.guardium.Reportsv3PartialChartUpdateRequest;
 import com.ibm.security.guardium.Reportsv3PartialChartUpdateResponse;
 import com.ibm.security.guardium.Reportsv3PartialReportUpdateRequest;
 import com.ibm.security.guardium.Reportsv3PartialReportUpdateResponse;
+import com.ibm.security.guardium.Reportsv3RunGradesRequest;
+import com.ibm.security.guardium.Reportsv3RunGradesResponse;
 import com.ibm.security.guardium.Reportsv3RunReportResponse;
 import com.ibm.security.guardium.Reportsv3RunVariantOperationRequest;
 import com.ibm.security.guardium.Reportsv3RunVariantOperationResponse;
@@ -82,10 +114,22 @@ import com.ibm.security.guardium.Reportsv3UpdateChartRequest;
 import com.ibm.security.guardium.Reportsv3UpdateChartResponse;
 import com.ibm.security.guardium.Reportsv3UpdateChartv2Request;
 import com.ibm.security.guardium.Reportsv3UpdateChartv2Response;
+import com.ibm.security.guardium.Reportsv3UpdateControlRequest;
+import com.ibm.security.guardium.Reportsv3UpdateControlResponse;
+import com.ibm.security.guardium.Reportsv3UpdateGradeRequest;
+import com.ibm.security.guardium.Reportsv3UpdateGradeResponse;
 import com.ibm.security.guardium.Reportsv3UpdateJoinRequest;
 import com.ibm.security.guardium.Reportsv3UpdateJoinResponse;
+import com.ibm.security.guardium.Reportsv3UpdateMeasureRequest;
+import com.ibm.security.guardium.Reportsv3UpdateMeasureResponse;
+import com.ibm.security.guardium.Reportsv3UpdateMetricRequest;
+import com.ibm.security.guardium.Reportsv3UpdateMetricResponse;
+import com.ibm.security.guardium.Reportsv3UpdateProgramRequest;
+import com.ibm.security.guardium.Reportsv3UpdateProgramResponse;
 import com.ibm.security.guardium.Reportsv3UpdateReportRequest;
 import com.ibm.security.guardium.Reportsv3UpdateReportResponse;
+import com.ibm.security.guardium.Reportsv3UpdateRequirementRequest;
+import com.ibm.security.guardium.Reportsv3UpdateRequirementResponse;
 import com.ibm.security.guardium.Reportsv3UpdateVariantOverrideRequest;
 import com.ibm.security.guardium.Reportsv3UpdateVariantOverrideResponse;
 import com.ibm.security.guardium.RuntimeError;
@@ -642,6 +686,133 @@ public class ReportsServiceApi {
         return localVarCall;
     }
     /**
+     * Build call for reportsServiceCreateControl
+     * @param reportsv3CreateControlRequest  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceCreateControlCall(Reportsv3CreateControlRequest reportsv3CreateControlRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = reportsv3CreateControlRequest;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/compliance/controls";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call reportsServiceCreateControlValidateBeforeCall(Reportsv3CreateControlRequest reportsv3CreateControlRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'reportsv3CreateControlRequest' is set
+        if (reportsv3CreateControlRequest == null) {
+            throw new ApiException("Missing the required parameter 'reportsv3CreateControlRequest' when calling reportsServiceCreateControl(Async)");
+        }
+
+        return reportsServiceCreateControlCall(reportsv3CreateControlRequest, _callback);
+
+    }
+
+    /**
+     * Summary: Create Control. Description: Create a unique Control.
+     * 
+     * @param reportsv3CreateControlRequest  (required)
+     * @return Reportsv3CreateControlResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Reportsv3CreateControlResponse reportsServiceCreateControl(Reportsv3CreateControlRequest reportsv3CreateControlRequest) throws ApiException {
+        ApiResponse<Reportsv3CreateControlResponse> localVarResp = reportsServiceCreateControlWithHttpInfo(reportsv3CreateControlRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Create Control. Description: Create a unique Control.
+     * 
+     * @param reportsv3CreateControlRequest  (required)
+     * @return ApiResponse&lt;Reportsv3CreateControlResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Reportsv3CreateControlResponse> reportsServiceCreateControlWithHttpInfo(Reportsv3CreateControlRequest reportsv3CreateControlRequest) throws ApiException {
+        okhttp3.Call localVarCall = reportsServiceCreateControlValidateBeforeCall(reportsv3CreateControlRequest, null);
+        Type localVarReturnType = new TypeToken<Reportsv3CreateControlResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Create Control. Description: Create a unique Control. (asynchronously)
+     * 
+     * @param reportsv3CreateControlRequest  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceCreateControlAsync(Reportsv3CreateControlRequest reportsv3CreateControlRequest, final ApiCallback<Reportsv3CreateControlResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = reportsServiceCreateControlValidateBeforeCall(reportsv3CreateControlRequest, _callback);
+        Type localVarReturnType = new TypeToken<Reportsv3CreateControlResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for reportsServiceCreateFieldsByCategory
      * @param reportsv3CreateFieldsByCategoryRequest  (required)
      * @param _callback Callback for upload/download progress
@@ -765,6 +936,133 @@ public class ReportsServiceApi {
 
         okhttp3.Call localVarCall = reportsServiceCreateFieldsByCategoryValidateBeforeCall(reportsv3CreateFieldsByCategoryRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3CreateFieldsByCategoryResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for reportsServiceCreateGrade
+     * @param reportsv3CreateGradeRequest  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceCreateGradeCall(Reportsv3CreateGradeRequest reportsv3CreateGradeRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = reportsv3CreateGradeRequest;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/compliance/grades";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call reportsServiceCreateGradeValidateBeforeCall(Reportsv3CreateGradeRequest reportsv3CreateGradeRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'reportsv3CreateGradeRequest' is set
+        if (reportsv3CreateGradeRequest == null) {
+            throw new ApiException("Missing the required parameter 'reportsv3CreateGradeRequest' when calling reportsServiceCreateGrade(Async)");
+        }
+
+        return reportsServiceCreateGradeCall(reportsv3CreateGradeRequest, _callback);
+
+    }
+
+    /**
+     * Summary: Create Grade. Description: Create a unique Grade.
+     * 
+     * @param reportsv3CreateGradeRequest  (required)
+     * @return Reportsv3CreateGradeResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Reportsv3CreateGradeResponse reportsServiceCreateGrade(Reportsv3CreateGradeRequest reportsv3CreateGradeRequest) throws ApiException {
+        ApiResponse<Reportsv3CreateGradeResponse> localVarResp = reportsServiceCreateGradeWithHttpInfo(reportsv3CreateGradeRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Create Grade. Description: Create a unique Grade.
+     * 
+     * @param reportsv3CreateGradeRequest  (required)
+     * @return ApiResponse&lt;Reportsv3CreateGradeResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Reportsv3CreateGradeResponse> reportsServiceCreateGradeWithHttpInfo(Reportsv3CreateGradeRequest reportsv3CreateGradeRequest) throws ApiException {
+        okhttp3.Call localVarCall = reportsServiceCreateGradeValidateBeforeCall(reportsv3CreateGradeRequest, null);
+        Type localVarReturnType = new TypeToken<Reportsv3CreateGradeResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Create Grade. Description: Create a unique Grade. (asynchronously)
+     * 
+     * @param reportsv3CreateGradeRequest  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceCreateGradeAsync(Reportsv3CreateGradeRequest reportsv3CreateGradeRequest, final ApiCallback<Reportsv3CreateGradeResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = reportsServiceCreateGradeValidateBeforeCall(reportsv3CreateGradeRequest, _callback);
+        Type localVarReturnType = new TypeToken<Reportsv3CreateGradeResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -896,6 +1194,387 @@ public class ReportsServiceApi {
         return localVarCall;
     }
     /**
+     * Build call for reportsServiceCreateMeasure
+     * @param reportsv3CreateMeasureRequest  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceCreateMeasureCall(Reportsv3CreateMeasureRequest reportsv3CreateMeasureRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = reportsv3CreateMeasureRequest;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/compliance/measures";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call reportsServiceCreateMeasureValidateBeforeCall(Reportsv3CreateMeasureRequest reportsv3CreateMeasureRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'reportsv3CreateMeasureRequest' is set
+        if (reportsv3CreateMeasureRequest == null) {
+            throw new ApiException("Missing the required parameter 'reportsv3CreateMeasureRequest' when calling reportsServiceCreateMeasure(Async)");
+        }
+
+        return reportsServiceCreateMeasureCall(reportsv3CreateMeasureRequest, _callback);
+
+    }
+
+    /**
+     * Summary: Create measure. Description: Create a unique measure.
+     * 
+     * @param reportsv3CreateMeasureRequest  (required)
+     * @return Reportsv3CreateMeasureResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Reportsv3CreateMeasureResponse reportsServiceCreateMeasure(Reportsv3CreateMeasureRequest reportsv3CreateMeasureRequest) throws ApiException {
+        ApiResponse<Reportsv3CreateMeasureResponse> localVarResp = reportsServiceCreateMeasureWithHttpInfo(reportsv3CreateMeasureRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Create measure. Description: Create a unique measure.
+     * 
+     * @param reportsv3CreateMeasureRequest  (required)
+     * @return ApiResponse&lt;Reportsv3CreateMeasureResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Reportsv3CreateMeasureResponse> reportsServiceCreateMeasureWithHttpInfo(Reportsv3CreateMeasureRequest reportsv3CreateMeasureRequest) throws ApiException {
+        okhttp3.Call localVarCall = reportsServiceCreateMeasureValidateBeforeCall(reportsv3CreateMeasureRequest, null);
+        Type localVarReturnType = new TypeToken<Reportsv3CreateMeasureResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Create measure. Description: Create a unique measure. (asynchronously)
+     * 
+     * @param reportsv3CreateMeasureRequest  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceCreateMeasureAsync(Reportsv3CreateMeasureRequest reportsv3CreateMeasureRequest, final ApiCallback<Reportsv3CreateMeasureResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = reportsServiceCreateMeasureValidateBeforeCall(reportsv3CreateMeasureRequest, _callback);
+        Type localVarReturnType = new TypeToken<Reportsv3CreateMeasureResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for reportsServiceCreateMetric
+     * @param reportsv3CreateMetricRequest  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceCreateMetricCall(Reportsv3CreateMetricRequest reportsv3CreateMetricRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = reportsv3CreateMetricRequest;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/compliance/metrics";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call reportsServiceCreateMetricValidateBeforeCall(Reportsv3CreateMetricRequest reportsv3CreateMetricRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'reportsv3CreateMetricRequest' is set
+        if (reportsv3CreateMetricRequest == null) {
+            throw new ApiException("Missing the required parameter 'reportsv3CreateMetricRequest' when calling reportsServiceCreateMetric(Async)");
+        }
+
+        return reportsServiceCreateMetricCall(reportsv3CreateMetricRequest, _callback);
+
+    }
+
+    /**
+     * Summary: Create metric. Description: Create a unique metric.
+     * 
+     * @param reportsv3CreateMetricRequest  (required)
+     * @return Reportsv3CreateMetricResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Reportsv3CreateMetricResponse reportsServiceCreateMetric(Reportsv3CreateMetricRequest reportsv3CreateMetricRequest) throws ApiException {
+        ApiResponse<Reportsv3CreateMetricResponse> localVarResp = reportsServiceCreateMetricWithHttpInfo(reportsv3CreateMetricRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Create metric. Description: Create a unique metric.
+     * 
+     * @param reportsv3CreateMetricRequest  (required)
+     * @return ApiResponse&lt;Reportsv3CreateMetricResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Reportsv3CreateMetricResponse> reportsServiceCreateMetricWithHttpInfo(Reportsv3CreateMetricRequest reportsv3CreateMetricRequest) throws ApiException {
+        okhttp3.Call localVarCall = reportsServiceCreateMetricValidateBeforeCall(reportsv3CreateMetricRequest, null);
+        Type localVarReturnType = new TypeToken<Reportsv3CreateMetricResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Create metric. Description: Create a unique metric. (asynchronously)
+     * 
+     * @param reportsv3CreateMetricRequest  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceCreateMetricAsync(Reportsv3CreateMetricRequest reportsv3CreateMetricRequest, final ApiCallback<Reportsv3CreateMetricResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = reportsServiceCreateMetricValidateBeforeCall(reportsv3CreateMetricRequest, _callback);
+        Type localVarReturnType = new TypeToken<Reportsv3CreateMetricResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for reportsServiceCreateProgram
+     * @param reportsv3CreateProgramRequest  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceCreateProgramCall(Reportsv3CreateProgramRequest reportsv3CreateProgramRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = reportsv3CreateProgramRequest;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/compliance/programs";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call reportsServiceCreateProgramValidateBeforeCall(Reportsv3CreateProgramRequest reportsv3CreateProgramRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'reportsv3CreateProgramRequest' is set
+        if (reportsv3CreateProgramRequest == null) {
+            throw new ApiException("Missing the required parameter 'reportsv3CreateProgramRequest' when calling reportsServiceCreateProgram(Async)");
+        }
+
+        return reportsServiceCreateProgramCall(reportsv3CreateProgramRequest, _callback);
+
+    }
+
+    /**
+     * Summary: Create Program. Description: Create a unique Program.
+     * 
+     * @param reportsv3CreateProgramRequest  (required)
+     * @return Reportsv3CreateProgramResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Reportsv3CreateProgramResponse reportsServiceCreateProgram(Reportsv3CreateProgramRequest reportsv3CreateProgramRequest) throws ApiException {
+        ApiResponse<Reportsv3CreateProgramResponse> localVarResp = reportsServiceCreateProgramWithHttpInfo(reportsv3CreateProgramRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Create Program. Description: Create a unique Program.
+     * 
+     * @param reportsv3CreateProgramRequest  (required)
+     * @return ApiResponse&lt;Reportsv3CreateProgramResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Reportsv3CreateProgramResponse> reportsServiceCreateProgramWithHttpInfo(Reportsv3CreateProgramRequest reportsv3CreateProgramRequest) throws ApiException {
+        okhttp3.Call localVarCall = reportsServiceCreateProgramValidateBeforeCall(reportsv3CreateProgramRequest, null);
+        Type localVarReturnType = new TypeToken<Reportsv3CreateProgramResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Create Program. Description: Create a unique Program. (asynchronously)
+     * 
+     * @param reportsv3CreateProgramRequest  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceCreateProgramAsync(Reportsv3CreateProgramRequest reportsv3CreateProgramRequest, final ApiCallback<Reportsv3CreateProgramResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = reportsServiceCreateProgramValidateBeforeCall(reportsv3CreateProgramRequest, _callback);
+        Type localVarReturnType = new TypeToken<Reportsv3CreateProgramResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for reportsServiceCreateReport
      * @param reportsv3CreateReportRequest  (required)
      * @param _callback Callback for upload/download progress
@@ -1019,6 +1698,133 @@ public class ReportsServiceApi {
 
         okhttp3.Call localVarCall = reportsServiceCreateReportValidateBeforeCall(reportsv3CreateReportRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3CreateReportResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for reportsServiceCreateRequirement
+     * @param reportsv3CreateRequirementRequest  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceCreateRequirementCall(Reportsv3CreateRequirementRequest reportsv3CreateRequirementRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = reportsv3CreateRequirementRequest;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/compliance/requirements";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call reportsServiceCreateRequirementValidateBeforeCall(Reportsv3CreateRequirementRequest reportsv3CreateRequirementRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'reportsv3CreateRequirementRequest' is set
+        if (reportsv3CreateRequirementRequest == null) {
+            throw new ApiException("Missing the required parameter 'reportsv3CreateRequirementRequest' when calling reportsServiceCreateRequirement(Async)");
+        }
+
+        return reportsServiceCreateRequirementCall(reportsv3CreateRequirementRequest, _callback);
+
+    }
+
+    /**
+     * Summary: Create Requirement. Description: Create a unique Requirement.
+     * 
+     * @param reportsv3CreateRequirementRequest  (required)
+     * @return Reportsv3CreateRequirementResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Reportsv3CreateRequirementResponse reportsServiceCreateRequirement(Reportsv3CreateRequirementRequest reportsv3CreateRequirementRequest) throws ApiException {
+        ApiResponse<Reportsv3CreateRequirementResponse> localVarResp = reportsServiceCreateRequirementWithHttpInfo(reportsv3CreateRequirementRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Create Requirement. Description: Create a unique Requirement.
+     * 
+     * @param reportsv3CreateRequirementRequest  (required)
+     * @return ApiResponse&lt;Reportsv3CreateRequirementResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Reportsv3CreateRequirementResponse> reportsServiceCreateRequirementWithHttpInfo(Reportsv3CreateRequirementRequest reportsv3CreateRequirementRequest) throws ApiException {
+        okhttp3.Call localVarCall = reportsServiceCreateRequirementValidateBeforeCall(reportsv3CreateRequirementRequest, null);
+        Type localVarReturnType = new TypeToken<Reportsv3CreateRequirementResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Create Requirement. Description: Create a unique Requirement. (asynchronously)
+     * 
+     * @param reportsv3CreateRequirementRequest  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceCreateRequirementAsync(Reportsv3CreateRequirementRequest reportsv3CreateRequirementRequest, final ApiCallback<Reportsv3CreateRequirementResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = reportsServiceCreateRequirementValidateBeforeCall(reportsv3CreateRequirementRequest, _callback);
+        Type localVarReturnType = new TypeToken<Reportsv3CreateRequirementResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1664,6 +2470,143 @@ public class ReportsServiceApi {
         return localVarCall;
     }
     /**
+     * Build call for reportsServiceDeleteControl
+     * @param controlId The ID of the control to delete (required)
+     * @param reportsv3DeleteControlRequest  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceDeleteControlCall(Integer controlId, Reportsv3DeleteControlRequest reportsv3DeleteControlRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = reportsv3DeleteControlRequest;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/compliance/controls/{control_id}"
+            .replace("{" + "control_id" + "}", localVarApiClient.escapeString(controlId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call reportsServiceDeleteControlValidateBeforeCall(Integer controlId, Reportsv3DeleteControlRequest reportsv3DeleteControlRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'controlId' is set
+        if (controlId == null) {
+            throw new ApiException("Missing the required parameter 'controlId' when calling reportsServiceDeleteControl(Async)");
+        }
+
+        // verify the required parameter 'reportsv3DeleteControlRequest' is set
+        if (reportsv3DeleteControlRequest == null) {
+            throw new ApiException("Missing the required parameter 'reportsv3DeleteControlRequest' when calling reportsServiceDeleteControl(Async)");
+        }
+
+        return reportsServiceDeleteControlCall(controlId, reportsv3DeleteControlRequest, _callback);
+
+    }
+
+    /**
+     * Summary: Delete Control Description: Delete a Control.
+     * 
+     * @param controlId The ID of the control to delete (required)
+     * @param reportsv3DeleteControlRequest  (required)
+     * @return Reportsv3DeleteControlResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Reportsv3DeleteControlResponse reportsServiceDeleteControl(Integer controlId, Reportsv3DeleteControlRequest reportsv3DeleteControlRequest) throws ApiException {
+        ApiResponse<Reportsv3DeleteControlResponse> localVarResp = reportsServiceDeleteControlWithHttpInfo(controlId, reportsv3DeleteControlRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Delete Control Description: Delete a Control.
+     * 
+     * @param controlId The ID of the control to delete (required)
+     * @param reportsv3DeleteControlRequest  (required)
+     * @return ApiResponse&lt;Reportsv3DeleteControlResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Reportsv3DeleteControlResponse> reportsServiceDeleteControlWithHttpInfo(Integer controlId, Reportsv3DeleteControlRequest reportsv3DeleteControlRequest) throws ApiException {
+        okhttp3.Call localVarCall = reportsServiceDeleteControlValidateBeforeCall(controlId, reportsv3DeleteControlRequest, null);
+        Type localVarReturnType = new TypeToken<Reportsv3DeleteControlResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Delete Control Description: Delete a Control. (asynchronously)
+     * 
+     * @param controlId The ID of the control to delete (required)
+     * @param reportsv3DeleteControlRequest  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceDeleteControlAsync(Integer controlId, Reportsv3DeleteControlRequest reportsv3DeleteControlRequest, final ApiCallback<Reportsv3DeleteControlResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = reportsServiceDeleteControlValidateBeforeCall(controlId, reportsv3DeleteControlRequest, _callback);
+        Type localVarReturnType = new TypeToken<Reportsv3DeleteControlResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for reportsServiceDeleteFieldsByCategory
      * @param headerIds Header ids. (optional)
      * @param tableName table name. (optional)
@@ -1797,6 +2740,143 @@ public class ReportsServiceApi {
         return localVarCall;
     }
     /**
+     * Build call for reportsServiceDeleteGrade
+     * @param gradeId The id of the grade to be deleted. (required)
+     * @param reportsv3DeleteGradeRequest  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceDeleteGradeCall(Integer gradeId, Reportsv3DeleteGradeRequest reportsv3DeleteGradeRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = reportsv3DeleteGradeRequest;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/compliance/grades/{grade_id}"
+            .replace("{" + "grade_id" + "}", localVarApiClient.escapeString(gradeId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call reportsServiceDeleteGradeValidateBeforeCall(Integer gradeId, Reportsv3DeleteGradeRequest reportsv3DeleteGradeRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'gradeId' is set
+        if (gradeId == null) {
+            throw new ApiException("Missing the required parameter 'gradeId' when calling reportsServiceDeleteGrade(Async)");
+        }
+
+        // verify the required parameter 'reportsv3DeleteGradeRequest' is set
+        if (reportsv3DeleteGradeRequest == null) {
+            throw new ApiException("Missing the required parameter 'reportsv3DeleteGradeRequest' when calling reportsServiceDeleteGrade(Async)");
+        }
+
+        return reportsServiceDeleteGradeCall(gradeId, reportsv3DeleteGradeRequest, _callback);
+
+    }
+
+    /**
+     * Summary: Delete Grade Description: Delete a Grade.
+     * 
+     * @param gradeId The id of the grade to be deleted. (required)
+     * @param reportsv3DeleteGradeRequest  (required)
+     * @return Reportsv3DeleteGradeResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Reportsv3DeleteGradeResponse reportsServiceDeleteGrade(Integer gradeId, Reportsv3DeleteGradeRequest reportsv3DeleteGradeRequest) throws ApiException {
+        ApiResponse<Reportsv3DeleteGradeResponse> localVarResp = reportsServiceDeleteGradeWithHttpInfo(gradeId, reportsv3DeleteGradeRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Delete Grade Description: Delete a Grade.
+     * 
+     * @param gradeId The id of the grade to be deleted. (required)
+     * @param reportsv3DeleteGradeRequest  (required)
+     * @return ApiResponse&lt;Reportsv3DeleteGradeResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Reportsv3DeleteGradeResponse> reportsServiceDeleteGradeWithHttpInfo(Integer gradeId, Reportsv3DeleteGradeRequest reportsv3DeleteGradeRequest) throws ApiException {
+        okhttp3.Call localVarCall = reportsServiceDeleteGradeValidateBeforeCall(gradeId, reportsv3DeleteGradeRequest, null);
+        Type localVarReturnType = new TypeToken<Reportsv3DeleteGradeResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Delete Grade Description: Delete a Grade. (asynchronously)
+     * 
+     * @param gradeId The id of the grade to be deleted. (required)
+     * @param reportsv3DeleteGradeRequest  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceDeleteGradeAsync(Integer gradeId, Reportsv3DeleteGradeRequest reportsv3DeleteGradeRequest, final ApiCallback<Reportsv3DeleteGradeResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = reportsServiceDeleteGradeValidateBeforeCall(gradeId, reportsv3DeleteGradeRequest, _callback);
+        Type localVarReturnType = new TypeToken<Reportsv3DeleteGradeResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for reportsServiceDeleteJoin
      * @param joinId The id of the join to be deleted. (required)
      * @param _callback Callback for upload/download progress
@@ -1924,6 +3004,417 @@ public class ReportsServiceApi {
         return localVarCall;
     }
     /**
+     * Build call for reportsServiceDeleteMeasure
+     * @param measureId The id of the measure to be deleted. (required)
+     * @param reportsv3DeleteMeasureRequest  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceDeleteMeasureCall(Integer measureId, Reportsv3DeleteMeasureRequest reportsv3DeleteMeasureRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = reportsv3DeleteMeasureRequest;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/compliance/measures/{measure_id}"
+            .replace("{" + "measure_id" + "}", localVarApiClient.escapeString(measureId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call reportsServiceDeleteMeasureValidateBeforeCall(Integer measureId, Reportsv3DeleteMeasureRequest reportsv3DeleteMeasureRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'measureId' is set
+        if (measureId == null) {
+            throw new ApiException("Missing the required parameter 'measureId' when calling reportsServiceDeleteMeasure(Async)");
+        }
+
+        // verify the required parameter 'reportsv3DeleteMeasureRequest' is set
+        if (reportsv3DeleteMeasureRequest == null) {
+            throw new ApiException("Missing the required parameter 'reportsv3DeleteMeasureRequest' when calling reportsServiceDeleteMeasure(Async)");
+        }
+
+        return reportsServiceDeleteMeasureCall(measureId, reportsv3DeleteMeasureRequest, _callback);
+
+    }
+
+    /**
+     * Summary: Delete measure Description: Delete a measure.
+     * 
+     * @param measureId The id of the measure to be deleted. (required)
+     * @param reportsv3DeleteMeasureRequest  (required)
+     * @return Reportsv3DeleteMeasureResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Reportsv3DeleteMeasureResponse reportsServiceDeleteMeasure(Integer measureId, Reportsv3DeleteMeasureRequest reportsv3DeleteMeasureRequest) throws ApiException {
+        ApiResponse<Reportsv3DeleteMeasureResponse> localVarResp = reportsServiceDeleteMeasureWithHttpInfo(measureId, reportsv3DeleteMeasureRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Delete measure Description: Delete a measure.
+     * 
+     * @param measureId The id of the measure to be deleted. (required)
+     * @param reportsv3DeleteMeasureRequest  (required)
+     * @return ApiResponse&lt;Reportsv3DeleteMeasureResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Reportsv3DeleteMeasureResponse> reportsServiceDeleteMeasureWithHttpInfo(Integer measureId, Reportsv3DeleteMeasureRequest reportsv3DeleteMeasureRequest) throws ApiException {
+        okhttp3.Call localVarCall = reportsServiceDeleteMeasureValidateBeforeCall(measureId, reportsv3DeleteMeasureRequest, null);
+        Type localVarReturnType = new TypeToken<Reportsv3DeleteMeasureResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Delete measure Description: Delete a measure. (asynchronously)
+     * 
+     * @param measureId The id of the measure to be deleted. (required)
+     * @param reportsv3DeleteMeasureRequest  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceDeleteMeasureAsync(Integer measureId, Reportsv3DeleteMeasureRequest reportsv3DeleteMeasureRequest, final ApiCallback<Reportsv3DeleteMeasureResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = reportsServiceDeleteMeasureValidateBeforeCall(measureId, reportsv3DeleteMeasureRequest, _callback);
+        Type localVarReturnType = new TypeToken<Reportsv3DeleteMeasureResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for reportsServiceDeleteMetric
+     * @param metricId The id of the metric to be deleted. (required)
+     * @param reportsv3DeleteMetricRequest  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceDeleteMetricCall(Integer metricId, Reportsv3DeleteMetricRequest reportsv3DeleteMetricRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = reportsv3DeleteMetricRequest;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/compliance/metrics/{metric_id}"
+            .replace("{" + "metric_id" + "}", localVarApiClient.escapeString(metricId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call reportsServiceDeleteMetricValidateBeforeCall(Integer metricId, Reportsv3DeleteMetricRequest reportsv3DeleteMetricRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'metricId' is set
+        if (metricId == null) {
+            throw new ApiException("Missing the required parameter 'metricId' when calling reportsServiceDeleteMetric(Async)");
+        }
+
+        // verify the required parameter 'reportsv3DeleteMetricRequest' is set
+        if (reportsv3DeleteMetricRequest == null) {
+            throw new ApiException("Missing the required parameter 'reportsv3DeleteMetricRequest' when calling reportsServiceDeleteMetric(Async)");
+        }
+
+        return reportsServiceDeleteMetricCall(metricId, reportsv3DeleteMetricRequest, _callback);
+
+    }
+
+    /**
+     * Summary: Delete metric Description: Delete a metric.
+     * 
+     * @param metricId The id of the metric to be deleted. (required)
+     * @param reportsv3DeleteMetricRequest  (required)
+     * @return Reportsv3DeleteMetricResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Reportsv3DeleteMetricResponse reportsServiceDeleteMetric(Integer metricId, Reportsv3DeleteMetricRequest reportsv3DeleteMetricRequest) throws ApiException {
+        ApiResponse<Reportsv3DeleteMetricResponse> localVarResp = reportsServiceDeleteMetricWithHttpInfo(metricId, reportsv3DeleteMetricRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Delete metric Description: Delete a metric.
+     * 
+     * @param metricId The id of the metric to be deleted. (required)
+     * @param reportsv3DeleteMetricRequest  (required)
+     * @return ApiResponse&lt;Reportsv3DeleteMetricResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Reportsv3DeleteMetricResponse> reportsServiceDeleteMetricWithHttpInfo(Integer metricId, Reportsv3DeleteMetricRequest reportsv3DeleteMetricRequest) throws ApiException {
+        okhttp3.Call localVarCall = reportsServiceDeleteMetricValidateBeforeCall(metricId, reportsv3DeleteMetricRequest, null);
+        Type localVarReturnType = new TypeToken<Reportsv3DeleteMetricResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Delete metric Description: Delete a metric. (asynchronously)
+     * 
+     * @param metricId The id of the metric to be deleted. (required)
+     * @param reportsv3DeleteMetricRequest  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceDeleteMetricAsync(Integer metricId, Reportsv3DeleteMetricRequest reportsv3DeleteMetricRequest, final ApiCallback<Reportsv3DeleteMetricResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = reportsServiceDeleteMetricValidateBeforeCall(metricId, reportsv3DeleteMetricRequest, _callback);
+        Type localVarReturnType = new TypeToken<Reportsv3DeleteMetricResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for reportsServiceDeleteProgram
+     * @param programId The ID of the program to delete (required)
+     * @param reportsv3DeleteProgramRequest  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceDeleteProgramCall(Integer programId, Reportsv3DeleteProgramRequest reportsv3DeleteProgramRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = reportsv3DeleteProgramRequest;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/compliance/programs/{program_id}"
+            .replace("{" + "program_id" + "}", localVarApiClient.escapeString(programId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call reportsServiceDeleteProgramValidateBeforeCall(Integer programId, Reportsv3DeleteProgramRequest reportsv3DeleteProgramRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'programId' is set
+        if (programId == null) {
+            throw new ApiException("Missing the required parameter 'programId' when calling reportsServiceDeleteProgram(Async)");
+        }
+
+        // verify the required parameter 'reportsv3DeleteProgramRequest' is set
+        if (reportsv3DeleteProgramRequest == null) {
+            throw new ApiException("Missing the required parameter 'reportsv3DeleteProgramRequest' when calling reportsServiceDeleteProgram(Async)");
+        }
+
+        return reportsServiceDeleteProgramCall(programId, reportsv3DeleteProgramRequest, _callback);
+
+    }
+
+    /**
+     * Summary: Delete Program Description: Delete a Program.
+     * 
+     * @param programId The ID of the program to delete (required)
+     * @param reportsv3DeleteProgramRequest  (required)
+     * @return Reportsv3DeleteProgramResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Reportsv3DeleteProgramResponse reportsServiceDeleteProgram(Integer programId, Reportsv3DeleteProgramRequest reportsv3DeleteProgramRequest) throws ApiException {
+        ApiResponse<Reportsv3DeleteProgramResponse> localVarResp = reportsServiceDeleteProgramWithHttpInfo(programId, reportsv3DeleteProgramRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Delete Program Description: Delete a Program.
+     * 
+     * @param programId The ID of the program to delete (required)
+     * @param reportsv3DeleteProgramRequest  (required)
+     * @return ApiResponse&lt;Reportsv3DeleteProgramResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Reportsv3DeleteProgramResponse> reportsServiceDeleteProgramWithHttpInfo(Integer programId, Reportsv3DeleteProgramRequest reportsv3DeleteProgramRequest) throws ApiException {
+        okhttp3.Call localVarCall = reportsServiceDeleteProgramValidateBeforeCall(programId, reportsv3DeleteProgramRequest, null);
+        Type localVarReturnType = new TypeToken<Reportsv3DeleteProgramResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Delete Program Description: Delete a Program. (asynchronously)
+     * 
+     * @param programId The ID of the program to delete (required)
+     * @param reportsv3DeleteProgramRequest  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceDeleteProgramAsync(Integer programId, Reportsv3DeleteProgramRequest reportsv3DeleteProgramRequest, final ApiCallback<Reportsv3DeleteProgramResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = reportsServiceDeleteProgramValidateBeforeCall(programId, reportsv3DeleteProgramRequest, _callback);
+        Type localVarReturnType = new TypeToken<Reportsv3DeleteProgramResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for reportsServiceDeleteReport
      * @param reportId The id of the Report to be deleted. (required)
      * @param _callback Callback for upload/download progress
@@ -2047,6 +3538,143 @@ public class ReportsServiceApi {
 
         okhttp3.Call localVarCall = reportsServiceDeleteReportValidateBeforeCall(reportId, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3DeleteReportResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for reportsServiceDeleteRequirement
+     * @param requirementId The requirement to delete&#39;s ID (required)
+     * @param reportsv3DeleteRequirementRequest  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceDeleteRequirementCall(Integer requirementId, Reportsv3DeleteRequirementRequest reportsv3DeleteRequirementRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = reportsv3DeleteRequirementRequest;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/compliance/requirements/{requirement_id}"
+            .replace("{" + "requirement_id" + "}", localVarApiClient.escapeString(requirementId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call reportsServiceDeleteRequirementValidateBeforeCall(Integer requirementId, Reportsv3DeleteRequirementRequest reportsv3DeleteRequirementRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'requirementId' is set
+        if (requirementId == null) {
+            throw new ApiException("Missing the required parameter 'requirementId' when calling reportsServiceDeleteRequirement(Async)");
+        }
+
+        // verify the required parameter 'reportsv3DeleteRequirementRequest' is set
+        if (reportsv3DeleteRequirementRequest == null) {
+            throw new ApiException("Missing the required parameter 'reportsv3DeleteRequirementRequest' when calling reportsServiceDeleteRequirement(Async)");
+        }
+
+        return reportsServiceDeleteRequirementCall(requirementId, reportsv3DeleteRequirementRequest, _callback);
+
+    }
+
+    /**
+     * Summary: Delete Requirement Description: Delete a Requirement.
+     * 
+     * @param requirementId The requirement to delete&#39;s ID (required)
+     * @param reportsv3DeleteRequirementRequest  (required)
+     * @return Reportsv3DeleteRequirementResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Reportsv3DeleteRequirementResponse reportsServiceDeleteRequirement(Integer requirementId, Reportsv3DeleteRequirementRequest reportsv3DeleteRequirementRequest) throws ApiException {
+        ApiResponse<Reportsv3DeleteRequirementResponse> localVarResp = reportsServiceDeleteRequirementWithHttpInfo(requirementId, reportsv3DeleteRequirementRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Delete Requirement Description: Delete a Requirement.
+     * 
+     * @param requirementId The requirement to delete&#39;s ID (required)
+     * @param reportsv3DeleteRequirementRequest  (required)
+     * @return ApiResponse&lt;Reportsv3DeleteRequirementResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Reportsv3DeleteRequirementResponse> reportsServiceDeleteRequirementWithHttpInfo(Integer requirementId, Reportsv3DeleteRequirementRequest reportsv3DeleteRequirementRequest) throws ApiException {
+        okhttp3.Call localVarCall = reportsServiceDeleteRequirementValidateBeforeCall(requirementId, reportsv3DeleteRequirementRequest, null);
+        Type localVarReturnType = new TypeToken<Reportsv3DeleteRequirementResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Delete Requirement Description: Delete a Requirement. (asynchronously)
+     * 
+     * @param requirementId The requirement to delete&#39;s ID (required)
+     * @param reportsv3DeleteRequirementRequest  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceDeleteRequirementAsync(Integer requirementId, Reportsv3DeleteRequirementRequest reportsv3DeleteRequirementRequest, final ApiCallback<Reportsv3DeleteRequirementResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = reportsServiceDeleteRequirementValidateBeforeCall(requirementId, reportsv3DeleteRequirementRequest, _callback);
+        Type localVarReturnType = new TypeToken<Reportsv3DeleteRequirementResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -2686,6 +4314,123 @@ public class ReportsServiceApi {
         return localVarCall;
     }
     /**
+     * Build call for reportsServiceGetControls
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceGetControlsCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/compliance/controls";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call reportsServiceGetControlsValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return reportsServiceGetControlsCall(_callback);
+
+    }
+
+    /**
+     * Summary: Get controls Description: Get a list of controls with all data.
+     * 
+     * @return Reportsv3GetControlsResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Reportsv3GetControlsResponse reportsServiceGetControls() throws ApiException {
+        ApiResponse<Reportsv3GetControlsResponse> localVarResp = reportsServiceGetControlsWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Get controls Description: Get a list of controls with all data.
+     * 
+     * @return ApiResponse&lt;Reportsv3GetControlsResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Reportsv3GetControlsResponse> reportsServiceGetControlsWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = reportsServiceGetControlsValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<Reportsv3GetControlsResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Get controls Description: Get a list of controls with all data. (asynchronously)
+     * 
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceGetControlsAsync(final ApiCallback<Reportsv3GetControlsResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = reportsServiceGetControlsValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<Reportsv3GetControlsResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for reportsServiceGetFieldsByCategories
      * @param categoryIds Category IDs. (optional)
      * @param _callback Callback for upload/download progress
@@ -2952,6 +4697,123 @@ public class ReportsServiceApi {
         return localVarCall;
     }
     /**
+     * Build call for reportsServiceGetGrades
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceGetGradesCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/compliance/grades";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call reportsServiceGetGradesValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return reportsServiceGetGradesCall(_callback);
+
+    }
+
+    /**
+     * Summary: Get grades Description: Get a list of grades with all data.
+     * 
+     * @return Reportsv3GetGradesResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Reportsv3GetGradesResponse reportsServiceGetGrades() throws ApiException {
+        ApiResponse<Reportsv3GetGradesResponse> localVarResp = reportsServiceGetGradesWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Get grades Description: Get a list of grades with all data.
+     * 
+     * @return ApiResponse&lt;Reportsv3GetGradesResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Reportsv3GetGradesResponse> reportsServiceGetGradesWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = reportsServiceGetGradesValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<Reportsv3GetGradesResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Get grades Description: Get a list of grades with all data. (asynchronously)
+     * 
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceGetGradesAsync(final ApiCallback<Reportsv3GetGradesResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = reportsServiceGetGradesValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<Reportsv3GetGradesResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for reportsServiceGetJoins
      * @param categoryId Category ID (Optional). (optional)
      * @param _callback Callback for upload/download progress
@@ -3073,6 +4935,357 @@ public class ReportsServiceApi {
 
         okhttp3.Call localVarCall = reportsServiceGetJoinsValidateBeforeCall(categoryId, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3GetJoinsResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for reportsServiceGetMeasures
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceGetMeasuresCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/compliance/measures";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call reportsServiceGetMeasuresValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return reportsServiceGetMeasuresCall(_callback);
+
+    }
+
+    /**
+     * Summary: Get measures Description: Get a list of measures with all data.
+     * 
+     * @return Reportsv3GetMeasuresResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Reportsv3GetMeasuresResponse reportsServiceGetMeasures() throws ApiException {
+        ApiResponse<Reportsv3GetMeasuresResponse> localVarResp = reportsServiceGetMeasuresWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Get measures Description: Get a list of measures with all data.
+     * 
+     * @return ApiResponse&lt;Reportsv3GetMeasuresResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Reportsv3GetMeasuresResponse> reportsServiceGetMeasuresWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = reportsServiceGetMeasuresValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<Reportsv3GetMeasuresResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Get measures Description: Get a list of measures with all data. (asynchronously)
+     * 
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceGetMeasuresAsync(final ApiCallback<Reportsv3GetMeasuresResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = reportsServiceGetMeasuresValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<Reportsv3GetMeasuresResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for reportsServiceGetMetrics
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceGetMetricsCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/compliance/metrics";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call reportsServiceGetMetricsValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return reportsServiceGetMetricsCall(_callback);
+
+    }
+
+    /**
+     * Summary: Get metrics Description: Get a list of metrics with all data.
+     * 
+     * @return Reportsv3GetMetricsResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Reportsv3GetMetricsResponse reportsServiceGetMetrics() throws ApiException {
+        ApiResponse<Reportsv3GetMetricsResponse> localVarResp = reportsServiceGetMetricsWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Get metrics Description: Get a list of metrics with all data.
+     * 
+     * @return ApiResponse&lt;Reportsv3GetMetricsResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Reportsv3GetMetricsResponse> reportsServiceGetMetricsWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = reportsServiceGetMetricsValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<Reportsv3GetMetricsResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Get metrics Description: Get a list of metrics with all data. (asynchronously)
+     * 
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceGetMetricsAsync(final ApiCallback<Reportsv3GetMetricsResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = reportsServiceGetMetricsValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<Reportsv3GetMetricsResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for reportsServiceGetPrograms
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceGetProgramsCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/compliance/programs";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call reportsServiceGetProgramsValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return reportsServiceGetProgramsCall(_callback);
+
+    }
+
+    /**
+     * Summary: Get controls Description: Get a list of controls with all data.
+     * 
+     * @return Reportsv3GetProgramsResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Reportsv3GetProgramsResponse reportsServiceGetPrograms() throws ApiException {
+        ApiResponse<Reportsv3GetProgramsResponse> localVarResp = reportsServiceGetProgramsWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Get controls Description: Get a list of controls with all data.
+     * 
+     * @return ApiResponse&lt;Reportsv3GetProgramsResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Reportsv3GetProgramsResponse> reportsServiceGetProgramsWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = reportsServiceGetProgramsValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<Reportsv3GetProgramsResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Get controls Description: Get a list of controls with all data. (asynchronously)
+     * 
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceGetProgramsAsync(final ApiCallback<Reportsv3GetProgramsResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = reportsServiceGetProgramsValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<Reportsv3GetProgramsResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -4220,6 +6433,123 @@ public class ReportsServiceApi {
         return localVarCall;
     }
     /**
+     * Build call for reportsServiceGetRequirements
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceGetRequirementsCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/compliance/requirements";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call reportsServiceGetRequirementsValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return reportsServiceGetRequirementsCall(_callback);
+
+    }
+
+    /**
+     * Summary: Get requirements Description: Get a list of requirements with all data.
+     * 
+     * @return Reportsv3GetRequirementsResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Reportsv3GetRequirementsResponse reportsServiceGetRequirements() throws ApiException {
+        ApiResponse<Reportsv3GetRequirementsResponse> localVarResp = reportsServiceGetRequirementsWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Get requirements Description: Get a list of requirements with all data.
+     * 
+     * @return ApiResponse&lt;Reportsv3GetRequirementsResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Reportsv3GetRequirementsResponse> reportsServiceGetRequirementsWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = reportsServiceGetRequirementsValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<Reportsv3GetRequirementsResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Get requirements Description: Get a list of requirements with all data. (asynchronously)
+     * 
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceGetRequirementsAsync(final ApiCallback<Reportsv3GetRequirementsResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = reportsServiceGetRequirementsValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<Reportsv3GetRequirementsResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for reportsServiceGetVariant
      * @param variantId The variant id (required)
      * @param _callback Callback for upload/download progress
@@ -4734,6 +7064,133 @@ public class ReportsServiceApi {
 
         okhttp3.Call localVarCall = reportsServicePartialReportUpdateValidateBeforeCall(reportId, reportsv3PartialReportUpdateRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3PartialReportUpdateResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for reportsServiceRunGrades
+     * @param reportsv3RunGradesRequest  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceRunGradesCall(Reportsv3RunGradesRequest reportsv3RunGradesRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = reportsv3RunGradesRequest;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/compliance/grades/run";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call reportsServiceRunGradesValidateBeforeCall(Reportsv3RunGradesRequest reportsv3RunGradesRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'reportsv3RunGradesRequest' is set
+        if (reportsv3RunGradesRequest == null) {
+            throw new ApiException("Missing the required parameter 'reportsv3RunGradesRequest' when calling reportsServiceRunGrades(Async)");
+        }
+
+        return reportsServiceRunGradesCall(reportsv3RunGradesRequest, _callback);
+
+    }
+
+    /**
+     * Summary: Refresh metrics via grades. Description: Refresh metrics via grades.
+     * 
+     * @param reportsv3RunGradesRequest  (required)
+     * @return Reportsv3RunGradesResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Reportsv3RunGradesResponse reportsServiceRunGrades(Reportsv3RunGradesRequest reportsv3RunGradesRequest) throws ApiException {
+        ApiResponse<Reportsv3RunGradesResponse> localVarResp = reportsServiceRunGradesWithHttpInfo(reportsv3RunGradesRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Refresh metrics via grades. Description: Refresh metrics via grades.
+     * 
+     * @param reportsv3RunGradesRequest  (required)
+     * @return ApiResponse&lt;Reportsv3RunGradesResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Reportsv3RunGradesResponse> reportsServiceRunGradesWithHttpInfo(Reportsv3RunGradesRequest reportsv3RunGradesRequest) throws ApiException {
+        okhttp3.Call localVarCall = reportsServiceRunGradesValidateBeforeCall(reportsv3RunGradesRequest, null);
+        Type localVarReturnType = new TypeToken<Reportsv3RunGradesResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Refresh metrics via grades. Description: Refresh metrics via grades. (asynchronously)
+     * 
+     * @param reportsv3RunGradesRequest  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceRunGradesAsync(Reportsv3RunGradesRequest reportsv3RunGradesRequest, final ApiCallback<Reportsv3RunGradesResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = reportsServiceRunGradesValidateBeforeCall(reportsv3RunGradesRequest, _callback);
+        Type localVarReturnType = new TypeToken<Reportsv3RunGradesResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -5266,6 +7723,280 @@ public class ReportsServiceApi {
         return localVarCall;
     }
     /**
+     * Build call for reportsServiceUpdateControl
+     * @param controlId The id of the control that was updated. (required)
+     * @param reportsv3UpdateControlRequest  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceUpdateControlCall(Integer controlId, Reportsv3UpdateControlRequest reportsv3UpdateControlRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = reportsv3UpdateControlRequest;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/compliance/controls/{control_id}"
+            .replace("{" + "control_id" + "}", localVarApiClient.escapeString(controlId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call reportsServiceUpdateControlValidateBeforeCall(Integer controlId, Reportsv3UpdateControlRequest reportsv3UpdateControlRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'controlId' is set
+        if (controlId == null) {
+            throw new ApiException("Missing the required parameter 'controlId' when calling reportsServiceUpdateControl(Async)");
+        }
+
+        // verify the required parameter 'reportsv3UpdateControlRequest' is set
+        if (reportsv3UpdateControlRequest == null) {
+            throw new ApiException("Missing the required parameter 'reportsv3UpdateControlRequest' when calling reportsServiceUpdateControl(Async)");
+        }
+
+        return reportsServiceUpdateControlCall(controlId, reportsv3UpdateControlRequest, _callback);
+
+    }
+
+    /**
+     * Summary: Update Control. Description: Update a Control.
+     * 
+     * @param controlId The id of the control that was updated. (required)
+     * @param reportsv3UpdateControlRequest  (required)
+     * @return Reportsv3UpdateControlResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Reportsv3UpdateControlResponse reportsServiceUpdateControl(Integer controlId, Reportsv3UpdateControlRequest reportsv3UpdateControlRequest) throws ApiException {
+        ApiResponse<Reportsv3UpdateControlResponse> localVarResp = reportsServiceUpdateControlWithHttpInfo(controlId, reportsv3UpdateControlRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Update Control. Description: Update a Control.
+     * 
+     * @param controlId The id of the control that was updated. (required)
+     * @param reportsv3UpdateControlRequest  (required)
+     * @return ApiResponse&lt;Reportsv3UpdateControlResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Reportsv3UpdateControlResponse> reportsServiceUpdateControlWithHttpInfo(Integer controlId, Reportsv3UpdateControlRequest reportsv3UpdateControlRequest) throws ApiException {
+        okhttp3.Call localVarCall = reportsServiceUpdateControlValidateBeforeCall(controlId, reportsv3UpdateControlRequest, null);
+        Type localVarReturnType = new TypeToken<Reportsv3UpdateControlResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Update Control. Description: Update a Control. (asynchronously)
+     * 
+     * @param controlId The id of the control that was updated. (required)
+     * @param reportsv3UpdateControlRequest  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceUpdateControlAsync(Integer controlId, Reportsv3UpdateControlRequest reportsv3UpdateControlRequest, final ApiCallback<Reportsv3UpdateControlResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = reportsServiceUpdateControlValidateBeforeCall(controlId, reportsv3UpdateControlRequest, _callback);
+        Type localVarReturnType = new TypeToken<Reportsv3UpdateControlResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for reportsServiceUpdateGrade
+     * @param gradeId The id of the grade that was updated. (required)
+     * @param reportsv3UpdateGradeRequest  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceUpdateGradeCall(Integer gradeId, Reportsv3UpdateGradeRequest reportsv3UpdateGradeRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = reportsv3UpdateGradeRequest;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/compliance/grades/{grade_id}"
+            .replace("{" + "grade_id" + "}", localVarApiClient.escapeString(gradeId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call reportsServiceUpdateGradeValidateBeforeCall(Integer gradeId, Reportsv3UpdateGradeRequest reportsv3UpdateGradeRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'gradeId' is set
+        if (gradeId == null) {
+            throw new ApiException("Missing the required parameter 'gradeId' when calling reportsServiceUpdateGrade(Async)");
+        }
+
+        // verify the required parameter 'reportsv3UpdateGradeRequest' is set
+        if (reportsv3UpdateGradeRequest == null) {
+            throw new ApiException("Missing the required parameter 'reportsv3UpdateGradeRequest' when calling reportsServiceUpdateGrade(Async)");
+        }
+
+        return reportsServiceUpdateGradeCall(gradeId, reportsv3UpdateGradeRequest, _callback);
+
+    }
+
+    /**
+     * Summary: Update Grade. Description: Update a Grade.
+     * 
+     * @param gradeId The id of the grade that was updated. (required)
+     * @param reportsv3UpdateGradeRequest  (required)
+     * @return Reportsv3UpdateGradeResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Reportsv3UpdateGradeResponse reportsServiceUpdateGrade(Integer gradeId, Reportsv3UpdateGradeRequest reportsv3UpdateGradeRequest) throws ApiException {
+        ApiResponse<Reportsv3UpdateGradeResponse> localVarResp = reportsServiceUpdateGradeWithHttpInfo(gradeId, reportsv3UpdateGradeRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Update Grade. Description: Update a Grade.
+     * 
+     * @param gradeId The id of the grade that was updated. (required)
+     * @param reportsv3UpdateGradeRequest  (required)
+     * @return ApiResponse&lt;Reportsv3UpdateGradeResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Reportsv3UpdateGradeResponse> reportsServiceUpdateGradeWithHttpInfo(Integer gradeId, Reportsv3UpdateGradeRequest reportsv3UpdateGradeRequest) throws ApiException {
+        okhttp3.Call localVarCall = reportsServiceUpdateGradeValidateBeforeCall(gradeId, reportsv3UpdateGradeRequest, null);
+        Type localVarReturnType = new TypeToken<Reportsv3UpdateGradeResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Update Grade. Description: Update a Grade. (asynchronously)
+     * 
+     * @param gradeId The id of the grade that was updated. (required)
+     * @param reportsv3UpdateGradeRequest  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceUpdateGradeAsync(Integer gradeId, Reportsv3UpdateGradeRequest reportsv3UpdateGradeRequest, final ApiCallback<Reportsv3UpdateGradeResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = reportsServiceUpdateGradeValidateBeforeCall(gradeId, reportsv3UpdateGradeRequest, _callback);
+        Type localVarReturnType = new TypeToken<Reportsv3UpdateGradeResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for reportsServiceUpdateJoin
      * @param joinId Unique join ID. (required)
      * @param reportsv3UpdateJoinRequest  (required)
@@ -5403,6 +8134,417 @@ public class ReportsServiceApi {
         return localVarCall;
     }
     /**
+     * Build call for reportsServiceUpdateMeasure
+     * @param measureId The id of the measure that was updated. (required)
+     * @param reportsv3UpdateMeasureRequest  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceUpdateMeasureCall(Integer measureId, Reportsv3UpdateMeasureRequest reportsv3UpdateMeasureRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = reportsv3UpdateMeasureRequest;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/compliance/measures/{measure_id}"
+            .replace("{" + "measure_id" + "}", localVarApiClient.escapeString(measureId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call reportsServiceUpdateMeasureValidateBeforeCall(Integer measureId, Reportsv3UpdateMeasureRequest reportsv3UpdateMeasureRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'measureId' is set
+        if (measureId == null) {
+            throw new ApiException("Missing the required parameter 'measureId' when calling reportsServiceUpdateMeasure(Async)");
+        }
+
+        // verify the required parameter 'reportsv3UpdateMeasureRequest' is set
+        if (reportsv3UpdateMeasureRequest == null) {
+            throw new ApiException("Missing the required parameter 'reportsv3UpdateMeasureRequest' when calling reportsServiceUpdateMeasure(Async)");
+        }
+
+        return reportsServiceUpdateMeasureCall(measureId, reportsv3UpdateMeasureRequest, _callback);
+
+    }
+
+    /**
+     * Summary: Update measure. Description: Update a measure.
+     * 
+     * @param measureId The id of the measure that was updated. (required)
+     * @param reportsv3UpdateMeasureRequest  (required)
+     * @return Reportsv3UpdateMeasureResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Reportsv3UpdateMeasureResponse reportsServiceUpdateMeasure(Integer measureId, Reportsv3UpdateMeasureRequest reportsv3UpdateMeasureRequest) throws ApiException {
+        ApiResponse<Reportsv3UpdateMeasureResponse> localVarResp = reportsServiceUpdateMeasureWithHttpInfo(measureId, reportsv3UpdateMeasureRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Update measure. Description: Update a measure.
+     * 
+     * @param measureId The id of the measure that was updated. (required)
+     * @param reportsv3UpdateMeasureRequest  (required)
+     * @return ApiResponse&lt;Reportsv3UpdateMeasureResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Reportsv3UpdateMeasureResponse> reportsServiceUpdateMeasureWithHttpInfo(Integer measureId, Reportsv3UpdateMeasureRequest reportsv3UpdateMeasureRequest) throws ApiException {
+        okhttp3.Call localVarCall = reportsServiceUpdateMeasureValidateBeforeCall(measureId, reportsv3UpdateMeasureRequest, null);
+        Type localVarReturnType = new TypeToken<Reportsv3UpdateMeasureResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Update measure. Description: Update a measure. (asynchronously)
+     * 
+     * @param measureId The id of the measure that was updated. (required)
+     * @param reportsv3UpdateMeasureRequest  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceUpdateMeasureAsync(Integer measureId, Reportsv3UpdateMeasureRequest reportsv3UpdateMeasureRequest, final ApiCallback<Reportsv3UpdateMeasureResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = reportsServiceUpdateMeasureValidateBeforeCall(measureId, reportsv3UpdateMeasureRequest, _callback);
+        Type localVarReturnType = new TypeToken<Reportsv3UpdateMeasureResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for reportsServiceUpdateMetric
+     * @param metricId The id of the metric that was updated. (required)
+     * @param reportsv3UpdateMetricRequest  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceUpdateMetricCall(Integer metricId, Reportsv3UpdateMetricRequest reportsv3UpdateMetricRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = reportsv3UpdateMetricRequest;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/compliance/metrics/{metric_id}"
+            .replace("{" + "metric_id" + "}", localVarApiClient.escapeString(metricId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call reportsServiceUpdateMetricValidateBeforeCall(Integer metricId, Reportsv3UpdateMetricRequest reportsv3UpdateMetricRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'metricId' is set
+        if (metricId == null) {
+            throw new ApiException("Missing the required parameter 'metricId' when calling reportsServiceUpdateMetric(Async)");
+        }
+
+        // verify the required parameter 'reportsv3UpdateMetricRequest' is set
+        if (reportsv3UpdateMetricRequest == null) {
+            throw new ApiException("Missing the required parameter 'reportsv3UpdateMetricRequest' when calling reportsServiceUpdateMetric(Async)");
+        }
+
+        return reportsServiceUpdateMetricCall(metricId, reportsv3UpdateMetricRequest, _callback);
+
+    }
+
+    /**
+     * Summary: Update metric. Description: Update a metric.
+     * 
+     * @param metricId The id of the metric that was updated. (required)
+     * @param reportsv3UpdateMetricRequest  (required)
+     * @return Reportsv3UpdateMetricResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Reportsv3UpdateMetricResponse reportsServiceUpdateMetric(Integer metricId, Reportsv3UpdateMetricRequest reportsv3UpdateMetricRequest) throws ApiException {
+        ApiResponse<Reportsv3UpdateMetricResponse> localVarResp = reportsServiceUpdateMetricWithHttpInfo(metricId, reportsv3UpdateMetricRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Update metric. Description: Update a metric.
+     * 
+     * @param metricId The id of the metric that was updated. (required)
+     * @param reportsv3UpdateMetricRequest  (required)
+     * @return ApiResponse&lt;Reportsv3UpdateMetricResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Reportsv3UpdateMetricResponse> reportsServiceUpdateMetricWithHttpInfo(Integer metricId, Reportsv3UpdateMetricRequest reportsv3UpdateMetricRequest) throws ApiException {
+        okhttp3.Call localVarCall = reportsServiceUpdateMetricValidateBeforeCall(metricId, reportsv3UpdateMetricRequest, null);
+        Type localVarReturnType = new TypeToken<Reportsv3UpdateMetricResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Update metric. Description: Update a metric. (asynchronously)
+     * 
+     * @param metricId The id of the metric that was updated. (required)
+     * @param reportsv3UpdateMetricRequest  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceUpdateMetricAsync(Integer metricId, Reportsv3UpdateMetricRequest reportsv3UpdateMetricRequest, final ApiCallback<Reportsv3UpdateMetricResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = reportsServiceUpdateMetricValidateBeforeCall(metricId, reportsv3UpdateMetricRequest, _callback);
+        Type localVarReturnType = new TypeToken<Reportsv3UpdateMetricResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for reportsServiceUpdateProgram
+     * @param programId The id of the programs that was updated. (required)
+     * @param reportsv3UpdateProgramRequest  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceUpdateProgramCall(Integer programId, Reportsv3UpdateProgramRequest reportsv3UpdateProgramRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = reportsv3UpdateProgramRequest;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/compliance/programs/{program_id}"
+            .replace("{" + "program_id" + "}", localVarApiClient.escapeString(programId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call reportsServiceUpdateProgramValidateBeforeCall(Integer programId, Reportsv3UpdateProgramRequest reportsv3UpdateProgramRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'programId' is set
+        if (programId == null) {
+            throw new ApiException("Missing the required parameter 'programId' when calling reportsServiceUpdateProgram(Async)");
+        }
+
+        // verify the required parameter 'reportsv3UpdateProgramRequest' is set
+        if (reportsv3UpdateProgramRequest == null) {
+            throw new ApiException("Missing the required parameter 'reportsv3UpdateProgramRequest' when calling reportsServiceUpdateProgram(Async)");
+        }
+
+        return reportsServiceUpdateProgramCall(programId, reportsv3UpdateProgramRequest, _callback);
+
+    }
+
+    /**
+     * Summary: Update Program. Description: Update a Program.
+     * 
+     * @param programId The id of the programs that was updated. (required)
+     * @param reportsv3UpdateProgramRequest  (required)
+     * @return Reportsv3UpdateProgramResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Reportsv3UpdateProgramResponse reportsServiceUpdateProgram(Integer programId, Reportsv3UpdateProgramRequest reportsv3UpdateProgramRequest) throws ApiException {
+        ApiResponse<Reportsv3UpdateProgramResponse> localVarResp = reportsServiceUpdateProgramWithHttpInfo(programId, reportsv3UpdateProgramRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Update Program. Description: Update a Program.
+     * 
+     * @param programId The id of the programs that was updated. (required)
+     * @param reportsv3UpdateProgramRequest  (required)
+     * @return ApiResponse&lt;Reportsv3UpdateProgramResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Reportsv3UpdateProgramResponse> reportsServiceUpdateProgramWithHttpInfo(Integer programId, Reportsv3UpdateProgramRequest reportsv3UpdateProgramRequest) throws ApiException {
+        okhttp3.Call localVarCall = reportsServiceUpdateProgramValidateBeforeCall(programId, reportsv3UpdateProgramRequest, null);
+        Type localVarReturnType = new TypeToken<Reportsv3UpdateProgramResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Update Program. Description: Update a Program. (asynchronously)
+     * 
+     * @param programId The id of the programs that was updated. (required)
+     * @param reportsv3UpdateProgramRequest  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceUpdateProgramAsync(Integer programId, Reportsv3UpdateProgramRequest reportsv3UpdateProgramRequest, final ApiCallback<Reportsv3UpdateProgramResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = reportsServiceUpdateProgramValidateBeforeCall(programId, reportsv3UpdateProgramRequest, _callback);
+        Type localVarReturnType = new TypeToken<Reportsv3UpdateProgramResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for reportsServiceUpdateReport
      * @param reportId Unique Report ID. (required)
      * @param reportsv3UpdateReportRequest  (required)
@@ -5536,6 +8678,143 @@ public class ReportsServiceApi {
 
         okhttp3.Call localVarCall = reportsServiceUpdateReportValidateBeforeCall(reportId, reportsv3UpdateReportRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3UpdateReportResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for reportsServiceUpdateRequirement
+     * @param requirementId The id of the requirements that was updated. (required)
+     * @param reportsv3UpdateRequirementRequest  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceUpdateRequirementCall(Integer requirementId, Reportsv3UpdateRequirementRequest reportsv3UpdateRequirementRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = reportsv3UpdateRequirementRequest;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/compliance/requirements/{requirement_id}"
+            .replace("{" + "requirement_id" + "}", localVarApiClient.escapeString(requirementId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call reportsServiceUpdateRequirementValidateBeforeCall(Integer requirementId, Reportsv3UpdateRequirementRequest reportsv3UpdateRequirementRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'requirementId' is set
+        if (requirementId == null) {
+            throw new ApiException("Missing the required parameter 'requirementId' when calling reportsServiceUpdateRequirement(Async)");
+        }
+
+        // verify the required parameter 'reportsv3UpdateRequirementRequest' is set
+        if (reportsv3UpdateRequirementRequest == null) {
+            throw new ApiException("Missing the required parameter 'reportsv3UpdateRequirementRequest' when calling reportsServiceUpdateRequirement(Async)");
+        }
+
+        return reportsServiceUpdateRequirementCall(requirementId, reportsv3UpdateRequirementRequest, _callback);
+
+    }
+
+    /**
+     * Summary: Update Requirement. Description: Update a Requirement.
+     * 
+     * @param requirementId The id of the requirements that was updated. (required)
+     * @param reportsv3UpdateRequirementRequest  (required)
+     * @return Reportsv3UpdateRequirementResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Reportsv3UpdateRequirementResponse reportsServiceUpdateRequirement(Integer requirementId, Reportsv3UpdateRequirementRequest reportsv3UpdateRequirementRequest) throws ApiException {
+        ApiResponse<Reportsv3UpdateRequirementResponse> localVarResp = reportsServiceUpdateRequirementWithHttpInfo(requirementId, reportsv3UpdateRequirementRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Update Requirement. Description: Update a Requirement.
+     * 
+     * @param requirementId The id of the requirements that was updated. (required)
+     * @param reportsv3UpdateRequirementRequest  (required)
+     * @return ApiResponse&lt;Reportsv3UpdateRequirementResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Reportsv3UpdateRequirementResponse> reportsServiceUpdateRequirementWithHttpInfo(Integer requirementId, Reportsv3UpdateRequirementRequest reportsv3UpdateRequirementRequest) throws ApiException {
+        okhttp3.Call localVarCall = reportsServiceUpdateRequirementValidateBeforeCall(requirementId, reportsv3UpdateRequirementRequest, null);
+        Type localVarReturnType = new TypeToken<Reportsv3UpdateRequirementResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Update Requirement. Description: Update a Requirement. (asynchronously)
+     * 
+     * @param requirementId The id of the requirements that was updated. (required)
+     * @param reportsv3UpdateRequirementRequest  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reportsServiceUpdateRequirementAsync(Integer requirementId, Reportsv3UpdateRequirementRequest reportsv3UpdateRequirementRequest, final ApiCallback<Reportsv3UpdateRequirementResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = reportsServiceUpdateRequirementValidateBeforeCall(requirementId, reportsv3UpdateRequirementRequest, _callback);
+        Type localVarReturnType = new TypeToken<Reportsv3UpdateRequirementResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

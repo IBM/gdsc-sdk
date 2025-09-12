@@ -41,7 +41,15 @@ public enum Outliersenginev3SourceAttributeType {
   
   OS_USER("OS_USER"),
   
-  CLIENT_HOSTNAME("CLIENT_HOSTNAME");
+  CLIENT_HOSTNAME("CLIENT_HOSTNAME"),
+  
+  SENSITIVE_OBJECT("SENSITIVE_OBJECT"),
+  
+  SENSITIVE_OBJECT_VERB("SENSITIVE_OBJECT_VERB"),
+  
+  OBJECT("OBJECT"),
+  
+  OBJECT_VERB("OBJECT_VERB");
 
   private String value;
 

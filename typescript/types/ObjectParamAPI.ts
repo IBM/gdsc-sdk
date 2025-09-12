@@ -25,7 +25,6 @@ import { Assetsv3AssetChangeLog } from '../models/Assetsv3AssetChangeLog';
 import { Assetsv3AssetClassification } from '../models/Assetsv3AssetClassification';
 import { Assetsv3AssetControl } from '../models/Assetsv3AssetControl';
 import { Assetsv3AssetEndpoint } from '../models/Assetsv3AssetEndpoint';
-import { Assetsv3AssetFilterTemplateRequest } from '../models/Assetsv3AssetFilterTemplateRequest';
 import { Assetsv3AssetForMergeSplit } from '../models/Assetsv3AssetForMergeSplit';
 import { Assetsv3AssetInformation } from '../models/Assetsv3AssetInformation';
 import { Assetsv3AssetIngestionRequest } from '../models/Assetsv3AssetIngestionRequest';
@@ -44,11 +43,13 @@ import { Assetsv3AssetsWithOpenVulnerabilities } from '../models/Assetsv3AssetsW
 import { Assetsv3AssignedTags } from '../models/Assetsv3AssignedTags';
 import { Assetsv3Attributes } from '../models/Assetsv3Attributes';
 import { Assetsv3BeforeAfter } from '../models/Assetsv3BeforeAfter';
+import { Assetsv3CSVRow } from '../models/Assetsv3CSVRow';
 import { Assetsv3Category } from '../models/Assetsv3Category';
 import { Assetsv3ChildCategory } from '../models/Assetsv3ChildCategory';
 import { Assetsv3ClassificationData } from '../models/Assetsv3ClassificationData';
 import { Assetsv3ClassificationScanStatus } from '../models/Assetsv3ClassificationScanStatus';
 import { Assetsv3ClonePolicyRequest } from '../models/Assetsv3ClonePolicyRequest';
+import { Assetsv3CompareCSVResponse } from '../models/Assetsv3CompareCSVResponse';
 import { Assetsv3ConnectionEdge } from '../models/Assetsv3ConnectionEdge';
 import { Assetsv3CreateUpdatePolicyRequest } from '../models/Assetsv3CreateUpdatePolicyRequest';
 import { Assetsv3CreateUpdatePolicyResponse } from '../models/Assetsv3CreateUpdatePolicyResponse';
@@ -77,6 +78,8 @@ import { Assetsv3HealthType } from '../models/Assetsv3HealthType';
 import { Assetsv3HighestAssetTagCounts } from '../models/Assetsv3HighestAssetTagCounts';
 import { Assetsv3HostVertex } from '../models/Assetsv3HostVertex';
 import { Assetsv3IPVertex } from '../models/Assetsv3IPVertex';
+import { Assetsv3ImportCSVRequest } from '../models/Assetsv3ImportCSVRequest';
+import { Assetsv3ImportCSVResponse } from '../models/Assetsv3ImportCSVResponse';
 import { Assetsv3IpHost } from '../models/Assetsv3IpHost';
 import { Assetsv3Level } from '../models/Assetsv3Level';
 import { Assetsv3ListPolicyResponse } from '../models/Assetsv3ListPolicyResponse';
@@ -118,6 +121,7 @@ import { Assetsv3TagCategory } from '../models/Assetsv3TagCategory';
 import { Assetsv3TagsAssigned } from '../models/Assetsv3TagsAssigned';
 import { Assetsv3TagsData } from '../models/Assetsv3TagsData';
 import { Assetsv3TagsFilterData } from '../models/Assetsv3TagsFilterData';
+import { Assetsv3TemplateType } from '../models/Assetsv3TemplateType';
 import { Assetsv3TimelineDateRange } from '../models/Assetsv3TimelineDateRange';
 import { Assetsv3UnassignedTags } from '../models/Assetsv3UnassignedTags';
 import { Assetsv3UpdateAssetNameRequest } from '../models/Assetsv3UpdateAssetNameRequest';
@@ -146,7 +150,6 @@ import { AuthserverGetPrivilegesResponse } from '../models/AuthserverGetPrivileg
 import { AuthserverGetUserResponse } from '../models/AuthserverGetUserResponse';
 import { AuthserverListOauthClientResponse } from '../models/AuthserverListOauthClientResponse';
 import { AuthserverOauthClient } from '../models/AuthserverOauthClient';
-import { ClassificationStatus } from '../models/ClassificationStatus';
 import { ClientInfo } from '../models/ClientInfo';
 import { CloudAccountCountInner } from '../models/CloudAccountCountInner';
 import { CloudAccountDetails } from '../models/CloudAccountDetails';
@@ -260,7 +263,10 @@ import { Connectionsv3UpdatePluginRequest } from '../models/Connectionsv3UpdateP
 import { Connectionsv3UpdatePluginResponse } from '../models/Connectionsv3UpdatePluginResponse';
 import { Connectionsv3UpdateSettingsRequest } from '../models/Connectionsv3UpdateSettingsRequest';
 import { Connectionsv3ValidateAwsConnectionRequest } from '../models/Connectionsv3ValidateAwsConnectionRequest';
+import { Connectionsv3ValidateAzureConnectionRequest } from '../models/Connectionsv3ValidateAzureConnectionRequest';
 import { Connectionsv3ValidateConnectionResponse } from '../models/Connectionsv3ValidateConnectionResponse';
+import { Connectionsv3ValidateGcpConnectionRequest } from '../models/Connectionsv3ValidateGcpConnectionRequest';
+import { DBMetadataInfo } from '../models/DBMetadataInfo';
 import { Dashboardsv3Card } from '../models/Dashboardsv3Card';
 import { Dashboardsv3CardPosition } from '../models/Dashboardsv3CardPosition';
 import { Dashboardsv3CardType } from '../models/Dashboardsv3CardType';
@@ -299,6 +305,7 @@ import { Datamartprocessorv3GetDatamartInfoResponse } from '../models/Datamartpr
 import { Datamartprocessorv3GetDatamartResponse } from '../models/Datamartprocessorv3GetDatamartResponse';
 import { Datamartprocessorv3GetEarliestStartTimeResponse } from '../models/Datamartprocessorv3GetEarliestStartTimeResponse';
 import { Datamartprocessorv3StatusResponseBase } from '../models/Datamartprocessorv3StatusResponseBase';
+import { DbInfo } from '../models/DbInfo';
 import { Ecosystemv3ColumnDefinition } from '../models/Ecosystemv3ColumnDefinition';
 import { Ecosystemv3CreateDatasetRequest } from '../models/Ecosystemv3CreateDatasetRequest';
 import { Ecosystemv3CreateDatasetResponse } from '../models/Ecosystemv3CreateDatasetResponse';
@@ -322,10 +329,6 @@ import { Ecosystemv3PurgeDataResponse } from '../models/Ecosystemv3PurgeDataResp
 import { Ecosystemv3TestIntegrationRequest } from '../models/Ecosystemv3TestIntegrationRequest';
 import { Ecosystemv3TestIntegrationResponse } from '../models/Ecosystemv3TestIntegrationResponse';
 import { Ecosystemv3ValidateCSVContentResponse } from '../models/Ecosystemv3ValidateCSVContentResponse';
-import { Edgeschedulerv3GetEdgeQueryStatusResponse } from '../models/Edgeschedulerv3GetEdgeQueryStatusResponse';
-import { Edgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse } from '../models/Edgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse';
-import { Edgeschedulerv3ScheduleEdgeQueryRequest } from '../models/Edgeschedulerv3ScheduleEdgeQueryRequest';
-import { Edgeschedulerv3ScheduleEdgeQueryResponse } from '../models/Edgeschedulerv3ScheduleEdgeQueryResponse';
 import { Environment } from '../models/Environment';
 import { Featureflagsv3DeleteFeatureFlagOverridesResponse } from '../models/Featureflagsv3DeleteFeatureFlagOverridesResponse';
 import { Featureflagsv3FeatureFlag } from '../models/Featureflagsv3FeatureFlag';
@@ -517,19 +520,28 @@ import { IntegrationTypes } from '../models/IntegrationTypes';
 import { InviteUserBodyParams } from '../models/InviteUserBodyParams';
 import { Jumpboxv3AuthorizeRequest } from '../models/Jumpboxv3AuthorizeRequest';
 import { Jumpboxv3AuthorizeResponse } from '../models/Jumpboxv3AuthorizeResponse';
+import { Jumpboxv3DeleteAccountResponse } from '../models/Jumpboxv3DeleteAccountResponse';
 import { Jumpboxv3DirectoryEntry } from '../models/Jumpboxv3DirectoryEntry';
 import { Jumpboxv3DisableUsersBulkResponse } from '../models/Jumpboxv3DisableUsersBulkResponse';
+import { Jumpboxv3GetAccountResponse } from '../models/Jumpboxv3GetAccountResponse';
+import { Jumpboxv3GetAccountsResponse } from '../models/Jumpboxv3GetAccountsResponse';
 import { Jumpboxv3GetTenantResponse } from '../models/Jumpboxv3GetTenantResponse';
 import { Jumpboxv3GetTenantsResponse } from '../models/Jumpboxv3GetTenantsResponse';
+import { Jumpboxv3PostAccountRequest } from '../models/Jumpboxv3PostAccountRequest';
+import { Jumpboxv3PostAccountResponse } from '../models/Jumpboxv3PostAccountResponse';
 import { Jumpboxv3PostTenantsRequest } from '../models/Jumpboxv3PostTenantsRequest';
 import { Jumpboxv3PostTenantsResponse } from '../models/Jumpboxv3PostTenantsResponse';
 import { Jumpboxv3PostUsersBulkRequest } from '../models/Jumpboxv3PostUsersBulkRequest';
 import { Jumpboxv3PostUsersBulkResponse } from '../models/Jumpboxv3PostUsersBulkResponse';
+import { Jumpboxv3ResumeAccountResponse } from '../models/Jumpboxv3ResumeAccountResponse';
 import { Jumpboxv3SearchUsersRequest } from '../models/Jumpboxv3SearchUsersRequest';
 import { Jumpboxv3SearchUsersResponse } from '../models/Jumpboxv3SearchUsersResponse';
+import { Jumpboxv3SuspendAccountResponse } from '../models/Jumpboxv3SuspendAccountResponse';
 import { Jumpboxv3Tenant } from '../models/Jumpboxv3Tenant';
 import { Jumpboxv3TestUserRequest } from '../models/Jumpboxv3TestUserRequest';
 import { Jumpboxv3TestUserResponse } from '../models/Jumpboxv3TestUserResponse';
+import { Jumpboxv3UpdateAccountRequest } from '../models/Jumpboxv3UpdateAccountRequest';
+import { Jumpboxv3UpdateAccountResponse } from '../models/Jumpboxv3UpdateAccountResponse';
 import { Jumpboxv3UpdateTenantRequest } from '../models/Jumpboxv3UpdateTenantRequest';
 import { Jumpboxv3UpdateTenantResponse } from '../models/Jumpboxv3UpdateTenantResponse';
 import { Jumpboxv3UpdateUsersBulkRequest } from '../models/Jumpboxv3UpdateUsersBulkRequest';
@@ -580,6 +592,7 @@ import { Notificationsv3NotificationRecord } from '../models/Notificationsv3Noti
 import { Notificationsv3NotificationRecordsFilter } from '../models/Notificationsv3NotificationRecordsFilter';
 import { Notificationsv3NotificationSeverity } from '../models/Notificationsv3NotificationSeverity';
 import { Notificationsv3NotificationState } from '../models/Notificationsv3NotificationState';
+import { Notificationsv3Origin } from '../models/Notificationsv3Origin';
 import { Notificationsv3PipelineQueryOperator } from '../models/Notificationsv3PipelineQueryOperator';
 import { Notificationsv3PostNotificationRecordRequest } from '../models/Notificationsv3PostNotificationRecordRequest';
 import { Notificationsv3PostNotificationRecordResponse } from '../models/Notificationsv3PostNotificationRecordResponse';
@@ -638,6 +651,8 @@ import { Policybuilderv3GetPolicyDetailsResponse } from '../models/Policybuilder
 import { Policybuilderv3GetPolicyNamesFromRuleIDsRequest } from '../models/Policybuilderv3GetPolicyNamesFromRuleIDsRequest';
 import { Policybuilderv3GetPolicyNamesFromRuleIDsResponse } from '../models/Policybuilderv3GetPolicyNamesFromRuleIDsResponse';
 import { Policybuilderv3GetPolicySyncListResponse } from '../models/Policybuilderv3GetPolicySyncListResponse';
+import { Policybuilderv3GetPolicyVersionResponse } from '../models/Policybuilderv3GetPolicyVersionResponse';
+import { Policybuilderv3GetPolicyVersionsInfoResponse } from '../models/Policybuilderv3GetPolicyVersionsInfoResponse';
 import { Policybuilderv3GetReceiversResponse } from '../models/Policybuilderv3GetReceiversResponse';
 import { Policybuilderv3GetRuleValidationRequest } from '../models/Policybuilderv3GetRuleValidationRequest';
 import { Policybuilderv3ImportIssue } from '../models/Policybuilderv3ImportIssue';
@@ -656,6 +671,7 @@ import { Policybuilderv3PolicyGroups } from '../models/Policybuilderv3PolicyGrou
 import { Policybuilderv3PolicyType } from '../models/Policybuilderv3PolicyType';
 import { Policybuilderv3PolicyUpdate } from '../models/Policybuilderv3PolicyUpdate';
 import { Policybuilderv3PossibleValueObj } from '../models/Policybuilderv3PossibleValueObj';
+import { Policybuilderv3ProductType } from '../models/Policybuilderv3ProductType';
 import { Policybuilderv3RecipientType } from '../models/Policybuilderv3RecipientType';
 import { Policybuilderv3Rule } from '../models/Policybuilderv3Rule';
 import { Policybuilderv3RuleMetadataResponse } from '../models/Policybuilderv3RuleMetadataResponse';
@@ -669,6 +685,7 @@ import { Policybuilderv3StorePolicyGdpRequest } from '../models/Policybuilderv3S
 import { Policybuilderv3StorePolicyGdpResponse } from '../models/Policybuilderv3StorePolicyGdpResponse';
 import { Policybuilderv3SyncStatusType } from '../models/Policybuilderv3SyncStatusType';
 import { Policybuilderv3TargetReceiver } from '../models/Policybuilderv3TargetReceiver';
+import { Policybuilderv3VersionInfo } from '../models/Policybuilderv3VersionInfo';
 import { PotentialFlow } from '../models/PotentialFlow';
 import { PotentialFlowListItem } from '../models/PotentialFlowListItem';
 import { PotentialFlowPath } from '../models/PotentialFlowPath';
@@ -747,6 +764,8 @@ import { Reportsrunnerv3StopQueryResponse } from '../models/Reportsrunnerv3StopQ
 import { Reportsrunnerv3WriteResultsToFileResponse } from '../models/Reportsrunnerv3WriteResultsToFileResponse';
 import { Reportsrunnerv3WriteResultsToGroupResponse } from '../models/Reportsrunnerv3WriteResultsToGroupResponse';
 import { Reportsv3AggregationType } from '../models/Reportsv3AggregationType';
+import { Reportsv3Artifact } from '../models/Reportsv3Artifact';
+import { Reportsv3ArtifactType } from '../models/Reportsv3ArtifactType';
 import { Reportsv3BriefReport } from '../models/Reportsv3BriefReport';
 import { Reportsv3Category } from '../models/Reportsv3Category';
 import { Reportsv3CategoryDetail } from '../models/Reportsv3CategoryDetail';
@@ -757,6 +776,7 @@ import { Reportsv3ChartSettings } from '../models/Reportsv3ChartSettings';
 import { Reportsv3ChartSettingsv2 } from '../models/Reportsv3ChartSettingsv2';
 import { Reportsv3ChartType } from '../models/Reportsv3ChartType';
 import { Reportsv3ContributionPointersInfoObject } from '../models/Reportsv3ContributionPointersInfoObject';
+import { Reportsv3Control } from '../models/Reportsv3Control';
 import { Reportsv3CreateCategoryRequest } from '../models/Reportsv3CreateCategoryRequest';
 import { Reportsv3CreateCategoryResponse } from '../models/Reportsv3CreateCategoryResponse';
 import { Reportsv3CreateChartRequest } from '../models/Reportsv3CreateChartRequest';
@@ -765,12 +785,24 @@ import { Reportsv3CreateChartTemplatev2Request } from '../models/Reportsv3Create
 import { Reportsv3CreateChartTemplatev2Response } from '../models/Reportsv3CreateChartTemplatev2Response';
 import { Reportsv3CreateChartv2Request } from '../models/Reportsv3CreateChartv2Request';
 import { Reportsv3CreateChartv2Response } from '../models/Reportsv3CreateChartv2Response';
+import { Reportsv3CreateControlRequest } from '../models/Reportsv3CreateControlRequest';
+import { Reportsv3CreateControlResponse } from '../models/Reportsv3CreateControlResponse';
 import { Reportsv3CreateFieldsByCategoryRequest } from '../models/Reportsv3CreateFieldsByCategoryRequest';
 import { Reportsv3CreateFieldsByCategoryResponse } from '../models/Reportsv3CreateFieldsByCategoryResponse';
+import { Reportsv3CreateGradeRequest } from '../models/Reportsv3CreateGradeRequest';
+import { Reportsv3CreateGradeResponse } from '../models/Reportsv3CreateGradeResponse';
 import { Reportsv3CreateJoinRequest } from '../models/Reportsv3CreateJoinRequest';
 import { Reportsv3CreateJoinResponse } from '../models/Reportsv3CreateJoinResponse';
+import { Reportsv3CreateMeasureRequest } from '../models/Reportsv3CreateMeasureRequest';
+import { Reportsv3CreateMeasureResponse } from '../models/Reportsv3CreateMeasureResponse';
+import { Reportsv3CreateMetricRequest } from '../models/Reportsv3CreateMetricRequest';
+import { Reportsv3CreateMetricResponse } from '../models/Reportsv3CreateMetricResponse';
+import { Reportsv3CreateProgramRequest } from '../models/Reportsv3CreateProgramRequest';
+import { Reportsv3CreateProgramResponse } from '../models/Reportsv3CreateProgramResponse';
 import { Reportsv3CreateReportRequest } from '../models/Reportsv3CreateReportRequest';
 import { Reportsv3CreateReportResponse } from '../models/Reportsv3CreateReportResponse';
+import { Reportsv3CreateRequirementRequest } from '../models/Reportsv3CreateRequirementRequest';
+import { Reportsv3CreateRequirementResponse } from '../models/Reportsv3CreateRequirementResponse';
 import { Reportsv3CreateVariantRequest } from '../models/Reportsv3CreateVariantRequest';
 import { Reportsv3CreateVariantResponse } from '../models/Reportsv3CreateVariantResponse';
 import { Reportsv3CustomChartTemplatev2 } from '../models/Reportsv3CustomChartTemplatev2';
@@ -781,9 +813,21 @@ import { Reportsv3DeleteCategoryResponse } from '../models/Reportsv3DeleteCatego
 import { Reportsv3DeleteChartResponse } from '../models/Reportsv3DeleteChartResponse';
 import { Reportsv3DeleteChartTemplatev2Response } from '../models/Reportsv3DeleteChartTemplatev2Response';
 import { Reportsv3DeleteChartv2Response } from '../models/Reportsv3DeleteChartv2Response';
+import { Reportsv3DeleteControlRequest } from '../models/Reportsv3DeleteControlRequest';
+import { Reportsv3DeleteControlResponse } from '../models/Reportsv3DeleteControlResponse';
 import { Reportsv3DeleteFieldsByCategoryResponse } from '../models/Reportsv3DeleteFieldsByCategoryResponse';
+import { Reportsv3DeleteGradeRequest } from '../models/Reportsv3DeleteGradeRequest';
+import { Reportsv3DeleteGradeResponse } from '../models/Reportsv3DeleteGradeResponse';
 import { Reportsv3DeleteJoinResponse } from '../models/Reportsv3DeleteJoinResponse';
+import { Reportsv3DeleteMeasureRequest } from '../models/Reportsv3DeleteMeasureRequest';
+import { Reportsv3DeleteMeasureResponse } from '../models/Reportsv3DeleteMeasureResponse';
+import { Reportsv3DeleteMetricRequest } from '../models/Reportsv3DeleteMetricRequest';
+import { Reportsv3DeleteMetricResponse } from '../models/Reportsv3DeleteMetricResponse';
+import { Reportsv3DeleteProgramRequest } from '../models/Reportsv3DeleteProgramRequest';
+import { Reportsv3DeleteProgramResponse } from '../models/Reportsv3DeleteProgramResponse';
 import { Reportsv3DeleteReportResponse } from '../models/Reportsv3DeleteReportResponse';
+import { Reportsv3DeleteRequirementRequest } from '../models/Reportsv3DeleteRequirementRequest';
+import { Reportsv3DeleteRequirementResponse } from '../models/Reportsv3DeleteRequirementResponse';
 import { Reportsv3DeleteVariantResponse } from '../models/Reportsv3DeleteVariantResponse';
 import { Reportsv3DisplayHeader } from '../models/Reportsv3DisplayHeader';
 import { Reportsv3FieldName } from '../models/Reportsv3FieldName';
@@ -795,9 +839,14 @@ import { Reportsv3GetChartQueryResponsev2 } from '../models/Reportsv3GetChartQue
 import { Reportsv3GetChartSettingsResponse } from '../models/Reportsv3GetChartSettingsResponse';
 import { Reportsv3GetChartSettingsv2Response } from '../models/Reportsv3GetChartSettingsv2Response';
 import { Reportsv3GetChartTemplatesv2Response } from '../models/Reportsv3GetChartTemplatesv2Response';
+import { Reportsv3GetControlsResponse } from '../models/Reportsv3GetControlsResponse';
 import { Reportsv3GetFieldsByCategoriesResponse } from '../models/Reportsv3GetFieldsByCategoriesResponse';
 import { Reportsv3GetFieldsByCategoryResponse } from '../models/Reportsv3GetFieldsByCategoryResponse';
+import { Reportsv3GetGradesResponse } from '../models/Reportsv3GetGradesResponse';
 import { Reportsv3GetJoinsResponse } from '../models/Reportsv3GetJoinsResponse';
+import { Reportsv3GetMeasuresResponse } from '../models/Reportsv3GetMeasuresResponse';
+import { Reportsv3GetMetricsResponse } from '../models/Reportsv3GetMetricsResponse';
+import { Reportsv3GetProgramsResponse } from '../models/Reportsv3GetProgramsResponse';
 import { Reportsv3GetQueryByReportDefinitionRequest } from '../models/Reportsv3GetQueryByReportDefinitionRequest';
 import { Reportsv3GetQueryByReportIDRequest } from '../models/Reportsv3GetQueryByReportIDRequest';
 import { Reportsv3GetReportDefinitionResponse } from '../models/Reportsv3GetReportDefinitionResponse';
@@ -808,8 +857,11 @@ import { Reportsv3GetReportTimestampHeaderResponse } from '../models/Reportsv3Ge
 import { Reportsv3GetReportsForJoinResponse } from '../models/Reportsv3GetReportsForJoinResponse';
 import { Reportsv3GetReportsResponse } from '../models/Reportsv3GetReportsResponse';
 import { Reportsv3GetReportsTagsResponse } from '../models/Reportsv3GetReportsTagsResponse';
+import { Reportsv3GetRequirementsResponse } from '../models/Reportsv3GetRequirementsResponse';
 import { Reportsv3GetVariantResponse } from '../models/Reportsv3GetVariantResponse';
 import { Reportsv3GetVariantsResponse } from '../models/Reportsv3GetVariantsResponse';
+import { Reportsv3Grade } from '../models/Reportsv3Grade';
+import { Reportsv3GradeThreshold } from '../models/Reportsv3GradeThreshold';
 import { Reportsv3Header } from '../models/Reportsv3Header';
 import { Reportsv3HeaderDataType } from '../models/Reportsv3HeaderDataType';
 import { Reportsv3HeaderDescription } from '../models/Reportsv3HeaderDescription';
@@ -820,6 +872,11 @@ import { Reportsv3JobType } from '../models/Reportsv3JobType';
 import { Reportsv3JoinDefinition } from '../models/Reportsv3JoinDefinition';
 import { Reportsv3JoinDefinitionWithID } from '../models/Reportsv3JoinDefinitionWithID';
 import { Reportsv3Literal } from '../models/Reportsv3Literal';
+import { Reportsv3Measure } from '../models/Reportsv3Measure';
+import { Reportsv3MeasureType } from '../models/Reportsv3MeasureType';
+import { Reportsv3Metric } from '../models/Reportsv3Metric';
+import { Reportsv3MetricType } from '../models/Reportsv3MetricType';
+import { Reportsv3MetricsColumn } from '../models/Reportsv3MetricsColumn';
 import { Reportsv3ModelType } from '../models/Reportsv3ModelType';
 import { Reportsv3OperatorType } from '../models/Reportsv3OperatorType';
 import { Reportsv3OptionType } from '../models/Reportsv3OptionType';
@@ -829,6 +886,7 @@ import { Reportsv3PartialChartUpdateRequest } from '../models/Reportsv3PartialCh
 import { Reportsv3PartialChartUpdateResponse } from '../models/Reportsv3PartialChartUpdateResponse';
 import { Reportsv3PartialReportUpdateRequest } from '../models/Reportsv3PartialReportUpdateRequest';
 import { Reportsv3PartialReportUpdateResponse } from '../models/Reportsv3PartialReportUpdateResponse';
+import { Reportsv3Program } from '../models/Reportsv3Program';
 import { Reportsv3ReportAggFilter } from '../models/Reportsv3ReportAggFilter';
 import { Reportsv3ReportAggFilterCondition } from '../models/Reportsv3ReportAggFilterCondition';
 import { Reportsv3ReportDefinition } from '../models/Reportsv3ReportDefinition';
@@ -840,6 +898,9 @@ import { Reportsv3ReportHeader } from '../models/Reportsv3ReportHeader';
 import { Reportsv3ReportResult } from '../models/Reportsv3ReportResult';
 import { Reportsv3ReportTag } from '../models/Reportsv3ReportTag';
 import { Reportsv3ReportUsedInJoin } from '../models/Reportsv3ReportUsedInJoin';
+import { Reportsv3Requirement } from '../models/Reportsv3Requirement';
+import { Reportsv3RunGradesRequest } from '../models/Reportsv3RunGradesRequest';
+import { Reportsv3RunGradesResponse } from '../models/Reportsv3RunGradesResponse';
 import { Reportsv3RunReportResponse } from '../models/Reportsv3RunReportResponse';
 import { Reportsv3RunTimeParameter } from '../models/Reportsv3RunTimeParameter';
 import { Reportsv3RunVariantOperationRequest } from '../models/Reportsv3RunVariantOperationRequest';
@@ -852,10 +913,22 @@ import { Reportsv3UpdateChartRequest } from '../models/Reportsv3UpdateChartReque
 import { Reportsv3UpdateChartResponse } from '../models/Reportsv3UpdateChartResponse';
 import { Reportsv3UpdateChartv2Request } from '../models/Reportsv3UpdateChartv2Request';
 import { Reportsv3UpdateChartv2Response } from '../models/Reportsv3UpdateChartv2Response';
+import { Reportsv3UpdateControlRequest } from '../models/Reportsv3UpdateControlRequest';
+import { Reportsv3UpdateControlResponse } from '../models/Reportsv3UpdateControlResponse';
+import { Reportsv3UpdateGradeRequest } from '../models/Reportsv3UpdateGradeRequest';
+import { Reportsv3UpdateGradeResponse } from '../models/Reportsv3UpdateGradeResponse';
 import { Reportsv3UpdateJoinRequest } from '../models/Reportsv3UpdateJoinRequest';
 import { Reportsv3UpdateJoinResponse } from '../models/Reportsv3UpdateJoinResponse';
+import { Reportsv3UpdateMeasureRequest } from '../models/Reportsv3UpdateMeasureRequest';
+import { Reportsv3UpdateMeasureResponse } from '../models/Reportsv3UpdateMeasureResponse';
+import { Reportsv3UpdateMetricRequest } from '../models/Reportsv3UpdateMetricRequest';
+import { Reportsv3UpdateMetricResponse } from '../models/Reportsv3UpdateMetricResponse';
+import { Reportsv3UpdateProgramRequest } from '../models/Reportsv3UpdateProgramRequest';
+import { Reportsv3UpdateProgramResponse } from '../models/Reportsv3UpdateProgramResponse';
 import { Reportsv3UpdateReportRequest } from '../models/Reportsv3UpdateReportRequest';
 import { Reportsv3UpdateReportResponse } from '../models/Reportsv3UpdateReportResponse';
+import { Reportsv3UpdateRequirementRequest } from '../models/Reportsv3UpdateRequirementRequest';
+import { Reportsv3UpdateRequirementResponse } from '../models/Reportsv3UpdateRequirementResponse';
 import { Reportsv3UpdateVariantOverrideRequest } from '../models/Reportsv3UpdateVariantOverrideRequest';
 import { Reportsv3UpdateVariantOverrideResponse } from '../models/Reportsv3UpdateVariantOverrideResponse';
 import { Reportsv3Variant } from '../models/Reportsv3Variant';
@@ -865,67 +938,11 @@ import { Reportsv3VariantRuleCondition } from '../models/Reportsv3VariantRuleCon
 import { Reportsv3VariantRuleType } from '../models/Reportsv3VariantRuleType';
 import { RescanDataStoreRequest } from '../models/RescanDataStoreRequest';
 import { ResetPasswordRequest } from '../models/ResetPasswordRequest';
-import { Resourcecontrollerk8v3App } from '../models/Resourcecontrollerk8v3App';
-import { Resourcecontrollerk8v3AppDeployment } from '../models/Resourcecontrollerk8v3AppDeployment';
-import { Resourcecontrollerk8v3AppFile } from '../models/Resourcecontrollerk8v3AppFile';
-import { Resourcecontrollerk8v3AppHpa } from '../models/Resourcecontrollerk8v3AppHpa';
-import { Resourcecontrollerk8v3AppSecret } from '../models/Resourcecontrollerk8v3AppSecret';
-import { Resourcecontrollerk8v3Container } from '../models/Resourcecontrollerk8v3Container';
-import { Resourcecontrollerk8v3ContainerResources } from '../models/Resourcecontrollerk8v3ContainerResources';
-import { Resourcecontrollerk8v3ContainerResourcesQuantity } from '../models/Resourcecontrollerk8v3ContainerResourcesQuantity';
-import { Resourcecontrollerk8v3Controller } from '../models/Resourcecontrollerk8v3Controller';
-import { Resourcecontrollerk8v3ControllerApp } from '../models/Resourcecontrollerk8v3ControllerApp';
-import { Resourcecontrollerk8v3ControllerAppFile } from '../models/Resourcecontrollerk8v3ControllerAppFile';
-import { Resourcecontrollerk8v3ControllerAppSecret } from '../models/Resourcecontrollerk8v3ControllerAppSecret';
-import { Resourcecontrollerk8v3ControllerCommand } from '../models/Resourcecontrollerk8v3ControllerCommand';
-import { Resourcecontrollerk8v3ControllerHeartbeat } from '../models/Resourcecontrollerk8v3ControllerHeartbeat';
-import { Resourcecontrollerk8v3ControllerResources } from '../models/Resourcecontrollerk8v3ControllerResources';
-import { Resourcecontrollerk8v3ControllerStatus } from '../models/Resourcecontrollerk8v3ControllerStatus';
-import { Resourcecontrollerk8v3CreateControllerRequest } from '../models/Resourcecontrollerk8v3CreateControllerRequest';
-import { Resourcecontrollerk8v3CreateHeartBeatExResponse } from '../models/Resourcecontrollerk8v3CreateHeartBeatExResponse';
-import { Resourcecontrollerk8v3CreateHeartBeatRequest } from '../models/Resourcecontrollerk8v3CreateHeartBeatRequest';
-import { Resourcecontrollerk8v3CreateHeartBeatResponse } from '../models/Resourcecontrollerk8v3CreateHeartBeatResponse';
-import { Resourcecontrollerk8v3CreateKeypairRequest } from '../models/Resourcecontrollerk8v3CreateKeypairRequest';
-import { Resourcecontrollerk8v3CreateKeypairResponse } from '../models/Resourcecontrollerk8v3CreateKeypairResponse';
-import { Resourcecontrollerk8v3Cron } from '../models/Resourcecontrollerk8v3Cron';
-import { Resourcecontrollerk8v3DeleteControllerRequest } from '../models/Resourcecontrollerk8v3DeleteControllerRequest';
-import { Resourcecontrollerk8v3DeleteControllerResponse } from '../models/Resourcecontrollerk8v3DeleteControllerResponse';
-import { Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost } from '../models/Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost';
-import { Resourcecontrollerk8v3DeleteEdgeTenantResponse } from '../models/Resourcecontrollerk8v3DeleteEdgeTenantResponse';
-import { Resourcecontrollerk8v3DeleteJobRequest } from '../models/Resourcecontrollerk8v3DeleteJobRequest';
-import { Resourcecontrollerk8v3DeleteJobResponse } from '../models/Resourcecontrollerk8v3DeleteJobResponse';
-import { Resourcecontrollerk8v3DownloadControllerLogsRequest } from '../models/Resourcecontrollerk8v3DownloadControllerLogsRequest';
-import { Resourcecontrollerk8v3DownloadControllerLogsResponse } from '../models/Resourcecontrollerk8v3DownloadControllerLogsResponse';
-import { Resourcecontrollerk8v3EdgeResourceResponse } from '../models/Resourcecontrollerk8v3EdgeResourceResponse';
-import { Resourcecontrollerk8v3EdgeTenantRequest } from '../models/Resourcecontrollerk8v3EdgeTenantRequest';
-import { Resourcecontrollerk8v3File } from '../models/Resourcecontrollerk8v3File';
 import { Resourcecontrollerk8v3GUCStatefulsetState } from '../models/Resourcecontrollerk8v3GUCStatefulsetState';
-import { Resourcecontrollerk8v3GetControllerAppsResponse } from '../models/Resourcecontrollerk8v3GetControllerAppsResponse';
-import { Resourcecontrollerk8v3GetControllerCommandsResponse } from '../models/Resourcecontrollerk8v3GetControllerCommandsResponse';
-import { Resourcecontrollerk8v3GetControllerJobsResponse } from '../models/Resourcecontrollerk8v3GetControllerJobsResponse';
-import { Resourcecontrollerk8v3GetControllersResponse } from '../models/Resourcecontrollerk8v3GetControllersResponse';
-import { Resourcecontrollerk8v3GetControllersWithStatusResponse } from '../models/Resourcecontrollerk8v3GetControllersWithStatusResponse';
-import { Resourcecontrollerk8v3GetJobExecutionsResponse } from '../models/Resourcecontrollerk8v3GetJobExecutionsResponse';
-import { Resourcecontrollerk8v3GetTenantAppsResponse } from '../models/Resourcecontrollerk8v3GetTenantAppsResponse';
-import { Resourcecontrollerk8v3GetTenantJobsResponse } from '../models/Resourcecontrollerk8v3GetTenantJobsResponse';
-import { Resourcecontrollerk8v3InitContainer } from '../models/Resourcecontrollerk8v3InitContainer';
-import { Resourcecontrollerk8v3Job } from '../models/Resourcecontrollerk8v3Job';
-import { Resourcecontrollerk8v3JobExecution } from '../models/Resourcecontrollerk8v3JobExecution';
-import { Resourcecontrollerk8v3JobStatusDTO } from '../models/Resourcecontrollerk8v3JobStatusDTO';
-import { Resourcecontrollerk8v3KeyPair } from '../models/Resourcecontrollerk8v3KeyPair';
-import { Resourcecontrollerk8v3QueryControllerLogsRequest } from '../models/Resourcecontrollerk8v3QueryControllerLogsRequest';
-import { Resourcecontrollerk8v3QueryControllerLogsResponse } from '../models/Resourcecontrollerk8v3QueryControllerLogsResponse';
-import { Resourcecontrollerk8v3QueryLogs } from '../models/Resourcecontrollerk8v3QueryLogs';
-import { Resourcecontrollerk8v3Rule } from '../models/Resourcecontrollerk8v3Rule';
-import { Resourcecontrollerk8v3Secret } from '../models/Resourcecontrollerk8v3Secret';
 import { Resourcecontrollerk8v3TenantGUCCreateResponse } from '../models/Resourcecontrollerk8v3TenantGUCCreateResponse';
 import { Resourcecontrollerk8v3TenantGUCStatusResponse } from '../models/Resourcecontrollerk8v3TenantGUCStatusResponse';
 import { Resourcecontrollerk8v3TenantLifecycleResponse } from '../models/Resourcecontrollerk8v3TenantLifecycleResponse';
 import { Resourcecontrollerk8v3TenantResourceResponse } from '../models/Resourcecontrollerk8v3TenantResourceResponse';
-import { Resourcecontrollerk8v3TextContent } from '../models/Resourcecontrollerk8v3TextContent';
-import { Resourcecontrollerk8v3UpdateJobExecutionRequest } from '../models/Resourcecontrollerk8v3UpdateJobExecutionRequest';
-import { Resourcecontrollerk8v3UpdateJobStatusRequest } from '../models/Resourcecontrollerk8v3UpdateJobStatusRequest';
-import { Resourcecontrollerk8v3Version } from '../models/Resourcecontrollerk8v3Version';
 import { Riskanalyticscontrollerv3Action } from '../models/Riskanalyticscontrollerv3Action';
 import { Riskanalyticscontrollerv3CardSettings } from '../models/Riskanalyticscontrollerv3CardSettings';
 import { Riskanalyticscontrollerv3DetailToCount } from '../models/Riskanalyticscontrollerv3DetailToCount';
@@ -1070,7 +1087,6 @@ import { SetDataStoreLabelRequest } from '../models/SetDataStoreLabelRequest';
 import { SetQuestionBodyParams } from '../models/SetQuestionBodyParams';
 import { SetVulnerabilityStatusRequest } from '../models/SetVulnerabilityStatusRequest';
 import { SignupRequest } from '../models/SignupRequest';
-import { SimpleRecipientSimpleRecipientType } from '../models/SimpleRecipientSimpleRecipientType';
 import { Snifassistv3Feedback } from '../models/Snifassistv3Feedback';
 import { Snifassistv3FeedbackStatus } from '../models/Snifassistv3FeedbackStatus';
 import { Snifassistv3GetSnifConfigResponse } from '../models/Snifassistv3GetSnifConfigResponse';
@@ -1083,8 +1099,8 @@ import { Snifassistv3StapOperation } from '../models/Snifassistv3StapOperation';
 import { Snifassistv3StatusResponseBase } from '../models/Snifassistv3StatusResponseBase';
 import { Snifassistv3TestRegexRequest } from '../models/Snifassistv3TestRegexRequest';
 import { SortOrder } from '../models/SortOrder';
+import { StoreClassificationStatus } from '../models/StoreClassificationStatus';
 import { StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse } from '../models/StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse';
-import { StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse } from '../models/StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse';
 import { StreamResultOfReportsrunnerv3RunReportResponse } from '../models/StreamResultOfReportsrunnerv3RunReportResponse';
 import { Streamsv3AWSCheckStreamStatus } from '../models/Streamsv3AWSCheckStreamStatus';
 import { Streamsv3AuthType } from '../models/Streamsv3AuthType';
@@ -1105,31 +1121,6 @@ import { SubmitAdminEmailParams } from '../models/SubmitAdminEmailParams';
 import { SubmitAuthCode } from '../models/SubmitAuthCode';
 import { SubmitPasswordRequest } from '../models/SubmitPasswordRequest';
 import { Tags } from '../models/Tags';
-import { Templatesv3CreateIntegrationRequest } from '../models/Templatesv3CreateIntegrationRequest';
-import { Templatesv3CreateIntegrationResponse } from '../models/Templatesv3CreateIntegrationResponse';
-import { Templatesv3CreateTemplateRequest } from '../models/Templatesv3CreateTemplateRequest';
-import { Templatesv3CreateTemplateResponse } from '../models/Templatesv3CreateTemplateResponse';
-import { Templatesv3DefaultContent } from '../models/Templatesv3DefaultContent';
-import { Templatesv3DeleteIntegrationResponse } from '../models/Templatesv3DeleteIntegrationResponse';
-import { Templatesv3DeleteTemplateResponse } from '../models/Templatesv3DeleteTemplateResponse';
-import { Templatesv3GetOriginDefaultContentResponse } from '../models/Templatesv3GetOriginDefaultContentResponse';
-import { Templatesv3GetOriginFieldsResponse } from '../models/Templatesv3GetOriginFieldsResponse';
-import { Templatesv3GetTemplateResponse } from '../models/Templatesv3GetTemplateResponse';
-import { Templatesv3GetTemplatesForEdgeResponse } from '../models/Templatesv3GetTemplatesForEdgeResponse';
-import { Templatesv3GetTemplatesResponse } from '../models/Templatesv3GetTemplatesResponse';
-import { Templatesv3Integration } from '../models/Templatesv3Integration';
-import { Templatesv3MIMEType } from '../models/Templatesv3MIMEType';
-import { Templatesv3Origin } from '../models/Templatesv3Origin';
-import { Templatesv3SimpleRecipient } from '../models/Templatesv3SimpleRecipient';
-import { Templatesv3Template } from '../models/Templatesv3Template';
-import { Templatesv3TestTemplateRequest } from '../models/Templatesv3TestTemplateRequest';
-import { Templatesv3TestTemplateResponse } from '../models/Templatesv3TestTemplateResponse';
-import { Templatesv3TransformTemplateJSONRequest } from '../models/Templatesv3TransformTemplateJSONRequest';
-import { Templatesv3TransformTemplateJSONResponse } from '../models/Templatesv3TransformTemplateJSONResponse';
-import { Templatesv3TransformTemplateRequest } from '../models/Templatesv3TransformTemplateRequest';
-import { Templatesv3TransformTemplateResponse } from '../models/Templatesv3TransformTemplateResponse';
-import { Templatesv3UpdateTemplateRequest } from '../models/Templatesv3UpdateTemplateRequest';
-import { Templatesv3UpdateTemplateResponse } from '../models/Templatesv3UpdateTemplateResponse';
 import { TenantInfo } from '../models/TenantInfo';
 import { Tenantuserv3Apikey } from '../models/Tenantuserv3Apikey';
 import { Tenantuserv3AuthResponse } from '../models/Tenantuserv3AuthResponse';
@@ -1217,6 +1208,29 @@ import { VendorAccount } from '../models/VendorAccount';
 import { VendorCertificate } from '../models/VendorCertificate';
 import { VendorDataStore } from '../models/VendorDataStore';
 import { VendorSummary } from '../models/VendorSummary';
+import { Vulmanagementv3ActionType } from '../models/Vulmanagementv3ActionType';
+import { Vulmanagementv3AssetTags } from '../models/Vulmanagementv3AssetTags';
+import { Vulmanagementv3Category } from '../models/Vulmanagementv3Category';
+import { Vulmanagementv3ChildCategory } from '../models/Vulmanagementv3ChildCategory';
+import { Vulmanagementv3CreateVulnerabilityRequest } from '../models/Vulmanagementv3CreateVulnerabilityRequest';
+import { Vulmanagementv3CreateVulnerabilityResponse } from '../models/Vulmanagementv3CreateVulnerabilityResponse';
+import { Vulmanagementv3FilterCategory } from '../models/Vulmanagementv3FilterCategory';
+import { Vulmanagementv3GetFiltersDataResponse } from '../models/Vulmanagementv3GetFiltersDataResponse';
+import { Vulmanagementv3GetVulnerabilitiesRequest } from '../models/Vulmanagementv3GetVulnerabilitiesRequest';
+import { Vulmanagementv3GetVulnerabilitiesResponse } from '../models/Vulmanagementv3GetVulnerabilitiesResponse';
+import { Vulmanagementv3GetVulnerabilityResponse } from '../models/Vulmanagementv3GetVulnerabilityResponse';
+import { Vulmanagementv3Severity } from '../models/Vulmanagementv3Severity';
+import { Vulmanagementv3SortOrder } from '../models/Vulmanagementv3SortOrder';
+import { Vulmanagementv3SourceType } from '../models/Vulmanagementv3SourceType';
+import { Vulmanagementv3Status } from '../models/Vulmanagementv3Status';
+import { Vulmanagementv3SubCategory } from '../models/Vulmanagementv3SubCategory';
+import { Vulmanagementv3UpdateVulnerabilitiesRequest } from '../models/Vulmanagementv3UpdateVulnerabilitiesRequest';
+import { Vulmanagementv3UpdateVulnerabilitiesResponse } from '../models/Vulmanagementv3UpdateVulnerabilitiesResponse';
+import { Vulmanagementv3VulnerabilitiesStatsDataResponse } from '../models/Vulmanagementv3VulnerabilitiesStatsDataResponse';
+import { Vulmanagementv3Vulnerability } from '../models/Vulmanagementv3Vulnerability';
+import { Vulmanagementv3VulnerabilityAudit } from '../models/Vulmanagementv3VulnerabilityAudit';
+import { Vulmanagementv3VulnerabilityIngestionResponse } from '../models/Vulmanagementv3VulnerabilityIngestionResponse';
+import { Vulmanagementv3VulnerabilityUpdate } from '../models/Vulmanagementv3VulnerabilityUpdate';
 import { VulnerabilitiesByDataStoreFilterOptions } from '../models/VulnerabilitiesByDataStoreFilterOptions';
 import { VulnerabilitiesCriticalityCountInner } from '../models/VulnerabilitiesCriticalityCountInner';
 import { VulnerabilitiesFilterOptions } from '../models/VulnerabilitiesFilterOptions';
@@ -1323,6 +1337,15 @@ export interface AssetsServiceApiAssetsServiceAssetIngestionManualTriggerRequest
     body: any
 }
 
+export interface AssetsServiceApiAssetsServiceCancelCSVImportRequest {
+    /**
+     * unique id of the csv
+     * @type string
+     * @memberof AssetsServiceApiassetsServiceCancelCSVImport
+     */
+    csvId: string
+}
+
 export interface AssetsServiceApiAssetsServiceClonePolicyRequest {
     /**
      * Policy id that needs to be cloned.
@@ -1336,6 +1359,39 @@ export interface AssetsServiceApiAssetsServiceClonePolicyRequest {
      * @memberof AssetsServiceApiassetsServiceClonePolicy
      */
     assetsv3ClonePolicyRequest: Assetsv3ClonePolicyRequest
+}
+
+export interface AssetsServiceApiAssetsServiceCompareCSVToExistingAssetsRequest {
+    /**
+     * unique id of the csv
+     * @type string
+     * @memberof AssetsServiceApiassetsServiceCompareCSVToExistingAssets
+     */
+    csvId: string
+    /**
+     * which rows are required, existing or new or all.
+     * @type string
+     * @memberof AssetsServiceApiassetsServiceCompareCSVToExistingAssets
+     */
+    rowsRequired?: string
+    /**
+     * page number.
+     * @type number
+     * @memberof AssetsServiceApiassetsServiceCompareCSVToExistingAssets
+     */
+    pageNumber?: number
+    /**
+     * page size.
+     * @type number
+     * @memberof AssetsServiceApiassetsServiceCompareCSVToExistingAssets
+     */
+    pageSize?: number
+    /**
+     * Asset CSV template type.   - DATABASE: Template for database
+     * @type &#39;DATABASE&#39;
+     * @memberof AssetsServiceApiassetsServiceCompareCSVToExistingAssets
+     */
+    templateType?: 'DATABASE'
 }
 
 export interface AssetsServiceApiAssetsServiceCreateUpdatePolicyRequest {
@@ -1354,12 +1410,6 @@ export interface AssetsServiceApiAssetsServiceDeleteFilterTemplateForAssetsReque
      * @memberof AssetsServiceApiassetsServiceDeleteFilterTemplateForAssets
      */
     templateId: string
-    /**
-     * 
-     * @type Assetsv3AssetFilterTemplateRequest
-     * @memberof AssetsServiceApiassetsServiceDeleteFilterTemplateForAssets
-     */
-    assetsv3AssetFilterTemplateRequest: Assetsv3AssetFilterTemplateRequest
 }
 
 export interface AssetsServiceApiAssetsServiceDeletePoliciesRequest {
@@ -1550,7 +1600,7 @@ export interface AssetsServiceApiAssetsServiceGetAssetOverviewRequest {
      */
     database?: string
     /**
-     * asset ntity type.
+     * asset entity type.
      * @type string
      * @memberof AssetsServiceApiassetsServiceGetAssetOverview
      */
@@ -1576,6 +1626,21 @@ export interface AssetsServiceApiAssetsServiceGetFilterTemplateForAssetsRequest 
 }
 
 export interface AssetsServiceApiAssetsServiceGetFiltersForAssetsRequest {
+}
+
+export interface AssetsServiceApiAssetsServiceImportCSVRequest {
+    /**
+     * unique id of the csv
+     * @type string
+     * @memberof AssetsServiceApiassetsServiceImportCSV
+     */
+    csvId: string
+    /**
+     * 
+     * @type Assetsv3ImportCSVRequest
+     * @memberof AssetsServiceApiassetsServiceImportCSV
+     */
+    assetsv3ImportCSVRequest: Assetsv3ImportCSVRequest
 }
 
 export interface AssetsServiceApiAssetsServiceListPolicyRequest {
@@ -1732,6 +1797,22 @@ export class ObjectAssetsServiceApi {
     }
 
     /**
+     * CancelCSVImport - Cancel the import of CSV and update the status in import log table
+     * @param param the request object
+     */
+    public assetsServiceCancelCSVImportWithHttpInfo(param: AssetsServiceApiAssetsServiceCancelCSVImportRequest, options?: Configuration): Promise<HttpInfo<any>> {
+        return this.api.assetsServiceCancelCSVImportWithHttpInfo(param.csvId,  options).toPromise();
+    }
+
+    /**
+     * CancelCSVImport - Cancel the import of CSV and update the status in import log table
+     * @param param the request object
+     */
+    public assetsServiceCancelCSVImport(param: AssetsServiceApiAssetsServiceCancelCSVImportRequest, options?: Configuration): Promise<any> {
+        return this.api.assetsServiceCancelCSVImport(param.csvId,  options).toPromise();
+    }
+
+    /**
      * ClonePolicy - Clone a policy.
      * @param param the request object
      */
@@ -1745,6 +1826,22 @@ export class ObjectAssetsServiceApi {
      */
     public assetsServiceClonePolicy(param: AssetsServiceApiAssetsServiceClonePolicyRequest, options?: Configuration): Promise<any> {
         return this.api.assetsServiceClonePolicy(param.policyId, param.assetsv3ClonePolicyRequest,  options).toPromise();
+    }
+
+    /**
+     * CompareCSVToExistingAssets - Compare CSV with existing assets and return list of assets(existing/to be imported/both) on demand from csv.
+     * @param param the request object
+     */
+    public assetsServiceCompareCSVToExistingAssetsWithHttpInfo(param: AssetsServiceApiAssetsServiceCompareCSVToExistingAssetsRequest, options?: Configuration): Promise<HttpInfo<Assetsv3CompareCSVResponse>> {
+        return this.api.assetsServiceCompareCSVToExistingAssetsWithHttpInfo(param.csvId, param.rowsRequired, param.pageNumber, param.pageSize, param.templateType,  options).toPromise();
+    }
+
+    /**
+     * CompareCSVToExistingAssets - Compare CSV with existing assets and return list of assets(existing/to be imported/both) on demand from csv.
+     * @param param the request object
+     */
+    public assetsServiceCompareCSVToExistingAssets(param: AssetsServiceApiAssetsServiceCompareCSVToExistingAssetsRequest, options?: Configuration): Promise<Assetsv3CompareCSVResponse> {
+        return this.api.assetsServiceCompareCSVToExistingAssets(param.csvId, param.rowsRequired, param.pageNumber, param.pageSize, param.templateType,  options).toPromise();
     }
 
     /**
@@ -1768,7 +1865,7 @@ export class ObjectAssetsServiceApi {
      * @param param the request object
      */
     public assetsServiceDeleteFilterTemplateForAssetsWithHttpInfo(param: AssetsServiceApiAssetsServiceDeleteFilterTemplateForAssetsRequest, options?: Configuration): Promise<HttpInfo<any>> {
-        return this.api.assetsServiceDeleteFilterTemplateForAssetsWithHttpInfo(param.templateId, param.assetsv3AssetFilterTemplateRequest,  options).toPromise();
+        return this.api.assetsServiceDeleteFilterTemplateForAssetsWithHttpInfo(param.templateId,  options).toPromise();
     }
 
     /**
@@ -1776,7 +1873,7 @@ export class ObjectAssetsServiceApi {
      * @param param the request object
      */
     public assetsServiceDeleteFilterTemplateForAssets(param: AssetsServiceApiAssetsServiceDeleteFilterTemplateForAssetsRequest, options?: Configuration): Promise<any> {
-        return this.api.assetsServiceDeleteFilterTemplateForAssets(param.templateId, param.assetsv3AssetFilterTemplateRequest,  options).toPromise();
+        return this.api.assetsServiceDeleteFilterTemplateForAssets(param.templateId,  options).toPromise();
     }
 
     /**
@@ -1937,6 +2034,22 @@ export class ObjectAssetsServiceApi {
      */
     public assetsServiceGetFiltersForAssets(param: AssetsServiceApiAssetsServiceGetFiltersForAssetsRequest = {}, options?: Configuration): Promise<Assetsv3GetFiltersDataResponse> {
         return this.api.assetsServiceGetFiltersForAssets( options).toPromise();
+    }
+
+    /**
+     * ImportCSV - Start the async asset import from CSV by starting the db procedure and send notification at the end.
+     * @param param the request object
+     */
+    public assetsServiceImportCSVWithHttpInfo(param: AssetsServiceApiAssetsServiceImportCSVRequest, options?: Configuration): Promise<HttpInfo<Assetsv3ImportCSVResponse>> {
+        return this.api.assetsServiceImportCSVWithHttpInfo(param.csvId, param.assetsv3ImportCSVRequest,  options).toPromise();
+    }
+
+    /**
+     * ImportCSV - Start the async asset import from CSV by starting the db procedure and send notification at the end.
+     * @param param the request object
+     */
+    public assetsServiceImportCSV(param: AssetsServiceApiAssetsServiceImportCSVRequest, options?: Configuration): Promise<Assetsv3ImportCSVResponse> {
+        return this.api.assetsServiceImportCSV(param.csvId, param.assetsv3ImportCSVRequest,  options).toPromise();
     }
 
     /**
@@ -2444,6 +2557,9 @@ export interface CloudAccountsApiGenerateAzureAuthUrlRequest {
 export interface CloudAccountsApiGenerateOffice365AuthUrlRequest {
 }
 
+export interface CloudAccountsApiGenerateSalesforceAuthUrlRequest {
+}
+
 export interface CloudAccountsApiGenerateSlackAuthUrlRequest {
 }
 
@@ -2487,6 +2603,15 @@ export interface CloudAccountsApiGetCloudAccountInstallationStatusRequest {
      * @memberof CloudAccountsApigetCloudAccountInstallationStatus
      */
     cloudAccountId: string
+}
+
+export interface CloudAccountsApiGetDatabaseMetadataRequest {
+    /**
+     * 
+     * @type DbInfo
+     * @memberof CloudAccountsApigetDatabaseMetadata
+     */
+    dbInfo: DbInfo
 }
 
 export interface CloudAccountsApiGetRefreshTokenExpiryRequest {
@@ -2553,6 +2678,15 @@ export interface CloudAccountsApiSubmitOffice365TenantInfoRequest {
      * @memberof CloudAccountsApisubmitOffice365TenantInfo
      */
     tenantInfo: TenantInfo
+}
+
+export interface CloudAccountsApiSubmitSalesforceAuthCodeRequest {
+    /**
+     * 
+     * @type AuthCode
+     * @memberof CloudAccountsApisubmitSalesforceAuthCode
+     */
+    authCode: AuthCode
 }
 
 export interface CloudAccountsApiSubmitSlackAuthCodeRequest {
@@ -2689,6 +2823,24 @@ export class ObjectCloudAccountsApi {
     }
 
     /**
+     * Generate an administrator consent URL for Salesforce integration.
+     * Generate a Salesforce consent URL
+     * @param param the request object
+     */
+    public generateSalesforceAuthUrlWithHttpInfo(param: CloudAccountsApiGenerateSalesforceAuthUrlRequest = {}, options?: Configuration): Promise<HttpInfo<AuthUrl>> {
+        return this.api.generateSalesforceAuthUrlWithHttpInfo( options).toPromise();
+    }
+
+    /**
+     * Generate an administrator consent URL for Salesforce integration.
+     * Generate a Salesforce consent URL
+     * @param param the request object
+     */
+    public generateSalesforceAuthUrl(param: CloudAccountsApiGenerateSalesforceAuthUrlRequest = {}, options?: Configuration): Promise<AuthUrl> {
+        return this.api.generateSalesforceAuthUrl( options).toPromise();
+    }
+
+    /**
      * Generate a Slack authentication URL.
      * Generate a Slack authentication URL
      * @param param the request object
@@ -2776,6 +2928,24 @@ export class ObjectCloudAccountsApi {
      */
     public getCloudAccountInstallationStatus(param: CloudAccountsApiGetCloudAccountInstallationStatusRequest, options?: Configuration): Promise<CloudAccountInstallationStatus> {
         return this.api.getCloudAccountInstallationStatus(param.cloudProvider, param.cloudAccountId,  options).toPromise();
+    }
+
+    /**
+     * Get the metadata details of snowflake database from saas-asset-store.
+     * Get the metadata details of snowflake database.
+     * @param param the request object
+     */
+    public getDatabaseMetadataWithHttpInfo(param: CloudAccountsApiGetDatabaseMetadataRequest, options?: Configuration): Promise<HttpInfo<DBMetadataInfo>> {
+        return this.api.getDatabaseMetadataWithHttpInfo(param.dbInfo,  options).toPromise();
+    }
+
+    /**
+     * Get the metadata details of snowflake database from saas-asset-store.
+     * Get the metadata details of snowflake database.
+     * @param param the request object
+     */
+    public getDatabaseMetadata(param: CloudAccountsApiGetDatabaseMetadataRequest, options?: Configuration): Promise<DBMetadataInfo> {
+        return this.api.getDatabaseMetadata(param.dbInfo,  options).toPromise();
     }
 
     /**
@@ -2920,6 +3090,24 @@ export class ObjectCloudAccountsApi {
      */
     public submitOffice365TenantInfo(param: CloudAccountsApiSubmitOffice365TenantInfoRequest, options?: Configuration): Promise<Office365TenantInfo> {
         return this.api.submitOffice365TenantInfo(param.tenantInfo,  options).toPromise();
+    }
+
+    /**
+     * Submit customer information for Salesforce integration.
+     * Submit Salesforce customer information
+     * @param param the request object
+     */
+    public submitSalesforceAuthCodeWithHttpInfo(param: CloudAccountsApiSubmitSalesforceAuthCodeRequest, options?: Configuration): Promise<HttpInfo<void>> {
+        return this.api.submitSalesforceAuthCodeWithHttpInfo(param.authCode,  options).toPromise();
+    }
+
+    /**
+     * Submit customer information for Salesforce integration.
+     * Submit Salesforce customer information
+     * @param param the request object
+     */
+    public submitSalesforceAuthCode(param: CloudAccountsApiSubmitSalesforceAuthCodeRequest, options?: Configuration): Promise<void> {
+        return this.api.submitSalesforceAuthCode(param.authCode,  options).toPromise();
     }
 
     /**
@@ -3344,6 +3532,24 @@ export interface ConnectionsServiceApiConnectionsServiceValidateAwsConnectionReq
      * @memberof ConnectionsServiceApiconnectionsServiceValidateAwsConnection
      */
     connectionsv3ValidateAwsConnectionRequest: Connectionsv3ValidateAwsConnectionRequest
+}
+
+export interface ConnectionsServiceApiConnectionsServiceValidateAzureConnectionRequest {
+    /**
+     * 
+     * @type Connectionsv3ValidateAzureConnectionRequest
+     * @memberof ConnectionsServiceApiconnectionsServiceValidateAzureConnection
+     */
+    connectionsv3ValidateAzureConnectionRequest: Connectionsv3ValidateAzureConnectionRequest
+}
+
+export interface ConnectionsServiceApiConnectionsServiceValidateGcpConnectionRequest {
+    /**
+     * 
+     * @type Connectionsv3ValidateGcpConnectionRequest
+     * @memberof ConnectionsServiceApiconnectionsServiceValidateGcpConnection
+     */
+    connectionsv3ValidateGcpConnectionRequest: Connectionsv3ValidateGcpConnectionRequest
 }
 
 export class ObjectConnectionsServiceApi {
@@ -3799,6 +4005,38 @@ export class ObjectConnectionsServiceApi {
      */
     public connectionsServiceValidateAwsConnection(param: ConnectionsServiceApiConnectionsServiceValidateAwsConnectionRequest, options?: Configuration): Promise<Connectionsv3ValidateConnectionResponse> {
         return this.api.connectionsServiceValidateAwsConnection(param.connectionsv3ValidateAwsConnectionRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Validate an Azure connection. Description: Validate an Azure connection.
+     * @param param the request object
+     */
+    public connectionsServiceValidateAzureConnectionWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceValidateAzureConnectionRequest, options?: Configuration): Promise<HttpInfo<Connectionsv3ValidateConnectionResponse>> {
+        return this.api.connectionsServiceValidateAzureConnectionWithHttpInfo(param.connectionsv3ValidateAzureConnectionRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Validate an Azure connection. Description: Validate an Azure connection.
+     * @param param the request object
+     */
+    public connectionsServiceValidateAzureConnection(param: ConnectionsServiceApiConnectionsServiceValidateAzureConnectionRequest, options?: Configuration): Promise<Connectionsv3ValidateConnectionResponse> {
+        return this.api.connectionsServiceValidateAzureConnection(param.connectionsv3ValidateAzureConnectionRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Validate a GCP connection. Description: Validate a GCP connection.
+     * @param param the request object
+     */
+    public connectionsServiceValidateGcpConnectionWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceValidateGcpConnectionRequest, options?: Configuration): Promise<HttpInfo<Connectionsv3ValidateConnectionResponse>> {
+        return this.api.connectionsServiceValidateGcpConnectionWithHttpInfo(param.connectionsv3ValidateGcpConnectionRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Validate a GCP connection. Description: Validate a GCP connection.
+     * @param param the request object
+     */
+    public connectionsServiceValidateGcpConnection(param: ConnectionsServiceApiConnectionsServiceValidateGcpConnectionRequest, options?: Configuration): Promise<Connectionsv3ValidateConnectionResponse> {
+        return this.api.connectionsServiceValidateGcpConnection(param.connectionsv3ValidateGcpConnectionRequest,  options).toPromise();
     }
 
 }
@@ -5729,105 +5967,6 @@ export class ObjectEcosystemServiceApi {
 
 }
 
-import { ObservableEdgeSchedulerServiceApi } from "./ObservableAPI";
-import { EdgeSchedulerServiceApiRequestFactory, EdgeSchedulerServiceApiResponseProcessor} from "../apis/EdgeSchedulerServiceApi";
-
-export interface EdgeSchedulerServiceApiEdgeSchedulerServiceGetEdgeQueryStatusRequest {
-    /**
-     * the id of the edge
-     * @type string
-     * @memberof EdgeSchedulerServiceApiedgeSchedulerServiceGetEdgeQueryStatus
-     */
-    edgeId: string
-    /**
-     * the id of the UC report being queried for.
-     * @type string
-     * @memberof EdgeSchedulerServiceApiedgeSchedulerServiceGetEdgeQueryStatus
-     */
-    edgeResultReportId?: string
-}
-
-export interface EdgeSchedulerServiceApiEdgeSchedulerServiceMonitoringPendingRequestForEdgeQueryRequest {
-    /**
-     * edge client id to monitor edge query requests for.
-     * @type string
-     * @memberof EdgeSchedulerServiceApiedgeSchedulerServiceMonitoringPendingRequestForEdgeQuery
-     */
-    clientId?: string
-}
-
-export interface EdgeSchedulerServiceApiEdgeSchedulerServiceScheduleEdgeQueryRequest {
-    /**
-     * the id of the edge
-     * @type string
-     * @memberof EdgeSchedulerServiceApiedgeSchedulerServiceScheduleEdgeQuery
-     */
-    edgeId: string
-    /**
-     * 
-     * @type Edgeschedulerv3ScheduleEdgeQueryRequest
-     * @memberof EdgeSchedulerServiceApiedgeSchedulerServiceScheduleEdgeQuery
-     */
-    edgeschedulerv3ScheduleEdgeQueryRequest: Edgeschedulerv3ScheduleEdgeQueryRequest
-}
-
-export class ObjectEdgeSchedulerServiceApi {
-    private api: ObservableEdgeSchedulerServiceApi
-
-    public constructor(configuration: Configuration, requestFactory?: EdgeSchedulerServiceApiRequestFactory, responseProcessor?: EdgeSchedulerServiceApiResponseProcessor) {
-        this.api = new ObservableEdgeSchedulerServiceApi(configuration, requestFactory, responseProcessor);
-    }
-
-    /**
-     * Summary: Get edge query status Description: Get the status of a queued edge query
-     * @param param the request object
-     */
-    public edgeSchedulerServiceGetEdgeQueryStatusWithHttpInfo(param: EdgeSchedulerServiceApiEdgeSchedulerServiceGetEdgeQueryStatusRequest, options?: Configuration): Promise<HttpInfo<Edgeschedulerv3GetEdgeQueryStatusResponse>> {
-        return this.api.edgeSchedulerServiceGetEdgeQueryStatusWithHttpInfo(param.edgeId, param.edgeResultReportId,  options).toPromise();
-    }
-
-    /**
-     * Summary: Get edge query status Description: Get the status of a queued edge query
-     * @param param the request object
-     */
-    public edgeSchedulerServiceGetEdgeQueryStatus(param: EdgeSchedulerServiceApiEdgeSchedulerServiceGetEdgeQueryStatusRequest, options?: Configuration): Promise<Edgeschedulerv3GetEdgeQueryStatusResponse> {
-        return this.api.edgeSchedulerServiceGetEdgeQueryStatus(param.edgeId, param.edgeResultReportId,  options).toPromise();
-    }
-
-    /**
-     * Summary: Monitor for a pending edge query request Description: monitor edge query pending request
-     * @param param the request object
-     */
-    public edgeSchedulerServiceMonitoringPendingRequestForEdgeQueryWithHttpInfo(param: EdgeSchedulerServiceApiEdgeSchedulerServiceMonitoringPendingRequestForEdgeQueryRequest = {}, options?: Configuration): Promise<HttpInfo<StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse>> {
-        return this.api.edgeSchedulerServiceMonitoringPendingRequestForEdgeQueryWithHttpInfo(param.clientId,  options).toPromise();
-    }
-
-    /**
-     * Summary: Monitor for a pending edge query request Description: monitor edge query pending request
-     * @param param the request object
-     */
-    public edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery(param: EdgeSchedulerServiceApiEdgeSchedulerServiceMonitoringPendingRequestForEdgeQueryRequest = {}, options?: Configuration): Promise<StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse> {
-        return this.api.edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery(param.clientId,  options).toPromise();
-    }
-
-    /**
-     * Summary: Schedule an edge query  Description: Schedule an edge query via data warehouse queue
-     * @param param the request object
-     */
-    public edgeSchedulerServiceScheduleEdgeQueryWithHttpInfo(param: EdgeSchedulerServiceApiEdgeSchedulerServiceScheduleEdgeQueryRequest, options?: Configuration): Promise<HttpInfo<Edgeschedulerv3ScheduleEdgeQueryResponse>> {
-        return this.api.edgeSchedulerServiceScheduleEdgeQueryWithHttpInfo(param.edgeId, param.edgeschedulerv3ScheduleEdgeQueryRequest,  options).toPromise();
-    }
-
-    /**
-     * Summary: Schedule an edge query  Description: Schedule an edge query via data warehouse queue
-     * @param param the request object
-     */
-    public edgeSchedulerServiceScheduleEdgeQuery(param: EdgeSchedulerServiceApiEdgeSchedulerServiceScheduleEdgeQueryRequest, options?: Configuration): Promise<Edgeschedulerv3ScheduleEdgeQueryResponse> {
-        return this.api.edgeSchedulerServiceScheduleEdgeQuery(param.edgeId, param.edgeschedulerv3ScheduleEdgeQueryRequest,  options).toPromise();
-    }
-
-}
-
 import { ObservableFeatureFlagsServiceApi } from "./ObservableAPI";
 import { FeatureFlagsServiceApiRequestFactory, FeatureFlagsServiceApiResponseProcessor} from "../apis/FeatureFlagsServiceApi";
 
@@ -7747,6 +7886,15 @@ export interface JumpboxServiceApiJumpboxServiceAuthorizeRequest {
     jumpboxv3AuthorizeRequest: Jumpboxv3AuthorizeRequest
 }
 
+export interface JumpboxServiceApiJumpboxServiceDeleteAccountRequest {
+    /**
+     * Account id.
+     * @type string
+     * @memberof JumpboxServiceApijumpboxServiceDeleteAccount
+     */
+    accountId: string
+}
+
 export interface JumpboxServiceApiJumpboxServiceDeleteTenantRequest {
     /**
      * Tenant id.
@@ -7775,6 +7923,54 @@ export interface JumpboxServiceApiJumpboxServiceDeleteUserRequest {
      * @memberof JumpboxServiceApijumpboxServiceDeleteUser
      */
     userId: string
+}
+
+export interface JumpboxServiceApiJumpboxServiceGetAccountRequest {
+    /**
+     * Account id.
+     * @type string
+     * @memberof JumpboxServiceApijumpboxServiceGetAccount
+     */
+    accountId: string
+    /**
+     * Include inactive.
+     * @type boolean
+     * @memberof JumpboxServiceApijumpboxServiceGetAccount
+     */
+    includeInactive?: boolean
+    /**
+     * Include tenants that are not ready(are in state of being created or deleted).
+     * @type boolean
+     * @memberof JumpboxServiceApijumpboxServiceGetAccount
+     */
+    includeNotReady?: boolean
+}
+
+export interface JumpboxServiceApiJumpboxServiceGetAccountsRequest {
+    /**
+     * Email.
+     * @type string
+     * @memberof JumpboxServiceApijumpboxServiceGetAccounts
+     */
+    uid?: string
+    /**
+     * External id.
+     * @type string
+     * @memberof JumpboxServiceApijumpboxServiceGetAccounts
+     */
+    externalId?: string
+    /**
+     * Include inactive.
+     * @type boolean
+     * @memberof JumpboxServiceApijumpboxServiceGetAccounts
+     */
+    includeInactive?: boolean
+    /**
+     * Include tenants that are not ready(are in state of being created or deleted).
+     * @type boolean
+     * @memberof JumpboxServiceApijumpboxServiceGetAccounts
+     */
+    includeNotReady?: boolean
 }
 
 export interface JumpboxServiceApiJumpboxServiceGetTenantRequest {
@@ -7834,6 +8030,15 @@ export interface JumpboxServiceApiJumpboxServiceGetUsersRequest {
     uid?: string
 }
 
+export interface JumpboxServiceApiJumpboxServicePostAccountRequest {
+    /**
+     * 
+     * @type Jumpboxv3PostAccountRequest
+     * @memberof JumpboxServiceApijumpboxServicePostAccount
+     */
+    jumpboxv3PostAccountRequest: Jumpboxv3PostAccountRequest
+}
+
 export interface JumpboxServiceApiJumpboxServicePostTenantsRequest {
     /**
      * 
@@ -7852,6 +8057,15 @@ export interface JumpboxServiceApiJumpboxServicePostUsersRequest {
     jumpboxv3PostUsersBulkRequest: Jumpboxv3PostUsersBulkRequest
 }
 
+export interface JumpboxServiceApiJumpboxServiceResumeAccountRequest {
+    /**
+     * account_id represents the user\&#39;s account ID
+     * @type string
+     * @memberof JumpboxServiceApijumpboxServiceResumeAccount
+     */
+    accountId: string
+}
+
 export interface JumpboxServiceApiJumpboxServiceSearchUsersRequest {
     /**
      * 
@@ -7861,6 +8075,15 @@ export interface JumpboxServiceApiJumpboxServiceSearchUsersRequest {
     jumpboxv3SearchUsersRequest: Jumpboxv3SearchUsersRequest
 }
 
+export interface JumpboxServiceApiJumpboxServiceSuspendAccountRequest {
+    /**
+     * account_id represents the user\&#39;s account ID
+     * @type string
+     * @memberof JumpboxServiceApijumpboxServiceSuspendAccount
+     */
+    accountId: string
+}
+
 export interface JumpboxServiceApiJumpboxServiceTestUserRequest {
     /**
      * 
@@ -7868,6 +8091,21 @@ export interface JumpboxServiceApiJumpboxServiceTestUserRequest {
      * @memberof JumpboxServiceApijumpboxServiceTestUser
      */
     jumpboxv3TestUserRequest: Jumpboxv3TestUserRequest
+}
+
+export interface JumpboxServiceApiJumpboxServiceUpdateAccountRequest {
+    /**
+     * Account id.
+     * @type string
+     * @memberof JumpboxServiceApijumpboxServiceUpdateAccount
+     */
+    accountId: string
+    /**
+     * 
+     * @type Jumpboxv3UpdateAccountRequest
+     * @memberof JumpboxServiceApijumpboxServiceUpdateAccount
+     */
+    jumpboxv3UpdateAccountRequest: Jumpboxv3UpdateAccountRequest
 }
 
 export interface JumpboxServiceApiJumpboxServiceUpdateTenantRequest {
@@ -7918,6 +8156,22 @@ export class ObjectJumpboxServiceApi {
     }
 
     /**
+     * Summary: Delete account Description: Delete an account.
+     * @param param the request object
+     */
+    public jumpboxServiceDeleteAccountWithHttpInfo(param: JumpboxServiceApiJumpboxServiceDeleteAccountRequest, options?: Configuration): Promise<HttpInfo<Jumpboxv3DeleteAccountResponse>> {
+        return this.api.jumpboxServiceDeleteAccountWithHttpInfo(param.accountId,  options).toPromise();
+    }
+
+    /**
+     * Summary: Delete account Description: Delete an account.
+     * @param param the request object
+     */
+    public jumpboxServiceDeleteAccount(param: JumpboxServiceApiJumpboxServiceDeleteAccountRequest, options?: Configuration): Promise<Jumpboxv3DeleteAccountResponse> {
+        return this.api.jumpboxServiceDeleteAccount(param.accountId,  options).toPromise();
+    }
+
+    /**
      * Summary: Delete tenant Description: Delete a tenant.
      * @param param the request object
      */
@@ -7947,6 +8201,38 @@ export class ObjectJumpboxServiceApi {
      */
     public jumpboxServiceDeleteUser(param: JumpboxServiceApiJumpboxServiceDeleteUserRequest, options?: Configuration): Promise<any> {
         return this.api.jumpboxServiceDeleteUser(param.userId,  options).toPromise();
+    }
+
+    /**
+     * Summary: Get account Description: Get an account.
+     * @param param the request object
+     */
+    public jumpboxServiceGetAccountWithHttpInfo(param: JumpboxServiceApiJumpboxServiceGetAccountRequest, options?: Configuration): Promise<HttpInfo<Jumpboxv3GetAccountResponse>> {
+        return this.api.jumpboxServiceGetAccountWithHttpInfo(param.accountId, param.includeInactive, param.includeNotReady,  options).toPromise();
+    }
+
+    /**
+     * Summary: Get account Description: Get an account.
+     * @param param the request object
+     */
+    public jumpboxServiceGetAccount(param: JumpboxServiceApiJumpboxServiceGetAccountRequest, options?: Configuration): Promise<Jumpboxv3GetAccountResponse> {
+        return this.api.jumpboxServiceGetAccount(param.accountId, param.includeInactive, param.includeNotReady,  options).toPromise();
+    }
+
+    /**
+     * Summary: Get accounts Description: Get all accounts based on UID.
+     * @param param the request object
+     */
+    public jumpboxServiceGetAccountsWithHttpInfo(param: JumpboxServiceApiJumpboxServiceGetAccountsRequest = {}, options?: Configuration): Promise<HttpInfo<Jumpboxv3GetAccountsResponse>> {
+        return this.api.jumpboxServiceGetAccountsWithHttpInfo(param.uid, param.externalId, param.includeInactive, param.includeNotReady,  options).toPromise();
+    }
+
+    /**
+     * Summary: Get accounts Description: Get all accounts based on UID.
+     * @param param the request object
+     */
+    public jumpboxServiceGetAccounts(param: JumpboxServiceApiJumpboxServiceGetAccountsRequest = {}, options?: Configuration): Promise<Jumpboxv3GetAccountsResponse> {
+        return this.api.jumpboxServiceGetAccounts(param.uid, param.externalId, param.includeInactive, param.includeNotReady,  options).toPromise();
     }
 
     /**
@@ -7998,6 +8284,22 @@ export class ObjectJumpboxServiceApi {
     }
 
     /**
+     * Summary: Post account Description: Create an Account.
+     * @param param the request object
+     */
+    public jumpboxServicePostAccountWithHttpInfo(param: JumpboxServiceApiJumpboxServicePostAccountRequest, options?: Configuration): Promise<HttpInfo<Jumpboxv3PostAccountResponse>> {
+        return this.api.jumpboxServicePostAccountWithHttpInfo(param.jumpboxv3PostAccountRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Post account Description: Create an Account.
+     * @param param the request object
+     */
+    public jumpboxServicePostAccount(param: JumpboxServiceApiJumpboxServicePostAccountRequest, options?: Configuration): Promise<Jumpboxv3PostAccountResponse> {
+        return this.api.jumpboxServicePostAccount(param.jumpboxv3PostAccountRequest,  options).toPromise();
+    }
+
+    /**
      * Summary: Post tenants Description: Create a tenant.
      * @param param the request object
      */
@@ -8030,6 +8332,22 @@ export class ObjectJumpboxServiceApi {
     }
 
     /**
+     * Summary: Resume account Description: Resume an account.
+     * @param param the request object
+     */
+    public jumpboxServiceResumeAccountWithHttpInfo(param: JumpboxServiceApiJumpboxServiceResumeAccountRequest, options?: Configuration): Promise<HttpInfo<Jumpboxv3ResumeAccountResponse>> {
+        return this.api.jumpboxServiceResumeAccountWithHttpInfo(param.accountId,  options).toPromise();
+    }
+
+    /**
+     * Summary: Resume account Description: Resume an account.
+     * @param param the request object
+     */
+    public jumpboxServiceResumeAccount(param: JumpboxServiceApiJumpboxServiceResumeAccountRequest, options?: Configuration): Promise<Jumpboxv3ResumeAccountResponse> {
+        return this.api.jumpboxServiceResumeAccount(param.accountId,  options).toPromise();
+    }
+
+    /**
      * Summary: Search users Description: Search for all users matching the provided string.
      * @param param the request object
      */
@@ -8046,6 +8364,22 @@ export class ObjectJumpboxServiceApi {
     }
 
     /**
+     * Summary: Suspend Account Description: Suspend an account
+     * @param param the request object
+     */
+    public jumpboxServiceSuspendAccountWithHttpInfo(param: JumpboxServiceApiJumpboxServiceSuspendAccountRequest, options?: Configuration): Promise<HttpInfo<Jumpboxv3SuspendAccountResponse>> {
+        return this.api.jumpboxServiceSuspendAccountWithHttpInfo(param.accountId,  options).toPromise();
+    }
+
+    /**
+     * Summary: Suspend Account Description: Suspend an account
+     * @param param the request object
+     */
+    public jumpboxServiceSuspendAccount(param: JumpboxServiceApiJumpboxServiceSuspendAccountRequest, options?: Configuration): Promise<Jumpboxv3SuspendAccountResponse> {
+        return this.api.jumpboxServiceSuspendAccount(param.accountId,  options).toPromise();
+    }
+
+    /**
      * Summary: Test user Description: Test a user lookup to a given LDAP.
      * @param param the request object
      */
@@ -8059,6 +8393,22 @@ export class ObjectJumpboxServiceApi {
      */
     public jumpboxServiceTestUser(param: JumpboxServiceApiJumpboxServiceTestUserRequest, options?: Configuration): Promise<Jumpboxv3TestUserResponse> {
         return this.api.jumpboxServiceTestUser(param.jumpboxv3TestUserRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Update Account Description: Updates an account.
+     * @param param the request object
+     */
+    public jumpboxServiceUpdateAccountWithHttpInfo(param: JumpboxServiceApiJumpboxServiceUpdateAccountRequest, options?: Configuration): Promise<HttpInfo<Jumpboxv3UpdateAccountResponse>> {
+        return this.api.jumpboxServiceUpdateAccountWithHttpInfo(param.accountId, param.jumpboxv3UpdateAccountRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Update Account Description: Updates an account.
+     * @param param the request object
+     */
+    public jumpboxServiceUpdateAccount(param: JumpboxServiceApiJumpboxServiceUpdateAccountRequest, options?: Configuration): Promise<Jumpboxv3UpdateAccountResponse> {
+        return this.api.jumpboxServiceUpdateAccount(param.accountId, param.jumpboxv3UpdateAccountRequest,  options).toPromise();
     }
 
     /**
@@ -8719,6 +9069,30 @@ export interface PolicyBuilderApiPolicyBuilderGetPolicyNamesFromRuleIDsRequest {
 export interface PolicyBuilderApiPolicyBuilderGetPolicySyncListRequest {
 }
 
+export interface PolicyBuilderApiPolicyBuilderGetPolicyVersionRequest {
+    /**
+     * Policy id of the requested policy
+     * @type string
+     * @memberof PolicyBuilderApipolicyBuilderGetPolicyVersion
+     */
+    policyId: string
+    /**
+     * Requested version number of the policy
+     * @type number
+     * @memberof PolicyBuilderApipolicyBuilderGetPolicyVersion
+     */
+    version: number
+}
+
+export interface PolicyBuilderApiPolicyBuilderGetPolicyVersionsInfoRequest {
+    /**
+     * Policy id of the requested policy
+     * @type string
+     * @memberof PolicyBuilderApipolicyBuilderGetPolicyVersionsInfo
+     */
+    policyId: string
+}
+
 export interface PolicyBuilderApiPolicyBuilderGetReceiversRequest {
     /**
      * Action id.
@@ -8822,6 +9196,15 @@ export interface PolicyBuilderApiPolicyBuilderStorePoliciesGdpRequest {
      * @memberof PolicyBuilderApipolicyBuilderStorePoliciesGdp
      */
     policybuilderv3StorePolicyGdpRequest: Policybuilderv3StorePolicyGdpRequest
+}
+
+export interface PolicyBuilderApiPolicyBuilderUpdatePolicyRequest {
+    /**
+     * 
+     * @type Policybuilderv3CreateUpdatePolicyRequest
+     * @memberof PolicyBuilderApipolicyBuilderUpdatePolicy
+     */
+    policybuilderv3CreateUpdatePolicyRequest: Policybuilderv3CreateUpdatePolicyRequest
 }
 
 export class ObjectPolicyBuilderApi {
@@ -8976,6 +9359,38 @@ export class ObjectPolicyBuilderApi {
     }
 
     /**
+     * Summary: Get a particular version of the policy Description: Returns a particular version of policy and response code and message
+     * @param param the request object
+     */
+    public policyBuilderGetPolicyVersionWithHttpInfo(param: PolicyBuilderApiPolicyBuilderGetPolicyVersionRequest, options?: Configuration): Promise<HttpInfo<Policybuilderv3GetPolicyVersionResponse>> {
+        return this.api.policyBuilderGetPolicyVersionWithHttpInfo(param.policyId, param.version,  options).toPromise();
+    }
+
+    /**
+     * Summary: Get a particular version of the policy Description: Returns a particular version of policy and response code and message
+     * @param param the request object
+     */
+    public policyBuilderGetPolicyVersion(param: PolicyBuilderApiPolicyBuilderGetPolicyVersionRequest, options?: Configuration): Promise<Policybuilderv3GetPolicyVersionResponse> {
+        return this.api.policyBuilderGetPolicyVersion(param.policyId, param.version,  options).toPromise();
+    }
+
+    /**
+     * Summary: Gets policy versions info Description: Returns information of all versions of a policy and response code and message
+     * @param param the request object
+     */
+    public policyBuilderGetPolicyVersionsInfoWithHttpInfo(param: PolicyBuilderApiPolicyBuilderGetPolicyVersionsInfoRequest, options?: Configuration): Promise<HttpInfo<Policybuilderv3GetPolicyVersionsInfoResponse>> {
+        return this.api.policyBuilderGetPolicyVersionsInfoWithHttpInfo(param.policyId,  options).toPromise();
+    }
+
+    /**
+     * Summary: Gets policy versions info Description: Returns information of all versions of a policy and response code and message
+     * @param param the request object
+     */
+    public policyBuilderGetPolicyVersionsInfo(param: PolicyBuilderApiPolicyBuilderGetPolicyVersionsInfoRequest, options?: Configuration): Promise<Policybuilderv3GetPolicyVersionsInfoResponse> {
+        return this.api.policyBuilderGetPolicyVersionsInfo(param.policyId,  options).toPromise();
+    }
+
+    /**
      * Summary: Get receivers Description: Get all the receivers associated with actions.
      * @param param the request object
      */
@@ -9117,6 +9532,22 @@ export class ObjectPolicyBuilderApi {
      */
     public policyBuilderStorePoliciesGdp(param: PolicyBuilderApiPolicyBuilderStorePoliciesGdpRequest, options?: Configuration): Promise<Policybuilderv3StorePolicyGdpResponse> {
         return this.api.policyBuilderStorePoliciesGdp(param.centralManagerId, param.policybuilderv3StorePolicyGdpRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Update policy Description: Update Policy returns response code and message.
+     * @param param the request object
+     */
+    public policyBuilderUpdatePolicyWithHttpInfo(param: PolicyBuilderApiPolicyBuilderUpdatePolicyRequest, options?: Configuration): Promise<HttpInfo<Policybuilderv3CreateUpdatePolicyResponse>> {
+        return this.api.policyBuilderUpdatePolicyWithHttpInfo(param.policybuilderv3CreateUpdatePolicyRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Update policy Description: Update Policy returns response code and message.
+     * @param param the request object
+     */
+    public policyBuilderUpdatePolicy(param: PolicyBuilderApiPolicyBuilderUpdatePolicyRequest, options?: Configuration): Promise<Policybuilderv3CreateUpdatePolicyResponse> {
+        return this.api.policyBuilderUpdatePolicy(param.policybuilderv3CreateUpdatePolicyRequest,  options).toPromise();
     }
 
 }
@@ -9892,6 +10323,15 @@ export interface ReportsServiceApiReportsServiceCreateChartv2Request {
     reportsv3CreateChartv2Request: Reportsv3CreateChartv2Request
 }
 
+export interface ReportsServiceApiReportsServiceCreateControlRequest {
+    /**
+     * 
+     * @type Reportsv3CreateControlRequest
+     * @memberof ReportsServiceApireportsServiceCreateControl
+     */
+    reportsv3CreateControlRequest: Reportsv3CreateControlRequest
+}
+
 export interface ReportsServiceApiReportsServiceCreateFieldsByCategoryRequest {
     /**
      * 
@@ -9899,6 +10339,15 @@ export interface ReportsServiceApiReportsServiceCreateFieldsByCategoryRequest {
      * @memberof ReportsServiceApireportsServiceCreateFieldsByCategory
      */
     reportsv3CreateFieldsByCategoryRequest: Reportsv3CreateFieldsByCategoryRequest
+}
+
+export interface ReportsServiceApiReportsServiceCreateGradeRequest {
+    /**
+     * 
+     * @type Reportsv3CreateGradeRequest
+     * @memberof ReportsServiceApireportsServiceCreateGrade
+     */
+    reportsv3CreateGradeRequest: Reportsv3CreateGradeRequest
 }
 
 export interface ReportsServiceApiReportsServiceCreateJoinRequest {
@@ -9910,6 +10359,33 @@ export interface ReportsServiceApiReportsServiceCreateJoinRequest {
     reportsv3CreateJoinRequest: Reportsv3CreateJoinRequest
 }
 
+export interface ReportsServiceApiReportsServiceCreateMeasureRequest {
+    /**
+     * 
+     * @type Reportsv3CreateMeasureRequest
+     * @memberof ReportsServiceApireportsServiceCreateMeasure
+     */
+    reportsv3CreateMeasureRequest: Reportsv3CreateMeasureRequest
+}
+
+export interface ReportsServiceApiReportsServiceCreateMetricRequest {
+    /**
+     * 
+     * @type Reportsv3CreateMetricRequest
+     * @memberof ReportsServiceApireportsServiceCreateMetric
+     */
+    reportsv3CreateMetricRequest: Reportsv3CreateMetricRequest
+}
+
+export interface ReportsServiceApiReportsServiceCreateProgramRequest {
+    /**
+     * 
+     * @type Reportsv3CreateProgramRequest
+     * @memberof ReportsServiceApireportsServiceCreateProgram
+     */
+    reportsv3CreateProgramRequest: Reportsv3CreateProgramRequest
+}
+
 export interface ReportsServiceApiReportsServiceCreateReportRequest {
     /**
      * 
@@ -9917,6 +10393,15 @@ export interface ReportsServiceApiReportsServiceCreateReportRequest {
      * @memberof ReportsServiceApireportsServiceCreateReport
      */
     reportsv3CreateReportRequest: Reportsv3CreateReportRequest
+}
+
+export interface ReportsServiceApiReportsServiceCreateRequirementRequest {
+    /**
+     * 
+     * @type Reportsv3CreateRequirementRequest
+     * @memberof ReportsServiceApireportsServiceCreateRequirement
+     */
+    reportsv3CreateRequirementRequest: Reportsv3CreateRequirementRequest
 }
 
 export interface ReportsServiceApiReportsServiceCreateVariantRequest {
@@ -9970,6 +10455,21 @@ export interface ReportsServiceApiReportsServiceDeleteChartv2Request {
     chartId: string
 }
 
+export interface ReportsServiceApiReportsServiceDeleteControlRequest {
+    /**
+     * The ID of the control to delete
+     * @type number
+     * @memberof ReportsServiceApireportsServiceDeleteControl
+     */
+    controlId: number
+    /**
+     * 
+     * @type Reportsv3DeleteControlRequest
+     * @memberof ReportsServiceApireportsServiceDeleteControl
+     */
+    reportsv3DeleteControlRequest: Reportsv3DeleteControlRequest
+}
+
 export interface ReportsServiceApiReportsServiceDeleteFieldsByCategoryRequest {
     /**
      * Header ids.
@@ -9985,6 +10485,21 @@ export interface ReportsServiceApiReportsServiceDeleteFieldsByCategoryRequest {
     tableName?: string
 }
 
+export interface ReportsServiceApiReportsServiceDeleteGradeRequest {
+    /**
+     * The id of the grade to be deleted.
+     * @type number
+     * @memberof ReportsServiceApireportsServiceDeleteGrade
+     */
+    gradeId: number
+    /**
+     * 
+     * @type Reportsv3DeleteGradeRequest
+     * @memberof ReportsServiceApireportsServiceDeleteGrade
+     */
+    reportsv3DeleteGradeRequest: Reportsv3DeleteGradeRequest
+}
+
 export interface ReportsServiceApiReportsServiceDeleteJoinRequest {
     /**
      * The id of the join to be deleted.
@@ -9994,6 +10509,51 @@ export interface ReportsServiceApiReportsServiceDeleteJoinRequest {
     joinId: string
 }
 
+export interface ReportsServiceApiReportsServiceDeleteMeasureRequest {
+    /**
+     * The id of the measure to be deleted.
+     * @type number
+     * @memberof ReportsServiceApireportsServiceDeleteMeasure
+     */
+    measureId: number
+    /**
+     * 
+     * @type Reportsv3DeleteMeasureRequest
+     * @memberof ReportsServiceApireportsServiceDeleteMeasure
+     */
+    reportsv3DeleteMeasureRequest: Reportsv3DeleteMeasureRequest
+}
+
+export interface ReportsServiceApiReportsServiceDeleteMetricRequest {
+    /**
+     * The id of the metric to be deleted.
+     * @type number
+     * @memberof ReportsServiceApireportsServiceDeleteMetric
+     */
+    metricId: number
+    /**
+     * 
+     * @type Reportsv3DeleteMetricRequest
+     * @memberof ReportsServiceApireportsServiceDeleteMetric
+     */
+    reportsv3DeleteMetricRequest: Reportsv3DeleteMetricRequest
+}
+
+export interface ReportsServiceApiReportsServiceDeleteProgramRequest {
+    /**
+     * The ID of the program to delete
+     * @type number
+     * @memberof ReportsServiceApireportsServiceDeleteProgram
+     */
+    programId: number
+    /**
+     * 
+     * @type Reportsv3DeleteProgramRequest
+     * @memberof ReportsServiceApireportsServiceDeleteProgram
+     */
+    reportsv3DeleteProgramRequest: Reportsv3DeleteProgramRequest
+}
+
 export interface ReportsServiceApiReportsServiceDeleteReportRequest {
     /**
      * The id of the Report to be deleted.
@@ -10001,6 +10561,21 @@ export interface ReportsServiceApiReportsServiceDeleteReportRequest {
      * @memberof ReportsServiceApireportsServiceDeleteReport
      */
     reportId: string
+}
+
+export interface ReportsServiceApiReportsServiceDeleteRequirementRequest {
+    /**
+     * The requirement to delete\&#39;s ID
+     * @type number
+     * @memberof ReportsServiceApireportsServiceDeleteRequirement
+     */
+    requirementId: number
+    /**
+     * 
+     * @type Reportsv3DeleteRequirementRequest
+     * @memberof ReportsServiceApireportsServiceDeleteRequirement
+     */
+    reportsv3DeleteRequirementRequest: Reportsv3DeleteRequirementRequest
 }
 
 export interface ReportsServiceApiReportsServiceDeleteVariantRequest {
@@ -10054,6 +10629,9 @@ export interface ReportsServiceApiReportsServiceGetChartSettingsv2Request {
 export interface ReportsServiceApiReportsServiceGetChartTemplatesv2Request {
 }
 
+export interface ReportsServiceApiReportsServiceGetControlsRequest {
+}
+
 export interface ReportsServiceApiReportsServiceGetFieldsByCategoriesRequest {
     /**
      * Category IDs.
@@ -10084,6 +10662,9 @@ export interface ReportsServiceApiReportsServiceGetFieldsByCategoryRequest {
     tableName?: string
 }
 
+export interface ReportsServiceApiReportsServiceGetGradesRequest {
+}
+
 export interface ReportsServiceApiReportsServiceGetJoinsRequest {
     /**
      * Category ID (Optional).
@@ -10091,6 +10672,15 @@ export interface ReportsServiceApiReportsServiceGetJoinsRequest {
      * @memberof ReportsServiceApireportsServiceGetJoins
      */
     categoryId?: string
+}
+
+export interface ReportsServiceApiReportsServiceGetMeasuresRequest {
+}
+
+export interface ReportsServiceApiReportsServiceGetMetricsRequest {
+}
+
+export interface ReportsServiceApiReportsServiceGetProgramsRequest {
 }
 
 export interface ReportsServiceApiReportsServiceGetQueryByReportDefinitionRequest {
@@ -10180,6 +10770,9 @@ export interface ReportsServiceApiReportsServiceGetReportsForJoinRequest {
 export interface ReportsServiceApiReportsServiceGetReportsTagsRequest {
 }
 
+export interface ReportsServiceApiReportsServiceGetRequirementsRequest {
+}
+
 export interface ReportsServiceApiReportsServiceGetVariantRequest {
     /**
      * The variant id
@@ -10220,6 +10813,15 @@ export interface ReportsServiceApiReportsServicePartialReportUpdateRequest {
      * @memberof ReportsServiceApireportsServicePartialReportUpdate
      */
     reportsv3PartialReportUpdateRequest: Reportsv3PartialReportUpdateRequest
+}
+
+export interface ReportsServiceApiReportsServiceRunGradesRequest {
+    /**
+     * 
+     * @type Reportsv3RunGradesRequest
+     * @memberof ReportsServiceApireportsServiceRunGrades
+     */
+    reportsv3RunGradesRequest: Reportsv3RunGradesRequest
 }
 
 export interface ReportsServiceApiReportsServiceRunVariantOperationRequest {
@@ -10270,6 +10872,36 @@ export interface ReportsServiceApiReportsServiceUpdateChartv2Request {
     reportsv3UpdateChartv2Request: Reportsv3UpdateChartv2Request
 }
 
+export interface ReportsServiceApiReportsServiceUpdateControlRequest {
+    /**
+     * The id of the control that was updated.
+     * @type number
+     * @memberof ReportsServiceApireportsServiceUpdateControl
+     */
+    controlId: number
+    /**
+     * 
+     * @type Reportsv3UpdateControlRequest
+     * @memberof ReportsServiceApireportsServiceUpdateControl
+     */
+    reportsv3UpdateControlRequest: Reportsv3UpdateControlRequest
+}
+
+export interface ReportsServiceApiReportsServiceUpdateGradeRequest {
+    /**
+     * The id of the grade that was updated.
+     * @type number
+     * @memberof ReportsServiceApireportsServiceUpdateGrade
+     */
+    gradeId: number
+    /**
+     * 
+     * @type Reportsv3UpdateGradeRequest
+     * @memberof ReportsServiceApireportsServiceUpdateGrade
+     */
+    reportsv3UpdateGradeRequest: Reportsv3UpdateGradeRequest
+}
+
 export interface ReportsServiceApiReportsServiceUpdateJoinRequest {
     /**
      * Unique join ID.
@@ -10285,6 +10917,51 @@ export interface ReportsServiceApiReportsServiceUpdateJoinRequest {
     reportsv3UpdateJoinRequest: Reportsv3UpdateJoinRequest
 }
 
+export interface ReportsServiceApiReportsServiceUpdateMeasureRequest {
+    /**
+     * The id of the measure that was updated.
+     * @type number
+     * @memberof ReportsServiceApireportsServiceUpdateMeasure
+     */
+    measureId: number
+    /**
+     * 
+     * @type Reportsv3UpdateMeasureRequest
+     * @memberof ReportsServiceApireportsServiceUpdateMeasure
+     */
+    reportsv3UpdateMeasureRequest: Reportsv3UpdateMeasureRequest
+}
+
+export interface ReportsServiceApiReportsServiceUpdateMetricRequest {
+    /**
+     * The id of the metric that was updated.
+     * @type number
+     * @memberof ReportsServiceApireportsServiceUpdateMetric
+     */
+    metricId: number
+    /**
+     * 
+     * @type Reportsv3UpdateMetricRequest
+     * @memberof ReportsServiceApireportsServiceUpdateMetric
+     */
+    reportsv3UpdateMetricRequest: Reportsv3UpdateMetricRequest
+}
+
+export interface ReportsServiceApiReportsServiceUpdateProgramRequest {
+    /**
+     * The id of the programs that was updated.
+     * @type number
+     * @memberof ReportsServiceApireportsServiceUpdateProgram
+     */
+    programId: number
+    /**
+     * 
+     * @type Reportsv3UpdateProgramRequest
+     * @memberof ReportsServiceApireportsServiceUpdateProgram
+     */
+    reportsv3UpdateProgramRequest: Reportsv3UpdateProgramRequest
+}
+
 export interface ReportsServiceApiReportsServiceUpdateReportRequest {
     /**
      * Unique Report ID.
@@ -10298,6 +10975,21 @@ export interface ReportsServiceApiReportsServiceUpdateReportRequest {
      * @memberof ReportsServiceApireportsServiceUpdateReport
      */
     reportsv3UpdateReportRequest: Reportsv3UpdateReportRequest
+}
+
+export interface ReportsServiceApiReportsServiceUpdateRequirementRequest {
+    /**
+     * The id of the requirements that was updated.
+     * @type number
+     * @memberof ReportsServiceApireportsServiceUpdateRequirement
+     */
+    requirementId: number
+    /**
+     * 
+     * @type Reportsv3UpdateRequirementRequest
+     * @memberof ReportsServiceApireportsServiceUpdateRequirement
+     */
+    reportsv3UpdateRequirementRequest: Reportsv3UpdateRequirementRequest
 }
 
 export interface ReportsServiceApiReportsServiceUpdateVariantOverrideRequest {
@@ -10387,6 +11079,22 @@ export class ObjectReportsServiceApi {
     }
 
     /**
+     * Summary: Create Control. Description: Create a unique Control.
+     * @param param the request object
+     */
+    public reportsServiceCreateControlWithHttpInfo(param: ReportsServiceApiReportsServiceCreateControlRequest, options?: Configuration): Promise<HttpInfo<Reportsv3CreateControlResponse>> {
+        return this.api.reportsServiceCreateControlWithHttpInfo(param.reportsv3CreateControlRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Create Control. Description: Create a unique Control.
+     * @param param the request object
+     */
+    public reportsServiceCreateControl(param: ReportsServiceApiReportsServiceCreateControlRequest, options?: Configuration): Promise<Reportsv3CreateControlResponse> {
+        return this.api.reportsServiceCreateControl(param.reportsv3CreateControlRequest,  options).toPromise();
+    }
+
+    /**
      * Summary - Create fields by category Description: Cteate category fields based on provided properties.
      * @param param the request object
      */
@@ -10400,6 +11108,22 @@ export class ObjectReportsServiceApi {
      */
     public reportsServiceCreateFieldsByCategory(param: ReportsServiceApiReportsServiceCreateFieldsByCategoryRequest, options?: Configuration): Promise<Reportsv3CreateFieldsByCategoryResponse> {
         return this.api.reportsServiceCreateFieldsByCategory(param.reportsv3CreateFieldsByCategoryRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Create Grade. Description: Create a unique Grade.
+     * @param param the request object
+     */
+    public reportsServiceCreateGradeWithHttpInfo(param: ReportsServiceApiReportsServiceCreateGradeRequest, options?: Configuration): Promise<HttpInfo<Reportsv3CreateGradeResponse>> {
+        return this.api.reportsServiceCreateGradeWithHttpInfo(param.reportsv3CreateGradeRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Create Grade. Description: Create a unique Grade.
+     * @param param the request object
+     */
+    public reportsServiceCreateGrade(param: ReportsServiceApiReportsServiceCreateGradeRequest, options?: Configuration): Promise<Reportsv3CreateGradeResponse> {
+        return this.api.reportsServiceCreateGrade(param.reportsv3CreateGradeRequest,  options).toPromise();
     }
 
     /**
@@ -10419,6 +11143,54 @@ export class ObjectReportsServiceApi {
     }
 
     /**
+     * Summary: Create measure. Description: Create a unique measure.
+     * @param param the request object
+     */
+    public reportsServiceCreateMeasureWithHttpInfo(param: ReportsServiceApiReportsServiceCreateMeasureRequest, options?: Configuration): Promise<HttpInfo<Reportsv3CreateMeasureResponse>> {
+        return this.api.reportsServiceCreateMeasureWithHttpInfo(param.reportsv3CreateMeasureRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Create measure. Description: Create a unique measure.
+     * @param param the request object
+     */
+    public reportsServiceCreateMeasure(param: ReportsServiceApiReportsServiceCreateMeasureRequest, options?: Configuration): Promise<Reportsv3CreateMeasureResponse> {
+        return this.api.reportsServiceCreateMeasure(param.reportsv3CreateMeasureRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Create metric. Description: Create a unique metric.
+     * @param param the request object
+     */
+    public reportsServiceCreateMetricWithHttpInfo(param: ReportsServiceApiReportsServiceCreateMetricRequest, options?: Configuration): Promise<HttpInfo<Reportsv3CreateMetricResponse>> {
+        return this.api.reportsServiceCreateMetricWithHttpInfo(param.reportsv3CreateMetricRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Create metric. Description: Create a unique metric.
+     * @param param the request object
+     */
+    public reportsServiceCreateMetric(param: ReportsServiceApiReportsServiceCreateMetricRequest, options?: Configuration): Promise<Reportsv3CreateMetricResponse> {
+        return this.api.reportsServiceCreateMetric(param.reportsv3CreateMetricRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Create Program. Description: Create a unique Program.
+     * @param param the request object
+     */
+    public reportsServiceCreateProgramWithHttpInfo(param: ReportsServiceApiReportsServiceCreateProgramRequest, options?: Configuration): Promise<HttpInfo<Reportsv3CreateProgramResponse>> {
+        return this.api.reportsServiceCreateProgramWithHttpInfo(param.reportsv3CreateProgramRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Create Program. Description: Create a unique Program.
+     * @param param the request object
+     */
+    public reportsServiceCreateProgram(param: ReportsServiceApiReportsServiceCreateProgramRequest, options?: Configuration): Promise<Reportsv3CreateProgramResponse> {
+        return this.api.reportsServiceCreateProgram(param.reportsv3CreateProgramRequest,  options).toPromise();
+    }
+
+    /**
      * Summary: Create report Description: Create custom report based on provided properties.
      * @param param the request object
      */
@@ -10432,6 +11204,22 @@ export class ObjectReportsServiceApi {
      */
     public reportsServiceCreateReport(param: ReportsServiceApiReportsServiceCreateReportRequest, options?: Configuration): Promise<Reportsv3CreateReportResponse> {
         return this.api.reportsServiceCreateReport(param.reportsv3CreateReportRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Create Requirement. Description: Create a unique Requirement.
+     * @param param the request object
+     */
+    public reportsServiceCreateRequirementWithHttpInfo(param: ReportsServiceApiReportsServiceCreateRequirementRequest, options?: Configuration): Promise<HttpInfo<Reportsv3CreateRequirementResponse>> {
+        return this.api.reportsServiceCreateRequirementWithHttpInfo(param.reportsv3CreateRequirementRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Create Requirement. Description: Create a unique Requirement.
+     * @param param the request object
+     */
+    public reportsServiceCreateRequirement(param: ReportsServiceApiReportsServiceCreateRequirementRequest, options?: Configuration): Promise<Reportsv3CreateRequirementResponse> {
+        return this.api.reportsServiceCreateRequirement(param.reportsv3CreateRequirementRequest,  options).toPromise();
     }
 
     /**
@@ -10515,6 +11303,22 @@ export class ObjectReportsServiceApi {
     }
 
     /**
+     * Summary: Delete Control Description: Delete a Control.
+     * @param param the request object
+     */
+    public reportsServiceDeleteControlWithHttpInfo(param: ReportsServiceApiReportsServiceDeleteControlRequest, options?: Configuration): Promise<HttpInfo<Reportsv3DeleteControlResponse>> {
+        return this.api.reportsServiceDeleteControlWithHttpInfo(param.controlId, param.reportsv3DeleteControlRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Delete Control Description: Delete a Control.
+     * @param param the request object
+     */
+    public reportsServiceDeleteControl(param: ReportsServiceApiReportsServiceDeleteControlRequest, options?: Configuration): Promise<Reportsv3DeleteControlResponse> {
+        return this.api.reportsServiceDeleteControl(param.controlId, param.reportsv3DeleteControlRequest,  options).toPromise();
+    }
+
+    /**
      * Summary - Delete fields by category Description: Delete category fields based on provided properties.
      * @param param the request object
      */
@@ -10528,6 +11332,22 @@ export class ObjectReportsServiceApi {
      */
     public reportsServiceDeleteFieldsByCategory(param: ReportsServiceApiReportsServiceDeleteFieldsByCategoryRequest = {}, options?: Configuration): Promise<Reportsv3DeleteFieldsByCategoryResponse> {
         return this.api.reportsServiceDeleteFieldsByCategory(param.headerIds, param.tableName,  options).toPromise();
+    }
+
+    /**
+     * Summary: Delete Grade Description: Delete a Grade.
+     * @param param the request object
+     */
+    public reportsServiceDeleteGradeWithHttpInfo(param: ReportsServiceApiReportsServiceDeleteGradeRequest, options?: Configuration): Promise<HttpInfo<Reportsv3DeleteGradeResponse>> {
+        return this.api.reportsServiceDeleteGradeWithHttpInfo(param.gradeId, param.reportsv3DeleteGradeRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Delete Grade Description: Delete a Grade.
+     * @param param the request object
+     */
+    public reportsServiceDeleteGrade(param: ReportsServiceApiReportsServiceDeleteGradeRequest, options?: Configuration): Promise<Reportsv3DeleteGradeResponse> {
+        return this.api.reportsServiceDeleteGrade(param.gradeId, param.reportsv3DeleteGradeRequest,  options).toPromise();
     }
 
     /**
@@ -10547,6 +11367,54 @@ export class ObjectReportsServiceApi {
     }
 
     /**
+     * Summary: Delete measure Description: Delete a measure.
+     * @param param the request object
+     */
+    public reportsServiceDeleteMeasureWithHttpInfo(param: ReportsServiceApiReportsServiceDeleteMeasureRequest, options?: Configuration): Promise<HttpInfo<Reportsv3DeleteMeasureResponse>> {
+        return this.api.reportsServiceDeleteMeasureWithHttpInfo(param.measureId, param.reportsv3DeleteMeasureRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Delete measure Description: Delete a measure.
+     * @param param the request object
+     */
+    public reportsServiceDeleteMeasure(param: ReportsServiceApiReportsServiceDeleteMeasureRequest, options?: Configuration): Promise<Reportsv3DeleteMeasureResponse> {
+        return this.api.reportsServiceDeleteMeasure(param.measureId, param.reportsv3DeleteMeasureRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Delete metric Description: Delete a metric.
+     * @param param the request object
+     */
+    public reportsServiceDeleteMetricWithHttpInfo(param: ReportsServiceApiReportsServiceDeleteMetricRequest, options?: Configuration): Promise<HttpInfo<Reportsv3DeleteMetricResponse>> {
+        return this.api.reportsServiceDeleteMetricWithHttpInfo(param.metricId, param.reportsv3DeleteMetricRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Delete metric Description: Delete a metric.
+     * @param param the request object
+     */
+    public reportsServiceDeleteMetric(param: ReportsServiceApiReportsServiceDeleteMetricRequest, options?: Configuration): Promise<Reportsv3DeleteMetricResponse> {
+        return this.api.reportsServiceDeleteMetric(param.metricId, param.reportsv3DeleteMetricRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Delete Program Description: Delete a Program.
+     * @param param the request object
+     */
+    public reportsServiceDeleteProgramWithHttpInfo(param: ReportsServiceApiReportsServiceDeleteProgramRequest, options?: Configuration): Promise<HttpInfo<Reportsv3DeleteProgramResponse>> {
+        return this.api.reportsServiceDeleteProgramWithHttpInfo(param.programId, param.reportsv3DeleteProgramRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Delete Program Description: Delete a Program.
+     * @param param the request object
+     */
+    public reportsServiceDeleteProgram(param: ReportsServiceApiReportsServiceDeleteProgramRequest, options?: Configuration): Promise<Reportsv3DeleteProgramResponse> {
+        return this.api.reportsServiceDeleteProgram(param.programId, param.reportsv3DeleteProgramRequest,  options).toPromise();
+    }
+
+    /**
      * Summary: Delete report Description: Delete a custom report.
      * @param param the request object
      */
@@ -10560,6 +11428,22 @@ export class ObjectReportsServiceApi {
      */
     public reportsServiceDeleteReport(param: ReportsServiceApiReportsServiceDeleteReportRequest, options?: Configuration): Promise<Reportsv3DeleteReportResponse> {
         return this.api.reportsServiceDeleteReport(param.reportId,  options).toPromise();
+    }
+
+    /**
+     * Summary: Delete Requirement Description: Delete a Requirement.
+     * @param param the request object
+     */
+    public reportsServiceDeleteRequirementWithHttpInfo(param: ReportsServiceApiReportsServiceDeleteRequirementRequest, options?: Configuration): Promise<HttpInfo<Reportsv3DeleteRequirementResponse>> {
+        return this.api.reportsServiceDeleteRequirementWithHttpInfo(param.requirementId, param.reportsv3DeleteRequirementRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Delete Requirement Description: Delete a Requirement.
+     * @param param the request object
+     */
+    public reportsServiceDeleteRequirement(param: ReportsServiceApiReportsServiceDeleteRequirementRequest, options?: Configuration): Promise<Reportsv3DeleteRequirementResponse> {
+        return this.api.reportsServiceDeleteRequirement(param.requirementId, param.reportsv3DeleteRequirementRequest,  options).toPromise();
     }
 
     /**
@@ -10643,6 +11527,22 @@ export class ObjectReportsServiceApi {
     }
 
     /**
+     * Summary: Get controls Description: Get a list of controls with all data.
+     * @param param the request object
+     */
+    public reportsServiceGetControlsWithHttpInfo(param: ReportsServiceApiReportsServiceGetControlsRequest = {}, options?: Configuration): Promise<HttpInfo<Reportsv3GetControlsResponse>> {
+        return this.api.reportsServiceGetControlsWithHttpInfo( options).toPromise();
+    }
+
+    /**
+     * Summary: Get controls Description: Get a list of controls with all data.
+     * @param param the request object
+     */
+    public reportsServiceGetControls(param: ReportsServiceApiReportsServiceGetControlsRequest = {}, options?: Configuration): Promise<Reportsv3GetControlsResponse> {
+        return this.api.reportsServiceGetControls( options).toPromise();
+    }
+
+    /**
      * Summary: Get fields by categories Description: Get all category related fields or all possible fields based on a list of categories.
      * @param param the request object
      */
@@ -10675,6 +11575,22 @@ export class ObjectReportsServiceApi {
     }
 
     /**
+     * Summary: Get grades Description: Get a list of grades with all data.
+     * @param param the request object
+     */
+    public reportsServiceGetGradesWithHttpInfo(param: ReportsServiceApiReportsServiceGetGradesRequest = {}, options?: Configuration): Promise<HttpInfo<Reportsv3GetGradesResponse>> {
+        return this.api.reportsServiceGetGradesWithHttpInfo( options).toPromise();
+    }
+
+    /**
+     * Summary: Get grades Description: Get a list of grades with all data.
+     * @param param the request object
+     */
+    public reportsServiceGetGrades(param: ReportsServiceApiReportsServiceGetGradesRequest = {}, options?: Configuration): Promise<Reportsv3GetGradesResponse> {
+        return this.api.reportsServiceGetGrades( options).toPromise();
+    }
+
+    /**
      * Summary: Get all joins Description: Get all custom joins.
      * @param param the request object
      */
@@ -10688,6 +11604,54 @@ export class ObjectReportsServiceApi {
      */
     public reportsServiceGetJoins(param: ReportsServiceApiReportsServiceGetJoinsRequest = {}, options?: Configuration): Promise<Reportsv3GetJoinsResponse> {
         return this.api.reportsServiceGetJoins(param.categoryId,  options).toPromise();
+    }
+
+    /**
+     * Summary: Get measures Description: Get a list of measures with all data.
+     * @param param the request object
+     */
+    public reportsServiceGetMeasuresWithHttpInfo(param: ReportsServiceApiReportsServiceGetMeasuresRequest = {}, options?: Configuration): Promise<HttpInfo<Reportsv3GetMeasuresResponse>> {
+        return this.api.reportsServiceGetMeasuresWithHttpInfo( options).toPromise();
+    }
+
+    /**
+     * Summary: Get measures Description: Get a list of measures with all data.
+     * @param param the request object
+     */
+    public reportsServiceGetMeasures(param: ReportsServiceApiReportsServiceGetMeasuresRequest = {}, options?: Configuration): Promise<Reportsv3GetMeasuresResponse> {
+        return this.api.reportsServiceGetMeasures( options).toPromise();
+    }
+
+    /**
+     * Summary: Get metrics Description: Get a list of metrics with all data.
+     * @param param the request object
+     */
+    public reportsServiceGetMetricsWithHttpInfo(param: ReportsServiceApiReportsServiceGetMetricsRequest = {}, options?: Configuration): Promise<HttpInfo<Reportsv3GetMetricsResponse>> {
+        return this.api.reportsServiceGetMetricsWithHttpInfo( options).toPromise();
+    }
+
+    /**
+     * Summary: Get metrics Description: Get a list of metrics with all data.
+     * @param param the request object
+     */
+    public reportsServiceGetMetrics(param: ReportsServiceApiReportsServiceGetMetricsRequest = {}, options?: Configuration): Promise<Reportsv3GetMetricsResponse> {
+        return this.api.reportsServiceGetMetrics( options).toPromise();
+    }
+
+    /**
+     * Summary: Get controls Description: Get a list of controls with all data.
+     * @param param the request object
+     */
+    public reportsServiceGetProgramsWithHttpInfo(param: ReportsServiceApiReportsServiceGetProgramsRequest = {}, options?: Configuration): Promise<HttpInfo<Reportsv3GetProgramsResponse>> {
+        return this.api.reportsServiceGetProgramsWithHttpInfo( options).toPromise();
+    }
+
+    /**
+     * Summary: Get controls Description: Get a list of controls with all data.
+     * @param param the request object
+     */
+    public reportsServiceGetPrograms(param: ReportsServiceApiReportsServiceGetProgramsRequest = {}, options?: Configuration): Promise<Reportsv3GetProgramsResponse> {
+        return this.api.reportsServiceGetPrograms( options).toPromise();
     }
 
     /**
@@ -10835,6 +11799,22 @@ export class ObjectReportsServiceApi {
     }
 
     /**
+     * Summary: Get requirements Description: Get a list of requirements with all data.
+     * @param param the request object
+     */
+    public reportsServiceGetRequirementsWithHttpInfo(param: ReportsServiceApiReportsServiceGetRequirementsRequest = {}, options?: Configuration): Promise<HttpInfo<Reportsv3GetRequirementsResponse>> {
+        return this.api.reportsServiceGetRequirementsWithHttpInfo( options).toPromise();
+    }
+
+    /**
+     * Summary: Get requirements Description: Get a list of requirements with all data.
+     * @param param the request object
+     */
+    public reportsServiceGetRequirements(param: ReportsServiceApiReportsServiceGetRequirementsRequest = {}, options?: Configuration): Promise<Reportsv3GetRequirementsResponse> {
+        return this.api.reportsServiceGetRequirements( options).toPromise();
+    }
+
+    /**
      * Summary: Get a variant Description: Get a given variant
      * @param param the request object
      */
@@ -10896,6 +11876,22 @@ export class ObjectReportsServiceApi {
      */
     public reportsServicePartialReportUpdate(param: ReportsServiceApiReportsServicePartialReportUpdateRequest, options?: Configuration): Promise<Reportsv3PartialReportUpdateResponse> {
         return this.api.reportsServicePartialReportUpdate(param.reportId, param.reportsv3PartialReportUpdateRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Refresh metrics via grades. Description: Refresh metrics via grades.
+     * @param param the request object
+     */
+    public reportsServiceRunGradesWithHttpInfo(param: ReportsServiceApiReportsServiceRunGradesRequest, options?: Configuration): Promise<HttpInfo<Reportsv3RunGradesResponse>> {
+        return this.api.reportsServiceRunGradesWithHttpInfo(param.reportsv3RunGradesRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Refresh metrics via grades. Description: Refresh metrics via grades.
+     * @param param the request object
+     */
+    public reportsServiceRunGrades(param: ReportsServiceApiReportsServiceRunGradesRequest, options?: Configuration): Promise<Reportsv3RunGradesResponse> {
+        return this.api.reportsServiceRunGrades(param.reportsv3RunGradesRequest,  options).toPromise();
     }
 
     /**
@@ -10963,6 +11959,38 @@ export class ObjectReportsServiceApi {
     }
 
     /**
+     * Summary: Update Control. Description: Update a Control.
+     * @param param the request object
+     */
+    public reportsServiceUpdateControlWithHttpInfo(param: ReportsServiceApiReportsServiceUpdateControlRequest, options?: Configuration): Promise<HttpInfo<Reportsv3UpdateControlResponse>> {
+        return this.api.reportsServiceUpdateControlWithHttpInfo(param.controlId, param.reportsv3UpdateControlRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Update Control. Description: Update a Control.
+     * @param param the request object
+     */
+    public reportsServiceUpdateControl(param: ReportsServiceApiReportsServiceUpdateControlRequest, options?: Configuration): Promise<Reportsv3UpdateControlResponse> {
+        return this.api.reportsServiceUpdateControl(param.controlId, param.reportsv3UpdateControlRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Update Grade. Description: Update a Grade.
+     * @param param the request object
+     */
+    public reportsServiceUpdateGradeWithHttpInfo(param: ReportsServiceApiReportsServiceUpdateGradeRequest, options?: Configuration): Promise<HttpInfo<Reportsv3UpdateGradeResponse>> {
+        return this.api.reportsServiceUpdateGradeWithHttpInfo(param.gradeId, param.reportsv3UpdateGradeRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Update Grade. Description: Update a Grade.
+     * @param param the request object
+     */
+    public reportsServiceUpdateGrade(param: ReportsServiceApiReportsServiceUpdateGradeRequest, options?: Configuration): Promise<Reportsv3UpdateGradeResponse> {
+        return this.api.reportsServiceUpdateGrade(param.gradeId, param.reportsv3UpdateGradeRequest,  options).toPromise();
+    }
+
+    /**
      * Summary: Update a join Description: Update a custom join
      * @param param the request object
      */
@@ -10976,6 +12004,54 @@ export class ObjectReportsServiceApi {
      */
     public reportsServiceUpdateJoin(param: ReportsServiceApiReportsServiceUpdateJoinRequest, options?: Configuration): Promise<Reportsv3UpdateJoinResponse> {
         return this.api.reportsServiceUpdateJoin(param.joinId, param.reportsv3UpdateJoinRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Update measure. Description: Update a measure.
+     * @param param the request object
+     */
+    public reportsServiceUpdateMeasureWithHttpInfo(param: ReportsServiceApiReportsServiceUpdateMeasureRequest, options?: Configuration): Promise<HttpInfo<Reportsv3UpdateMeasureResponse>> {
+        return this.api.reportsServiceUpdateMeasureWithHttpInfo(param.measureId, param.reportsv3UpdateMeasureRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Update measure. Description: Update a measure.
+     * @param param the request object
+     */
+    public reportsServiceUpdateMeasure(param: ReportsServiceApiReportsServiceUpdateMeasureRequest, options?: Configuration): Promise<Reportsv3UpdateMeasureResponse> {
+        return this.api.reportsServiceUpdateMeasure(param.measureId, param.reportsv3UpdateMeasureRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Update metric. Description: Update a metric.
+     * @param param the request object
+     */
+    public reportsServiceUpdateMetricWithHttpInfo(param: ReportsServiceApiReportsServiceUpdateMetricRequest, options?: Configuration): Promise<HttpInfo<Reportsv3UpdateMetricResponse>> {
+        return this.api.reportsServiceUpdateMetricWithHttpInfo(param.metricId, param.reportsv3UpdateMetricRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Update metric. Description: Update a metric.
+     * @param param the request object
+     */
+    public reportsServiceUpdateMetric(param: ReportsServiceApiReportsServiceUpdateMetricRequest, options?: Configuration): Promise<Reportsv3UpdateMetricResponse> {
+        return this.api.reportsServiceUpdateMetric(param.metricId, param.reportsv3UpdateMetricRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Update Program. Description: Update a Program.
+     * @param param the request object
+     */
+    public reportsServiceUpdateProgramWithHttpInfo(param: ReportsServiceApiReportsServiceUpdateProgramRequest, options?: Configuration): Promise<HttpInfo<Reportsv3UpdateProgramResponse>> {
+        return this.api.reportsServiceUpdateProgramWithHttpInfo(param.programId, param.reportsv3UpdateProgramRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Update Program. Description: Update a Program.
+     * @param param the request object
+     */
+    public reportsServiceUpdateProgram(param: ReportsServiceApiReportsServiceUpdateProgramRequest, options?: Configuration): Promise<Reportsv3UpdateProgramResponse> {
+        return this.api.reportsServiceUpdateProgram(param.programId, param.reportsv3UpdateProgramRequest,  options).toPromise();
     }
 
     /**
@@ -10995,6 +12071,22 @@ export class ObjectReportsServiceApi {
     }
 
     /**
+     * Summary: Update Requirement. Description: Update a Requirement.
+     * @param param the request object
+     */
+    public reportsServiceUpdateRequirementWithHttpInfo(param: ReportsServiceApiReportsServiceUpdateRequirementRequest, options?: Configuration): Promise<HttpInfo<Reportsv3UpdateRequirementResponse>> {
+        return this.api.reportsServiceUpdateRequirementWithHttpInfo(param.requirementId, param.reportsv3UpdateRequirementRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Update Requirement. Description: Update a Requirement.
+     * @param param the request object
+     */
+    public reportsServiceUpdateRequirement(param: ReportsServiceApiReportsServiceUpdateRequirementRequest, options?: Configuration): Promise<Reportsv3UpdateRequirementResponse> {
+        return this.api.reportsServiceUpdateRequirement(param.requirementId, param.reportsv3UpdateRequirementRequest,  options).toPromise();
+    }
+
+    /**
      * Summary: Update a variant Description: Update a variant with a custom override
      * @param param the request object
      */
@@ -11008,1018 +12100,6 @@ export class ObjectReportsServiceApi {
      */
     public reportsServiceUpdateVariantOverride(param: ReportsServiceApiReportsServiceUpdateVariantOverrideRequest, options?: Configuration): Promise<Reportsv3UpdateVariantOverrideResponse> {
         return this.api.reportsServiceUpdateVariantOverride(param.variantId, param.reportsv3UpdateVariantOverrideRequest,  options).toPromise();
-    }
-
-}
-
-import { ObservableResourceControllerK8ServiceApi } from "./ObservableAPI";
-import { ResourceControllerK8ServiceApiRequestFactory, ResourceControllerK8ServiceApiResponseProcessor} from "../apis/ResourceControllerK8ServiceApi";
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceCreateControllerRequest {
-    /**
-     * 
-     * @type Resourcecontrollerk8v3CreateControllerRequest
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceCreateController
-     */
-    resourcecontrollerk8v3CreateControllerRequest: Resourcecontrollerk8v3CreateControllerRequest
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceCreateHeartBeatRequest {
-    /**
-     * The ID of the controller to invoke a heartbeat on.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceCreateHeartBeat
-     */
-    controllerId: string
-    /**
-     * 
-     * @type Resourcecontrollerk8v3CreateHeartBeatRequest
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceCreateHeartBeat
-     */
-    resourcecontrollerk8v3CreateHeartBeatRequest: Resourcecontrollerk8v3CreateHeartBeatRequest
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceCreateHeartBeatExRequest {
-    /**
-     * Optional: controller id
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceCreateHeartBeatEx
-     */
-    controllerId: string
-    /**
-     * 
-     * @type Resourcecontrollerk8v3ControllerHeartbeat
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceCreateHeartBeatEx
-     */
-    resourcecontrollerk8v3ControllerHeartbeat: Resourcecontrollerk8v3ControllerHeartbeat
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceCreateJobRequest {
-    /**
-     * 
-     * @type Resourcecontrollerk8v3Job
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceCreateJob
-     */
-    resourcecontrollerk8v3Job: Resourcecontrollerk8v3Job
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceCreateJobExecutionRequest {
-    /**
-     * 
-     * @type Resourcecontrollerk8v3JobExecution
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceCreateJobExecution
-     */
-    resourcecontrollerk8v3JobExecution: Resourcecontrollerk8v3JobExecution
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceCreateKeypairRequest {
-    /**
-     * The ID of the controller to get app tests for.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceCreateKeypair
-     */
-    controllerId: string
-    /**
-     * 
-     * @type Resourcecontrollerk8v3CreateKeypairRequest
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceCreateKeypair
-     */
-    resourcecontrollerk8v3CreateKeypairRequest: Resourcecontrollerk8v3CreateKeypairRequest
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceDeleteControllerRequest {
-    /**
-     * The ID of the controller to get the status.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceDeleteController
-     */
-    controllerId: string
-    /**
-     * 
-     * @type Resourcecontrollerk8v3DeleteControllerRequest
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceDeleteController
-     */
-    resourcecontrollerk8v3DeleteControllerRequest: Resourcecontrollerk8v3DeleteControllerRequest
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceDeleteEdgeTenantRequest {
-    /**
-     * ID of the tenant to delete
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceDeleteEdgeTenant
-     */
-    tenantId: string
-    /**
-     * 
-     * @type Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceDeleteEdgeTenant
-     */
-    resourcecontrollerk8v3DeleteEdgeTenantRequestApphost: Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceDeleteEdgeTenantRequestRequest {
-    /**
-     * Tenant ID for the redge request.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceDeleteEdgeTenantRequest
-     */
-    tenantId?: string
-    /**
-     * ID of the edge system.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceDeleteEdgeTenantRequest
-     */
-    edgeId?: string
-    /**
-     * Edge gateway ID.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceDeleteEdgeTenantRequest
-     */
-    edgeName?: string
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceDeleteJobRequest {
-    /**
-     * ID of the job that needs to be deleted.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceDeleteJob
-     */
-    jobId: string
-    /**
-     * 
-     * @type Resourcecontrollerk8v3DeleteJobRequest
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceDeleteJob
-     */
-    resourcecontrollerk8v3DeleteJobRequest: Resourcecontrollerk8v3DeleteJobRequest
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceDownloadControllerLogsRequest {
-    /**
-     * The ID of the controller to download logs for.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceDownloadControllerLogs
-     */
-    controllerId: string
-    /**
-     * 
-     * @type Resourcecontrollerk8v3DownloadControllerLogsRequest
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceDownloadControllerLogs
-     */
-    resourcecontrollerk8v3DownloadControllerLogsRequest: Resourcecontrollerk8v3DownloadControllerLogsRequest
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceGetControllerAppsRequest {
-    /**
-     * The ID of the controller to get apps for.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceGetControllerApps
-     */
-    controllerId: string
-    /**
-     * Only get the apps if any were modified since the given date.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceGetControllerApps
-     */
-    modifiedSince?: string
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceGetControllerCommandsRequest {
-    /**
-     * The ID of the controller to get commands for.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceGetControllerCommands
-     */
-    controllerId: string
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceGetControllerJobsRequest {
-    /**
-     * The ID of the controller to get jobs for.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceGetControllerJobs
-     */
-    controllerId: string
-    /**
-     * Optional: Only get the jobs if any were modified since the given date.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceGetControllerJobs
-     */
-    modifiedSince?: string
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceGetControllerStatusRequest {
-    /**
-     * The ID of the controller to get the status.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceGetControllerStatus
-     */
-    controllerId: string
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceGetControllersRequest {
-    /**
-     * The ID of the tenant to get controllers for.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceGetControllers
-     */
-    tenantId: string
-    /**
-     * Used to indicate the caller wants the local controller.
-     * @type boolean
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceGetControllers
-     */
-    wantLocal?: boolean
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceGetControllersWithStatusRequest {
-    /**
-     * The ID of the tenant to get controllers for.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceGetControllersWithStatus
-     */
-    tenantId: string
-    /**
-     * Used to indicate the caller wants the local controller.
-     * @type boolean
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceGetControllersWithStatus
-     */
-    wantLocal?: boolean
-    /**
-     * \&quot;ALL\&quot;: for getting all controllers; &lt;controller_id&gt;: for getting single controller.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceGetControllersWithStatus
-     */
-    controllerId?: string
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceGetJobRequest {
-    /**
-     * The ID of the job to get.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceGetJob
-     */
-    jobId: string
-    /**
-     * Optional: True to return secret values, false otherwise.
-     * @type boolean
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceGetJob
-     */
-    wantSecretValues?: boolean
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceGetJobExecutionRequest {
-    /**
-     * The ID of the job execution to get.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceGetJobExecution
-     */
-    jobexeId: string
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceGetJobExecutionsRequest {
-    /**
-     * The ID of the job to get status.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceGetJobExecutions
-     */
-    jobId: string
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceGetJobStatusRequest {
-    /**
-     * The ID of the job to get status.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceGetJobStatus
-     */
-    jobId: string
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceGetTenantAppRequest {
-    /**
-     * The ID of the tenant to get apps for.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceGetTenantApp
-     */
-    tenantId: string
-    /**
-     * The name of the app to get.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceGetTenantApp
-     */
-    appName: string
-    /**
-     * Optional: specify a return level for the data. This will control the amount of data returned.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceGetTenantApp
-     */
-    returnLevel?: string
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceGetTenantAppsRequest {
-    /**
-     * The ID of the tenant to get apps for.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceGetTenantApps
-     */
-    tenantId: string
-    /**
-     * Optional: specify a return level for the data. This will control the amount of data returned.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceGetTenantApps
-     */
-    returnLevel?: string
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceGetTenantJobsRequest {
-    /**
-     * The ID of the tenant to get jobs for.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceGetTenantJobs
-     */
-    tenantId: string
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceGetVersionRequest {
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceInstallEdgeTenantRequestRequest {
-    /**
-     * 
-     * @type Resourcecontrollerk8v3EdgeTenantRequest
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceInstallEdgeTenantRequest
-     */
-    resourcecontrollerk8v3EdgeTenantRequest: Resourcecontrollerk8v3EdgeTenantRequest
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceQueryControllerLogsRequest {
-    /**
-     * The ID of the controller to get logs for.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceQueryControllerLogs
-     */
-    controllerId: string
-    /**
-     * 
-     * @type Resourcecontrollerk8v3QueryControllerLogsRequest
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceQueryControllerLogs
-     */
-    resourcecontrollerk8v3QueryControllerLogsRequest: Resourcecontrollerk8v3QueryControllerLogsRequest
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateCommandRequest {
-    /**
-     * The ID of the command.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceUpdateCommand
-     */
-    id: string
-    /**
-     * 
-     * @type Resourcecontrollerk8v3ControllerCommand
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceUpdateCommand
-     */
-    resourcecontrollerk8v3ControllerCommand: Resourcecontrollerk8v3ControllerCommand
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateControllerRequest {
-    /**
-     * Optional: The internal ID of the controller.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceUpdateController
-     */
-    id: string
-    /**
-     * 
-     * @type Resourcecontrollerk8v3Controller
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceUpdateController
-     */
-    resourcecontrollerk8v3Controller: Resourcecontrollerk8v3Controller
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateControllerStatusRequest {
-    /**
-     * The internal ID of the controller.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceUpdateControllerStatus
-     */
-    id: string
-    /**
-     * 
-     * @type Resourcecontrollerk8v3ControllerStatus
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceUpdateControllerStatus
-     */
-    resourcecontrollerk8v3ControllerStatus: Resourcecontrollerk8v3ControllerStatus
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateEdgeTenantRequestRequest {
-    /**
-     * ID of the edge system
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceUpdateEdgeTenantRequest
-     */
-    edgeId: string
-    /**
-     * 
-     * @type Resourcecontrollerk8v3EdgeTenantRequest
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceUpdateEdgeTenantRequest
-     */
-    resourcecontrollerk8v3EdgeTenantRequest: Resourcecontrollerk8v3EdgeTenantRequest
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateJobRequest {
-    /**
-     * The ID of the job.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceUpdateJob
-     */
-    id: string
-    /**
-     * 
-     * @type Resourcecontrollerk8v3Job
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceUpdateJob
-     */
-    resourcecontrollerk8v3Job: Resourcecontrollerk8v3Job
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateJobExecutionRequest {
-    /**
-     * The ID of the job execution to update.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceUpdateJobExecution
-     */
-    id: string
-    /**
-     * 
-     * @type Resourcecontrollerk8v3UpdateJobExecutionRequest
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceUpdateJobExecution
-     */
-    resourcecontrollerk8v3UpdateJobExecutionRequest: Resourcecontrollerk8v3UpdateJobExecutionRequest
-}
-
-export interface ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateJobStatusRequest {
-    /**
-     * The ID of the job to get status.
-     * @type string
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceUpdateJobStatus
-     */
-    jobId: string
-    /**
-     * 
-     * @type Resourcecontrollerk8v3UpdateJobStatusRequest
-     * @memberof ResourceControllerK8ServiceApiresourceControllerK8ServiceUpdateJobStatus
-     */
-    resourcecontrollerk8v3UpdateJobStatusRequest: Resourcecontrollerk8v3UpdateJobStatusRequest
-}
-
-export class ObjectResourceControllerK8ServiceApi {
-    private api: ObservableResourceControllerK8ServiceApi
-
-    public constructor(configuration: Configuration, requestFactory?: ResourceControllerK8ServiceApiRequestFactory, responseProcessor?: ResourceControllerK8ServiceApiResponseProcessor) {
-        this.api = new ObservableResourceControllerK8ServiceApi(configuration, requestFactory, responseProcessor);
-    }
-
-    /**
-     * CreateController - Add a new controller.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceCreateControllerWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceCreateControllerRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3Controller>> {
-        return this.api.resourceControllerK8ServiceCreateControllerWithHttpInfo(param.resourcecontrollerk8v3CreateControllerRequest,  options).toPromise();
-    }
-
-    /**
-     * CreateController - Add a new controller.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceCreateController(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceCreateControllerRequest, options?: Configuration): Promise<Resourcecontrollerk8v3Controller> {
-        return this.api.resourceControllerK8ServiceCreateController(param.resourcecontrollerk8v3CreateControllerRequest,  options).toPromise();
-    }
-
-    /**
-     * CreateHeartBeat - Create a heartbeat for the controller.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceCreateHeartBeatWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceCreateHeartBeatRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3CreateHeartBeatResponse>> {
-        return this.api.resourceControllerK8ServiceCreateHeartBeatWithHttpInfo(param.controllerId, param.resourcecontrollerk8v3CreateHeartBeatRequest,  options).toPromise();
-    }
-
-    /**
-     * CreateHeartBeat - Create a heartbeat for the controller.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceCreateHeartBeat(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceCreateHeartBeatRequest, options?: Configuration): Promise<Resourcecontrollerk8v3CreateHeartBeatResponse> {
-        return this.api.resourceControllerK8ServiceCreateHeartBeat(param.controllerId, param.resourcecontrollerk8v3CreateHeartBeatRequest,  options).toPromise();
-    }
-
-    /**
-     * CreateHeartBeatEx - Create a heartbeat for the controller with extended information.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceCreateHeartBeatExWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceCreateHeartBeatExRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3CreateHeartBeatExResponse>> {
-        return this.api.resourceControllerK8ServiceCreateHeartBeatExWithHttpInfo(param.controllerId, param.resourcecontrollerk8v3ControllerHeartbeat,  options).toPromise();
-    }
-
-    /**
-     * CreateHeartBeatEx - Create a heartbeat for the controller with extended information.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceCreateHeartBeatEx(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceCreateHeartBeatExRequest, options?: Configuration): Promise<Resourcecontrollerk8v3CreateHeartBeatExResponse> {
-        return this.api.resourceControllerK8ServiceCreateHeartBeatEx(param.controllerId, param.resourcecontrollerk8v3ControllerHeartbeat,  options).toPromise();
-    }
-
-    /**
-     * //////////////////////////////////////////////////////////////// Interface to the controllers and apps api in the App-Manager microservice CreateJob - Create a job definition. Files and secrets contained within will also be created.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceCreateJobWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceCreateJobRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3Job>> {
-        return this.api.resourceControllerK8ServiceCreateJobWithHttpInfo(param.resourcecontrollerk8v3Job,  options).toPromise();
-    }
-
-    /**
-     * //////////////////////////////////////////////////////////////// Interface to the controllers and apps api in the App-Manager microservice CreateJob - Create a job definition. Files and secrets contained within will also be created.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceCreateJob(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceCreateJobRequest, options?: Configuration): Promise<Resourcecontrollerk8v3Job> {
-        return this.api.resourceControllerK8ServiceCreateJob(param.resourcecontrollerk8v3Job,  options).toPromise();
-    }
-
-    /**
-     * CreateJobExecution - Create a job execution.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceCreateJobExecutionWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceCreateJobExecutionRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3JobExecution>> {
-        return this.api.resourceControllerK8ServiceCreateJobExecutionWithHttpInfo(param.resourcecontrollerk8v3JobExecution,  options).toPromise();
-    }
-
-    /**
-     * CreateJobExecution - Create a job execution.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceCreateJobExecution(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceCreateJobExecutionRequest, options?: Configuration): Promise<Resourcecontrollerk8v3JobExecution> {
-        return this.api.resourceControllerK8ServiceCreateJobExecution(param.resourcecontrollerk8v3JobExecution,  options).toPromise();
-    }
-
-    /**
-     * CreateKeypair - Create a new keypair for the controller.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceCreateKeypairWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceCreateKeypairRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3CreateKeypairResponse>> {
-        return this.api.resourceControllerK8ServiceCreateKeypairWithHttpInfo(param.controllerId, param.resourcecontrollerk8v3CreateKeypairRequest,  options).toPromise();
-    }
-
-    /**
-     * CreateKeypair - Create a new keypair for the controller.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceCreateKeypair(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceCreateKeypairRequest, options?: Configuration): Promise<Resourcecontrollerk8v3CreateKeypairResponse> {
-        return this.api.resourceControllerK8ServiceCreateKeypair(param.controllerId, param.resourcecontrollerk8v3CreateKeypairRequest,  options).toPromise();
-    }
-
-    /**
-     * DeleteController - Delete a controller.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceDeleteControllerWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceDeleteControllerRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3DeleteControllerResponse>> {
-        return this.api.resourceControllerK8ServiceDeleteControllerWithHttpInfo(param.controllerId, param.resourcecontrollerk8v3DeleteControllerRequest,  options).toPromise();
-    }
-
-    /**
-     * DeleteController - Delete a controller.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceDeleteController(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceDeleteControllerRequest, options?: Configuration): Promise<Resourcecontrollerk8v3DeleteControllerResponse> {
-        return this.api.resourceControllerK8ServiceDeleteController(param.controllerId, param.resourcecontrollerk8v3DeleteControllerRequest,  options).toPromise();
-    }
-
-    /**
-     * DeleteEdgeTenant - deletes an edge tenant providing edge tenant id
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceDeleteEdgeTenantWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceDeleteEdgeTenantRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3DeleteEdgeTenantResponse>> {
-        return this.api.resourceControllerK8ServiceDeleteEdgeTenantWithHttpInfo(param.tenantId, param.resourcecontrollerk8v3DeleteEdgeTenantRequestApphost,  options).toPromise();
-    }
-
-    /**
-     * DeleteEdgeTenant - deletes an edge tenant providing edge tenant id
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceDeleteEdgeTenant(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceDeleteEdgeTenantRequest, options?: Configuration): Promise<Resourcecontrollerk8v3DeleteEdgeTenantResponse> {
-        return this.api.resourceControllerK8ServiceDeleteEdgeTenant(param.tenantId, param.resourcecontrollerk8v3DeleteEdgeTenantRequestApphost,  options).toPromise();
-    }
-
-    /**
-     * DeleteEdgeTenantRequest to deletes gi and tnt CR on edge
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceDeleteEdgeTenantRequestWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceDeleteEdgeTenantRequestRequest = {}, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3EdgeResourceResponse>> {
-        return this.api.resourceControllerK8ServiceDeleteEdgeTenantRequestWithHttpInfo(param.tenantId, param.edgeId, param.edgeName,  options).toPromise();
-    }
-
-    /**
-     * DeleteEdgeTenantRequest to deletes gi and tnt CR on edge
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceDeleteEdgeTenantRequest(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceDeleteEdgeTenantRequestRequest = {}, options?: Configuration): Promise<Resourcecontrollerk8v3EdgeResourceResponse> {
-        return this.api.resourceControllerK8ServiceDeleteEdgeTenantRequest(param.tenantId, param.edgeId, param.edgeName,  options).toPromise();
-    }
-
-    /**
-     * DeleteJob - Delete a job.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceDeleteJobWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceDeleteJobRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3DeleteJobResponse>> {
-        return this.api.resourceControllerK8ServiceDeleteJobWithHttpInfo(param.jobId, param.resourcecontrollerk8v3DeleteJobRequest,  options).toPromise();
-    }
-
-    /**
-     * DeleteJob - Delete a job.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceDeleteJob(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceDeleteJobRequest, options?: Configuration): Promise<Resourcecontrollerk8v3DeleteJobResponse> {
-        return this.api.resourceControllerK8ServiceDeleteJob(param.jobId, param.resourcecontrollerk8v3DeleteJobRequest,  options).toPromise();
-    }
-
-    /**
-     * DownloadControllerLogs - Download the controller logs for a running controller.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceDownloadControllerLogsWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceDownloadControllerLogsRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3DownloadControllerLogsResponse>> {
-        return this.api.resourceControllerK8ServiceDownloadControllerLogsWithHttpInfo(param.controllerId, param.resourcecontrollerk8v3DownloadControllerLogsRequest,  options).toPromise();
-    }
-
-    /**
-     * DownloadControllerLogs - Download the controller logs for a running controller.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceDownloadControllerLogs(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceDownloadControllerLogsRequest, options?: Configuration): Promise<Resourcecontrollerk8v3DownloadControllerLogsResponse> {
-        return this.api.resourceControllerK8ServiceDownloadControllerLogs(param.controllerId, param.resourcecontrollerk8v3DownloadControllerLogsRequest,  options).toPromise();
-    }
-
-    /**
-     * GetControllerApps - Get the apps for the given controller.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceGetControllerAppsWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceGetControllerAppsRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3GetControllerAppsResponse>> {
-        return this.api.resourceControllerK8ServiceGetControllerAppsWithHttpInfo(param.controllerId, param.modifiedSince,  options).toPromise();
-    }
-
-    /**
-     * GetControllerApps - Get the apps for the given controller.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceGetControllerApps(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceGetControllerAppsRequest, options?: Configuration): Promise<Resourcecontrollerk8v3GetControllerAppsResponse> {
-        return this.api.resourceControllerK8ServiceGetControllerApps(param.controllerId, param.modifiedSince,  options).toPromise();
-    }
-
-    /**
-     * GetControllerCommands - Get the commands for the controller to execute.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceGetControllerCommandsWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceGetControllerCommandsRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3GetControllerCommandsResponse>> {
-        return this.api.resourceControllerK8ServiceGetControllerCommandsWithHttpInfo(param.controllerId,  options).toPromise();
-    }
-
-    /**
-     * GetControllerCommands - Get the commands for the controller to execute.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceGetControllerCommands(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceGetControllerCommandsRequest, options?: Configuration): Promise<Resourcecontrollerk8v3GetControllerCommandsResponse> {
-        return this.api.resourceControllerK8ServiceGetControllerCommands(param.controllerId,  options).toPromise();
-    }
-
-    /**
-     * GetControllerJobs - Get the jobs for the controller to execute.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceGetControllerJobsWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceGetControllerJobsRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3GetControllerJobsResponse>> {
-        return this.api.resourceControllerK8ServiceGetControllerJobsWithHttpInfo(param.controllerId, param.modifiedSince,  options).toPromise();
-    }
-
-    /**
-     * GetControllerJobs - Get the jobs for the controller to execute.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceGetControllerJobs(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceGetControllerJobsRequest, options?: Configuration): Promise<Resourcecontrollerk8v3GetControllerJobsResponse> {
-        return this.api.resourceControllerK8ServiceGetControllerJobs(param.controllerId, param.modifiedSince,  options).toPromise();
-    }
-
-    /**
-     * GetControllerStatus - Get the status for the given controller.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceGetControllerStatusWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceGetControllerStatusRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3ControllerStatus>> {
-        return this.api.resourceControllerK8ServiceGetControllerStatusWithHttpInfo(param.controllerId,  options).toPromise();
-    }
-
-    /**
-     * GetControllerStatus - Get the status for the given controller.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceGetControllerStatus(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceGetControllerStatusRequest, options?: Configuration): Promise<Resourcecontrollerk8v3ControllerStatus> {
-        return this.api.resourceControllerK8ServiceGetControllerStatus(param.controllerId,  options).toPromise();
-    }
-
-    /**
-     * GetControllers - Get the controllers for the given tenant.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceGetControllersWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceGetControllersRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3GetControllersResponse>> {
-        return this.api.resourceControllerK8ServiceGetControllersWithHttpInfo(param.tenantId, param.wantLocal,  options).toPromise();
-    }
-
-    /**
-     * GetControllers - Get the controllers for the given tenant.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceGetControllers(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceGetControllersRequest, options?: Configuration): Promise<Resourcecontrollerk8v3GetControllersResponse> {
-        return this.api.resourceControllerK8ServiceGetControllers(param.tenantId, param.wantLocal,  options).toPromise();
-    }
-
-    /**
-     * GetControllersWithStatus - Get the controllers for the given tenant with computed status.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceGetControllersWithStatusWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceGetControllersWithStatusRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3GetControllersWithStatusResponse>> {
-        return this.api.resourceControllerK8ServiceGetControllersWithStatusWithHttpInfo(param.tenantId, param.wantLocal, param.controllerId,  options).toPromise();
-    }
-
-    /**
-     * GetControllersWithStatus - Get the controllers for the given tenant with computed status.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceGetControllersWithStatus(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceGetControllersWithStatusRequest, options?: Configuration): Promise<Resourcecontrollerk8v3GetControllersWithStatusResponse> {
-        return this.api.resourceControllerK8ServiceGetControllersWithStatus(param.tenantId, param.wantLocal, param.controllerId,  options).toPromise();
-    }
-
-    /**
-     * GetJob - Get the job.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceGetJobWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceGetJobRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3Job>> {
-        return this.api.resourceControllerK8ServiceGetJobWithHttpInfo(param.jobId, param.wantSecretValues,  options).toPromise();
-    }
-
-    /**
-     * GetJob - Get the job.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceGetJob(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceGetJobRequest, options?: Configuration): Promise<Resourcecontrollerk8v3Job> {
-        return this.api.resourceControllerK8ServiceGetJob(param.jobId, param.wantSecretValues,  options).toPromise();
-    }
-
-    /**
-     * GetJobExecution - Get a job execution.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceGetJobExecutionWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceGetJobExecutionRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3JobExecution>> {
-        return this.api.resourceControllerK8ServiceGetJobExecutionWithHttpInfo(param.jobexeId,  options).toPromise();
-    }
-
-    /**
-     * GetJobExecution - Get a job execution.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceGetJobExecution(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceGetJobExecutionRequest, options?: Configuration): Promise<Resourcecontrollerk8v3JobExecution> {
-        return this.api.resourceControllerK8ServiceGetJobExecution(param.jobexeId,  options).toPromise();
-    }
-
-    /**
-     * GetJobExecutions - Get the job executions.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceGetJobExecutionsWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceGetJobExecutionsRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3GetJobExecutionsResponse>> {
-        return this.api.resourceControllerK8ServiceGetJobExecutionsWithHttpInfo(param.jobId,  options).toPromise();
-    }
-
-    /**
-     * GetJobExecutions - Get the job executions.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceGetJobExecutions(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceGetJobExecutionsRequest, options?: Configuration): Promise<Resourcecontrollerk8v3GetJobExecutionsResponse> {
-        return this.api.resourceControllerK8ServiceGetJobExecutions(param.jobId,  options).toPromise();
-    }
-
-    /**
-     * GetJobStatus - Get the job\'s status.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceGetJobStatusWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceGetJobStatusRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3JobStatusDTO>> {
-        return this.api.resourceControllerK8ServiceGetJobStatusWithHttpInfo(param.jobId,  options).toPromise();
-    }
-
-    /**
-     * GetJobStatus - Get the job\'s status.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceGetJobStatus(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceGetJobStatusRequest, options?: Configuration): Promise<Resourcecontrollerk8v3JobStatusDTO> {
-        return this.api.resourceControllerK8ServiceGetJobStatus(param.jobId,  options).toPromise();
-    }
-
-    /**
-     * GetTenantApp - Get a specific app for the given tenant.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceGetTenantAppWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceGetTenantAppRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3App>> {
-        return this.api.resourceControllerK8ServiceGetTenantAppWithHttpInfo(param.tenantId, param.appName, param.returnLevel,  options).toPromise();
-    }
-
-    /**
-     * GetTenantApp - Get a specific app for the given tenant.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceGetTenantApp(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceGetTenantAppRequest, options?: Configuration): Promise<Resourcecontrollerk8v3App> {
-        return this.api.resourceControllerK8ServiceGetTenantApp(param.tenantId, param.appName, param.returnLevel,  options).toPromise();
-    }
-
-    /**
-     * GetTenantApps - Get the apps for the given tenant.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceGetTenantAppsWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceGetTenantAppsRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3GetTenantAppsResponse>> {
-        return this.api.resourceControllerK8ServiceGetTenantAppsWithHttpInfo(param.tenantId, param.returnLevel,  options).toPromise();
-    }
-
-    /**
-     * GetTenantApps - Get the apps for the given tenant.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceGetTenantApps(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceGetTenantAppsRequest, options?: Configuration): Promise<Resourcecontrollerk8v3GetTenantAppsResponse> {
-        return this.api.resourceControllerK8ServiceGetTenantApps(param.tenantId, param.returnLevel,  options).toPromise();
-    }
-
-    /**
-     * GetTenantJobs - Get jobs for the given tenant.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceGetTenantJobsWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceGetTenantJobsRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3GetTenantJobsResponse>> {
-        return this.api.resourceControllerK8ServiceGetTenantJobsWithHttpInfo(param.tenantId,  options).toPromise();
-    }
-
-    /**
-     * GetTenantJobs - Get jobs for the given tenant.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceGetTenantJobs(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceGetTenantJobsRequest, options?: Configuration): Promise<Resourcecontrollerk8v3GetTenantJobsResponse> {
-        return this.api.resourceControllerK8ServiceGetTenantJobs(param.tenantId,  options).toPromise();
-    }
-
-    /**
-     * GetVersion - Get the system version information for the service.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceGetVersionWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceGetVersionRequest = {}, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3Version>> {
-        return this.api.resourceControllerK8ServiceGetVersionWithHttpInfo( options).toPromise();
-    }
-
-    /**
-     * GetVersion - Get the system version information for the service.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceGetVersion(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceGetVersionRequest = {}, options?: Configuration): Promise<Resourcecontrollerk8v3Version> {
-        return this.api.resourceControllerK8ServiceGetVersion( options).toPromise();
-    }
-
-    /**
-     * InstallEdgeTenantRequest to Create gi and tnt CRs on edge
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceInstallEdgeTenantRequestWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceInstallEdgeTenantRequestRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3EdgeResourceResponse>> {
-        return this.api.resourceControllerK8ServiceInstallEdgeTenantRequestWithHttpInfo(param.resourcecontrollerk8v3EdgeTenantRequest,  options).toPromise();
-    }
-
-    /**
-     * InstallEdgeTenantRequest to Create gi and tnt CRs on edge
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceInstallEdgeTenantRequest(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceInstallEdgeTenantRequestRequest, options?: Configuration): Promise<Resourcecontrollerk8v3EdgeResourceResponse> {
-        return this.api.resourceControllerK8ServiceInstallEdgeTenantRequest(param.resourcecontrollerk8v3EdgeTenantRequest,  options).toPromise();
-    }
-
-    /**
-     * QueryControllerLogs - Query for the controller logs for a running controller.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceQueryControllerLogsWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceQueryControllerLogsRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3QueryControllerLogsResponse>> {
-        return this.api.resourceControllerK8ServiceQueryControllerLogsWithHttpInfo(param.controllerId, param.resourcecontrollerk8v3QueryControllerLogsRequest,  options).toPromise();
-    }
-
-    /**
-     * QueryControllerLogs - Query for the controller logs for a running controller.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceQueryControllerLogs(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceQueryControllerLogsRequest, options?: Configuration): Promise<Resourcecontrollerk8v3QueryControllerLogsResponse> {
-        return this.api.resourceControllerK8ServiceQueryControllerLogs(param.controllerId, param.resourcecontrollerk8v3QueryControllerLogsRequest,  options).toPromise();
-    }
-
-    /**
-     * UpdateCommand - Update the command.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceUpdateCommandWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateCommandRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3ControllerCommand>> {
-        return this.api.resourceControllerK8ServiceUpdateCommandWithHttpInfo(param.id, param.resourcecontrollerk8v3ControllerCommand,  options).toPromise();
-    }
-
-    /**
-     * UpdateCommand - Update the command.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceUpdateCommand(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateCommandRequest, options?: Configuration): Promise<Resourcecontrollerk8v3ControllerCommand> {
-        return this.api.resourceControllerK8ServiceUpdateCommand(param.id, param.resourcecontrollerk8v3ControllerCommand,  options).toPromise();
-    }
-
-    /**
-     * UpdateController - Update an existing controller.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceUpdateControllerWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateControllerRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3Controller>> {
-        return this.api.resourceControllerK8ServiceUpdateControllerWithHttpInfo(param.id, param.resourcecontrollerk8v3Controller,  options).toPromise();
-    }
-
-    /**
-     * UpdateController - Update an existing controller.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceUpdateController(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateControllerRequest, options?: Configuration): Promise<Resourcecontrollerk8v3Controller> {
-        return this.api.resourceControllerK8ServiceUpdateController(param.id, param.resourcecontrollerk8v3Controller,  options).toPromise();
-    }
-
-    /**
-     * UpdateControllerStatus - Updates the status for the given controller.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceUpdateControllerStatusWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateControllerStatusRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3ControllerStatus>> {
-        return this.api.resourceControllerK8ServiceUpdateControllerStatusWithHttpInfo(param.id, param.resourcecontrollerk8v3ControllerStatus,  options).toPromise();
-    }
-
-    /**
-     * UpdateControllerStatus - Updates the status for the given controller.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceUpdateControllerStatus(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateControllerStatusRequest, options?: Configuration): Promise<Resourcecontrollerk8v3ControllerStatus> {
-        return this.api.resourceControllerK8ServiceUpdateControllerStatus(param.id, param.resourcecontrollerk8v3ControllerStatus,  options).toPromise();
-    }
-
-    /**
-     * UpdateEdgeTenantRequest to update gi and tnt CRs on edge
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceUpdateEdgeTenantRequestWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateEdgeTenantRequestRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3EdgeResourceResponse>> {
-        return this.api.resourceControllerK8ServiceUpdateEdgeTenantRequestWithHttpInfo(param.edgeId, param.resourcecontrollerk8v3EdgeTenantRequest,  options).toPromise();
-    }
-
-    /**
-     * UpdateEdgeTenantRequest to update gi and tnt CRs on edge
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceUpdateEdgeTenantRequest(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateEdgeTenantRequestRequest, options?: Configuration): Promise<Resourcecontrollerk8v3EdgeResourceResponse> {
-        return this.api.resourceControllerK8ServiceUpdateEdgeTenantRequest(param.edgeId, param.resourcecontrollerk8v3EdgeTenantRequest,  options).toPromise();
-    }
-
-    /**
-     * UpdateJob - Update a job.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceUpdateJobWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateJobRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3Job>> {
-        return this.api.resourceControllerK8ServiceUpdateJobWithHttpInfo(param.id, param.resourcecontrollerk8v3Job,  options).toPromise();
-    }
-
-    /**
-     * UpdateJob - Update a job.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceUpdateJob(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateJobRequest, options?: Configuration): Promise<Resourcecontrollerk8v3Job> {
-        return this.api.resourceControllerK8ServiceUpdateJob(param.id, param.resourcecontrollerk8v3Job,  options).toPromise();
-    }
-
-    /**
-     * UpdateJobExecution - Update a job execution.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceUpdateJobExecutionWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateJobExecutionRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3JobExecution>> {
-        return this.api.resourceControllerK8ServiceUpdateJobExecutionWithHttpInfo(param.id, param.resourcecontrollerk8v3UpdateJobExecutionRequest,  options).toPromise();
-    }
-
-    /**
-     * UpdateJobExecution - Update a job execution.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceUpdateJobExecution(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateJobExecutionRequest, options?: Configuration): Promise<Resourcecontrollerk8v3JobExecution> {
-        return this.api.resourceControllerK8ServiceUpdateJobExecution(param.id, param.resourcecontrollerk8v3UpdateJobExecutionRequest,  options).toPromise();
-    }
-
-    /**
-     * UpdateJobStatus - Updates the status for the given Job.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceUpdateJobStatusWithHttpInfo(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateJobStatusRequest, options?: Configuration): Promise<HttpInfo<Resourcecontrollerk8v3JobStatusDTO>> {
-        return this.api.resourceControllerK8ServiceUpdateJobStatusWithHttpInfo(param.jobId, param.resourcecontrollerk8v3UpdateJobStatusRequest,  options).toPromise();
-    }
-
-    /**
-     * UpdateJobStatus - Updates the status for the given Job.
-     * @param param the request object
-     */
-    public resourceControllerK8ServiceUpdateJobStatus(param: ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateJobStatusRequest, options?: Configuration): Promise<Resourcecontrollerk8v3JobStatusDTO> {
-        return this.api.resourceControllerK8ServiceUpdateJobStatus(param.jobId, param.resourcecontrollerk8v3UpdateJobStatusRequest,  options).toPromise();
     }
 
 }
@@ -13211,427 +13291,6 @@ export class ObjectStreamsServiceApi {
 
 }
 
-import { ObservableTemplatesServiceApi } from "./ObservableAPI";
-import { TemplatesServiceApiRequestFactory, TemplatesServiceApiResponseProcessor} from "../apis/TemplatesServiceApi";
-
-export interface TemplatesServiceApiTemplatesServiceCreateIntegrationRequest {
-    /**
-     * 
-     * @type Templatesv3CreateIntegrationRequest
-     * @memberof TemplatesServiceApitemplatesServiceCreateIntegration
-     */
-    templatesv3CreateIntegrationRequest: Templatesv3CreateIntegrationRequest
-}
-
-export interface TemplatesServiceApiTemplatesServiceCreateTemplateRequest {
-    /**
-     * 
-     * @type Templatesv3CreateTemplateRequest
-     * @memberof TemplatesServiceApitemplatesServiceCreateTemplate
-     */
-    templatesv3CreateTemplateRequest: Templatesv3CreateTemplateRequest
-}
-
-export interface TemplatesServiceApiTemplatesServiceDeleteIntegrationRequest {
-    /**
-     * Delete the templates associated with the specified integration ID.
-     * @type string
-     * @memberof TemplatesServiceApitemplatesServiceDeleteIntegration
-     */
-    integrationId: string
-}
-
-export interface TemplatesServiceApiTemplatesServiceDeleteTemplateRequest {
-    /**
-     * Delete the template with the specified unique ID.
-     * @type string
-     * @memberof TemplatesServiceApitemplatesServiceDeleteTemplate
-     */
-    templateId: string
-}
-
-export interface TemplatesServiceApiTemplatesServiceGetOriginDefaultContentRequest {
-    /**
-     * Origin for the desired content.
-     * @type &#39;UNDEFINED_ORIGIN&#39; | &#39;GENERAL_NOTIFICATION&#39; | &#39;ANOMALY_NOTIFICATION&#39; | &#39;DATAMART_NOTIFICATION&#39; | &#39;FETCH_NOTIFICATION&#39; | &#39;POLICY_ALERT_NOTIFICATION&#39; | &#39;RECOMMENDATION_NOTIFICATION&#39; | &#39;REPORTS_NOTIFICATION&#39; | &#39;SCHEDULED_REPORT_NOTIFICATION&#39; | &#39;SCHEDULED_AUDIT_NOTIFICATION&#39; | &#39;WELCOME_NOTIFICATION&#39; | &#39;EMAIL_HEADER_AND_FOOTER&#39; | &#39;RISK_NOTIFICATION&#39; | &#39;SCHEDULED_JOB_SUMMARY&#39; | &#39;INCIDENT_NOTIFICATION&#39; | &#39;MAINTENANCE_NOTIFICATION&#39; | &#39;QSPM_RISK&#39; | &#39;POLICY_IMPORT_NOTIFICATION&#39;
-     * @memberof TemplatesServiceApitemplatesServiceGetOriginDefaultContent
-     */
-    origin: 'UNDEFINED_ORIGIN' | 'GENERAL_NOTIFICATION' | 'ANOMALY_NOTIFICATION' | 'DATAMART_NOTIFICATION' | 'FETCH_NOTIFICATION' | 'POLICY_ALERT_NOTIFICATION' | 'RECOMMENDATION_NOTIFICATION' | 'REPORTS_NOTIFICATION' | 'SCHEDULED_REPORT_NOTIFICATION' | 'SCHEDULED_AUDIT_NOTIFICATION' | 'WELCOME_NOTIFICATION' | 'EMAIL_HEADER_AND_FOOTER' | 'RISK_NOTIFICATION' | 'SCHEDULED_JOB_SUMMARY' | 'INCIDENT_NOTIFICATION' | 'MAINTENANCE_NOTIFICATION' | 'QSPM_RISK' | 'POLICY_IMPORT_NOTIFICATION'
-    /**
-     * Integration provides the context for the Request.
-     * @type &#39;UNDEFINED_INTEGRATION&#39; | &#39;SMTP&#39; | &#39;SNMP&#39; | &#39;SYSLOG&#39; | &#39;CASES&#39; | &#39;SERVICE_NOW&#39; | &#39;RESILIENT&#39; | &#39;SOAR&#39; | &#39;WEBHOOK&#39; | &#39;SLACK&#39; | &#39;TEAMS&#39; | &#39;SMS&#39; | &#39;JIRA&#39;
-     * @memberof TemplatesServiceApitemplatesServiceGetOriginDefaultContent
-     */
-    integration?: 'UNDEFINED_INTEGRATION' | 'SMTP' | 'SNMP' | 'SYSLOG' | 'CASES' | 'SERVICE_NOW' | 'RESILIENT' | 'SOAR' | 'WEBHOOK' | 'SLACK' | 'TEAMS' | 'SMS' | 'JIRA'
-    /**
-     * MIME type for the desired content.
-     * @type &#39;PLAIN_TEXT&#39; | &#39;TEXT_HTML&#39; | &#39;APPLICATION_CEF&#39;
-     * @memberof TemplatesServiceApitemplatesServiceGetOriginDefaultContent
-     */
-    mimeType?: 'PLAIN_TEXT' | 'TEXT_HTML' | 'APPLICATION_CEF'
-}
-
-export interface TemplatesServiceApiTemplatesServiceGetOriginFieldsRequest {
-    /**
-     * Origin for the desired fields.
-     * @type &#39;UNDEFINED_ORIGIN&#39; | &#39;GENERAL_NOTIFICATION&#39; | &#39;ANOMALY_NOTIFICATION&#39; | &#39;DATAMART_NOTIFICATION&#39; | &#39;FETCH_NOTIFICATION&#39; | &#39;POLICY_ALERT_NOTIFICATION&#39; | &#39;RECOMMENDATION_NOTIFICATION&#39; | &#39;REPORTS_NOTIFICATION&#39; | &#39;SCHEDULED_REPORT_NOTIFICATION&#39; | &#39;SCHEDULED_AUDIT_NOTIFICATION&#39; | &#39;WELCOME_NOTIFICATION&#39; | &#39;EMAIL_HEADER_AND_FOOTER&#39; | &#39;RISK_NOTIFICATION&#39; | &#39;SCHEDULED_JOB_SUMMARY&#39; | &#39;INCIDENT_NOTIFICATION&#39; | &#39;MAINTENANCE_NOTIFICATION&#39; | &#39;QSPM_RISK&#39; | &#39;POLICY_IMPORT_NOTIFICATION&#39;
-     * @memberof TemplatesServiceApitemplatesServiceGetOriginFields
-     */
-    origin: 'UNDEFINED_ORIGIN' | 'GENERAL_NOTIFICATION' | 'ANOMALY_NOTIFICATION' | 'DATAMART_NOTIFICATION' | 'FETCH_NOTIFICATION' | 'POLICY_ALERT_NOTIFICATION' | 'RECOMMENDATION_NOTIFICATION' | 'REPORTS_NOTIFICATION' | 'SCHEDULED_REPORT_NOTIFICATION' | 'SCHEDULED_AUDIT_NOTIFICATION' | 'WELCOME_NOTIFICATION' | 'EMAIL_HEADER_AND_FOOTER' | 'RISK_NOTIFICATION' | 'SCHEDULED_JOB_SUMMARY' | 'INCIDENT_NOTIFICATION' | 'MAINTENANCE_NOTIFICATION' | 'QSPM_RISK' | 'POLICY_IMPORT_NOTIFICATION'
-}
-
-export interface TemplatesServiceApiTemplatesServiceGetTemplateRequest {
-    /**
-     * The unique ID for the template to fetch.
-     * @type string
-     * @memberof TemplatesServiceApitemplatesServiceGetTemplate
-     */
-    templateId: string
-    /**
-     * Include the Integration name in the returned template.
-     * @type boolean
-     * @memberof TemplatesServiceApitemplatesServiceGetTemplate
-     */
-    includeIntegrationName?: boolean
-}
-
-export interface TemplatesServiceApiTemplatesServiceGetTemplatesRequest {
-    /**
-     * Filter on templates associated with a specific integration.
-     * @type string
-     * @memberof TemplatesServiceApitemplatesServiceGetTemplates
-     */
-    integrationId?: string
-    /**
-     * Filter on a set of integrations; ignored if empty.
-     * @type Array&lt;&#39;UNDEFINED_INTEGRATION&#39; | &#39;SMTP&#39; | &#39;SNMP&#39; | &#39;SYSLOG&#39; | &#39;CASES&#39; | &#39;SERVICE_NOW&#39; | &#39;RESILIENT&#39; | &#39;SOAR&#39; | &#39;WEBHOOK&#39; | &#39;SLACK&#39; | &#39;TEAMS&#39; | &#39;SMS&#39; | &#39;JIRA&#39;&gt;
-     * @memberof TemplatesServiceApitemplatesServiceGetTemplates
-     */
-    filterIntegration?: Array<'UNDEFINED_INTEGRATION' | 'SMTP' | 'SNMP' | 'SYSLOG' | 'CASES' | 'SERVICE_NOW' | 'RESILIENT' | 'SOAR' | 'WEBHOOK' | 'SLACK' | 'TEAMS' | 'SMS' | 'JIRA'>
-    /**
-     * Filter on a specific set of data origins; ignored if empty.
-     * @type Array&lt;&#39;UNDEFINED_ORIGIN&#39; | &#39;GENERAL_NOTIFICATION&#39; | &#39;ANOMALY_NOTIFICATION&#39; | &#39;DATAMART_NOTIFICATION&#39; | &#39;FETCH_NOTIFICATION&#39; | &#39;POLICY_ALERT_NOTIFICATION&#39; | &#39;RECOMMENDATION_NOTIFICATION&#39; | &#39;REPORTS_NOTIFICATION&#39; | &#39;SCHEDULED_REPORT_NOTIFICATION&#39; | &#39;SCHEDULED_AUDIT_NOTIFICATION&#39; | &#39;WELCOME_NOTIFICATION&#39; | &#39;EMAIL_HEADER_AND_FOOTER&#39; | &#39;RISK_NOTIFICATION&#39; | &#39;SCHEDULED_JOB_SUMMARY&#39; | &#39;INCIDENT_NOTIFICATION&#39; | &#39;MAINTENANCE_NOTIFICATION&#39; | &#39;QSPM_RISK&#39; | &#39;POLICY_IMPORT_NOTIFICATION&#39;&gt;
-     * @memberof TemplatesServiceApitemplatesServiceGetTemplates
-     */
-    filterOrigin?: Array<'UNDEFINED_ORIGIN' | 'GENERAL_NOTIFICATION' | 'ANOMALY_NOTIFICATION' | 'DATAMART_NOTIFICATION' | 'FETCH_NOTIFICATION' | 'POLICY_ALERT_NOTIFICATION' | 'RECOMMENDATION_NOTIFICATION' | 'REPORTS_NOTIFICATION' | 'SCHEDULED_REPORT_NOTIFICATION' | 'SCHEDULED_AUDIT_NOTIFICATION' | 'WELCOME_NOTIFICATION' | 'EMAIL_HEADER_AND_FOOTER' | 'RISK_NOTIFICATION' | 'SCHEDULED_JOB_SUMMARY' | 'INCIDENT_NOTIFICATION' | 'MAINTENANCE_NOTIFICATION' | 'QSPM_RISK' | 'POLICY_IMPORT_NOTIFICATION'>
-    /**
-     * Filter on specific mime types; ignored if empty.
-     * @type Array&lt;&#39;PLAIN_TEXT&#39; | &#39;TEXT_HTML&#39; | &#39;APPLICATION_CEF&#39;&gt;
-     * @memberof TemplatesServiceApitemplatesServiceGetTemplates
-     */
-    filterMimeType?: Array<'PLAIN_TEXT' | 'TEXT_HTML' | 'APPLICATION_CEF'>
-    /**
-     * Filter on specific tags; ignored if empty.
-     * @type Array&lt;string&gt;
-     * @memberof TemplatesServiceApitemplatesServiceGetTemplates
-     */
-    filterTags?: Array<string>
-    /**
-     * Filter on all templates instead of just the enabled templates.
-     * @type boolean
-     * @memberof TemplatesServiceApitemplatesServiceGetTemplates
-     */
-    filterEnabledOnly?: boolean
-    /**
-     * Include the Integration name in the returned templates.
-     * @type boolean
-     * @memberof TemplatesServiceApitemplatesServiceGetTemplates
-     */
-    includeIntegrationName?: boolean
-}
-
-export interface TemplatesServiceApiTemplatesServiceGetTemplatesForEdgeRequest {
-    /**
-     * Templates associated with a specific integration.
-     * @type string
-     * @memberof TemplatesServiceApitemplatesServiceGetTemplatesForEdge
-     */
-    integrationId?: string
-    /**
-     * Filter on a specific set of data origins; ignored if empty.
-     * @type Array&lt;&#39;UNDEFINED_ORIGIN&#39; | &#39;GENERAL_NOTIFICATION&#39; | &#39;ANOMALY_NOTIFICATION&#39; | &#39;DATAMART_NOTIFICATION&#39; | &#39;FETCH_NOTIFICATION&#39; | &#39;POLICY_ALERT_NOTIFICATION&#39; | &#39;RECOMMENDATION_NOTIFICATION&#39; | &#39;REPORTS_NOTIFICATION&#39; | &#39;SCHEDULED_REPORT_NOTIFICATION&#39; | &#39;SCHEDULED_AUDIT_NOTIFICATION&#39; | &#39;WELCOME_NOTIFICATION&#39; | &#39;EMAIL_HEADER_AND_FOOTER&#39; | &#39;RISK_NOTIFICATION&#39; | &#39;SCHEDULED_JOB_SUMMARY&#39; | &#39;INCIDENT_NOTIFICATION&#39; | &#39;MAINTENANCE_NOTIFICATION&#39; | &#39;QSPM_RISK&#39; | &#39;POLICY_IMPORT_NOTIFICATION&#39;&gt;
-     * @memberof TemplatesServiceApitemplatesServiceGetTemplatesForEdge
-     */
-    filterOrigin?: Array<'UNDEFINED_ORIGIN' | 'GENERAL_NOTIFICATION' | 'ANOMALY_NOTIFICATION' | 'DATAMART_NOTIFICATION' | 'FETCH_NOTIFICATION' | 'POLICY_ALERT_NOTIFICATION' | 'RECOMMENDATION_NOTIFICATION' | 'REPORTS_NOTIFICATION' | 'SCHEDULED_REPORT_NOTIFICATION' | 'SCHEDULED_AUDIT_NOTIFICATION' | 'WELCOME_NOTIFICATION' | 'EMAIL_HEADER_AND_FOOTER' | 'RISK_NOTIFICATION' | 'SCHEDULED_JOB_SUMMARY' | 'INCIDENT_NOTIFICATION' | 'MAINTENANCE_NOTIFICATION' | 'QSPM_RISK' | 'POLICY_IMPORT_NOTIFICATION'>
-    /**
-     * Filter on all templates instead of just the enabled templates.
-     * @type boolean
-     * @memberof TemplatesServiceApitemplatesServiceGetTemplatesForEdge
-     */
-    filterEnabledOnly?: boolean
-    /**
-     * Include the Integration name in the returned templates.
-     * @type boolean
-     * @memberof TemplatesServiceApitemplatesServiceGetTemplatesForEdge
-     */
-    includeIntegrationName?: boolean
-    /**
-     * Tranform template format to GDP style format.
-     * @type boolean
-     * @memberof TemplatesServiceApitemplatesServiceGetTemplatesForEdge
-     */
-    transformToGdpFormat?: boolean
-}
-
-export interface TemplatesServiceApiTemplatesServiceTestTemplateRequest {
-    /**
-     * 
-     * @type Templatesv3TestTemplateRequest
-     * @memberof TemplatesServiceApitemplatesServiceTestTemplate
-     */
-    templatesv3TestTemplateRequest: Templatesv3TestTemplateRequest
-}
-
-export interface TemplatesServiceApiTemplatesServiceTransformTemplateRequest {
-    /**
-     * 
-     * @type Templatesv3TransformTemplateRequest
-     * @memberof TemplatesServiceApitemplatesServiceTransformTemplate
-     */
-    templatesv3TransformTemplateRequest: Templatesv3TransformTemplateRequest
-}
-
-export interface TemplatesServiceApiTemplatesServiceTransformTemplateJSONRequest {
-    /**
-     * 
-     * @type Templatesv3TransformTemplateJSONRequest
-     * @memberof TemplatesServiceApitemplatesServiceTransformTemplateJSON
-     */
-    templatesv3TransformTemplateJSONRequest: Templatesv3TransformTemplateJSONRequest
-}
-
-export interface TemplatesServiceApiTemplatesServiceUpdateTemplateRequest {
-    /**
-     * The template id to update.
-     * @type string
-     * @memberof TemplatesServiceApitemplatesServiceUpdateTemplate
-     */
-    templateId: string
-    /**
-     * 
-     * @type Templatesv3UpdateTemplateRequest
-     * @memberof TemplatesServiceApitemplatesServiceUpdateTemplate
-     */
-    templatesv3UpdateTemplateRequest: Templatesv3UpdateTemplateRequest
-}
-
-export class ObjectTemplatesServiceApi {
-    private api: ObservableTemplatesServiceApi
-
-    public constructor(configuration: Configuration, requestFactory?: TemplatesServiceApiRequestFactory, responseProcessor?: TemplatesServiceApiResponseProcessor) {
-        this.api = new ObservableTemplatesServiceApi(configuration, requestFactory, responseProcessor);
-    }
-
-    /**
-     * Summary: Create integration Description: Create a set of new templates for a new integration.
-     * @param param the request object
-     */
-    public templatesServiceCreateIntegrationWithHttpInfo(param: TemplatesServiceApiTemplatesServiceCreateIntegrationRequest, options?: Configuration): Promise<HttpInfo<Templatesv3CreateIntegrationResponse>> {
-        return this.api.templatesServiceCreateIntegrationWithHttpInfo(param.templatesv3CreateIntegrationRequest,  options).toPromise();
-    }
-
-    /**
-     * Summary: Create integration Description: Create a set of new templates for a new integration.
-     * @param param the request object
-     */
-    public templatesServiceCreateIntegration(param: TemplatesServiceApiTemplatesServiceCreateIntegrationRequest, options?: Configuration): Promise<Templatesv3CreateIntegrationResponse> {
-        return this.api.templatesServiceCreateIntegration(param.templatesv3CreateIntegrationRequest,  options).toPromise();
-    }
-
-    /**
-     * Summary: Create template Description: Create a new template.
-     * @param param the request object
-     */
-    public templatesServiceCreateTemplateWithHttpInfo(param: TemplatesServiceApiTemplatesServiceCreateTemplateRequest, options?: Configuration): Promise<HttpInfo<Templatesv3CreateTemplateResponse>> {
-        return this.api.templatesServiceCreateTemplateWithHttpInfo(param.templatesv3CreateTemplateRequest,  options).toPromise();
-    }
-
-    /**
-     * Summary: Create template Description: Create a new template.
-     * @param param the request object
-     */
-    public templatesServiceCreateTemplate(param: TemplatesServiceApiTemplatesServiceCreateTemplateRequest, options?: Configuration): Promise<Templatesv3CreateTemplateResponse> {
-        return this.api.templatesServiceCreateTemplate(param.templatesv3CreateTemplateRequest,  options).toPromise();
-    }
-
-    /**
-     * Summary: Delete integration Description: Delete all templates associated with an integration.
-     * @param param the request object
-     */
-    public templatesServiceDeleteIntegrationWithHttpInfo(param: TemplatesServiceApiTemplatesServiceDeleteIntegrationRequest, options?: Configuration): Promise<HttpInfo<Templatesv3DeleteIntegrationResponse>> {
-        return this.api.templatesServiceDeleteIntegrationWithHttpInfo(param.integrationId,  options).toPromise();
-    }
-
-    /**
-     * Summary: Delete integration Description: Delete all templates associated with an integration.
-     * @param param the request object
-     */
-    public templatesServiceDeleteIntegration(param: TemplatesServiceApiTemplatesServiceDeleteIntegrationRequest, options?: Configuration): Promise<Templatesv3DeleteIntegrationResponse> {
-        return this.api.templatesServiceDeleteIntegration(param.integrationId,  options).toPromise();
-    }
-
-    /**
-     * Summary: Delete template Description: Delete a specific template.
-     * @param param the request object
-     */
-    public templatesServiceDeleteTemplateWithHttpInfo(param: TemplatesServiceApiTemplatesServiceDeleteTemplateRequest, options?: Configuration): Promise<HttpInfo<Templatesv3DeleteTemplateResponse>> {
-        return this.api.templatesServiceDeleteTemplateWithHttpInfo(param.templateId,  options).toPromise();
-    }
-
-    /**
-     * Summary: Delete template Description: Delete a specific template.
-     * @param param the request object
-     */
-    public templatesServiceDeleteTemplate(param: TemplatesServiceApiTemplatesServiceDeleteTemplateRequest, options?: Configuration): Promise<Templatesv3DeleteTemplateResponse> {
-        return this.api.templatesServiceDeleteTemplate(param.templateId,  options).toPromise();
-    }
-
-    /**
-     * Summary: Get origin default content Description: Return the default content for a template with a specified origin and MIME type.
-     * @param param the request object
-     */
-    public templatesServiceGetOriginDefaultContentWithHttpInfo(param: TemplatesServiceApiTemplatesServiceGetOriginDefaultContentRequest, options?: Configuration): Promise<HttpInfo<Templatesv3GetOriginDefaultContentResponse>> {
-        return this.api.templatesServiceGetOriginDefaultContentWithHttpInfo(param.origin, param.integration, param.mimeType,  options).toPromise();
-    }
-
-    /**
-     * Summary: Get origin default content Description: Return the default content for a template with a specified origin and MIME type.
-     * @param param the request object
-     */
-    public templatesServiceGetOriginDefaultContent(param: TemplatesServiceApiTemplatesServiceGetOriginDefaultContentRequest, options?: Configuration): Promise<Templatesv3GetOriginDefaultContentResponse> {
-        return this.api.templatesServiceGetOriginDefaultContent(param.origin, param.integration, param.mimeType,  options).toPromise();
-    }
-
-    /**
-     * Summary: Get origin fields Description: Return the fields available with a specific origin.
-     * @param param the request object
-     */
-    public templatesServiceGetOriginFieldsWithHttpInfo(param: TemplatesServiceApiTemplatesServiceGetOriginFieldsRequest, options?: Configuration): Promise<HttpInfo<Templatesv3GetOriginFieldsResponse>> {
-        return this.api.templatesServiceGetOriginFieldsWithHttpInfo(param.origin,  options).toPromise();
-    }
-
-    /**
-     * Summary: Get origin fields Description: Return the fields available with a specific origin.
-     * @param param the request object
-     */
-    public templatesServiceGetOriginFields(param: TemplatesServiceApiTemplatesServiceGetOriginFieldsRequest, options?: Configuration): Promise<Templatesv3GetOriginFieldsResponse> {
-        return this.api.templatesServiceGetOriginFields(param.origin,  options).toPromise();
-    }
-
-    /**
-     * Summary: Get template Description: Return a specific template by id.
-     * @param param the request object
-     */
-    public templatesServiceGetTemplateWithHttpInfo(param: TemplatesServiceApiTemplatesServiceGetTemplateRequest, options?: Configuration): Promise<HttpInfo<Templatesv3GetTemplateResponse>> {
-        return this.api.templatesServiceGetTemplateWithHttpInfo(param.templateId, param.includeIntegrationName,  options).toPromise();
-    }
-
-    /**
-     * Summary: Get template Description: Return a specific template by id.
-     * @param param the request object
-     */
-    public templatesServiceGetTemplate(param: TemplatesServiceApiTemplatesServiceGetTemplateRequest, options?: Configuration): Promise<Templatesv3GetTemplateResponse> {
-        return this.api.templatesServiceGetTemplate(param.templateId, param.includeIntegrationName,  options).toPromise();
-    }
-
-    /**
-     * Summary: Get templates Description: Return all templates based on supplied filters.
-     * @param param the request object
-     */
-    public templatesServiceGetTemplatesWithHttpInfo(param: TemplatesServiceApiTemplatesServiceGetTemplatesRequest = {}, options?: Configuration): Promise<HttpInfo<Templatesv3GetTemplatesResponse>> {
-        return this.api.templatesServiceGetTemplatesWithHttpInfo(param.integrationId, param.filterIntegration, param.filterOrigin, param.filterMimeType, param.filterTags, param.filterEnabledOnly, param.includeIntegrationName,  options).toPromise();
-    }
-
-    /**
-     * Summary: Get templates Description: Return all templates based on supplied filters.
-     * @param param the request object
-     */
-    public templatesServiceGetTemplates(param: TemplatesServiceApiTemplatesServiceGetTemplatesRequest = {}, options?: Configuration): Promise<Templatesv3GetTemplatesResponse> {
-        return this.api.templatesServiceGetTemplates(param.integrationId, param.filterIntegration, param.filterOrigin, param.filterMimeType, param.filterTags, param.filterEnabledOnly, param.includeIntegrationName,  options).toPromise();
-    }
-
-    /**
-     * Summary: Get templates for edge Description: Return all templates based on supplied filters.
-     * @param param the request object
-     */
-    public templatesServiceGetTemplatesForEdgeWithHttpInfo(param: TemplatesServiceApiTemplatesServiceGetTemplatesForEdgeRequest = {}, options?: Configuration): Promise<HttpInfo<Templatesv3GetTemplatesForEdgeResponse>> {
-        return this.api.templatesServiceGetTemplatesForEdgeWithHttpInfo(param.integrationId, param.filterOrigin, param.filterEnabledOnly, param.includeIntegrationName, param.transformToGdpFormat,  options).toPromise();
-    }
-
-    /**
-     * Summary: Get templates for edge Description: Return all templates based on supplied filters.
-     * @param param the request object
-     */
-    public templatesServiceGetTemplatesForEdge(param: TemplatesServiceApiTemplatesServiceGetTemplatesForEdgeRequest = {}, options?: Configuration): Promise<Templatesv3GetTemplatesForEdgeResponse> {
-        return this.api.templatesServiceGetTemplatesForEdge(param.integrationId, param.filterOrigin, param.filterEnabledOnly, param.includeIntegrationName, param.transformToGdpFormat,  options).toPromise();
-    }
-
-    /**
-     * Summary: Test template Description: Analyze a specified template to ensure will function correctly when utilized.
-     * @param param the request object
-     */
-    public templatesServiceTestTemplateWithHttpInfo(param: TemplatesServiceApiTemplatesServiceTestTemplateRequest, options?: Configuration): Promise<HttpInfo<Templatesv3TestTemplateResponse>> {
-        return this.api.templatesServiceTestTemplateWithHttpInfo(param.templatesv3TestTemplateRequest,  options).toPromise();
-    }
-
-    /**
-     * Summary: Test template Description: Analyze a specified template to ensure will function correctly when utilized.
-     * @param param the request object
-     */
-    public templatesServiceTestTemplate(param: TemplatesServiceApiTemplatesServiceTestTemplateRequest, options?: Configuration): Promise<Templatesv3TestTemplateResponse> {
-        return this.api.templatesServiceTestTemplate(param.templatesv3TestTemplateRequest,  options).toPromise();
-    }
-
-    /**
-     * Summary: Transform template Description: Process the specified template and returns the Title and Content based on supplied data.
-     * @param param the request object
-     */
-    public templatesServiceTransformTemplateWithHttpInfo(param: TemplatesServiceApiTemplatesServiceTransformTemplateRequest, options?: Configuration): Promise<HttpInfo<Templatesv3TransformTemplateResponse>> {
-        return this.api.templatesServiceTransformTemplateWithHttpInfo(param.templatesv3TransformTemplateRequest,  options).toPromise();
-    }
-
-    /**
-     * Summary: Transform template Description: Process the specified template and returns the Title and Content based on supplied data.
-     * @param param the request object
-     */
-    public templatesServiceTransformTemplate(param: TemplatesServiceApiTemplatesServiceTransformTemplateRequest, options?: Configuration): Promise<Templatesv3TransformTemplateResponse> {
-        return this.api.templatesServiceTransformTemplate(param.templatesv3TransformTemplateRequest,  options).toPromise();
-    }
-
-    /**
-     * Summary: Transform template JSON Description: Process the specified template and returns the Title and Content based on supplied json data string.
-     * @param param the request object
-     */
-    public templatesServiceTransformTemplateJSONWithHttpInfo(param: TemplatesServiceApiTemplatesServiceTransformTemplateJSONRequest, options?: Configuration): Promise<HttpInfo<Templatesv3TransformTemplateJSONResponse>> {
-        return this.api.templatesServiceTransformTemplateJSONWithHttpInfo(param.templatesv3TransformTemplateJSONRequest,  options).toPromise();
-    }
-
-    /**
-     * Summary: Transform template JSON Description: Process the specified template and returns the Title and Content based on supplied json data string.
-     * @param param the request object
-     */
-    public templatesServiceTransformTemplateJSON(param: TemplatesServiceApiTemplatesServiceTransformTemplateJSONRequest, options?: Configuration): Promise<Templatesv3TransformTemplateJSONResponse> {
-        return this.api.templatesServiceTransformTemplateJSON(param.templatesv3TransformTemplateJSONRequest,  options).toPromise();
-    }
-
-    /**
-     * Summary: Update template Description: Update a single template.
-     * @param param the request object
-     */
-    public templatesServiceUpdateTemplateWithHttpInfo(param: TemplatesServiceApiTemplatesServiceUpdateTemplateRequest, options?: Configuration): Promise<HttpInfo<Templatesv3UpdateTemplateResponse>> {
-        return this.api.templatesServiceUpdateTemplateWithHttpInfo(param.templateId, param.templatesv3UpdateTemplateRequest,  options).toPromise();
-    }
-
-    /**
-     * Summary: Update template Description: Update a single template.
-     * @param param the request object
-     */
-    public templatesServiceUpdateTemplate(param: TemplatesServiceApiTemplatesServiceUpdateTemplateRequest, options?: Configuration): Promise<Templatesv3UpdateTemplateResponse> {
-        return this.api.templatesServiceUpdateTemplate(param.templateId, param.templatesv3UpdateTemplateRequest,  options).toPromise();
-    }
-
-}
-
 import { ObservableTenantuserApi } from "./ObservableAPI";
 import { TenantuserApiRequestFactory, TenantuserApiResponseProcessor} from "../apis/TenantuserApi";
 
@@ -14399,6 +14058,181 @@ export class ObjectUniversalConnectorManagerApi {
      */
     public universalConnectorManagerUploadPlugin(param: UniversalConnectorManagerApiUniversalConnectorManagerUploadPluginRequest, options?: Configuration): Promise<RpcStatus> {
         return this.api.universalConnectorManagerUploadPlugin(param.universalconnectormanagerv3UploadPluginRequest,  options).toPromise();
+    }
+
+}
+
+import { ObservableVulnerabilityManagementServiceApi } from "./ObservableAPI";
+import { VulnerabilityManagementServiceApiRequestFactory, VulnerabilityManagementServiceApiResponseProcessor} from "../apis/VulnerabilityManagementServiceApi";
+
+export interface VulnerabilityManagementServiceApiVulnerabilityManagementServiceCreateVulnerabilityRequest {
+    /**
+     * 
+     * @type Vulmanagementv3CreateVulnerabilityRequest
+     * @memberof VulnerabilityManagementServiceApivulnerabilityManagementServiceCreateVulnerability
+     */
+    vulmanagementv3CreateVulnerabilityRequest: Vulmanagementv3CreateVulnerabilityRequest
+}
+
+export interface VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetFiltersForVulnerabilitiesRequest {
+}
+
+export interface VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVulnerabilitiesRequest {
+    /**
+     * 
+     * @type Vulmanagementv3GetVulnerabilitiesRequest
+     * @memberof VulnerabilityManagementServiceApivulnerabilityManagementServiceGetVulnerabilities
+     */
+    vulmanagementv3GetVulnerabilitiesRequest: Vulmanagementv3GetVulnerabilitiesRequest
+}
+
+export interface VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVulnerabilitiesStatsRequest {
+}
+
+export interface VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVulnerabilityRequest {
+    /**
+     * ID for the record to return.
+     * @type string
+     * @memberof VulnerabilityManagementServiceApivulnerabilityManagementServiceGetVulnerability
+     */
+    vulnerabilityId: string
+}
+
+export interface VulnerabilityManagementServiceApiVulnerabilityManagementServiceUpdateVulnerabilitiesRequest {
+    /**
+     * 
+     * @type Vulmanagementv3UpdateVulnerabilitiesRequest
+     * @memberof VulnerabilityManagementServiceApivulnerabilityManagementServiceUpdateVulnerabilities
+     */
+    vulmanagementv3UpdateVulnerabilitiesRequest: Vulmanagementv3UpdateVulnerabilitiesRequest
+}
+
+export interface VulnerabilityManagementServiceApiVulnerabilityManagementServiceVulnerabilityIngestionManualTriggerRequest {
+    /**
+     * 
+     * @type any
+     * @memberof VulnerabilityManagementServiceApivulnerabilityManagementServiceVulnerabilityIngestionManualTrigger
+     */
+    body: any
+}
+
+export class ObjectVulnerabilityManagementServiceApi {
+    private api: ObservableVulnerabilityManagementServiceApi
+
+    public constructor(configuration: Configuration, requestFactory?: VulnerabilityManagementServiceApiRequestFactory, responseProcessor?: VulnerabilityManagementServiceApiResponseProcessor) {
+        this.api = new ObservableVulnerabilityManagementServiceApi(configuration, requestFactory, responseProcessor);
+    }
+
+    /**
+     * Summary: Create a vulnerability Description: Create a vulnerability based on request
+     * @param param the request object
+     */
+    public vulnerabilityManagementServiceCreateVulnerabilityWithHttpInfo(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceCreateVulnerabilityRequest, options?: Configuration): Promise<HttpInfo<Vulmanagementv3CreateVulnerabilityResponse>> {
+        return this.api.vulnerabilityManagementServiceCreateVulnerabilityWithHttpInfo(param.vulmanagementv3CreateVulnerabilityRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Create a vulnerability Description: Create a vulnerability based on request
+     * @param param the request object
+     */
+    public vulnerabilityManagementServiceCreateVulnerability(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceCreateVulnerabilityRequest, options?: Configuration): Promise<Vulmanagementv3CreateVulnerabilityResponse> {
+        return this.api.vulnerabilityManagementServiceCreateVulnerability(param.vulmanagementv3CreateVulnerabilityRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Get filters for vulnerabilities Description: Get a list of filters category and sub category with all data.
+     * @param param the request object
+     */
+    public vulnerabilityManagementServiceGetFiltersForVulnerabilitiesWithHttpInfo(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetFiltersForVulnerabilitiesRequest = {}, options?: Configuration): Promise<HttpInfo<Vulmanagementv3GetFiltersDataResponse>> {
+        return this.api.vulnerabilityManagementServiceGetFiltersForVulnerabilitiesWithHttpInfo( options).toPromise();
+    }
+
+    /**
+     * Summary: Get filters for vulnerabilities Description: Get a list of filters category and sub category with all data.
+     * @param param the request object
+     */
+    public vulnerabilityManagementServiceGetFiltersForVulnerabilities(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetFiltersForVulnerabilitiesRequest = {}, options?: Configuration): Promise<Vulmanagementv3GetFiltersDataResponse> {
+        return this.api.vulnerabilityManagementServiceGetFiltersForVulnerabilities( options).toPromise();
+    }
+
+    /**
+     * Summary: Get vulnerabilities Description: Returns a list of vulnerabilities.
+     * @param param the request object
+     */
+    public vulnerabilityManagementServiceGetVulnerabilitiesWithHttpInfo(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVulnerabilitiesRequest, options?: Configuration): Promise<HttpInfo<Vulmanagementv3GetVulnerabilitiesResponse>> {
+        return this.api.vulnerabilityManagementServiceGetVulnerabilitiesWithHttpInfo(param.vulmanagementv3GetVulnerabilitiesRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Get vulnerabilities Description: Returns a list of vulnerabilities.
+     * @param param the request object
+     */
+    public vulnerabilityManagementServiceGetVulnerabilities(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVulnerabilitiesRequest, options?: Configuration): Promise<Vulmanagementv3GetVulnerabilitiesResponse> {
+        return this.api.vulnerabilityManagementServiceGetVulnerabilities(param.vulmanagementv3GetVulnerabilitiesRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Get vulnerabilities stats Description: Get various vulnerabilities stats.
+     * @param param the request object
+     */
+    public vulnerabilityManagementServiceGetVulnerabilitiesStatsWithHttpInfo(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVulnerabilitiesStatsRequest = {}, options?: Configuration): Promise<HttpInfo<Vulmanagementv3VulnerabilitiesStatsDataResponse>> {
+        return this.api.vulnerabilityManagementServiceGetVulnerabilitiesStatsWithHttpInfo( options).toPromise();
+    }
+
+    /**
+     * Summary: Get vulnerabilities stats Description: Get various vulnerabilities stats.
+     * @param param the request object
+     */
+    public vulnerabilityManagementServiceGetVulnerabilitiesStats(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVulnerabilitiesStatsRequest = {}, options?: Configuration): Promise<Vulmanagementv3VulnerabilitiesStatsDataResponse> {
+        return this.api.vulnerabilityManagementServiceGetVulnerabilitiesStats( options).toPromise();
+    }
+
+    /**
+     * Summary: Get vulnerability Description: Returns a vulnerability based on vulnerability.
+     * @param param the request object
+     */
+    public vulnerabilityManagementServiceGetVulnerabilityWithHttpInfo(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVulnerabilityRequest, options?: Configuration): Promise<HttpInfo<Vulmanagementv3GetVulnerabilityResponse>> {
+        return this.api.vulnerabilityManagementServiceGetVulnerabilityWithHttpInfo(param.vulnerabilityId,  options).toPromise();
+    }
+
+    /**
+     * Summary: Get vulnerability Description: Returns a vulnerability based on vulnerability.
+     * @param param the request object
+     */
+    public vulnerabilityManagementServiceGetVulnerability(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVulnerabilityRequest, options?: Configuration): Promise<Vulmanagementv3GetVulnerabilityResponse> {
+        return this.api.vulnerabilityManagementServiceGetVulnerability(param.vulnerabilityId,  options).toPromise();
+    }
+
+    /**
+     * Updates comments, assignee, and status for vulnerabilities
+     * @param param the request object
+     */
+    public vulnerabilityManagementServiceUpdateVulnerabilitiesWithHttpInfo(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceUpdateVulnerabilitiesRequest, options?: Configuration): Promise<HttpInfo<Vulmanagementv3UpdateVulnerabilitiesResponse>> {
+        return this.api.vulnerabilityManagementServiceUpdateVulnerabilitiesWithHttpInfo(param.vulmanagementv3UpdateVulnerabilitiesRequest,  options).toPromise();
+    }
+
+    /**
+     * Updates comments, assignee, and status for vulnerabilities
+     * @param param the request object
+     */
+    public vulnerabilityManagementServiceUpdateVulnerabilities(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceUpdateVulnerabilitiesRequest, options?: Configuration): Promise<Vulmanagementv3UpdateVulnerabilitiesResponse> {
+        return this.api.vulnerabilityManagementServiceUpdateVulnerabilities(param.vulmanagementv3UpdateVulnerabilitiesRequest,  options).toPromise();
+    }
+
+    /**
+     * Summary: Vulnerability ingest manual trigger Description: Manual trigger for Scheduled Vulnerability Ingestion.
+     * @param param the request object
+     */
+    public vulnerabilityManagementServiceVulnerabilityIngestionManualTriggerWithHttpInfo(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceVulnerabilityIngestionManualTriggerRequest, options?: Configuration): Promise<HttpInfo<Vulmanagementv3VulnerabilityIngestionResponse>> {
+        return this.api.vulnerabilityManagementServiceVulnerabilityIngestionManualTriggerWithHttpInfo(param.body,  options).toPromise();
+    }
+
+    /**
+     * Summary: Vulnerability ingest manual trigger Description: Manual trigger for Scheduled Vulnerability Ingestion.
+     * @param param the request object
+     */
+    public vulnerabilityManagementServiceVulnerabilityIngestionManualTrigger(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceVulnerabilityIngestionManualTriggerRequest, options?: Configuration): Promise<Vulmanagementv3VulnerabilityIngestionResponse> {
+        return this.api.vulnerabilityManagementServiceVulnerabilityIngestionManualTrigger(param.body,  options).toPromise();
     }
 
 }

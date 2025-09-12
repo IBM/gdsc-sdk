@@ -39,7 +39,7 @@ export class DataStoresApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataStores/{dataStoreId}'
+        const localVarPath = '/api/v2/dspm/dataStores/{dataStoreId}'
             .replace('{' + 'dataStoreId' + '}', encodeURIComponent(String(dataStoreId)));
 
         // Make Request Context
@@ -72,7 +72,7 @@ export class DataStoresApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataStores/summary';
+        const localVarPath = '/api/v2/dspm/dataStores/summary';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -111,7 +111,7 @@ export class DataStoresApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataStores/labels';
+        const localVarPath = '/api/v2/dspm/dataStores/labels';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -159,7 +159,7 @@ export class DataStoresApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataStores';
+        const localVarPath = '/api/v2/dspm/dataStores';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -218,7 +218,7 @@ export class DataStoresApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataStores/cloudTags/keys';
+        const localVarPath = '/api/v2/dspm/dataStores/cloudTags/keys';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -274,7 +274,7 @@ export class DataStoresApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataStores/cloudTags/values';
+        const localVarPath = '/api/v2/dspm/dataStores/cloudTags/values';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -326,7 +326,7 @@ export class DataStoresApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataStores/filters/name';
+        const localVarPath = '/api/v2/dspm/dataStores/filters/name';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -368,7 +368,7 @@ export class DataStoresApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataStores/rescan';
+        const localVarPath = '/api/v2/dspm/dataStores/rescan';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
@@ -423,7 +423,7 @@ export class DataStoresApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataStores/{dataStoreId}/labels'
+        const localVarPath = '/api/v2/dspm/dataStores/{dataStoreId}/labels'
             .replace('{' + 'dataStoreId' + '}', encodeURIComponent(String(dataStoreId)));
 
         // Make Request Context
@@ -472,7 +472,7 @@ export class DataStoresApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataStores/custodian';
+        const localVarPath = '/api/v2/dspm/dataStores/custodian';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);

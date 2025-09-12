@@ -54,7 +54,7 @@ import com.ibm.security.JSON;
 /**
  * Return object for creating or updating a policy.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
 public class Policybuilderv3CreateUpdatePolicyResponse {
   public static final String SERIALIZED_NAME_ACTIVATION_STATUS = "activation_status";
   @SerializedName(SERIALIZED_NAME_ACTIVATION_STATUS)
@@ -62,7 +62,7 @@ public class Policybuilderv3CreateUpdatePolicyResponse {
 
   public static final String SERIALIZED_NAME_EDGE_ACTIVATION_INFO = "edge_activation_info";
   @SerializedName(SERIALIZED_NAME_EDGE_ACTIVATION_INFO)
-  private Policybuilderv3EdgeActivationObject edgeActivationInfo;
+  private List<Policybuilderv3EdgeActivationObject> edgeActivationInfo = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_INSTALLED_FLAG = "installed_flag";
   @SerializedName(SERIALIZED_NAME_INSTALLED_FLAG)
@@ -106,8 +106,16 @@ public class Policybuilderv3CreateUpdatePolicyResponse {
   }
 
 
-  public Policybuilderv3CreateUpdatePolicyResponse edgeActivationInfo(Policybuilderv3EdgeActivationObject edgeActivationInfo) {
+  public Policybuilderv3CreateUpdatePolicyResponse edgeActivationInfo(List<Policybuilderv3EdgeActivationObject> edgeActivationInfo) {
     this.edgeActivationInfo = edgeActivationInfo;
+    return this;
+  }
+
+  public Policybuilderv3CreateUpdatePolicyResponse addEdgeActivationInfoItem(Policybuilderv3EdgeActivationObject edgeActivationInfoItem) {
+    if (this.edgeActivationInfo == null) {
+      this.edgeActivationInfo = new ArrayList<>();
+    }
+    this.edgeActivationInfo.add(edgeActivationInfoItem);
     return this;
   }
 
@@ -116,11 +124,11 @@ public class Policybuilderv3CreateUpdatePolicyResponse {
    * @return edgeActivationInfo
   **/
   @javax.annotation.Nullable
-  public Policybuilderv3EdgeActivationObject getEdgeActivationInfo() {
+  public List<Policybuilderv3EdgeActivationObject> getEdgeActivationInfo() {
     return edgeActivationInfo;
   }
 
-  public void setEdgeActivationInfo(Policybuilderv3EdgeActivationObject edgeActivationInfo) {
+  public void setEdgeActivationInfo(List<Policybuilderv3EdgeActivationObject> edgeActivationInfo) {
     this.edgeActivationInfo = edgeActivationInfo;
   }
 
@@ -318,9 +326,19 @@ public class Policybuilderv3CreateUpdatePolicyResponse {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // validate the optional field `edge_activation_info`
       if (jsonObj.get("edge_activation_info") != null && !jsonObj.get("edge_activation_info").isJsonNull()) {
-        Policybuilderv3EdgeActivationObject.validateJsonElement(jsonObj.get("edge_activation_info"));
+        JsonArray jsonArrayedgeActivationInfo = jsonObj.getAsJsonArray("edge_activation_info");
+        if (jsonArrayedgeActivationInfo != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("edge_activation_info").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `edge_activation_info` to be an array in the JSON string but got `%s`", jsonObj.get("edge_activation_info").toString()));
+          }
+
+          // validate the optional field `edge_activation_info` (array)
+          for (int i = 0; i < jsonArrayedgeActivationInfo.size(); i++) {
+            Policybuilderv3EdgeActivationObject.validateJsonElement(jsonArrayedgeActivationInfo.get(i));
+          };
+        }
       }
       if ((jsonObj.get("policy_id") != null && !jsonObj.get("policy_id").isJsonNull()) && !jsonObj.get("policy_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `policy_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_id").toString()));

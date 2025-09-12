@@ -291,7 +291,7 @@ class DataResourcesApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/dataResources/{dataResourceId}',
+            resource_path='/api/v2/dspm/dataResources/{dataResourceId}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -571,7 +571,7 @@ class DataResourcesApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/dataResources/summary',
+            resource_path='/api/v2/dspm/dataResources/summary',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -902,7 +902,7 @@ class DataResourcesApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/dataResources',
+            resource_path='/api/v2/dspm/dataResources',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1182,7 +1182,7 @@ class DataResourcesApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/dataResources/names',
+            resource_path='/api/v2/dspm/dataResources/names',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1460,7 +1460,7 @@ class DataResourcesApi:
 
         return self.api_client.param_serialize(
             method='DELETE',
-            resource_path='/api/v1/dspm/dataResources/{dataResourceId}/removeResource',
+            resource_path='/api/v2/dspm/dataResources/{dataResourceId}/removeResource',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1746,7 +1746,7 @@ class DataResourcesApi:
 
         return self.api_client.param_serialize(
             method='PUT',
-            resource_path='/api/v1/dspm/dataResources/{dataResourceId}/reviewed',
+            resource_path='/api/v2/dspm/dataResources/{dataResourceId}/reviewed',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,

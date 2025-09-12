@@ -19,10 +19,13 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.ibm.security.guardium.SensitivitySummary;
 import com.ibm.security.guardium.Vendor;
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -51,7 +54,7 @@ import com.ibm.security.JSON;
 /**
  * LinkedVendor
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
 public class LinkedVendor {
   public static final String SERIALIZED_NAME_VENDOR = "vendor";
   @SerializedName(SERIALIZED_NAME_VENDOR)
@@ -64,6 +67,10 @@ public class LinkedVendor {
   public static final String SERIALIZED_NAME_IS_SENSITIVE = "isSensitive";
   @SerializedName(SERIALIZED_NAME_IS_SENSITIVE)
   private Boolean isSensitive;
+
+  public static final String SERIALIZED_NAME_SENSITIVITY_SUMMARY = "sensitivitySummary";
+  @SerializedName(SERIALIZED_NAME_SENSITIVITY_SUMMARY)
+  private List<SensitivitySummary> sensitivitySummary = new ArrayList<>();
 
   public LinkedVendor() {
   }
@@ -125,6 +132,33 @@ public class LinkedVendor {
   }
 
 
+  public LinkedVendor sensitivitySummary(List<SensitivitySummary> sensitivitySummary) {
+    this.sensitivitySummary = sensitivitySummary;
+    return this;
+  }
+
+  public LinkedVendor addSensitivitySummaryItem(SensitivitySummary sensitivitySummaryItem) {
+    if (this.sensitivitySummary == null) {
+      this.sensitivitySummary = new ArrayList<>();
+    }
+    this.sensitivitySummary.add(sensitivitySummaryItem);
+    return this;
+  }
+
+   /**
+   * Get sensitivitySummary
+   * @return sensitivitySummary
+  **/
+  @javax.annotation.Nullable
+  public List<SensitivitySummary> getSensitivitySummary() {
+    return sensitivitySummary;
+  }
+
+  public void setSensitivitySummary(List<SensitivitySummary> sensitivitySummary) {
+    this.sensitivitySummary = sensitivitySummary;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -137,12 +171,13 @@ public class LinkedVendor {
     LinkedVendor linkedVendor = (LinkedVendor) o;
     return Objects.equals(this.vendor, linkedVendor.vendor) &&
         Objects.equals(this.totalAccounts, linkedVendor.totalAccounts) &&
-        Objects.equals(this.isSensitive, linkedVendor.isSensitive);
+        Objects.equals(this.isSensitive, linkedVendor.isSensitive) &&
+        Objects.equals(this.sensitivitySummary, linkedVendor.sensitivitySummary);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(vendor, totalAccounts, isSensitive);
+    return Objects.hash(vendor, totalAccounts, isSensitive, sensitivitySummary);
   }
 
   @Override
@@ -152,6 +187,7 @@ public class LinkedVendor {
     sb.append("    vendor: ").append(toIndentedString(vendor)).append("\n");
     sb.append("    totalAccounts: ").append(toIndentedString(totalAccounts)).append("\n");
     sb.append("    isSensitive: ").append(toIndentedString(isSensitive)).append("\n");
+    sb.append("    sensitivitySummary: ").append(toIndentedString(sensitivitySummary)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -177,6 +213,7 @@ public class LinkedVendor {
     openapiFields.add("vendor");
     openapiFields.add("totalAccounts");
     openapiFields.add("isSensitive");
+    openapiFields.add("sensitivitySummary");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -215,6 +252,20 @@ public class LinkedVendor {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `vendor`
       Vendor.validateJsonElement(jsonObj.get("vendor"));
+      if (jsonObj.get("sensitivitySummary") != null && !jsonObj.get("sensitivitySummary").isJsonNull()) {
+        JsonArray jsonArraysensitivitySummary = jsonObj.getAsJsonArray("sensitivitySummary");
+        if (jsonArraysensitivitySummary != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("sensitivitySummary").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `sensitivitySummary` to be an array in the JSON string but got `%s`", jsonObj.get("sensitivitySummary").toString()));
+          }
+
+          // validate the optional field `sensitivitySummary` (array)
+          for (int i = 0; i < jsonArraysensitivitySummary.size(); i++) {
+            SensitivitySummary.validateJsonElement(jsonArraysensitivitySummary.get(i));
+          };
+        }
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

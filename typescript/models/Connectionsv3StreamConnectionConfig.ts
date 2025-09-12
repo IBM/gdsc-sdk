@@ -14,7 +14,7 @@ import { Connectionsv3StreamConnection } from '../models/Connectionsv3StreamConn
 import { HttpFile } from '../http/http';
 
 /**
-* Stream connection config with connecion id.
+* Stream connection config with connection id.
 */
 export class Connectionsv3StreamConnectionConfig {
     /**

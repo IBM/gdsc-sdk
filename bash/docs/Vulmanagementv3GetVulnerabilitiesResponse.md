@@ -1,0 +1,11 @@
+# vulmanagementv3GetVulnerabilitiesResponse
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**totalUnderscorecount** | **string** |  | [optional] [default to null]
+**vulnerabilities** | [**array[Vulmanagementv3Vulnerability]**](Vulmanagementv3Vulnerability.md) |  | [optional] [default to null]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

@@ -38,7 +38,7 @@ export class DataResourcesApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataResources/{dataResourceId}'
+        const localVarPath = '/api/v2/dspm/dataResources/{dataResourceId}'
             .replace('{' + 'dataResourceId' + '}', encodeURIComponent(String(dataResourceId)));
 
         // Make Request Context
@@ -73,7 +73,7 @@ export class DataResourcesApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataResources/summary';
+        const localVarPath = '/api/v2/dspm/dataResources/summary';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -123,7 +123,7 @@ export class DataResourcesApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataResources';
+        const localVarPath = '/api/v2/dspm/dataResources';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -187,7 +187,7 @@ export class DataResourcesApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataResources/names';
+        const localVarPath = '/api/v2/dspm/dataResources/names';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -241,7 +241,7 @@ export class DataResourcesApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataResources/{dataResourceId}/removeResource'
+        const localVarPath = '/api/v2/dspm/dataResources/{dataResourceId}/removeResource'
             .replace('{' + 'dataResourceId' + '}', encodeURIComponent(String(dataResourceId)));
 
         // Make Request Context
@@ -291,7 +291,7 @@ export class DataResourcesApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataResources/{dataResourceId}/reviewed'
+        const localVarPath = '/api/v2/dspm/dataResources/{dataResourceId}/reviewed'
             .replace('{' + 'dataResourceId' + '}', encodeURIComponent(String(dataResourceId)));
 
         // Make Request Context

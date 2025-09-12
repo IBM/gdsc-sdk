@@ -10,12 +10,12 @@
  * Do not edit the class manually.
  */
 
+import { Notificationsv3Origin } from '../models/Notificationsv3Origin';
 import { Schedulerv3Recipient } from '../models/Schedulerv3Recipient';
-import { Templatesv3Origin } from '../models/Templatesv3Origin';
 import { HttpFile } from '../http/http';
 
 export class Notificationsv3PostNotificationRecordRequest {
-    'origin'?: Templatesv3Origin;
+    'origin'?: Notificationsv3Origin;
     'originData'?: string;
     'targetReceivers'?: Array<Schedulerv3Recipient>;
     'templateData'?: { [key: string]: string; };
@@ -30,7 +30,7 @@ export class Notificationsv3PostNotificationRecordRequest {
         {
             "name": "origin",
             "baseName": "origin",
-            "type": "Templatesv3Origin",
+            "type": "Notificationsv3Origin",
             "format": ""
         },
         {

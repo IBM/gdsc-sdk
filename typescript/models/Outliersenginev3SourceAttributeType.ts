@@ -19,5 +19,9 @@ export enum Outliersenginev3SourceAttributeType {
     SourceProgram = 'SOURCE_PROGRAM',
     DbUser = 'DB_USER',
     OsUser = 'OS_USER',
-    ClientHostname = 'CLIENT_HOSTNAME'
+    ClientHostname = 'CLIENT_HOSTNAME',
+    SensitiveObject = 'SENSITIVE_OBJECT',
+    SensitiveObjectVerb = 'SENSITIVE_OBJECT_VERB',
+    Object = 'OBJECT',
+    ObjectVerb = 'OBJECT_VERB'
 }

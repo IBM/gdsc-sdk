@@ -19,11 +19,11 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
-from ibm_gdsc_sdk_saas.models.classification_status import ClassificationStatus
 from ibm_gdsc_sdk_saas.models.cloud_account_details import CloudAccountDetails
 from ibm_gdsc_sdk_saas.models.data_store_encryption_status import DataStoreEncryptionStatus
 from ibm_gdsc_sdk_saas.models.data_store_source import DataStoreSource
 from ibm_gdsc_sdk_saas.models.data_store_stats import DataStoreStats
+from ibm_gdsc_sdk_saas.models.store_classification_status import StoreClassificationStatus
 from ibm_gdsc_sdk_saas.models.string_key_value import StringKeyValue
 from typing import Optional, Set
 from typing_extensions import Self
@@ -38,7 +38,7 @@ class DataStore(BaseModel):
     cloud_account_details: CloudAccountDetails = Field(alias="cloudAccountDetails")
     cloud_region: Optional[StrictStr] = Field(default=None, alias="cloudRegion")
     country: Optional[StrictStr] = None
-    classification_status: Optional[ClassificationStatus] = Field(default=None, alias="classificationStatus")
+    classification_status: Optional[StoreClassificationStatus] = Field(default=None, alias="classificationStatus")
     encryption_status: Optional[DataStoreEncryptionStatus] = Field(default=None, alias="encryptionStatus")
     custom_data: Optional[List[StringKeyValue]] = Field(default=None, alias="customData")
     label: Optional[StrictStr] = None

@@ -49,7 +49,7 @@ import com.ibm.security.JSON;
 /**
  * Collector configuration.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
 public class Guardiumconnectorv3CollectorConfig {
   public static final String SERIALIZED_NAME_DATAMART_START_DATE_COLLECTOR = "datamart_start_date_collector";
   @SerializedName(SERIALIZED_NAME_DATAMART_START_DATE_COLLECTOR)

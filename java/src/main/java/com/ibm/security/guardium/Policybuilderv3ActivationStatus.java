@@ -31,9 +31,17 @@ public enum Policybuilderv3ActivationStatus {
   
   NOT_ACTIVATED("NOT_ACTIVATED"),
   
-  ACTIVATED("ACTIVATED"),
+  ACTIVE("ACTIVE"),
   
-  ACTIVATED_WITH_ISSUES("ACTIVATED_WITH_ISSUES");
+  ISSUES("ISSUES"),
+  
+  INACTIVE("INACTIVE"),
+  
+  IN_PROGRESS("IN_PROGRESS"),
+  
+  FAILURE("FAILURE"),
+  
+  TERMINATED("TERMINATED");
 
   private String value;
 

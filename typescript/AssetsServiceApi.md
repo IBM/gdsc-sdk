@@ -6,7 +6,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**assetsServiceAssetIngestion**](AssetsServiceApi.md#assetsServiceAssetIngestion) | **POST** /api/v3/assets/ingestion | AssetIngestion - Asset Ingestion Api to ingest assets from different applications including asset extensibility assets.
 [**assetsServiceAssetIngestionManualTrigger**](AssetsServiceApi.md#assetsServiceAssetIngestionManualTrigger) | **POST** /api/v3/assets/ingestion/trigger | AssetIngestionManualTrigger - Manual trigger for Scheduled Asset Ingestion of databases.
+[**assetsServiceCancelCSVImport**](AssetsServiceApi.md#assetsServiceCancelCSVImport) | **DELETE** /api/v3/assets/csv/cancel/{csv_id} | CancelCSVImport - Cancel the import of CSV and update the status in import log table
 [**assetsServiceClonePolicy**](AssetsServiceApi.md#assetsServiceClonePolicy) | **POST** /api/v3/assets/policies/{policy_id}/clone | ClonePolicy - Clone a policy.
+[**assetsServiceCompareCSVToExistingAssets**](AssetsServiceApi.md#assetsServiceCompareCSVToExistingAssets) | **GET** /api/v3/assets/csv/compare/{csv_id} | CompareCSVToExistingAssets - Compare CSV with existing assets and return list of assets(existing/to be imported/both) on demand from csv.
 [**assetsServiceCreateUpdatePolicy**](AssetsServiceApi.md#assetsServiceCreateUpdatePolicy) | **POST** /api/v3/assets/policies | CreateUpdatePolicy - Create/update new Policy.
 [**assetsServiceDeleteFilterTemplateForAssets**](AssetsServiceApi.md#assetsServiceDeleteFilterTemplateForAssets) | **DELETE** /api/v3/assets/filters/template/{template_id} | DeleteFilterTemplateForAssets - Deleting a template using TemplateID in manage assets.
 [**assetsServiceDeletePolicies**](AssetsServiceApi.md#assetsServiceDeletePolicies) | **DELETE** /api/v3/assets/policies | DeletePolicies - Delete Policy returns response code and message.
@@ -19,6 +21,7 @@ Method | HTTP request | Description
 [**assetsServiceGetAssetTopology**](AssetsServiceApi.md#assetsServiceGetAssetTopology) | **POST** /api/v3/assets/topology | GetAssetTopology- Get list of topology for a parent asset.
 [**assetsServiceGetFilterTemplateForAssets**](AssetsServiceApi.md#assetsServiceGetFilterTemplateForAssets) | **GET** /api/v3/assets/filters/templates | GetFilterTemplateForAssets - Get list of filters query templates for manage assets.
 [**assetsServiceGetFiltersForAssets**](AssetsServiceApi.md#assetsServiceGetFiltersForAssets) | **GET** /api/v3/assets/filters | GetFiltersForAssets - Get a list of filters category and sub category with all data.
+[**assetsServiceImportCSV**](AssetsServiceApi.md#assetsServiceImportCSV) | **POST** /api/v3/assets/csv/import/{csv_id} | ImportCSV - Start the async asset import from CSV by starting the db procedure and send notification at the end.
 [**assetsServiceListPolicy**](AssetsServiceApi.md#assetsServiceListPolicy) | **GET** /api/v3/assets/policies | ListPolicy - List all policies.
 [**assetsServiceListRule**](AssetsServiceApi.md#assetsServiceListRule) | **GET** /api/v3/assets/policies/{policy_id}/rules | ListRule - List all rules for a policy.
 [**assetsServiceListTagDomains**](AssetsServiceApi.md#assetsServiceListTagDomains) | **GET** /api/v3/assets/tags/categories | ListTagDomains - Get Tag categories by request parameters .
@@ -536,6 +539,60 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **assetsServiceCancelCSVImport**
+> any assetsServiceCancelCSVImport()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .AssetsServiceApi(configuration);
+
+let body:.AssetsServiceApiAssetsServiceCancelCSVImportRequest = {
+  // string | unique id of the csv
+  csvId: "csv_id_example",
+};
+
+apiInstance.assetsServiceCancelCSVImport(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **csvId** | [**string**] | unique id of the csv | defaults to undefined
+
+
+### Return type
+
+**any**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **assetsServiceClonePolicy**
 > any assetsServiceClonePolicy(assetsv3ClonePolicyRequest)
 
@@ -610,6 +667,72 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **assetsServiceCompareCSVToExistingAssets**
+> Assetsv3CompareCSVResponse assetsServiceCompareCSVToExistingAssets()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .AssetsServiceApi(configuration);
+
+let body:.AssetsServiceApiAssetsServiceCompareCSVToExistingAssetsRequest = {
+  // string | unique id of the csv
+  csvId: "csv_id_example",
+  // string | which rows are required, existing or new or all. (optional)
+  rowsRequired: "rows_required_example",
+  // number | page number. (optional)
+  pageNumber: 1,
+  // number | page size. (optional)
+  pageSize: 1,
+  // 'DATABASE' | Asset CSV template type.   - DATABASE: Template for database (optional)
+  templateType: "DATABASE",
+};
+
+apiInstance.assetsServiceCompareCSVToExistingAssets(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **csvId** | [**string**] | unique id of the csv | defaults to undefined
+ **rowsRequired** | [**string**] | which rows are required, existing or new or all. | (optional) defaults to undefined
+ **pageNumber** | [**number**] | page number. | (optional) defaults to undefined
+ **pageSize** | [**number**] | page size. | (optional) defaults to undefined
+ **templateType** | [**&#39;DATABASE&#39;**]**Array<&#39;DATABASE&#39;>** | Asset CSV template type.   - DATABASE: Template for database | (optional) defaults to 'DATABASE'
+
+
+### Return type
+
+**Assetsv3CompareCSVResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 
@@ -718,7 +841,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **assetsServiceDeleteFilterTemplateForAssets**
-> any assetsServiceDeleteFilterTemplateForAssets(assetsv3AssetFilterTemplateRequest)
+> any assetsServiceDeleteFilterTemplateForAssets()
 
 
 ### Example
@@ -734,10 +857,6 @@ const apiInstance = new .AssetsServiceApi(configuration);
 let body:.AssetsServiceApiAssetsServiceDeleteFilterTemplateForAssetsRequest = {
   // string | template id to be deleted
   templateId: "template_id_example",
-  // Assetsv3AssetFilterTemplateRequest
-  assetsv3AssetFilterTemplateRequest: {
-    templateId: "templateId_example",
-  },
 };
 
 apiInstance.assetsServiceDeleteFilterTemplateForAssets(body).then((data:any) => {
@@ -750,7 +869,6 @@ apiInstance.assetsServiceDeleteFilterTemplateForAssets(body).then((data:any) => 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **assetsv3AssetFilterTemplateRequest** | **Assetsv3AssetFilterTemplateRequest**|  |
  **templateId** | [**string**] | template id to be deleted | defaults to undefined
 
 
@@ -764,7 +882,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 
@@ -1264,7 +1382,7 @@ let body:.AssetsServiceApiAssetsServiceGetAssetOverviewRequest = {
   host: "host_example",
   // string | Database Name. (optional)
   database: "database_example",
-  // string | asset ntity type. (optional)
+  // string | asset entity type. (optional)
   assetEntityType: "asset_entity_type_example",
 };
 
@@ -1285,7 +1403,7 @@ Name | Type | Description  | Notes
  **ip** | [**string**] | Asset IP. | (optional) defaults to undefined
  **host** | [**string**] | Asset Host. | (optional) defaults to undefined
  **database** | [**string**] | Database Name. | (optional) defaults to undefined
- **assetEntityType** | [**string**] | asset ntity type. | (optional) defaults to undefined
+ **assetEntityType** | [**string**] | asset entity type. | (optional) defaults to undefined
 
 
 ### Return type
@@ -1458,6 +1576,67 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **assetsServiceImportCSV**
+> Assetsv3ImportCSVResponse assetsServiceImportCSV(assetsv3ImportCSVRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .AssetsServiceApi(configuration);
+
+let body:.AssetsServiceApiAssetsServiceImportCSVRequest = {
+  // string | unique id of the csv
+  csvId: "csv_id_example",
+  // Assetsv3ImportCSVRequest
+  assetsv3ImportCSVRequest: {
+    csvId: "csvId_example",
+    importAction: "importAction_example",
+    templateType: "DATABASE",
+  },
+};
+
+apiInstance.assetsServiceImportCSV(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **assetsv3ImportCSVRequest** | **Assetsv3ImportCSVRequest**|  |
+ **csvId** | [**string**] | unique id of the csv | defaults to undefined
+
+
+### Return type
+
+**Assetsv3ImportCSVResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 

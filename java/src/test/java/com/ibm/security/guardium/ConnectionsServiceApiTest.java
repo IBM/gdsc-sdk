@@ -52,7 +52,9 @@ import com.ibm.security.guardium.Connectionsv3UpdatePluginRequest;
 import com.ibm.security.guardium.Connectionsv3UpdatePluginResponse;
 import com.ibm.security.guardium.Connectionsv3UpdateSettingsRequest;
 import com.ibm.security.guardium.Connectionsv3ValidateAwsConnectionRequest;
+import com.ibm.security.guardium.Connectionsv3ValidateAzureConnectionRequest;
 import com.ibm.security.guardium.Connectionsv3ValidateConnectionResponse;
+import com.ibm.security.guardium.Connectionsv3ValidateGcpConnectionRequest;
 import com.ibm.security.guardium.RuntimeError;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -401,6 +403,30 @@ public class ConnectionsServiceApiTest {
     public void connectionsServiceValidateAwsConnectionTest() throws ApiException {
         Connectionsv3ValidateAwsConnectionRequest connectionsv3ValidateAwsConnectionRequest = null;
         Connectionsv3ValidateConnectionResponse response = api.connectionsServiceValidateAwsConnection(connectionsv3ValidateAwsConnectionRequest);
+        // TODO: test validations
+    }
+
+    /**
+     * Summary: Validate an Azure connection. Description: Validate an Azure connection.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void connectionsServiceValidateAzureConnectionTest() throws ApiException {
+        Connectionsv3ValidateAzureConnectionRequest connectionsv3ValidateAzureConnectionRequest = null;
+        Connectionsv3ValidateConnectionResponse response = api.connectionsServiceValidateAzureConnection(connectionsv3ValidateAzureConnectionRequest);
+        // TODO: test validations
+    }
+
+    /**
+     * Summary: Validate a GCP connection. Description: Validate a GCP connection.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void connectionsServiceValidateGcpConnectionTest() throws ApiException {
+        Connectionsv3ValidateGcpConnectionRequest connectionsv3ValidateGcpConnectionRequest = null;
+        Connectionsv3ValidateConnectionResponse response = api.connectionsServiceValidateGcpConnection(connectionsv3ValidateGcpConnectionRequest);
         // TODO: test validations
     }
 

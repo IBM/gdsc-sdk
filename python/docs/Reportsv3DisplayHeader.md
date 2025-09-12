@@ -6,6 +6,7 @@ DisplayHeader that have the header name and the translated value.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**aggregation_type** | [**Reportsv3AggregationType**](Reportsv3AggregationType.md) |  | [optional] 
 **field_name** | [**Reportsv3FieldName**](Reportsv3FieldName.md) |  | [optional] 
 **header_description** | [**Reportsv3HeaderDescription**](Reportsv3HeaderDescription.md) |  | [optional] 
 **header_id** | **str** | The header ID. | [optional] 

@@ -53,7 +53,8 @@ class TestDataResource(unittest.TestCase):
                             tag = 'BUSINESS_EMAIL_ADDRESS', 
                             count = 230, 
                             category = 'Personal', )
-                        ], )
+                        ], ),
+                path = ''
             )
         else:
             return DataResource(

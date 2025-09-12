@@ -50,7 +50,7 @@ import com.ibm.security.JSON;
 /**
  * StopExportReportJobResponse is the return type of StopExportReportJob API.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
 public class Reportsrunnerv3StopExportReportJobResponse {
   public static final String SERIALIZED_NAME_EXPORT_FILE_NAME = "export_file_name";
   @SerializedName(SERIALIZED_NAME_EXPORT_FILE_NAME)

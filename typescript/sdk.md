@@ -6,7 +6,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**assetsServiceAssetIngestion**](AssetsServiceApi.md#assetsServiceAssetIngestion) | **POST** /api/v3/assets/ingestion | AssetIngestion - Asset Ingestion Api to ingest assets from different applications including asset extensibility assets.
 [**assetsServiceAssetIngestionManualTrigger**](AssetsServiceApi.md#assetsServiceAssetIngestionManualTrigger) | **POST** /api/v3/assets/ingestion/trigger | AssetIngestionManualTrigger - Manual trigger for Scheduled Asset Ingestion of databases.
+[**assetsServiceCancelCSVImport**](AssetsServiceApi.md#assetsServiceCancelCSVImport) | **DELETE** /api/v3/assets/csv/cancel/{csv_id} | CancelCSVImport - Cancel the import of CSV and update the status in import log table
 [**assetsServiceClonePolicy**](AssetsServiceApi.md#assetsServiceClonePolicy) | **POST** /api/v3/assets/policies/{policy_id}/clone | ClonePolicy - Clone a policy.
+[**assetsServiceCompareCSVToExistingAssets**](AssetsServiceApi.md#assetsServiceCompareCSVToExistingAssets) | **GET** /api/v3/assets/csv/compare/{csv_id} | CompareCSVToExistingAssets - Compare CSV with existing assets and return list of assets(existing/to be imported/both) on demand from csv.
 [**assetsServiceCreateUpdatePolicy**](AssetsServiceApi.md#assetsServiceCreateUpdatePolicy) | **POST** /api/v3/assets/policies | CreateUpdatePolicy - Create/update new Policy.
 [**assetsServiceDeleteFilterTemplateForAssets**](AssetsServiceApi.md#assetsServiceDeleteFilterTemplateForAssets) | **DELETE** /api/v3/assets/filters/template/{template_id} | DeleteFilterTemplateForAssets - Deleting a template using TemplateID in manage assets.
 [**assetsServiceDeletePolicies**](AssetsServiceApi.md#assetsServiceDeletePolicies) | **DELETE** /api/v3/assets/policies | DeletePolicies - Delete Policy returns response code and message.
@@ -19,6 +21,7 @@ Method | HTTP request | Description
 [**assetsServiceGetAssetTopology**](AssetsServiceApi.md#assetsServiceGetAssetTopology) | **POST** /api/v3/assets/topology | GetAssetTopology- Get list of topology for a parent asset.
 [**assetsServiceGetFilterTemplateForAssets**](AssetsServiceApi.md#assetsServiceGetFilterTemplateForAssets) | **GET** /api/v3/assets/filters/templates | GetFilterTemplateForAssets - Get list of filters query templates for manage assets.
 [**assetsServiceGetFiltersForAssets**](AssetsServiceApi.md#assetsServiceGetFiltersForAssets) | **GET** /api/v3/assets/filters | GetFiltersForAssets - Get a list of filters category and sub category with all data.
+[**assetsServiceImportCSV**](AssetsServiceApi.md#assetsServiceImportCSV) | **POST** /api/v3/assets/csv/import/{csv_id} | ImportCSV - Start the async asset import from CSV by starting the db procedure and send notification at the end.
 [**assetsServiceListPolicy**](AssetsServiceApi.md#assetsServiceListPolicy) | **GET** /api/v3/assets/policies | ListPolicy - List all policies.
 [**assetsServiceListRule**](AssetsServiceApi.md#assetsServiceListRule) | **GET** /api/v3/assets/policies/{policy_id}/rules | ListRule - List all rules for a policy.
 [**assetsServiceListTagDomains**](AssetsServiceApi.md#assetsServiceListTagDomains) | **GET** /api/v3/assets/tags/categories | ListTagDomains - Get Tag categories by request parameters .
@@ -536,6 +539,60 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **assetsServiceCancelCSVImport**
+> any assetsServiceCancelCSVImport()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .AssetsServiceApi(configuration);
+
+let body:.AssetsServiceApiAssetsServiceCancelCSVImportRequest = {
+  // string | unique id of the csv
+  csvId: "csv_id_example",
+};
+
+apiInstance.assetsServiceCancelCSVImport(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **csvId** | [**string**] | unique id of the csv | defaults to undefined
+
+
+### Return type
+
+**any**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **assetsServiceClonePolicy**
 > any assetsServiceClonePolicy(assetsv3ClonePolicyRequest)
 
@@ -610,6 +667,72 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **assetsServiceCompareCSVToExistingAssets**
+> Assetsv3CompareCSVResponse assetsServiceCompareCSVToExistingAssets()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .AssetsServiceApi(configuration);
+
+let body:.AssetsServiceApiAssetsServiceCompareCSVToExistingAssetsRequest = {
+  // string | unique id of the csv
+  csvId: "csv_id_example",
+  // string | which rows are required, existing or new or all. (optional)
+  rowsRequired: "rows_required_example",
+  // number | page number. (optional)
+  pageNumber: 1,
+  // number | page size. (optional)
+  pageSize: 1,
+  // 'DATABASE' | Asset CSV template type.   - DATABASE: Template for database (optional)
+  templateType: "DATABASE",
+};
+
+apiInstance.assetsServiceCompareCSVToExistingAssets(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **csvId** | [**string**] | unique id of the csv | defaults to undefined
+ **rowsRequired** | [**string**] | which rows are required, existing or new or all. | (optional) defaults to undefined
+ **pageNumber** | [**number**] | page number. | (optional) defaults to undefined
+ **pageSize** | [**number**] | page size. | (optional) defaults to undefined
+ **templateType** | [**&#39;DATABASE&#39;**]**Array<&#39;DATABASE&#39;>** | Asset CSV template type.   - DATABASE: Template for database | (optional) defaults to 'DATABASE'
+
+
+### Return type
+
+**Assetsv3CompareCSVResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 
@@ -718,7 +841,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **assetsServiceDeleteFilterTemplateForAssets**
-> any assetsServiceDeleteFilterTemplateForAssets(assetsv3AssetFilterTemplateRequest)
+> any assetsServiceDeleteFilterTemplateForAssets()
 
 
 ### Example
@@ -734,10 +857,6 @@ const apiInstance = new .AssetsServiceApi(configuration);
 let body:.AssetsServiceApiAssetsServiceDeleteFilterTemplateForAssetsRequest = {
   // string | template id to be deleted
   templateId: "template_id_example",
-  // Assetsv3AssetFilterTemplateRequest
-  assetsv3AssetFilterTemplateRequest: {
-    templateId: "templateId_example",
-  },
 };
 
 apiInstance.assetsServiceDeleteFilterTemplateForAssets(body).then((data:any) => {
@@ -750,7 +869,6 @@ apiInstance.assetsServiceDeleteFilterTemplateForAssets(body).then((data:any) => 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **assetsv3AssetFilterTemplateRequest** | **Assetsv3AssetFilterTemplateRequest**|  |
  **templateId** | [**string**] | template id to be deleted | defaults to undefined
 
 
@@ -764,7 +882,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 
@@ -1264,7 +1382,7 @@ let body:.AssetsServiceApiAssetsServiceGetAssetOverviewRequest = {
   host: "host_example",
   // string | Database Name. (optional)
   database: "database_example",
-  // string | asset ntity type. (optional)
+  // string | asset entity type. (optional)
   assetEntityType: "asset_entity_type_example",
 };
 
@@ -1285,7 +1403,7 @@ Name | Type | Description  | Notes
  **ip** | [**string**] | Asset IP. | (optional) defaults to undefined
  **host** | [**string**] | Asset Host. | (optional) defaults to undefined
  **database** | [**string**] | Database Name. | (optional) defaults to undefined
- **assetEntityType** | [**string**] | asset ntity type. | (optional) defaults to undefined
+ **assetEntityType** | [**string**] | asset entity type. | (optional) defaults to undefined
 
 
 ### Return type
@@ -1458,6 +1576,67 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **assetsServiceImportCSV**
+> Assetsv3ImportCSVResponse assetsServiceImportCSV(assetsv3ImportCSVRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .AssetsServiceApi(configuration);
+
+let body:.AssetsServiceApiAssetsServiceImportCSVRequest = {
+  // string | unique id of the csv
+  csvId: "csv_id_example",
+  // Assetsv3ImportCSVRequest
+  assetsv3ImportCSVRequest: {
+    csvId: "csvId_example",
+    importAction: "importAction_example",
+    templateType: "DATABASE",
+  },
+};
+
+apiInstance.assetsServiceImportCSV(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **assetsv3ImportCSVRequest** | **Assetsv3ImportCSVRequest**|  |
+ **csvId** | [**string**] | unique id of the csv | defaults to undefined
+
+
+### Return type
+
+**Assetsv3ImportCSVResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -2761,27 +2940,30 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addAnalyzedRegion**](CloudAccountsApi.md#addAnalyzedRegion) | **POST** /api/v1/dspm/cloudAccounts/cloudProviders/analyzedRegions | Add a new region for data classification
-[**addCloudAccounts**](CloudAccountsApi.md#addCloudAccounts) | **POST** /api/v1/dspm/cloudAccounts/cloudProviders | Add cloud account connections to DSPM
-[**generateAtlassianConfluenceAuthUrl**](CloudAccountsApi.md#generateAtlassianConfluenceAuthUrl) | **GET** /api/v1/dspm/cloudAccounts/saasApps/atlassian-confluence/generateAuthUrl | Generate a Confluence authentication URL
-[**generateAtlassianJiraAuthUrl**](CloudAccountsApi.md#generateAtlassianJiraAuthUrl) | **GET** /api/v1/dspm/cloudAccounts/saasApps/atlassian-jira/generateAuthUrl | Generate a JIRA authentication URL
-[**generateAzureAuthUrl**](CloudAccountsApi.md#generateAzureAuthUrl) | **GET** /api/v1/dspm/cloudAccounts/azure/generateAuthUrl | Generate azure authorization url
-[**generateOffice365AuthUrl**](CloudAccountsApi.md#generateOffice365AuthUrl) | **GET** /api/v1/dspm/cloudAccounts/saasApps/office365/generateAuthUrl | Generate a Microsoft 365 consent URL
-[**generateSlackAuthUrl**](CloudAccountsApi.md#generateSlackAuthUrl) | **GET** /api/v1/dspm/cloudAccounts/saasApps/slack/generateAuthUrl | Generate a Slack authentication URL
-[**generateSnowflakeAuthUrl**](CloudAccountsApi.md#generateSnowflakeAuthUrl) | **POST** /api/v1/dspm/cloudAccounts/saasApps/snowflake/generateAuthUrl | Validate and Generate a Snowflake OAuth URL
-[**getAnalyzedRegionStatus**](CloudAccountsApi.md#getAnalyzedRegionStatus) | **GET** /api/v1/dspm/cloudAccounts/cloudProviders/analyzedRegions/status | Get the status of analyzer installation for a region
-[**getAzureAdminConsentStatus**](CloudAccountsApi.md#getAzureAdminConsentStatus) | **GET** /api/v1/dspm/cloudAccounts/azure/getAdminConsentStatus | Get Azure admin consent status
-[**getCloudAccountInstallationStatus**](CloudAccountsApi.md#getCloudAccountInstallationStatus) | **GET** /api/v1/dspm/cloudAccounts/{cloudProvider}/{cloudAccountId}/installationStatus | Get the installation status of a cloud account
-[**getRefreshTokenExpiry**](CloudAccountsApi.md#getRefreshTokenExpiry) | **GET** /api/v1/dspm/cloudAccounts/saasApps/snowflake/getRefreshTokenExpiry/{providerId} | Get Snowflake Refresh Token Expiry date
-[**listLinkedAccounts**](CloudAccountsApi.md#listLinkedAccounts) | **GET** /api/v1/dspm/cloudAccounts/linkedAccounts | List cloud accounts connected to DSPM
-[**removeAccounts**](CloudAccountsApi.md#removeAccounts) | **DELETE** /api/v1/dspm/cloudAccounts/removeAccounts | Post cloud account ID connections to be removed
-[**removeAccountsInstructions**](CloudAccountsApi.md#removeAccountsInstructions) | **GET** /api/v1/dspm/cloudAccounts/removeAccountsInstructions | Post cloud account IDs and get instructions to remove the accounts
-[**retrieveServiceAccountId**](CloudAccountsApi.md#retrieveServiceAccountId) | **GET** /api/v1/dspm/cloudAccounts/saasApps/google/retrieveServiceAccountId | Get Google Workspace authentication
-[**snowflakeIntegrationScript**](CloudAccountsApi.md#snowflakeIntegrationScript) | **GET** /api/v1/dspm/cloudAccounts/saasApps/snowflake/snowflakeIntegrationScript | Generate Snowflake Integration Script
-[**submitGoogleWorkspaceAdminEmail**](CloudAccountsApi.md#submitGoogleWorkspaceAdminEmail) | **POST** /api/v1/dspm/cloudAccounts/saasApps/google/submitAdminEmail | Submit email for service account authorization
-[**submitOffice365TenantInfo**](CloudAccountsApi.md#submitOffice365TenantInfo) | **POST** /api/v1/dspm/cloudAccounts/saasApps/office365/submitTenantInfo | Submit Microsoft 365 customer information
-[**submitSlackAuthCode**](CloudAccountsApi.md#submitSlackAuthCode) | **POST** /api/v1/dspm/cloudAccounts/saasApps/slack/submitAuthCode | Submit a Slack authentication code
-[**submitSnowflakeAuthCode**](CloudAccountsApi.md#submitSnowflakeAuthCode) | **POST** /api/v1/dspm/cloudAccounts/saasApps/snowflake/submitAuthCode | Submit Snowflake oAuth code
+[**addAnalyzedRegion**](CloudAccountsApi.md#addAnalyzedRegion) | **POST** /api/v2/dspm/cloudAccounts/cloudProviders/analyzedRegions | Add a new region for data classification
+[**addCloudAccounts**](CloudAccountsApi.md#addCloudAccounts) | **POST** /api/v2/dspm/cloudAccounts/cloudProviders | Add cloud account connections to DSPM
+[**generateAtlassianConfluenceAuthUrl**](CloudAccountsApi.md#generateAtlassianConfluenceAuthUrl) | **GET** /api/v2/dspm/cloudAccounts/saasApps/atlassian-confluence/generateAuthUrl | Generate a Confluence authentication URL
+[**generateAtlassianJiraAuthUrl**](CloudAccountsApi.md#generateAtlassianJiraAuthUrl) | **GET** /api/v2/dspm/cloudAccounts/saasApps/atlassian-jira/generateAuthUrl | Generate a JIRA authentication URL
+[**generateAzureAuthUrl**](CloudAccountsApi.md#generateAzureAuthUrl) | **GET** /api/v2/dspm/cloudAccounts/azure/generateAuthUrl | Generate azure authorization url
+[**generateOffice365AuthUrl**](CloudAccountsApi.md#generateOffice365AuthUrl) | **GET** /api/v2/dspm/cloudAccounts/saasApps/office365/generateAuthUrl | Generate a Microsoft 365 consent URL
+[**generateSalesforceAuthUrl**](CloudAccountsApi.md#generateSalesforceAuthUrl) | **GET** /api/v2/dspm/cloudAccounts/saasApps/salesforce/generateAuthUrl | Generate a Salesforce consent URL
+[**generateSlackAuthUrl**](CloudAccountsApi.md#generateSlackAuthUrl) | **GET** /api/v2/dspm/cloudAccounts/saasApps/slack/generateAuthUrl | Generate a Slack authentication URL
+[**generateSnowflakeAuthUrl**](CloudAccountsApi.md#generateSnowflakeAuthUrl) | **POST** /api/v2/dspm/cloudAccounts/saasApps/snowflake/generateAuthUrl | Validate and Generate a Snowflake OAuth URL
+[**getAnalyzedRegionStatus**](CloudAccountsApi.md#getAnalyzedRegionStatus) | **GET** /api/v2/dspm/cloudAccounts/cloudProviders/analyzedRegions/status | Get the status of analyzer installation for a region
+[**getAzureAdminConsentStatus**](CloudAccountsApi.md#getAzureAdminConsentStatus) | **GET** /api/v2/dspm/cloudAccounts/azure/getAdminConsentStatus | Get Azure admin consent status
+[**getCloudAccountInstallationStatus**](CloudAccountsApi.md#getCloudAccountInstallationStatus) | **GET** /api/v2/dspm/cloudAccounts/{cloudProvider}/{cloudAccountId}/installationStatus | Get the installation status of a cloud account
+[**getDatabaseMetadata**](CloudAccountsApi.md#getDatabaseMetadata) | **POST** /api/v2/dspm/cloudAccounts/saasApps/snowflake/getDatabaseMetadata | Get the metadata details of snowflake database.
+[**getRefreshTokenExpiry**](CloudAccountsApi.md#getRefreshTokenExpiry) | **GET** /api/v2/dspm/cloudAccounts/saasApps/snowflake/getRefreshTokenExpiry/{providerId} | Get Snowflake Refresh Token Expiry date
+[**listLinkedAccounts**](CloudAccountsApi.md#listLinkedAccounts) | **GET** /api/v2/dspm/cloudAccounts/linkedAccounts | List cloud accounts connected to DSPM
+[**removeAccounts**](CloudAccountsApi.md#removeAccounts) | **DELETE** /api/v2/dspm/cloudAccounts/removeAccounts | Post cloud account ID connections to be removed
+[**removeAccountsInstructions**](CloudAccountsApi.md#removeAccountsInstructions) | **GET** /api/v2/dspm/cloudAccounts/removeAccountsInstructions | Post cloud account IDs and get instructions to remove the accounts
+[**retrieveServiceAccountId**](CloudAccountsApi.md#retrieveServiceAccountId) | **GET** /api/v2/dspm/cloudAccounts/saasApps/google/retrieveServiceAccountId | Get Google Workspace authentication
+[**snowflakeIntegrationScript**](CloudAccountsApi.md#snowflakeIntegrationScript) | **GET** /api/v2/dspm/cloudAccounts/saasApps/snowflake/snowflakeIntegrationScript | Generate Snowflake Integration Script
+[**submitGoogleWorkspaceAdminEmail**](CloudAccountsApi.md#submitGoogleWorkspaceAdminEmail) | **POST** /api/v2/dspm/cloudAccounts/saasApps/google/submitAdminEmail | Submit email for service account authorization
+[**submitOffice365TenantInfo**](CloudAccountsApi.md#submitOffice365TenantInfo) | **POST** /api/v2/dspm/cloudAccounts/saasApps/office365/submitTenantInfo | Submit Microsoft 365 customer information
+[**submitSalesforceAuthCode**](CloudAccountsApi.md#submitSalesforceAuthCode) | **POST** /api/v2/dspm/cloudAccounts/saasApps/salesforce/submitAuthCodeInfo | Submit Salesforce customer information
+[**submitSlackAuthCode**](CloudAccountsApi.md#submitSlackAuthCode) | **POST** /api/v2/dspm/cloudAccounts/saasApps/slack/submitAuthCode | Submit a Slack authentication code
+[**submitSnowflakeAuthCode**](CloudAccountsApi.md#submitSnowflakeAuthCode) | **POST** /api/v2/dspm/cloudAccounts/saasApps/snowflake/submitAuthCode | Submit Snowflake oAuth code
 
 
 # **addAnalyzedRegion**
@@ -3118,6 +3300,55 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **generateSalesforceAuthUrl**
+> AuthUrl generateSalesforceAuthUrl()
+
+Generate an administrator consent URL for Salesforce integration.
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .CloudAccountsApi(configuration);
+
+let body:any = {};
+
+apiInstance.generateSalesforceAuthUrl(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+
+### Return type
+
+**AuthUrl**
+
+### Authorization
+
+[ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | success |  -  |
+**400** | Bad Request |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **generateSlackAuthUrl**
 > AuthUrl generateSlackAuthUrl()
 
@@ -3380,6 +3611,63 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | success |  -  |
+**400** | Bad Request |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **getDatabaseMetadata**
+> DBMetadataInfo getDatabaseMetadata(dbInfo)
+
+Get the metadata details of snowflake database from saas-asset-store.
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .CloudAccountsApi(configuration);
+
+let body:.CloudAccountsApiGetDatabaseMetadataRequest = {
+  // DbInfo
+  dbInfo: {
+    dataStoreId: "dataStoreId_example",
+  },
+};
+
+apiInstance.getDatabaseMetadata(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **dbInfo** | **DbInfo**|  |
+
+
+### Return type
+
+**DBMetadataInfo**
+
+### Authorization
+
+[ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -3826,6 +4114,66 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | success |  -  |
 **400** | Bad Request |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **submitSalesforceAuthCode**
+> void submitSalesforceAuthCode(authCode)
+
+Submit customer information for Salesforce integration.
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .CloudAccountsApi(configuration);
+
+let body:.CloudAccountsApiSubmitSalesforceAuthCodeRequest = {
+  // AuthCode
+  authCode: {
+    code: "1234",
+  },
+};
+
+apiInstance.submitSalesforceAuthCode(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authCode** | **AuthCode**|  |
+
+
+### Return type
+
+**void**
+
+### Authorization
+
+[ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | success |  -  |
+**400** | Bad Request |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+**403** | Forbidden |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+**500** | Internal Server Error |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+**503** | Service Unavailable |  -  |
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -5067,6 +5415,8 @@ Method | HTTP request | Description
 [**connectionsServiceUpdatePlugin**](ConnectionsServiceApi.md#connectionsServiceUpdatePlugin) | **PUT** /api/v3/connections/plugins/{id} | Summary: Update plugin. Description: Update plugin.
 [**connectionsServiceUpdateSettings**](ConnectionsServiceApi.md#connectionsServiceUpdateSettings) | **PUT** /api/v3/connections/settings | Summary: Update settings Description: Update Settings.
 [**connectionsServiceValidateAwsConnection**](ConnectionsServiceApi.md#connectionsServiceValidateAwsConnection) | **POST** /api/v3/connections/validate/aws | Summary: Validate an AWS connection. Description: Validate an AWS connection.
+[**connectionsServiceValidateAzureConnection**](ConnectionsServiceApi.md#connectionsServiceValidateAzureConnection) | **POST** /api/v3/connections/validate/azure | Summary: Validate an Azure connection. Description: Validate an Azure connection.
+[**connectionsServiceValidateGcpConnection**](ConnectionsServiceApi.md#connectionsServiceValidateGcpConnection) | **POST** /api/v3/connections/validate/gcp | Summary: Validate a GCP connection. Description: Validate a GCP connection.
 
 
 # **connectionsServiceCreateConnectionsAccounts**
@@ -6794,9 +7144,9 @@ let body:.ConnectionsServiceApiConnectionsServiceValidateAwsConnectionRequest = 
   // Connectionsv3ValidateAwsConnectionRequest
   connectionsv3ValidateAwsConnectionRequest: {
     accessKey: "accessKey_example",
+    bucketName: "bucketName_example",
     groupName: "groupName_example",
     inputPluginType: "inputPluginType_example",
-    logStream: "logStream_example",
     queueUrl: "queueUrl_example",
     region: "region_example",
     secretKey: "secretKey_example",
@@ -6814,6 +7164,123 @@ apiInstance.connectionsServiceValidateAwsConnection(body).then((data:any) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **connectionsv3ValidateAwsConnectionRequest** | **Connectionsv3ValidateAwsConnectionRequest**|  |
+
+
+### Return type
+
+**Connectionsv3ValidateConnectionResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **connectionsServiceValidateAzureConnection**
+> Connectionsv3ValidateConnectionResponse connectionsServiceValidateAzureConnection(connectionsv3ValidateAzureConnectionRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ConnectionsServiceApi(configuration);
+
+let body:.ConnectionsServiceApiConnectionsServiceValidateAzureConnectionRequest = {
+  // Connectionsv3ValidateAzureConnectionRequest
+  connectionsv3ValidateAzureConnectionRequest: {
+    eventHubName: "eventHubName_example",
+    storageConnectionString: "storageConnectionString_example",
+  },
+};
+
+apiInstance.connectionsServiceValidateAzureConnection(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **connectionsv3ValidateAzureConnectionRequest** | **Connectionsv3ValidateAzureConnectionRequest**|  |
+
+
+### Return type
+
+**Connectionsv3ValidateConnectionResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **connectionsServiceValidateGcpConnection**
+> Connectionsv3ValidateConnectionResponse connectionsServiceValidateGcpConnection(connectionsv3ValidateGcpConnectionRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ConnectionsServiceApi(configuration);
+
+let body:.ConnectionsServiceApiConnectionsServiceValidateGcpConnectionRequest = {
+  // Connectionsv3ValidateGcpConnectionRequest
+  connectionsv3ValidateGcpConnectionRequest: {
+    clientEmail: "clientEmail_example",
+    privateKey: "privateKey_example",
+    projectId: "projectId_example",
+    subscription: "subscription_example",
+    topic: "topic_example",
+  },
+};
+
+apiInstance.connectionsServiceValidateGcpConnection(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **connectionsv3ValidateGcpConnectionRequest** | **Connectionsv3ValidateGcpConnectionRequest**|  |
 
 
 ### Return type
@@ -7637,15 +8104,15 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getActualFlow**](DataMovementsApi.md#getActualFlow) | **GET** /api/v1/dspm/dataMovements/actualFlows/{id} | Get actual flow by providing its ID
-[**getActualFlowsSummary**](DataMovementsApi.md#getActualFlowsSummary) | **GET** /api/v1/dspm/dataMovements/actualFlows/summary | Get summary of actual flows
-[**getPotentialFlow**](DataMovementsApi.md#getPotentialFlow) | **GET** /api/v1/dspm/dataMovements/potentialFlows/{flowId} | Get potential flow by providing its ID
-[**getPotentialFlowPath**](DataMovementsApi.md#getPotentialFlowPath) | **GET** /api/v1/dspm/dataMovements/potentialFlows/paths/{flowPathId} | Get potential flow path by providing its ID
-[**getPotentialFlowsSummary**](DataMovementsApi.md#getPotentialFlowsSummary) | **GET** /api/v1/dspm/dataMovements/potentialFlows/summary | Get summary of potential flows according to the filter applied
-[**listActualFlowPaths**](DataMovementsApi.md#listActualFlowPaths) | **GET** /api/v1/dspm/dataMovements/actualFlowPaths | Get summary of actual flows according to the filter applied
-[**listActualFlows**](DataMovementsApi.md#listActualFlows) | **GET** /api/v1/dspm/dataMovements/actualFlows | List actual flows
-[**listPotentialFlows**](DataMovementsApi.md#listPotentialFlows) | **GET** /api/v1/dspm/dataMovements/potentialFlows | List potential flows
-[**listPotentialFlowsPaths**](DataMovementsApi.md#listPotentialFlowsPaths) | **GET** /api/v1/dspm/dataMovements/potentialFlows/paths | List potential flow paths
+[**getActualFlow**](DataMovementsApi.md#getActualFlow) | **GET** /api/v2/dspm/dataMovements/actualFlows/{id} | Get actual flow by providing its ID
+[**getActualFlowsSummary**](DataMovementsApi.md#getActualFlowsSummary) | **GET** /api/v2/dspm/dataMovements/actualFlows/summary | Get summary of actual flows
+[**getPotentialFlow**](DataMovementsApi.md#getPotentialFlow) | **GET** /api/v2/dspm/dataMovements/potentialFlows/{flowId} | Get potential flow by providing its ID
+[**getPotentialFlowPath**](DataMovementsApi.md#getPotentialFlowPath) | **GET** /api/v2/dspm/dataMovements/potentialFlows/paths/{flowPathId} | Get potential flow path by providing its ID
+[**getPotentialFlowsSummary**](DataMovementsApi.md#getPotentialFlowsSummary) | **GET** /api/v2/dspm/dataMovements/potentialFlows/summary | Get summary of potential flows according to the filter applied
+[**listActualFlowPaths**](DataMovementsApi.md#listActualFlowPaths) | **GET** /api/v2/dspm/dataMovements/actualFlowPaths | Get summary of actual flows according to the filter applied
+[**listActualFlows**](DataMovementsApi.md#listActualFlows) | **GET** /api/v2/dspm/dataMovements/actualFlows | List actual flows
+[**listPotentialFlows**](DataMovementsApi.md#listPotentialFlows) | **GET** /api/v2/dspm/dataMovements/potentialFlows | List potential flows
+[**listPotentialFlowsPaths**](DataMovementsApi.md#listPotentialFlowsPaths) | **GET** /api/v2/dspm/dataMovements/potentialFlows/paths | List potential flow paths
 
 
 # **getActualFlow**
@@ -8189,12 +8656,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getDataResource**](DataResourcesApi.md#getDataResource) | **GET** /api/v1/dspm/dataResources/{dataResourceId} | Get a specific data resource by its ID
-[**getDataResourcesSummary**](DataResourcesApi.md#getDataResourcesSummary) | **GET** /api/v1/dspm/dataResources/summary | Data resources summary
-[**listDataResources**](DataResourcesApi.md#listDataResources) | **GET** /api/v1/dspm/dataResources | List data resources that match a given filter
-[**listDataResourcesNames**](DataResourcesApi.md#listDataResourcesNames) | **GET** /api/v1/dspm/dataResources/names | List names of data resources
-[**removeResource**](DataResourcesApi.md#removeResource) | **DELETE** /api/v1/dspm/dataResources/{dataResourceId}/removeResource | Remove resource from DSPM
-[**updateResourceReviewStatus**](DataResourcesApi.md#updateResourceReviewStatus) | **PUT** /api/v1/dspm/dataResources/{dataResourceId}/reviewed | Set review status of a data resource
+[**getDataResource**](DataResourcesApi.md#getDataResource) | **GET** /api/v2/dspm/dataResources/{dataResourceId} | Get a specific data resource by its ID
+[**getDataResourcesSummary**](DataResourcesApi.md#getDataResourcesSummary) | **GET** /api/v2/dspm/dataResources/summary | Data resources summary
+[**listDataResources**](DataResourcesApi.md#listDataResources) | **GET** /api/v2/dspm/dataResources | List data resources that match a given filter
+[**listDataResourcesNames**](DataResourcesApi.md#listDataResourcesNames) | **GET** /api/v2/dspm/dataResources/names | List names of data resources
+[**removeResource**](DataResourcesApi.md#removeResource) | **DELETE** /api/v2/dspm/dataResources/{dataResourceId}/removeResource | Remove resource from DSPM
+[**updateResourceReviewStatus**](DataResourcesApi.md#updateResourceReviewStatus) | **PUT** /api/v2/dspm/dataResources/{dataResourceId}/reviewed | Set review status of a data resource
 
 
 # **getDataResource**
@@ -8585,9 +9052,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getSensitivitiesSummary**](DataSensitivitiesApi.md#getSensitivitiesSummary) | **GET** /api/v1/dspm/sensitivities/summary | Get the summary of sensitivities
-[**getSensitivity**](DataSensitivitiesApi.md#getSensitivity) | **GET** /api/v1/dspm/sensitivities/{sensitivityId} | Get sensitivity details by providing its ID
-[**listSensitivities**](DataSensitivitiesApi.md#listSensitivities) | **GET** /api/v1/dspm/sensitivities | List sensitivities
+[**getSensitivitiesSummary**](DataSensitivitiesApi.md#getSensitivitiesSummary) | **GET** /api/v2/dspm/sensitivities/summary | Get the summary of sensitivities
+[**getSensitivity**](DataSensitivitiesApi.md#getSensitivity) | **GET** /api/v2/dspm/sensitivities/{sensitivityId} | Get sensitivity details by providing its ID
+[**listSensitivities**](DataSensitivitiesApi.md#listSensitivities) | **GET** /api/v2/dspm/sensitivities | List sensitivities
 
 
 # **getSensitivitiesSummary**
@@ -8793,16 +9260,16 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getDataStore**](DataStoresApi.md#getDataStore) | **GET** /api/v1/dspm/dataStores/{dataStoreId} | Get a data store by its ID
-[**getDataStoresSummary**](DataStoresApi.md#getDataStoresSummary) | **GET** /api/v1/dspm/dataStores/summary | Get summary of data stores
-[**listAllDataStoresLabels**](DataStoresApi.md#listAllDataStoresLabels) | **GET** /api/v1/dspm/dataStores/labels | List labels of data stores.
-[**listDataStores**](DataStoresApi.md#listDataStores) | **GET** /api/v1/dspm/dataStores | List data stores
-[**listDataStoresCloudTagsKeys**](DataStoresApi.md#listDataStoresCloudTagsKeys) | **GET** /api/v1/dspm/dataStores/cloudTags/keys | List the cloud tag keys of data stores that can be filtered on the basis of prefixes.
-[**listDataStoresCloudTagsValues**](DataStoresApi.md#listDataStoresCloudTagsValues) | **GET** /api/v1/dspm/dataStores/cloudTags/values | List the cloud tag values of data stores that can be filtered on the basis of prefixes and cloud tag key names.
-[**listDataStoresNames**](DataStoresApi.md#listDataStoresNames) | **GET** /api/v1/dspm/dataStores/filters/name | List name of filterable data stores
-[**rescanDataStore**](DataStoresApi.md#rescanDataStore) | **POST** /api/v1/dspm/dataStores/rescan | Post data store rescan request
-[**setDataStoreLabel**](DataStoresApi.md#setDataStoreLabel) | **PUT** /api/v1/dspm/dataStores/{dataStoreId}/labels | Label a data store with an existing or new label
-[**updateDatastoreCustodian**](DataStoresApi.md#updateDatastoreCustodian) | **POST** /api/v1/dspm/dataStores/custodian | Update the name of a Data store custodian
+[**getDataStore**](DataStoresApi.md#getDataStore) | **GET** /api/v2/dspm/dataStores/{dataStoreId} | Get a data store by its ID
+[**getDataStoresSummary**](DataStoresApi.md#getDataStoresSummary) | **GET** /api/v2/dspm/dataStores/summary | Get summary of data stores
+[**listAllDataStoresLabels**](DataStoresApi.md#listAllDataStoresLabels) | **GET** /api/v2/dspm/dataStores/labels | List labels of data stores.
+[**listDataStores**](DataStoresApi.md#listDataStores) | **GET** /api/v2/dspm/dataStores | List data stores
+[**listDataStoresCloudTagsKeys**](DataStoresApi.md#listDataStoresCloudTagsKeys) | **GET** /api/v2/dspm/dataStores/cloudTags/keys | List the cloud tag keys of data stores that can be filtered on the basis of prefixes.
+[**listDataStoresCloudTagsValues**](DataStoresApi.md#listDataStoresCloudTagsValues) | **GET** /api/v2/dspm/dataStores/cloudTags/values | List the cloud tag values of data stores that can be filtered on the basis of prefixes and cloud tag key names.
+[**listDataStoresNames**](DataStoresApi.md#listDataStoresNames) | **GET** /api/v2/dspm/dataStores/filters/name | List name of filterable data stores
+[**rescanDataStore**](DataStoresApi.md#rescanDataStore) | **POST** /api/v2/dspm/dataStores/rescan | Post data store rescan request
+[**setDataStoreLabel**](DataStoresApi.md#setDataStoreLabel) | **PUT** /api/v2/dspm/dataStores/{dataStoreId}/labels | Label a data store with an existing or new label
+[**updateDatastoreCustodian**](DataStoresApi.md#updateDatastoreCustodian) | **POST** /api/v2/dspm/dataStores/custodian | Update the name of a Data store custodian
 
 
 # **getDataStore**
@@ -9453,14 +9920,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addVulnerabilityStatusComment**](DataVulnerabilitiesApi.md#addVulnerabilityStatusComment) | **POST** /api/v1/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments | Add vulnerability status comment
-[**getVulnerabilitiesSummary**](DataVulnerabilitiesApi.md#getVulnerabilitiesSummary) | **GET** /api/v1/dspm/vulnerabilities/summary | Get vulnerabilities summary
-[**getVulnerability**](DataVulnerabilitiesApi.md#getVulnerability) | **GET** /api/v1/dspm/vulnerabilities/{vulnerabilityId} | Get vulnerability details by ID
-[**listVulnerabilities**](DataVulnerabilitiesApi.md#listVulnerabilities) | **GET** /api/v1/dspm/vulnerabilities | List vulnerabilities based on an applied filter
-[**listVulnerabilitiesByDataStore**](DataVulnerabilitiesApi.md#listVulnerabilitiesByDataStore) | **GET** /api/v1/dspm/vulnerabilities/byDataStore | List vulnerabilities of data stores
-[**removeVulnerabilityStatusComment**](DataVulnerabilitiesApi.md#removeVulnerabilityStatusComment) | **DELETE** /api/v1/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments/{commentId} | Delete vulnerability status comment
-[**setVulnerabilityStatus**](DataVulnerabilitiesApi.md#setVulnerabilityStatus) | **POST** /api/v1/dspm/vulnerabilities/{vulnerabilityId}/statuses | Set status of a vulnerability
-[**updateVulnerabilityStatusComment**](DataVulnerabilitiesApi.md#updateVulnerabilityStatusComment) | **PUT** /api/v1/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments/{commentId} | Set vulnerability status
+[**addVulnerabilityStatusComment**](DataVulnerabilitiesApi.md#addVulnerabilityStatusComment) | **POST** /api/v2/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments | Add vulnerability status comment
+[**getVulnerabilitiesSummary**](DataVulnerabilitiesApi.md#getVulnerabilitiesSummary) | **GET** /api/v2/dspm/vulnerabilities/summary | Get vulnerabilities summary
+[**getVulnerability**](DataVulnerabilitiesApi.md#getVulnerability) | **GET** /api/v2/dspm/vulnerabilities/{vulnerabilityId} | Get vulnerability details by ID
+[**listVulnerabilities**](DataVulnerabilitiesApi.md#listVulnerabilities) | **GET** /api/v2/dspm/vulnerabilities | List vulnerabilities based on an applied filter
+[**listVulnerabilitiesByDataStore**](DataVulnerabilitiesApi.md#listVulnerabilitiesByDataStore) | **GET** /api/v2/dspm/vulnerabilities/byDataStore | List vulnerabilities of data stores
+[**removeVulnerabilityStatusComment**](DataVulnerabilitiesApi.md#removeVulnerabilityStatusComment) | **DELETE** /api/v2/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments/{commentId} | Delete vulnerability status comment
+[**setVulnerabilityStatus**](DataVulnerabilitiesApi.md#setVulnerabilityStatus) | **POST** /api/v2/dspm/vulnerabilities/{vulnerabilityId}/statuses | Set status of a vulnerability
+[**updateVulnerabilityStatusComment**](DataVulnerabilitiesApi.md#updateVulnerabilityStatusComment) | **PUT** /api/v2/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments/{commentId} | Set vulnerability status
 
 
 # **addVulnerabilityStatusComment**
@@ -10525,194 +10992,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Ecosystemv3TestIntegrationResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-
-
-
-
-# .EdgeSchedulerServiceApi
-
-All URIs are relative to *http://localhost*
-
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**edgeSchedulerServiceGetEdgeQueryStatus**](EdgeSchedulerServiceApi.md#edgeSchedulerServiceGetEdgeQueryStatus) | **GET** /api/v3/edges/{edge_id}/query/status | Summary: Get edge query status Description: Get the status of a queued edge query
-[**edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery**](EdgeSchedulerServiceApi.md#edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery) | **GET** /api/v3/edges/query | Summary: Monitor for a pending edge query request Description: monitor edge query pending request
-[**edgeSchedulerServiceScheduleEdgeQuery**](EdgeSchedulerServiceApi.md#edgeSchedulerServiceScheduleEdgeQuery) | **POST** /api/v3/edges/{edge_id}/query/schedule | Summary: Schedule an edge query  Description: Schedule an edge query via data warehouse queue
-
-
-# **edgeSchedulerServiceGetEdgeQueryStatus**
-> Edgeschedulerv3GetEdgeQueryStatusResponse edgeSchedulerServiceGetEdgeQueryStatus()
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .EdgeSchedulerServiceApi(configuration);
-
-let body:.EdgeSchedulerServiceApiEdgeSchedulerServiceGetEdgeQueryStatusRequest = {
-  // string | the id of the edge
-  edgeId: "edge_id_example",
-  // string | the id of the UC report being queried for. (optional)
-  edgeResultReportId: "edge_result_report_id_example",
-};
-
-apiInstance.edgeSchedulerServiceGetEdgeQueryStatus(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **edgeId** | [**string**] | the id of the edge | defaults to undefined
- **edgeResultReportId** | [**string**] | the id of the UC report being queried for. | (optional) defaults to undefined
-
-
-### Return type
-
-**Edgeschedulerv3GetEdgeQueryStatusResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery**
-> StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery()
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .EdgeSchedulerServiceApi(configuration);
-
-let body:.EdgeSchedulerServiceApiEdgeSchedulerServiceMonitoringPendingRequestForEdgeQueryRequest = {
-  // string | edge client id to monitor edge query requests for. (optional)
-  clientId: "client_id_example",
-};
-
-apiInstance.edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **clientId** | [**string**] | edge client id to monitor edge query requests for. | (optional) defaults to undefined
-
-
-### Return type
-
-**StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response.(streaming responses) |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **edgeSchedulerServiceScheduleEdgeQuery**
-> Edgeschedulerv3ScheduleEdgeQueryResponse edgeSchedulerServiceScheduleEdgeQuery(edgeschedulerv3ScheduleEdgeQueryRequest)
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .EdgeSchedulerServiceApi(configuration);
-
-let body:.EdgeSchedulerServiceApiEdgeSchedulerServiceScheduleEdgeQueryRequest = {
-  // string | the id of the edge
-  edgeId: "edge_id_example",
-  // Edgeschedulerv3ScheduleEdgeQueryRequest
-  edgeschedulerv3ScheduleEdgeQueryRequest: {
-    edgeId: "edgeId_example",
-    edgeQueryEndTime: new Date('1970-01-01T00:00:00.00Z'),
-    edgeQueryStartTime: new Date('1970-01-01T00:00:00.00Z'),
-    edgeResultReportId: "edgeResultReportId_example",
-  },
-};
-
-apiInstance.edgeSchedulerServiceScheduleEdgeQuery(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **edgeschedulerv3ScheduleEdgeQueryRequest** | **Edgeschedulerv3ScheduleEdgeQueryRequest**|  |
- **edgeId** | [**string**] | the id of the edge | defaults to undefined
-
-
-### Return type
-
-**Edgeschedulerv3ScheduleEdgeQueryResponse**
 
 ### Authorization
 
@@ -14886,15 +15165,22 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**jumpboxServiceAuthorize**](JumpboxServiceApi.md#jumpboxServiceAuthorize) | **POST** /api/v3/authorization | Summary: Authorize Description: Authenticate a user and return a JWT.
+[**jumpboxServiceDeleteAccount**](JumpboxServiceApi.md#jumpboxServiceDeleteAccount) | **DELETE** /api/v3/accounts/{account_id} | Summary: Delete account Description: Delete an account.
 [**jumpboxServiceDeleteTenant**](JumpboxServiceApi.md#jumpboxServiceDeleteTenant) | **DELETE** /api/v3/tenants/{tenant_id} | Summary: Delete tenant Description: Delete a tenant.
 [**jumpboxServiceDeleteUser**](JumpboxServiceApi.md#jumpboxServiceDeleteUser) | **DELETE** /api/v3/users/{user_id} | Summary: Delete user Description: Delete the user.
+[**jumpboxServiceGetAccount**](JumpboxServiceApi.md#jumpboxServiceGetAccount) | **GET** /api/v3/accounts/{account_id} | Summary: Get account Description: Get an account.
+[**jumpboxServiceGetAccounts**](JumpboxServiceApi.md#jumpboxServiceGetAccounts) | **GET** /api/v3/accounts | Summary: Get accounts Description: Get all accounts based on UID.
 [**jumpboxServiceGetTenant**](JumpboxServiceApi.md#jumpboxServiceGetTenant) | **GET** /api/v3/tenants/{tenant_id} | Summary: Get tenant Description: Get a tenant.
 [**jumpboxServiceGetTenants**](JumpboxServiceApi.md#jumpboxServiceGetTenants) | **GET** /api/v3/tenants | Summary: Get tenants Description: Get all tenant base on UID.
 [**jumpboxServiceGetUsers**](JumpboxServiceApi.md#jumpboxServiceGetUsers) | **GET** /api/v3/users | Summary: Get users Description: Get all users base on a tenantID.
+[**jumpboxServicePostAccount**](JumpboxServiceApi.md#jumpboxServicePostAccount) | **POST** /api/v3/accounts | Summary: Post account Description: Create an Account.
 [**jumpboxServicePostTenants**](JumpboxServiceApi.md#jumpboxServicePostTenants) | **POST** /api/v3/tenants | Summary: Post tenants Description: Create a tenant.
 [**jumpboxServicePostUsers**](JumpboxServiceApi.md#jumpboxServicePostUsers) | **POST** /api/v3/users | Summary: Post users Description: Create users.
+[**jumpboxServiceResumeAccount**](JumpboxServiceApi.md#jumpboxServiceResumeAccount) | **PATCH** /api/v3/accounts/{account_id}/resume | Summary: Resume account Description: Resume an account.
 [**jumpboxServiceSearchUsers**](JumpboxServiceApi.md#jumpboxServiceSearchUsers) | **POST** /api/v3/users/search | Summary: Search users Description: Search for all users matching the provided string.
+[**jumpboxServiceSuspendAccount**](JumpboxServiceApi.md#jumpboxServiceSuspendAccount) | **PATCH** /api/v3/accounts/{account_id}/suspend | Summary: Suspend Account Description: Suspend an account
 [**jumpboxServiceTestUser**](JumpboxServiceApi.md#jumpboxServiceTestUser) | **POST** /api/v3/users/test | Summary: Test user Description: Test a user lookup to a given LDAP.
+[**jumpboxServiceUpdateAccount**](JumpboxServiceApi.md#jumpboxServiceUpdateAccount) | **PATCH** /api/v3/accounts/{account_id} | Summary: Update Account Description: Updates an account.
 [**jumpboxServiceUpdateTenant**](JumpboxServiceApi.md#jumpboxServiceUpdateTenant) | **PATCH** /api/v3/tenants/{tenant_id} | Summary: Update tenant Description: Update a tenant.
 [**jumpboxServiceUpdateUsers**](JumpboxServiceApi.md#jumpboxServiceUpdateUsers) | **PATCH** /api/v3/users | Summary: Update users Description: Update an array of users.
 
@@ -14952,6 +15238,60 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **jumpboxServiceDeleteAccount**
+> Jumpboxv3DeleteAccountResponse jumpboxServiceDeleteAccount()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .JumpboxServiceApi(configuration);
+
+let body:.JumpboxServiceApiJumpboxServiceDeleteAccountRequest = {
+  // string | Account id.
+  accountId: "account_id_example",
+};
+
+apiInstance.jumpboxServiceDeleteAccount(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountId** | [**string**] | Account id. | defaults to undefined
+
+
+### Return type
+
+**Jumpboxv3DeleteAccountResponse**
+
+### Authorization
+
+[ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 
@@ -15058,6 +15398,129 @@ Name | Type | Description  | Notes
 ### Return type
 
 **any**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **jumpboxServiceGetAccount**
+> Jumpboxv3GetAccountResponse jumpboxServiceGetAccount()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .JumpboxServiceApi(configuration);
+
+let body:.JumpboxServiceApiJumpboxServiceGetAccountRequest = {
+  // string | Account id.
+  accountId: "account_id_example",
+  // boolean | Include inactive. (optional)
+  includeInactive: true,
+  // boolean | Include tenants that are not ready(are in state of being created or deleted). (optional)
+  includeNotReady: true,
+};
+
+apiInstance.jumpboxServiceGetAccount(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountId** | [**string**] | Account id. | defaults to undefined
+ **includeInactive** | [**boolean**] | Include inactive. | (optional) defaults to undefined
+ **includeNotReady** | [**boolean**] | Include tenants that are not ready(are in state of being created or deleted). | (optional) defaults to undefined
+
+
+### Return type
+
+**Jumpboxv3GetAccountResponse**
+
+### Authorization
+
+[ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **jumpboxServiceGetAccounts**
+> Jumpboxv3GetAccountsResponse jumpboxServiceGetAccounts()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .JumpboxServiceApi(configuration);
+
+let body:.JumpboxServiceApiJumpboxServiceGetAccountsRequest = {
+  // string | Email. (optional)
+  uid: "uid_example",
+  // string | External id. (optional)
+  externalId: "external_id_example",
+  // boolean | Include inactive. (optional)
+  includeInactive: true,
+  // boolean | Include tenants that are not ready(are in state of being created or deleted). (optional)
+  includeNotReady: true,
+};
+
+apiInstance.jumpboxServiceGetAccounts(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uid** | [**string**] | Email. | (optional) defaults to undefined
+ **externalId** | [**string**] | External id. | (optional) defaults to undefined
+ **includeInactive** | [**boolean**] | Include inactive. | (optional) defaults to undefined
+ **includeNotReady** | [**boolean**] | Include tenants that are not ready(are in state of being created or deleted). | (optional) defaults to undefined
+
+
+### Return type
+
+**Jumpboxv3GetAccountsResponse**
 
 ### Authorization
 
@@ -15254,6 +15717,82 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **jumpboxServicePostAccount**
+> Jumpboxv3PostAccountResponse jumpboxServicePostAccount(jumpboxv3PostAccountRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .JumpboxServiceApi(configuration);
+
+let body:.JumpboxServiceApiJumpboxServicePostAccountRequest = {
+  // Jumpboxv3PostAccountRequest
+  jumpboxv3PostAccountRequest: {
+    externalId: "externalId_example",
+    externalMetadata: {
+      "key": {
+        addOns: {
+          "key": {
+            unit: "unit_example",
+            value: "value_example",
+          },
+        },
+        crn: "crn_example",
+        expirationDate: new Date('1970-01-01T00:00:00.00Z'),
+        instanceId: "instanceId_example",
+        partNumber: "partNumber_example",
+        planId: "planId_example",
+        serviceId: "serviceId_example",
+        subscriptionId: "subscriptionId_example",
+      },
+    },
+    name: "name_example",
+    partNumber: "partNumber_example",
+    uid: "uid_example",
+  },
+};
+
+apiInstance.jumpboxServicePostAccount(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **jumpboxv3PostAccountRequest** | **Jumpboxv3PostAccountRequest**|  |
+
+
+### Return type
+
+**Jumpboxv3PostAccountResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **jumpboxServicePostTenants**
 > Jumpboxv3PostTenantsResponse jumpboxServicePostTenants(jumpboxv3PostTenantsRequest)
 
@@ -15406,6 +15945,60 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **jumpboxServiceResumeAccount**
+> Jumpboxv3ResumeAccountResponse jumpboxServiceResumeAccount()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .JumpboxServiceApi(configuration);
+
+let body:.JumpboxServiceApiJumpboxServiceResumeAccountRequest = {
+  // string | account_id represents the user\'s account ID
+  accountId: "account_id_example",
+};
+
+apiInstance.jumpboxServiceResumeAccount(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountId** | [**string**] | account_id represents the user\&#39;s account ID | defaults to undefined
+
+
+### Return type
+
+**Jumpboxv3ResumeAccountResponse**
+
+### Authorization
+
+[ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **jumpboxServiceSearchUsers**
 > Jumpboxv3SearchUsersResponse jumpboxServiceSearchUsers(jumpboxv3SearchUsersRequest)
 
@@ -15462,6 +16055,60 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **jumpboxServiceSuspendAccount**
+> Jumpboxv3SuspendAccountResponse jumpboxServiceSuspendAccount()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .JumpboxServiceApi(configuration);
+
+let body:.JumpboxServiceApiJumpboxServiceSuspendAccountRequest = {
+  // string | account_id represents the user\'s account ID
+  accountId: "account_id_example",
+};
+
+apiInstance.jumpboxServiceSuspendAccount(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountId** | [**string**] | account_id represents the user\&#39;s account ID | defaults to undefined
+
+
+### Return type
+
+**Jumpboxv3SuspendAccountResponse**
+
+### Authorization
+
+[ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **jumpboxServiceTestUser**
 > Jumpboxv3TestUserResponse jumpboxServiceTestUser(jumpboxv3TestUserRequest)
 
@@ -15504,6 +16151,87 @@ Name | Type | Description  | Notes
 ### Authorization
 
 [BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **jumpboxServiceUpdateAccount**
+> Jumpboxv3UpdateAccountResponse jumpboxServiceUpdateAccount(jumpboxv3UpdateAccountRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .JumpboxServiceApi(configuration);
+
+let body:.JumpboxServiceApiJumpboxServiceUpdateAccountRequest = {
+  // string | Account id.
+  accountId: "account_id_example",
+  // Jumpboxv3UpdateAccountRequest
+  jumpboxv3UpdateAccountRequest: {
+    accountId: "accountId_example",
+    externalMetadata: {
+      "key": {
+        addOns: {
+          "key": {
+            unit: "unit_example",
+            value: "value_example",
+          },
+        },
+        crn: "crn_example",
+        expirationDate: new Date('1970-01-01T00:00:00.00Z'),
+        instanceId: "instanceId_example",
+        partNumber: "partNumber_example",
+        planId: "planId_example",
+        serviceId: "serviceId_example",
+        subscriptionId: "subscriptionId_example",
+      },
+    },
+    isInactive: true,
+    isReady: true,
+    name: "name_example",
+    partNumber: "partNumber_example",
+    uid: "uid_example",
+  },
+};
+
+apiInstance.jumpboxServiceUpdateAccount(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **jumpboxv3UpdateAccountRequest** | **Jumpboxv3UpdateAccountRequest**|  |
+ **accountId** | [**string**] | Account id. | defaults to undefined
+
+
+### Return type
+
+**Jumpboxv3UpdateAccountResponse**
+
+### Authorization
+
+[ApiKeyAuth](README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -16824,6 +17552,8 @@ Method | HTTP request | Description
 [**policyBuilderGetPolicyDetails**](PolicyBuilderApi.md#policyBuilderGetPolicyDetails) | **GET** /api/v3/policies/{policy_id}/details | Summary: Get policy details Description: Return a list of rules inside the policy.
 [**policyBuilderGetPolicyNamesFromRuleIDs**](PolicyBuilderApi.md#policyBuilderGetPolicyNamesFromRuleIDs) | **POST** /api/v3/policies/policy_names | Summary: GetPolicy names from rule IDs Description: Return a map where the key is the rule ID and value is the policy name that has the rule ID.
 [**policyBuilderGetPolicySyncList**](PolicyBuilderApi.md#policyBuilderGetPolicySyncList) | **GET** /api/v3/policies/sync_list | Summary: Get list of synced polices Description: Returns the list and status of sync entries
+[**policyBuilderGetPolicyVersion**](PolicyBuilderApi.md#policyBuilderGetPolicyVersion) | **GET** /api/v3/policies/{policy_id}/details/versions/{version} | Summary: Get a particular version of the policy Description: Returns a particular version of policy and response code and message
+[**policyBuilderGetPolicyVersionsInfo**](PolicyBuilderApi.md#policyBuilderGetPolicyVersionsInfo) | **GET** /api/v3/policies/{policy_id}/versions/metdata | Summary: Gets policy versions info Description: Returns information of all versions of a policy and response code and message
 [**policyBuilderGetReceivers**](PolicyBuilderApi.md#policyBuilderGetReceivers) | **GET** /api/v3/policies/receivers | Summary: Get receivers Description: Get all the receivers associated with actions.
 [**policyBuilderGetRuleMetadata**](PolicyBuilderApi.md#policyBuilderGetRuleMetadata) | **GET** /api/v3/rules/metadata | Summary: Get rule metadata Description: Return a list of rule parameters and actions to the caller.
 [**policyBuilderInsertGdpPolicy**](PolicyBuilderApi.md#policyBuilderInsertGdpPolicy) | **POST** /api/v3/policies/sync_entry | Summary: Insert GDP policy sync entry Description: Inserts GDP policy\&#39;s name into sync collection
@@ -16833,6 +17563,7 @@ Method | HTTP request | Description
 [**policyBuilderPoliciesGroups**](PolicyBuilderApi.md#policyBuilderPoliciesGroups) | **GET** /api/v3/policies/groups | Summary: Policies groups Description: Get policy groups.
 [**policyBuilderRuleValidation**](PolicyBuilderApi.md#policyBuilderRuleValidation) | **POST** /api/v3/rules/validate | Summary: Rule validation Description: Validate a rule parameters and actions.
 [**policyBuilderStorePoliciesGdp**](PolicyBuilderApi.md#policyBuilderStorePoliciesGdp) | **POST** /api/v3/policies/{central_manager_id} | Summary: Store policies Gdp Description: Store policies.  (This API is called from GDP only)
+[**policyBuilderUpdatePolicy**](PolicyBuilderApi.md#policyBuilderUpdatePolicy) | **PUT** /api/v3/policies | Summary: Update policy Description: Update Policy returns response code and message.
 
 
 # **policyBuilderClonePolicy**
@@ -16927,6 +17658,7 @@ let body:.PolicyBuilderApiPolicyBuilderCreatePolicyRequest = {
       policyId: "policyId_example",
       policyName: "policyName_example",
       policyType: "DATA_POLICY",
+      productId: "NO_PRODUCT",
       rules: [
         {
           actions: [
@@ -17403,6 +18135,117 @@ This endpoint does not need any parameter.
 ### Return type
 
 **Policybuilderv3GetPolicySyncListResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **policyBuilderGetPolicyVersion**
+> Policybuilderv3GetPolicyVersionResponse policyBuilderGetPolicyVersion()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .PolicyBuilderApi(configuration);
+
+let body:.PolicyBuilderApiPolicyBuilderGetPolicyVersionRequest = {
+  // string | Policy id of the requested policy
+  policyId: "policy_id_example",
+  // number | Requested version number of the policy
+  version: 1,
+};
+
+apiInstance.policyBuilderGetPolicyVersion(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **policyId** | [**string**] | Policy id of the requested policy | defaults to undefined
+ **version** | [**number**] | Requested version number of the policy | defaults to undefined
+
+
+### Return type
+
+**Policybuilderv3GetPolicyVersionResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **policyBuilderGetPolicyVersionsInfo**
+> Policybuilderv3GetPolicyVersionsInfoResponse policyBuilderGetPolicyVersionsInfo()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .PolicyBuilderApi(configuration);
+
+let body:.PolicyBuilderApiPolicyBuilderGetPolicyVersionsInfoRequest = {
+  // string | Policy id of the requested policy
+  policyId: "policy_id_example",
+};
+
+apiInstance.policyBuilderGetPolicyVersionsInfo(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **policyId** | [**string**] | Policy id of the requested policy | defaults to undefined
+
+
+### Return type
+
+**Policybuilderv3GetPolicyVersionsInfoResponse**
 
 ### Authorization
 
@@ -18021,6 +18864,166 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Policybuilderv3StorePolicyGdpResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **policyBuilderUpdatePolicy**
+> Policybuilderv3CreateUpdatePolicyResponse policyBuilderUpdatePolicy(policybuilderv3CreateUpdatePolicyRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .PolicyBuilderApi(configuration);
+
+let body:.PolicyBuilderApiPolicyBuilderUpdatePolicyRequest = {
+  // Policybuilderv3CreateUpdatePolicyRequest
+  policybuilderv3CreateUpdatePolicyRequest: {
+    canOverrideName: true,
+    policyObject: {
+      activationStatus: 1,
+      controlFlow: "STANDARD",
+      deletedRuleIds: [
+        "deletedRuleIds_example",
+      ],
+      installedFlag: true,
+      installedOrder: 1,
+      installedTimestamp: "installedTimestamp_example",
+      lastEditedTimestamp: "lastEditedTimestamp_example",
+      logFlat: true,
+      policyId: "policyId_example",
+      policyName: "policyName_example",
+      policyType: "DATA_POLICY",
+      productId: "NO_PRODUCT",
+      rules: [
+        {
+          actions: [
+            {
+              actionName: "actionName_example",
+              notifications: [
+                {
+                  integrationId: "integrationId_example",
+                  templateId: "templateId_example",
+                  type: "UNDEFINED_RECTYPE",
+                  value: "value_example",
+                },
+              ],
+              order: 1,
+              parameters: [
+                {
+                  parameterName: "parameterName_example",
+                  parameterValue: "parameterValue_example",
+                },
+              ],
+              qrDefintionId: 1,
+              type: "UNDEFINED_ACTIONTYPE",
+              uiLabel: "uiLabel_example",
+            },
+          ],
+          continueToNextRule: true,
+          emptyGroups: [
+            1,
+          ],
+          invalidActions: [
+            {
+              actionName: "actionName_example",
+              notifications: [
+                {
+                  integrationId: "integrationId_example",
+                  templateId: "templateId_example",
+                  type: "UNDEFINED_RECTYPE",
+                  value: "value_example",
+                },
+              ],
+              order: 1,
+              parameters: [
+                {
+                  parameterName: "parameterName_example",
+                  parameterValue: "parameterValue_example",
+                },
+              ],
+              qrDefintionId: 1,
+              type: "UNDEFINED_ACTIONTYPE",
+              uiLabel: "uiLabel_example",
+            },
+          ],
+          invalidParameters: [
+            {
+              parameterName: "parameterName_example",
+              parameterOperator: "UNKNOWN_OPERATOR",
+              parameterType: "parameterType_example",
+              parameterValue: "parameterValue_example",
+              parameterValueLabel: "parameterValueLabel_example",
+              uiLabel: "uiLabel_example",
+            },
+          ],
+          parameters: [
+            {
+              parameterName: "parameterName_example",
+              parameterOperator: "UNKNOWN_OPERATOR",
+              parameterType: "parameterType_example",
+              parameterValue: "parameterValue_example",
+              parameterValueLabel: "parameterValueLabel_example",
+              uiLabel: "uiLabel_example",
+            },
+          ],
+          policyId: "policyId_example",
+          ruleId: "ruleId_example",
+          ruleKey: "ruleKey_example",
+          ruleName: "ruleName_example",
+          ruleOrder: 1,
+          ruleType: "ACCESS",
+          severity: "INFO",
+          tags: [
+            "tags_example",
+          ],
+          template: true,
+        },
+      ],
+      rulesOnFlat: true,
+      template: true,
+      version: 1,
+    },
+  },
+};
+
+apiInstance.policyBuilderUpdatePolicy(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **policybuilderv3CreateUpdatePolicyRequest** | **Policybuilderv3CreateUpdatePolicyRequest**|  |
+
+
+### Return type
+
+**Policybuilderv3CreateUpdatePolicyResponse**
 
 ### Authorization
 
@@ -20623,25 +21626,42 @@ Method | HTTP request | Description
 [**reportsServiceCreateChart**](ReportsServiceApi.md#reportsServiceCreateChart) | **POST** /api/v3/charts | Summary: Create chart Description: Create custom chart based on provided properties.
 [**reportsServiceCreateChartTemplatev2**](ReportsServiceApi.md#reportsServiceCreateChartTemplatev2) | **POST** /api/v3/flex-charts/templates | Summary: Create chart template v2 Description: Create custom VEGA chart template.
 [**reportsServiceCreateChartv2**](ReportsServiceApi.md#reportsServiceCreateChartv2) | **POST** /api/v3/flex-charts | Summary: Create chart v2 Description: Create custom VEGA chart based on provided properties.
+[**reportsServiceCreateControl**](ReportsServiceApi.md#reportsServiceCreateControl) | **POST** /api/v3/compliance/controls | Summary: Create Control. Description: Create a unique Control.
 [**reportsServiceCreateFieldsByCategory**](ReportsServiceApi.md#reportsServiceCreateFieldsByCategory) | **POST** /api/v3/reports/fields | Summary - Create fields by category Description: Cteate category fields based on provided properties.
+[**reportsServiceCreateGrade**](ReportsServiceApi.md#reportsServiceCreateGrade) | **POST** /api/v3/compliance/grades | Summary: Create Grade. Description: Create a unique Grade.
 [**reportsServiceCreateJoin**](ReportsServiceApi.md#reportsServiceCreateJoin) | **POST** /api/v3/reports/categories/joins | Summary: Create a join Description: Create a custom report join
+[**reportsServiceCreateMeasure**](ReportsServiceApi.md#reportsServiceCreateMeasure) | **POST** /api/v3/compliance/measures | Summary: Create measure. Description: Create a unique measure.
+[**reportsServiceCreateMetric**](ReportsServiceApi.md#reportsServiceCreateMetric) | **POST** /api/v3/compliance/metrics | Summary: Create metric. Description: Create a unique metric.
+[**reportsServiceCreateProgram**](ReportsServiceApi.md#reportsServiceCreateProgram) | **POST** /api/v3/compliance/programs | Summary: Create Program. Description: Create a unique Program.
 [**reportsServiceCreateReport**](ReportsServiceApi.md#reportsServiceCreateReport) | **POST** /api/v3/reports | Summary: Create report Description: Create custom report based on provided properties.
+[**reportsServiceCreateRequirement**](ReportsServiceApi.md#reportsServiceCreateRequirement) | **POST** /api/v3/compliance/requirements | Summary: Create Requirement. Description: Create a unique Requirement.
 [**reportsServiceCreateVariant**](ReportsServiceApi.md#reportsServiceCreateVariant) | **POST** /api/v3/reports/variants | Summary: Create a variant Description: Create a variant for reports
 [**reportsServiceDeleteCategory**](ReportsServiceApi.md#reportsServiceDeleteCategory) | **DELETE** /api/v3/reports/categories | Summary: Delete a category Description: Delete a report category
 [**reportsServiceDeleteChart**](ReportsServiceApi.md#reportsServiceDeleteChart) | **DELETE** /api/v3/charts/{chart_id} | Summary: Delete chart Description: Delete a custom chart.
 [**reportsServiceDeleteChartTemplatev2**](ReportsServiceApi.md#reportsServiceDeleteChartTemplatev2) | **DELETE** /api/v3/flex-charts/templates/{template_id} | Summary: Delete chart template v2 Description: Delete a custom VEGA chart template.
 [**reportsServiceDeleteChartv2**](ReportsServiceApi.md#reportsServiceDeleteChartv2) | **DELETE** /api/v3/flex-charts/{chart_id} | Summary: Delete chart v2 Description: Delete a custom VEGA chart.
+[**reportsServiceDeleteControl**](ReportsServiceApi.md#reportsServiceDeleteControl) | **DELETE** /api/v3/compliance/controls/{control_id} | Summary: Delete Control Description: Delete a Control.
 [**reportsServiceDeleteFieldsByCategory**](ReportsServiceApi.md#reportsServiceDeleteFieldsByCategory) | **DELETE** /api/v3/reports/fields | Summary - Delete fields by category Description: Delete category fields based on provided properties.
+[**reportsServiceDeleteGrade**](ReportsServiceApi.md#reportsServiceDeleteGrade) | **DELETE** /api/v3/compliance/grades/{grade_id} | Summary: Delete Grade Description: Delete a Grade.
 [**reportsServiceDeleteJoin**](ReportsServiceApi.md#reportsServiceDeleteJoin) | **DELETE** /api/v3/reports/categories/joins/{join_id} | Summary: Delete a join Description: Delete a custom join
+[**reportsServiceDeleteMeasure**](ReportsServiceApi.md#reportsServiceDeleteMeasure) | **DELETE** /api/v3/compliance/measures/{measure_id} | Summary: Delete measure Description: Delete a measure.
+[**reportsServiceDeleteMetric**](ReportsServiceApi.md#reportsServiceDeleteMetric) | **DELETE** /api/v3/compliance/metrics/{metric_id} | Summary: Delete metric Description: Delete a metric.
+[**reportsServiceDeleteProgram**](ReportsServiceApi.md#reportsServiceDeleteProgram) | **DELETE** /api/v3/compliance/programs/{program_id} | Summary: Delete Program Description: Delete a Program.
 [**reportsServiceDeleteReport**](ReportsServiceApi.md#reportsServiceDeleteReport) | **DELETE** /api/v3/reports/{report_id} | Summary: Delete report Description: Delete a custom report.
+[**reportsServiceDeleteRequirement**](ReportsServiceApi.md#reportsServiceDeleteRequirement) | **DELETE** /api/v3/compliance/requirements/{requirement_id} | Summary: Delete Requirement Description: Delete a Requirement.
 [**reportsServiceDeleteVariant**](ReportsServiceApi.md#reportsServiceDeleteVariant) | **DELETE** /api/v3/reports/variants/{variant_id} | Summary: Delete a variant Description: Delete a variant
 [**reportsServiceGetCategories**](ReportsServiceApi.md#reportsServiceGetCategories) | **GET** /api/v3/reports/categories | Summary:  Get all available report categories. Description: Get all category related fields or all possible fields.
 [**reportsServiceGetChartSettings**](ReportsServiceApi.md#reportsServiceGetChartSettings) | **GET** /api/v3/charts | Summary: Get chart settings Description: Get a custom chart based on provided report id.
 [**reportsServiceGetChartSettingsv2**](ReportsServiceApi.md#reportsServiceGetChartSettingsv2) | **GET** /api/v3/flex-charts | Summary: Get chart settings v2 Description: Get a custom VEGA chart based on provided report id.
 [**reportsServiceGetChartTemplatesv2**](ReportsServiceApi.md#reportsServiceGetChartTemplatesv2) | **GET** /api/v3/flex-charts/templates | Summary: Get chart template v2 Description: Get all custom VEGA chart templates.
+[**reportsServiceGetControls**](ReportsServiceApi.md#reportsServiceGetControls) | **GET** /api/v3/compliance/controls | Summary: Get controls Description: Get a list of controls with all data.
 [**reportsServiceGetFieldsByCategories**](ReportsServiceApi.md#reportsServiceGetFieldsByCategories) | **GET** /api/v3/reports/fields/categories | Summary: Get fields by categories Description: Get all category related fields or all possible fields based on a list of categories.
 [**reportsServiceGetFieldsByCategory**](ReportsServiceApi.md#reportsServiceGetFieldsByCategory) | **GET** /api/v3/reports/fields | Summary: Get fields by category Description: Get all category related fields or all possible fields.
+[**reportsServiceGetGrades**](ReportsServiceApi.md#reportsServiceGetGrades) | **GET** /api/v3/compliance/grades | Summary: Get grades Description: Get a list of grades with all data.
 [**reportsServiceGetJoins**](ReportsServiceApi.md#reportsServiceGetJoins) | **GET** /api/v3/reports/categories/joins | Summary: Get all joins Description: Get all custom joins.
+[**reportsServiceGetMeasures**](ReportsServiceApi.md#reportsServiceGetMeasures) | **GET** /api/v3/compliance/measures | Summary: Get measures Description: Get a list of measures with all data.
+[**reportsServiceGetMetrics**](ReportsServiceApi.md#reportsServiceGetMetrics) | **GET** /api/v3/compliance/metrics | Summary: Get metrics Description: Get a list of metrics with all data.
+[**reportsServiceGetPrograms**](ReportsServiceApi.md#reportsServiceGetPrograms) | **GET** /api/v3/compliance/programs | Summary: Get controls Description: Get a list of controls with all data.
 [**reportsServiceGetQueryByReportDefinition**](ReportsServiceApi.md#reportsServiceGetQueryByReportDefinition) | **POST** /api/v3/reports/query/definition | Summary: Get query by report definition Description: Get query by report definition.
 [**reportsServiceGetQueryByReportID**](ReportsServiceApi.md#reportsServiceGetQueryByReportID) | **POST** /api/v3/reports/query/id | Summary: Get query by report ID Description: Get query by report ID.
 [**reportsServiceGetReportDefinition**](ReportsServiceApi.md#reportsServiceGetReportDefinition) | **GET** /api/v3/reports/{report_id}/definition | Summary: Get report definition Description: Get report definition.
@@ -20651,16 +21671,24 @@ Method | HTTP request | Description
 [**reportsServiceGetReports**](ReportsServiceApi.md#reportsServiceGetReports) | **GET** /api/v3/reports | Summary: Get reports Description: Get reports list.
 [**reportsServiceGetReportsForJoin**](ReportsServiceApi.md#reportsServiceGetReportsForJoin) | **GET** /api/v3/reports/categories/joins/{join_id}/reports | Summary: Get the reports that use a join Description: Get the reports that use a join and the headers that are imported by the reports using the join
 [**reportsServiceGetReportsTags**](ReportsServiceApi.md#reportsServiceGetReportsTags) | **GET** /api/v3/reports/tags | Summary: Get reports tags Description: Get all report distinct tags.
+[**reportsServiceGetRequirements**](ReportsServiceApi.md#reportsServiceGetRequirements) | **GET** /api/v3/compliance/requirements | Summary: Get requirements Description: Get a list of requirements with all data.
 [**reportsServiceGetVariant**](ReportsServiceApi.md#reportsServiceGetVariant) | **GET** /api/v3/reports/variants/{variant_id} | Summary: Get a variant Description: Get a given variant
 [**reportsServiceGetVariants**](ReportsServiceApi.md#reportsServiceGetVariants) | **GET** /api/v3/reports/variants | Summary: Get all variants Description: Get all variants in reports
 [**reportsServicePartialChartUpdate**](ReportsServiceApi.md#reportsServicePartialChartUpdate) | **PATCH** /api/v3/charts/{chart_id} | Summary: Partial chart update Description: Update a custom chart with partial information.
 [**reportsServicePartialReportUpdate**](ReportsServiceApi.md#reportsServicePartialReportUpdate) | **PATCH** /api/v3/reports/{report_id} | Summary: Partial report update Description: Update a custom report with partial information.
+[**reportsServiceRunGrades**](ReportsServiceApi.md#reportsServiceRunGrades) | **POST** /api/v3/compliance/grades/run | Summary: Refresh metrics via grades. Description: Refresh metrics via grades.
 [**reportsServiceRunVariantOperation**](ReportsServiceApi.md#reportsServiceRunVariantOperation) | **POST** /api/v3/reports/variants/run | Summary: Run a variant Description: Run the operations in a variant
 [**reportsServiceTranspose**](ReportsServiceApi.md#reportsServiceTranspose) | **POST** /api/v3/reports/transpose | Summary: Transpose Description: Return the corresponding full sql data.
 [**reportsServiceUpdateChart**](ReportsServiceApi.md#reportsServiceUpdateChart) | **PUT** /api/v3/charts/{chart_id} | Summary: Update chart Description: Update a custom chart.
 [**reportsServiceUpdateChartv2**](ReportsServiceApi.md#reportsServiceUpdateChartv2) | **PUT** /api/v3/flex-charts/{chart_id} | Summary: Update chart v2 Description: Update a custom VEGA chart.
+[**reportsServiceUpdateControl**](ReportsServiceApi.md#reportsServiceUpdateControl) | **PUT** /api/v3/compliance/controls/{control_id} | Summary: Update Control. Description: Update a Control.
+[**reportsServiceUpdateGrade**](ReportsServiceApi.md#reportsServiceUpdateGrade) | **PUT** /api/v3/compliance/grades/{grade_id} | Summary: Update Grade. Description: Update a Grade.
 [**reportsServiceUpdateJoin**](ReportsServiceApi.md#reportsServiceUpdateJoin) | **PUT** /api/v3/reports/categories/joins/{join_id} | Summary: Update a join Description: Update a custom join
+[**reportsServiceUpdateMeasure**](ReportsServiceApi.md#reportsServiceUpdateMeasure) | **PUT** /api/v3/compliance/measures/{measure_id} | Summary: Update measure. Description: Update a measure.
+[**reportsServiceUpdateMetric**](ReportsServiceApi.md#reportsServiceUpdateMetric) | **PUT** /api/v3/compliance/metrics/{metric_id} | Summary: Update metric. Description: Update a metric.
+[**reportsServiceUpdateProgram**](ReportsServiceApi.md#reportsServiceUpdateProgram) | **PUT** /api/v3/compliance/programs/{program_id} | Summary: Update Program. Description: Update a Program.
 [**reportsServiceUpdateReport**](ReportsServiceApi.md#reportsServiceUpdateReport) | **PUT** /api/v3/reports/{report_id} | Summary: Update report Description: Update a custom report.
+[**reportsServiceUpdateRequirement**](ReportsServiceApi.md#reportsServiceUpdateRequirement) | **PUT** /api/v3/compliance/requirements/{requirement_id} | Summary: Update Requirement. Description: Update a Requirement.
 [**reportsServiceUpdateVariantOverride**](ReportsServiceApi.md#reportsServiceUpdateVariantOverride) | **PUT** /api/v3/reports/variants/{variant_id} | Summary: Update a variant Description: Update a variant with a custom override
 
 
@@ -20935,6 +21963,92 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **reportsServiceCreateControl**
+> Reportsv3CreateControlResponse reportsServiceCreateControl(reportsv3CreateControlRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ReportsServiceApi(configuration);
+
+let body:.ReportsServiceApiReportsServiceCreateControlRequest = {
+  // Reportsv3CreateControlRequest
+  reportsv3CreateControlRequest: {
+    control: {
+      artifacts: [
+        {
+          artifactId: "artifactId_example",
+          createUserId: "createUserId_example",
+          createUserName: "createUserName_example",
+          dateCreated: new Date('1970-01-01T00:00:00.00Z'),
+          dateUpdated: new Date('1970-01-01T00:00:00.00Z'),
+          description: "description_example",
+          type: "ARTIFACT_UNKNOWN",
+          updateUserId: "updateUserId_example",
+          updateUserName: "updateUserName_example",
+        },
+      ],
+      controlCode: "controlCode_example",
+      controlId: 1,
+      createUserId: "createUserId_example",
+      createUserName: "createUserName_example",
+      createdByTemplate: true,
+      dateCreated: new Date('1970-01-01T00:00:00.00Z'),
+      dateUpdated: new Date('1970-01-01T00:00:00.00Z'),
+      programId: 1,
+      tags: [
+        "tags_example",
+      ],
+      templateId: "templateId_example",
+      theme: "theme_example",
+      title: "title_example",
+      updateUserId: "updateUserId_example",
+      updateUserName: "updateUserName_example",
+    },
+  },
+};
+
+apiInstance.reportsServiceCreateControl(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reportsv3CreateControlRequest** | **Reportsv3CreateControlRequest**|  |
+
+
+### Return type
+
+**Reportsv3CreateControlResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **reportsServiceCreateFieldsByCategory**
 > Reportsv3CreateFieldsByCategoryResponse reportsServiceCreateFieldsByCategory(reportsv3CreateFieldsByCategoryRequest)
 
@@ -21006,6 +22120,85 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **reportsServiceCreateGrade**
+> Reportsv3CreateGradeResponse reportsServiceCreateGrade(reportsv3CreateGradeRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ReportsServiceApi(configuration);
+
+let body:.ReportsServiceApiReportsServiceCreateGradeRequest = {
+  // Reportsv3CreateGradeRequest
+  reportsv3CreateGradeRequest: {
+    grade: {
+      controlId: 1,
+      createUserId: "createUserId_example",
+      createUserName: "createUserName_example",
+      dateCreated: new Date('1970-01-01T00:00:00.00Z'),
+      dateUpdated: new Date('1970-01-01T00:00:00.00Z'),
+      defaultScore: 1,
+      defaultScoreName: "defaultScoreName_example",
+      description: "description_example",
+      gradeId: 1,
+      gradeThreshold: [
+        {
+          thresholdScore: 1,
+          thresholdScoreName: "thresholdScoreName_example",
+          thresholdValue: 3.14,
+        },
+      ],
+      isPercentage: true,
+      metricId: 1,
+      name: "name_example",
+      recommendation: "recommendation_example",
+      updateUserId: "updateUserId_example",
+      updateUserName: "updateUserName_example",
+    },
+  },
+};
+
+apiInstance.reportsServiceCreateGrade(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reportsv3CreateGradeRequest** | **Reportsv3CreateGradeRequest**|  |
+
+
+### Return type
+
+**Reportsv3CreateGradeResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **reportsServiceCreateJoin**
 > Reportsv3CreateJoinResponse reportsServiceCreateJoin(reportsv3CreateJoinRequest)
 
@@ -21056,6 +22249,201 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Reportsv3CreateJoinResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **reportsServiceCreateMeasure**
+> Reportsv3CreateMeasureResponse reportsServiceCreateMeasure(reportsv3CreateMeasureRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ReportsServiceApi(configuration);
+
+let body:.ReportsServiceApiReportsServiceCreateMeasureRequest = {
+  // Reportsv3CreateMeasureRequest
+  reportsv3CreateMeasureRequest: {
+    measure: {
+      column: {
+        aggregationType: "UNDEFINED_AGG_TYPE",
+        headerId: "headerId_example",
+      },
+      measureId: 1,
+      reportId: "reportId_example",
+    },
+  },
+};
+
+apiInstance.reportsServiceCreateMeasure(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reportsv3CreateMeasureRequest** | **Reportsv3CreateMeasureRequest**|  |
+
+
+### Return type
+
+**Reportsv3CreateMeasureResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **reportsServiceCreateMetric**
+> Reportsv3CreateMetricResponse reportsServiceCreateMetric(reportsv3CreateMetricRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ReportsServiceApi(configuration);
+
+let body:.ReportsServiceApiReportsServiceCreateMetricRequest = {
+  // Reportsv3CreateMetricRequest
+  reportsv3CreateMetricRequest: {
+    metric: {
+      column: {
+        aggregationType: "UNDEFINED_AGG_TYPE",
+        headerId: "headerId_example",
+      },
+      measureId: 1,
+      measureType: "SNAPSHOT",
+      metricId: 1,
+      metricType: "PERCENTAGE",
+      reportId: "reportId_example",
+    },
+  },
+};
+
+apiInstance.reportsServiceCreateMetric(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reportsv3CreateMetricRequest** | **Reportsv3CreateMetricRequest**|  |
+
+
+### Return type
+
+**Reportsv3CreateMetricResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **reportsServiceCreateProgram**
+> Reportsv3CreateProgramResponse reportsServiceCreateProgram(reportsv3CreateProgramRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ReportsServiceApi(configuration);
+
+let body:.ReportsServiceApiReportsServiceCreateProgramRequest = {
+  // Reportsv3CreateProgramRequest
+  reportsv3CreateProgramRequest: {
+    program: {
+      createUserId: "createUserId_example",
+      createUserName: "createUserName_example",
+      dateCreated: new Date('1970-01-01T00:00:00.00Z'),
+      dateUpdated: new Date('1970-01-01T00:00:00.00Z'),
+      programDescription: "programDescription_example",
+      programId: 1,
+      programTitle: "programTitle_example",
+      updateUserId: "updateUserId_example",
+      updateUserName: "updateUserName_example",
+    },
+  },
+};
+
+apiInstance.reportsServiceCreateProgram(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reportsv3CreateProgramRequest** | **Reportsv3CreateProgramRequest**|  |
+
+
+### Return type
+
+**Reportsv3CreateProgramResponse**
 
 ### Authorization
 
@@ -21244,6 +22632,75 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Reportsv3CreateReportResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **reportsServiceCreateRequirement**
+> Reportsv3CreateRequirementResponse reportsServiceCreateRequirement(reportsv3CreateRequirementRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ReportsServiceApi(configuration);
+
+let body:.ReportsServiceApiReportsServiceCreateRequirementRequest = {
+  // Reportsv3CreateRequirementRequest
+  reportsv3CreateRequirementRequest: {
+    requirement: {
+      controlId: 1,
+      createUserId: "createUserId_example",
+      createUserName: "createUserName_example",
+      dateCreated: new Date('1970-01-01T00:00:00.00Z'),
+      dateUpdated: new Date('1970-01-01T00:00:00.00Z'),
+      link: "link_example",
+      regulation: "regulation_example",
+      requirementCode: "requirementCode_example",
+      requirementDescription: "requirementDescription_example",
+      requirementId: 1,
+      updateUserId: "updateUserId_example",
+      updateUserName: "updateUserName_example",
+    },
+  },
+};
+
+apiInstance.reportsServiceCreateRequirement(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reportsv3CreateRequirementRequest** | **Reportsv3CreateRequirementRequest**|  |
+
+
+### Return type
+
+**Reportsv3CreateRequirementResponse**
 
 ### Authorization
 
@@ -21548,6 +23005,65 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **reportsServiceDeleteControl**
+> Reportsv3DeleteControlResponse reportsServiceDeleteControl(reportsv3DeleteControlRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ReportsServiceApi(configuration);
+
+let body:.ReportsServiceApiReportsServiceDeleteControlRequest = {
+  // number | The ID of the control to delete
+  controlId: 1,
+  // Reportsv3DeleteControlRequest
+  reportsv3DeleteControlRequest: {
+    controlId: 1,
+  },
+};
+
+apiInstance.reportsServiceDeleteControl(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reportsv3DeleteControlRequest** | **Reportsv3DeleteControlRequest**|  |
+ **controlId** | [**number**] | The ID of the control to delete | defaults to undefined
+
+
+### Return type
+
+**Reportsv3DeleteControlResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **reportsServiceDeleteFieldsByCategory**
 > Reportsv3DeleteFieldsByCategoryResponse reportsServiceDeleteFieldsByCategory()
 
@@ -21596,6 +23112,65 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **reportsServiceDeleteGrade**
+> Reportsv3DeleteGradeResponse reportsServiceDeleteGrade(reportsv3DeleteGradeRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ReportsServiceApi(configuration);
+
+let body:.ReportsServiceApiReportsServiceDeleteGradeRequest = {
+  // number | The id of the grade to be deleted.
+  gradeId: 1,
+  // Reportsv3DeleteGradeRequest
+  reportsv3DeleteGradeRequest: {
+    gradeId: 1,
+  },
+};
+
+apiInstance.reportsServiceDeleteGrade(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reportsv3DeleteGradeRequest** | **Reportsv3DeleteGradeRequest**|  |
+ **gradeId** | [**number**] | The id of the grade to be deleted. | defaults to undefined
+
+
+### Return type
+
+**Reportsv3DeleteGradeResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -21661,6 +23236,183 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **reportsServiceDeleteMeasure**
+> Reportsv3DeleteMeasureResponse reportsServiceDeleteMeasure(reportsv3DeleteMeasureRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ReportsServiceApi(configuration);
+
+let body:.ReportsServiceApiReportsServiceDeleteMeasureRequest = {
+  // number | The id of the measure to be deleted.
+  measureId: 1,
+  // Reportsv3DeleteMeasureRequest
+  reportsv3DeleteMeasureRequest: {
+    measureId: 1,
+  },
+};
+
+apiInstance.reportsServiceDeleteMeasure(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reportsv3DeleteMeasureRequest** | **Reportsv3DeleteMeasureRequest**|  |
+ **measureId** | [**number**] | The id of the measure to be deleted. | defaults to undefined
+
+
+### Return type
+
+**Reportsv3DeleteMeasureResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **reportsServiceDeleteMetric**
+> Reportsv3DeleteMetricResponse reportsServiceDeleteMetric(reportsv3DeleteMetricRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ReportsServiceApi(configuration);
+
+let body:.ReportsServiceApiReportsServiceDeleteMetricRequest = {
+  // number | The id of the metric to be deleted.
+  metricId: 1,
+  // Reportsv3DeleteMetricRequest
+  reportsv3DeleteMetricRequest: {
+    metricId: 1,
+  },
+};
+
+apiInstance.reportsServiceDeleteMetric(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reportsv3DeleteMetricRequest** | **Reportsv3DeleteMetricRequest**|  |
+ **metricId** | [**number**] | The id of the metric to be deleted. | defaults to undefined
+
+
+### Return type
+
+**Reportsv3DeleteMetricResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **reportsServiceDeleteProgram**
+> Reportsv3DeleteProgramResponse reportsServiceDeleteProgram(reportsv3DeleteProgramRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ReportsServiceApi(configuration);
+
+let body:.ReportsServiceApiReportsServiceDeleteProgramRequest = {
+  // number | The ID of the program to delete
+  programId: 1,
+  // Reportsv3DeleteProgramRequest
+  reportsv3DeleteProgramRequest: {
+    programId: 1,
+  },
+};
+
+apiInstance.reportsServiceDeleteProgram(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reportsv3DeleteProgramRequest** | **Reportsv3DeleteProgramRequest**|  |
+ **programId** | [**number**] | The ID of the program to delete | defaults to undefined
+
+
+### Return type
+
+**Reportsv3DeleteProgramResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **reportsServiceDeleteReport**
 > Reportsv3DeleteReportResponse reportsServiceDeleteReport()
 
@@ -21704,6 +23456,65 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **reportsServiceDeleteRequirement**
+> Reportsv3DeleteRequirementResponse reportsServiceDeleteRequirement(reportsv3DeleteRequirementRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ReportsServiceApi(configuration);
+
+let body:.ReportsServiceApiReportsServiceDeleteRequirementRequest = {
+  // number | The requirement to delete\'s ID
+  requirementId: 1,
+  // Reportsv3DeleteRequirementRequest
+  reportsv3DeleteRequirementRequest: {
+    requirementId: 1,
+  },
+};
+
+apiInstance.reportsServiceDeleteRequirement(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reportsv3DeleteRequirementRequest** | **Reportsv3DeleteRequirementRequest**|  |
+ **requirementId** | [**number**] | The requirement to delete\&#39;s ID | defaults to undefined
+
+
+### Return type
+
+**Reportsv3DeleteRequirementResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -21985,6 +23796,54 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **reportsServiceGetControls**
+> Reportsv3GetControlsResponse reportsServiceGetControls()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ReportsServiceApi(configuration);
+
+let body:any = {};
+
+apiInstance.reportsServiceGetControls(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+
+### Return type
+
+**Reportsv3GetControlsResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **reportsServiceGetFieldsByCategories**
 > Reportsv3GetFieldsByCategoriesResponse reportsServiceGetFieldsByCategories()
 
@@ -22101,6 +23960,54 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **reportsServiceGetGrades**
+> Reportsv3GetGradesResponse reportsServiceGetGrades()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ReportsServiceApi(configuration);
+
+let body:any = {};
+
+apiInstance.reportsServiceGetGrades(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+
+### Return type
+
+**Reportsv3GetGradesResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **reportsServiceGetJoins**
 > Reportsv3GetJoinsResponse reportsServiceGetJoins()
 
@@ -22136,6 +24043,150 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Reportsv3GetJoinsResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **reportsServiceGetMeasures**
+> Reportsv3GetMeasuresResponse reportsServiceGetMeasures()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ReportsServiceApi(configuration);
+
+let body:any = {};
+
+apiInstance.reportsServiceGetMeasures(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+
+### Return type
+
+**Reportsv3GetMeasuresResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **reportsServiceGetMetrics**
+> Reportsv3GetMetricsResponse reportsServiceGetMetrics()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ReportsServiceApi(configuration);
+
+let body:any = {};
+
+apiInstance.reportsServiceGetMetrics(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+
+### Return type
+
+**Reportsv3GetMetricsResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **reportsServiceGetPrograms**
+> Reportsv3GetProgramsResponse reportsServiceGetPrograms()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ReportsServiceApi(configuration);
+
+let body:any = {};
+
+apiInstance.reportsServiceGetPrograms(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+
+### Return type
+
+**Reportsv3GetProgramsResponse**
 
 ### Authorization
 
@@ -22877,6 +24928,54 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **reportsServiceGetRequirements**
+> Reportsv3GetRequirementsResponse reportsServiceGetRequirements()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ReportsServiceApi(configuration);
+
+let body:any = {};
+
+apiInstance.reportsServiceGetRequirements(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+
+### Return type
+
+**Reportsv3GetRequirementsResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **reportsServiceGetVariant**
 > Reportsv3GetVariantResponse reportsServiceGetVariant()
 
@@ -23101,6 +25200,64 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Reportsv3PartialReportUpdateResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **reportsServiceRunGrades**
+> Reportsv3RunGradesResponse reportsServiceRunGrades(reportsv3RunGradesRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ReportsServiceApi(configuration);
+
+let body:.ReportsServiceApiReportsServiceRunGradesRequest = {
+  // Reportsv3RunGradesRequest
+  reportsv3RunGradesRequest: {
+    fromDate: "fromDate_example",
+    gradeId: 1,
+    toDate: "toDate_example",
+  },
+};
+
+apiInstance.reportsServiceRunGrades(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reportsv3RunGradesRequest** | **Reportsv3RunGradesRequest**|  |
+
+
+### Return type
+
+**Reportsv3RunGradesResponse**
 
 ### Authorization
 
@@ -23415,6 +25572,179 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **reportsServiceUpdateControl**
+> Reportsv3UpdateControlResponse reportsServiceUpdateControl(reportsv3UpdateControlRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ReportsServiceApi(configuration);
+
+let body:.ReportsServiceApiReportsServiceUpdateControlRequest = {
+  // number | The id of the control that was updated.
+  controlId: 1,
+  // Reportsv3UpdateControlRequest
+  reportsv3UpdateControlRequest: {
+    control: {
+      artifacts: [
+        {
+          artifactId: "artifactId_example",
+          createUserId: "createUserId_example",
+          createUserName: "createUserName_example",
+          dateCreated: new Date('1970-01-01T00:00:00.00Z'),
+          dateUpdated: new Date('1970-01-01T00:00:00.00Z'),
+          description: "description_example",
+          type: "ARTIFACT_UNKNOWN",
+          updateUserId: "updateUserId_example",
+          updateUserName: "updateUserName_example",
+        },
+      ],
+      controlCode: "controlCode_example",
+      controlId: 1,
+      createUserId: "createUserId_example",
+      createUserName: "createUserName_example",
+      createdByTemplate: true,
+      dateCreated: new Date('1970-01-01T00:00:00.00Z'),
+      dateUpdated: new Date('1970-01-01T00:00:00.00Z'),
+      programId: 1,
+      tags: [
+        "tags_example",
+      ],
+      templateId: "templateId_example",
+      theme: "theme_example",
+      title: "title_example",
+      updateUserId: "updateUserId_example",
+      updateUserName: "updateUserName_example",
+    },
+    controlId: 1,
+  },
+};
+
+apiInstance.reportsServiceUpdateControl(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reportsv3UpdateControlRequest** | **Reportsv3UpdateControlRequest**|  |
+ **controlId** | [**number**] | The id of the control that was updated. | defaults to undefined
+
+
+### Return type
+
+**Reportsv3UpdateControlResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **reportsServiceUpdateGrade**
+> Reportsv3UpdateGradeResponse reportsServiceUpdateGrade(reportsv3UpdateGradeRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ReportsServiceApi(configuration);
+
+let body:.ReportsServiceApiReportsServiceUpdateGradeRequest = {
+  // number | The id of the grade that was updated.
+  gradeId: 1,
+  // Reportsv3UpdateGradeRequest
+  reportsv3UpdateGradeRequest: {
+    grade: {
+      controlId: 1,
+      createUserId: "createUserId_example",
+      createUserName: "createUserName_example",
+      dateCreated: new Date('1970-01-01T00:00:00.00Z'),
+      dateUpdated: new Date('1970-01-01T00:00:00.00Z'),
+      defaultScore: 1,
+      defaultScoreName: "defaultScoreName_example",
+      description: "description_example",
+      gradeId: 1,
+      gradeThreshold: [
+        {
+          thresholdScore: 1,
+          thresholdScoreName: "thresholdScoreName_example",
+          thresholdValue: 3.14,
+        },
+      ],
+      isPercentage: true,
+      metricId: 1,
+      name: "name_example",
+      recommendation: "recommendation_example",
+      updateUserId: "updateUserId_example",
+      updateUserName: "updateUserName_example",
+    },
+    gradeId: 1,
+  },
+};
+
+apiInstance.reportsServiceUpdateGrade(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reportsv3UpdateGradeRequest** | **Reportsv3UpdateGradeRequest**|  |
+ **gradeId** | [**number**] | The id of the grade that was updated. | defaults to undefined
+
+
+### Return type
+
+**Reportsv3UpdateGradeResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **reportsServiceUpdateJoin**
 > Reportsv3UpdateJoinResponse reportsServiceUpdateJoin(reportsv3UpdateJoinRequest)
 
@@ -23469,6 +25799,213 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Reportsv3UpdateJoinResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **reportsServiceUpdateMeasure**
+> Reportsv3UpdateMeasureResponse reportsServiceUpdateMeasure(reportsv3UpdateMeasureRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ReportsServiceApi(configuration);
+
+let body:.ReportsServiceApiReportsServiceUpdateMeasureRequest = {
+  // number | The id of the measure that was updated.
+  measureId: 1,
+  // Reportsv3UpdateMeasureRequest
+  reportsv3UpdateMeasureRequest: {
+    measure: {
+      column: {
+        aggregationType: "UNDEFINED_AGG_TYPE",
+        headerId: "headerId_example",
+      },
+      measureId: 1,
+      reportId: "reportId_example",
+    },
+    measureId: 1,
+  },
+};
+
+apiInstance.reportsServiceUpdateMeasure(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reportsv3UpdateMeasureRequest** | **Reportsv3UpdateMeasureRequest**|  |
+ **measureId** | [**number**] | The id of the measure that was updated. | defaults to undefined
+
+
+### Return type
+
+**Reportsv3UpdateMeasureResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **reportsServiceUpdateMetric**
+> Reportsv3UpdateMetricResponse reportsServiceUpdateMetric(reportsv3UpdateMetricRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ReportsServiceApi(configuration);
+
+let body:.ReportsServiceApiReportsServiceUpdateMetricRequest = {
+  // number | The id of the metric that was updated.
+  metricId: 1,
+  // Reportsv3UpdateMetricRequest
+  reportsv3UpdateMetricRequest: {
+    metric: {
+      column: {
+        aggregationType: "UNDEFINED_AGG_TYPE",
+        headerId: "headerId_example",
+      },
+      measureId: 1,
+      measureType: "SNAPSHOT",
+      metricId: 1,
+      metricType: "PERCENTAGE",
+      reportId: "reportId_example",
+    },
+    metricId: 1,
+  },
+};
+
+apiInstance.reportsServiceUpdateMetric(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reportsv3UpdateMetricRequest** | **Reportsv3UpdateMetricRequest**|  |
+ **metricId** | [**number**] | The id of the metric that was updated. | defaults to undefined
+
+
+### Return type
+
+**Reportsv3UpdateMetricResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **reportsServiceUpdateProgram**
+> Reportsv3UpdateProgramResponse reportsServiceUpdateProgram(reportsv3UpdateProgramRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ReportsServiceApi(configuration);
+
+let body:.ReportsServiceApiReportsServiceUpdateProgramRequest = {
+  // number | The id of the programs that was updated.
+  programId: 1,
+  // Reportsv3UpdateProgramRequest
+  reportsv3UpdateProgramRequest: {
+    program: {
+      createUserId: "createUserId_example",
+      createUserName: "createUserName_example",
+      dateCreated: new Date('1970-01-01T00:00:00.00Z'),
+      dateUpdated: new Date('1970-01-01T00:00:00.00Z'),
+      programDescription: "programDescription_example",
+      programId: 1,
+      programTitle: "programTitle_example",
+      updateUserId: "updateUserId_example",
+      updateUserName: "updateUserName_example",
+    },
+    programId: 1,
+  },
+};
+
+apiInstance.reportsServiceUpdateProgram(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reportsv3UpdateProgramRequest** | **Reportsv3UpdateProgramRequest**|  |
+ **programId** | [**number**] | The id of the programs that was updated. | defaults to undefined
+
+
+### Return type
+
+**Reportsv3UpdateProgramResponse**
 
 ### Authorization
 
@@ -23697,6 +26234,79 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **reportsServiceUpdateRequirement**
+> Reportsv3UpdateRequirementResponse reportsServiceUpdateRequirement(reportsv3UpdateRequirementRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ReportsServiceApi(configuration);
+
+let body:.ReportsServiceApiReportsServiceUpdateRequirementRequest = {
+  // number | The id of the requirements that was updated.
+  requirementId: 1,
+  // Reportsv3UpdateRequirementRequest
+  reportsv3UpdateRequirementRequest: {
+    requirement: {
+      controlId: 1,
+      createUserId: "createUserId_example",
+      createUserName: "createUserName_example",
+      dateCreated: new Date('1970-01-01T00:00:00.00Z'),
+      dateUpdated: new Date('1970-01-01T00:00:00.00Z'),
+      link: "link_example",
+      regulation: "regulation_example",
+      requirementCode: "requirementCode_example",
+      requirementDescription: "requirementDescription_example",
+      requirementId: 1,
+      updateUserId: "updateUserId_example",
+      updateUserName: "updateUserName_example",
+    },
+    requirementId: 1,
+  },
+};
+
+apiInstance.reportsServiceUpdateRequirement(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reportsv3UpdateRequirementRequest** | **Reportsv3UpdateRequirementRequest**|  |
+ **requirementId** | [**number**] | The id of the requirements that was updated. | defaults to undefined
+
+
+### Return type
+
+**Reportsv3UpdateRequirementResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **reportsServiceUpdateVariantOverride**
 > Reportsv3UpdateVariantOverrideResponse reportsServiceUpdateVariantOverride(reportsv3UpdateVariantOverrideRequest)
 
@@ -23741,2381 +26351,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Reportsv3UpdateVariantOverrideResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-
-
-
-
-# .ResourceControllerK8ServiceApi
-
-All URIs are relative to *http://localhost*
-
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**resourceControllerK8ServiceCreateController**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceCreateController) | **POST** /api/v3/edge_manager/controllers | CreateController - Add a new controller.
-[**resourceControllerK8ServiceCreateHeartBeat**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceCreateHeartBeat) | **POST** /api/v3/edge_manager/controllers/{controller_id}/heartbeat | CreateHeartBeat - Create a heartbeat for the controller.
-[**resourceControllerK8ServiceCreateHeartBeatEx**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceCreateHeartBeatEx) | **POST** /api/v3/edge_manager/controllers/{controller_id}/heartbeat_ex | CreateHeartBeatEx - Create a heartbeat for the controller with extended information.
-[**resourceControllerK8ServiceCreateJob**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceCreateJob) | **POST** /api/v3/edge_manager/jobs | //////////////////////////////////////////////////////////////// Interface to the controllers and apps api in the App-Manager microservice CreateJob - Create a job definition. Files and secrets contained within will also be created.
-[**resourceControllerK8ServiceCreateJobExecution**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceCreateJobExecution) | **POST** /api/v3/edge_manager/job_executions | CreateJobExecution - Create a job execution.
-[**resourceControllerK8ServiceCreateKeypair**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceCreateKeypair) | **POST** /api/v3/edge_manager/controllers/{controller_id}/keypair | CreateKeypair - Create a new keypair for the controller.
-[**resourceControllerK8ServiceDeleteController**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceDeleteController) | **DELETE** /api/v3/edge_manager/controllers/{controller_id} | DeleteController - Delete a controller.
-[**resourceControllerK8ServiceDeleteEdgeTenant**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceDeleteEdgeTenant) | **DELETE** /api/v3/edge_manager/tenants/{tenant_id} | DeleteEdgeTenant - deletes an edge tenant providing edge tenant id
-[**resourceControllerK8ServiceDeleteEdgeTenantRequest**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceDeleteEdgeTenantRequest) | **DELETE** /api/v3/edges | DeleteEdgeTenantRequest to deletes gi and tnt CR on edge
-[**resourceControllerK8ServiceDeleteJob**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceDeleteJob) | **DELETE** /api/v3/edge_manager/jobs/{job_id} | DeleteJob - Delete a job.
-[**resourceControllerK8ServiceDownloadControllerLogs**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceDownloadControllerLogs) | **POST** /api/v3/edge_manager/controllers/{controller_id}/logs | DownloadControllerLogs - Download the controller logs for a running controller.
-[**resourceControllerK8ServiceGetControllerApps**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetControllerApps) | **GET** /api/v3/edge_manager/controllers/{controller_id}/apps | GetControllerApps - Get the apps for the given controller.
-[**resourceControllerK8ServiceGetControllerCommands**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetControllerCommands) | **GET** /api/v3/edge_manager/controllers/{controller_id}/commands | GetControllerCommands - Get the commands for the controller to execute.
-[**resourceControllerK8ServiceGetControllerJobs**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetControllerJobs) | **GET** /api/v3/edge_manager/controllers/{controller_id}/jobs | GetControllerJobs - Get the jobs for the controller to execute.
-[**resourceControllerK8ServiceGetControllerStatus**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetControllerStatus) | **GET** /api/v3/edge_manager/controllers/{controller_id}/status | GetControllerStatus - Get the status for the given controller.
-[**resourceControllerK8ServiceGetControllers**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetControllers) | **GET** /api/v3/edge_manager/tenants/{tenant_id}/controllers | GetControllers - Get the controllers for the given tenant.
-[**resourceControllerK8ServiceGetControllersWithStatus**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetControllersWithStatus) | **GET** /api/v3/edge_manager/tenants/{tenant_id}/controller_status | GetControllersWithStatus - Get the controllers for the given tenant with computed status.
-[**resourceControllerK8ServiceGetJob**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetJob) | **GET** /api/v3/edge_manager/jobs/{job_id} | GetJob - Get the job.
-[**resourceControllerK8ServiceGetJobExecution**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetJobExecution) | **GET** /api/v3/edge_manager/job_executions/{jobexe_id} | GetJobExecution - Get a job execution.
-[**resourceControllerK8ServiceGetJobExecutions**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetJobExecutions) | **GET** /api/v3/edge_manager/jobs/{job_id}/executions | GetJobExecutions - Get the job executions.
-[**resourceControllerK8ServiceGetJobStatus**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetJobStatus) | **GET** /api/v3/edge_manager/jobs/{job_id}/status | GetJobStatus - Get the job\&#39;s status.
-[**resourceControllerK8ServiceGetTenantApp**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetTenantApp) | **GET** /api/v3/edge_manager/tenants/{tenant_id}/apps/{app_name} | GetTenantApp - Get a specific app for the given tenant.
-[**resourceControllerK8ServiceGetTenantApps**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetTenantApps) | **GET** /api/v3/edge_manager/tenants/{tenant_id}/apps | GetTenantApps - Get the apps for the given tenant.
-[**resourceControllerK8ServiceGetTenantJobs**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetTenantJobs) | **GET** /api/v3/edge_manager/tenants/{tenant_id}/jobs | GetTenantJobs - Get jobs for the given tenant.
-[**resourceControllerK8ServiceGetVersion**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetVersion) | **GET** /api/v3/edge_manager/system/version | GetVersion - Get the system version information for the service.
-[**resourceControllerK8ServiceInstallEdgeTenantRequest**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceInstallEdgeTenantRequest) | **POST** /api/v3/edges | InstallEdgeTenantRequest to Create gi and tnt CRs on edge
-[**resourceControllerK8ServiceQueryControllerLogs**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceQueryControllerLogs) | **POST** /api/v3/edge_manager/controllers/{controller_id}/logs/query | QueryControllerLogs - Query for the controller logs for a running controller.
-[**resourceControllerK8ServiceUpdateCommand**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateCommand) | **PUT** /api/v3/edge_manager/commands/{id} | UpdateCommand - Update the command.
-[**resourceControllerK8ServiceUpdateController**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateController) | **PUT** /api/v3/edge_manager/controllers/{id} | UpdateController - Update an existing controller.
-[**resourceControllerK8ServiceUpdateControllerStatus**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateControllerStatus) | **PUT** /api/v3/edge_manager/controllers/{id}/status | UpdateControllerStatus - Updates the status for the given controller.
-[**resourceControllerK8ServiceUpdateEdgeTenantRequest**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateEdgeTenantRequest) | **PATCH** /api/v3/edges/{edge_id} | UpdateEdgeTenantRequest to update gi and tnt CRs on edge
-[**resourceControllerK8ServiceUpdateJob**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateJob) | **PUT** /api/v3/edge_manager/jobs/{id} | UpdateJob - Update a job.
-[**resourceControllerK8ServiceUpdateJobExecution**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateJobExecution) | **PUT** /api/v3/edge_manager/job_executions/{id} | UpdateJobExecution - Update a job execution.
-[**resourceControllerK8ServiceUpdateJobStatus**](ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateJobStatus) | **PUT** /api/v3/edge_manager/jobs/{job_id}/status | UpdateJobStatus - Updates the status for the given Job.
-
-
-# **resourceControllerK8ServiceCreateController**
-> Resourcecontrollerk8v3Controller resourceControllerK8ServiceCreateController(resourcecontrollerk8v3CreateControllerRequest)
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceCreateControllerRequest = {
-  // Resourcecontrollerk8v3CreateControllerRequest
-  resourcecontrollerk8v3CreateControllerRequest: {
-    description: "description_example",
-    name: "name_example",
-    tenantId: "tenantId_example",
-  },
-};
-
-apiInstance.resourceControllerK8ServiceCreateController(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **resourcecontrollerk8v3CreateControllerRequest** | **Resourcecontrollerk8v3CreateControllerRequest**|  |
-
-
-### Return type
-
-**Resourcecontrollerk8v3Controller**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceCreateHeartBeat**
-> Resourcecontrollerk8v3CreateHeartBeatResponse resourceControllerK8ServiceCreateHeartBeat(resourcecontrollerk8v3CreateHeartBeatRequest)
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceCreateHeartBeatRequest = {
-  // string | The ID of the controller to invoke a heartbeat on.
-  controllerId: "controller_id_example",
-  // Resourcecontrollerk8v3CreateHeartBeatRequest
-  resourcecontrollerk8v3CreateHeartBeatRequest: {
-    controllerId: "controllerId_example",
-  },
-};
-
-apiInstance.resourceControllerK8ServiceCreateHeartBeat(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **resourcecontrollerk8v3CreateHeartBeatRequest** | **Resourcecontrollerk8v3CreateHeartBeatRequest**|  |
- **controllerId** | [**string**] | The ID of the controller to invoke a heartbeat on. | defaults to undefined
-
-
-### Return type
-
-**Resourcecontrollerk8v3CreateHeartBeatResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceCreateHeartBeatEx**
-> Resourcecontrollerk8v3CreateHeartBeatExResponse resourceControllerK8ServiceCreateHeartBeatEx(resourcecontrollerk8v3ControllerHeartbeat)
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceCreateHeartBeatExRequest = {
-  // string | Optional: controller id
-  controllerId: "controller_id_example",
-  // Resourcecontrollerk8v3ControllerHeartbeat
-  resourcecontrollerk8v3ControllerHeartbeat: {
-    capability: {
-      "key": true,
-    },
-    controllerId: "controllerId_example",
-    controllerVersion: {
-      build: "build_example",
-      major: "major_example",
-      micro: "micro_example",
-      minor: "minor_example",
-      version: "version_example",
-    },
-    resources: {
-      allocatable: {
-        "key": "key_example",
-      },
-      node: "node_example",
-      timestamp: "timestamp_example",
-      usage: {
-        "key": "key_example",
-      },
-      window: "window_example",
-    },
-  },
-};
-
-apiInstance.resourceControllerK8ServiceCreateHeartBeatEx(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **resourcecontrollerk8v3ControllerHeartbeat** | **Resourcecontrollerk8v3ControllerHeartbeat**|  |
- **controllerId** | [**string**] | Optional: controller id | defaults to undefined
-
-
-### Return type
-
-**Resourcecontrollerk8v3CreateHeartBeatExResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceCreateJob**
-> Resourcecontrollerk8v3Job resourceControllerK8ServiceCreateJob(resourcecontrollerk8v3Job)
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceCreateJobRequest = {
-  // Resourcecontrollerk8v3Job
-  resourcecontrollerk8v3Job: {
-    clusterRoleRules: [
-      {
-        apiGroups: [
-          "apiGroups_example",
-        ],
-        id: "id_example",
-        resources: [
-          "resources_example",
-        ],
-        verbs: [
-          "verbs_example",
-        ],
-      },
-    ],
-    command: [
-      "command_example",
-    ],
-    container: {
-      image: "image_example",
-      imageFullyQualified: true,
-      resources: {
-        limits: {
-          cpu: "cpu_example",
-          memory: "memory_example",
-        },
-        requests: {
-          cpu: "cpu_example",
-          memory: "memory_example",
-        },
-      },
-    },
-    controllerId: "controllerId_example",
-    created: "created_example",
-    cron: {
-      schedule: "schedule_example",
-    },
-    files: [
-      {
-        content: "content_example",
-        created: "created_example",
-        description: {
-          content: "content_example",
-          format: "format_example",
-        },
-        id: "id_example",
-        modified: "modified_example",
-        name: "name_example",
-        path: "path_example",
-        type: "type_example",
-      },
-    ],
-    id: "id_example",
-    labels: {
-      "key": "key_example",
-    },
-    lastExecution: {
-      details: "details_example",
-      ended: "ended_example",
-      id: "id_example",
-      jobId: "jobId_example",
-      modified: "modified_example",
-      name: "name_example",
-      started: "started_example",
-      status: "status_example",
-    },
-    modified: "modified_example",
-    name: "name_example",
-    roleRules: [
-      {
-        apiGroups: [
-          "apiGroups_example",
-        ],
-        id: "id_example",
-        resources: [
-          "resources_example",
-        ],
-        verbs: [
-          "verbs_example",
-        ],
-      },
-    ],
-    secretKey: "secretKey_example",
-    secrets: [
-      {
-        created: "created_example",
-        id: "id_example",
-        modified: "modified_example",
-        name: "name_example",
-        _protected: true,
-        value: "value_example",
-      },
-    ],
-    status: "status_example",
-  },
-};
-
-apiInstance.resourceControllerK8ServiceCreateJob(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **resourcecontrollerk8v3Job** | **Resourcecontrollerk8v3Job**|  |
-
-
-### Return type
-
-**Resourcecontrollerk8v3Job**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceCreateJobExecution**
-> Resourcecontrollerk8v3JobExecution resourceControllerK8ServiceCreateJobExecution(resourcecontrollerk8v3JobExecution)
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceCreateJobExecutionRequest = {
-  // Resourcecontrollerk8v3JobExecution
-  resourcecontrollerk8v3JobExecution: {
-    details: "details_example",
-    ended: "ended_example",
-    id: "id_example",
-    jobId: "jobId_example",
-    modified: "modified_example",
-    name: "name_example",
-    started: "started_example",
-    status: "status_example",
-  },
-};
-
-apiInstance.resourceControllerK8ServiceCreateJobExecution(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **resourcecontrollerk8v3JobExecution** | **Resourcecontrollerk8v3JobExecution**|  |
-
-
-### Return type
-
-**Resourcecontrollerk8v3JobExecution**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceCreateKeypair**
-> Resourcecontrollerk8v3CreateKeypairResponse resourceControllerK8ServiceCreateKeypair(resourcecontrollerk8v3CreateKeypairRequest)
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceCreateKeypairRequest = {
-  // string | The ID of the controller to get app tests for.
-  controllerId: "controller_id_example",
-  // Resourcecontrollerk8v3CreateKeypairRequest
-  resourcecontrollerk8v3CreateKeypairRequest: {
-    controllerId: "controllerId_example",
-  },
-};
-
-apiInstance.resourceControllerK8ServiceCreateKeypair(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **resourcecontrollerk8v3CreateKeypairRequest** | **Resourcecontrollerk8v3CreateKeypairRequest**|  |
- **controllerId** | [**string**] | The ID of the controller to get app tests for. | defaults to undefined
-
-
-### Return type
-
-**Resourcecontrollerk8v3CreateKeypairResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceDeleteController**
-> Resourcecontrollerk8v3DeleteControllerResponse resourceControllerK8ServiceDeleteController(resourcecontrollerk8v3DeleteControllerRequest)
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceDeleteControllerRequest = {
-  // string | The ID of the controller to get the status.
-  controllerId: "controller_id_example",
-  // Resourcecontrollerk8v3DeleteControllerRequest
-  resourcecontrollerk8v3DeleteControllerRequest: {
-    controllerId: "controllerId_example",
-  },
-};
-
-apiInstance.resourceControllerK8ServiceDeleteController(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **resourcecontrollerk8v3DeleteControllerRequest** | **Resourcecontrollerk8v3DeleteControllerRequest**|  |
- **controllerId** | [**string**] | The ID of the controller to get the status. | defaults to undefined
-
-
-### Return type
-
-**Resourcecontrollerk8v3DeleteControllerResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceDeleteEdgeTenant**
-> Resourcecontrollerk8v3DeleteEdgeTenantResponse resourceControllerK8ServiceDeleteEdgeTenant(resourcecontrollerk8v3DeleteEdgeTenantRequestApphost)
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceDeleteEdgeTenantRequest = {
-  // string | ID of the tenant to delete
-  tenantId: "tenant_id_example",
-  // Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost
-  resourcecontrollerk8v3DeleteEdgeTenantRequestApphost: {
-    tenantId: "tenantId_example",
-  },
-};
-
-apiInstance.resourceControllerK8ServiceDeleteEdgeTenant(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **resourcecontrollerk8v3DeleteEdgeTenantRequestApphost** | **Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost**|  |
- **tenantId** | [**string**] | ID of the tenant to delete | defaults to undefined
-
-
-### Return type
-
-**Resourcecontrollerk8v3DeleteEdgeTenantResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceDeleteEdgeTenantRequest**
-> Resourcecontrollerk8v3EdgeResourceResponse resourceControllerK8ServiceDeleteEdgeTenantRequest()
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceDeleteEdgeTenantRequestRequest = {
-  // string | Tenant ID for the redge request. (optional)
-  tenantId: "tenant_id_example",
-  // string | ID of the edge system. (optional)
-  edgeId: "edge_id_example",
-  // string | Edge gateway ID. (optional)
-  edgeName: "edge_name_example",
-};
-
-apiInstance.resourceControllerK8ServiceDeleteEdgeTenantRequest(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **tenantId** | [**string**] | Tenant ID for the redge request. | (optional) defaults to undefined
- **edgeId** | [**string**] | ID of the edge system. | (optional) defaults to undefined
- **edgeName** | [**string**] | Edge gateway ID. | (optional) defaults to undefined
-
-
-### Return type
-
-**Resourcecontrollerk8v3EdgeResourceResponse**
-
-### Authorization
-
-[ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceDeleteJob**
-> Resourcecontrollerk8v3DeleteJobResponse resourceControllerK8ServiceDeleteJob(resourcecontrollerk8v3DeleteJobRequest)
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceDeleteJobRequest = {
-  // string | ID of the job that needs to be deleted.
-  jobId: "job_id_example",
-  // Resourcecontrollerk8v3DeleteJobRequest
-  resourcecontrollerk8v3DeleteJobRequest: {
-    jobId: "jobId_example",
-  },
-};
-
-apiInstance.resourceControllerK8ServiceDeleteJob(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **resourcecontrollerk8v3DeleteJobRequest** | **Resourcecontrollerk8v3DeleteJobRequest**|  |
- **jobId** | [**string**] | ID of the job that needs to be deleted. | defaults to undefined
-
-
-### Return type
-
-**Resourcecontrollerk8v3DeleteJobResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceDownloadControllerLogs**
-> Resourcecontrollerk8v3DownloadControllerLogsResponse resourceControllerK8ServiceDownloadControllerLogs(resourcecontrollerk8v3DownloadControllerLogsRequest)
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceDownloadControllerLogsRequest = {
-  // string | The ID of the controller to download logs for.
-  controllerId: "controller_id_example",
-  // Resourcecontrollerk8v3DownloadControllerLogsRequest
-  resourcecontrollerk8v3DownloadControllerLogsRequest: {
-    controllerId: "controllerId_example",
-    endDate: "endDate_example",
-    identifier: "identifier_example",
-    previous: true,
-    startDate: "startDate_example",
-  },
-};
-
-apiInstance.resourceControllerK8ServiceDownloadControllerLogs(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **resourcecontrollerk8v3DownloadControllerLogsRequest** | **Resourcecontrollerk8v3DownloadControllerLogsRequest**|  |
- **controllerId** | [**string**] | The ID of the controller to download logs for. | defaults to undefined
-
-
-### Return type
-
-**Resourcecontrollerk8v3DownloadControllerLogsResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceGetControllerApps**
-> Resourcecontrollerk8v3GetControllerAppsResponse resourceControllerK8ServiceGetControllerApps()
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceGetControllerAppsRequest = {
-  // string | The ID of the controller to get apps for.
-  controllerId: "controller_id_example",
-  // string | Only get the apps if any were modified since the given date. (optional)
-  modifiedSince: "modified_since_example",
-};
-
-apiInstance.resourceControllerK8ServiceGetControllerApps(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **controllerId** | [**string**] | The ID of the controller to get apps for. | defaults to undefined
- **modifiedSince** | [**string**] | Only get the apps if any were modified since the given date. | (optional) defaults to undefined
-
-
-### Return type
-
-**Resourcecontrollerk8v3GetControllerAppsResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceGetControllerCommands**
-> Resourcecontrollerk8v3GetControllerCommandsResponse resourceControllerK8ServiceGetControllerCommands()
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceGetControllerCommandsRequest = {
-  // string | The ID of the controller to get commands for.
-  controllerId: "controller_id_example",
-};
-
-apiInstance.resourceControllerK8ServiceGetControllerCommands(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **controllerId** | [**string**] | The ID of the controller to get commands for. | defaults to undefined
-
-
-### Return type
-
-**Resourcecontrollerk8v3GetControllerCommandsResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceGetControllerJobs**
-> Resourcecontrollerk8v3GetControllerJobsResponse resourceControllerK8ServiceGetControllerJobs()
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceGetControllerJobsRequest = {
-  // string | The ID of the controller to get jobs for.
-  controllerId: "controller_id_example",
-  // string | Optional: Only get the jobs if any were modified since the given date. (optional)
-  modifiedSince: "modified_since_example",
-};
-
-apiInstance.resourceControllerK8ServiceGetControllerJobs(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **controllerId** | [**string**] | The ID of the controller to get jobs for. | defaults to undefined
- **modifiedSince** | [**string**] | Optional: Only get the jobs if any were modified since the given date. | (optional) defaults to undefined
-
-
-### Return type
-
-**Resourcecontrollerk8v3GetControllerJobsResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceGetControllerStatus**
-> Resourcecontrollerk8v3ControllerStatus resourceControllerK8ServiceGetControllerStatus()
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceGetControllerStatusRequest = {
-  // string | The ID of the controller to get the status.
-  controllerId: "controller_id_example",
-};
-
-apiInstance.resourceControllerK8ServiceGetControllerStatus(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **controllerId** | [**string**] | The ID of the controller to get the status. | defaults to undefined
-
-
-### Return type
-
-**Resourcecontrollerk8v3ControllerStatus**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceGetControllers**
-> Resourcecontrollerk8v3GetControllersResponse resourceControllerK8ServiceGetControllers()
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceGetControllersRequest = {
-  // string | The ID of the tenant to get controllers for.
-  tenantId: "tenant_id_example",
-  // boolean | Used to indicate the caller wants the local controller. (optional)
-  wantLocal: true,
-};
-
-apiInstance.resourceControllerK8ServiceGetControllers(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **tenantId** | [**string**] | The ID of the tenant to get controllers for. | defaults to undefined
- **wantLocal** | [**boolean**] | Used to indicate the caller wants the local controller. | (optional) defaults to undefined
-
-
-### Return type
-
-**Resourcecontrollerk8v3GetControllersResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceGetControllersWithStatus**
-> Resourcecontrollerk8v3GetControllersWithStatusResponse resourceControllerK8ServiceGetControllersWithStatus()
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceGetControllersWithStatusRequest = {
-  // string | The ID of the tenant to get controllers for.
-  tenantId: "tenant_id_example",
-  // boolean | Used to indicate the caller wants the local controller. (optional)
-  wantLocal: true,
-  // string | \"ALL\": for getting all controllers; <controller_id>: for getting single controller. (optional)
-  controllerId: "controller_id_example",
-};
-
-apiInstance.resourceControllerK8ServiceGetControllersWithStatus(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **tenantId** | [**string**] | The ID of the tenant to get controllers for. | defaults to undefined
- **wantLocal** | [**boolean**] | Used to indicate the caller wants the local controller. | (optional) defaults to undefined
- **controllerId** | [**string**] | \&quot;ALL\&quot;: for getting all controllers; &lt;controller_id&gt;: for getting single controller. | (optional) defaults to undefined
-
-
-### Return type
-
-**Resourcecontrollerk8v3GetControllersWithStatusResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceGetJob**
-> Resourcecontrollerk8v3Job resourceControllerK8ServiceGetJob()
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceGetJobRequest = {
-  // string | The ID of the job to get.
-  jobId: "job_id_example",
-  // boolean | Optional: True to return secret values, false otherwise. (optional)
-  wantSecretValues: true,
-};
-
-apiInstance.resourceControllerK8ServiceGetJob(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **jobId** | [**string**] | The ID of the job to get. | defaults to undefined
- **wantSecretValues** | [**boolean**] | Optional: True to return secret values, false otherwise. | (optional) defaults to undefined
-
-
-### Return type
-
-**Resourcecontrollerk8v3Job**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceGetJobExecution**
-> Resourcecontrollerk8v3JobExecution resourceControllerK8ServiceGetJobExecution()
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceGetJobExecutionRequest = {
-  // string | The ID of the job execution to get.
-  jobexeId: "jobexe_id_example",
-};
-
-apiInstance.resourceControllerK8ServiceGetJobExecution(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **jobexeId** | [**string**] | The ID of the job execution to get. | defaults to undefined
-
-
-### Return type
-
-**Resourcecontrollerk8v3JobExecution**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceGetJobExecutions**
-> Resourcecontrollerk8v3GetJobExecutionsResponse resourceControllerK8ServiceGetJobExecutions()
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceGetJobExecutionsRequest = {
-  // string | The ID of the job to get status.
-  jobId: "job_id_example",
-};
-
-apiInstance.resourceControllerK8ServiceGetJobExecutions(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **jobId** | [**string**] | The ID of the job to get status. | defaults to undefined
-
-
-### Return type
-
-**Resourcecontrollerk8v3GetJobExecutionsResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceGetJobStatus**
-> Resourcecontrollerk8v3JobStatusDTO resourceControllerK8ServiceGetJobStatus()
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceGetJobStatusRequest = {
-  // string | The ID of the job to get status.
-  jobId: "job_id_example",
-};
-
-apiInstance.resourceControllerK8ServiceGetJobStatus(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **jobId** | [**string**] | The ID of the job to get status. | defaults to undefined
-
-
-### Return type
-
-**Resourcecontrollerk8v3JobStatusDTO**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceGetTenantApp**
-> Resourcecontrollerk8v3App resourceControllerK8ServiceGetTenantApp()
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceGetTenantAppRequest = {
-  // string | The ID of the tenant to get apps for.
-  tenantId: "tenant_id_example",
-  // string | The name of the app to get.
-  appName: "app_name_example",
-  // string | Optional: specify a return level for the data. This will control the amount of data returned. (optional)
-  returnLevel: "return_level_example",
-};
-
-apiInstance.resourceControllerK8ServiceGetTenantApp(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **tenantId** | [**string**] | The ID of the tenant to get apps for. | defaults to undefined
- **appName** | [**string**] | The name of the app to get. | defaults to undefined
- **returnLevel** | [**string**] | Optional: specify a return level for the data. This will control the amount of data returned. | (optional) defaults to undefined
-
-
-### Return type
-
-**Resourcecontrollerk8v3App**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceGetTenantApps**
-> Resourcecontrollerk8v3GetTenantAppsResponse resourceControllerK8ServiceGetTenantApps()
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceGetTenantAppsRequest = {
-  // string | The ID of the tenant to get apps for.
-  tenantId: "tenant_id_example",
-  // string | Optional: specify a return level for the data. This will control the amount of data returned. (optional)
-  returnLevel: "return_level_example",
-};
-
-apiInstance.resourceControllerK8ServiceGetTenantApps(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **tenantId** | [**string**] | The ID of the tenant to get apps for. | defaults to undefined
- **returnLevel** | [**string**] | Optional: specify a return level for the data. This will control the amount of data returned. | (optional) defaults to undefined
-
-
-### Return type
-
-**Resourcecontrollerk8v3GetTenantAppsResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceGetTenantJobs**
-> Resourcecontrollerk8v3GetTenantJobsResponse resourceControllerK8ServiceGetTenantJobs()
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceGetTenantJobsRequest = {
-  // string | The ID of the tenant to get jobs for.
-  tenantId: "tenant_id_example",
-};
-
-apiInstance.resourceControllerK8ServiceGetTenantJobs(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **tenantId** | [**string**] | The ID of the tenant to get jobs for. | defaults to undefined
-
-
-### Return type
-
-**Resourcecontrollerk8v3GetTenantJobsResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceGetVersion**
-> Resourcecontrollerk8v3Version resourceControllerK8ServiceGetVersion()
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:any = {};
-
-apiInstance.resourceControllerK8ServiceGetVersion(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-This endpoint does not need any parameter.
-
-
-### Return type
-
-**Resourcecontrollerk8v3Version**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceInstallEdgeTenantRequest**
-> Resourcecontrollerk8v3EdgeResourceResponse resourceControllerK8ServiceInstallEdgeTenantRequest(resourcecontrollerk8v3EdgeTenantRequest)
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceInstallEdgeTenantRequestRequest = {
-  // Resourcecontrollerk8v3EdgeTenantRequest
-  resourcecontrollerk8v3EdgeTenantRequest: {
-    edgeId: "edgeId_example",
-    edgeName: "edgeName_example",
-    edgeVersion: "edgeVersion_example",
-    hostname: "hostname_example",
-    licenseType: "licenseType_example",
-    rsyslog: "rsyslog_example",
-    size: "size_example",
-    storageClassName: "storageClassName_example",
-    storageClassNameRwo: "storageClassNameRwo_example",
-    tenantId: "tenantId_example",
-  },
-};
-
-apiInstance.resourceControllerK8ServiceInstallEdgeTenantRequest(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **resourcecontrollerk8v3EdgeTenantRequest** | **Resourcecontrollerk8v3EdgeTenantRequest**|  |
-
-
-### Return type
-
-**Resourcecontrollerk8v3EdgeResourceResponse**
-
-### Authorization
-
-[ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceQueryControllerLogs**
-> Resourcecontrollerk8v3QueryControllerLogsResponse resourceControllerK8ServiceQueryControllerLogs(resourcecontrollerk8v3QueryControllerLogsRequest)
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceQueryControllerLogsRequest = {
-  // string | The ID of the controller to get logs for.
-  controllerId: "controller_id_example",
-  // Resourcecontrollerk8v3QueryControllerLogsRequest
-  resourcecontrollerk8v3QueryControllerLogsRequest: {
-    controllerId: "controllerId_example",
-    queryLogs: {
-      endDate: "endDate_example",
-      previous: true,
-      startDate: "startDate_example",
-    },
-  },
-};
-
-apiInstance.resourceControllerK8ServiceQueryControllerLogs(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **resourcecontrollerk8v3QueryControllerLogsRequest** | **Resourcecontrollerk8v3QueryControllerLogsRequest**|  |
- **controllerId** | [**string**] | The ID of the controller to get logs for. | defaults to undefined
-
-
-### Return type
-
-**Resourcecontrollerk8v3QueryControllerLogsResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceUpdateCommand**
-> Resourcecontrollerk8v3ControllerCommand resourceControllerK8ServiceUpdateCommand(resourcecontrollerk8v3ControllerCommand)
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateCommandRequest = {
-  // string | The ID of the command.
-  id: "id_example",
-  // Resourcecontrollerk8v3ControllerCommand
-  resourcecontrollerk8v3ControllerCommand: {
-    args: {},
-    created: "created_example",
-    id: "id_example",
-    modified: "modified_example",
-    result: "result_example",
-    status: "status_example",
-    type: "type_example",
-  },
-};
-
-apiInstance.resourceControllerK8ServiceUpdateCommand(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **resourcecontrollerk8v3ControllerCommand** | **Resourcecontrollerk8v3ControllerCommand**|  |
- **id** | [**string**] | The ID of the command. | defaults to undefined
-
-
-### Return type
-
-**Resourcecontrollerk8v3ControllerCommand**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceUpdateController**
-> Resourcecontrollerk8v3Controller resourceControllerK8ServiceUpdateController(resourcecontrollerk8v3Controller)
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateControllerRequest = {
-  // string | Optional: The internal ID of the controller.
-  id: "id_example",
-  // Resourcecontrollerk8v3Controller
-  resourcecontrollerk8v3Controller: {
-    appIds: [
-      "appIds_example",
-    ],
-    apps: [
-      {
-        container: {
-          image: "image_example",
-          imageFullyQualified: true,
-          resources: {
-            limits: {
-              cpu: "cpu_example",
-              memory: "memory_example",
-            },
-            requests: {
-              cpu: "cpu_example",
-              memory: "memory_example",
-            },
-          },
-        },
-        created: "created_example",
-        deployment: {
-          controllerId: "controllerId_example",
-          details: "details_example",
-          modified: "modified_example",
-          replicas: 1,
-          status: "status_example",
-        },
-        emptyDir: "emptyDir_example",
-        fileIds: [
-          "fileIds_example",
-        ],
-        files: [
-          {
-            appId: "appId_example",
-            content: "content_example",
-            created: "created_example",
-            description: {
-              content: "content_example",
-              format: "format_example",
-            },
-            id: "id_example",
-            mimeType: "mimeType_example",
-            modified: "modified_example",
-            name: "name_example",
-            path: "path_example",
-            restartApp: true,
-          },
-        ],
-        hpa: {
-          maxReplicas: "maxReplicas_example",
-          minReplicas: "minReplicas_example",
-          targetCpuUtilizationPercentage: "targetCpuUtilizationPercentage_example",
-        },
-        id: "id_example",
-        initContainers: [
-          {
-            command: [
-              "command_example",
-            ],
-            image: "image_example",
-            name: "name_example",
-          },
-        ],
-        modified: "modified_example",
-        name: "name_example",
-        secrets: [
-          {
-            appId: "appId_example",
-            created: "created_example",
-            id: "id_example",
-            modified: "modified_example",
-            name: "name_example",
-            _protected: true,
-            value: "value_example",
-          },
-        ],
-        status: "status_example",
-        tenantId: "tenantId_example",
-        tenantUuid: "tenantUuid_example",
-      },
-    ],
-    capability: {
-      "key": true,
-    },
-    created: "created_example",
-    description: {
-      content: "content_example",
-      format: "format_example",
-    },
-    id: "id_example",
-    keypair: {
-      _private: "_private_example",
-    },
-    lastHeartbeat: "lastHeartbeat_example",
-    local: true,
-    modified: "modified_example",
-    name: "name_example",
-    resources: {
-      allocatable: {
-        "key": "key_example",
-      },
-      node: "node_example",
-      timestamp: "timestamp_example",
-      usage: {
-        "key": "key_example",
-      },
-      window: "window_example",
-    },
-    sinceLastHeartbeat: "sinceLastHeartbeat_example",
-    status: "status_example",
-    tenantId: "tenantId_example",
-    tenantUuid: "tenantUuid_example",
-    version: {
-      build: "build_example",
-      major: "major_example",
-      micro: "micro_example",
-      minor: "minor_example",
-      version: "version_example",
-    },
-  },
-};
-
-apiInstance.resourceControllerK8ServiceUpdateController(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **resourcecontrollerk8v3Controller** | **Resourcecontrollerk8v3Controller**|  |
- **id** | [**string**] | Optional: The internal ID of the controller. | defaults to undefined
-
-
-### Return type
-
-**Resourcecontrollerk8v3Controller**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceUpdateControllerStatus**
-> Resourcecontrollerk8v3ControllerStatus resourceControllerK8ServiceUpdateControllerStatus(resourcecontrollerk8v3ControllerStatus)
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateControllerStatusRequest = {
-  // string | The internal ID of the controller.
-  id: "id_example",
-  // Resourcecontrollerk8v3ControllerStatus
-  resourcecontrollerk8v3ControllerStatus: {
-    id: "id_example",
-    modified: "modified_example",
-    status: "status_example",
-    version: {
-      build: "build_example",
-      major: "major_example",
-      micro: "micro_example",
-      minor: "minor_example",
-      version: "version_example",
-    },
-  },
-};
-
-apiInstance.resourceControllerK8ServiceUpdateControllerStatus(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **resourcecontrollerk8v3ControllerStatus** | **Resourcecontrollerk8v3ControllerStatus**|  |
- **id** | [**string**] | The internal ID of the controller. | defaults to undefined
-
-
-### Return type
-
-**Resourcecontrollerk8v3ControllerStatus**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceUpdateEdgeTenantRequest**
-> Resourcecontrollerk8v3EdgeResourceResponse resourceControllerK8ServiceUpdateEdgeTenantRequest(resourcecontrollerk8v3EdgeTenantRequest)
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateEdgeTenantRequestRequest = {
-  // string | ID of the edge system
-  edgeId: "edge_id_example",
-  // Resourcecontrollerk8v3EdgeTenantRequest
-  resourcecontrollerk8v3EdgeTenantRequest: {
-    edgeId: "edgeId_example",
-    edgeName: "edgeName_example",
-    edgeVersion: "edgeVersion_example",
-    hostname: "hostname_example",
-    licenseType: "licenseType_example",
-    rsyslog: "rsyslog_example",
-    size: "size_example",
-    storageClassName: "storageClassName_example",
-    storageClassNameRwo: "storageClassNameRwo_example",
-    tenantId: "tenantId_example",
-  },
-};
-
-apiInstance.resourceControllerK8ServiceUpdateEdgeTenantRequest(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **resourcecontrollerk8v3EdgeTenantRequest** | **Resourcecontrollerk8v3EdgeTenantRequest**|  |
- **edgeId** | [**string**] | ID of the edge system | defaults to undefined
-
-
-### Return type
-
-**Resourcecontrollerk8v3EdgeResourceResponse**
-
-### Authorization
-
-[ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceUpdateJob**
-> Resourcecontrollerk8v3Job resourceControllerK8ServiceUpdateJob(resourcecontrollerk8v3Job)
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateJobRequest = {
-  // string | The ID of the job.
-  id: "id_example",
-  // Resourcecontrollerk8v3Job
-  resourcecontrollerk8v3Job: {
-    clusterRoleRules: [
-      {
-        apiGroups: [
-          "apiGroups_example",
-        ],
-        id: "id_example",
-        resources: [
-          "resources_example",
-        ],
-        verbs: [
-          "verbs_example",
-        ],
-      },
-    ],
-    command: [
-      "command_example",
-    ],
-    container: {
-      image: "image_example",
-      imageFullyQualified: true,
-      resources: {
-        limits: {
-          cpu: "cpu_example",
-          memory: "memory_example",
-        },
-        requests: {
-          cpu: "cpu_example",
-          memory: "memory_example",
-        },
-      },
-    },
-    controllerId: "controllerId_example",
-    created: "created_example",
-    cron: {
-      schedule: "schedule_example",
-    },
-    files: [
-      {
-        content: "content_example",
-        created: "created_example",
-        description: {
-          content: "content_example",
-          format: "format_example",
-        },
-        id: "id_example",
-        modified: "modified_example",
-        name: "name_example",
-        path: "path_example",
-        type: "type_example",
-      },
-    ],
-    id: "id_example",
-    labels: {
-      "key": "key_example",
-    },
-    lastExecution: {
-      details: "details_example",
-      ended: "ended_example",
-      id: "id_example",
-      jobId: "jobId_example",
-      modified: "modified_example",
-      name: "name_example",
-      started: "started_example",
-      status: "status_example",
-    },
-    modified: "modified_example",
-    name: "name_example",
-    roleRules: [
-      {
-        apiGroups: [
-          "apiGroups_example",
-        ],
-        id: "id_example",
-        resources: [
-          "resources_example",
-        ],
-        verbs: [
-          "verbs_example",
-        ],
-      },
-    ],
-    secretKey: "secretKey_example",
-    secrets: [
-      {
-        created: "created_example",
-        id: "id_example",
-        modified: "modified_example",
-        name: "name_example",
-        _protected: true,
-        value: "value_example",
-      },
-    ],
-    status: "status_example",
-  },
-};
-
-apiInstance.resourceControllerK8ServiceUpdateJob(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **resourcecontrollerk8v3Job** | **Resourcecontrollerk8v3Job**|  |
- **id** | [**string**] | The ID of the job. | defaults to undefined
-
-
-### Return type
-
-**Resourcecontrollerk8v3Job**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceUpdateJobExecution**
-> Resourcecontrollerk8v3JobExecution resourceControllerK8ServiceUpdateJobExecution(resourcecontrollerk8v3UpdateJobExecutionRequest)
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateJobExecutionRequest = {
-  // string | The ID of the job execution to update.
-  id: "id_example",
-  // Resourcecontrollerk8v3UpdateJobExecutionRequest
-  resourcecontrollerk8v3UpdateJobExecutionRequest: {
-    details: "details_example",
-    ended: "ended_example",
-    id: "id_example",
-    jobId: "jobId_example",
-    modified: "modified_example",
-    name: "name_example",
-    started: "started_example",
-    status: "status_example",
-  },
-};
-
-apiInstance.resourceControllerK8ServiceUpdateJobExecution(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **resourcecontrollerk8v3UpdateJobExecutionRequest** | **Resourcecontrollerk8v3UpdateJobExecutionRequest**|  |
- **id** | [**string**] | The ID of the job execution to update. | defaults to undefined
-
-
-### Return type
-
-**Resourcecontrollerk8v3JobExecution**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **resourceControllerK8ServiceUpdateJobStatus**
-> Resourcecontrollerk8v3JobStatusDTO resourceControllerK8ServiceUpdateJobStatus(resourcecontrollerk8v3UpdateJobStatusRequest)
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .ResourceControllerK8ServiceApi(configuration);
-
-let body:.ResourceControllerK8ServiceApiResourceControllerK8ServiceUpdateJobStatusRequest = {
-  // string | The ID of the job to get status.
-  jobId: "job_id_example",
-  // Resourcecontrollerk8v3UpdateJobStatusRequest
-  resourcecontrollerk8v3UpdateJobStatusRequest: {
-    jobId: "jobId_example",
-    modified: "modified_example",
-    status: "status_example",
-  },
-};
-
-apiInstance.resourceControllerK8ServiceUpdateJobStatus(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **resourcecontrollerk8v3UpdateJobStatusRequest** | **Resourcecontrollerk8v3UpdateJobStatusRequest**|  |
- **jobId** | [**string**] | The ID of the job to get status. | defaults to undefined
-
-
-### Return type
-
-**Resourcecontrollerk8v3JobStatusDTO**
 
 ### Authorization
 
@@ -28993,870 +29228,6 @@ Name | Type | Description  | Notes
 
 
 
-# .TemplatesServiceApi
-
-All URIs are relative to *http://localhost*
-
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**templatesServiceCreateIntegration**](TemplatesServiceApi.md#templatesServiceCreateIntegration) | **POST** /api/v3/templates/integration | Summary: Create integration Description: Create a set of new templates for a new integration.
-[**templatesServiceCreateTemplate**](TemplatesServiceApi.md#templatesServiceCreateTemplate) | **POST** /api/v3/templates | Summary: Create template Description: Create a new template.
-[**templatesServiceDeleteIntegration**](TemplatesServiceApi.md#templatesServiceDeleteIntegration) | **DELETE** /api/v3/templates/integrations/{integration_id} | Summary: Delete integration Description: Delete all templates associated with an integration.
-[**templatesServiceDeleteTemplate**](TemplatesServiceApi.md#templatesServiceDeleteTemplate) | **DELETE** /api/v3/templates/{template_id} | Summary: Delete template Description: Delete a specific template.
-[**templatesServiceGetOriginDefaultContent**](TemplatesServiceApi.md#templatesServiceGetOriginDefaultContent) | **GET** /api/v3/templates/origins/{origin}/content | Summary: Get origin default content Description: Return the default content for a template with a specified origin and MIME type.
-[**templatesServiceGetOriginFields**](TemplatesServiceApi.md#templatesServiceGetOriginFields) | **GET** /api/v3/templates/origins/{origin}/fields | Summary: Get origin fields Description: Return the fields available with a specific origin.
-[**templatesServiceGetTemplate**](TemplatesServiceApi.md#templatesServiceGetTemplate) | **GET** /api/v3/templates/{template_id} | Summary: Get template Description: Return a specific template by id.
-[**templatesServiceGetTemplates**](TemplatesServiceApi.md#templatesServiceGetTemplates) | **GET** /api/v3/templates | Summary: Get templates Description: Return all templates based on supplied filters.
-[**templatesServiceGetTemplatesForEdge**](TemplatesServiceApi.md#templatesServiceGetTemplatesForEdge) | **GET** /api/v3/templates/edge | Summary: Get templates for edge Description: Return all templates based on supplied filters.
-[**templatesServiceTestTemplate**](TemplatesServiceApi.md#templatesServiceTestTemplate) | **POST** /api/v3/templates/test | Summary: Test template Description: Analyze a specified template to ensure will function correctly when utilized.
-[**templatesServiceTransformTemplate**](TemplatesServiceApi.md#templatesServiceTransformTemplate) | **POST** /api/v3/templates/transform | Summary: Transform template Description: Process the specified template and returns the Title and Content based on supplied data.
-[**templatesServiceTransformTemplateJSON**](TemplatesServiceApi.md#templatesServiceTransformTemplateJSON) | **POST** /api/v3/templates/transformjson | Summary: Transform template JSON Description: Process the specified template and returns the Title and Content based on supplied json data string.
-[**templatesServiceUpdateTemplate**](TemplatesServiceApi.md#templatesServiceUpdateTemplate) | **PATCH** /api/v3/templates/{template_id} | Summary: Update template Description: Update a single template.
-
-
-# **templatesServiceCreateIntegration**
-> Templatesv3CreateIntegrationResponse templatesServiceCreateIntegration(templatesv3CreateIntegrationRequest)
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .TemplatesServiceApi(configuration);
-
-let body:.TemplatesServiceApiTemplatesServiceCreateIntegrationRequest = {
-  // Templatesv3CreateIntegrationRequest
-  templatesv3CreateIntegrationRequest: {
-    integration: "UNDEFINED_INTEGRATION",
-    integrationId: "integrationId_example",
-    tags: "tags_example",
-  },
-};
-
-apiInstance.templatesServiceCreateIntegration(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **templatesv3CreateIntegrationRequest** | **Templatesv3CreateIntegrationRequest**|  |
-
-
-### Return type
-
-**Templatesv3CreateIntegrationResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **templatesServiceCreateTemplate**
-> Templatesv3CreateTemplateResponse templatesServiceCreateTemplate(templatesv3CreateTemplateRequest)
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .TemplatesServiceApi(configuration);
-
-let body:.TemplatesServiceApiTemplatesServiceCreateTemplateRequest = {
-  // Templatesv3CreateTemplateRequest
-  templatesv3CreateTemplateRequest: {
-    template: {
-      content: "content_example",
-      defaultRecipient: {
-        recipientType: "USER",
-        value: "value_example",
-      },
-      integration: "UNDEFINED_INTEGRATION",
-      integrationId: "integrationId_example",
-      integrationName: "integrationName_example",
-      isDefault: true,
-      isEnabled: true,
-      mimeType: "PLAIN_TEXT",
-      name: "name_example",
-      order: 1,
-      origin: "UNDEFINED_ORIGIN",
-      tags: [
-        "tags_example",
-      ],
-      templateId: "templateId_example",
-      title: "title_example",
-    },
-  },
-};
-
-apiInstance.templatesServiceCreateTemplate(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **templatesv3CreateTemplateRequest** | **Templatesv3CreateTemplateRequest**|  |
-
-
-### Return type
-
-**Templatesv3CreateTemplateResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **templatesServiceDeleteIntegration**
-> Templatesv3DeleteIntegrationResponse templatesServiceDeleteIntegration()
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .TemplatesServiceApi(configuration);
-
-let body:.TemplatesServiceApiTemplatesServiceDeleteIntegrationRequest = {
-  // string | Delete the templates associated with the specified integration ID.
-  integrationId: "integration_id_example",
-};
-
-apiInstance.templatesServiceDeleteIntegration(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **integrationId** | [**string**] | Delete the templates associated with the specified integration ID. | defaults to undefined
-
-
-### Return type
-
-**Templatesv3DeleteIntegrationResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **templatesServiceDeleteTemplate**
-> Templatesv3DeleteTemplateResponse templatesServiceDeleteTemplate()
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .TemplatesServiceApi(configuration);
-
-let body:.TemplatesServiceApiTemplatesServiceDeleteTemplateRequest = {
-  // string | Delete the template with the specified unique ID.
-  templateId: "template_id_example",
-};
-
-apiInstance.templatesServiceDeleteTemplate(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **templateId** | [**string**] | Delete the template with the specified unique ID. | defaults to undefined
-
-
-### Return type
-
-**Templatesv3DeleteTemplateResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **templatesServiceGetOriginDefaultContent**
-> Templatesv3GetOriginDefaultContentResponse templatesServiceGetOriginDefaultContent()
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .TemplatesServiceApi(configuration);
-
-let body:.TemplatesServiceApiTemplatesServiceGetOriginDefaultContentRequest = {
-  // 'UNDEFINED_ORIGIN' | 'GENERAL_NOTIFICATION' | 'ANOMALY_NOTIFICATION' | 'DATAMART_NOTIFICATION' | 'FETCH_NOTIFICATION' | 'POLICY_ALERT_NOTIFICATION' | 'RECOMMENDATION_NOTIFICATION' | 'REPORTS_NOTIFICATION' | 'SCHEDULED_REPORT_NOTIFICATION' | 'SCHEDULED_AUDIT_NOTIFICATION' | 'WELCOME_NOTIFICATION' | 'EMAIL_HEADER_AND_FOOTER' | 'RISK_NOTIFICATION' | 'SCHEDULED_JOB_SUMMARY' | 'INCIDENT_NOTIFICATION' | 'MAINTENANCE_NOTIFICATION' | 'QSPM_RISK' | 'POLICY_IMPORT_NOTIFICATION' | Origin for the desired content.
-  origin: "UNDEFINED_ORIGIN",
-  // 'UNDEFINED_INTEGRATION' | 'SMTP' | 'SNMP' | 'SYSLOG' | 'CASES' | 'SERVICE_NOW' | 'RESILIENT' | 'SOAR' | 'WEBHOOK' | 'SLACK' | 'TEAMS' | 'SMS' | 'JIRA' | Integration provides the context for the Request. (optional)
-  integration: "UNDEFINED_INTEGRATION",
-  // 'PLAIN_TEXT' | 'TEXT_HTML' | 'APPLICATION_CEF' | MIME type for the desired content. (optional)
-  mimeType: "PLAIN_TEXT",
-};
-
-apiInstance.templatesServiceGetOriginDefaultContent(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **origin** | [**&#39;UNDEFINED_ORIGIN&#39; | &#39;GENERAL_NOTIFICATION&#39; | &#39;ANOMALY_NOTIFICATION&#39; | &#39;DATAMART_NOTIFICATION&#39; | &#39;FETCH_NOTIFICATION&#39; | &#39;POLICY_ALERT_NOTIFICATION&#39; | &#39;RECOMMENDATION_NOTIFICATION&#39; | &#39;REPORTS_NOTIFICATION&#39; | &#39;SCHEDULED_REPORT_NOTIFICATION&#39; | &#39;SCHEDULED_AUDIT_NOTIFICATION&#39; | &#39;WELCOME_NOTIFICATION&#39; | &#39;EMAIL_HEADER_AND_FOOTER&#39; | &#39;RISK_NOTIFICATION&#39; | &#39;SCHEDULED_JOB_SUMMARY&#39; | &#39;INCIDENT_NOTIFICATION&#39; | &#39;MAINTENANCE_NOTIFICATION&#39; | &#39;QSPM_RISK&#39; | &#39;POLICY_IMPORT_NOTIFICATION&#39;**]**Array<&#39;UNDEFINED_ORIGIN&#39; &#124; &#39;GENERAL_NOTIFICATION&#39; &#124; &#39;ANOMALY_NOTIFICATION&#39; &#124; &#39;DATAMART_NOTIFICATION&#39; &#124; &#39;FETCH_NOTIFICATION&#39; &#124; &#39;POLICY_ALERT_NOTIFICATION&#39; &#124; &#39;RECOMMENDATION_NOTIFICATION&#39; &#124; &#39;REPORTS_NOTIFICATION&#39; &#124; &#39;SCHEDULED_REPORT_NOTIFICATION&#39; &#124; &#39;SCHEDULED_AUDIT_NOTIFICATION&#39; &#124; &#39;WELCOME_NOTIFICATION&#39; &#124; &#39;EMAIL_HEADER_AND_FOOTER&#39; &#124; &#39;RISK_NOTIFICATION&#39; &#124; &#39;SCHEDULED_JOB_SUMMARY&#39; &#124; &#39;INCIDENT_NOTIFICATION&#39; &#124; &#39;MAINTENANCE_NOTIFICATION&#39; &#124; &#39;QSPM_RISK&#39; &#124; &#39;POLICY_IMPORT_NOTIFICATION&#39;>** | Origin for the desired content. | defaults to undefined
- **integration** | [**&#39;UNDEFINED_INTEGRATION&#39; | &#39;SMTP&#39; | &#39;SNMP&#39; | &#39;SYSLOG&#39; | &#39;CASES&#39; | &#39;SERVICE_NOW&#39; | &#39;RESILIENT&#39; | &#39;SOAR&#39; | &#39;WEBHOOK&#39; | &#39;SLACK&#39; | &#39;TEAMS&#39; | &#39;SMS&#39; | &#39;JIRA&#39;**]**Array<&#39;UNDEFINED_INTEGRATION&#39; &#124; &#39;SMTP&#39; &#124; &#39;SNMP&#39; &#124; &#39;SYSLOG&#39; &#124; &#39;CASES&#39; &#124; &#39;SERVICE_NOW&#39; &#124; &#39;RESILIENT&#39; &#124; &#39;SOAR&#39; &#124; &#39;WEBHOOK&#39; &#124; &#39;SLACK&#39; &#124; &#39;TEAMS&#39; &#124; &#39;SMS&#39; &#124; &#39;JIRA&#39;>** | Integration provides the context for the Request. | (optional) defaults to 'UNDEFINED_INTEGRATION'
- **mimeType** | [**&#39;PLAIN_TEXT&#39; | &#39;TEXT_HTML&#39; | &#39;APPLICATION_CEF&#39;**]**Array<&#39;PLAIN_TEXT&#39; &#124; &#39;TEXT_HTML&#39; &#124; &#39;APPLICATION_CEF&#39;>** | MIME type for the desired content. | (optional) defaults to 'PLAIN_TEXT'
-
-
-### Return type
-
-**Templatesv3GetOriginDefaultContentResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **templatesServiceGetOriginFields**
-> Templatesv3GetOriginFieldsResponse templatesServiceGetOriginFields()
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .TemplatesServiceApi(configuration);
-
-let body:.TemplatesServiceApiTemplatesServiceGetOriginFieldsRequest = {
-  // 'UNDEFINED_ORIGIN' | 'GENERAL_NOTIFICATION' | 'ANOMALY_NOTIFICATION' | 'DATAMART_NOTIFICATION' | 'FETCH_NOTIFICATION' | 'POLICY_ALERT_NOTIFICATION' | 'RECOMMENDATION_NOTIFICATION' | 'REPORTS_NOTIFICATION' | 'SCHEDULED_REPORT_NOTIFICATION' | 'SCHEDULED_AUDIT_NOTIFICATION' | 'WELCOME_NOTIFICATION' | 'EMAIL_HEADER_AND_FOOTER' | 'RISK_NOTIFICATION' | 'SCHEDULED_JOB_SUMMARY' | 'INCIDENT_NOTIFICATION' | 'MAINTENANCE_NOTIFICATION' | 'QSPM_RISK' | 'POLICY_IMPORT_NOTIFICATION' | Origin for the desired fields.
-  origin: "UNDEFINED_ORIGIN",
-};
-
-apiInstance.templatesServiceGetOriginFields(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **origin** | [**&#39;UNDEFINED_ORIGIN&#39; | &#39;GENERAL_NOTIFICATION&#39; | &#39;ANOMALY_NOTIFICATION&#39; | &#39;DATAMART_NOTIFICATION&#39; | &#39;FETCH_NOTIFICATION&#39; | &#39;POLICY_ALERT_NOTIFICATION&#39; | &#39;RECOMMENDATION_NOTIFICATION&#39; | &#39;REPORTS_NOTIFICATION&#39; | &#39;SCHEDULED_REPORT_NOTIFICATION&#39; | &#39;SCHEDULED_AUDIT_NOTIFICATION&#39; | &#39;WELCOME_NOTIFICATION&#39; | &#39;EMAIL_HEADER_AND_FOOTER&#39; | &#39;RISK_NOTIFICATION&#39; | &#39;SCHEDULED_JOB_SUMMARY&#39; | &#39;INCIDENT_NOTIFICATION&#39; | &#39;MAINTENANCE_NOTIFICATION&#39; | &#39;QSPM_RISK&#39; | &#39;POLICY_IMPORT_NOTIFICATION&#39;**]**Array<&#39;UNDEFINED_ORIGIN&#39; &#124; &#39;GENERAL_NOTIFICATION&#39; &#124; &#39;ANOMALY_NOTIFICATION&#39; &#124; &#39;DATAMART_NOTIFICATION&#39; &#124; &#39;FETCH_NOTIFICATION&#39; &#124; &#39;POLICY_ALERT_NOTIFICATION&#39; &#124; &#39;RECOMMENDATION_NOTIFICATION&#39; &#124; &#39;REPORTS_NOTIFICATION&#39; &#124; &#39;SCHEDULED_REPORT_NOTIFICATION&#39; &#124; &#39;SCHEDULED_AUDIT_NOTIFICATION&#39; &#124; &#39;WELCOME_NOTIFICATION&#39; &#124; &#39;EMAIL_HEADER_AND_FOOTER&#39; &#124; &#39;RISK_NOTIFICATION&#39; &#124; &#39;SCHEDULED_JOB_SUMMARY&#39; &#124; &#39;INCIDENT_NOTIFICATION&#39; &#124; &#39;MAINTENANCE_NOTIFICATION&#39; &#124; &#39;QSPM_RISK&#39; &#124; &#39;POLICY_IMPORT_NOTIFICATION&#39;>** | Origin for the desired fields. | defaults to undefined
-
-
-### Return type
-
-**Templatesv3GetOriginFieldsResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **templatesServiceGetTemplate**
-> Templatesv3GetTemplateResponse templatesServiceGetTemplate()
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .TemplatesServiceApi(configuration);
-
-let body:.TemplatesServiceApiTemplatesServiceGetTemplateRequest = {
-  // string | The unique ID for the template to fetch.
-  templateId: "template_id_example",
-  // boolean | Include the Integration name in the returned template. (optional)
-  includeIntegrationName: true,
-};
-
-apiInstance.templatesServiceGetTemplate(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **templateId** | [**string**] | The unique ID for the template to fetch. | defaults to undefined
- **includeIntegrationName** | [**boolean**] | Include the Integration name in the returned template. | (optional) defaults to undefined
-
-
-### Return type
-
-**Templatesv3GetTemplateResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **templatesServiceGetTemplates**
-> Templatesv3GetTemplatesResponse templatesServiceGetTemplates()
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .TemplatesServiceApi(configuration);
-
-let body:.TemplatesServiceApiTemplatesServiceGetTemplatesRequest = {
-  // string | Filter on templates associated with a specific integration. (optional)
-  integrationId: "integration_id_example",
-  // Array<'UNDEFINED_INTEGRATION' | 'SMTP' | 'SNMP' | 'SYSLOG' | 'CASES' | 'SERVICE_NOW' | 'RESILIENT' | 'SOAR' | 'WEBHOOK' | 'SLACK' | 'TEAMS' | 'SMS' | 'JIRA'> | Filter on a set of integrations; ignored if empty. (optional)
-  filterIntegration: [
-    "UNDEFINED_INTEGRATION",
-  ],
-  // Array<'UNDEFINED_ORIGIN' | 'GENERAL_NOTIFICATION' | 'ANOMALY_NOTIFICATION' | 'DATAMART_NOTIFICATION' | 'FETCH_NOTIFICATION' | 'POLICY_ALERT_NOTIFICATION' | 'RECOMMENDATION_NOTIFICATION' | 'REPORTS_NOTIFICATION' | 'SCHEDULED_REPORT_NOTIFICATION' | 'SCHEDULED_AUDIT_NOTIFICATION' | 'WELCOME_NOTIFICATION' | 'EMAIL_HEADER_AND_FOOTER' | 'RISK_NOTIFICATION' | 'SCHEDULED_JOB_SUMMARY' | 'INCIDENT_NOTIFICATION' | 'MAINTENANCE_NOTIFICATION' | 'QSPM_RISK' | 'POLICY_IMPORT_NOTIFICATION'> | Filter on a specific set of data origins; ignored if empty. (optional)
-  filterOrigin: [
-    "UNDEFINED_ORIGIN",
-  ],
-  // Array<'PLAIN_TEXT' | 'TEXT_HTML' | 'APPLICATION_CEF'> | Filter on specific mime types; ignored if empty. (optional)
-  filterMimeType: [
-    "PLAIN_TEXT",
-  ],
-  // Array<string> | Filter on specific tags; ignored if empty. (optional)
-  filterTags: [
-    "filter_tags_example",
-  ],
-  // boolean | Filter on all templates instead of just the enabled templates. (optional)
-  filterEnabledOnly: true,
-  // boolean | Include the Integration name in the returned templates. (optional)
-  includeIntegrationName: true,
-};
-
-apiInstance.templatesServiceGetTemplates(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **integrationId** | [**string**] | Filter on templates associated with a specific integration. | (optional) defaults to undefined
- **filterIntegration** | **Array<&#39;UNDEFINED_INTEGRATION&#39; &#124; &#39;SMTP&#39; &#124; &#39;SNMP&#39; &#124; &#39;SYSLOG&#39; &#124; &#39;CASES&#39; &#124; &#39;SERVICE_NOW&#39; &#124; &#39;RESILIENT&#39; &#124; &#39;SOAR&#39; &#124; &#39;WEBHOOK&#39; &#124; &#39;SLACK&#39; &#124; &#39;TEAMS&#39; &#124; &#39;SMS&#39; &#124; &#39;JIRA&#39;>** | Filter on a set of integrations; ignored if empty. | (optional) defaults to undefined
- **filterOrigin** | **Array<&#39;UNDEFINED_ORIGIN&#39; &#124; &#39;GENERAL_NOTIFICATION&#39; &#124; &#39;ANOMALY_NOTIFICATION&#39; &#124; &#39;DATAMART_NOTIFICATION&#39; &#124; &#39;FETCH_NOTIFICATION&#39; &#124; &#39;POLICY_ALERT_NOTIFICATION&#39; &#124; &#39;RECOMMENDATION_NOTIFICATION&#39; &#124; &#39;REPORTS_NOTIFICATION&#39; &#124; &#39;SCHEDULED_REPORT_NOTIFICATION&#39; &#124; &#39;SCHEDULED_AUDIT_NOTIFICATION&#39; &#124; &#39;WELCOME_NOTIFICATION&#39; &#124; &#39;EMAIL_HEADER_AND_FOOTER&#39; &#124; &#39;RISK_NOTIFICATION&#39; &#124; &#39;SCHEDULED_JOB_SUMMARY&#39; &#124; &#39;INCIDENT_NOTIFICATION&#39; &#124; &#39;MAINTENANCE_NOTIFICATION&#39; &#124; &#39;QSPM_RISK&#39; &#124; &#39;POLICY_IMPORT_NOTIFICATION&#39;>** | Filter on a specific set of data origins; ignored if empty. | (optional) defaults to undefined
- **filterMimeType** | **Array<&#39;PLAIN_TEXT&#39; &#124; &#39;TEXT_HTML&#39; &#124; &#39;APPLICATION_CEF&#39;>** | Filter on specific mime types; ignored if empty. | (optional) defaults to undefined
- **filterTags** | **Array&lt;string&gt;** | Filter on specific tags; ignored if empty. | (optional) defaults to undefined
- **filterEnabledOnly** | [**boolean**] | Filter on all templates instead of just the enabled templates. | (optional) defaults to undefined
- **includeIntegrationName** | [**boolean**] | Include the Integration name in the returned templates. | (optional) defaults to undefined
-
-
-### Return type
-
-**Templatesv3GetTemplatesResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **templatesServiceGetTemplatesForEdge**
-> Templatesv3GetTemplatesForEdgeResponse templatesServiceGetTemplatesForEdge()
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .TemplatesServiceApi(configuration);
-
-let body:.TemplatesServiceApiTemplatesServiceGetTemplatesForEdgeRequest = {
-  // string | Templates associated with a specific integration. (optional)
-  integrationId: "integration_id_example",
-  // Array<'UNDEFINED_ORIGIN' | 'GENERAL_NOTIFICATION' | 'ANOMALY_NOTIFICATION' | 'DATAMART_NOTIFICATION' | 'FETCH_NOTIFICATION' | 'POLICY_ALERT_NOTIFICATION' | 'RECOMMENDATION_NOTIFICATION' | 'REPORTS_NOTIFICATION' | 'SCHEDULED_REPORT_NOTIFICATION' | 'SCHEDULED_AUDIT_NOTIFICATION' | 'WELCOME_NOTIFICATION' | 'EMAIL_HEADER_AND_FOOTER' | 'RISK_NOTIFICATION' | 'SCHEDULED_JOB_SUMMARY' | 'INCIDENT_NOTIFICATION' | 'MAINTENANCE_NOTIFICATION' | 'QSPM_RISK' | 'POLICY_IMPORT_NOTIFICATION'> | Filter on a specific set of data origins; ignored if empty. (optional)
-  filterOrigin: [
-    "UNDEFINED_ORIGIN",
-  ],
-  // boolean | Filter on all templates instead of just the enabled templates. (optional)
-  filterEnabledOnly: true,
-  // boolean | Include the Integration name in the returned templates. (optional)
-  includeIntegrationName: true,
-  // boolean | Tranform template format to GDP style format. (optional)
-  transformToGdpFormat: true,
-};
-
-apiInstance.templatesServiceGetTemplatesForEdge(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **integrationId** | [**string**] | Templates associated with a specific integration. | (optional) defaults to undefined
- **filterOrigin** | **Array<&#39;UNDEFINED_ORIGIN&#39; &#124; &#39;GENERAL_NOTIFICATION&#39; &#124; &#39;ANOMALY_NOTIFICATION&#39; &#124; &#39;DATAMART_NOTIFICATION&#39; &#124; &#39;FETCH_NOTIFICATION&#39; &#124; &#39;POLICY_ALERT_NOTIFICATION&#39; &#124; &#39;RECOMMENDATION_NOTIFICATION&#39; &#124; &#39;REPORTS_NOTIFICATION&#39; &#124; &#39;SCHEDULED_REPORT_NOTIFICATION&#39; &#124; &#39;SCHEDULED_AUDIT_NOTIFICATION&#39; &#124; &#39;WELCOME_NOTIFICATION&#39; &#124; &#39;EMAIL_HEADER_AND_FOOTER&#39; &#124; &#39;RISK_NOTIFICATION&#39; &#124; &#39;SCHEDULED_JOB_SUMMARY&#39; &#124; &#39;INCIDENT_NOTIFICATION&#39; &#124; &#39;MAINTENANCE_NOTIFICATION&#39; &#124; &#39;QSPM_RISK&#39; &#124; &#39;POLICY_IMPORT_NOTIFICATION&#39;>** | Filter on a specific set of data origins; ignored if empty. | (optional) defaults to undefined
- **filterEnabledOnly** | [**boolean**] | Filter on all templates instead of just the enabled templates. | (optional) defaults to undefined
- **includeIntegrationName** | [**boolean**] | Include the Integration name in the returned templates. | (optional) defaults to undefined
- **transformToGdpFormat** | [**boolean**] | Tranform template format to GDP style format. | (optional) defaults to undefined
-
-
-### Return type
-
-**Templatesv3GetTemplatesForEdgeResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **templatesServiceTestTemplate**
-> Templatesv3TestTemplateResponse templatesServiceTestTemplate(templatesv3TestTemplateRequest)
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .TemplatesServiceApi(configuration);
-
-let body:.TemplatesServiceApiTemplatesServiceTestTemplateRequest = {
-  // Templatesv3TestTemplateRequest
-  templatesv3TestTemplateRequest: {
-    template: {
-      content: "content_example",
-      defaultRecipient: {
-        recipientType: "USER",
-        value: "value_example",
-      },
-      integration: "UNDEFINED_INTEGRATION",
-      integrationId: "integrationId_example",
-      integrationName: "integrationName_example",
-      isDefault: true,
-      isEnabled: true,
-      mimeType: "PLAIN_TEXT",
-      name: "name_example",
-      order: 1,
-      origin: "UNDEFINED_ORIGIN",
-      tags: [
-        "tags_example",
-      ],
-      templateId: "templateId_example",
-      title: "title_example",
-    },
-  },
-};
-
-apiInstance.templatesServiceTestTemplate(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **templatesv3TestTemplateRequest** | **Templatesv3TestTemplateRequest**|  |
-
-
-### Return type
-
-**Templatesv3TestTemplateResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **templatesServiceTransformTemplate**
-> Templatesv3TransformTemplateResponse templatesServiceTransformTemplate(templatesv3TransformTemplateRequest)
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .TemplatesServiceApi(configuration);
-
-let body:.TemplatesServiceApiTemplatesServiceTransformTemplateRequest = {
-  // Templatesv3TransformTemplateRequest
-  templatesv3TransformTemplateRequest: {
-    data: {
-      "key": "key_example",
-    },
-    integration: "UNDEFINED_INTEGRATION",
-    mimeType: "PLAIN_TEXT",
-    origin: "UNDEFINED_ORIGIN",
-    templateId: "templateId_example",
-  },
-};
-
-apiInstance.templatesServiceTransformTemplate(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **templatesv3TransformTemplateRequest** | **Templatesv3TransformTemplateRequest**|  |
-
-
-### Return type
-
-**Templatesv3TransformTemplateResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **templatesServiceTransformTemplateJSON**
-> Templatesv3TransformTemplateJSONResponse templatesServiceTransformTemplateJSON(templatesv3TransformTemplateJSONRequest)
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .TemplatesServiceApi(configuration);
-
-let body:.TemplatesServiceApiTemplatesServiceTransformTemplateJSONRequest = {
-  // Templatesv3TransformTemplateJSONRequest
-  templatesv3TransformTemplateJSONRequest: {
-    data: "data_example",
-    integration: "UNDEFINED_INTEGRATION",
-    mimeType: "PLAIN_TEXT",
-    origin: "UNDEFINED_ORIGIN",
-    templateId: "templateId_example",
-  },
-};
-
-apiInstance.templatesServiceTransformTemplateJSON(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **templatesv3TransformTemplateJSONRequest** | **Templatesv3TransformTemplateJSONRequest**|  |
-
-
-### Return type
-
-**Templatesv3TransformTemplateJSONResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **templatesServiceUpdateTemplate**
-> Templatesv3UpdateTemplateResponse templatesServiceUpdateTemplate(templatesv3UpdateTemplateRequest)
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .TemplatesServiceApi(configuration);
-
-let body:.TemplatesServiceApiTemplatesServiceUpdateTemplateRequest = {
-  // string | The template id to update.
-  templateId: "template_id_example",
-  // Templatesv3UpdateTemplateRequest
-  templatesv3UpdateTemplateRequest: {
-    template: {
-      content: "content_example",
-      defaultRecipient: {
-        recipientType: "USER",
-        value: "value_example",
-      },
-      integration: "UNDEFINED_INTEGRATION",
-      integrationId: "integrationId_example",
-      integrationName: "integrationName_example",
-      isDefault: true,
-      isEnabled: true,
-      mimeType: "PLAIN_TEXT",
-      name: "name_example",
-      order: 1,
-      origin: "UNDEFINED_ORIGIN",
-      tags: [
-        "tags_example",
-      ],
-      templateId: "templateId_example",
-      title: "title_example",
-    },
-    templateId: "templateId_example",
-  },
-};
-
-apiInstance.templatesServiceUpdateTemplate(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **templatesv3UpdateTemplateRequest** | **Templatesv3UpdateTemplateRequest**|  |
- **templateId** | [**string**] | The template id to update. | defaults to undefined
-
-
-### Return type
-
-**Templatesv3UpdateTemplateResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-
-
-
-
 # .TenantuserApi
 
 All URIs are relative to *http://localhost*
@@ -30940,11 +30311,11 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getLinkedVendor**](ThirdPartyVendorsApi.md#getLinkedVendor) | **GET** /api/v1/dspm/linkedVendors/{vendorId}/cloudAccounts | Get additional details of a specific third party vendor
-[**getSingleLinkedVendor**](ThirdPartyVendorsApi.md#getSingleLinkedVendor) | **GET** /api/v1/dspm/linkedVendors/{vendorId} | Get the third party vendors list
-[**listLinkedVendorDataStores**](ThirdPartyVendorsApi.md#listLinkedVendorDataStores) | **GET** /api/v1/dspm/linkedVendors/{vendorId}/dataStores | Get the data stores associated with a third party vendor
-[**listLinkedVendors**](ThirdPartyVendorsApi.md#listLinkedVendors) | **GET** /api/v1/dspm/linkedVendors | Get the summary of a third party vendor
-[**listTrustedAssets**](ThirdPartyVendorsApi.md#listTrustedAssets) | **GET** /api/v1/dspm/linkedVendors/trustedAssets | Get a list of all the actual trusted assets
+[**getLinkedVendor**](ThirdPartyVendorsApi.md#getLinkedVendor) | **GET** /api/v2/dspm/linkedVendors/{vendorId}/cloudAccounts | Get additional details of a specific third party vendor
+[**getSingleLinkedVendor**](ThirdPartyVendorsApi.md#getSingleLinkedVendor) | **GET** /api/v2/dspm/linkedVendors/{vendorId} | Get the third party vendors list
+[**listLinkedVendorDataStores**](ThirdPartyVendorsApi.md#listLinkedVendorDataStores) | **GET** /api/v2/dspm/linkedVendors/{vendorId}/dataStores | Get the data stores associated with a third party vendor
+[**listLinkedVendors**](ThirdPartyVendorsApi.md#listLinkedVendors) | **GET** /api/v2/dspm/linkedVendors | Get the summary of a third party vendor
+[**listTrustedAssets**](ThirdPartyVendorsApi.md#listTrustedAssets) | **GET** /api/v2/dspm/linkedVendors/trustedAssets | Get a list of all the actual trusted assets
 
 
 # **getLinkedVendor**
@@ -31546,6 +30917,427 @@ Name | Type | Description  | Notes
 ### Return type
 
 **RpcStatus**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+
+
+
+
+# .VulnerabilityManagementServiceApi
+
+All URIs are relative to *http://localhost*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**vulnerabilityManagementServiceCreateVulnerability**](VulnerabilityManagementServiceApi.md#vulnerabilityManagementServiceCreateVulnerability) | **POST** /api/v3/vulnerabilities/ingestion | Summary: Create a vulnerability Description: Create a vulnerability based on request
+[**vulnerabilityManagementServiceGetFiltersForVulnerabilities**](VulnerabilityManagementServiceApi.md#vulnerabilityManagementServiceGetFiltersForVulnerabilities) | **GET** /api/v3/vulnerabilities/filters/metadata | Summary: Get filters for vulnerabilities Description: Get a list of filters category and sub category with all data.
+[**vulnerabilityManagementServiceGetVulnerabilities**](VulnerabilityManagementServiceApi.md#vulnerabilityManagementServiceGetVulnerabilities) | **POST** /api/v3/vulnerabilities/search | Summary: Get vulnerabilities Description: Returns a list of vulnerabilities.
+[**vulnerabilityManagementServiceGetVulnerabilitiesStats**](VulnerabilityManagementServiceApi.md#vulnerabilityManagementServiceGetVulnerabilitiesStats) | **GET** /api/v3/vulnerabilities/stats/data | Summary: Get vulnerabilities stats Description: Get various vulnerabilities stats.
+[**vulnerabilityManagementServiceGetVulnerability**](VulnerabilityManagementServiceApi.md#vulnerabilityManagementServiceGetVulnerability) | **GET** /api/v3/vulnerabilities/{vulnerability_id} | Summary: Get vulnerability Description: Returns a vulnerability based on vulnerability.
+[**vulnerabilityManagementServiceUpdateVulnerabilities**](VulnerabilityManagementServiceApi.md#vulnerabilityManagementServiceUpdateVulnerabilities) | **PATCH** /api/v3/vulnerabilities | Updates comments, assignee, and status for vulnerabilities
+[**vulnerabilityManagementServiceVulnerabilityIngestionManualTrigger**](VulnerabilityManagementServiceApi.md#vulnerabilityManagementServiceVulnerabilityIngestionManualTrigger) | **POST** /api/v3/vulnerabilities/ingestion/trigger | Summary: Vulnerability ingest manual trigger Description: Manual trigger for Scheduled Vulnerability Ingestion.
+
+
+# **vulnerabilityManagementServiceCreateVulnerability**
+> Vulmanagementv3CreateVulnerabilityResponse vulnerabilityManagementServiceCreateVulnerability(vulmanagementv3CreateVulnerabilityRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .VulnerabilityManagementServiceApi(configuration);
+
+let body:.VulnerabilityManagementServiceApiVulnerabilityManagementServiceCreateVulnerabilityRequest = {
+  // Vulmanagementv3CreateVulnerabilityRequest
+  vulmanagementv3CreateVulnerabilityRequest: {
+    description: "description_example",
+    details: {},
+    entityId: "entityId_example",
+    name: "name_example",
+    severity: "SEVERITY_UNKNOWN",
+    sourceId: "sourceId_example",
+    sourceType: "UNKNOWN",
+  },
+};
+
+apiInstance.vulnerabilityManagementServiceCreateVulnerability(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **vulmanagementv3CreateVulnerabilityRequest** | **Vulmanagementv3CreateVulnerabilityRequest**|  |
+
+
+### Return type
+
+**Vulmanagementv3CreateVulnerabilityResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **vulnerabilityManagementServiceGetFiltersForVulnerabilities**
+> Vulmanagementv3GetFiltersDataResponse vulnerabilityManagementServiceGetFiltersForVulnerabilities()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .VulnerabilityManagementServiceApi(configuration);
+
+let body:any = {};
+
+apiInstance.vulnerabilityManagementServiceGetFiltersForVulnerabilities(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+
+### Return type
+
+**Vulmanagementv3GetFiltersDataResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **vulnerabilityManagementServiceGetVulnerabilities**
+> Vulmanagementv3GetVulnerabilitiesResponse vulnerabilityManagementServiceGetVulnerabilities(vulmanagementv3GetVulnerabilitiesRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .VulnerabilityManagementServiceApi(configuration);
+
+let body:.VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVulnerabilitiesRequest = {
+  // Vulmanagementv3GetVulnerabilitiesRequest
+  vulmanagementv3GetVulnerabilitiesRequest: {
+    filter: [
+      {
+        categoryId: "categoryId_example",
+        subCategoryIds: [
+          "subCategoryIds_example",
+        ],
+        subCategoryValues: [
+          "subCategoryValues_example",
+        ],
+      },
+    ],
+    limit: 1,
+    offset: 1,
+    searchKey: "searchKey_example",
+    sortColumn: "sortColumn_example",
+    sortOrder: "ASC",
+  },
+};
+
+apiInstance.vulnerabilityManagementServiceGetVulnerabilities(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **vulmanagementv3GetVulnerabilitiesRequest** | **Vulmanagementv3GetVulnerabilitiesRequest**|  |
+
+
+### Return type
+
+**Vulmanagementv3GetVulnerabilitiesResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **vulnerabilityManagementServiceGetVulnerabilitiesStats**
+> Vulmanagementv3VulnerabilitiesStatsDataResponse vulnerabilityManagementServiceGetVulnerabilitiesStats()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .VulnerabilityManagementServiceApi(configuration);
+
+let body:any = {};
+
+apiInstance.vulnerabilityManagementServiceGetVulnerabilitiesStats(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+
+### Return type
+
+**Vulmanagementv3VulnerabilitiesStatsDataResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **vulnerabilityManagementServiceGetVulnerability**
+> Vulmanagementv3GetVulnerabilityResponse vulnerabilityManagementServiceGetVulnerability()
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .VulnerabilityManagementServiceApi(configuration);
+
+let body:.VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVulnerabilityRequest = {
+  // string | ID for the record to return.
+  vulnerabilityId: "vulnerability_id_example",
+};
+
+apiInstance.vulnerabilityManagementServiceGetVulnerability(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **vulnerabilityId** | [**string**] | ID for the record to return. | defaults to undefined
+
+
+### Return type
+
+**Vulmanagementv3GetVulnerabilityResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **vulnerabilityManagementServiceUpdateVulnerabilities**
+> Vulmanagementv3UpdateVulnerabilitiesResponse vulnerabilityManagementServiceUpdateVulnerabilities(vulmanagementv3UpdateVulnerabilitiesRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .VulnerabilityManagementServiceApi(configuration);
+
+let body:.VulnerabilityManagementServiceApiVulnerabilityManagementServiceUpdateVulnerabilitiesRequest = {
+  // Vulmanagementv3UpdateVulnerabilitiesRequest
+  vulmanagementv3UpdateVulnerabilitiesRequest: {
+    updates: [
+      {
+        actionType: "ACTION_TYPE_UNKNOWN",
+        assigneeUserid: "assigneeUserid_example",
+        comment: "comment_example",
+        severity: "SEVERITY_UNKNOWN",
+        status: "STATUS_UNKNOWN",
+        vulnerabilityId: "vulnerabilityId_example",
+      },
+    ],
+  },
+};
+
+apiInstance.vulnerabilityManagementServiceUpdateVulnerabilities(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **vulmanagementv3UpdateVulnerabilitiesRequest** | **Vulmanagementv3UpdateVulnerabilitiesRequest**|  |
+
+
+### Return type
+
+**Vulmanagementv3UpdateVulnerabilitiesResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **vulnerabilityManagementServiceVulnerabilityIngestionManualTrigger**
+> Vulmanagementv3VulnerabilityIngestionResponse vulnerabilityManagementServiceVulnerabilityIngestionManualTrigger(body)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .VulnerabilityManagementServiceApi(configuration);
+
+let body:.VulnerabilityManagementServiceApiVulnerabilityManagementServiceVulnerabilityIngestionManualTriggerRequest = {
+  // any
+  body: {},
+};
+
+apiInstance.vulnerabilityManagementServiceVulnerabilityIngestionManualTrigger(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | **any**|  |
+
+
+### Return type
+
+**Vulmanagementv3VulnerabilityIngestionResponse**
 
 ### Authorization
 

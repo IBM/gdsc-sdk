@@ -4,14 +4,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**add_vulnerability_status_comment**](DataVulnerabilitiesApi.md#add_vulnerability_status_comment) | **POST** /api/v1/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments | Add vulnerability status comment
-[**get_vulnerabilities_summary**](DataVulnerabilitiesApi.md#get_vulnerabilities_summary) | **GET** /api/v1/dspm/vulnerabilities/summary | Get vulnerabilities summary
-[**get_vulnerability**](DataVulnerabilitiesApi.md#get_vulnerability) | **GET** /api/v1/dspm/vulnerabilities/{vulnerabilityId} | Get vulnerability details by ID
-[**list_vulnerabilities**](DataVulnerabilitiesApi.md#list_vulnerabilities) | **GET** /api/v1/dspm/vulnerabilities | List vulnerabilities based on an applied filter
-[**list_vulnerabilities_by_data_store**](DataVulnerabilitiesApi.md#list_vulnerabilities_by_data_store) | **GET** /api/v1/dspm/vulnerabilities/byDataStore | List vulnerabilities of data stores
-[**remove_vulnerability_status_comment**](DataVulnerabilitiesApi.md#remove_vulnerability_status_comment) | **DELETE** /api/v1/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments/{commentId} | Delete vulnerability status comment
-[**set_vulnerability_status**](DataVulnerabilitiesApi.md#set_vulnerability_status) | **POST** /api/v1/dspm/vulnerabilities/{vulnerabilityId}/statuses | Set status of a vulnerability
-[**update_vulnerability_status_comment**](DataVulnerabilitiesApi.md#update_vulnerability_status_comment) | **PUT** /api/v1/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments/{commentId} | Set vulnerability status
+[**add_vulnerability_status_comment**](DataVulnerabilitiesApi.md#add_vulnerability_status_comment) | **POST** /api/v2/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments | Add vulnerability status comment
+[**get_vulnerabilities_summary**](DataVulnerabilitiesApi.md#get_vulnerabilities_summary) | **GET** /api/v2/dspm/vulnerabilities/summary | Get vulnerabilities summary
+[**get_vulnerability**](DataVulnerabilitiesApi.md#get_vulnerability) | **GET** /api/v2/dspm/vulnerabilities/{vulnerabilityId} | Get vulnerability details by ID
+[**list_vulnerabilities**](DataVulnerabilitiesApi.md#list_vulnerabilities) | **GET** /api/v2/dspm/vulnerabilities | List vulnerabilities based on an applied filter
+[**list_vulnerabilities_by_data_store**](DataVulnerabilitiesApi.md#list_vulnerabilities_by_data_store) | **GET** /api/v2/dspm/vulnerabilities/byDataStore | List vulnerabilities of data stores
+[**remove_vulnerability_status_comment**](DataVulnerabilitiesApi.md#remove_vulnerability_status_comment) | **DELETE** /api/v2/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments/{commentId} | Delete vulnerability status comment
+[**set_vulnerability_status**](DataVulnerabilitiesApi.md#set_vulnerability_status) | **POST** /api/v2/dspm/vulnerabilities/{vulnerabilityId}/statuses | Set status of a vulnerability
+[**update_vulnerability_status_comment**](DataVulnerabilitiesApi.md#update_vulnerability_status_comment) | **PUT** /api/v2/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments/{commentId} | Set vulnerability status
 
 
 # **add_vulnerability_status_comment**

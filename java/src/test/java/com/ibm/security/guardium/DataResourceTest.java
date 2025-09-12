@@ -135,4 +135,12 @@ public class DataResourceTest {
         // TODO: test stats
     }
 
+    /**
+     * Test the property 'path'
+     */
+    @Test
+    public void pathTest() {
+        // TODO: test path
+    }
+
 }
