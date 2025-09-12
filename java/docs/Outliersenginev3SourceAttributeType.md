@@ -19,5 +19,13 @@
 
 * `CLIENT_HOSTNAME` (value: `"CLIENT_HOSTNAME"`)
 
+* `SENSITIVE_OBJECT` (value: `"SENSITIVE_OBJECT"`)
+
+* `SENSITIVE_OBJECT_VERB` (value: `"SENSITIVE_OBJECT_VERB"`)
+
+* `OBJECT` (value: `"OBJECT"`)
+
+* `OBJECT_VERB` (value: `"OBJECT_VERB"`)
+
 
 

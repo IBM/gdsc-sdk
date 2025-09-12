@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**aggregationUnderscoretype** | [**Reportsv3AggregationType**](Reportsv3AggregationType.md) |  | [optional] [default to null]
 **fieldUnderscorename** | [**Reportsv3FieldName**](Reportsv3FieldName.md) |  | [optional] [default to null]
 **headerUnderscoredescription** | [**Reportsv3HeaderDescription**](Reportsv3HeaderDescription.md) |  | [optional] [default to null]
 **headerUnderscoreid** | **string** |  | [optional] [default to null]

@@ -39,7 +39,9 @@ public enum Policybuilderv3ParameterOperator {
   
   NOT_IN_GROUP("NOT_IN_GROUP"),
   
-  EVERY_MEMBER_IN_GROUP("EVERY_MEMBER_IN_GROUP");
+  EVERY_MEMBER_IN_GROUP("EVERY_MEMBER_IN_GROUP"),
+  
+  IN_REPORT("IN_REPORT");
 
   private String value;
 

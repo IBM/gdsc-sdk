@@ -8,11 +8,11 @@ import {canConsumeForm, isCodeInRange} from '../util';
 import {SecurityAuthentication} from '../auth/auth';
 
 
-import { Assetsv3AssetFilterTemplateRequest } from '../models/Assetsv3AssetFilterTemplateRequest';
 import { Assetsv3AssetIngestionRequest } from '../models/Assetsv3AssetIngestionRequest';
 import { Assetsv3AssetIngestionResponse } from '../models/Assetsv3AssetIngestionResponse';
 import { Assetsv3AssetOverviewResponse } from '../models/Assetsv3AssetOverviewResponse';
 import { Assetsv3ClonePolicyRequest } from '../models/Assetsv3ClonePolicyRequest';
+import { Assetsv3CompareCSVResponse } from '../models/Assetsv3CompareCSVResponse';
 import { Assetsv3CreateUpdatePolicyRequest } from '../models/Assetsv3CreateUpdatePolicyRequest';
 import { Assetsv3CreateUpdatePolicyResponse } from '../models/Assetsv3CreateUpdatePolicyResponse';
 import { Assetsv3FetchAssetChangeLogRequest } from '../models/Assetsv3FetchAssetChangeLogRequest';
@@ -26,6 +26,8 @@ import { Assetsv3GetAssetTopologyRequest } from '../models/Assetsv3GetAssetTopol
 import { Assetsv3GetAssetTopologyResponse } from '../models/Assetsv3GetAssetTopologyResponse';
 import { Assetsv3GetFilterTemplateResponse } from '../models/Assetsv3GetFilterTemplateResponse';
 import { Assetsv3GetFiltersDataResponse } from '../models/Assetsv3GetFiltersDataResponse';
+import { Assetsv3ImportCSVRequest } from '../models/Assetsv3ImportCSVRequest';
+import { Assetsv3ImportCSVResponse } from '../models/Assetsv3ImportCSVResponse';
 import { Assetsv3ListPolicyResponse } from '../models/Assetsv3ListPolicyResponse';
 import { Assetsv3ListRuleResponse } from '../models/Assetsv3ListRuleResponse';
 import { Assetsv3ListTagDomainsResponse } from '../models/Assetsv3ListTagDomainsResponse';
@@ -151,6 +153,48 @@ export class AssetsServiceApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
+     * CancelCSVImport - Cancel the import of CSV and update the status in import log table
+     * @param csvId unique id of the csv
+     */
+    public async assetsServiceCancelCSVImport(csvId: string, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'csvId' is not null or undefined
+        if (csvId === null || csvId === undefined) {
+            throw new RequiredError("AssetsServiceApi", "assetsServiceCancelCSVImport", "csvId");
+        }
+
+
+        // Path Params
+        const localVarPath = '/api/v3/assets/csv/cancel/{csv_id}'
+            .replace('{' + 'csv_id' + '}', encodeURIComponent(String(csvId)));
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.DELETE);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        let authMethod: SecurityAuthentication | undefined;
+        // Apply auth methods
+        authMethod = _config.authMethods["BasicAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        // Apply auth methods
+        authMethod = _config.authMethods["ApiKeyAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
      * ClonePolicy - Clone a policy.
      * @param policyId Policy id that needs to be cloned.
      * @param assetsv3ClonePolicyRequest 
@@ -189,6 +233,76 @@ export class AssetsServiceApiRequestFactory extends BaseAPIRequestFactory {
             contentType
         );
         requestContext.setBody(serializedBody);
+
+        let authMethod: SecurityAuthentication | undefined;
+        // Apply auth methods
+        authMethod = _config.authMethods["BasicAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        // Apply auth methods
+        authMethod = _config.authMethods["ApiKeyAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * CompareCSVToExistingAssets - Compare CSV with existing assets and return list of assets(existing/to be imported/both) on demand from csv.
+     * @param csvId unique id of the csv
+     * @param rowsRequired which rows are required, existing or new or all.
+     * @param pageNumber page number.
+     * @param pageSize page size.
+     * @param templateType Asset CSV template type.   - DATABASE: Template for database
+     */
+    public async assetsServiceCompareCSVToExistingAssets(csvId: string, rowsRequired?: string, pageNumber?: number, pageSize?: number, templateType?: 'DATABASE', _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'csvId' is not null or undefined
+        if (csvId === null || csvId === undefined) {
+            throw new RequiredError("AssetsServiceApi", "assetsServiceCompareCSVToExistingAssets", "csvId");
+        }
+
+
+
+
+
+
+        // Path Params
+        const localVarPath = '/api/v3/assets/csv/compare/{csv_id}'
+            .replace('{' + 'csv_id' + '}', encodeURIComponent(String(csvId)));
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+        // Query Params
+        if (rowsRequired !== undefined) {
+            requestContext.setQueryParam("rows_required", ObjectSerializer.serialize(rowsRequired, "string", ""));
+        }
+
+        // Query Params
+        if (pageNumber !== undefined) {
+            requestContext.setQueryParam("page_number", ObjectSerializer.serialize(pageNumber, "number", "int64"));
+        }
+
+        // Query Params
+        if (pageSize !== undefined) {
+            requestContext.setQueryParam("page_size", ObjectSerializer.serialize(pageSize, "number", "int64"));
+        }
+
+        // Query Params
+        if (templateType !== undefined) {
+            requestContext.setQueryParam("template_type", ObjectSerializer.serialize(templateType, "'DATABASE'", ""));
+        }
+
 
         let authMethod: SecurityAuthentication | undefined;
         // Apply auth methods
@@ -265,20 +379,13 @@ export class AssetsServiceApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * DeleteFilterTemplateForAssets - Deleting a template using TemplateID in manage assets.
      * @param templateId template id to be deleted
-     * @param assetsv3AssetFilterTemplateRequest 
      */
-    public async assetsServiceDeleteFilterTemplateForAssets(templateId: string, assetsv3AssetFilterTemplateRequest: Assetsv3AssetFilterTemplateRequest, _options?: Configuration): Promise<RequestContext> {
+    public async assetsServiceDeleteFilterTemplateForAssets(templateId: string, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'templateId' is not null or undefined
         if (templateId === null || templateId === undefined) {
             throw new RequiredError("AssetsServiceApi", "assetsServiceDeleteFilterTemplateForAssets", "templateId");
-        }
-
-
-        // verify required parameter 'assetsv3AssetFilterTemplateRequest' is not null or undefined
-        if (assetsv3AssetFilterTemplateRequest === null || assetsv3AssetFilterTemplateRequest === undefined) {
-            throw new RequiredError("AssetsServiceApi", "assetsServiceDeleteFilterTemplateForAssets", "assetsv3AssetFilterTemplateRequest");
         }
 
 
@@ -290,17 +397,6 @@ export class AssetsServiceApiRequestFactory extends BaseAPIRequestFactory {
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.DELETE);
         requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
 
-
-        // Body Params
-        const contentType = ObjectSerializer.getPreferredMediaType([
-            "application/json"
-        ]);
-        requestContext.setHeaderParam("Content-Type", contentType);
-        const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(assetsv3AssetFilterTemplateRequest, "Assetsv3AssetFilterTemplateRequest", ""),
-            contentType
-        );
-        requestContext.setBody(serializedBody);
 
         let authMethod: SecurityAuthentication | undefined;
         // Apply auth methods
@@ -705,7 +801,7 @@ export class AssetsServiceApiRequestFactory extends BaseAPIRequestFactory {
      * @param ip Asset IP.
      * @param host Asset Host.
      * @param database Database Name.
-     * @param assetEntityType asset ntity type.
+     * @param assetEntityType asset entity type.
      */
     public async assetsServiceGetAssetOverview(assetId?: string, pageNumber?: number, size?: number, widget?: 'ALL' | 'CLASSIFICATION' | 'TAG' | 'RESOURCE', ip?: string, host?: string, database?: string, assetEntityType?: string, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
@@ -892,6 +988,66 @@ export class AssetsServiceApiRequestFactory extends BaseAPIRequestFactory {
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
         requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
 
+
+        let authMethod: SecurityAuthentication | undefined;
+        // Apply auth methods
+        authMethod = _config.authMethods["BasicAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        // Apply auth methods
+        authMethod = _config.authMethods["ApiKeyAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * ImportCSV - Start the async asset import from CSV by starting the db procedure and send notification at the end.
+     * @param csvId unique id of the csv
+     * @param assetsv3ImportCSVRequest 
+     */
+    public async assetsServiceImportCSV(csvId: string, assetsv3ImportCSVRequest: Assetsv3ImportCSVRequest, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'csvId' is not null or undefined
+        if (csvId === null || csvId === undefined) {
+            throw new RequiredError("AssetsServiceApi", "assetsServiceImportCSV", "csvId");
+        }
+
+
+        // verify required parameter 'assetsv3ImportCSVRequest' is not null or undefined
+        if (assetsv3ImportCSVRequest === null || assetsv3ImportCSVRequest === undefined) {
+            throw new RequiredError("AssetsServiceApi", "assetsServiceImportCSV", "assetsv3ImportCSVRequest");
+        }
+
+
+        // Path Params
+        const localVarPath = '/api/v3/assets/csv/import/{csv_id}'
+            .replace('{' + 'csv_id' + '}', encodeURIComponent(String(csvId)));
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        // Body Params
+        const contentType = ObjectSerializer.getPreferredMediaType([
+            "application/json"
+        ]);
+        requestContext.setHeaderParam("Content-Type", contentType);
+        const serializedBody = ObjectSerializer.stringify(
+            ObjectSerializer.serialize(assetsv3ImportCSVRequest, "Assetsv3ImportCSVRequest", ""),
+            contentType
+        );
+        requestContext.setBody(serializedBody);
 
         let authMethod: SecurityAuthentication | undefined;
         // Apply auth methods
@@ -1581,6 +1737,42 @@ export class AssetsServiceApiResponseProcessor {
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
      *
+     * @params response Response returned by the server for a request to assetsServiceCancelCSVImport
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async assetsServiceCancelCSVImportWithHttpInfo(response: ResponseContext): Promise<HttpInfo<any >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: any = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "any", ""
+            ) as any;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("0", response.httpStatusCode)) {
+            const body: RuntimeError = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RuntimeError", ""
+            ) as RuntimeError;
+            throw new ApiException<RuntimeError>(response.httpStatusCode, "An unexpected error response.", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: any = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "any", ""
+            ) as any;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
      * @params response Response returned by the server for a request to assetsServiceClonePolicy
      * @throws ApiException if the response code was not in [200, 299]
      */
@@ -1607,6 +1799,42 @@ export class AssetsServiceApiResponseProcessor {
                 ObjectSerializer.parse(await response.body.text(), contentType),
                 "any", ""
             ) as any;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to assetsServiceCompareCSVToExistingAssets
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async assetsServiceCompareCSVToExistingAssetsWithHttpInfo(response: ResponseContext): Promise<HttpInfo<Assetsv3CompareCSVResponse >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: Assetsv3CompareCSVResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Assetsv3CompareCSVResponse", ""
+            ) as Assetsv3CompareCSVResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("0", response.httpStatusCode)) {
+            const body: RuntimeError = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RuntimeError", ""
+            ) as RuntimeError;
+            throw new ApiException<RuntimeError>(response.httpStatusCode, "An unexpected error response.", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: Assetsv3CompareCSVResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Assetsv3CompareCSVResponse", ""
+            ) as Assetsv3CompareCSVResponse;
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
         }
 
@@ -2039,6 +2267,42 @@ export class AssetsServiceApiResponseProcessor {
                 ObjectSerializer.parse(await response.body.text(), contentType),
                 "Assetsv3GetFiltersDataResponse", ""
             ) as Assetsv3GetFiltersDataResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to assetsServiceImportCSV
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async assetsServiceImportCSVWithHttpInfo(response: ResponseContext): Promise<HttpInfo<Assetsv3ImportCSVResponse >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: Assetsv3ImportCSVResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Assetsv3ImportCSVResponse", ""
+            ) as Assetsv3ImportCSVResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("0", response.httpStatusCode)) {
+            const body: RuntimeError = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RuntimeError", ""
+            ) as RuntimeError;
+            throw new ApiException<RuntimeError>(response.httpStatusCode, "An unexpected error response.", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: Assetsv3ImportCSVResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Assetsv3ImportCSVResponse", ""
+            ) as Assetsv3ImportCSVResponse;
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
         }
 

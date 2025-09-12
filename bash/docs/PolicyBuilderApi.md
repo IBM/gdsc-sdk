@@ -22,6 +22,10 @@ Description: Return a list of rules inside the policy.
 Description: Return a map where the key is the rule ID and value is the policy name that has the rule ID.
 [**policyBuilderGetPolicySyncList**](PolicyBuilderApi.md#policyBuilderGetPolicySyncList) | **GET** /api/v3/policies/sync_list | Summary: Get list of synced polices
 Description: Returns the list and status of sync entries
+[**policyBuilderGetPolicyVersion**](PolicyBuilderApi.md#policyBuilderGetPolicyVersion) | **GET** /api/v3/policies/{policy_id}/details/versions/{version} | Summary: Get a particular version of the policy
+Description: Returns a particular version of policy and response code and message
+[**policyBuilderGetPolicyVersionsInfo**](PolicyBuilderApi.md#policyBuilderGetPolicyVersionsInfo) | **GET** /api/v3/policies/{policy_id}/versions/metdata | Summary: Gets policy versions info
+Description: Returns information of all versions of a policy and response code and message
 [**policyBuilderGetReceivers**](PolicyBuilderApi.md#policyBuilderGetReceivers) | **GET** /api/v3/policies/receivers | Summary: Get receivers
 Description: Get all the receivers associated with actions.
 [**policyBuilderGetRuleMetadata**](PolicyBuilderApi.md#policyBuilderGetRuleMetadata) | **GET** /api/v3/rules/metadata | Summary: Get rule metadata
@@ -40,6 +44,8 @@ Description: Get policy groups.
 Description: Validate a rule parameters and actions.
 [**policyBuilderStorePoliciesGdp**](PolicyBuilderApi.md#policyBuilderStorePoliciesGdp) | **POST** /api/v3/policies/{central_manager_id} | Summary: Store policies Gdp
 Description: Store policies.  (This API is called from GDP only)
+[**policyBuilderUpdatePolicy**](PolicyBuilderApi.md#policyBuilderUpdatePolicy) | **PUT** /api/v3/policies | Summary: Update policy
+Description: Update Policy returns response code and message.
 
 
 
@@ -328,6 +334,75 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**Policybuilderv3GetPolicySyncListResponse**](Policybuilderv3GetPolicySyncListResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## policyBuilderGetPolicyVersion
+
+Summary: Get a particular version of the policy
+Description: Returns a particular version of policy and response code and message
+
+### Example
+
+```bash
+ policyBuilderGetPolicyVersion policy_id=value version=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **policyId** | **string** | Policy id of the requested policy | [default to null]
+ **version** | **integer** | Requested version number of the policy | [default to null]
+
+### Return type
+
+[**Policybuilderv3GetPolicyVersionResponse**](Policybuilderv3GetPolicyVersionResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## policyBuilderGetPolicyVersionsInfo
+
+Summary: Gets policy versions info
+Description: Returns information of all versions of a policy and response code and message
+
+### Example
+
+```bash
+ policyBuilderGetPolicyVersionsInfo policy_id=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **policyId** | **string** | Policy id of the requested policy | [default to null]
+
+### Return type
+
+[**Policybuilderv3GetPolicyVersionsInfoResponse**](Policybuilderv3GetPolicyVersionsInfoResponse.md)
 
 ### Authorization
 
@@ -638,6 +713,40 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Policybuilderv3StorePolicyGdpResponse**](Policybuilderv3StorePolicyGdpResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## policyBuilderUpdatePolicy
+
+Summary: Update policy
+Description: Update Policy returns response code and message.
+
+### Example
+
+```bash
+ policyBuilderUpdatePolicy
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **policybuilderv3CreateUpdatePolicyRequest** | [**Policybuilderv3CreateUpdatePolicyRequest**](Policybuilderv3CreateUpdatePolicyRequest.md) |  |
+
+### Return type
+
+[**Policybuilderv3CreateUpdatePolicyResponse**](Policybuilderv3CreateUpdatePolicyResponse.md)
 
 ### Authorization
 

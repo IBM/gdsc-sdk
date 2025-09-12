@@ -106,6 +106,14 @@ public class Jumpboxv3TenantTest {
     }
 
     /**
+     * Test the property 'status'
+     */
+    @Test
+    public void statusTest() {
+        // TODO: test status
+    }
+
+    /**
      * Test the property 'tenantCapabilities'
      */
     @Test

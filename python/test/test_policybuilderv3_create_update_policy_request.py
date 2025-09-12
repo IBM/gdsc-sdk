@@ -50,6 +50,7 @@ class TestPolicybuilderv3CreateUpdatePolicyRequest(unittest.TestCase):
                     policy_id = '', 
                     policy_name = '', 
                     policy_type = 'DATA_POLICY', 
+                    product_id = 'NO_PRODUCT', 
                     rules = [
                         ibm_gdsc_sdk_saas.models.policybuilderv3_rule.policybuilderv3Rule(
                             actions = [

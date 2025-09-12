@@ -118,7 +118,7 @@ public class DataMovementsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataMovements/actualFlows/{id}"
+        String localVarPath = "/api/v2/dspm/dataMovements/actualFlows/{id}"
             .replace("{" + "id" + "}", localVarApiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -245,7 +245,7 @@ public class DataMovementsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataMovements/actualFlows/summary";
+        String localVarPath = "/api/v2/dspm/dataMovements/actualFlows/summary";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -370,7 +370,7 @@ public class DataMovementsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataMovements/potentialFlows/{flowId}"
+        String localVarPath = "/api/v2/dspm/dataMovements/potentialFlows/{flowId}"
             .replace("{" + "flowId" + "}", localVarApiClient.escapeString(flowId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -497,7 +497,7 @@ public class DataMovementsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataMovements/potentialFlows/paths/{flowPathId}"
+        String localVarPath = "/api/v2/dspm/dataMovements/potentialFlows/paths/{flowPathId}"
             .replace("{" + "flowPathId" + "}", localVarApiClient.escapeString(flowPathId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -624,7 +624,7 @@ public class DataMovementsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataMovements/potentialFlows/summary";
+        String localVarPath = "/api/v2/dspm/dataMovements/potentialFlows/summary";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -752,7 +752,7 @@ public class DataMovementsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataMovements/actualFlowPaths";
+        String localVarPath = "/api/v2/dspm/dataMovements/actualFlowPaths";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -901,7 +901,7 @@ public class DataMovementsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataMovements/actualFlows";
+        String localVarPath = "/api/v2/dspm/dataMovements/actualFlows";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1049,7 +1049,7 @@ public class DataMovementsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataMovements/potentialFlows";
+        String localVarPath = "/api/v2/dspm/dataMovements/potentialFlows";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1190,7 +1190,7 @@ public class DataMovementsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataMovements/potentialFlows/paths";
+        String localVarPath = "/api/v2/dspm/dataMovements/potentialFlows/paths";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();

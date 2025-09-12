@@ -10,16 +10,25 @@ import {SecurityAuthentication} from '../auth/auth';
 
 import { Jumpboxv3AuthorizeRequest } from '../models/Jumpboxv3AuthorizeRequest';
 import { Jumpboxv3AuthorizeResponse } from '../models/Jumpboxv3AuthorizeResponse';
+import { Jumpboxv3DeleteAccountResponse } from '../models/Jumpboxv3DeleteAccountResponse';
+import { Jumpboxv3GetAccountResponse } from '../models/Jumpboxv3GetAccountResponse';
+import { Jumpboxv3GetAccountsResponse } from '../models/Jumpboxv3GetAccountsResponse';
 import { Jumpboxv3GetTenantResponse } from '../models/Jumpboxv3GetTenantResponse';
 import { Jumpboxv3GetTenantsResponse } from '../models/Jumpboxv3GetTenantsResponse';
+import { Jumpboxv3PostAccountRequest } from '../models/Jumpboxv3PostAccountRequest';
+import { Jumpboxv3PostAccountResponse } from '../models/Jumpboxv3PostAccountResponse';
 import { Jumpboxv3PostTenantsRequest } from '../models/Jumpboxv3PostTenantsRequest';
 import { Jumpboxv3PostTenantsResponse } from '../models/Jumpboxv3PostTenantsResponse';
 import { Jumpboxv3PostUsersBulkRequest } from '../models/Jumpboxv3PostUsersBulkRequest';
 import { Jumpboxv3PostUsersBulkResponse } from '../models/Jumpboxv3PostUsersBulkResponse';
+import { Jumpboxv3ResumeAccountResponse } from '../models/Jumpboxv3ResumeAccountResponse';
 import { Jumpboxv3SearchUsersRequest } from '../models/Jumpboxv3SearchUsersRequest';
 import { Jumpboxv3SearchUsersResponse } from '../models/Jumpboxv3SearchUsersResponse';
+import { Jumpboxv3SuspendAccountResponse } from '../models/Jumpboxv3SuspendAccountResponse';
 import { Jumpboxv3TestUserRequest } from '../models/Jumpboxv3TestUserRequest';
 import { Jumpboxv3TestUserResponse } from '../models/Jumpboxv3TestUserResponse';
+import { Jumpboxv3UpdateAccountRequest } from '../models/Jumpboxv3UpdateAccountRequest';
+import { Jumpboxv3UpdateAccountResponse } from '../models/Jumpboxv3UpdateAccountResponse';
 import { Jumpboxv3UpdateTenantRequest } from '../models/Jumpboxv3UpdateTenantRequest';
 import { Jumpboxv3UpdateTenantResponse } from '../models/Jumpboxv3UpdateTenantResponse';
 import { Jumpboxv3UpdateUsersBulkRequest } from '../models/Jumpboxv3UpdateUsersBulkRequest';
@@ -70,6 +79,43 @@ export class JumpboxServiceApiRequestFactory extends BaseAPIRequestFactory {
         if (authMethod?.applySecurityAuthentication) {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
+        // Apply auth methods
+        authMethod = _config.authMethods["ApiKeyAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Summary: Delete account Description: Delete an account.
+     * @param accountId Account id.
+     */
+    public async jumpboxServiceDeleteAccount(accountId: string, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'accountId' is not null or undefined
+        if (accountId === null || accountId === undefined) {
+            throw new RequiredError("JumpboxServiceApi", "jumpboxServiceDeleteAccount", "accountId");
+        }
+
+
+        // Path Params
+        const localVarPath = '/api/v3/accounts/{account_id}'
+            .replace('{' + 'account_id' + '}', encodeURIComponent(String(accountId)));
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.DELETE);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        let authMethod: SecurityAuthentication | undefined;
         // Apply auth methods
         authMethod = _config.authMethods["ApiKeyAuth"]
         if (authMethod?.applySecurityAuthentication) {
@@ -155,6 +201,119 @@ export class JumpboxServiceApiRequestFactory extends BaseAPIRequestFactory {
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.DELETE);
         requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        let authMethod: SecurityAuthentication | undefined;
+        // Apply auth methods
+        authMethod = _config.authMethods["BasicAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        // Apply auth methods
+        authMethod = _config.authMethods["ApiKeyAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Summary: Get account Description: Get an account.
+     * @param accountId Account id.
+     * @param includeInactive Include inactive.
+     * @param includeNotReady Include tenants that are not ready(are in state of being created or deleted).
+     */
+    public async jumpboxServiceGetAccount(accountId: string, includeInactive?: boolean, includeNotReady?: boolean, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'accountId' is not null or undefined
+        if (accountId === null || accountId === undefined) {
+            throw new RequiredError("JumpboxServiceApi", "jumpboxServiceGetAccount", "accountId");
+        }
+
+
+
+
+        // Path Params
+        const localVarPath = '/api/v3/accounts/{account_id}'
+            .replace('{' + 'account_id' + '}', encodeURIComponent(String(accountId)));
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+        // Query Params
+        if (includeInactive !== undefined) {
+            requestContext.setQueryParam("include_inactive", ObjectSerializer.serialize(includeInactive, "boolean", ""));
+        }
+
+        // Query Params
+        if (includeNotReady !== undefined) {
+            requestContext.setQueryParam("include_not_ready", ObjectSerializer.serialize(includeNotReady, "boolean", ""));
+        }
+
+
+        let authMethod: SecurityAuthentication | undefined;
+        // Apply auth methods
+        authMethod = _config.authMethods["ApiKeyAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Summary: Get accounts Description: Get all accounts based on UID.
+     * @param uid Email.
+     * @param externalId External id.
+     * @param includeInactive Include inactive.
+     * @param includeNotReady Include tenants that are not ready(are in state of being created or deleted).
+     */
+    public async jumpboxServiceGetAccounts(uid?: string, externalId?: string, includeInactive?: boolean, includeNotReady?: boolean, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+
+
+
+
+        // Path Params
+        const localVarPath = '/api/v3/accounts';
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+        // Query Params
+        if (uid !== undefined) {
+            requestContext.setQueryParam("uid", ObjectSerializer.serialize(uid, "string", ""));
+        }
+
+        // Query Params
+        if (externalId !== undefined) {
+            requestContext.setQueryParam("external_id", ObjectSerializer.serialize(externalId, "string", ""));
+        }
+
+        // Query Params
+        if (includeInactive !== undefined) {
+            requestContext.setQueryParam("include_inactive", ObjectSerializer.serialize(includeInactive, "boolean", ""));
+        }
+
+        // Query Params
+        if (includeNotReady !== undefined) {
+            requestContext.setQueryParam("include_not_ready", ObjectSerializer.serialize(includeNotReady, "boolean", ""));
+        }
 
 
         let authMethod: SecurityAuthentication | undefined;
@@ -332,6 +491,58 @@ export class JumpboxServiceApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
+     * Summary: Post account Description: Create an Account.
+     * @param jumpboxv3PostAccountRequest 
+     */
+    public async jumpboxServicePostAccount(jumpboxv3PostAccountRequest: Jumpboxv3PostAccountRequest, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'jumpboxv3PostAccountRequest' is not null or undefined
+        if (jumpboxv3PostAccountRequest === null || jumpboxv3PostAccountRequest === undefined) {
+            throw new RequiredError("JumpboxServiceApi", "jumpboxServicePostAccount", "jumpboxv3PostAccountRequest");
+        }
+
+
+        // Path Params
+        const localVarPath = '/api/v3/accounts';
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        // Body Params
+        const contentType = ObjectSerializer.getPreferredMediaType([
+            "application/json"
+        ]);
+        requestContext.setHeaderParam("Content-Type", contentType);
+        const serializedBody = ObjectSerializer.stringify(
+            ObjectSerializer.serialize(jumpboxv3PostAccountRequest, "Jumpboxv3PostAccountRequest", ""),
+            contentType
+        );
+        requestContext.setBody(serializedBody);
+
+        let authMethod: SecurityAuthentication | undefined;
+        // Apply auth methods
+        authMethod = _config.authMethods["BasicAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        // Apply auth methods
+        authMethod = _config.authMethods["ApiKeyAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
      * Summary: Post tenants Description: Create a tenant.
      * @param jumpboxv3PostTenantsRequest 
      */
@@ -436,6 +647,43 @@ export class JumpboxServiceApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
+     * Summary: Resume account Description: Resume an account.
+     * @param accountId account_id represents the user\&#39;s account ID
+     */
+    public async jumpboxServiceResumeAccount(accountId: string, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'accountId' is not null or undefined
+        if (accountId === null || accountId === undefined) {
+            throw new RequiredError("JumpboxServiceApi", "jumpboxServiceResumeAccount", "accountId");
+        }
+
+
+        // Path Params
+        const localVarPath = '/api/v3/accounts/{account_id}/resume'
+            .replace('{' + 'account_id' + '}', encodeURIComponent(String(accountId)));
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.PATCH);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        let authMethod: SecurityAuthentication | undefined;
+        // Apply auth methods
+        authMethod = _config.authMethods["ApiKeyAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
      * Summary: Search users Description: Search for all users matching the provided string.
      * @param jumpboxv3SearchUsersRequest 
      */
@@ -488,6 +736,43 @@ export class JumpboxServiceApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
+     * Summary: Suspend Account Description: Suspend an account
+     * @param accountId account_id represents the user\&#39;s account ID
+     */
+    public async jumpboxServiceSuspendAccount(accountId: string, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'accountId' is not null or undefined
+        if (accountId === null || accountId === undefined) {
+            throw new RequiredError("JumpboxServiceApi", "jumpboxServiceSuspendAccount", "accountId");
+        }
+
+
+        // Path Params
+        const localVarPath = '/api/v3/accounts/{account_id}/suspend'
+            .replace('{' + 'account_id' + '}', encodeURIComponent(String(accountId)));
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.PATCH);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        let authMethod: SecurityAuthentication | undefined;
+        // Apply auth methods
+        authMethod = _config.authMethods["ApiKeyAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
      * Summary: Test user Description: Test a user lookup to a given LDAP.
      * @param jumpboxv3TestUserRequest 
      */
@@ -525,6 +810,61 @@ export class JumpboxServiceApiRequestFactory extends BaseAPIRequestFactory {
         if (authMethod?.applySecurityAuthentication) {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
+        // Apply auth methods
+        authMethod = _config.authMethods["ApiKeyAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Summary: Update Account Description: Updates an account.
+     * @param accountId Account id.
+     * @param jumpboxv3UpdateAccountRequest 
+     */
+    public async jumpboxServiceUpdateAccount(accountId: string, jumpboxv3UpdateAccountRequest: Jumpboxv3UpdateAccountRequest, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'accountId' is not null or undefined
+        if (accountId === null || accountId === undefined) {
+            throw new RequiredError("JumpboxServiceApi", "jumpboxServiceUpdateAccount", "accountId");
+        }
+
+
+        // verify required parameter 'jumpboxv3UpdateAccountRequest' is not null or undefined
+        if (jumpboxv3UpdateAccountRequest === null || jumpboxv3UpdateAccountRequest === undefined) {
+            throw new RequiredError("JumpboxServiceApi", "jumpboxServiceUpdateAccount", "jumpboxv3UpdateAccountRequest");
+        }
+
+
+        // Path Params
+        const localVarPath = '/api/v3/accounts/{account_id}'
+            .replace('{' + 'account_id' + '}', encodeURIComponent(String(accountId)));
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.PATCH);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        // Body Params
+        const contentType = ObjectSerializer.getPreferredMediaType([
+            "application/json"
+        ]);
+        requestContext.setHeaderParam("Content-Type", contentType);
+        const serializedBody = ObjectSerializer.stringify(
+            ObjectSerializer.serialize(jumpboxv3UpdateAccountRequest, "Jumpboxv3UpdateAccountRequest", ""),
+            contentType
+        );
+        requestContext.setBody(serializedBody);
+
+        let authMethod: SecurityAuthentication | undefined;
         // Apply auth methods
         authMethod = _config.authMethods["ApiKeyAuth"]
         if (authMethod?.applySecurityAuthentication) {
@@ -690,6 +1030,42 @@ export class JumpboxServiceApiResponseProcessor {
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
      *
+     * @params response Response returned by the server for a request to jumpboxServiceDeleteAccount
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async jumpboxServiceDeleteAccountWithHttpInfo(response: ResponseContext): Promise<HttpInfo<Jumpboxv3DeleteAccountResponse >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: Jumpboxv3DeleteAccountResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Jumpboxv3DeleteAccountResponse", ""
+            ) as Jumpboxv3DeleteAccountResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("0", response.httpStatusCode)) {
+            const body: RuntimeError = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RuntimeError", ""
+            ) as RuntimeError;
+            throw new ApiException<RuntimeError>(response.httpStatusCode, "An unexpected error response.", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: Jumpboxv3DeleteAccountResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Jumpboxv3DeleteAccountResponse", ""
+            ) as Jumpboxv3DeleteAccountResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
      * @params response Response returned by the server for a request to jumpboxServiceDeleteTenant
      * @throws ApiException if the response code was not in [200, 299]
      */
@@ -752,6 +1128,78 @@ export class JumpboxServiceApiResponseProcessor {
                 ObjectSerializer.parse(await response.body.text(), contentType),
                 "any", ""
             ) as any;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to jumpboxServiceGetAccount
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async jumpboxServiceGetAccountWithHttpInfo(response: ResponseContext): Promise<HttpInfo<Jumpboxv3GetAccountResponse >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: Jumpboxv3GetAccountResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Jumpboxv3GetAccountResponse", ""
+            ) as Jumpboxv3GetAccountResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("0", response.httpStatusCode)) {
+            const body: RuntimeError = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RuntimeError", ""
+            ) as RuntimeError;
+            throw new ApiException<RuntimeError>(response.httpStatusCode, "An unexpected error response.", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: Jumpboxv3GetAccountResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Jumpboxv3GetAccountResponse", ""
+            ) as Jumpboxv3GetAccountResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to jumpboxServiceGetAccounts
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async jumpboxServiceGetAccountsWithHttpInfo(response: ResponseContext): Promise<HttpInfo<Jumpboxv3GetAccountsResponse >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: Jumpboxv3GetAccountsResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Jumpboxv3GetAccountsResponse", ""
+            ) as Jumpboxv3GetAccountsResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("0", response.httpStatusCode)) {
+            const body: RuntimeError = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RuntimeError", ""
+            ) as RuntimeError;
+            throw new ApiException<RuntimeError>(response.httpStatusCode, "An unexpected error response.", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: Jumpboxv3GetAccountsResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Jumpboxv3GetAccountsResponse", ""
+            ) as Jumpboxv3GetAccountsResponse;
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
         }
 
@@ -870,6 +1318,42 @@ export class JumpboxServiceApiResponseProcessor {
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
      *
+     * @params response Response returned by the server for a request to jumpboxServicePostAccount
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async jumpboxServicePostAccountWithHttpInfo(response: ResponseContext): Promise<HttpInfo<Jumpboxv3PostAccountResponse >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: Jumpboxv3PostAccountResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Jumpboxv3PostAccountResponse", ""
+            ) as Jumpboxv3PostAccountResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("0", response.httpStatusCode)) {
+            const body: RuntimeError = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RuntimeError", ""
+            ) as RuntimeError;
+            throw new ApiException<RuntimeError>(response.httpStatusCode, "An unexpected error response.", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: Jumpboxv3PostAccountResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Jumpboxv3PostAccountResponse", ""
+            ) as Jumpboxv3PostAccountResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
      * @params response Response returned by the server for a request to jumpboxServicePostTenants
      * @throws ApiException if the response code was not in [200, 299]
      */
@@ -942,6 +1426,42 @@ export class JumpboxServiceApiResponseProcessor {
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
      *
+     * @params response Response returned by the server for a request to jumpboxServiceResumeAccount
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async jumpboxServiceResumeAccountWithHttpInfo(response: ResponseContext): Promise<HttpInfo<Jumpboxv3ResumeAccountResponse >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: Jumpboxv3ResumeAccountResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Jumpboxv3ResumeAccountResponse", ""
+            ) as Jumpboxv3ResumeAccountResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("0", response.httpStatusCode)) {
+            const body: RuntimeError = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RuntimeError", ""
+            ) as RuntimeError;
+            throw new ApiException<RuntimeError>(response.httpStatusCode, "An unexpected error response.", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: Jumpboxv3ResumeAccountResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Jumpboxv3ResumeAccountResponse", ""
+            ) as Jumpboxv3ResumeAccountResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
      * @params response Response returned by the server for a request to jumpboxServiceSearchUsers
      * @throws ApiException if the response code was not in [200, 299]
      */
@@ -978,6 +1498,42 @@ export class JumpboxServiceApiResponseProcessor {
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
      *
+     * @params response Response returned by the server for a request to jumpboxServiceSuspendAccount
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async jumpboxServiceSuspendAccountWithHttpInfo(response: ResponseContext): Promise<HttpInfo<Jumpboxv3SuspendAccountResponse >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: Jumpboxv3SuspendAccountResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Jumpboxv3SuspendAccountResponse", ""
+            ) as Jumpboxv3SuspendAccountResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("0", response.httpStatusCode)) {
+            const body: RuntimeError = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RuntimeError", ""
+            ) as RuntimeError;
+            throw new ApiException<RuntimeError>(response.httpStatusCode, "An unexpected error response.", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: Jumpboxv3SuspendAccountResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Jumpboxv3SuspendAccountResponse", ""
+            ) as Jumpboxv3SuspendAccountResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
      * @params response Response returned by the server for a request to jumpboxServiceTestUser
      * @throws ApiException if the response code was not in [200, 299]
      */
@@ -1004,6 +1560,42 @@ export class JumpboxServiceApiResponseProcessor {
                 ObjectSerializer.parse(await response.body.text(), contentType),
                 "Jumpboxv3TestUserResponse", ""
             ) as Jumpboxv3TestUserResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to jumpboxServiceUpdateAccount
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async jumpboxServiceUpdateAccountWithHttpInfo(response: ResponseContext): Promise<HttpInfo<Jumpboxv3UpdateAccountResponse >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: Jumpboxv3UpdateAccountResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Jumpboxv3UpdateAccountResponse", ""
+            ) as Jumpboxv3UpdateAccountResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("0", response.httpStatusCode)) {
+            const body: RuntimeError = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RuntimeError", ""
+            ) as RuntimeError;
+            throw new ApiException<RuntimeError>(response.httpStatusCode, "An unexpected error response.", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: Jumpboxv3UpdateAccountResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Jumpboxv3UpdateAccountResponse", ""
+            ) as Jumpboxv3UpdateAccountResponse;
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
         }
 

@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **policyUnderscoreid** | **string** |  | [optional] [default to null]
 **policyUnderscorename** | **string** |  | [optional] [default to null]
 **policyUnderscoretype** | [**Policybuilderv3PolicyType**](Policybuilderv3PolicyType.md) |  | [optional] [default to null]
+**productUnderscoreid** | [**Policybuilderv3ProductType**](Policybuilderv3ProductType.md) |  | [optional] [default to null]
 **rules** | [**array[Policybuilderv3Rule]**](Policybuilderv3Rule.md) | Rules contained by the policy | [optional] [default to null]
 **rulesUnderscoreonUnderscoreflat** | **boolean** |  | [optional] [default to null]
 **template** | **boolean** |  | [optional] [default to null]

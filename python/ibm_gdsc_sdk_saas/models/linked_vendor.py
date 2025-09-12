@@ -18,7 +18,8 @@ import re  # noqa: F401
 import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt
-from typing import Any, ClassVar, Dict, List, Union
+from typing import Any, ClassVar, Dict, List, Optional, Union
+from ibm_gdsc_sdk_saas.models.sensitivity_summary import SensitivitySummary
 from ibm_gdsc_sdk_saas.models.vendor import Vendor
 from typing import Optional, Set
 from typing_extensions import Self
@@ -30,7 +31,8 @@ class LinkedVendor(BaseModel):
     vendor: Vendor
     total_accounts: Union[StrictFloat, StrictInt] = Field(alias="totalAccounts")
     is_sensitive: StrictBool = Field(alias="isSensitive")
-    __properties: ClassVar[List[str]] = ["vendor", "totalAccounts", "isSensitive"]
+    sensitivity_summary: Optional[List[SensitivitySummary]] = Field(default=None, alias="sensitivitySummary")
+    __properties: ClassVar[List[str]] = ["vendor", "totalAccounts", "isSensitive", "sensitivitySummary"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -74,6 +76,13 @@ class LinkedVendor(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of vendor
         if self.vendor:
             _dict['vendor'] = self.vendor.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of each item in sensitivity_summary (list)
+        _items = []
+        if self.sensitivity_summary:
+            for _item in self.sensitivity_summary:
+                if _item:
+                    _items.append(_item.to_dict())
+            _dict['sensitivitySummary'] = _items
         return _dict
 
     @classmethod
@@ -88,7 +97,8 @@ class LinkedVendor(BaseModel):
         _obj = cls.model_validate({
             "vendor": Vendor.from_dict(obj["vendor"]) if obj.get("vendor") is not None else None,
             "totalAccounts": obj.get("totalAccounts"),
-            "isSensitive": obj.get("isSensitive")
+            "isSensitive": obj.get("isSensitive"),
+            "sensitivitySummary": [SensitivitySummary.from_dict(_item) for _item in obj["sensitivitySummary"]] if obj.get("sensitivitySummary") is not None else None
         })
         return _obj
 

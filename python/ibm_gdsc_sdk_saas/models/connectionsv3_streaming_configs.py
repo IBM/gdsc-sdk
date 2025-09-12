@@ -28,7 +28,7 @@ class Connectionsv3StreamingConfigs(BaseModel):
     """
     List of account configs and streaming connection configs.
     """ # noqa: E501
-    account_configs: Optional[List[Connectionsv3AccountConfig]] = Field(default=None, description="Accounts infomation.")
+    account_configs: Optional[List[Connectionsv3AccountConfig]] = Field(default=None, description="Accounts information.")
     instance_configs: Optional[List[Connectionsv3StreamConnectionConfig]] = Field(default=None, description="Streaming connections information.")
     __properties: ClassVar[List[str]] = ["account_configs", "instance_configs"]
 

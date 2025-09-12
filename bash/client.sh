@@ -98,11 +98,16 @@ declare -a result_color_table=( "$WHITE" "$WHITE" "$GREEN" "$YELLOW" "$WHITE" "$
 declare -A operation_parameters_minimum_occurrences
 operation_parameters_minimum_occurrences["assetsServiceAssetIngestion:::Assetsv3AssetIngestionRequest"]=1
 operation_parameters_minimum_occurrences["assetsServiceAssetIngestionManualTrigger:::body"]=1
+operation_parameters_minimum_occurrences["assetsServiceCancelCSVImport:::csv_id"]=1
 operation_parameters_minimum_occurrences["assetsServiceClonePolicy:::policy_id"]=1
 operation_parameters_minimum_occurrences["assetsServiceClonePolicy:::Assetsv3ClonePolicyRequest"]=1
+operation_parameters_minimum_occurrences["assetsServiceCompareCSVToExistingAssets:::csv_id"]=1
+operation_parameters_minimum_occurrences["assetsServiceCompareCSVToExistingAssets:::rows_required"]=0
+operation_parameters_minimum_occurrences["assetsServiceCompareCSVToExistingAssets:::page_number"]=0
+operation_parameters_minimum_occurrences["assetsServiceCompareCSVToExistingAssets:::page_size"]=0
+operation_parameters_minimum_occurrences["assetsServiceCompareCSVToExistingAssets:::template_type"]=0
 operation_parameters_minimum_occurrences["assetsServiceCreateUpdatePolicy:::Assetsv3CreateUpdatePolicyRequest"]=1
 operation_parameters_minimum_occurrences["assetsServiceDeleteFilterTemplateForAssets:::template_id"]=1
-operation_parameters_minimum_occurrences["assetsServiceDeleteFilterTemplateForAssets:::Assetsv3AssetFilterTemplateRequest"]=1
 operation_parameters_minimum_occurrences["assetsServiceDeletePolicies:::policy_ids"]=0
 operation_parameters_minimum_occurrences["assetsServiceFetchAssetChangeLog:::Assetsv3FetchAssetChangeLogRequest"]=1
 operation_parameters_minimum_occurrences["assetsServiceFetchAssetDashboard:::widget_type"]=1
@@ -134,6 +139,8 @@ operation_parameters_minimum_occurrences["assetsServiceGetAssetOverview:::databa
 operation_parameters_minimum_occurrences["assetsServiceGetAssetOverview:::asset_entity_type"]=0
 operation_parameters_minimum_occurrences["assetsServiceGetAssetTopology:::Assetsv3GetAssetTopologyRequest"]=1
 operation_parameters_minimum_occurrences["assetsServiceGetFilterTemplateForAssets:::template_id"]=0
+operation_parameters_minimum_occurrences["assetsServiceImportCSV:::csv_id"]=1
+operation_parameters_minimum_occurrences["assetsServiceImportCSV:::Assetsv3ImportCSVRequest"]=1
 operation_parameters_minimum_occurrences["assetsServiceListRule:::policy_id"]=1
 operation_parameters_minimum_occurrences["assetsServiceListTagDomains:::dom_grouper"]=0
 operation_parameters_minimum_occurrences["assetsServiceListTagDomains:::purpose"]=0
@@ -171,6 +178,7 @@ operation_parameters_minimum_occurrences["getAnalyzedRegionStatus:::cloudProvide
 operation_parameters_minimum_occurrences["getAnalyzedRegionStatus:::region"]=1
 operation_parameters_minimum_occurrences["getCloudAccountInstallationStatus:::cloudProvider"]=1
 operation_parameters_minimum_occurrences["getCloudAccountInstallationStatus:::cloudAccountId"]=1
+operation_parameters_minimum_occurrences["getDatabaseMetadata:::DbInfo"]=1
 operation_parameters_minimum_occurrences["getRefreshTokenExpiry:::providerId"]=1
 operation_parameters_minimum_occurrences["removeAccounts:::accountIds"]=1
 operation_parameters_minimum_occurrences["removeAccounts:::serviceProvider"]=1
@@ -178,6 +186,7 @@ operation_parameters_minimum_occurrences["removeAccountsInstructions:::accountId
 operation_parameters_minimum_occurrences["removeAccountsInstructions:::serviceProvider"]=1
 operation_parameters_minimum_occurrences["submitGoogleWorkspaceAdminEmail:::SubmitAdminEmailParams"]=1
 operation_parameters_minimum_occurrences["submitOffice365TenantInfo:::TenantInfo"]=1
+operation_parameters_minimum_occurrences["submitSalesforceAuthCode:::AuthCode"]=1
 operation_parameters_minimum_occurrences["submitSlackAuthCode:::SubmitAuthCode"]=1
 operation_parameters_minimum_occurrences["submitSnowflakeAuthCode:::AuthInfo"]=1
 operation_parameters_minimum_occurrences["complianceAcceleratorCreateWorkspace:::Complianceacceleratorv3CreateWorkspaceRequest"]=1
@@ -212,6 +221,8 @@ operation_parameters_minimum_occurrences["connectionsServiceUpdatePlugin:::id"]=
 operation_parameters_minimum_occurrences["connectionsServiceUpdatePlugin:::Connectionsv3UpdatePluginRequest"]=1
 operation_parameters_minimum_occurrences["connectionsServiceUpdateSettings:::Connectionsv3UpdateSettingsRequest"]=1
 operation_parameters_minimum_occurrences["connectionsServiceValidateAwsConnection:::Connectionsv3ValidateAwsConnectionRequest"]=1
+operation_parameters_minimum_occurrences["connectionsServiceValidateAzureConnection:::Connectionsv3ValidateAzureConnectionRequest"]=1
+operation_parameters_minimum_occurrences["connectionsServiceValidateGcpConnection:::Connectionsv3ValidateGcpConnectionRequest"]=1
 operation_parameters_minimum_occurrences["dashboardsServiceCreateDashboard:::Dashboardsv3Dashboard"]=1
 operation_parameters_minimum_occurrences["dashboardsServiceDeleteDashboard:::dashboard_id"]=1
 operation_parameters_minimum_occurrences["dashboardsServiceDeleteDashboard:::Dashboardsv3DeleteDashboardRequest"]=1
@@ -326,11 +337,6 @@ operation_parameters_minimum_occurrences["ecosystemServiceGetDatasets:::include_
 operation_parameters_minimum_occurrences["ecosystemServiceGetPurgableRows:::Ecosystemv3GetPurgableRowsRequest"]=1
 operation_parameters_minimum_occurrences["ecosystemServicePurgeData:::dataset_names"]=0
 operation_parameters_minimum_occurrences["ecosystemServiceTestIntegration:::Ecosystemv3TestIntegrationRequest"]=1
-operation_parameters_minimum_occurrences["edgeSchedulerServiceGetEdgeQueryStatus:::edge_id"]=1
-operation_parameters_minimum_occurrences["edgeSchedulerServiceGetEdgeQueryStatus:::edge_result_report_id"]=0
-operation_parameters_minimum_occurrences["edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery:::client_id"]=0
-operation_parameters_minimum_occurrences["edgeSchedulerServiceScheduleEdgeQuery:::edge_id"]=1
-operation_parameters_minimum_occurrences["edgeSchedulerServiceScheduleEdgeQuery:::Edgeschedulerv3ScheduleEdgeQueryRequest"]=1
 operation_parameters_minimum_occurrences["featureFlagsServiceDeleteFeatureFlagOverrides:::flag_name"]=0
 operation_parameters_minimum_occurrences["featureFlagsServiceDeleteFeatureFlagOverrides:::tenant_id"]=0
 operation_parameters_minimum_occurrences["featureFlagsServiceGetFeatureFlagOverrides:::tenant_id"]=0
@@ -436,10 +442,18 @@ operation_parameters_minimum_occurrences["healthCollectorGetTopGDPCollectors:::e
 operation_parameters_minimum_occurrences["healthCollectorStoreHealthInfo:::central_manager_id"]=1
 operation_parameters_minimum_occurrences["healthCollectorStoreHealthInfo:::Healthcollectorv3StoreHealthInfoRequest"]=1
 operation_parameters_minimum_occurrences["jumpboxServiceAuthorize:::Jumpboxv3AuthorizeRequest"]=1
+operation_parameters_minimum_occurrences["jumpboxServiceDeleteAccount:::account_id"]=1
 operation_parameters_minimum_occurrences["jumpboxServiceDeleteTenant:::tenant_id"]=1
 operation_parameters_minimum_occurrences["jumpboxServiceDeleteTenant:::is_permanent_delete"]=0
 operation_parameters_minimum_occurrences["jumpboxServiceDeleteTenant:::async"]=0
 operation_parameters_minimum_occurrences["jumpboxServiceDeleteUser:::user_id"]=1
+operation_parameters_minimum_occurrences["jumpboxServiceGetAccount:::account_id"]=1
+operation_parameters_minimum_occurrences["jumpboxServiceGetAccount:::include_inactive"]=0
+operation_parameters_minimum_occurrences["jumpboxServiceGetAccount:::include_not_ready"]=0
+operation_parameters_minimum_occurrences["jumpboxServiceGetAccounts:::uid"]=0
+operation_parameters_minimum_occurrences["jumpboxServiceGetAccounts:::external_id"]=0
+operation_parameters_minimum_occurrences["jumpboxServiceGetAccounts:::include_inactive"]=0
+operation_parameters_minimum_occurrences["jumpboxServiceGetAccounts:::include_not_ready"]=0
 operation_parameters_minimum_occurrences["jumpboxServiceGetTenant:::tenant_id"]=1
 operation_parameters_minimum_occurrences["jumpboxServiceGetTenant:::include_inactive"]=0
 operation_parameters_minimum_occurrences["jumpboxServiceGetTenant:::include_not_ready"]=0
@@ -448,10 +462,15 @@ operation_parameters_minimum_occurrences["jumpboxServiceGetTenants:::external_id
 operation_parameters_minimum_occurrences["jumpboxServiceGetTenants:::include_inactive"]=0
 operation_parameters_minimum_occurrences["jumpboxServiceGetTenants:::include_not_ready"]=0
 operation_parameters_minimum_occurrences["jumpboxServiceGetUsers:::uid"]=0
+operation_parameters_minimum_occurrences["jumpboxServicePostAccount:::Jumpboxv3PostAccountRequest"]=1
 operation_parameters_minimum_occurrences["jumpboxServicePostTenants:::Jumpboxv3PostTenantsRequest"]=1
 operation_parameters_minimum_occurrences["jumpboxServicePostUsers:::Jumpboxv3PostUsersBulkRequest"]=1
+operation_parameters_minimum_occurrences["jumpboxServiceResumeAccount:::account_id"]=1
 operation_parameters_minimum_occurrences["jumpboxServiceSearchUsers:::Jumpboxv3SearchUsersRequest"]=1
+operation_parameters_minimum_occurrences["jumpboxServiceSuspendAccount:::account_id"]=1
 operation_parameters_minimum_occurrences["jumpboxServiceTestUser:::Jumpboxv3TestUserRequest"]=1
+operation_parameters_minimum_occurrences["jumpboxServiceUpdateAccount:::account_id"]=1
+operation_parameters_minimum_occurrences["jumpboxServiceUpdateAccount:::Jumpboxv3UpdateAccountRequest"]=1
 operation_parameters_minimum_occurrences["jumpboxServiceUpdateTenant:::tenant_id"]=1
 operation_parameters_minimum_occurrences["jumpboxServiceUpdateTenant:::Jumpboxv3UpdateTenantRequest"]=1
 operation_parameters_minimum_occurrences["jumpboxServiceUpdateUsers:::Jumpboxv3UpdateUsersBulkRequest"]=1
@@ -491,6 +510,9 @@ operation_parameters_minimum_occurrences["policyBuilderDeleteGdpSyncEntry:::sync
 operation_parameters_minimum_occurrences["policyBuilderDeletePolicies:::policy_ids"]=0
 operation_parameters_minimum_occurrences["policyBuilderGetPolicyDetails:::policy_id"]=1
 operation_parameters_minimum_occurrences["policyBuilderGetPolicyNamesFromRuleIDs:::Policybuilderv3GetPolicyNamesFromRuleIDsRequest"]=1
+operation_parameters_minimum_occurrences["policyBuilderGetPolicyVersion:::policy_id"]=1
+operation_parameters_minimum_occurrences["policyBuilderGetPolicyVersion:::version"]=1
+operation_parameters_minimum_occurrences["policyBuilderGetPolicyVersionsInfo:::policy_id"]=1
 operation_parameters_minimum_occurrences["policyBuilderGetReceivers:::action_id"]=0
 operation_parameters_minimum_occurrences["policyBuilderGetReceivers:::validate_cache"]=0
 operation_parameters_minimum_occurrences["policyBuilderGetRuleMetadata:::rule_type"]=0
@@ -504,6 +526,7 @@ operation_parameters_minimum_occurrences["policyBuilderPoliciesGroups:::group_id
 operation_parameters_minimum_occurrences["policyBuilderRuleValidation:::Policybuilderv3GetRuleValidationRequest"]=1
 operation_parameters_minimum_occurrences["policyBuilderStorePoliciesGdp:::central_manager_id"]=1
 operation_parameters_minimum_occurrences["policyBuilderStorePoliciesGdp:::Policybuilderv3StorePolicyGdpRequest"]=1
+operation_parameters_minimum_occurrences["policyBuilderUpdatePolicy:::Policybuilderv3CreateUpdatePolicyRequest"]=1
 operation_parameters_minimum_occurrences["qSDataLoaderQSfileValidator:::Qsdataloaderv3QSfileValidatorRequest"]=1
 operation_parameters_minimum_occurrences["qSDataLoaderUploadSyntheticDataLoader:::body"]=1
 operation_parameters_minimum_occurrences["qSDataManagerRegisterScan:::Qspmdatamanagerv3ScanRequest"]=1
@@ -538,19 +561,37 @@ operation_parameters_minimum_occurrences["reportsServiceCreateCategory:::Reports
 operation_parameters_minimum_occurrences["reportsServiceCreateChart:::Reportsv3CreateChartRequest"]=1
 operation_parameters_minimum_occurrences["reportsServiceCreateChartTemplatev2:::Reportsv3CreateChartTemplatev2Request"]=1
 operation_parameters_minimum_occurrences["reportsServiceCreateChartv2:::Reportsv3CreateChartv2Request"]=1
+operation_parameters_minimum_occurrences["reportsServiceCreateControl:::Reportsv3CreateControlRequest"]=1
 operation_parameters_minimum_occurrences["reportsServiceCreateFieldsByCategory:::Reportsv3CreateFieldsByCategoryRequest"]=1
+operation_parameters_minimum_occurrences["reportsServiceCreateGrade:::Reportsv3CreateGradeRequest"]=1
 operation_parameters_minimum_occurrences["reportsServiceCreateJoin:::Reportsv3CreateJoinRequest"]=1
+operation_parameters_minimum_occurrences["reportsServiceCreateMeasure:::Reportsv3CreateMeasureRequest"]=1
+operation_parameters_minimum_occurrences["reportsServiceCreateMetric:::Reportsv3CreateMetricRequest"]=1
+operation_parameters_minimum_occurrences["reportsServiceCreateProgram:::Reportsv3CreateProgramRequest"]=1
 operation_parameters_minimum_occurrences["reportsServiceCreateReport:::Reportsv3CreateReportRequest"]=1
+operation_parameters_minimum_occurrences["reportsServiceCreateRequirement:::Reportsv3CreateRequirementRequest"]=1
 operation_parameters_minimum_occurrences["reportsServiceCreateVariant:::Reportsv3CreateVariantRequest"]=1
 operation_parameters_minimum_occurrences["reportsServiceDeleteCategory:::category_id"]=0
 operation_parameters_minimum_occurrences["reportsServiceDeleteCategory:::table_name"]=0
 operation_parameters_minimum_occurrences["reportsServiceDeleteChart:::chart_id"]=1
 operation_parameters_minimum_occurrences["reportsServiceDeleteChartTemplatev2:::template_id"]=1
 operation_parameters_minimum_occurrences["reportsServiceDeleteChartv2:::chart_id"]=1
+operation_parameters_minimum_occurrences["reportsServiceDeleteControl:::control_id"]=1
+operation_parameters_minimum_occurrences["reportsServiceDeleteControl:::Reportsv3DeleteControlRequest"]=1
 operation_parameters_minimum_occurrences["reportsServiceDeleteFieldsByCategory:::header_ids"]=0
 operation_parameters_minimum_occurrences["reportsServiceDeleteFieldsByCategory:::table_name"]=0
+operation_parameters_minimum_occurrences["reportsServiceDeleteGrade:::grade_id"]=1
+operation_parameters_minimum_occurrences["reportsServiceDeleteGrade:::Reportsv3DeleteGradeRequest"]=1
 operation_parameters_minimum_occurrences["reportsServiceDeleteJoin:::join_id"]=1
+operation_parameters_minimum_occurrences["reportsServiceDeleteMeasure:::measure_id"]=1
+operation_parameters_minimum_occurrences["reportsServiceDeleteMeasure:::Reportsv3DeleteMeasureRequest"]=1
+operation_parameters_minimum_occurrences["reportsServiceDeleteMetric:::metric_id"]=1
+operation_parameters_minimum_occurrences["reportsServiceDeleteMetric:::Reportsv3DeleteMetricRequest"]=1
+operation_parameters_minimum_occurrences["reportsServiceDeleteProgram:::program_id"]=1
+operation_parameters_minimum_occurrences["reportsServiceDeleteProgram:::Reportsv3DeleteProgramRequest"]=1
 operation_parameters_minimum_occurrences["reportsServiceDeleteReport:::report_id"]=1
+operation_parameters_minimum_occurrences["reportsServiceDeleteRequirement:::requirement_id"]=1
+operation_parameters_minimum_occurrences["reportsServiceDeleteRequirement:::Reportsv3DeleteRequirementRequest"]=1
 operation_parameters_minimum_occurrences["reportsServiceDeleteVariant:::variant_id"]=1
 operation_parameters_minimum_occurrences["reportsServiceGetCategories:::report_id"]=0
 operation_parameters_minimum_occurrences["reportsServiceGetChartSettings:::chart_id"]=0
@@ -577,77 +618,31 @@ operation_parameters_minimum_occurrences["reportsServicePartialChartUpdate:::cha
 operation_parameters_minimum_occurrences["reportsServicePartialChartUpdate:::Reportsv3PartialChartUpdateRequest"]=1
 operation_parameters_minimum_occurrences["reportsServicePartialReportUpdate:::report_id"]=1
 operation_parameters_minimum_occurrences["reportsServicePartialReportUpdate:::Reportsv3PartialReportUpdateRequest"]=1
+operation_parameters_minimum_occurrences["reportsServiceRunGrades:::Reportsv3RunGradesRequest"]=1
 operation_parameters_minimum_occurrences["reportsServiceRunVariantOperation:::Reportsv3RunVariantOperationRequest"]=1
 operation_parameters_minimum_occurrences["reportsServiceTranspose:::Reportsv3TransposeRequest"]=1
 operation_parameters_minimum_occurrences["reportsServiceUpdateChart:::chart_id"]=1
 operation_parameters_minimum_occurrences["reportsServiceUpdateChart:::Reportsv3UpdateChartRequest"]=1
 operation_parameters_minimum_occurrences["reportsServiceUpdateChartv2:::chart_id"]=1
 operation_parameters_minimum_occurrences["reportsServiceUpdateChartv2:::Reportsv3UpdateChartv2Request"]=1
+operation_parameters_minimum_occurrences["reportsServiceUpdateControl:::control_id"]=1
+operation_parameters_minimum_occurrences["reportsServiceUpdateControl:::Reportsv3UpdateControlRequest"]=1
+operation_parameters_minimum_occurrences["reportsServiceUpdateGrade:::grade_id"]=1
+operation_parameters_minimum_occurrences["reportsServiceUpdateGrade:::Reportsv3UpdateGradeRequest"]=1
 operation_parameters_minimum_occurrences["reportsServiceUpdateJoin:::join_id"]=1
 operation_parameters_minimum_occurrences["reportsServiceUpdateJoin:::Reportsv3UpdateJoinRequest"]=1
+operation_parameters_minimum_occurrences["reportsServiceUpdateMeasure:::measure_id"]=1
+operation_parameters_minimum_occurrences["reportsServiceUpdateMeasure:::Reportsv3UpdateMeasureRequest"]=1
+operation_parameters_minimum_occurrences["reportsServiceUpdateMetric:::metric_id"]=1
+operation_parameters_minimum_occurrences["reportsServiceUpdateMetric:::Reportsv3UpdateMetricRequest"]=1
+operation_parameters_minimum_occurrences["reportsServiceUpdateProgram:::program_id"]=1
+operation_parameters_minimum_occurrences["reportsServiceUpdateProgram:::Reportsv3UpdateProgramRequest"]=1
 operation_parameters_minimum_occurrences["reportsServiceUpdateReport:::report_id"]=1
 operation_parameters_minimum_occurrences["reportsServiceUpdateReport:::Reportsv3UpdateReportRequest"]=1
+operation_parameters_minimum_occurrences["reportsServiceUpdateRequirement:::requirement_id"]=1
+operation_parameters_minimum_occurrences["reportsServiceUpdateRequirement:::Reportsv3UpdateRequirementRequest"]=1
 operation_parameters_minimum_occurrences["reportsServiceUpdateVariantOverride:::variant_id"]=1
 operation_parameters_minimum_occurrences["reportsServiceUpdateVariantOverride:::Reportsv3UpdateVariantOverrideRequest"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceCreateController:::Resourcecontrollerk8v3CreateControllerRequest"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceCreateHeartBeat:::controller_id"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceCreateHeartBeat:::Resourcecontrollerk8v3CreateHeartBeatRequest"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceCreateHeartBeatEx:::controller_id"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceCreateHeartBeatEx:::Resourcecontrollerk8v3ControllerHeartbeat"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceCreateJob:::Resourcecontrollerk8v3Job"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceCreateJobExecution:::Resourcecontrollerk8v3JobExecution"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceCreateKeypair:::controller_id"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceCreateKeypair:::Resourcecontrollerk8v3CreateKeypairRequest"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceDeleteController:::controller_id"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceDeleteController:::Resourcecontrollerk8v3DeleteControllerRequest"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceDeleteEdgeTenant:::tenant_id"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceDeleteEdgeTenant:::Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceDeleteEdgeTenantRequest:::tenant_id"]=0
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceDeleteEdgeTenantRequest:::edge_id"]=0
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceDeleteEdgeTenantRequest:::edge_name"]=0
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceDeleteJob:::job_id"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceDeleteJob:::Resourcecontrollerk8v3DeleteJobRequest"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceDownloadControllerLogs:::controller_id"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceDownloadControllerLogs:::Resourcecontrollerk8v3DownloadControllerLogsRequest"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceGetControllerApps:::controller_id"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceGetControllerApps:::modified_since"]=0
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceGetControllerCommands:::controller_id"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceGetControllerJobs:::controller_id"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceGetControllerJobs:::modified_since"]=0
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceGetControllerStatus:::controller_id"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceGetControllers:::tenant_id"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceGetControllers:::want_local"]=0
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceGetControllersWithStatus:::tenant_id"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceGetControllersWithStatus:::want_local"]=0
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceGetControllersWithStatus:::controller_id"]=0
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceGetJob:::job_id"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceGetJob:::want_secret_values"]=0
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceGetJobExecution:::jobexe_id"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceGetJobExecutions:::job_id"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceGetJobStatus:::job_id"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceGetTenantApp:::tenant_id"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceGetTenantApp:::app_name"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceGetTenantApp:::return_level"]=0
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceGetTenantApps:::tenant_id"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceGetTenantApps:::return_level"]=0
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceGetTenantJobs:::tenant_id"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceInstallEdgeTenantRequest:::Resourcecontrollerk8v3EdgeTenantRequest"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceQueryControllerLogs:::controller_id"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceQueryControllerLogs:::Resourcecontrollerk8v3QueryControllerLogsRequest"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceUpdateCommand:::id"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceUpdateCommand:::Resourcecontrollerk8v3ControllerCommand"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceUpdateController:::id"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceUpdateController:::Resourcecontrollerk8v3Controller"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceUpdateControllerStatus:::id"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceUpdateControllerStatus:::Resourcecontrollerk8v3ControllerStatus"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceUpdateEdgeTenantRequest:::edge_id"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceUpdateEdgeTenantRequest:::Resourcecontrollerk8v3EdgeTenantRequest"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceUpdateJob:::id"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceUpdateJob:::Resourcecontrollerk8v3Job"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceUpdateJobExecution:::id"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceUpdateJobExecution:::Resourcecontrollerk8v3UpdateJobExecutionRequest"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceUpdateJobStatus:::job_id"]=1
-operation_parameters_minimum_occurrences["resourceControllerK8ServiceUpdateJobStatus:::Resourcecontrollerk8v3UpdateJobStatusRequest"]=1
 operation_parameters_minimum_occurrences["riskAnalyticsControllerEnableDisableRiskEventFeedback:::Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest"]=1
 operation_parameters_minimum_occurrences["riskAnalyticsControllerEnableDisableRiskEventProcess:::Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest"]=1
 operation_parameters_minimum_occurrences["riskAnalyticsControllerGetRiskEventClassificationsList:::risk_id"]=1
@@ -702,33 +697,6 @@ operation_parameters_minimum_occurrences["streamsServiceCheckAWSCredentials:::St
 operation_parameters_minimum_occurrences["streamsServiceCheckAzureEventHub:::Streamsv3CheckAzureEventHubRequest"]=1
 operation_parameters_minimum_occurrences["streamsServiceCheckAzureStorageString:::Streamsv3CheckAzureStorageStringRequest"]=1
 operation_parameters_minimum_occurrences["streamsServiceListAWSStreams:::Streamsv3ListAWSStreamsRequest"]=1
-operation_parameters_minimum_occurrences["templatesServiceCreateIntegration:::Templatesv3CreateIntegrationRequest"]=1
-operation_parameters_minimum_occurrences["templatesServiceCreateTemplate:::Templatesv3CreateTemplateRequest"]=1
-operation_parameters_minimum_occurrences["templatesServiceDeleteIntegration:::integration_id"]=1
-operation_parameters_minimum_occurrences["templatesServiceDeleteTemplate:::template_id"]=1
-operation_parameters_minimum_occurrences["templatesServiceGetOriginDefaultContent:::origin"]=1
-operation_parameters_minimum_occurrences["templatesServiceGetOriginDefaultContent:::integration"]=0
-operation_parameters_minimum_occurrences["templatesServiceGetOriginDefaultContent:::mime_type"]=0
-operation_parameters_minimum_occurrences["templatesServiceGetOriginFields:::origin"]=1
-operation_parameters_minimum_occurrences["templatesServiceGetTemplate:::template_id"]=1
-operation_parameters_minimum_occurrences["templatesServiceGetTemplate:::include_integration_name"]=0
-operation_parameters_minimum_occurrences["templatesServiceGetTemplates:::integration_id"]=0
-operation_parameters_minimum_occurrences["templatesServiceGetTemplates:::filter_integration"]=0
-operation_parameters_minimum_occurrences["templatesServiceGetTemplates:::filter_origin"]=0
-operation_parameters_minimum_occurrences["templatesServiceGetTemplates:::filter_mime_type"]=0
-operation_parameters_minimum_occurrences["templatesServiceGetTemplates:::filter_tags"]=0
-operation_parameters_minimum_occurrences["templatesServiceGetTemplates:::filter_enabled_only"]=0
-operation_parameters_minimum_occurrences["templatesServiceGetTemplates:::include_integration_name"]=0
-operation_parameters_minimum_occurrences["templatesServiceGetTemplatesForEdge:::integration_id"]=0
-operation_parameters_minimum_occurrences["templatesServiceGetTemplatesForEdge:::filter_origin"]=0
-operation_parameters_minimum_occurrences["templatesServiceGetTemplatesForEdge:::filter_enabled_only"]=0
-operation_parameters_minimum_occurrences["templatesServiceGetTemplatesForEdge:::include_integration_name"]=0
-operation_parameters_minimum_occurrences["templatesServiceGetTemplatesForEdge:::transform_to_gdp_format"]=0
-operation_parameters_minimum_occurrences["templatesServiceTestTemplate:::Templatesv3TestTemplateRequest"]=1
-operation_parameters_minimum_occurrences["templatesServiceTransformTemplate:::Templatesv3TransformTemplateRequest"]=1
-operation_parameters_minimum_occurrences["templatesServiceTransformTemplateJSON:::Templatesv3TransformTemplateJSONRequest"]=1
-operation_parameters_minimum_occurrences["templatesServiceUpdateTemplate:::template_id"]=1
-operation_parameters_minimum_occurrences["templatesServiceUpdateTemplate:::Templatesv3UpdateTemplateRequest"]=1
 operation_parameters_minimum_occurrences["tenantuserCreateAPIKey:::Tenantuserv3CreateApiKeyRequest"]=1
 operation_parameters_minimum_occurrences["tenantuserDeleteAPIKey:::id"]=1
 operation_parameters_minimum_occurrences["tenantuserDeleteRole:::role_id"]=1
@@ -758,6 +726,11 @@ operation_parameters_minimum_occurrences["listLinkedVendorDataStores:::nextToken
 operation_parameters_minimum_occurrences["listTrustedAssets:::filter"]=0
 operation_parameters_minimum_occurrences["universalConnectorManagerGetUCSetup:::plugin_id"]=1
 operation_parameters_minimum_occurrences["universalConnectorManagerUploadPlugin:::Universalconnectormanagerv3UploadPluginRequest"]=1
+operation_parameters_minimum_occurrences["vulnerabilityManagementServiceCreateVulnerability:::Vulmanagementv3CreateVulnerabilityRequest"]=1
+operation_parameters_minimum_occurrences["vulnerabilityManagementServiceGetVulnerabilities:::Vulmanagementv3GetVulnerabilitiesRequest"]=1
+operation_parameters_minimum_occurrences["vulnerabilityManagementServiceGetVulnerability:::vulnerability_id"]=1
+operation_parameters_minimum_occurrences["vulnerabilityManagementServiceUpdateVulnerabilities:::Vulmanagementv3UpdateVulnerabilitiesRequest"]=1
+operation_parameters_minimum_occurrences["vulnerabilityManagementServiceVulnerabilityIngestionManualTrigger:::body"]=1
 operation_parameters_minimum_occurrences["workflowCreateCase:::Workflowv3CreateCaseRequest"]=1
 operation_parameters_minimum_occurrences["workflowCreateProductEntity:::Workflowv3ProductEntity"]=1
 operation_parameters_minimum_occurrences["workflowCreateTask:::case_id"]=1
@@ -803,11 +776,16 @@ operation_parameters_minimum_occurrences["workflowUpdateTasks:::Workflowv3Update
 declare -A operation_parameters_maximum_occurrences
 operation_parameters_maximum_occurrences["assetsServiceAssetIngestion:::Assetsv3AssetIngestionRequest"]=0
 operation_parameters_maximum_occurrences["assetsServiceAssetIngestionManualTrigger:::body"]=0
+operation_parameters_maximum_occurrences["assetsServiceCancelCSVImport:::csv_id"]=0
 operation_parameters_maximum_occurrences["assetsServiceClonePolicy:::policy_id"]=0
 operation_parameters_maximum_occurrences["assetsServiceClonePolicy:::Assetsv3ClonePolicyRequest"]=0
+operation_parameters_maximum_occurrences["assetsServiceCompareCSVToExistingAssets:::csv_id"]=0
+operation_parameters_maximum_occurrences["assetsServiceCompareCSVToExistingAssets:::rows_required"]=0
+operation_parameters_maximum_occurrences["assetsServiceCompareCSVToExistingAssets:::page_number"]=0
+operation_parameters_maximum_occurrences["assetsServiceCompareCSVToExistingAssets:::page_size"]=0
+operation_parameters_maximum_occurrences["assetsServiceCompareCSVToExistingAssets:::template_type"]=0
 operation_parameters_maximum_occurrences["assetsServiceCreateUpdatePolicy:::Assetsv3CreateUpdatePolicyRequest"]=0
 operation_parameters_maximum_occurrences["assetsServiceDeleteFilterTemplateForAssets:::template_id"]=0
-operation_parameters_maximum_occurrences["assetsServiceDeleteFilterTemplateForAssets:::Assetsv3AssetFilterTemplateRequest"]=0
 operation_parameters_maximum_occurrences["assetsServiceDeletePolicies:::policy_ids"]=0
 operation_parameters_maximum_occurrences["assetsServiceFetchAssetChangeLog:::Assetsv3FetchAssetChangeLogRequest"]=0
 operation_parameters_maximum_occurrences["assetsServiceFetchAssetDashboard:::widget_type"]=0
@@ -839,6 +817,8 @@ operation_parameters_maximum_occurrences["assetsServiceGetAssetOverview:::databa
 operation_parameters_maximum_occurrences["assetsServiceGetAssetOverview:::asset_entity_type"]=0
 operation_parameters_maximum_occurrences["assetsServiceGetAssetTopology:::Assetsv3GetAssetTopologyRequest"]=0
 operation_parameters_maximum_occurrences["assetsServiceGetFilterTemplateForAssets:::template_id"]=0
+operation_parameters_maximum_occurrences["assetsServiceImportCSV:::csv_id"]=0
+operation_parameters_maximum_occurrences["assetsServiceImportCSV:::Assetsv3ImportCSVRequest"]=0
 operation_parameters_maximum_occurrences["assetsServiceListRule:::policy_id"]=0
 operation_parameters_maximum_occurrences["assetsServiceListTagDomains:::dom_grouper"]=0
 operation_parameters_maximum_occurrences["assetsServiceListTagDomains:::purpose"]=0
@@ -876,6 +856,7 @@ operation_parameters_maximum_occurrences["getAnalyzedRegionStatus:::cloudProvide
 operation_parameters_maximum_occurrences["getAnalyzedRegionStatus:::region"]=0
 operation_parameters_maximum_occurrences["getCloudAccountInstallationStatus:::cloudProvider"]=0
 operation_parameters_maximum_occurrences["getCloudAccountInstallationStatus:::cloudAccountId"]=0
+operation_parameters_maximum_occurrences["getDatabaseMetadata:::DbInfo"]=0
 operation_parameters_maximum_occurrences["getRefreshTokenExpiry:::providerId"]=0
 operation_parameters_maximum_occurrences["removeAccounts:::accountIds"]=0
 operation_parameters_maximum_occurrences["removeAccounts:::serviceProvider"]=0
@@ -883,6 +864,7 @@ operation_parameters_maximum_occurrences["removeAccountsInstructions:::accountId
 operation_parameters_maximum_occurrences["removeAccountsInstructions:::serviceProvider"]=0
 operation_parameters_maximum_occurrences["submitGoogleWorkspaceAdminEmail:::SubmitAdminEmailParams"]=0
 operation_parameters_maximum_occurrences["submitOffice365TenantInfo:::TenantInfo"]=0
+operation_parameters_maximum_occurrences["submitSalesforceAuthCode:::AuthCode"]=0
 operation_parameters_maximum_occurrences["submitSlackAuthCode:::SubmitAuthCode"]=0
 operation_parameters_maximum_occurrences["submitSnowflakeAuthCode:::AuthInfo"]=0
 operation_parameters_maximum_occurrences["complianceAcceleratorCreateWorkspace:::Complianceacceleratorv3CreateWorkspaceRequest"]=0
@@ -917,6 +899,8 @@ operation_parameters_maximum_occurrences["connectionsServiceUpdatePlugin:::id"]=
 operation_parameters_maximum_occurrences["connectionsServiceUpdatePlugin:::Connectionsv3UpdatePluginRequest"]=0
 operation_parameters_maximum_occurrences["connectionsServiceUpdateSettings:::Connectionsv3UpdateSettingsRequest"]=0
 operation_parameters_maximum_occurrences["connectionsServiceValidateAwsConnection:::Connectionsv3ValidateAwsConnectionRequest"]=0
+operation_parameters_maximum_occurrences["connectionsServiceValidateAzureConnection:::Connectionsv3ValidateAzureConnectionRequest"]=0
+operation_parameters_maximum_occurrences["connectionsServiceValidateGcpConnection:::Connectionsv3ValidateGcpConnectionRequest"]=0
 operation_parameters_maximum_occurrences["dashboardsServiceCreateDashboard:::Dashboardsv3Dashboard"]=0
 operation_parameters_maximum_occurrences["dashboardsServiceDeleteDashboard:::dashboard_id"]=0
 operation_parameters_maximum_occurrences["dashboardsServiceDeleteDashboard:::Dashboardsv3DeleteDashboardRequest"]=0
@@ -1031,11 +1015,6 @@ operation_parameters_maximum_occurrences["ecosystemServiceGetDatasets:::include_
 operation_parameters_maximum_occurrences["ecosystemServiceGetPurgableRows:::Ecosystemv3GetPurgableRowsRequest"]=0
 operation_parameters_maximum_occurrences["ecosystemServicePurgeData:::dataset_names"]=0
 operation_parameters_maximum_occurrences["ecosystemServiceTestIntegration:::Ecosystemv3TestIntegrationRequest"]=0
-operation_parameters_maximum_occurrences["edgeSchedulerServiceGetEdgeQueryStatus:::edge_id"]=0
-operation_parameters_maximum_occurrences["edgeSchedulerServiceGetEdgeQueryStatus:::edge_result_report_id"]=0
-operation_parameters_maximum_occurrences["edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery:::client_id"]=0
-operation_parameters_maximum_occurrences["edgeSchedulerServiceScheduleEdgeQuery:::edge_id"]=0
-operation_parameters_maximum_occurrences["edgeSchedulerServiceScheduleEdgeQuery:::Edgeschedulerv3ScheduleEdgeQueryRequest"]=0
 operation_parameters_maximum_occurrences["featureFlagsServiceDeleteFeatureFlagOverrides:::flag_name"]=0
 operation_parameters_maximum_occurrences["featureFlagsServiceDeleteFeatureFlagOverrides:::tenant_id"]=0
 operation_parameters_maximum_occurrences["featureFlagsServiceGetFeatureFlagOverrides:::tenant_id"]=0
@@ -1141,10 +1120,18 @@ operation_parameters_maximum_occurrences["healthCollectorGetTopGDPCollectors:::e
 operation_parameters_maximum_occurrences["healthCollectorStoreHealthInfo:::central_manager_id"]=0
 operation_parameters_maximum_occurrences["healthCollectorStoreHealthInfo:::Healthcollectorv3StoreHealthInfoRequest"]=0
 operation_parameters_maximum_occurrences["jumpboxServiceAuthorize:::Jumpboxv3AuthorizeRequest"]=0
+operation_parameters_maximum_occurrences["jumpboxServiceDeleteAccount:::account_id"]=0
 operation_parameters_maximum_occurrences["jumpboxServiceDeleteTenant:::tenant_id"]=0
 operation_parameters_maximum_occurrences["jumpboxServiceDeleteTenant:::is_permanent_delete"]=0
 operation_parameters_maximum_occurrences["jumpboxServiceDeleteTenant:::async"]=0
 operation_parameters_maximum_occurrences["jumpboxServiceDeleteUser:::user_id"]=0
+operation_parameters_maximum_occurrences["jumpboxServiceGetAccount:::account_id"]=0
+operation_parameters_maximum_occurrences["jumpboxServiceGetAccount:::include_inactive"]=0
+operation_parameters_maximum_occurrences["jumpboxServiceGetAccount:::include_not_ready"]=0
+operation_parameters_maximum_occurrences["jumpboxServiceGetAccounts:::uid"]=0
+operation_parameters_maximum_occurrences["jumpboxServiceGetAccounts:::external_id"]=0
+operation_parameters_maximum_occurrences["jumpboxServiceGetAccounts:::include_inactive"]=0
+operation_parameters_maximum_occurrences["jumpboxServiceGetAccounts:::include_not_ready"]=0
 operation_parameters_maximum_occurrences["jumpboxServiceGetTenant:::tenant_id"]=0
 operation_parameters_maximum_occurrences["jumpboxServiceGetTenant:::include_inactive"]=0
 operation_parameters_maximum_occurrences["jumpboxServiceGetTenant:::include_not_ready"]=0
@@ -1153,10 +1140,15 @@ operation_parameters_maximum_occurrences["jumpboxServiceGetTenants:::external_id
 operation_parameters_maximum_occurrences["jumpboxServiceGetTenants:::include_inactive"]=0
 operation_parameters_maximum_occurrences["jumpboxServiceGetTenants:::include_not_ready"]=0
 operation_parameters_maximum_occurrences["jumpboxServiceGetUsers:::uid"]=0
+operation_parameters_maximum_occurrences["jumpboxServicePostAccount:::Jumpboxv3PostAccountRequest"]=0
 operation_parameters_maximum_occurrences["jumpboxServicePostTenants:::Jumpboxv3PostTenantsRequest"]=0
 operation_parameters_maximum_occurrences["jumpboxServicePostUsers:::Jumpboxv3PostUsersBulkRequest"]=0
+operation_parameters_maximum_occurrences["jumpboxServiceResumeAccount:::account_id"]=0
 operation_parameters_maximum_occurrences["jumpboxServiceSearchUsers:::Jumpboxv3SearchUsersRequest"]=0
+operation_parameters_maximum_occurrences["jumpboxServiceSuspendAccount:::account_id"]=0
 operation_parameters_maximum_occurrences["jumpboxServiceTestUser:::Jumpboxv3TestUserRequest"]=0
+operation_parameters_maximum_occurrences["jumpboxServiceUpdateAccount:::account_id"]=0
+operation_parameters_maximum_occurrences["jumpboxServiceUpdateAccount:::Jumpboxv3UpdateAccountRequest"]=0
 operation_parameters_maximum_occurrences["jumpboxServiceUpdateTenant:::tenant_id"]=0
 operation_parameters_maximum_occurrences["jumpboxServiceUpdateTenant:::Jumpboxv3UpdateTenantRequest"]=0
 operation_parameters_maximum_occurrences["jumpboxServiceUpdateUsers:::Jumpboxv3UpdateUsersBulkRequest"]=0
@@ -1196,6 +1188,9 @@ operation_parameters_maximum_occurrences["policyBuilderDeleteGdpSyncEntry:::sync
 operation_parameters_maximum_occurrences["policyBuilderDeletePolicies:::policy_ids"]=0
 operation_parameters_maximum_occurrences["policyBuilderGetPolicyDetails:::policy_id"]=0
 operation_parameters_maximum_occurrences["policyBuilderGetPolicyNamesFromRuleIDs:::Policybuilderv3GetPolicyNamesFromRuleIDsRequest"]=0
+operation_parameters_maximum_occurrences["policyBuilderGetPolicyVersion:::policy_id"]=0
+operation_parameters_maximum_occurrences["policyBuilderGetPolicyVersion:::version"]=0
+operation_parameters_maximum_occurrences["policyBuilderGetPolicyVersionsInfo:::policy_id"]=0
 operation_parameters_maximum_occurrences["policyBuilderGetReceivers:::action_id"]=0
 operation_parameters_maximum_occurrences["policyBuilderGetReceivers:::validate_cache"]=0
 operation_parameters_maximum_occurrences["policyBuilderGetRuleMetadata:::rule_type"]=0
@@ -1209,6 +1204,7 @@ operation_parameters_maximum_occurrences["policyBuilderPoliciesGroups:::group_id
 operation_parameters_maximum_occurrences["policyBuilderRuleValidation:::Policybuilderv3GetRuleValidationRequest"]=0
 operation_parameters_maximum_occurrences["policyBuilderStorePoliciesGdp:::central_manager_id"]=0
 operation_parameters_maximum_occurrences["policyBuilderStorePoliciesGdp:::Policybuilderv3StorePolicyGdpRequest"]=0
+operation_parameters_maximum_occurrences["policyBuilderUpdatePolicy:::Policybuilderv3CreateUpdatePolicyRequest"]=0
 operation_parameters_maximum_occurrences["qSDataLoaderQSfileValidator:::Qsdataloaderv3QSfileValidatorRequest"]=0
 operation_parameters_maximum_occurrences["qSDataLoaderUploadSyntheticDataLoader:::body"]=0
 operation_parameters_maximum_occurrences["qSDataManagerRegisterScan:::Qspmdatamanagerv3ScanRequest"]=0
@@ -1243,19 +1239,37 @@ operation_parameters_maximum_occurrences["reportsServiceCreateCategory:::Reports
 operation_parameters_maximum_occurrences["reportsServiceCreateChart:::Reportsv3CreateChartRequest"]=0
 operation_parameters_maximum_occurrences["reportsServiceCreateChartTemplatev2:::Reportsv3CreateChartTemplatev2Request"]=0
 operation_parameters_maximum_occurrences["reportsServiceCreateChartv2:::Reportsv3CreateChartv2Request"]=0
+operation_parameters_maximum_occurrences["reportsServiceCreateControl:::Reportsv3CreateControlRequest"]=0
 operation_parameters_maximum_occurrences["reportsServiceCreateFieldsByCategory:::Reportsv3CreateFieldsByCategoryRequest"]=0
+operation_parameters_maximum_occurrences["reportsServiceCreateGrade:::Reportsv3CreateGradeRequest"]=0
 operation_parameters_maximum_occurrences["reportsServiceCreateJoin:::Reportsv3CreateJoinRequest"]=0
+operation_parameters_maximum_occurrences["reportsServiceCreateMeasure:::Reportsv3CreateMeasureRequest"]=0
+operation_parameters_maximum_occurrences["reportsServiceCreateMetric:::Reportsv3CreateMetricRequest"]=0
+operation_parameters_maximum_occurrences["reportsServiceCreateProgram:::Reportsv3CreateProgramRequest"]=0
 operation_parameters_maximum_occurrences["reportsServiceCreateReport:::Reportsv3CreateReportRequest"]=0
+operation_parameters_maximum_occurrences["reportsServiceCreateRequirement:::Reportsv3CreateRequirementRequest"]=0
 operation_parameters_maximum_occurrences["reportsServiceCreateVariant:::Reportsv3CreateVariantRequest"]=0
 operation_parameters_maximum_occurrences["reportsServiceDeleteCategory:::category_id"]=0
 operation_parameters_maximum_occurrences["reportsServiceDeleteCategory:::table_name"]=0
 operation_parameters_maximum_occurrences["reportsServiceDeleteChart:::chart_id"]=0
 operation_parameters_maximum_occurrences["reportsServiceDeleteChartTemplatev2:::template_id"]=0
 operation_parameters_maximum_occurrences["reportsServiceDeleteChartv2:::chart_id"]=0
+operation_parameters_maximum_occurrences["reportsServiceDeleteControl:::control_id"]=0
+operation_parameters_maximum_occurrences["reportsServiceDeleteControl:::Reportsv3DeleteControlRequest"]=0
 operation_parameters_maximum_occurrences["reportsServiceDeleteFieldsByCategory:::header_ids"]=0
 operation_parameters_maximum_occurrences["reportsServiceDeleteFieldsByCategory:::table_name"]=0
+operation_parameters_maximum_occurrences["reportsServiceDeleteGrade:::grade_id"]=0
+operation_parameters_maximum_occurrences["reportsServiceDeleteGrade:::Reportsv3DeleteGradeRequest"]=0
 operation_parameters_maximum_occurrences["reportsServiceDeleteJoin:::join_id"]=0
+operation_parameters_maximum_occurrences["reportsServiceDeleteMeasure:::measure_id"]=0
+operation_parameters_maximum_occurrences["reportsServiceDeleteMeasure:::Reportsv3DeleteMeasureRequest"]=0
+operation_parameters_maximum_occurrences["reportsServiceDeleteMetric:::metric_id"]=0
+operation_parameters_maximum_occurrences["reportsServiceDeleteMetric:::Reportsv3DeleteMetricRequest"]=0
+operation_parameters_maximum_occurrences["reportsServiceDeleteProgram:::program_id"]=0
+operation_parameters_maximum_occurrences["reportsServiceDeleteProgram:::Reportsv3DeleteProgramRequest"]=0
 operation_parameters_maximum_occurrences["reportsServiceDeleteReport:::report_id"]=0
+operation_parameters_maximum_occurrences["reportsServiceDeleteRequirement:::requirement_id"]=0
+operation_parameters_maximum_occurrences["reportsServiceDeleteRequirement:::Reportsv3DeleteRequirementRequest"]=0
 operation_parameters_maximum_occurrences["reportsServiceDeleteVariant:::variant_id"]=0
 operation_parameters_maximum_occurrences["reportsServiceGetCategories:::report_id"]=0
 operation_parameters_maximum_occurrences["reportsServiceGetChartSettings:::chart_id"]=0
@@ -1282,77 +1296,31 @@ operation_parameters_maximum_occurrences["reportsServicePartialChartUpdate:::cha
 operation_parameters_maximum_occurrences["reportsServicePartialChartUpdate:::Reportsv3PartialChartUpdateRequest"]=0
 operation_parameters_maximum_occurrences["reportsServicePartialReportUpdate:::report_id"]=0
 operation_parameters_maximum_occurrences["reportsServicePartialReportUpdate:::Reportsv3PartialReportUpdateRequest"]=0
+operation_parameters_maximum_occurrences["reportsServiceRunGrades:::Reportsv3RunGradesRequest"]=0
 operation_parameters_maximum_occurrences["reportsServiceRunVariantOperation:::Reportsv3RunVariantOperationRequest"]=0
 operation_parameters_maximum_occurrences["reportsServiceTranspose:::Reportsv3TransposeRequest"]=0
 operation_parameters_maximum_occurrences["reportsServiceUpdateChart:::chart_id"]=0
 operation_parameters_maximum_occurrences["reportsServiceUpdateChart:::Reportsv3UpdateChartRequest"]=0
 operation_parameters_maximum_occurrences["reportsServiceUpdateChartv2:::chart_id"]=0
 operation_parameters_maximum_occurrences["reportsServiceUpdateChartv2:::Reportsv3UpdateChartv2Request"]=0
+operation_parameters_maximum_occurrences["reportsServiceUpdateControl:::control_id"]=0
+operation_parameters_maximum_occurrences["reportsServiceUpdateControl:::Reportsv3UpdateControlRequest"]=0
+operation_parameters_maximum_occurrences["reportsServiceUpdateGrade:::grade_id"]=0
+operation_parameters_maximum_occurrences["reportsServiceUpdateGrade:::Reportsv3UpdateGradeRequest"]=0
 operation_parameters_maximum_occurrences["reportsServiceUpdateJoin:::join_id"]=0
 operation_parameters_maximum_occurrences["reportsServiceUpdateJoin:::Reportsv3UpdateJoinRequest"]=0
+operation_parameters_maximum_occurrences["reportsServiceUpdateMeasure:::measure_id"]=0
+operation_parameters_maximum_occurrences["reportsServiceUpdateMeasure:::Reportsv3UpdateMeasureRequest"]=0
+operation_parameters_maximum_occurrences["reportsServiceUpdateMetric:::metric_id"]=0
+operation_parameters_maximum_occurrences["reportsServiceUpdateMetric:::Reportsv3UpdateMetricRequest"]=0
+operation_parameters_maximum_occurrences["reportsServiceUpdateProgram:::program_id"]=0
+operation_parameters_maximum_occurrences["reportsServiceUpdateProgram:::Reportsv3UpdateProgramRequest"]=0
 operation_parameters_maximum_occurrences["reportsServiceUpdateReport:::report_id"]=0
 operation_parameters_maximum_occurrences["reportsServiceUpdateReport:::Reportsv3UpdateReportRequest"]=0
+operation_parameters_maximum_occurrences["reportsServiceUpdateRequirement:::requirement_id"]=0
+operation_parameters_maximum_occurrences["reportsServiceUpdateRequirement:::Reportsv3UpdateRequirementRequest"]=0
 operation_parameters_maximum_occurrences["reportsServiceUpdateVariantOverride:::variant_id"]=0
 operation_parameters_maximum_occurrences["reportsServiceUpdateVariantOverride:::Reportsv3UpdateVariantOverrideRequest"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceCreateController:::Resourcecontrollerk8v3CreateControllerRequest"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceCreateHeartBeat:::controller_id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceCreateHeartBeat:::Resourcecontrollerk8v3CreateHeartBeatRequest"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceCreateHeartBeatEx:::controller_id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceCreateHeartBeatEx:::Resourcecontrollerk8v3ControllerHeartbeat"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceCreateJob:::Resourcecontrollerk8v3Job"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceCreateJobExecution:::Resourcecontrollerk8v3JobExecution"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceCreateKeypair:::controller_id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceCreateKeypair:::Resourcecontrollerk8v3CreateKeypairRequest"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceDeleteController:::controller_id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceDeleteController:::Resourcecontrollerk8v3DeleteControllerRequest"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceDeleteEdgeTenant:::tenant_id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceDeleteEdgeTenant:::Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceDeleteEdgeTenantRequest:::tenant_id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceDeleteEdgeTenantRequest:::edge_id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceDeleteEdgeTenantRequest:::edge_name"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceDeleteJob:::job_id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceDeleteJob:::Resourcecontrollerk8v3DeleteJobRequest"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceDownloadControllerLogs:::controller_id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceDownloadControllerLogs:::Resourcecontrollerk8v3DownloadControllerLogsRequest"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceGetControllerApps:::controller_id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceGetControllerApps:::modified_since"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceGetControllerCommands:::controller_id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceGetControllerJobs:::controller_id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceGetControllerJobs:::modified_since"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceGetControllerStatus:::controller_id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceGetControllers:::tenant_id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceGetControllers:::want_local"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceGetControllersWithStatus:::tenant_id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceGetControllersWithStatus:::want_local"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceGetControllersWithStatus:::controller_id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceGetJob:::job_id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceGetJob:::want_secret_values"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceGetJobExecution:::jobexe_id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceGetJobExecutions:::job_id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceGetJobStatus:::job_id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceGetTenantApp:::tenant_id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceGetTenantApp:::app_name"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceGetTenantApp:::return_level"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceGetTenantApps:::tenant_id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceGetTenantApps:::return_level"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceGetTenantJobs:::tenant_id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceInstallEdgeTenantRequest:::Resourcecontrollerk8v3EdgeTenantRequest"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceQueryControllerLogs:::controller_id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceQueryControllerLogs:::Resourcecontrollerk8v3QueryControllerLogsRequest"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceUpdateCommand:::id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceUpdateCommand:::Resourcecontrollerk8v3ControllerCommand"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceUpdateController:::id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceUpdateController:::Resourcecontrollerk8v3Controller"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceUpdateControllerStatus:::id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceUpdateControllerStatus:::Resourcecontrollerk8v3ControllerStatus"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceUpdateEdgeTenantRequest:::edge_id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceUpdateEdgeTenantRequest:::Resourcecontrollerk8v3EdgeTenantRequest"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceUpdateJob:::id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceUpdateJob:::Resourcecontrollerk8v3Job"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceUpdateJobExecution:::id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceUpdateJobExecution:::Resourcecontrollerk8v3UpdateJobExecutionRequest"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceUpdateJobStatus:::job_id"]=0
-operation_parameters_maximum_occurrences["resourceControllerK8ServiceUpdateJobStatus:::Resourcecontrollerk8v3UpdateJobStatusRequest"]=0
 operation_parameters_maximum_occurrences["riskAnalyticsControllerEnableDisableRiskEventFeedback:::Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest"]=0
 operation_parameters_maximum_occurrences["riskAnalyticsControllerEnableDisableRiskEventProcess:::Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest"]=0
 operation_parameters_maximum_occurrences["riskAnalyticsControllerGetRiskEventClassificationsList:::risk_id"]=0
@@ -1407,33 +1375,6 @@ operation_parameters_maximum_occurrences["streamsServiceCheckAWSCredentials:::St
 operation_parameters_maximum_occurrences["streamsServiceCheckAzureEventHub:::Streamsv3CheckAzureEventHubRequest"]=0
 operation_parameters_maximum_occurrences["streamsServiceCheckAzureStorageString:::Streamsv3CheckAzureStorageStringRequest"]=0
 operation_parameters_maximum_occurrences["streamsServiceListAWSStreams:::Streamsv3ListAWSStreamsRequest"]=0
-operation_parameters_maximum_occurrences["templatesServiceCreateIntegration:::Templatesv3CreateIntegrationRequest"]=0
-operation_parameters_maximum_occurrences["templatesServiceCreateTemplate:::Templatesv3CreateTemplateRequest"]=0
-operation_parameters_maximum_occurrences["templatesServiceDeleteIntegration:::integration_id"]=0
-operation_parameters_maximum_occurrences["templatesServiceDeleteTemplate:::template_id"]=0
-operation_parameters_maximum_occurrences["templatesServiceGetOriginDefaultContent:::origin"]=0
-operation_parameters_maximum_occurrences["templatesServiceGetOriginDefaultContent:::integration"]=0
-operation_parameters_maximum_occurrences["templatesServiceGetOriginDefaultContent:::mime_type"]=0
-operation_parameters_maximum_occurrences["templatesServiceGetOriginFields:::origin"]=0
-operation_parameters_maximum_occurrences["templatesServiceGetTemplate:::template_id"]=0
-operation_parameters_maximum_occurrences["templatesServiceGetTemplate:::include_integration_name"]=0
-operation_parameters_maximum_occurrences["templatesServiceGetTemplates:::integration_id"]=0
-operation_parameters_maximum_occurrences["templatesServiceGetTemplates:::filter_integration"]=0
-operation_parameters_maximum_occurrences["templatesServiceGetTemplates:::filter_origin"]=0
-operation_parameters_maximum_occurrences["templatesServiceGetTemplates:::filter_mime_type"]=0
-operation_parameters_maximum_occurrences["templatesServiceGetTemplates:::filter_tags"]=0
-operation_parameters_maximum_occurrences["templatesServiceGetTemplates:::filter_enabled_only"]=0
-operation_parameters_maximum_occurrences["templatesServiceGetTemplates:::include_integration_name"]=0
-operation_parameters_maximum_occurrences["templatesServiceGetTemplatesForEdge:::integration_id"]=0
-operation_parameters_maximum_occurrences["templatesServiceGetTemplatesForEdge:::filter_origin"]=0
-operation_parameters_maximum_occurrences["templatesServiceGetTemplatesForEdge:::filter_enabled_only"]=0
-operation_parameters_maximum_occurrences["templatesServiceGetTemplatesForEdge:::include_integration_name"]=0
-operation_parameters_maximum_occurrences["templatesServiceGetTemplatesForEdge:::transform_to_gdp_format"]=0
-operation_parameters_maximum_occurrences["templatesServiceTestTemplate:::Templatesv3TestTemplateRequest"]=0
-operation_parameters_maximum_occurrences["templatesServiceTransformTemplate:::Templatesv3TransformTemplateRequest"]=0
-operation_parameters_maximum_occurrences["templatesServiceTransformTemplateJSON:::Templatesv3TransformTemplateJSONRequest"]=0
-operation_parameters_maximum_occurrences["templatesServiceUpdateTemplate:::template_id"]=0
-operation_parameters_maximum_occurrences["templatesServiceUpdateTemplate:::Templatesv3UpdateTemplateRequest"]=0
 operation_parameters_maximum_occurrences["tenantuserCreateAPIKey:::Tenantuserv3CreateApiKeyRequest"]=0
 operation_parameters_maximum_occurrences["tenantuserDeleteAPIKey:::id"]=0
 operation_parameters_maximum_occurrences["tenantuserDeleteRole:::role_id"]=0
@@ -1463,6 +1404,11 @@ operation_parameters_maximum_occurrences["listLinkedVendorDataStores:::nextToken
 operation_parameters_maximum_occurrences["listTrustedAssets:::filter"]=0
 operation_parameters_maximum_occurrences["universalConnectorManagerGetUCSetup:::plugin_id"]=0
 operation_parameters_maximum_occurrences["universalConnectorManagerUploadPlugin:::Universalconnectormanagerv3UploadPluginRequest"]=0
+operation_parameters_maximum_occurrences["vulnerabilityManagementServiceCreateVulnerability:::Vulmanagementv3CreateVulnerabilityRequest"]=0
+operation_parameters_maximum_occurrences["vulnerabilityManagementServiceGetVulnerabilities:::Vulmanagementv3GetVulnerabilitiesRequest"]=0
+operation_parameters_maximum_occurrences["vulnerabilityManagementServiceGetVulnerability:::vulnerability_id"]=0
+operation_parameters_maximum_occurrences["vulnerabilityManagementServiceUpdateVulnerabilities:::Vulmanagementv3UpdateVulnerabilitiesRequest"]=0
+operation_parameters_maximum_occurrences["vulnerabilityManagementServiceVulnerabilityIngestionManualTrigger:::body"]=0
 operation_parameters_maximum_occurrences["workflowCreateCase:::Workflowv3CreateCaseRequest"]=0
 operation_parameters_maximum_occurrences["workflowCreateProductEntity:::Workflowv3ProductEntity"]=0
 operation_parameters_maximum_occurrences["workflowCreateTask:::case_id"]=0
@@ -1505,11 +1451,16 @@ operation_parameters_maximum_occurrences["workflowUpdateTasks:::Workflowv3Update
 declare -A operation_parameters_collection_type
 operation_parameters_collection_type["assetsServiceAssetIngestion:::Assetsv3AssetIngestionRequest"]=""
 operation_parameters_collection_type["assetsServiceAssetIngestionManualTrigger:::body"]=""
+operation_parameters_collection_type["assetsServiceCancelCSVImport:::csv_id"]=""
 operation_parameters_collection_type["assetsServiceClonePolicy:::policy_id"]=""
 operation_parameters_collection_type["assetsServiceClonePolicy:::Assetsv3ClonePolicyRequest"]=""
+operation_parameters_collection_type["assetsServiceCompareCSVToExistingAssets:::csv_id"]=""
+operation_parameters_collection_type["assetsServiceCompareCSVToExistingAssets:::rows_required"]=""
+operation_parameters_collection_type["assetsServiceCompareCSVToExistingAssets:::page_number"]=""
+operation_parameters_collection_type["assetsServiceCompareCSVToExistingAssets:::page_size"]=""
+operation_parameters_collection_type["assetsServiceCompareCSVToExistingAssets:::template_type"]=""
 operation_parameters_collection_type["assetsServiceCreateUpdatePolicy:::Assetsv3CreateUpdatePolicyRequest"]=""
 operation_parameters_collection_type["assetsServiceDeleteFilterTemplateForAssets:::template_id"]=""
-operation_parameters_collection_type["assetsServiceDeleteFilterTemplateForAssets:::Assetsv3AssetFilterTemplateRequest"]=""
 operation_parameters_collection_type["assetsServiceDeletePolicies:::policy_ids"]="multi"
 operation_parameters_collection_type["assetsServiceFetchAssetChangeLog:::Assetsv3FetchAssetChangeLogRequest"]=""
 operation_parameters_collection_type["assetsServiceFetchAssetDashboard:::widget_type"]=""
@@ -1541,6 +1492,8 @@ operation_parameters_collection_type["assetsServiceGetAssetOverview:::database"]
 operation_parameters_collection_type["assetsServiceGetAssetOverview:::asset_entity_type"]=""
 operation_parameters_collection_type["assetsServiceGetAssetTopology:::Assetsv3GetAssetTopologyRequest"]=""
 operation_parameters_collection_type["assetsServiceGetFilterTemplateForAssets:::template_id"]=""
+operation_parameters_collection_type["assetsServiceImportCSV:::csv_id"]=""
+operation_parameters_collection_type["assetsServiceImportCSV:::Assetsv3ImportCSVRequest"]=""
 operation_parameters_collection_type["assetsServiceListRule:::policy_id"]=""
 operation_parameters_collection_type["assetsServiceListTagDomains:::dom_grouper"]=""
 operation_parameters_collection_type["assetsServiceListTagDomains:::purpose"]=""
@@ -1578,6 +1531,7 @@ operation_parameters_collection_type["getAnalyzedRegionStatus:::cloudProvider"]=
 operation_parameters_collection_type["getAnalyzedRegionStatus:::region"]=""
 operation_parameters_collection_type["getCloudAccountInstallationStatus:::cloudProvider"]=""
 operation_parameters_collection_type["getCloudAccountInstallationStatus:::cloudAccountId"]=""
+operation_parameters_collection_type["getDatabaseMetadata:::DbInfo"]=""
 operation_parameters_collection_type["getRefreshTokenExpiry:::providerId"]=""
 operation_parameters_collection_type["removeAccounts:::accountIds"]="multi"
 operation_parameters_collection_type["removeAccounts:::serviceProvider"]=""
@@ -1585,6 +1539,7 @@ operation_parameters_collection_type["removeAccountsInstructions:::accountIds"]=
 operation_parameters_collection_type["removeAccountsInstructions:::serviceProvider"]=""
 operation_parameters_collection_type["submitGoogleWorkspaceAdminEmail:::SubmitAdminEmailParams"]=""
 operation_parameters_collection_type["submitOffice365TenantInfo:::TenantInfo"]=""
+operation_parameters_collection_type["submitSalesforceAuthCode:::AuthCode"]=""
 operation_parameters_collection_type["submitSlackAuthCode:::SubmitAuthCode"]=""
 operation_parameters_collection_type["submitSnowflakeAuthCode:::AuthInfo"]=""
 operation_parameters_collection_type["complianceAcceleratorCreateWorkspace:::Complianceacceleratorv3CreateWorkspaceRequest"]=""
@@ -1619,6 +1574,8 @@ operation_parameters_collection_type["connectionsServiceUpdatePlugin:::id"]=""
 operation_parameters_collection_type["connectionsServiceUpdatePlugin:::Connectionsv3UpdatePluginRequest"]=""
 operation_parameters_collection_type["connectionsServiceUpdateSettings:::Connectionsv3UpdateSettingsRequest"]=""
 operation_parameters_collection_type["connectionsServiceValidateAwsConnection:::Connectionsv3ValidateAwsConnectionRequest"]=""
+operation_parameters_collection_type["connectionsServiceValidateAzureConnection:::Connectionsv3ValidateAzureConnectionRequest"]=""
+operation_parameters_collection_type["connectionsServiceValidateGcpConnection:::Connectionsv3ValidateGcpConnectionRequest"]=""
 operation_parameters_collection_type["dashboardsServiceCreateDashboard:::Dashboardsv3Dashboard"]=""
 operation_parameters_collection_type["dashboardsServiceDeleteDashboard:::dashboard_id"]=""
 operation_parameters_collection_type["dashboardsServiceDeleteDashboard:::Dashboardsv3DeleteDashboardRequest"]=""
@@ -1733,11 +1690,6 @@ operation_parameters_collection_type["ecosystemServiceGetDatasets:::include_filt
 operation_parameters_collection_type["ecosystemServiceGetPurgableRows:::Ecosystemv3GetPurgableRowsRequest"]=""
 operation_parameters_collection_type["ecosystemServicePurgeData:::dataset_names"]="multi"
 operation_parameters_collection_type["ecosystemServiceTestIntegration:::Ecosystemv3TestIntegrationRequest"]=""
-operation_parameters_collection_type["edgeSchedulerServiceGetEdgeQueryStatus:::edge_id"]=""
-operation_parameters_collection_type["edgeSchedulerServiceGetEdgeQueryStatus:::edge_result_report_id"]=""
-operation_parameters_collection_type["edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery:::client_id"]=""
-operation_parameters_collection_type["edgeSchedulerServiceScheduleEdgeQuery:::edge_id"]=""
-operation_parameters_collection_type["edgeSchedulerServiceScheduleEdgeQuery:::Edgeschedulerv3ScheduleEdgeQueryRequest"]=""
 operation_parameters_collection_type["featureFlagsServiceDeleteFeatureFlagOverrides:::flag_name"]=""
 operation_parameters_collection_type["featureFlagsServiceDeleteFeatureFlagOverrides:::tenant_id"]=""
 operation_parameters_collection_type["featureFlagsServiceGetFeatureFlagOverrides:::tenant_id"]=""
@@ -1843,10 +1795,18 @@ operation_parameters_collection_type["healthCollectorGetTopGDPCollectors:::end_t
 operation_parameters_collection_type["healthCollectorStoreHealthInfo:::central_manager_id"]=""
 operation_parameters_collection_type["healthCollectorStoreHealthInfo:::Healthcollectorv3StoreHealthInfoRequest"]=""
 operation_parameters_collection_type["jumpboxServiceAuthorize:::Jumpboxv3AuthorizeRequest"]=""
+operation_parameters_collection_type["jumpboxServiceDeleteAccount:::account_id"]=""
 operation_parameters_collection_type["jumpboxServiceDeleteTenant:::tenant_id"]=""
 operation_parameters_collection_type["jumpboxServiceDeleteTenant:::is_permanent_delete"]=""
 operation_parameters_collection_type["jumpboxServiceDeleteTenant:::async"]=""
 operation_parameters_collection_type["jumpboxServiceDeleteUser:::user_id"]=""
+operation_parameters_collection_type["jumpboxServiceGetAccount:::account_id"]=""
+operation_parameters_collection_type["jumpboxServiceGetAccount:::include_inactive"]=""
+operation_parameters_collection_type["jumpboxServiceGetAccount:::include_not_ready"]=""
+operation_parameters_collection_type["jumpboxServiceGetAccounts:::uid"]=""
+operation_parameters_collection_type["jumpboxServiceGetAccounts:::external_id"]=""
+operation_parameters_collection_type["jumpboxServiceGetAccounts:::include_inactive"]=""
+operation_parameters_collection_type["jumpboxServiceGetAccounts:::include_not_ready"]=""
 operation_parameters_collection_type["jumpboxServiceGetTenant:::tenant_id"]=""
 operation_parameters_collection_type["jumpboxServiceGetTenant:::include_inactive"]=""
 operation_parameters_collection_type["jumpboxServiceGetTenant:::include_not_ready"]=""
@@ -1855,10 +1815,15 @@ operation_parameters_collection_type["jumpboxServiceGetTenants:::external_id"]="
 operation_parameters_collection_type["jumpboxServiceGetTenants:::include_inactive"]=""
 operation_parameters_collection_type["jumpboxServiceGetTenants:::include_not_ready"]=""
 operation_parameters_collection_type["jumpboxServiceGetUsers:::uid"]=""
+operation_parameters_collection_type["jumpboxServicePostAccount:::Jumpboxv3PostAccountRequest"]=""
 operation_parameters_collection_type["jumpboxServicePostTenants:::Jumpboxv3PostTenantsRequest"]=""
 operation_parameters_collection_type["jumpboxServicePostUsers:::Jumpboxv3PostUsersBulkRequest"]=""
+operation_parameters_collection_type["jumpboxServiceResumeAccount:::account_id"]=""
 operation_parameters_collection_type["jumpboxServiceSearchUsers:::Jumpboxv3SearchUsersRequest"]=""
+operation_parameters_collection_type["jumpboxServiceSuspendAccount:::account_id"]=""
 operation_parameters_collection_type["jumpboxServiceTestUser:::Jumpboxv3TestUserRequest"]=""
+operation_parameters_collection_type["jumpboxServiceUpdateAccount:::account_id"]=""
+operation_parameters_collection_type["jumpboxServiceUpdateAccount:::Jumpboxv3UpdateAccountRequest"]=""
 operation_parameters_collection_type["jumpboxServiceUpdateTenant:::tenant_id"]=""
 operation_parameters_collection_type["jumpboxServiceUpdateTenant:::Jumpboxv3UpdateTenantRequest"]=""
 operation_parameters_collection_type["jumpboxServiceUpdateUsers:::Jumpboxv3UpdateUsersBulkRequest"]=""
@@ -1898,6 +1863,9 @@ operation_parameters_collection_type["policyBuilderDeleteGdpSyncEntry:::sync_ids
 operation_parameters_collection_type["policyBuilderDeletePolicies:::policy_ids"]="multi"
 operation_parameters_collection_type["policyBuilderGetPolicyDetails:::policy_id"]=""
 operation_parameters_collection_type["policyBuilderGetPolicyNamesFromRuleIDs:::Policybuilderv3GetPolicyNamesFromRuleIDsRequest"]=""
+operation_parameters_collection_type["policyBuilderGetPolicyVersion:::policy_id"]=""
+operation_parameters_collection_type["policyBuilderGetPolicyVersion:::version"]=""
+operation_parameters_collection_type["policyBuilderGetPolicyVersionsInfo:::policy_id"]=""
 operation_parameters_collection_type["policyBuilderGetReceivers:::action_id"]="multi"
 operation_parameters_collection_type["policyBuilderGetReceivers:::validate_cache"]=""
 operation_parameters_collection_type["policyBuilderGetRuleMetadata:::rule_type"]=""
@@ -1911,6 +1879,7 @@ operation_parameters_collection_type["policyBuilderPoliciesGroups:::group_ids"]=
 operation_parameters_collection_type["policyBuilderRuleValidation:::Policybuilderv3GetRuleValidationRequest"]=""
 operation_parameters_collection_type["policyBuilderStorePoliciesGdp:::central_manager_id"]=""
 operation_parameters_collection_type["policyBuilderStorePoliciesGdp:::Policybuilderv3StorePolicyGdpRequest"]=""
+operation_parameters_collection_type["policyBuilderUpdatePolicy:::Policybuilderv3CreateUpdatePolicyRequest"]=""
 operation_parameters_collection_type["qSDataLoaderQSfileValidator:::Qsdataloaderv3QSfileValidatorRequest"]=""
 operation_parameters_collection_type["qSDataLoaderUploadSyntheticDataLoader:::body"]=""
 operation_parameters_collection_type["qSDataManagerRegisterScan:::Qspmdatamanagerv3ScanRequest"]=""
@@ -1945,19 +1914,37 @@ operation_parameters_collection_type["reportsServiceCreateCategory:::Reportsv3Cr
 operation_parameters_collection_type["reportsServiceCreateChart:::Reportsv3CreateChartRequest"]=""
 operation_parameters_collection_type["reportsServiceCreateChartTemplatev2:::Reportsv3CreateChartTemplatev2Request"]=""
 operation_parameters_collection_type["reportsServiceCreateChartv2:::Reportsv3CreateChartv2Request"]=""
+operation_parameters_collection_type["reportsServiceCreateControl:::Reportsv3CreateControlRequest"]=""
 operation_parameters_collection_type["reportsServiceCreateFieldsByCategory:::Reportsv3CreateFieldsByCategoryRequest"]=""
+operation_parameters_collection_type["reportsServiceCreateGrade:::Reportsv3CreateGradeRequest"]=""
 operation_parameters_collection_type["reportsServiceCreateJoin:::Reportsv3CreateJoinRequest"]=""
+operation_parameters_collection_type["reportsServiceCreateMeasure:::Reportsv3CreateMeasureRequest"]=""
+operation_parameters_collection_type["reportsServiceCreateMetric:::Reportsv3CreateMetricRequest"]=""
+operation_parameters_collection_type["reportsServiceCreateProgram:::Reportsv3CreateProgramRequest"]=""
 operation_parameters_collection_type["reportsServiceCreateReport:::Reportsv3CreateReportRequest"]=""
+operation_parameters_collection_type["reportsServiceCreateRequirement:::Reportsv3CreateRequirementRequest"]=""
 operation_parameters_collection_type["reportsServiceCreateVariant:::Reportsv3CreateVariantRequest"]=""
 operation_parameters_collection_type["reportsServiceDeleteCategory:::category_id"]=""
 operation_parameters_collection_type["reportsServiceDeleteCategory:::table_name"]=""
 operation_parameters_collection_type["reportsServiceDeleteChart:::chart_id"]=""
 operation_parameters_collection_type["reportsServiceDeleteChartTemplatev2:::template_id"]=""
 operation_parameters_collection_type["reportsServiceDeleteChartv2:::chart_id"]=""
+operation_parameters_collection_type["reportsServiceDeleteControl:::control_id"]=""
+operation_parameters_collection_type["reportsServiceDeleteControl:::Reportsv3DeleteControlRequest"]=""
 operation_parameters_collection_type["reportsServiceDeleteFieldsByCategory:::header_ids"]="multi"
 operation_parameters_collection_type["reportsServiceDeleteFieldsByCategory:::table_name"]=""
+operation_parameters_collection_type["reportsServiceDeleteGrade:::grade_id"]=""
+operation_parameters_collection_type["reportsServiceDeleteGrade:::Reportsv3DeleteGradeRequest"]=""
 operation_parameters_collection_type["reportsServiceDeleteJoin:::join_id"]=""
+operation_parameters_collection_type["reportsServiceDeleteMeasure:::measure_id"]=""
+operation_parameters_collection_type["reportsServiceDeleteMeasure:::Reportsv3DeleteMeasureRequest"]=""
+operation_parameters_collection_type["reportsServiceDeleteMetric:::metric_id"]=""
+operation_parameters_collection_type["reportsServiceDeleteMetric:::Reportsv3DeleteMetricRequest"]=""
+operation_parameters_collection_type["reportsServiceDeleteProgram:::program_id"]=""
+operation_parameters_collection_type["reportsServiceDeleteProgram:::Reportsv3DeleteProgramRequest"]=""
 operation_parameters_collection_type["reportsServiceDeleteReport:::report_id"]=""
+operation_parameters_collection_type["reportsServiceDeleteRequirement:::requirement_id"]=""
+operation_parameters_collection_type["reportsServiceDeleteRequirement:::Reportsv3DeleteRequirementRequest"]=""
 operation_parameters_collection_type["reportsServiceDeleteVariant:::variant_id"]=""
 operation_parameters_collection_type["reportsServiceGetCategories:::report_id"]=""
 operation_parameters_collection_type["reportsServiceGetChartSettings:::chart_id"]=""
@@ -1984,77 +1971,31 @@ operation_parameters_collection_type["reportsServicePartialChartUpdate:::chart_i
 operation_parameters_collection_type["reportsServicePartialChartUpdate:::Reportsv3PartialChartUpdateRequest"]=""
 operation_parameters_collection_type["reportsServicePartialReportUpdate:::report_id"]=""
 operation_parameters_collection_type["reportsServicePartialReportUpdate:::Reportsv3PartialReportUpdateRequest"]=""
+operation_parameters_collection_type["reportsServiceRunGrades:::Reportsv3RunGradesRequest"]=""
 operation_parameters_collection_type["reportsServiceRunVariantOperation:::Reportsv3RunVariantOperationRequest"]=""
 operation_parameters_collection_type["reportsServiceTranspose:::Reportsv3TransposeRequest"]=""
 operation_parameters_collection_type["reportsServiceUpdateChart:::chart_id"]=""
 operation_parameters_collection_type["reportsServiceUpdateChart:::Reportsv3UpdateChartRequest"]=""
 operation_parameters_collection_type["reportsServiceUpdateChartv2:::chart_id"]=""
 operation_parameters_collection_type["reportsServiceUpdateChartv2:::Reportsv3UpdateChartv2Request"]=""
+operation_parameters_collection_type["reportsServiceUpdateControl:::control_id"]=""
+operation_parameters_collection_type["reportsServiceUpdateControl:::Reportsv3UpdateControlRequest"]=""
+operation_parameters_collection_type["reportsServiceUpdateGrade:::grade_id"]=""
+operation_parameters_collection_type["reportsServiceUpdateGrade:::Reportsv3UpdateGradeRequest"]=""
 operation_parameters_collection_type["reportsServiceUpdateJoin:::join_id"]=""
 operation_parameters_collection_type["reportsServiceUpdateJoin:::Reportsv3UpdateJoinRequest"]=""
+operation_parameters_collection_type["reportsServiceUpdateMeasure:::measure_id"]=""
+operation_parameters_collection_type["reportsServiceUpdateMeasure:::Reportsv3UpdateMeasureRequest"]=""
+operation_parameters_collection_type["reportsServiceUpdateMetric:::metric_id"]=""
+operation_parameters_collection_type["reportsServiceUpdateMetric:::Reportsv3UpdateMetricRequest"]=""
+operation_parameters_collection_type["reportsServiceUpdateProgram:::program_id"]=""
+operation_parameters_collection_type["reportsServiceUpdateProgram:::Reportsv3UpdateProgramRequest"]=""
 operation_parameters_collection_type["reportsServiceUpdateReport:::report_id"]=""
 operation_parameters_collection_type["reportsServiceUpdateReport:::Reportsv3UpdateReportRequest"]=""
+operation_parameters_collection_type["reportsServiceUpdateRequirement:::requirement_id"]=""
+operation_parameters_collection_type["reportsServiceUpdateRequirement:::Reportsv3UpdateRequirementRequest"]=""
 operation_parameters_collection_type["reportsServiceUpdateVariantOverride:::variant_id"]=""
 operation_parameters_collection_type["reportsServiceUpdateVariantOverride:::Reportsv3UpdateVariantOverrideRequest"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceCreateController:::Resourcecontrollerk8v3CreateControllerRequest"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceCreateHeartBeat:::controller_id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceCreateHeartBeat:::Resourcecontrollerk8v3CreateHeartBeatRequest"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceCreateHeartBeatEx:::controller_id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceCreateHeartBeatEx:::Resourcecontrollerk8v3ControllerHeartbeat"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceCreateJob:::Resourcecontrollerk8v3Job"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceCreateJobExecution:::Resourcecontrollerk8v3JobExecution"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceCreateKeypair:::controller_id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceCreateKeypair:::Resourcecontrollerk8v3CreateKeypairRequest"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceDeleteController:::controller_id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceDeleteController:::Resourcecontrollerk8v3DeleteControllerRequest"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceDeleteEdgeTenant:::tenant_id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceDeleteEdgeTenant:::Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceDeleteEdgeTenantRequest:::tenant_id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceDeleteEdgeTenantRequest:::edge_id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceDeleteEdgeTenantRequest:::edge_name"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceDeleteJob:::job_id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceDeleteJob:::Resourcecontrollerk8v3DeleteJobRequest"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceDownloadControllerLogs:::controller_id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceDownloadControllerLogs:::Resourcecontrollerk8v3DownloadControllerLogsRequest"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceGetControllerApps:::controller_id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceGetControllerApps:::modified_since"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceGetControllerCommands:::controller_id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceGetControllerJobs:::controller_id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceGetControllerJobs:::modified_since"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceGetControllerStatus:::controller_id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceGetControllers:::tenant_id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceGetControllers:::want_local"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceGetControllersWithStatus:::tenant_id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceGetControllersWithStatus:::want_local"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceGetControllersWithStatus:::controller_id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceGetJob:::job_id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceGetJob:::want_secret_values"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceGetJobExecution:::jobexe_id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceGetJobExecutions:::job_id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceGetJobStatus:::job_id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceGetTenantApp:::tenant_id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceGetTenantApp:::app_name"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceGetTenantApp:::return_level"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceGetTenantApps:::tenant_id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceGetTenantApps:::return_level"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceGetTenantJobs:::tenant_id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceInstallEdgeTenantRequest:::Resourcecontrollerk8v3EdgeTenantRequest"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceQueryControllerLogs:::controller_id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceQueryControllerLogs:::Resourcecontrollerk8v3QueryControllerLogsRequest"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceUpdateCommand:::id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceUpdateCommand:::Resourcecontrollerk8v3ControllerCommand"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceUpdateController:::id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceUpdateController:::Resourcecontrollerk8v3Controller"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceUpdateControllerStatus:::id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceUpdateControllerStatus:::Resourcecontrollerk8v3ControllerStatus"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceUpdateEdgeTenantRequest:::edge_id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceUpdateEdgeTenantRequest:::Resourcecontrollerk8v3EdgeTenantRequest"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceUpdateJob:::id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceUpdateJob:::Resourcecontrollerk8v3Job"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceUpdateJobExecution:::id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceUpdateJobExecution:::Resourcecontrollerk8v3UpdateJobExecutionRequest"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceUpdateJobStatus:::job_id"]=""
-operation_parameters_collection_type["resourceControllerK8ServiceUpdateJobStatus:::Resourcecontrollerk8v3UpdateJobStatusRequest"]=""
 operation_parameters_collection_type["riskAnalyticsControllerEnableDisableRiskEventFeedback:::Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest"]=""
 operation_parameters_collection_type["riskAnalyticsControllerEnableDisableRiskEventProcess:::Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest"]=""
 operation_parameters_collection_type["riskAnalyticsControllerGetRiskEventClassificationsList:::risk_id"]=""
@@ -2109,33 +2050,6 @@ operation_parameters_collection_type["streamsServiceCheckAWSCredentials:::Stream
 operation_parameters_collection_type["streamsServiceCheckAzureEventHub:::Streamsv3CheckAzureEventHubRequest"]=""
 operation_parameters_collection_type["streamsServiceCheckAzureStorageString:::Streamsv3CheckAzureStorageStringRequest"]=""
 operation_parameters_collection_type["streamsServiceListAWSStreams:::Streamsv3ListAWSStreamsRequest"]=""
-operation_parameters_collection_type["templatesServiceCreateIntegration:::Templatesv3CreateIntegrationRequest"]=""
-operation_parameters_collection_type["templatesServiceCreateTemplate:::Templatesv3CreateTemplateRequest"]=""
-operation_parameters_collection_type["templatesServiceDeleteIntegration:::integration_id"]=""
-operation_parameters_collection_type["templatesServiceDeleteTemplate:::template_id"]=""
-operation_parameters_collection_type["templatesServiceGetOriginDefaultContent:::origin"]=""
-operation_parameters_collection_type["templatesServiceGetOriginDefaultContent:::integration"]=""
-operation_parameters_collection_type["templatesServiceGetOriginDefaultContent:::mime_type"]=""
-operation_parameters_collection_type["templatesServiceGetOriginFields:::origin"]=""
-operation_parameters_collection_type["templatesServiceGetTemplate:::template_id"]=""
-operation_parameters_collection_type["templatesServiceGetTemplate:::include_integration_name"]=""
-operation_parameters_collection_type["templatesServiceGetTemplates:::integration_id"]=""
-operation_parameters_collection_type["templatesServiceGetTemplates:::filter_integration"]="multi"
-operation_parameters_collection_type["templatesServiceGetTemplates:::filter_origin"]="multi"
-operation_parameters_collection_type["templatesServiceGetTemplates:::filter_mime_type"]="multi"
-operation_parameters_collection_type["templatesServiceGetTemplates:::filter_tags"]="multi"
-operation_parameters_collection_type["templatesServiceGetTemplates:::filter_enabled_only"]=""
-operation_parameters_collection_type["templatesServiceGetTemplates:::include_integration_name"]=""
-operation_parameters_collection_type["templatesServiceGetTemplatesForEdge:::integration_id"]=""
-operation_parameters_collection_type["templatesServiceGetTemplatesForEdge:::filter_origin"]="multi"
-operation_parameters_collection_type["templatesServiceGetTemplatesForEdge:::filter_enabled_only"]=""
-operation_parameters_collection_type["templatesServiceGetTemplatesForEdge:::include_integration_name"]=""
-operation_parameters_collection_type["templatesServiceGetTemplatesForEdge:::transform_to_gdp_format"]=""
-operation_parameters_collection_type["templatesServiceTestTemplate:::Templatesv3TestTemplateRequest"]=""
-operation_parameters_collection_type["templatesServiceTransformTemplate:::Templatesv3TransformTemplateRequest"]=""
-operation_parameters_collection_type["templatesServiceTransformTemplateJSON:::Templatesv3TransformTemplateJSONRequest"]=""
-operation_parameters_collection_type["templatesServiceUpdateTemplate:::template_id"]=""
-operation_parameters_collection_type["templatesServiceUpdateTemplate:::Templatesv3UpdateTemplateRequest"]=""
 operation_parameters_collection_type["tenantuserCreateAPIKey:::Tenantuserv3CreateApiKeyRequest"]=""
 operation_parameters_collection_type["tenantuserDeleteAPIKey:::id"]=""
 operation_parameters_collection_type["tenantuserDeleteRole:::role_id"]=""
@@ -2165,6 +2079,11 @@ operation_parameters_collection_type["listLinkedVendorDataStores:::nextToken"]="
 operation_parameters_collection_type["listTrustedAssets:::filter"]=""
 operation_parameters_collection_type["universalConnectorManagerGetUCSetup:::plugin_id"]=""
 operation_parameters_collection_type["universalConnectorManagerUploadPlugin:::Universalconnectormanagerv3UploadPluginRequest"]=""
+operation_parameters_collection_type["vulnerabilityManagementServiceCreateVulnerability:::Vulmanagementv3CreateVulnerabilityRequest"]=""
+operation_parameters_collection_type["vulnerabilityManagementServiceGetVulnerabilities:::Vulmanagementv3GetVulnerabilitiesRequest"]=""
+operation_parameters_collection_type["vulnerabilityManagementServiceGetVulnerability:::vulnerability_id"]=""
+operation_parameters_collection_type["vulnerabilityManagementServiceUpdateVulnerabilities:::Vulmanagementv3UpdateVulnerabilitiesRequest"]=""
+operation_parameters_collection_type["vulnerabilityManagementServiceVulnerabilityIngestionManualTrigger:::body"]=""
 operation_parameters_collection_type["workflowCreateCase:::Workflowv3CreateCaseRequest"]=""
 operation_parameters_collection_type["workflowCreateProductEntity:::Workflowv3ProductEntity"]=""
 operation_parameters_collection_type["workflowCreateTask:::case_id"]=""
@@ -2613,7 +2532,9 @@ EOF
 read -r -d '' ops <<EOF
   ${CYAN}assetsServiceAssetIngestion${OFF};AssetIngestion - Asset Ingestion Api to ingest assets from different applications including asset extensibility assets. (AUTH) (AUTH)
   ${CYAN}assetsServiceAssetIngestionManualTrigger${OFF};AssetIngestionManualTrigger - Manual trigger for Scheduled Asset Ingestion of databases. (AUTH) (AUTH)
+  ${CYAN}assetsServiceCancelCSVImport${OFF};CancelCSVImport - Cancel the import of CSV and update the status in import log table (AUTH) (AUTH)
   ${CYAN}assetsServiceClonePolicy${OFF};ClonePolicy - Clone a policy. (AUTH) (AUTH)
+  ${CYAN}assetsServiceCompareCSVToExistingAssets${OFF};CompareCSVToExistingAssets - Compare CSV with existing assets and return list of assets(existing/to be imported/both) on demand from csv. (AUTH) (AUTH)
   ${CYAN}assetsServiceCreateUpdatePolicy${OFF};CreateUpdatePolicy - Create/update new Policy. (AUTH) (AUTH)
   ${CYAN}assetsServiceDeleteFilterTemplateForAssets${OFF};DeleteFilterTemplateForAssets - Deleting a template using TemplateID in manage assets. (AUTH) (AUTH)
   ${CYAN}assetsServiceDeletePolicies${OFF};DeletePolicies - Delete Policy returns response code and message. (AUTH) (AUTH)
@@ -2626,6 +2547,7 @@ read -r -d '' ops <<EOF
   ${CYAN}assetsServiceGetAssetTopology${OFF};GetAssetTopology- Get list of topology for a parent asset. (AUTH) (AUTH)
   ${CYAN}assetsServiceGetFilterTemplateForAssets${OFF};GetFilterTemplateForAssets - Get list of filters query templates for manage assets. (AUTH) (AUTH)
   ${CYAN}assetsServiceGetFiltersForAssets${OFF};GetFiltersForAssets - Get a list of filters category and sub category with all data. (AUTH) (AUTH)
+  ${CYAN}assetsServiceImportCSV${OFF};ImportCSV - Start the async asset import from CSV by starting the db procedure and send notification at the end. (AUTH) (AUTH)
   ${CYAN}assetsServiceListPolicy${OFF};ListPolicy - List all policies. (AUTH) (AUTH)
   ${CYAN}assetsServiceListRule${OFF};ListRule - List all rules for a policy. (AUTH) (AUTH)
   ${CYAN}assetsServiceListTagDomains${OFF};ListTagDomains - Get Tag categories by request parameters . (AUTH) (AUTH)
@@ -2678,11 +2600,13 @@ read -r -d '' ops <<EOF
   ${CYAN}generateAtlassianJiraAuthUrl${OFF};Generate a JIRA authentication URL (AUTH)
   ${CYAN}generateAzureAuthUrl${OFF};Generate azure authorization url (AUTH)
   ${CYAN}generateOffice365AuthUrl${OFF};Generate a Microsoft 365 consent URL (AUTH)
+  ${CYAN}generateSalesforceAuthUrl${OFF};Generate a Salesforce consent URL (AUTH)
   ${CYAN}generateSlackAuthUrl${OFF};Generate a Slack authentication URL (AUTH)
   ${CYAN}generateSnowflakeAuthUrl${OFF};Validate and Generate a Snowflake OAuth URL (AUTH)
   ${CYAN}getAnalyzedRegionStatus${OFF};Get the status of analyzer installation for a region (AUTH)
   ${CYAN}getAzureAdminConsentStatus${OFF};Get Azure admin consent status (AUTH)
   ${CYAN}getCloudAccountInstallationStatus${OFF};Get the installation status of a cloud account (AUTH)
+  ${CYAN}getDatabaseMetadata${OFF};Get the metadata details of snowflake database. (AUTH)
   ${CYAN}getRefreshTokenExpiry${OFF};Get Snowflake Refresh Token Expiry date (AUTH)
   ${CYAN}listLinkedAccounts${OFF};List cloud accounts connected to DSPM (AUTH)
   ${CYAN}removeAccounts${OFF};Post cloud account ID connections to be removed (AUTH)
@@ -2691,6 +2615,7 @@ read -r -d '' ops <<EOF
   ${CYAN}snowflakeIntegrationScript${OFF};Generate Snowflake Integration Script (AUTH)
   ${CYAN}submitGoogleWorkspaceAdminEmail${OFF};Submit email for service account authorization (AUTH)
   ${CYAN}submitOffice365TenantInfo${OFF};Submit Microsoft 365 customer information (AUTH)
+  ${CYAN}submitSalesforceAuthCode${OFF};Submit Salesforce customer information (AUTH)
   ${CYAN}submitSlackAuthCode${OFF};Submit a Slack authentication code (AUTH)
   ${CYAN}submitSnowflakeAuthCode${OFF};Submit Snowflake oAuth code (AUTH)
 EOF
@@ -2768,6 +2693,10 @@ Description: Update plugin. (AUTH) (AUTH)
 Description: Update Settings. (AUTH) (AUTH)
   ${CYAN}connectionsServiceValidateAwsConnection${OFF};Summary: Validate an AWS connection.
 Description: Validate an AWS connection. (AUTH) (AUTH)
+  ${CYAN}connectionsServiceValidateAzureConnection${OFF};Summary: Validate an Azure connection.
+Description: Validate an Azure connection. (AUTH) (AUTH)
+  ${CYAN}connectionsServiceValidateGcpConnection${OFF};Summary: Validate a GCP connection.
+Description: Validate a GCP connection. (AUTH) (AUTH)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -2890,17 +2819,6 @@ Description: Purge data. (AUTH) (AUTH)
 Description: Test the integration connection with the arguments passed in the TestIntegrationRequest.  When possible
 a test message is sent to the integration to ensure it is functional.
 Currently this API only supports API_IMPORT type integrations (AUTH) (AUTH)
-EOF
-echo "  $ops" | column -t -s ';'
-    echo ""
-    echo -e "${BOLD}${WHITE}[edgeSchedulerService]${OFF}"
-read -r -d '' ops <<EOF
-  ${CYAN}edgeSchedulerServiceGetEdgeQueryStatus${OFF};Summary: Get edge query status
-Description: Get the status of a queued edge query (AUTH) (AUTH)
-  ${CYAN}edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery${OFF};Summary: Monitor for a pending edge query request
-Description: monitor edge query pending request (AUTH) (AUTH)
-  ${CYAN}edgeSchedulerServiceScheduleEdgeQuery${OFF};Summary: Schedule an edge query 
-Description: Schedule an edge query via data warehouse queue (AUTH) (AUTH)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -3054,24 +2972,38 @@ echo "  $ops" | column -t -s ';'
 read -r -d '' ops <<EOF
   ${CYAN}jumpboxServiceAuthorize${OFF};Summary: Authorize
 Description: Authenticate a user and return a JWT. (AUTH) (AUTH)
+  ${CYAN}jumpboxServiceDeleteAccount${OFF};Summary: Delete account
+Description: Delete an account. (AUTH)
   ${CYAN}jumpboxServiceDeleteTenant${OFF};Summary: Delete tenant
 Description: Delete a tenant. (AUTH)
   ${CYAN}jumpboxServiceDeleteUser${OFF};Summary: Delete user
 Description: Delete the user. (AUTH) (AUTH)
+  ${CYAN}jumpboxServiceGetAccount${OFF};Summary: Get account
+Description: Get an account. (AUTH)
+  ${CYAN}jumpboxServiceGetAccounts${OFF};Summary: Get accounts
+Description: Get all accounts based on UID. (AUTH) (AUTH)
   ${CYAN}jumpboxServiceGetTenant${OFF};Summary: Get tenant
 Description: Get a tenant. (AUTH)
   ${CYAN}jumpboxServiceGetTenants${OFF};Summary: Get tenants
 Description: Get all tenant base on UID. (AUTH) (AUTH)
   ${CYAN}jumpboxServiceGetUsers${OFF};Summary: Get users
 Description: Get all users base on a tenantID. (AUTH) (AUTH)
+  ${CYAN}jumpboxServicePostAccount${OFF};Summary: Post account
+Description: Create an Account. (AUTH) (AUTH)
   ${CYAN}jumpboxServicePostTenants${OFF};Summary: Post tenants
 Description: Create a tenant. (AUTH) (AUTH)
   ${CYAN}jumpboxServicePostUsers${OFF};Summary: Post users
 Description: Create users. (AUTH) (AUTH)
+  ${CYAN}jumpboxServiceResumeAccount${OFF};Summary: Resume account
+Description: Resume an account. (AUTH)
   ${CYAN}jumpboxServiceSearchUsers${OFF};Summary: Search users
 Description: Search for all users matching the provided string. (AUTH) (AUTH)
+  ${CYAN}jumpboxServiceSuspendAccount${OFF};Summary: Suspend Account
+Description: Suspend an account (AUTH)
   ${CYAN}jumpboxServiceTestUser${OFF};Summary: Test user
 Description: Test a user lookup to a given LDAP. (AUTH) (AUTH)
+  ${CYAN}jumpboxServiceUpdateAccount${OFF};Summary: Update Account
+Description: Updates an account. (AUTH)
   ${CYAN}jumpboxServiceUpdateTenant${OFF};Summary: Update tenant
 Description: Update a tenant. (AUTH)
   ${CYAN}jumpboxServiceUpdateUsers${OFF};Summary: Update users
@@ -3154,6 +3086,10 @@ Description: Return a list of rules inside the policy. (AUTH) (AUTH)
 Description: Return a map where the key is the rule ID and value is the policy name that has the rule ID. (AUTH) (AUTH)
   ${CYAN}policyBuilderGetPolicySyncList${OFF};Summary: Get list of synced polices
 Description: Returns the list and status of sync entries (AUTH) (AUTH)
+  ${CYAN}policyBuilderGetPolicyVersion${OFF};Summary: Get a particular version of the policy
+Description: Returns a particular version of policy and response code and message (AUTH) (AUTH)
+  ${CYAN}policyBuilderGetPolicyVersionsInfo${OFF};Summary: Gets policy versions info
+Description: Returns information of all versions of a policy and response code and message (AUTH) (AUTH)
   ${CYAN}policyBuilderGetReceivers${OFF};Summary: Get receivers
 Description: Get all the receivers associated with actions. (AUTH) (AUTH)
   ${CYAN}policyBuilderGetRuleMetadata${OFF};Summary: Get rule metadata
@@ -3172,6 +3108,8 @@ Description: Get policy groups. (AUTH) (AUTH)
 Description: Validate a rule parameters and actions. (AUTH) (AUTH)
   ${CYAN}policyBuilderStorePoliciesGdp${OFF};Summary: Store policies Gdp
 Description: Store policies.  (This API is called from GDP only) (AUTH) (AUTH)
+  ${CYAN}policyBuilderUpdatePolicy${OFF};Summary: Update policy
+Description: Update Policy returns response code and message. (AUTH) (AUTH)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -3253,12 +3191,24 @@ Description: Create custom chart based on provided properties. (AUTH) (AUTH)
 Description: Create custom VEGA chart template. (AUTH) (AUTH)
   ${CYAN}reportsServiceCreateChartv2${OFF};Summary: Create chart v2
 Description: Create custom VEGA chart based on provided properties. (AUTH) (AUTH)
+  ${CYAN}reportsServiceCreateControl${OFF};Summary: Create Control.
+Description: Create a unique Control. (AUTH) (AUTH)
   ${CYAN}reportsServiceCreateFieldsByCategory${OFF};Summary - Create fields by category
 Description: Cteate category fields based on provided properties. (AUTH) (AUTH)
+  ${CYAN}reportsServiceCreateGrade${OFF};Summary: Create Grade.
+Description: Create a unique Grade. (AUTH) (AUTH)
   ${CYAN}reportsServiceCreateJoin${OFF};Summary: Create a join
 Description: Create a custom report join (AUTH) (AUTH)
+  ${CYAN}reportsServiceCreateMeasure${OFF};Summary: Create measure.
+Description: Create a unique measure. (AUTH) (AUTH)
+  ${CYAN}reportsServiceCreateMetric${OFF};Summary: Create metric.
+Description: Create a unique metric. (AUTH) (AUTH)
+  ${CYAN}reportsServiceCreateProgram${OFF};Summary: Create Program.
+Description: Create a unique Program. (AUTH) (AUTH)
   ${CYAN}reportsServiceCreateReport${OFF};Summary: Create report
 Description: Create custom report based on provided properties. (AUTH) (AUTH)
+  ${CYAN}reportsServiceCreateRequirement${OFF};Summary: Create Requirement.
+Description: Create a unique Requirement. (AUTH) (AUTH)
   ${CYAN}reportsServiceCreateVariant${OFF};Summary: Create a variant
 Description: Create a variant for reports (AUTH) (AUTH)
   ${CYAN}reportsServiceDeleteCategory${OFF};Summary: Delete a category
@@ -3269,12 +3219,24 @@ Description: Delete a custom chart. (AUTH) (AUTH)
 Description: Delete a custom VEGA chart template. (AUTH) (AUTH)
   ${CYAN}reportsServiceDeleteChartv2${OFF};Summary: Delete chart v2
 Description: Delete a custom VEGA chart. (AUTH) (AUTH)
+  ${CYAN}reportsServiceDeleteControl${OFF};Summary: Delete Control
+Description: Delete a Control. (AUTH) (AUTH)
   ${CYAN}reportsServiceDeleteFieldsByCategory${OFF};Summary - Delete fields by category
 Description: Delete category fields based on provided properties. (AUTH) (AUTH)
+  ${CYAN}reportsServiceDeleteGrade${OFF};Summary: Delete Grade
+Description: Delete a Grade. (AUTH) (AUTH)
   ${CYAN}reportsServiceDeleteJoin${OFF};Summary: Delete a join
 Description: Delete a custom join (AUTH) (AUTH)
+  ${CYAN}reportsServiceDeleteMeasure${OFF};Summary: Delete measure
+Description: Delete a measure. (AUTH) (AUTH)
+  ${CYAN}reportsServiceDeleteMetric${OFF};Summary: Delete metric
+Description: Delete a metric. (AUTH) (AUTH)
+  ${CYAN}reportsServiceDeleteProgram${OFF};Summary: Delete Program
+Description: Delete a Program. (AUTH) (AUTH)
   ${CYAN}reportsServiceDeleteReport${OFF};Summary: Delete report
 Description: Delete a custom report. (AUTH) (AUTH)
+  ${CYAN}reportsServiceDeleteRequirement${OFF};Summary: Delete Requirement
+Description: Delete a Requirement. (AUTH) (AUTH)
   ${CYAN}reportsServiceDeleteVariant${OFF};Summary: Delete a variant
 Description: Delete a variant (AUTH) (AUTH)
   ${CYAN}reportsServiceGetCategories${OFF};Summary:  Get all available report categories.
@@ -3285,12 +3247,22 @@ Description: Get a custom chart based on provided report id. (AUTH) (AUTH)
 Description: Get a custom VEGA chart based on provided report id. (AUTH) (AUTH)
   ${CYAN}reportsServiceGetChartTemplatesv2${OFF};Summary: Get chart template v2
 Description: Get all custom VEGA chart templates. (AUTH) (AUTH)
+  ${CYAN}reportsServiceGetControls${OFF};Summary: Get controls
+Description: Get a list of controls with all data. (AUTH) (AUTH)
   ${CYAN}reportsServiceGetFieldsByCategories${OFF};Summary: Get fields by categories
 Description: Get all category related fields or all possible fields based on a list of categories. (AUTH) (AUTH)
   ${CYAN}reportsServiceGetFieldsByCategory${OFF};Summary: Get fields by category
 Description: Get all category related fields or all possible fields. (AUTH) (AUTH)
+  ${CYAN}reportsServiceGetGrades${OFF};Summary: Get grades
+Description: Get a list of grades with all data. (AUTH) (AUTH)
   ${CYAN}reportsServiceGetJoins${OFF};Summary: Get all joins
 Description: Get all custom joins. (AUTH) (AUTH)
+  ${CYAN}reportsServiceGetMeasures${OFF};Summary: Get measures
+Description: Get a list of measures with all data. (AUTH) (AUTH)
+  ${CYAN}reportsServiceGetMetrics${OFF};Summary: Get metrics
+Description: Get a list of metrics with all data. (AUTH) (AUTH)
+  ${CYAN}reportsServiceGetPrograms${OFF};Summary: Get controls
+Description: Get a list of controls with all data. (AUTH) (AUTH)
   ${CYAN}reportsServiceGetQueryByReportDefinition${OFF};Summary: Get query by report definition
 Description: Get query by report definition. (AUTH) (AUTH)
   ${CYAN}reportsServiceGetQueryByReportID${OFF};Summary: Get query by report ID
@@ -3309,6 +3281,8 @@ Description: Get reports list. (AUTH) (AUTH)
 Description: Get the reports that use a join and the headers that are imported by the reports using the join (AUTH) (AUTH)
   ${CYAN}reportsServiceGetReportsTags${OFF};Summary: Get reports tags
 Description: Get all report distinct tags. (AUTH) (AUTH)
+  ${CYAN}reportsServiceGetRequirements${OFF};Summary: Get requirements
+Description: Get a list of requirements with all data. (AUTH) (AUTH)
   ${CYAN}reportsServiceGetVariant${OFF};Summary: Get a variant
 Description: Get a given variant (AUTH) (AUTH)
   ${CYAN}reportsServiceGetVariants${OFF};Summary: Get all variants
@@ -3317,6 +3291,8 @@ Description: Get all variants in reports (AUTH) (AUTH)
 Description: Update a custom chart with partial information. (AUTH) (AUTH)
   ${CYAN}reportsServicePartialReportUpdate${OFF};Summary: Partial report update
 Description: Update a custom report with partial information. (AUTH) (AUTH)
+  ${CYAN}reportsServiceRunGrades${OFF};Summary: Refresh metrics via grades.
+Description: Refresh metrics via grades. (AUTH) (AUTH)
   ${CYAN}reportsServiceRunVariantOperation${OFF};Summary: Run a variant
 Description: Run the operations in a variant (AUTH) (AUTH)
   ${CYAN}reportsServiceTranspose${OFF};Summary: Transpose
@@ -3325,53 +3301,24 @@ Description: Return the corresponding full sql data. (AUTH) (AUTH)
 Description: Update a custom chart. (AUTH) (AUTH)
   ${CYAN}reportsServiceUpdateChartv2${OFF};Summary: Update chart v2
 Description: Update a custom VEGA chart. (AUTH) (AUTH)
+  ${CYAN}reportsServiceUpdateControl${OFF};Summary: Update Control.
+Description: Update a Control. (AUTH) (AUTH)
+  ${CYAN}reportsServiceUpdateGrade${OFF};Summary: Update Grade.
+Description: Update a Grade. (AUTH) (AUTH)
   ${CYAN}reportsServiceUpdateJoin${OFF};Summary: Update a join
 Description: Update a custom join (AUTH) (AUTH)
+  ${CYAN}reportsServiceUpdateMeasure${OFF};Summary: Update measure.
+Description: Update a measure. (AUTH) (AUTH)
+  ${CYAN}reportsServiceUpdateMetric${OFF};Summary: Update metric.
+Description: Update a metric. (AUTH) (AUTH)
+  ${CYAN}reportsServiceUpdateProgram${OFF};Summary: Update Program.
+Description: Update a Program. (AUTH) (AUTH)
   ${CYAN}reportsServiceUpdateReport${OFF};Summary: Update report
 Description: Update a custom report. (AUTH) (AUTH)
+  ${CYAN}reportsServiceUpdateRequirement${OFF};Summary: Update Requirement.
+Description: Update a Requirement. (AUTH) (AUTH)
   ${CYAN}reportsServiceUpdateVariantOverride${OFF};Summary: Update a variant
 Description: Update a variant with a custom override (AUTH) (AUTH)
-EOF
-echo "  $ops" | column -t -s ';'
-    echo ""
-    echo -e "${BOLD}${WHITE}[resourceControllerK8Service]${OFF}"
-read -r -d '' ops <<EOF
-  ${CYAN}resourceControllerK8ServiceCreateController${OFF};CreateController - Add a new controller. (AUTH) (AUTH)
-  ${CYAN}resourceControllerK8ServiceCreateHeartBeat${OFF};CreateHeartBeat - Create a heartbeat for the controller. (AUTH) (AUTH)
-  ${CYAN}resourceControllerK8ServiceCreateHeartBeatEx${OFF};CreateHeartBeatEx - Create a heartbeat for the controller with extended information. (AUTH) (AUTH)
-  ${CYAN}resourceControllerK8ServiceCreateJob${OFF};////////////////////////////////////////////////////////////////
-Interface to the controllers and apps api in the App-Manager microservice
-CreateJob - Create a job definition. Files and secrets contained within will also be created. (AUTH) (AUTH)
-  ${CYAN}resourceControllerK8ServiceCreateJobExecution${OFF};CreateJobExecution - Create a job execution. (AUTH) (AUTH)
-  ${CYAN}resourceControllerK8ServiceCreateKeypair${OFF};CreateKeypair - Create a new keypair for the controller. (AUTH) (AUTH)
-  ${CYAN}resourceControllerK8ServiceDeleteController${OFF};DeleteController - Delete a controller. (AUTH) (AUTH)
-  ${CYAN}resourceControllerK8ServiceDeleteEdgeTenant${OFF};DeleteEdgeTenant - deletes an edge tenant providing edge tenant id (AUTH) (AUTH)
-  ${CYAN}resourceControllerK8ServiceDeleteEdgeTenantRequest${OFF};DeleteEdgeTenantRequest to deletes gi and tnt CR on edge (AUTH)
-  ${CYAN}resourceControllerK8ServiceDeleteJob${OFF};DeleteJob - Delete a job. (AUTH) (AUTH)
-  ${CYAN}resourceControllerK8ServiceDownloadControllerLogs${OFF};DownloadControllerLogs - Download the controller logs for a running controller. (AUTH) (AUTH)
-  ${CYAN}resourceControllerK8ServiceGetControllerApps${OFF};GetControllerApps - Get the apps for the given controller. (AUTH) (AUTH)
-  ${CYAN}resourceControllerK8ServiceGetControllerCommands${OFF};GetControllerCommands - Get the commands for the controller to execute. (AUTH) (AUTH)
-  ${CYAN}resourceControllerK8ServiceGetControllerJobs${OFF};GetControllerJobs - Get the jobs for the controller to execute. (AUTH) (AUTH)
-  ${CYAN}resourceControllerK8ServiceGetControllerStatus${OFF};GetControllerStatus - Get the status for the given controller. (AUTH) (AUTH)
-  ${CYAN}resourceControllerK8ServiceGetControllers${OFF};GetControllers - Get the controllers for the given tenant. (AUTH) (AUTH)
-  ${CYAN}resourceControllerK8ServiceGetControllersWithStatus${OFF};GetControllersWithStatus - Get the controllers for the given tenant with computed status. (AUTH) (AUTH)
-  ${CYAN}resourceControllerK8ServiceGetJob${OFF};GetJob - Get the job. (AUTH) (AUTH)
-  ${CYAN}resourceControllerK8ServiceGetJobExecution${OFF};GetJobExecution - Get a job execution. (AUTH) (AUTH)
-  ${CYAN}resourceControllerK8ServiceGetJobExecutions${OFF};GetJobExecutions - Get the job executions. (AUTH) (AUTH)
-  ${CYAN}resourceControllerK8ServiceGetJobStatus${OFF};GetJobStatus - Get the job's status. (AUTH) (AUTH)
-  ${CYAN}resourceControllerK8ServiceGetTenantApp${OFF};GetTenantApp - Get a specific app for the given tenant. (AUTH) (AUTH)
-  ${CYAN}resourceControllerK8ServiceGetTenantApps${OFF};GetTenantApps - Get the apps for the given tenant. (AUTH) (AUTH)
-  ${CYAN}resourceControllerK8ServiceGetTenantJobs${OFF};GetTenantJobs - Get jobs for the given tenant. (AUTH) (AUTH)
-  ${CYAN}resourceControllerK8ServiceGetVersion${OFF};GetVersion - Get the system version information for the service. (AUTH) (AUTH)
-  ${CYAN}resourceControllerK8ServiceInstallEdgeTenantRequest${OFF};InstallEdgeTenantRequest to Create gi and tnt CRs on edge (AUTH)
-  ${CYAN}resourceControllerK8ServiceQueryControllerLogs${OFF};QueryControllerLogs - Query for the controller logs for a running controller. (AUTH) (AUTH)
-  ${CYAN}resourceControllerK8ServiceUpdateCommand${OFF};UpdateCommand - Update the command. (AUTH) (AUTH)
-  ${CYAN}resourceControllerK8ServiceUpdateController${OFF};UpdateController - Update an existing controller. (AUTH) (AUTH)
-  ${CYAN}resourceControllerK8ServiceUpdateControllerStatus${OFF};UpdateControllerStatus - Updates the status for the given controller. (AUTH) (AUTH)
-  ${CYAN}resourceControllerK8ServiceUpdateEdgeTenantRequest${OFF};UpdateEdgeTenantRequest to update gi and tnt CRs on edge (AUTH)
-  ${CYAN}resourceControllerK8ServiceUpdateJob${OFF};UpdateJob - Update a job. (AUTH) (AUTH)
-  ${CYAN}resourceControllerK8ServiceUpdateJobExecution${OFF};UpdateJobExecution - Update a job execution. (AUTH) (AUTH)
-  ${CYAN}resourceControllerK8ServiceUpdateJobStatus${OFF};UpdateJobStatus - Updates the status for the given Job. (AUTH) (AUTH)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -3494,37 +3441,6 @@ Description: Service to list AWS Kinesis streams. (AUTH) (AUTH)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
-    echo -e "${BOLD}${WHITE}[templatesService]${OFF}"
-read -r -d '' ops <<EOF
-  ${CYAN}templatesServiceCreateIntegration${OFF};Summary: Create integration
-Description: Create a set of new templates for a new integration. (AUTH) (AUTH)
-  ${CYAN}templatesServiceCreateTemplate${OFF};Summary: Create template
-Description: Create a new template. (AUTH) (AUTH)
-  ${CYAN}templatesServiceDeleteIntegration${OFF};Summary: Delete integration
-Description: Delete all templates associated with an integration. (AUTH) (AUTH)
-  ${CYAN}templatesServiceDeleteTemplate${OFF};Summary: Delete template
-Description: Delete a specific template. (AUTH) (AUTH)
-  ${CYAN}templatesServiceGetOriginDefaultContent${OFF};Summary: Get origin default content
-Description: Return the default content for a template with a specified origin and MIME type. (AUTH) (AUTH)
-  ${CYAN}templatesServiceGetOriginFields${OFF};Summary: Get origin fields
-Description: Return the fields available with a specific origin. (AUTH) (AUTH)
-  ${CYAN}templatesServiceGetTemplate${OFF};Summary: Get template
-Description: Return a specific template by id. (AUTH) (AUTH)
-  ${CYAN}templatesServiceGetTemplates${OFF};Summary: Get templates
-Description: Return all templates based on supplied filters. (AUTH) (AUTH)
-  ${CYAN}templatesServiceGetTemplatesForEdge${OFF};Summary: Get templates for edge
-Description: Return all templates based on supplied filters. (AUTH) (AUTH)
-  ${CYAN}templatesServiceTestTemplate${OFF};Summary: Test template
-Description: Analyze a specified template to ensure will function correctly when utilized. (AUTH) (AUTH)
-  ${CYAN}templatesServiceTransformTemplate${OFF};Summary: Transform template
-Description: Process the specified template and returns the Title and Content based on supplied data. (AUTH) (AUTH)
-  ${CYAN}templatesServiceTransformTemplateJSON${OFF};Summary: Transform template JSON
-Description: Process the specified template and returns the Title and Content based on supplied json data string. (AUTH) (AUTH)
-  ${CYAN}templatesServiceUpdateTemplate${OFF};Summary: Update template
-Description: Update a single template. (AUTH) (AUTH)
-EOF
-echo "  $ops" | column -t -s ';'
-    echo ""
     echo -e "${BOLD}${WHITE}[tenantuser]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}tenantuserCreateAPIKey${OFF};Summary: Create API key
@@ -3590,6 +3506,24 @@ Description: List a summary of Universal Connector configured connections (AKA d
 Description: List of all universal connector plugins. (AUTH) (AUTH)
   ${CYAN}universalConnectorManagerUploadPlugin${OFF};Summary: Upload plugin
 Description: Upload a plugin-package for Universal Connector. (AUTH) (AUTH)
+EOF
+echo "  $ops" | column -t -s ';'
+    echo ""
+    echo -e "${BOLD}${WHITE}[vulnerabilityManagementService]${OFF}"
+read -r -d '' ops <<EOF
+  ${CYAN}vulnerabilityManagementServiceCreateVulnerability${OFF};Summary: Create a vulnerability
+Description: Create a vulnerability based on request (AUTH) (AUTH)
+  ${CYAN}vulnerabilityManagementServiceGetFiltersForVulnerabilities${OFF};Summary: Get filters for vulnerabilities
+Description: Get a list of filters category and sub category with all data. (AUTH) (AUTH)
+  ${CYAN}vulnerabilityManagementServiceGetVulnerabilities${OFF};Summary: Get vulnerabilities
+Description: Returns a list of vulnerabilities. (AUTH) (AUTH)
+  ${CYAN}vulnerabilityManagementServiceGetVulnerabilitiesStats${OFF};Summary: Get vulnerabilities stats
+Description: Get various vulnerabilities stats. (AUTH) (AUTH)
+  ${CYAN}vulnerabilityManagementServiceGetVulnerability${OFF};Summary: Get vulnerability
+Description: Returns a vulnerability based on vulnerability. (AUTH) (AUTH)
+  ${CYAN}vulnerabilityManagementServiceUpdateVulnerabilities${OFF};Updates comments, assignee, and status for vulnerabilities (AUTH) (AUTH)
+  ${CYAN}vulnerabilityManagementServiceVulnerabilityIngestionManualTrigger${OFF};Summary: Vulnerability ingest manual trigger
+Description: Manual trigger for Scheduled Vulnerability Ingestion. (AUTH) (AUTH)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -3728,6 +3662,24 @@ print_assetsServiceAssetIngestionManualTrigger_help() {
 }
 ##############################################################################
 #
+# Print help for assetsServiceCancelCSVImport operation
+#
+##############################################################################
+print_assetsServiceCancelCSVImport_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}assetsServiceCancelCSVImport - CancelCSVImport - Cancel the import of CSV and update the status in import log table${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}csv_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - unique id of the csv ${YELLOW}Specify as: csv_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for assetsServiceClonePolicy operation
 #
 ##############################################################################
@@ -3739,6 +3691,34 @@ print_assetsServiceClonePolicy_help() {
     echo -e "  * ${GREEN}policy_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Policy id that needs to be cloned. ${YELLOW}Specify as: policy_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for assetsServiceCompareCSVToExistingAssets operation
+#
+##############################################################################
+print_assetsServiceCompareCSVToExistingAssets_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}assetsServiceCompareCSVToExistingAssets - CompareCSVToExistingAssets - Compare CSV with existing assets and return list of assets(existing/to be imported/both) on demand from csv.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}csv_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - unique id of the csv ${YELLOW}Specify as: csv_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}rows_required${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - which rows are required, existing or new or all.${YELLOW} Specify as: rows_required=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}page_number${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - page number.${YELLOW} Specify as: page_number=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}page_size${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - page size.${YELLOW} Specify as: page_size=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}template_type${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: DATABASE)${OFF} - Asset CSV template type.
+
+ - DATABASE: Template for database${YELLOW} Specify as: template_type=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
@@ -3776,8 +3756,6 @@ print_assetsServiceDeleteFilterTemplateForAssets_help() {
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}template_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - template id to be deleted ${YELLOW}Specify as: template_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
@@ -3957,7 +3935,7 @@ print_assetsServiceGetAssetOverview_help() {
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}database${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Database Name.${YELLOW} Specify as: database=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}asset_entity_type${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - asset ntity type.${YELLOW} Specify as: asset_entity_type=value${OFF}" \
+    echo -e "  * ${GREEN}asset_entity_type${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - asset entity type.${YELLOW} Specify as: asset_entity_type=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -4012,6 +3990,26 @@ print_assetsServiceGetFilterTemplateForAssets_help() {
 print_assetsServiceGetFiltersForAssets_help() {
     echo ""
     echo -e "${BOLD}${WHITE}assetsServiceGetFiltersForAssets - GetFiltersForAssets - Get a list of filters category and sub category with all data.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for assetsServiceImportCSV operation
+#
+##############################################################################
+print_assetsServiceImportCSV_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}assetsServiceImportCSV - ImportCSV - Start the async asset import from CSV by starting the db procedure and send notification at the end.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}csv_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - unique id of the csv ${YELLOW}Specify as: csv_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -4569,6 +4567,28 @@ print_generateOffice365AuthUrl_help() {
 }
 ##############################################################################
 #
+# Print help for generateSalesforceAuthUrl operation
+#
+##############################################################################
+print_generateSalesforceAuthUrl_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}generateSalesforceAuthUrl - Generate a Salesforce consent URL${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Generate an administrator consent URL for Salesforce integration." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=400
+    echo -e "${result_color_table[${code:0:1}]}  400;Bad Request${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Methods${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Headers${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+}
+##############################################################################
+#
 # Print help for generateSlackAuthUrl operation
 #
 ##############################################################################
@@ -4677,6 +4697,31 @@ print_getCloudAccountInstallationStatus_help() {
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}cloudProvider${OFF} ${BLUE}[CloudServiceProvider]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The cloud provider of the cloud account ${YELLOW}Specify as: cloudProvider=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}cloudAccountId${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The cloud account identifier ${YELLOW}Specify as: cloudAccountId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=400
+    echo -e "${result_color_table[${code:0:1}]}  400;Bad Request${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Methods${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Headers${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+}
+##############################################################################
+#
+# Print help for getDatabaseMetadata operation
+#
+##############################################################################
+print_getDatabaseMetadata_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getDatabaseMetadata - Get the metadata details of snowflake database.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Get the metadata details of snowflake database from saas-asset-store." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
@@ -4925,6 +4970,45 @@ print_submitOffice365TenantInfo_help() {
         echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Access-Control-Allow-Methods${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Access-Control-Allow-Headers${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+}
+##############################################################################
+#
+# Print help for submitSalesforceAuthCode operation
+#
+##############################################################################
+print_submitSalesforceAuthCode_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}submitSalesforceAuthCode - Submit Salesforce customer information${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Submit customer information for Salesforce integration." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=400
+    echo -e "${result_color_table[${code:0:1}]}  400;Bad Request${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Methods${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Headers${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;Forbidden${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Methods${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Headers${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+    code=500
+    echo -e "${result_color_table[${code:0:1}]}  500;Internal Server Error${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Methods${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Headers${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+    code=503
+    echo -e "${result_color_table[${code:0:1}]}  503;Service Unavailable${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -5624,6 +5708,46 @@ print_connectionsServiceValidateAwsConnection_help() {
     echo ""
     echo -e "${BOLD}${WHITE}connectionsServiceValidateAwsConnection - Summary: Validate an AWS connection.
 Description: Validate an AWS connection.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for connectionsServiceValidateAzureConnection operation
+#
+##############################################################################
+print_connectionsServiceValidateAzureConnection_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}connectionsServiceValidateAzureConnection - Summary: Validate an Azure connection.
+Description: Validate an Azure connection.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for connectionsServiceValidateGcpConnection operation
+#
+##############################################################################
+print_connectionsServiceValidateGcpConnection_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}connectionsServiceValidateGcpConnection - Summary: Validate a GCP connection.
+Description: Validate a GCP connection.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -7012,68 +7136,6 @@ Currently this API only supports API_IMPORT type integrations${OFF}${BLUE}(AUTH 
 }
 ##############################################################################
 #
-# Print help for edgeSchedulerServiceGetEdgeQueryStatus operation
-#
-##############################################################################
-print_edgeSchedulerServiceGetEdgeQueryStatus_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}edgeSchedulerServiceGetEdgeQueryStatus - Summary: Get edge query status
-Description: Get the status of a queued edge query${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}edge_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - the id of the edge ${YELLOW}Specify as: edge_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}edge_result_report_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - the id of the UC report being queried for.${YELLOW} Specify as: edge_result_report_id=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery operation
-#
-##############################################################################
-print_edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery - Summary: Monitor for a pending edge query request
-Description: monitor edge query pending request${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}client_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - edge client id to monitor edge query requests for.${YELLOW} Specify as: client_id=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.(streaming responses)${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for edgeSchedulerServiceScheduleEdgeQuery operation
-#
-##############################################################################
-print_edgeSchedulerServiceScheduleEdgeQuery_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}edgeSchedulerServiceScheduleEdgeQuery - Summary: Schedule an edge query 
-Description: Schedule an edge query via data warehouse queue${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}edge_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - the id of the edge ${YELLOW}Specify as: edge_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
 # Print help for featureFlagsServiceDeleteFeatureFlagOverrides operation
 #
 ##############################################################################
@@ -8425,6 +8487,25 @@ Description: Authenticate a user and return a JWT.${OFF}${BLUE}(AUTH - BASIC)${O
 }
 ##############################################################################
 #
+# Print help for jumpboxServiceDeleteAccount operation
+#
+##############################################################################
+print_jumpboxServiceDeleteAccount_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}jumpboxServiceDeleteAccount - Summary: Delete account
+Description: Delete an account.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}account_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Account id. ${YELLOW}Specify as: account_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for jumpboxServiceDeleteTenant operation
 #
 ##############################################################################
@@ -8458,6 +8539,55 @@ Description: Delete the user.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEA
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}user_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The user id. ${YELLOW}Specify as: user_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for jumpboxServiceGetAccount operation
+#
+##############################################################################
+print_jumpboxServiceGetAccount_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}jumpboxServiceGetAccount - Summary: Get account
+Description: Get an account.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}account_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Account id. ${YELLOW}Specify as: account_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}include_inactive${OFF} ${BLUE}[boolean]${OFF} ${CYAN}(default: null)${OFF} - Include inactive.${YELLOW} Specify as: include_inactive=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}include_not_ready${OFF} ${BLUE}[boolean]${OFF} ${CYAN}(default: null)${OFF} - Include tenants that are not ready(are in state of being created or deleted).${YELLOW} Specify as: include_not_ready=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for jumpboxServiceGetAccounts operation
+#
+##############################################################################
+print_jumpboxServiceGetAccounts_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}jumpboxServiceGetAccounts - Summary: Get accounts
+Description: Get all accounts based on UID.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}uid${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Email.${YELLOW} Specify as: uid=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}external_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - External id.${YELLOW} Specify as: external_id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}include_inactive${OFF} ${BLUE}[boolean]${OFF} ${CYAN}(default: null)${OFF} - Include inactive.${YELLOW} Specify as: include_inactive=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}include_not_ready${OFF} ${BLUE}[boolean]${OFF} ${CYAN}(default: null)${OFF} - Include tenants that are not ready(are in state of being created or deleted).${YELLOW} Specify as: include_not_ready=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
@@ -8536,6 +8666,26 @@ Description: Get all users base on a tenantID.${OFF}${BLUE}(AUTH - BASIC)${OFF}$
 }
 ##############################################################################
 #
+# Print help for jumpboxServicePostAccount operation
+#
+##############################################################################
+print_jumpboxServicePostAccount_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}jumpboxServicePostAccount - Summary: Post account
+Description: Create an Account.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for jumpboxServicePostTenants operation
 #
 ##############################################################################
@@ -8576,6 +8726,25 @@ Description: Create users.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER
 }
 ##############################################################################
 #
+# Print help for jumpboxServiceResumeAccount operation
+#
+##############################################################################
+print_jumpboxServiceResumeAccount_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}jumpboxServiceResumeAccount - Summary: Resume account
+Description: Resume an account.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}account_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - account_id represents the user's account ID ${YELLOW}Specify as: account_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for jumpboxServiceSearchUsers operation
 #
 ##############################################################################
@@ -8596,6 +8765,25 @@ Description: Search for all users matching the provided string.${OFF}${BLUE}(AUT
 }
 ##############################################################################
 #
+# Print help for jumpboxServiceSuspendAccount operation
+#
+##############################################################################
+print_jumpboxServiceSuspendAccount_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}jumpboxServiceSuspendAccount - Summary: Suspend Account
+Description: Suspend an account${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}account_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - account_id represents the user's account ID ${YELLOW}Specify as: account_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for jumpboxServiceTestUser operation
 #
 ##############################################################################
@@ -8605,6 +8793,27 @@ print_jumpboxServiceTestUser_help() {
 Description: Test a user lookup to a given LDAP.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for jumpboxServiceUpdateAccount operation
+#
+##############################################################################
+print_jumpboxServiceUpdateAccount_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}jumpboxServiceUpdateAccount - Summary: Update Account
+Description: Updates an account.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}account_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Account id. ${YELLOW}Specify as: account_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo ""
@@ -9209,6 +9418,45 @@ Description: Returns the list and status of sync entries${OFF}${BLUE}(AUTH - BAS
 }
 ##############################################################################
 #
+# Print help for policyBuilderGetPolicyVersion operation
+#
+##############################################################################
+print_policyBuilderGetPolicyVersion_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}policyBuilderGetPolicyVersion - Summary: Get a particular version of the policy
+Description: Returns a particular version of policy and response code and message${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}policy_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Policy id of the requested policy ${YELLOW}Specify as: policy_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}version${OFF} ${BLUE}[integer]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Requested version number of the policy ${YELLOW}Specify as: version=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for policyBuilderGetPolicyVersionsInfo operation
+#
+##############################################################################
+print_policyBuilderGetPolicyVersionsInfo_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}policyBuilderGetPolicyVersionsInfo - Summary: Gets policy versions info
+Description: Returns information of all versions of a policy and response code and message${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}policy_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Policy id of the requested policy ${YELLOW}Specify as: policy_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for policyBuilderGetReceivers operation
 #
 ##############################################################################
@@ -9383,6 +9631,26 @@ Description: Store policies.  (This API is called from GDP only)${OFF}${BLUE}(AU
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}central_manager_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - ID of central manager. ${YELLOW}Specify as: central_manager_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for policyBuilderUpdatePolicy operation
+#
+##############################################################################
+print_policyBuilderUpdatePolicy_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}policyBuilderUpdatePolicy - Summary: Update policy
+Description: Update Policy returns response code and message.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo ""
@@ -9982,6 +10250,26 @@ Description: Create custom VEGA chart based on provided properties.${OFF}${BLUE}
 }
 ##############################################################################
 #
+# Print help for reportsServiceCreateControl operation
+#
+##############################################################################
+print_reportsServiceCreateControl_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}reportsServiceCreateControl - Summary: Create Control.
+Description: Create a unique Control.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for reportsServiceCreateFieldsByCategory operation
 #
 ##############################################################################
@@ -9989,6 +10277,26 @@ print_reportsServiceCreateFieldsByCategory_help() {
     echo ""
     echo -e "${BOLD}${WHITE}reportsServiceCreateFieldsByCategory - Summary - Create fields by category
 Description: Cteate category fields based on provided properties.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for reportsServiceCreateGrade operation
+#
+##############################################################################
+print_reportsServiceCreateGrade_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}reportsServiceCreateGrade - Summary: Create Grade.
+Description: Create a unique Grade.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -10022,6 +10330,66 @@ Description: Create a custom report join${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}
 }
 ##############################################################################
 #
+# Print help for reportsServiceCreateMeasure operation
+#
+##############################################################################
+print_reportsServiceCreateMeasure_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}reportsServiceCreateMeasure - Summary: Create measure.
+Description: Create a unique measure.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for reportsServiceCreateMetric operation
+#
+##############################################################################
+print_reportsServiceCreateMetric_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}reportsServiceCreateMetric - Summary: Create metric.
+Description: Create a unique metric.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for reportsServiceCreateProgram operation
+#
+##############################################################################
+print_reportsServiceCreateProgram_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}reportsServiceCreateProgram - Summary: Create Program.
+Description: Create a unique Program.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for reportsServiceCreateReport operation
 #
 ##############################################################################
@@ -10029,6 +10397,26 @@ print_reportsServiceCreateReport_help() {
     echo ""
     echo -e "${BOLD}${WHITE}reportsServiceCreateReport - Summary: Create report
 Description: Create custom report based on provided properties.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for reportsServiceCreateRequirement operation
+#
+##############################################################################
+print_reportsServiceCreateRequirement_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}reportsServiceCreateRequirement - Summary: Create Requirement.
+Description: Create a unique Requirement.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -10141,6 +10529,27 @@ Description: Delete a custom VEGA chart.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}
 }
 ##############################################################################
 #
+# Print help for reportsServiceDeleteControl operation
+#
+##############################################################################
+print_reportsServiceDeleteControl_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}reportsServiceDeleteControl - Summary: Delete Control
+Description: Delete a Control.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}control_id${OFF} ${BLUE}[integer]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The ID of the control to delete ${YELLOW}Specify as: control_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for reportsServiceDeleteFieldsByCategory operation
 #
 ##############################################################################
@@ -10154,6 +10563,27 @@ Description: Delete category fields based on provided properties.${OFF}${BLUE}(A
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}table_name${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - table name.${YELLOW} Specify as: table_name=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for reportsServiceDeleteGrade operation
+#
+##############################################################################
+print_reportsServiceDeleteGrade_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}reportsServiceDeleteGrade - Summary: Delete Grade
+Description: Delete a Grade.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}grade_id${OFF} ${BLUE}[integer]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The id of the grade to be deleted. ${YELLOW}Specify as: grade_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
@@ -10182,6 +10612,69 @@ Description: Delete a custom join${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH -
 }
 ##############################################################################
 #
+# Print help for reportsServiceDeleteMeasure operation
+#
+##############################################################################
+print_reportsServiceDeleteMeasure_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}reportsServiceDeleteMeasure - Summary: Delete measure
+Description: Delete a measure.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}measure_id${OFF} ${BLUE}[integer]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The id of the measure to be deleted. ${YELLOW}Specify as: measure_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for reportsServiceDeleteMetric operation
+#
+##############################################################################
+print_reportsServiceDeleteMetric_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}reportsServiceDeleteMetric - Summary: Delete metric
+Description: Delete a metric.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}metric_id${OFF} ${BLUE}[integer]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The id of the metric to be deleted. ${YELLOW}Specify as: metric_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for reportsServiceDeleteProgram operation
+#
+##############################################################################
+print_reportsServiceDeleteProgram_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}reportsServiceDeleteProgram - Summary: Delete Program
+Description: Delete a Program.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}program_id${OFF} ${BLUE}[integer]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The ID of the program to delete ${YELLOW}Specify as: program_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for reportsServiceDeleteReport operation
 #
 ##############################################################################
@@ -10192,6 +10685,27 @@ Description: Delete a custom report.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUT
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}report_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The id of the Report to be deleted. ${YELLOW}Specify as: report_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for reportsServiceDeleteRequirement operation
+#
+##############################################################################
+print_reportsServiceDeleteRequirement_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}reportsServiceDeleteRequirement - Summary: Delete Requirement
+Description: Delete a Requirement.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}requirement_id${OFF} ${BLUE}[integer]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The requirement to delete's ID ${YELLOW}Specify as: requirement_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
@@ -10301,6 +10815,23 @@ Description: Get all custom VEGA chart templates.${OFF}${BLUE}(AUTH - BASIC)${OF
 }
 ##############################################################################
 #
+# Print help for reportsServiceGetControls operation
+#
+##############################################################################
+print_reportsServiceGetControls_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}reportsServiceGetControls - Summary: Get controls
+Description: Get a list of controls with all data.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for reportsServiceGetFieldsByCategories operation
 #
 ##############################################################################
@@ -10345,6 +10876,23 @@ Description: Get all category related fields or all possible fields.${OFF}${BLUE
 }
 ##############################################################################
 #
+# Print help for reportsServiceGetGrades operation
+#
+##############################################################################
+print_reportsServiceGetGrades_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}reportsServiceGetGrades - Summary: Get grades
+Description: Get a list of grades with all data.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for reportsServiceGetJoins operation
 #
 ##############################################################################
@@ -10356,6 +10904,57 @@ Description: Get all custom joins.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH 
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}category_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Category ID (Optional).${YELLOW} Specify as: category_id=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for reportsServiceGetMeasures operation
+#
+##############################################################################
+print_reportsServiceGetMeasures_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}reportsServiceGetMeasures - Summary: Get measures
+Description: Get a list of measures with all data.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for reportsServiceGetMetrics operation
+#
+##############################################################################
+print_reportsServiceGetMetrics_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}reportsServiceGetMetrics - Summary: Get metrics
+Description: Get a list of metrics with all data.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for reportsServiceGetPrograms operation
+#
+##############################################################################
+print_reportsServiceGetPrograms_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}reportsServiceGetPrograms - Summary: Get controls
+Description: Get a list of controls with all data.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
@@ -10543,6 +11142,23 @@ Description: Get all report distinct tags.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLU
 }
 ##############################################################################
 #
+# Print help for reportsServiceGetRequirements operation
+#
+##############################################################################
+print_reportsServiceGetRequirements_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}reportsServiceGetRequirements - Summary: Get requirements
+Description: Get a list of requirements with all data.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for reportsServiceGetVariant operation
 #
 ##############################################################################
@@ -10610,6 +11226,26 @@ Description: Update a custom report with partial information.${OFF}${BLUE}(AUTH 
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}report_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Unique Report ID. ${YELLOW}Specify as: report_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for reportsServiceRunGrades operation
+#
+##############################################################################
+print_reportsServiceRunGrades_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}reportsServiceRunGrades - Summary: Refresh metrics via grades.
+Description: Refresh metrics via grades.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo ""
@@ -10703,6 +11339,48 @@ Description: Update a custom VEGA chart.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}
 }
 ##############################################################################
 #
+# Print help for reportsServiceUpdateControl operation
+#
+##############################################################################
+print_reportsServiceUpdateControl_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}reportsServiceUpdateControl - Summary: Update Control.
+Description: Update a Control.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}control_id${OFF} ${BLUE}[integer]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The id of the control that was updated. ${YELLOW}Specify as: control_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for reportsServiceUpdateGrade operation
+#
+##############################################################################
+print_reportsServiceUpdateGrade_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}reportsServiceUpdateGrade - Summary: Update Grade.
+Description: Update a Grade.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}grade_id${OFF} ${BLUE}[integer]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The id of the grade that was updated. ${YELLOW}Specify as: grade_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for reportsServiceUpdateJoin operation
 #
 ##############################################################################
@@ -10713,6 +11391,69 @@ Description: Update a custom join${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH -
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}join_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Unique join ID. ${YELLOW}Specify as: join_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for reportsServiceUpdateMeasure operation
+#
+##############################################################################
+print_reportsServiceUpdateMeasure_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}reportsServiceUpdateMeasure - Summary: Update measure.
+Description: Update a measure.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}measure_id${OFF} ${BLUE}[integer]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The id of the measure that was updated. ${YELLOW}Specify as: measure_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for reportsServiceUpdateMetric operation
+#
+##############################################################################
+print_reportsServiceUpdateMetric_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}reportsServiceUpdateMetric - Summary: Update metric.
+Description: Update a metric.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}metric_id${OFF} ${BLUE}[integer]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The id of the metric that was updated. ${YELLOW}Specify as: metric_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for reportsServiceUpdateProgram operation
+#
+##############################################################################
+print_reportsServiceUpdateProgram_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}reportsServiceUpdateProgram - Summary: Update Program.
+Description: Update a Program.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}program_id${OFF} ${BLUE}[integer]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The id of the programs that was updated. ${YELLOW}Specify as: program_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo ""
@@ -10745,6 +11486,27 @@ Description: Update a custom report.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUT
 }
 ##############################################################################
 #
+# Print help for reportsServiceUpdateRequirement operation
+#
+##############################################################################
+print_reportsServiceUpdateRequirement_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}reportsServiceUpdateRequirement - Summary: Update Requirement.
+Description: Update a Requirement.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}requirement_id${OFF} ${BLUE}[integer]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The id of the requirements that was updated. ${YELLOW}Specify as: requirement_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for reportsServiceUpdateVariantOverride operation
 #
 ##############################################################################
@@ -10755,674 +11517,6 @@ Description: Update a variant with a custom override${OFF}${BLUE}(AUTH - BASIC)$
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}variant_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The variant id ${YELLOW}Specify as: variant_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceCreateController operation
-#
-##############################################################################
-print_resourceControllerK8ServiceCreateController_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceCreateController - CreateController - Add a new controller.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceCreateHeartBeat operation
-#
-##############################################################################
-print_resourceControllerK8ServiceCreateHeartBeat_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceCreateHeartBeat - CreateHeartBeat - Create a heartbeat for the controller.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}controller_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The ID of the controller to invoke a heartbeat on. ${YELLOW}Specify as: controller_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceCreateHeartBeatEx operation
-#
-##############################################################################
-print_resourceControllerK8ServiceCreateHeartBeatEx_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceCreateHeartBeatEx - CreateHeartBeatEx - Create a heartbeat for the controller with extended information.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}controller_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Optional: controller id ${YELLOW}Specify as: controller_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceCreateJob operation
-#
-##############################################################################
-print_resourceControllerK8ServiceCreateJob_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceCreateJob - ////////////////////////////////////////////////////////////////
-Interface to the controllers and apps api in the App-Manager microservice
-CreateJob - Create a job definition. Files and secrets contained within will also be created.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceCreateJobExecution operation
-#
-##############################################################################
-print_resourceControllerK8ServiceCreateJobExecution_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceCreateJobExecution - CreateJobExecution - Create a job execution.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceCreateKeypair operation
-#
-##############################################################################
-print_resourceControllerK8ServiceCreateKeypair_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceCreateKeypair - CreateKeypair - Create a new keypair for the controller.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}controller_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The ID of the controller to get app tests for. ${YELLOW}Specify as: controller_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceDeleteController operation
-#
-##############################################################################
-print_resourceControllerK8ServiceDeleteController_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceDeleteController - DeleteController - Delete a controller.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}controller_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The ID of the controller to get the status. ${YELLOW}Specify as: controller_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceDeleteEdgeTenant operation
-#
-##############################################################################
-print_resourceControllerK8ServiceDeleteEdgeTenant_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceDeleteEdgeTenant - DeleteEdgeTenant - deletes an edge tenant providing edge tenant id${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}tenant_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - ID of the tenant to delete ${YELLOW}Specify as: tenant_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceDeleteEdgeTenantRequest operation
-#
-##############################################################################
-print_resourceControllerK8ServiceDeleteEdgeTenantRequest_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceDeleteEdgeTenantRequest - DeleteEdgeTenantRequest to deletes gi and tnt CR on edge${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}tenant_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Tenant ID for the redge request.${YELLOW} Specify as: tenant_id=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}edge_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ID of the edge system.${YELLOW} Specify as: edge_id=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}edge_name${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Edge gateway ID.${YELLOW} Specify as: edge_name=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceDeleteJob operation
-#
-##############################################################################
-print_resourceControllerK8ServiceDeleteJob_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceDeleteJob - DeleteJob - Delete a job.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}job_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - ID of the job that needs to be deleted. ${YELLOW}Specify as: job_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceDownloadControllerLogs operation
-#
-##############################################################################
-print_resourceControllerK8ServiceDownloadControllerLogs_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceDownloadControllerLogs - DownloadControllerLogs - Download the controller logs for a running controller.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}controller_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The ID of the controller to download logs for. ${YELLOW}Specify as: controller_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceGetControllerApps operation
-#
-##############################################################################
-print_resourceControllerK8ServiceGetControllerApps_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceGetControllerApps - GetControllerApps - Get the apps for the given controller.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}controller_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The ID of the controller to get apps for. ${YELLOW}Specify as: controller_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}modified_since${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Only get the apps if any were modified since the given date.${YELLOW} Specify as: modified_since=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceGetControllerCommands operation
-#
-##############################################################################
-print_resourceControllerK8ServiceGetControllerCommands_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceGetControllerCommands - GetControllerCommands - Get the commands for the controller to execute.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}controller_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The ID of the controller to get commands for. ${YELLOW}Specify as: controller_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceGetControllerJobs operation
-#
-##############################################################################
-print_resourceControllerK8ServiceGetControllerJobs_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceGetControllerJobs - GetControllerJobs - Get the jobs for the controller to execute.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}controller_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The ID of the controller to get jobs for. ${YELLOW}Specify as: controller_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}modified_since${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Optional: Only get the jobs if any were modified since the given date.${YELLOW} Specify as: modified_since=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceGetControllerStatus operation
-#
-##############################################################################
-print_resourceControllerK8ServiceGetControllerStatus_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceGetControllerStatus - GetControllerStatus - Get the status for the given controller.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}controller_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The ID of the controller to get the status. ${YELLOW}Specify as: controller_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceGetControllers operation
-#
-##############################################################################
-print_resourceControllerK8ServiceGetControllers_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceGetControllers - GetControllers - Get the controllers for the given tenant.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}tenant_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The ID of the tenant to get controllers for. ${YELLOW}Specify as: tenant_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}want_local${OFF} ${BLUE}[boolean]${OFF} ${CYAN}(default: null)${OFF} - Used to indicate the caller wants the local controller.${YELLOW} Specify as: want_local=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceGetControllersWithStatus operation
-#
-##############################################################################
-print_resourceControllerK8ServiceGetControllersWithStatus_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceGetControllersWithStatus - GetControllersWithStatus - Get the controllers for the given tenant with computed status.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}tenant_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The ID of the tenant to get controllers for. ${YELLOW}Specify as: tenant_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}want_local${OFF} ${BLUE}[boolean]${OFF} ${CYAN}(default: null)${OFF} - Used to indicate the caller wants the local controller.${YELLOW} Specify as: want_local=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}controller_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - \"ALL\": for getting all controllers; <controller_id>: for getting single controller.${YELLOW} Specify as: controller_id=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceGetJob operation
-#
-##############################################################################
-print_resourceControllerK8ServiceGetJob_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceGetJob - GetJob - Get the job.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}job_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The ID of the job to get. ${YELLOW}Specify as: job_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}want_secret_values${OFF} ${BLUE}[boolean]${OFF} ${CYAN}(default: null)${OFF} - Optional: True to return secret values, false otherwise.${YELLOW} Specify as: want_secret_values=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceGetJobExecution operation
-#
-##############################################################################
-print_resourceControllerK8ServiceGetJobExecution_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceGetJobExecution - GetJobExecution - Get a job execution.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}jobexe_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The ID of the job execution to get. ${YELLOW}Specify as: jobexe_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceGetJobExecutions operation
-#
-##############################################################################
-print_resourceControllerK8ServiceGetJobExecutions_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceGetJobExecutions - GetJobExecutions - Get the job executions.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}job_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The ID of the job to get status. ${YELLOW}Specify as: job_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceGetJobStatus operation
-#
-##############################################################################
-print_resourceControllerK8ServiceGetJobStatus_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceGetJobStatus - GetJobStatus - Get the job's status.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}job_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The ID of the job to get status. ${YELLOW}Specify as: job_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceGetTenantApp operation
-#
-##############################################################################
-print_resourceControllerK8ServiceGetTenantApp_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceGetTenantApp - GetTenantApp - Get a specific app for the given tenant.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}tenant_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The ID of the tenant to get apps for. ${YELLOW}Specify as: tenant_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}app_name${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The name of the app to get. ${YELLOW}Specify as: app_name=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}return_level${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Optional: specify a return level for the data. This will control the amount of data returned.${YELLOW} Specify as: return_level=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceGetTenantApps operation
-#
-##############################################################################
-print_resourceControllerK8ServiceGetTenantApps_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceGetTenantApps - GetTenantApps - Get the apps for the given tenant.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}tenant_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The ID of the tenant to get apps for. ${YELLOW}Specify as: tenant_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}return_level${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Optional: specify a return level for the data. This will control the amount of data returned.${YELLOW} Specify as: return_level=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceGetTenantJobs operation
-#
-##############################################################################
-print_resourceControllerK8ServiceGetTenantJobs_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceGetTenantJobs - GetTenantJobs - Get jobs for the given tenant.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}tenant_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The ID of the tenant to get jobs for. ${YELLOW}Specify as: tenant_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceGetVersion operation
-#
-##############################################################################
-print_resourceControllerK8ServiceGetVersion_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceGetVersion - GetVersion - Get the system version information for the service.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceInstallEdgeTenantRequest operation
-#
-##############################################################################
-print_resourceControllerK8ServiceInstallEdgeTenantRequest_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceInstallEdgeTenantRequest - InstallEdgeTenantRequest to Create gi and tnt CRs on edge${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceQueryControllerLogs operation
-#
-##############################################################################
-print_resourceControllerK8ServiceQueryControllerLogs_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceQueryControllerLogs - QueryControllerLogs - Query for the controller logs for a running controller.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}controller_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The ID of the controller to get logs for. ${YELLOW}Specify as: controller_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceUpdateCommand operation
-#
-##############################################################################
-print_resourceControllerK8ServiceUpdateCommand_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceUpdateCommand - UpdateCommand - Update the command.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The ID of the command. ${YELLOW}Specify as: id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceUpdateController operation
-#
-##############################################################################
-print_resourceControllerK8ServiceUpdateController_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceUpdateController - UpdateController - Update an existing controller.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Optional: The internal ID of the controller. ${YELLOW}Specify as: id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceUpdateControllerStatus operation
-#
-##############################################################################
-print_resourceControllerK8ServiceUpdateControllerStatus_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceUpdateControllerStatus - UpdateControllerStatus - Updates the status for the given controller.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The internal ID of the controller. ${YELLOW}Specify as: id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceUpdateEdgeTenantRequest operation
-#
-##############################################################################
-print_resourceControllerK8ServiceUpdateEdgeTenantRequest_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceUpdateEdgeTenantRequest - UpdateEdgeTenantRequest to update gi and tnt CRs on edge${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}edge_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - ID of the edge system ${YELLOW}Specify as: edge_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceUpdateJob operation
-#
-##############################################################################
-print_resourceControllerK8ServiceUpdateJob_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceUpdateJob - UpdateJob - Update a job.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The ID of the job. ${YELLOW}Specify as: id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceUpdateJobExecution operation
-#
-##############################################################################
-print_resourceControllerK8ServiceUpdateJobExecution_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceUpdateJobExecution - UpdateJobExecution - Update a job execution.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The ID of the job execution to update. ${YELLOW}Specify as: id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for resourceControllerK8ServiceUpdateJobStatus operation
-#
-##############################################################################
-print_resourceControllerK8ServiceUpdateJobStatus_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}resourceControllerK8ServiceUpdateJobStatus - UpdateJobStatus - Updates the status for the given Job.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}job_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The ID of the job to get status. ${YELLOW}Specify as: job_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo ""
@@ -12263,288 +12357,6 @@ Description: Service to list AWS Kinesis streams.${OFF}${BLUE}(AUTH - BASIC)${OF
 }
 ##############################################################################
 #
-# Print help for templatesServiceCreateIntegration operation
-#
-##############################################################################
-print_templatesServiceCreateIntegration_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}templatesServiceCreateIntegration - Summary: Create integration
-Description: Create a set of new templates for a new integration.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for templatesServiceCreateTemplate operation
-#
-##############################################################################
-print_templatesServiceCreateTemplate_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}templatesServiceCreateTemplate - Summary: Create template
-Description: Create a new template.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for templatesServiceDeleteIntegration operation
-#
-##############################################################################
-print_templatesServiceDeleteIntegration_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}templatesServiceDeleteIntegration - Summary: Delete integration
-Description: Delete all templates associated with an integration.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}integration_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Delete the templates associated with the specified integration ID. ${YELLOW}Specify as: integration_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for templatesServiceDeleteTemplate operation
-#
-##############################################################################
-print_templatesServiceDeleteTemplate_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}templatesServiceDeleteTemplate - Summary: Delete template
-Description: Delete a specific template.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}template_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Delete the template with the specified unique ID. ${YELLOW}Specify as: template_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for templatesServiceGetOriginDefaultContent operation
-#
-##############################################################################
-print_templatesServiceGetOriginDefaultContent_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}templatesServiceGetOriginDefaultContent - Summary: Get origin default content
-Description: Return the default content for a template with a specified origin and MIME type.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}origin${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Origin for the desired content. ${YELLOW}Specify as: origin=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}integration${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: UNDEFINED_INTEGRATION)${OFF} - Integration provides the context for the Request.${YELLOW} Specify as: integration=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}mime_type${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: PLAIN_TEXT)${OFF} - MIME type for the desired content.${YELLOW} Specify as: mime_type=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for templatesServiceGetOriginFields operation
-#
-##############################################################################
-print_templatesServiceGetOriginFields_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}templatesServiceGetOriginFields - Summary: Get origin fields
-Description: Return the fields available with a specific origin.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}origin${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Origin for the desired fields. ${YELLOW}Specify as: origin=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for templatesServiceGetTemplate operation
-#
-##############################################################################
-print_templatesServiceGetTemplate_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}templatesServiceGetTemplate - Summary: Get template
-Description: Return a specific template by id.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}template_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The unique ID for the template to fetch. ${YELLOW}Specify as: template_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}include_integration_name${OFF} ${BLUE}[boolean]${OFF} ${CYAN}(default: null)${OFF} - Include the Integration name in the returned template.${YELLOW} Specify as: include_integration_name=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for templatesServiceGetTemplates operation
-#
-##############################################################################
-print_templatesServiceGetTemplates_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}templatesServiceGetTemplates - Summary: Get templates
-Description: Return all templates based on supplied filters.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}integration_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter on templates associated with a specific integration.${YELLOW} Specify as: integration_id=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}filter_integration${OFF} ${BLUE}[array[string]]${OFF} ${CYAN}(default: null)${OFF} - Filter on a set of integrations; ignored if empty.${YELLOW} Specify as: filter_integration=value1 filter_integration=value2 filter_integration=...${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}filter_origin${OFF} ${BLUE}[array[string]]${OFF} ${CYAN}(default: null)${OFF} - Filter on a specific set of data origins; ignored if empty.${YELLOW} Specify as: filter_origin=value1 filter_origin=value2 filter_origin=...${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}filter_mime_type${OFF} ${BLUE}[array[string]]${OFF} ${CYAN}(default: null)${OFF} - Filter on specific mime types; ignored if empty.${YELLOW} Specify as: filter_mime_type=value1 filter_mime_type=value2 filter_mime_type=...${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}filter_tags${OFF} ${BLUE}[array[string]]${OFF} ${CYAN}(default: null)${OFF} - Filter on specific tags; ignored if empty.${YELLOW} Specify as: filter_tags=value1 filter_tags=value2 filter_tags=...${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}filter_enabled_only${OFF} ${BLUE}[boolean]${OFF} ${CYAN}(default: null)${OFF} - Filter on all templates instead of just the enabled templates.${YELLOW} Specify as: filter_enabled_only=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}include_integration_name${OFF} ${BLUE}[boolean]${OFF} ${CYAN}(default: null)${OFF} - Include the Integration name in the returned templates.${YELLOW} Specify as: include_integration_name=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for templatesServiceGetTemplatesForEdge operation
-#
-##############################################################################
-print_templatesServiceGetTemplatesForEdge_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}templatesServiceGetTemplatesForEdge - Summary: Get templates for edge
-Description: Return all templates based on supplied filters.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}integration_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Templates associated with a specific integration.${YELLOW} Specify as: integration_id=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}filter_origin${OFF} ${BLUE}[array[string]]${OFF} ${CYAN}(default: null)${OFF} - Filter on a specific set of data origins; ignored if empty.${YELLOW} Specify as: filter_origin=value1 filter_origin=value2 filter_origin=...${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}filter_enabled_only${OFF} ${BLUE}[boolean]${OFF} ${CYAN}(default: null)${OFF} - Filter on all templates instead of just the enabled templates.${YELLOW} Specify as: filter_enabled_only=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}include_integration_name${OFF} ${BLUE}[boolean]${OFF} ${CYAN}(default: null)${OFF} - Include the Integration name in the returned templates.${YELLOW} Specify as: include_integration_name=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}transform_to_gdp_format${OFF} ${BLUE}[boolean]${OFF} ${CYAN}(default: null)${OFF} - Tranform template format to GDP style format.${YELLOW} Specify as: transform_to_gdp_format=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for templatesServiceTestTemplate operation
-#
-##############################################################################
-print_templatesServiceTestTemplate_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}templatesServiceTestTemplate - Summary: Test template
-Description: Analyze a specified template to ensure will function correctly when utilized.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for templatesServiceTransformTemplate operation
-#
-##############################################################################
-print_templatesServiceTransformTemplate_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}templatesServiceTransformTemplate - Summary: Transform template
-Description: Process the specified template and returns the Title and Content based on supplied data.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for templatesServiceTransformTemplateJSON operation
-#
-##############################################################################
-print_templatesServiceTransformTemplateJSON_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}templatesServiceTransformTemplateJSON - Summary: Transform template JSON
-Description: Process the specified template and returns the Title and Content based on supplied json data string.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for templatesServiceUpdateTemplate operation
-#
-##############################################################################
-print_templatesServiceUpdateTemplate_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}templatesServiceUpdateTemplate - Summary: Update template
-Description: Update a single template.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}template_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The template id to update. ${YELLOW}Specify as: template_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=0
-    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
 # Print help for tenantuserCreateAPIKey operation
 #
 ##############################################################################
@@ -13160,6 +12972,138 @@ Description: Upload a plugin-package for Universal Connector.${OFF}${BLUE}(AUTH 
 }
 ##############################################################################
 #
+# Print help for vulnerabilityManagementServiceCreateVulnerability operation
+#
+##############################################################################
+print_vulnerabilityManagementServiceCreateVulnerability_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}vulnerabilityManagementServiceCreateVulnerability - Summary: Create a vulnerability
+Description: Create a vulnerability based on request${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for vulnerabilityManagementServiceGetFiltersForVulnerabilities operation
+#
+##############################################################################
+print_vulnerabilityManagementServiceGetFiltersForVulnerabilities_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}vulnerabilityManagementServiceGetFiltersForVulnerabilities - Summary: Get filters for vulnerabilities
+Description: Get a list of filters category and sub category with all data.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for vulnerabilityManagementServiceGetVulnerabilities operation
+#
+##############################################################################
+print_vulnerabilityManagementServiceGetVulnerabilities_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}vulnerabilityManagementServiceGetVulnerabilities - Summary: Get vulnerabilities
+Description: Returns a list of vulnerabilities.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for vulnerabilityManagementServiceGetVulnerabilitiesStats operation
+#
+##############################################################################
+print_vulnerabilityManagementServiceGetVulnerabilitiesStats_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}vulnerabilityManagementServiceGetVulnerabilitiesStats - Summary: Get vulnerabilities stats
+Description: Get various vulnerabilities stats.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for vulnerabilityManagementServiceGetVulnerability operation
+#
+##############################################################################
+print_vulnerabilityManagementServiceGetVulnerability_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}vulnerabilityManagementServiceGetVulnerability - Summary: Get vulnerability
+Description: Returns a vulnerability based on vulnerability.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}vulnerability_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - ID for the record to return. ${YELLOW}Specify as: vulnerability_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for vulnerabilityManagementServiceUpdateVulnerabilities operation
+#
+##############################################################################
+print_vulnerabilityManagementServiceUpdateVulnerabilities_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}vulnerabilityManagementServiceUpdateVulnerabilities - Updates comments, assignee, and status for vulnerabilities${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for vulnerabilityManagementServiceVulnerabilityIngestionManualTrigger operation
+#
+##############################################################################
+print_vulnerabilityManagementServiceVulnerabilityIngestionManualTrigger_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}vulnerabilityManagementServiceVulnerabilityIngestionManualTrigger - Summary: Vulnerability ingest manual trigger
+Description: Manual trigger for Scheduled Vulnerability Ingestion.${OFF}${BLUE}(AUTH - BASIC)${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A successful response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=0
+    echo -e "${result_color_table[${code:0:1}]}  0;An unexpected error response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for workflowCreateCase operation
 #
 ##############################################################################
@@ -13735,6 +13679,42 @@ call_assetsServiceAssetIngestionManualTrigger() {
 
 ##############################################################################
 #
+# Call assetsServiceCancelCSVImport operation
+#
+##############################################################################
+call_assetsServiceCancelCSVImport() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(csv_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/assets/csv/cancel/{csv_id}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="DELETE"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
 # Call assetsServiceClonePolicy operation
 #
 ##############################################################################
@@ -13808,6 +13788,42 @@ call_assetsServiceClonePolicy() {
         else
             eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
         fi
+    fi
+}
+
+##############################################################################
+#
+# Call assetsServiceCompareCSVToExistingAssets operation
+#
+##############################################################################
+call_assetsServiceCompareCSVToExistingAssets() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(csv_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(rows_required page_number page_size template_type    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/assets/csv/compare/{csv_id}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
     fi
 }
 
@@ -13918,52 +13934,10 @@ call_assetsServiceDeleteFilterTemplateForAssets() {
     if [[ -n $basic_auth_credential ]]; then
         basic_auth_option="-u ${basic_auth_credential}"
     fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
     else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
     fi
 }
 
@@ -14450,6 +14424,84 @@ call_assetsServiceGetFiltersForAssets() {
         echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
     else
         eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call assetsServiceImportCSV operation
+#
+##############################################################################
+call_assetsServiceImportCSV() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(csv_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/assets/csv/import/{csv_id}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
     fi
 }
 
@@ -15607,7 +15659,7 @@ call_addAnalyzedRegion() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/cloudProviders/analyzedRegions" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/cloudAccounts/cloudProviders/analyzedRegions" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -15685,7 +15737,7 @@ call_addCloudAccounts() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/cloudProviders" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/cloudAccounts/cloudProviders" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -15763,7 +15815,7 @@ call_generateAtlassianConfluenceAuthUrl() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/saasApps/atlassian-confluence/generateAuthUrl" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/cloudAccounts/saasApps/atlassian-confluence/generateAuthUrl" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -15799,7 +15851,7 @@ call_generateAtlassianJiraAuthUrl() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/saasApps/atlassian-jira/generateAuthUrl" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/cloudAccounts/saasApps/atlassian-jira/generateAuthUrl" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -15835,7 +15887,7 @@ call_generateAzureAuthUrl() {
     local query_parameter_names=(tenantId  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/azure/generateAuthUrl" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/cloudAccounts/azure/generateAuthUrl" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -15871,7 +15923,43 @@ call_generateOffice365AuthUrl() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/saasApps/office365/generateAuthUrl" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/cloudAccounts/saasApps/office365/generateAuthUrl" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call generateSalesforceAuthUrl operation
+#
+##############################################################################
+call_generateSalesforceAuthUrl() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/dspm/cloudAccounts/saasApps/salesforce/generateAuthUrl" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -15907,7 +15995,7 @@ call_generateSlackAuthUrl() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/saasApps/slack/generateAuthUrl" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/cloudAccounts/saasApps/slack/generateAuthUrl" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -15943,7 +16031,7 @@ call_generateSnowflakeAuthUrl() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/saasApps/snowflake/generateAuthUrl" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/cloudAccounts/saasApps/snowflake/generateAuthUrl" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -16021,7 +16109,7 @@ call_getAnalyzedRegionStatus() {
     local query_parameter_names=(cloudProvider region  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/cloudProviders/analyzedRegions/status" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/cloudAccounts/cloudProviders/analyzedRegions/status" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -16057,7 +16145,7 @@ call_getAzureAdminConsentStatus() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/azure/getAdminConsentStatus" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/cloudAccounts/azure/getAdminConsentStatus" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -16093,7 +16181,7 @@ call_getCloudAccountInstallationStatus() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/{cloudProvider}/{cloudAccountId}/installationStatus" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/cloudAccounts/{cloudProvider}/{cloudAccountId}/installationStatus" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -16117,6 +16205,84 @@ call_getCloudAccountInstallationStatus() {
 
 ##############################################################################
 #
+# Call getDatabaseMetadata operation
+#
+##############################################################################
+call_getDatabaseMetadata() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/dspm/cloudAccounts/saasApps/snowflake/getDatabaseMetadata" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
 # Call getRefreshTokenExpiry operation
 #
 ##############################################################################
@@ -16129,7 +16295,7 @@ call_getRefreshTokenExpiry() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/saasApps/snowflake/getRefreshTokenExpiry/{providerId}" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/cloudAccounts/saasApps/snowflake/getRefreshTokenExpiry/{providerId}" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -16165,7 +16331,7 @@ call_listLinkedAccounts() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/linkedAccounts" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/cloudAccounts/linkedAccounts" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -16201,7 +16367,7 @@ call_removeAccounts() {
     local query_parameter_names=(accountIds serviceProvider  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/removeAccounts" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/cloudAccounts/removeAccounts" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -16237,7 +16403,7 @@ call_removeAccountsInstructions() {
     local query_parameter_names=(accountIds serviceProvider  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/removeAccountsInstructions" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/cloudAccounts/removeAccountsInstructions" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -16273,7 +16439,7 @@ call_retrieveServiceAccountId() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/saasApps/google/retrieveServiceAccountId" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/cloudAccounts/saasApps/google/retrieveServiceAccountId" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -16309,7 +16475,7 @@ call_snowflakeIntegrationScript() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/saasApps/snowflake/snowflakeIntegrationScript" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/cloudAccounts/saasApps/snowflake/snowflakeIntegrationScript" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -16345,7 +16511,7 @@ call_submitGoogleWorkspaceAdminEmail() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/saasApps/google/submitAdminEmail" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/cloudAccounts/saasApps/google/submitAdminEmail" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -16423,7 +16589,85 @@ call_submitOffice365TenantInfo() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/saasApps/office365/submitTenantInfo" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/cloudAccounts/saasApps/office365/submitTenantInfo" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call submitSalesforceAuthCode operation
+#
+##############################################################################
+call_submitSalesforceAuthCode() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/dspm/cloudAccounts/saasApps/salesforce/submitAuthCodeInfo" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -16501,7 +16745,7 @@ call_submitSlackAuthCode() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/saasApps/slack/submitAuthCode" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/cloudAccounts/saasApps/slack/submitAuthCode" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -16579,7 +16823,7 @@ call_submitSnowflakeAuthCode() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/cloudAccounts/saasApps/snowflake/submitAuthCode" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/cloudAccounts/saasApps/snowflake/submitAuthCode" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -18589,6 +18833,162 @@ call_connectionsServiceValidateAwsConnection() {
 
 ##############################################################################
 #
+# Call connectionsServiceValidateAzureConnection operation
+#
+##############################################################################
+call_connectionsServiceValidateAzureConnection() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/connections/validate/azure" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call connectionsServiceValidateGcpConnection operation
+#
+##############################################################################
+call_connectionsServiceValidateGcpConnection() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/connections/validate/gcp" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
 # Call dashboardsServiceCreateDashboard operation
 #
 ##############################################################################
@@ -18871,7 +19271,7 @@ call_getActualFlow() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/dataMovements/actualFlows/{id}" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/dataMovements/actualFlows/{id}" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -18907,7 +19307,7 @@ call_getActualFlowsSummary() {
     local query_parameter_names=(filter  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/dataMovements/actualFlows/summary" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/dataMovements/actualFlows/summary" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -18943,7 +19343,7 @@ call_getPotentialFlow() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/dataMovements/potentialFlows/{flowId}" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/dataMovements/potentialFlows/{flowId}" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -18979,7 +19379,7 @@ call_getPotentialFlowPath() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/dataMovements/potentialFlows/paths/{flowPathId}" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/dataMovements/potentialFlows/paths/{flowPathId}" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -19015,7 +19415,7 @@ call_getPotentialFlowsSummary() {
     local query_parameter_names=(filter  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/dataMovements/potentialFlows/summary" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/dataMovements/potentialFlows/summary" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -19051,7 +19451,7 @@ call_listActualFlowPaths() {
     local query_parameter_names=(sort filter pageSize nextToken  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/dataMovements/actualFlowPaths" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/dataMovements/actualFlowPaths" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -19087,7 +19487,7 @@ call_listActualFlows() {
     local query_parameter_names=(sort filter pageSize nextToken  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/dataMovements/actualFlows" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/dataMovements/actualFlows" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -19123,7 +19523,7 @@ call_listPotentialFlows() {
     local query_parameter_names=(filter pageSize nextToken  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/dataMovements/potentialFlows" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/dataMovements/potentialFlows" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -19159,7 +19559,7 @@ call_listPotentialFlowsPaths() {
     local query_parameter_names=(filter pageSize nextToken  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/dataMovements/potentialFlows/paths" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/dataMovements/potentialFlows/paths" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -19195,7 +19595,7 @@ call_getDataResource() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/dataResources/{dataResourceId}" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/dataResources/{dataResourceId}" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -19231,7 +19631,7 @@ call_getDataResourcesSummary() {
     local query_parameter_names=(dataStoreId filter  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/dataResources/summary" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/dataResources/summary" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -19267,7 +19667,7 @@ call_listDataResources() {
     local query_parameter_names=(dataStoreId filter sort pageSize nextToken  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/dataResources" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/dataResources" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -19303,7 +19703,7 @@ call_listDataResourcesNames() {
     local query_parameter_names=(prefix dataStoreId  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/dataResources/names" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/dataResources/names" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -19339,7 +19739,7 @@ call_removeResource() {
     local query_parameter_names=(dataStoreId  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/dataResources/{dataResourceId}/removeResource" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/dataResources/{dataResourceId}/removeResource" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -19375,7 +19775,7 @@ call_updateResourceReviewStatus() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/dataResources/{dataResourceId}/reviewed" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/dataResources/{dataResourceId}/reviewed" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -19453,7 +19853,7 @@ call_getSensitivitiesSummary() {
     local query_parameter_names=(filter  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/sensitivities/summary" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/sensitivities/summary" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -19489,7 +19889,7 @@ call_getSensitivity() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/sensitivities/{sensitivityId}" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/sensitivities/{sensitivityId}" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -19525,7 +19925,7 @@ call_listSensitivities() {
     local query_parameter_names=(filter sort pageSize nextToken  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/sensitivities" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/sensitivities" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -19561,7 +19961,7 @@ call_getDataStore() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/dataStores/{dataStoreId}" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/dataStores/{dataStoreId}" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -19597,7 +19997,7 @@ call_getDataStoresSummary() {
     local query_parameter_names=(filter  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/dataStores/summary" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/dataStores/summary" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -19633,7 +20033,7 @@ call_listAllDataStoresLabels() {
     local query_parameter_names=(prefix maxResults  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/dataStores/labels" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/dataStores/labels" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -19669,7 +20069,7 @@ call_listDataStores() {
     local query_parameter_names=(filter sort pageSize nextToken  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/dataStores" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/dataStores" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -19705,7 +20105,7 @@ call_listDataStoresCloudTagsKeys() {
     local query_parameter_names=(prefix maxResults  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/dataStores/cloudTags/keys" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/dataStores/cloudTags/keys" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -19741,7 +20141,7 @@ call_listDataStoresCloudTagsValues() {
     local query_parameter_names=(prefix tagKey maxResults  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/dataStores/cloudTags/values" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/dataStores/cloudTags/values" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -19777,7 +20177,7 @@ call_listDataStoresNames() {
     local query_parameter_names=(prefix  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/dataStores/filters/name" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/dataStores/filters/name" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -19813,7 +20213,7 @@ call_rescanDataStore() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/dataStores/rescan" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/dataStores/rescan" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -19891,7 +20291,7 @@ call_setDataStoreLabel() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/dataStores/{dataStoreId}/labels" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/dataStores/{dataStoreId}/labels" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -19969,7 +20369,7 @@ call_updateDatastoreCustodian() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/dataStores/custodian" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/dataStores/custodian" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -20047,7 +20447,7 @@ call_addVulnerabilityStatusComment() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -20125,7 +20525,7 @@ call_getVulnerabilitiesSummary() {
     local query_parameter_names=(filter  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/vulnerabilities/summary" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/vulnerabilities/summary" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -20161,7 +20561,7 @@ call_getVulnerability() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/vulnerabilities/{vulnerabilityId}" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/vulnerabilities/{vulnerabilityId}" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -20197,7 +20597,7 @@ call_listVulnerabilities() {
     local query_parameter_names=(filter sort pageSize nextToken  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/vulnerabilities" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/vulnerabilities" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -20233,7 +20633,7 @@ call_listVulnerabilitiesByDataStore() {
     local query_parameter_names=(filter sort pageSize nextToken  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/vulnerabilities/byDataStore" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/vulnerabilities/byDataStore" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -20269,7 +20669,7 @@ call_removeVulnerabilityStatusComment() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments/{commentId}" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments/{commentId}" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -20305,7 +20705,7 @@ call_setVulnerabilityStatus() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/vulnerabilities/{vulnerabilityId}/statuses" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/vulnerabilities/{vulnerabilityId}/statuses" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -20383,7 +20783,7 @@ call_updateVulnerabilityStatusComment() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments/{commentId}" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments/{commentId}" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -21255,156 +21655,6 @@ call_ecosystemServiceTestIntegration() {
     local path
 
     if ! path=$(build_request_path "/api/v3/integrations/setup/test" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="POST"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
-# Call edgeSchedulerServiceGetEdgeQueryStatus operation
-#
-##############################################################################
-call_edgeSchedulerServiceGetEdgeQueryStatus() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(edge_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(edge_result_report_id    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edges/{edge_id}/query/status" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery operation
-#
-##############################################################################
-call_edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(client_id    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edges/query" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call edgeSchedulerServiceScheduleEdgeQuery operation
-#
-##############################################################################
-call_edgeSchedulerServiceScheduleEdgeQuery() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(edge_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edges/{edge_id}/query/schedule" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -25064,6 +25314,42 @@ call_jumpboxServiceAuthorize() {
 
 ##############################################################################
 #
+# Call jumpboxServiceDeleteAccount operation
+#
+##############################################################################
+call_jumpboxServiceDeleteAccount() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(account_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/accounts/{account_id}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="DELETE"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
 # Call jumpboxServiceDeleteTenant operation
 #
 ##############################################################################
@@ -25117,6 +25403,78 @@ call_jumpboxServiceDeleteUser() {
         exit 1
     fi
     local method="DELETE"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call jumpboxServiceGetAccount operation
+#
+##############################################################################
+call_jumpboxServiceGetAccount() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(account_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(include_inactive include_not_ready  )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/accounts/{account_id}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call jumpboxServiceGetAccounts operation
+#
+##############################################################################
+call_jumpboxServiceGetAccounts() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(uid external_id include_inactive include_not_ready    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/accounts" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
     local headers_curl
     headers_curl=$(header_arguments_to_curl)
     if [[ -n $header_accept ]]; then
@@ -25239,6 +25597,84 @@ call_jumpboxServiceGetUsers() {
         echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
     else
         eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call jumpboxServicePostAccount operation
+#
+##############################################################################
+call_jumpboxServicePostAccount() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/accounts" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
     fi
 }
 
@@ -25400,6 +25836,42 @@ call_jumpboxServicePostUsers() {
 
 ##############################################################################
 #
+# Call jumpboxServiceResumeAccount operation
+#
+##############################################################################
+call_jumpboxServiceResumeAccount() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(account_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/accounts/{account_id}/resume" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="PATCH"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
 # Call jumpboxServiceSearchUsers operation
 #
 ##############################################################################
@@ -25478,6 +25950,42 @@ call_jumpboxServiceSearchUsers() {
 
 ##############################################################################
 #
+# Call jumpboxServiceSuspendAccount operation
+#
+##############################################################################
+call_jumpboxServiceSuspendAccount() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(account_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/accounts/{account_id}/suspend" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="PATCH"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
 # Call jumpboxServiceTestUser operation
 #
 ##############################################################################
@@ -25495,6 +26003,84 @@ call_jumpboxServiceTestUser() {
         exit 1
     fi
     local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call jumpboxServiceUpdateAccount operation
+#
+##############################################################################
+call_jumpboxServiceUpdateAccount() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(account_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/accounts/{account_id}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="PATCH"
     local headers_curl
     headers_curl=$(header_arguments_to_curl)
     if [[ -n $header_accept ]]; then
@@ -27230,6 +27816,78 @@ call_policyBuilderGetPolicySyncList() {
 
 ##############################################################################
 #
+# Call policyBuilderGetPolicyVersion operation
+#
+##############################################################################
+call_policyBuilderGetPolicyVersion() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(policy_id version)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/policies/{policy_id}/details/versions/{version}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call policyBuilderGetPolicyVersionsInfo operation
+#
+##############################################################################
+call_policyBuilderGetPolicyVersionsInfo() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(policy_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/policies/{policy_id}/versions/metdata" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
 # Call policyBuilderGetReceivers operation
 #
 ##############################################################################
@@ -27703,6 +28361,84 @@ call_policyBuilderStorePoliciesGdp() {
         exit 1
     fi
     local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call policyBuilderUpdatePolicy operation
+#
+##############################################################################
+call_policyBuilderUpdatePolicy() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/policies" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="PUT"
     local headers_curl
     headers_curl=$(header_arguments_to_curl)
     if [[ -n $header_accept ]]; then
@@ -29936,6 +30672,84 @@ call_reportsServiceCreateChartv2() {
 
 ##############################################################################
 #
+# Call reportsServiceCreateControl operation
+#
+##############################################################################
+call_reportsServiceCreateControl() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/compliance/controls" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
 # Call reportsServiceCreateFieldsByCategory operation
 #
 ##############################################################################
@@ -29949,6 +30763,84 @@ call_reportsServiceCreateFieldsByCategory() {
     local path
 
     if ! path=$(build_request_path "/api/v3/reports/fields" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call reportsServiceCreateGrade operation
+#
+##############################################################################
+call_reportsServiceCreateGrade() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/compliance/grades" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -30092,6 +30984,240 @@ call_reportsServiceCreateJoin() {
 
 ##############################################################################
 #
+# Call reportsServiceCreateMeasure operation
+#
+##############################################################################
+call_reportsServiceCreateMeasure() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/compliance/measures" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call reportsServiceCreateMetric operation
+#
+##############################################################################
+call_reportsServiceCreateMetric() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/compliance/metrics" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call reportsServiceCreateProgram operation
+#
+##############################################################################
+call_reportsServiceCreateProgram() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/compliance/programs" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
 # Call reportsServiceCreateReport operation
 #
 ##############################################################################
@@ -30105,6 +31231,84 @@ call_reportsServiceCreateReport() {
     local path
 
     if ! path=$(build_request_path "/api/v3/reports" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call reportsServiceCreateRequirement operation
+#
+##############################################################################
+call_reportsServiceCreateRequirement() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/compliance/requirements" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -30392,6 +31596,84 @@ call_reportsServiceDeleteChartv2() {
 
 ##############################################################################
 #
+# Call reportsServiceDeleteControl operation
+#
+##############################################################################
+call_reportsServiceDeleteControl() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(control_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/compliance/controls/{control_id}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="DELETE"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
 # Call reportsServiceDeleteFieldsByCategory operation
 #
 ##############################################################################
@@ -30423,6 +31705,84 @@ call_reportsServiceDeleteFieldsByCategory() {
         echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
     else
         eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call reportsServiceDeleteGrade operation
+#
+##############################################################################
+call_reportsServiceDeleteGrade() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(grade_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/compliance/grades/{grade_id}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="DELETE"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
     fi
 }
 
@@ -30464,6 +31824,240 @@ call_reportsServiceDeleteJoin() {
 
 ##############################################################################
 #
+# Call reportsServiceDeleteMeasure operation
+#
+##############################################################################
+call_reportsServiceDeleteMeasure() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(measure_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/compliance/measures/{measure_id}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="DELETE"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call reportsServiceDeleteMetric operation
+#
+##############################################################################
+call_reportsServiceDeleteMetric() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(metric_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/compliance/metrics/{metric_id}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="DELETE"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call reportsServiceDeleteProgram operation
+#
+##############################################################################
+call_reportsServiceDeleteProgram() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(program_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/compliance/programs/{program_id}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="DELETE"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
 # Call reportsServiceDeleteReport operation
 #
 ##############################################################################
@@ -30495,6 +32089,84 @@ call_reportsServiceDeleteReport() {
         echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
     else
         eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call reportsServiceDeleteRequirement operation
+#
+##############################################################################
+call_reportsServiceDeleteRequirement() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(requirement_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/compliance/requirements/{requirement_id}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="DELETE"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
     fi
 }
 
@@ -30680,6 +32352,42 @@ call_reportsServiceGetChartTemplatesv2() {
 
 ##############################################################################
 #
+# Call reportsServiceGetControls operation
+#
+##############################################################################
+call_reportsServiceGetControls() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/compliance/controls" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
 # Call reportsServiceGetFieldsByCategories operation
 #
 ##############################################################################
@@ -30752,6 +32460,42 @@ call_reportsServiceGetFieldsByCategory() {
 
 ##############################################################################
 #
+# Call reportsServiceGetGrades operation
+#
+##############################################################################
+call_reportsServiceGetGrades() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/compliance/grades" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
 # Call reportsServiceGetJoins operation
 #
 ##############################################################################
@@ -30765,6 +32509,114 @@ call_reportsServiceGetJoins() {
     local path
 
     if ! path=$(build_request_path "/api/v3/reports/categories/joins" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call reportsServiceGetMeasures operation
+#
+##############################################################################
+call_reportsServiceGetMeasures() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/compliance/measures" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call reportsServiceGetMetrics operation
+#
+##############################################################################
+call_reportsServiceGetMetrics() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/compliance/metrics" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call reportsServiceGetPrograms operation
+#
+##############################################################################
+call_reportsServiceGetPrograms() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/compliance/programs" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -31196,6 +33048,42 @@ call_reportsServiceGetReportsTags() {
 
 ##############################################################################
 #
+# Call reportsServiceGetRequirements operation
+#
+##############################################################################
+call_reportsServiceGetRequirements() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/compliance/requirements" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
 # Call reportsServiceGetVariant operation
 #
 ##############################################################################
@@ -31363,6 +33251,84 @@ call_reportsServicePartialReportUpdate() {
         exit 1
     fi
     local method="PATCH"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call reportsServiceRunGrades operation
+#
+##############################################################################
+call_reportsServiceRunGrades() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/compliance/grades/run" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
     local headers_curl
     headers_curl=$(header_arguments_to_curl)
     if [[ -n $header_accept ]]; then
@@ -31736,6 +33702,162 @@ call_reportsServiceUpdateChartv2() {
 
 ##############################################################################
 #
+# Call reportsServiceUpdateControl operation
+#
+##############################################################################
+call_reportsServiceUpdateControl() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(control_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/compliance/controls/{control_id}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="PUT"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call reportsServiceUpdateGrade operation
+#
+##############################################################################
+call_reportsServiceUpdateGrade() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(grade_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/compliance/grades/{grade_id}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="PUT"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
 # Call reportsServiceUpdateJoin operation
 #
 ##############################################################################
@@ -31749,6 +33871,240 @@ call_reportsServiceUpdateJoin() {
     local path
 
     if ! path=$(build_request_path "/api/v3/reports/categories/joins/{join_id}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="PUT"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call reportsServiceUpdateMeasure operation
+#
+##############################################################################
+call_reportsServiceUpdateMeasure() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(measure_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/compliance/measures/{measure_id}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="PUT"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call reportsServiceUpdateMetric operation
+#
+##############################################################################
+call_reportsServiceUpdateMetric() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(metric_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/compliance/metrics/{metric_id}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="PUT"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call reportsServiceUpdateProgram operation
+#
+##############################################################################
+call_reportsServiceUpdateProgram() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(program_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/compliance/programs/{program_id}" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -31892,6 +34248,84 @@ call_reportsServiceUpdateReport() {
 
 ##############################################################################
 #
+# Call reportsServiceUpdateRequirement operation
+#
+##############################################################################
+call_reportsServiceUpdateRequirement() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(requirement_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/compliance/requirements/{requirement_id}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="PUT"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
 # Call reportsServiceUpdateVariantOverride operation
 #
 ##############################################################################
@@ -31905,2028 +34339,6 @@ call_reportsServiceUpdateVariantOverride() {
     local path
 
     if ! path=$(build_request_path "/api/v3/reports/variants/{variant_id}" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="PUT"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceCreateController operation
-#
-##############################################################################
-call_resourceControllerK8ServiceCreateController() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/controllers" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="POST"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceCreateHeartBeat operation
-#
-##############################################################################
-call_resourceControllerK8ServiceCreateHeartBeat() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(controller_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/controllers/{controller_id}/heartbeat" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="POST"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceCreateHeartBeatEx operation
-#
-##############################################################################
-call_resourceControllerK8ServiceCreateHeartBeatEx() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(controller_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/controllers/{controller_id}/heartbeat_ex" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="POST"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceCreateJob operation
-#
-##############################################################################
-call_resourceControllerK8ServiceCreateJob() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/jobs" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="POST"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceCreateJobExecution operation
-#
-##############################################################################
-call_resourceControllerK8ServiceCreateJobExecution() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/job_executions" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="POST"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceCreateKeypair operation
-#
-##############################################################################
-call_resourceControllerK8ServiceCreateKeypair() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(controller_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/controllers/{controller_id}/keypair" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="POST"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceDeleteController operation
-#
-##############################################################################
-call_resourceControllerK8ServiceDeleteController() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(controller_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/controllers/{controller_id}" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="DELETE"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceDeleteEdgeTenant operation
-#
-##############################################################################
-call_resourceControllerK8ServiceDeleteEdgeTenant() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(tenant_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/tenants/{tenant_id}" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="DELETE"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceDeleteEdgeTenantRequest operation
-#
-##############################################################################
-call_resourceControllerK8ServiceDeleteEdgeTenantRequest() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(tenant_id edge_id edge_name  )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edges" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="DELETE"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceDeleteJob operation
-#
-##############################################################################
-call_resourceControllerK8ServiceDeleteJob() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(job_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/jobs/{job_id}" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="DELETE"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceDownloadControllerLogs operation
-#
-##############################################################################
-call_resourceControllerK8ServiceDownloadControllerLogs() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(controller_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/controllers/{controller_id}/logs" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="POST"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceGetControllerApps operation
-#
-##############################################################################
-call_resourceControllerK8ServiceGetControllerApps() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(controller_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(modified_since    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/controllers/{controller_id}/apps" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceGetControllerCommands operation
-#
-##############################################################################
-call_resourceControllerK8ServiceGetControllerCommands() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(controller_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/controllers/{controller_id}/commands" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceGetControllerJobs operation
-#
-##############################################################################
-call_resourceControllerK8ServiceGetControllerJobs() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(controller_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(modified_since    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/controllers/{controller_id}/jobs" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceGetControllerStatus operation
-#
-##############################################################################
-call_resourceControllerK8ServiceGetControllerStatus() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(controller_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/controllers/{controller_id}/status" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceGetControllers operation
-#
-##############################################################################
-call_resourceControllerK8ServiceGetControllers() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(tenant_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(want_local    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/tenants/{tenant_id}/controllers" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceGetControllersWithStatus operation
-#
-##############################################################################
-call_resourceControllerK8ServiceGetControllersWithStatus() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(tenant_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(want_local controller_id    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/tenants/{tenant_id}/controller_status" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceGetJob operation
-#
-##############################################################################
-call_resourceControllerK8ServiceGetJob() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(job_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(want_secret_values    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/jobs/{job_id}" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceGetJobExecution operation
-#
-##############################################################################
-call_resourceControllerK8ServiceGetJobExecution() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(jobexe_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/job_executions/{jobexe_id}" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceGetJobExecutions operation
-#
-##############################################################################
-call_resourceControllerK8ServiceGetJobExecutions() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(job_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/jobs/{job_id}/executions" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceGetJobStatus operation
-#
-##############################################################################
-call_resourceControllerK8ServiceGetJobStatus() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(job_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/jobs/{job_id}/status" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceGetTenantApp operation
-#
-##############################################################################
-call_resourceControllerK8ServiceGetTenantApp() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(tenant_id app_name)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(return_level    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/tenants/{tenant_id}/apps/{app_name}" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceGetTenantApps operation
-#
-##############################################################################
-call_resourceControllerK8ServiceGetTenantApps() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(tenant_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(return_level    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/tenants/{tenant_id}/apps" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceGetTenantJobs operation
-#
-##############################################################################
-call_resourceControllerK8ServiceGetTenantJobs() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(tenant_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/tenants/{tenant_id}/jobs" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceGetVersion operation
-#
-##############################################################################
-call_resourceControllerK8ServiceGetVersion() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/system/version" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceInstallEdgeTenantRequest operation
-#
-##############################################################################
-call_resourceControllerK8ServiceInstallEdgeTenantRequest() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(  )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edges" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="POST"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceQueryControllerLogs operation
-#
-##############################################################################
-call_resourceControllerK8ServiceQueryControllerLogs() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(controller_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/controllers/{controller_id}/logs/query" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="POST"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceUpdateCommand operation
-#
-##############################################################################
-call_resourceControllerK8ServiceUpdateCommand() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/commands/{id}" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="PUT"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceUpdateController operation
-#
-##############################################################################
-call_resourceControllerK8ServiceUpdateController() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/controllers/{id}" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="PUT"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceUpdateControllerStatus operation
-#
-##############################################################################
-call_resourceControllerK8ServiceUpdateControllerStatus() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/controllers/{id}/status" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="PUT"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceUpdateEdgeTenantRequest operation
-#
-##############################################################################
-call_resourceControllerK8ServiceUpdateEdgeTenantRequest() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(edge_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(  )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edges/{edge_id}" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="PATCH"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceUpdateJob operation
-#
-##############################################################################
-call_resourceControllerK8ServiceUpdateJob() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/jobs/{id}" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="PUT"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceUpdateJobExecution operation
-#
-##############################################################################
-call_resourceControllerK8ServiceUpdateJobExecution() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/job_executions/{id}" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="PUT"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
-# Call resourceControllerK8ServiceUpdateJobStatus operation
-#
-##############################################################################
-call_resourceControllerK8ServiceUpdateJobStatus() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(job_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/edge_manager/jobs/{job_id}/status" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -36224,726 +36636,6 @@ call_streamsServiceListAWSStreams() {
 
 ##############################################################################
 #
-# Call templatesServiceCreateIntegration operation
-#
-##############################################################################
-call_templatesServiceCreateIntegration() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/templates/integration" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="POST"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
-# Call templatesServiceCreateTemplate operation
-#
-##############################################################################
-call_templatesServiceCreateTemplate() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/templates" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="POST"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
-# Call templatesServiceDeleteIntegration operation
-#
-##############################################################################
-call_templatesServiceDeleteIntegration() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(integration_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/templates/integrations/{integration_id}" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="DELETE"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call templatesServiceDeleteTemplate operation
-#
-##############################################################################
-call_templatesServiceDeleteTemplate() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(template_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/templates/{template_id}" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="DELETE"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call templatesServiceGetOriginDefaultContent operation
-#
-##############################################################################
-call_templatesServiceGetOriginDefaultContent() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(origin)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(integration mime_type    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/templates/origins/{origin}/content" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call templatesServiceGetOriginFields operation
-#
-##############################################################################
-call_templatesServiceGetOriginFields() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(origin)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/templates/origins/{origin}/fields" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call templatesServiceGetTemplate operation
-#
-##############################################################################
-call_templatesServiceGetTemplate() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(template_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(include_integration_name    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/templates/{template_id}" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call templatesServiceGetTemplates operation
-#
-##############################################################################
-call_templatesServiceGetTemplates() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(integration_id filter_integration filter_origin filter_mime_type filter_tags filter_enabled_only include_integration_name    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/templates" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call templatesServiceGetTemplatesForEdge operation
-#
-##############################################################################
-call_templatesServiceGetTemplatesForEdge() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(integration_id filter_origin filter_enabled_only include_integration_name transform_to_gdp_format    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/templates/edge" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call templatesServiceTestTemplate operation
-#
-##############################################################################
-call_templatesServiceTestTemplate() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/templates/test" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="POST"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
-# Call templatesServiceTransformTemplate operation
-#
-##############################################################################
-call_templatesServiceTransformTemplate() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/templates/transform" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="POST"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
-# Call templatesServiceTransformTemplateJSON operation
-#
-##############################################################################
-call_templatesServiceTransformTemplateJSON() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/templates/transformjson" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="POST"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
-# Call templatesServiceUpdateTemplate operation
-#
-##############################################################################
-call_templatesServiceUpdateTemplate() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(template_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(    )
-    local path
-
-    if ! path=$(build_request_path "/api/v3/templates/{template_id}" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="PATCH"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
 # Call tenantuserCreateAPIKey operation
 #
 ##############################################################################
@@ -37940,7 +37632,7 @@ call_getLinkedVendor() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/linkedVendors/{vendorId}/cloudAccounts" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/linkedVendors/{vendorId}/cloudAccounts" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -37976,7 +37668,7 @@ call_getSingleLinkedVendor() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/linkedVendors/{vendorId}" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/linkedVendors/{vendorId}" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -38012,7 +37704,7 @@ call_listLinkedVendorDataStores() {
     local query_parameter_names=(filter sort pageSize nextToken  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/linkedVendors/{vendorId}/dataStores" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/linkedVendors/{vendorId}/dataStores" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -38048,7 +37740,7 @@ call_listLinkedVendors() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/linkedVendors" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/linkedVendors" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -38084,7 +37776,7 @@ call_listTrustedAssets() {
     local query_parameter_names=(filter  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/dspm/linkedVendors/trustedAssets" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/dspm/linkedVendors/trustedAssets" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -38301,6 +37993,426 @@ call_universalConnectorManagerUploadPlugin() {
     local path
 
     if ! path=$(build_request_path "/api/v3/plugins" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call vulnerabilityManagementServiceCreateVulnerability operation
+#
+##############################################################################
+call_vulnerabilityManagementServiceCreateVulnerability() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/vulnerabilities/ingestion" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call vulnerabilityManagementServiceGetFiltersForVulnerabilities operation
+#
+##############################################################################
+call_vulnerabilityManagementServiceGetFiltersForVulnerabilities() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/vulnerabilities/filters/metadata" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call vulnerabilityManagementServiceGetVulnerabilities operation
+#
+##############################################################################
+call_vulnerabilityManagementServiceGetVulnerabilities() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/vulnerabilities/search" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call vulnerabilityManagementServiceGetVulnerabilitiesStats operation
+#
+##############################################################################
+call_vulnerabilityManagementServiceGetVulnerabilitiesStats() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/vulnerabilities/stats/data" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call vulnerabilityManagementServiceGetVulnerability operation
+#
+##############################################################################
+call_vulnerabilityManagementServiceGetVulnerability() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(vulnerability_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/vulnerabilities/{vulnerability_id}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call vulnerabilityManagementServiceUpdateVulnerabilities operation
+#
+##############################################################################
+call_vulnerabilityManagementServiceUpdateVulnerabilities() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/vulnerabilities" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="PATCH"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call vulnerabilityManagementServiceVulnerabilityIngestionManualTrigger operation
+#
+##############################################################################
+call_vulnerabilityManagementServiceVulnerabilityIngestionManualTrigger() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(    )
+    local path
+
+    if ! path=$(build_request_path "/api/v3/vulnerabilities/ingestion/trigger" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -39733,8 +39845,14 @@ case $key in
     assetsServiceAssetIngestionManualTrigger)
     operation="assetsServiceAssetIngestionManualTrigger"
     ;;
+    assetsServiceCancelCSVImport)
+    operation="assetsServiceCancelCSVImport"
+    ;;
     assetsServiceClonePolicy)
     operation="assetsServiceClonePolicy"
+    ;;
+    assetsServiceCompareCSVToExistingAssets)
+    operation="assetsServiceCompareCSVToExistingAssets"
     ;;
     assetsServiceCreateUpdatePolicy)
     operation="assetsServiceCreateUpdatePolicy"
@@ -39771,6 +39889,9 @@ case $key in
     ;;
     assetsServiceGetFiltersForAssets)
     operation="assetsServiceGetFiltersForAssets"
+    ;;
+    assetsServiceImportCSV)
+    operation="assetsServiceImportCSV"
     ;;
     assetsServiceListPolicy)
     operation="assetsServiceListPolicy"
@@ -39850,6 +39971,9 @@ case $key in
     generateOffice365AuthUrl)
     operation="generateOffice365AuthUrl"
     ;;
+    generateSalesforceAuthUrl)
+    operation="generateSalesforceAuthUrl"
+    ;;
     generateSlackAuthUrl)
     operation="generateSlackAuthUrl"
     ;;
@@ -39864,6 +39988,9 @@ case $key in
     ;;
     getCloudAccountInstallationStatus)
     operation="getCloudAccountInstallationStatus"
+    ;;
+    getDatabaseMetadata)
+    operation="getDatabaseMetadata"
     ;;
     getRefreshTokenExpiry)
     operation="getRefreshTokenExpiry"
@@ -39888,6 +40015,9 @@ case $key in
     ;;
     submitOffice365TenantInfo)
     operation="submitOffice365TenantInfo"
+    ;;
+    submitSalesforceAuthCode)
+    operation="submitSalesforceAuthCode"
     ;;
     submitSlackAuthCode)
     operation="submitSlackAuthCode"
@@ -39993,6 +40123,12 @@ case $key in
     ;;
     connectionsServiceValidateAwsConnection)
     operation="connectionsServiceValidateAwsConnection"
+    ;;
+    connectionsServiceValidateAzureConnection)
+    operation="connectionsServiceValidateAzureConnection"
+    ;;
+    connectionsServiceValidateGcpConnection)
+    operation="connectionsServiceValidateGcpConnection"
     ;;
     dashboardsServiceCreateDashboard)
     operation="dashboardsServiceCreateDashboard"
@@ -40161,15 +40297,6 @@ case $key in
     ;;
     ecosystemServiceTestIntegration)
     operation="ecosystemServiceTestIntegration"
-    ;;
-    edgeSchedulerServiceGetEdgeQueryStatus)
-    operation="edgeSchedulerServiceGetEdgeQueryStatus"
-    ;;
-    edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery)
-    operation="edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery"
-    ;;
-    edgeSchedulerServiceScheduleEdgeQuery)
-    operation="edgeSchedulerServiceScheduleEdgeQuery"
     ;;
     featureFlagsServiceDeleteFeatureFlagOverrides)
     operation="featureFlagsServiceDeleteFeatureFlagOverrides"
@@ -40369,11 +40496,20 @@ case $key in
     jumpboxServiceAuthorize)
     operation="jumpboxServiceAuthorize"
     ;;
+    jumpboxServiceDeleteAccount)
+    operation="jumpboxServiceDeleteAccount"
+    ;;
     jumpboxServiceDeleteTenant)
     operation="jumpboxServiceDeleteTenant"
     ;;
     jumpboxServiceDeleteUser)
     operation="jumpboxServiceDeleteUser"
+    ;;
+    jumpboxServiceGetAccount)
+    operation="jumpboxServiceGetAccount"
+    ;;
+    jumpboxServiceGetAccounts)
+    operation="jumpboxServiceGetAccounts"
     ;;
     jumpboxServiceGetTenant)
     operation="jumpboxServiceGetTenant"
@@ -40384,17 +40520,29 @@ case $key in
     jumpboxServiceGetUsers)
     operation="jumpboxServiceGetUsers"
     ;;
+    jumpboxServicePostAccount)
+    operation="jumpboxServicePostAccount"
+    ;;
     jumpboxServicePostTenants)
     operation="jumpboxServicePostTenants"
     ;;
     jumpboxServicePostUsers)
     operation="jumpboxServicePostUsers"
     ;;
+    jumpboxServiceResumeAccount)
+    operation="jumpboxServiceResumeAccount"
+    ;;
     jumpboxServiceSearchUsers)
     operation="jumpboxServiceSearchUsers"
     ;;
+    jumpboxServiceSuspendAccount)
+    operation="jumpboxServiceSuspendAccount"
+    ;;
     jumpboxServiceTestUser)
     operation="jumpboxServiceTestUser"
+    ;;
+    jumpboxServiceUpdateAccount)
+    operation="jumpboxServiceUpdateAccount"
     ;;
     jumpboxServiceUpdateTenant)
     operation="jumpboxServiceUpdateTenant"
@@ -40483,6 +40631,12 @@ case $key in
     policyBuilderGetPolicySyncList)
     operation="policyBuilderGetPolicySyncList"
     ;;
+    policyBuilderGetPolicyVersion)
+    operation="policyBuilderGetPolicyVersion"
+    ;;
+    policyBuilderGetPolicyVersionsInfo)
+    operation="policyBuilderGetPolicyVersionsInfo"
+    ;;
     policyBuilderGetReceivers)
     operation="policyBuilderGetReceivers"
     ;;
@@ -40509,6 +40663,9 @@ case $key in
     ;;
     policyBuilderStorePoliciesGdp)
     operation="policyBuilderStorePoliciesGdp"
+    ;;
+    policyBuilderUpdatePolicy)
+    operation="policyBuilderUpdatePolicy"
     ;;
     qSDataLoaderQSfileValidator)
     operation="qSDataLoaderQSfileValidator"
@@ -40600,14 +40757,32 @@ case $key in
     reportsServiceCreateChartv2)
     operation="reportsServiceCreateChartv2"
     ;;
+    reportsServiceCreateControl)
+    operation="reportsServiceCreateControl"
+    ;;
     reportsServiceCreateFieldsByCategory)
     operation="reportsServiceCreateFieldsByCategory"
+    ;;
+    reportsServiceCreateGrade)
+    operation="reportsServiceCreateGrade"
     ;;
     reportsServiceCreateJoin)
     operation="reportsServiceCreateJoin"
     ;;
+    reportsServiceCreateMeasure)
+    operation="reportsServiceCreateMeasure"
+    ;;
+    reportsServiceCreateMetric)
+    operation="reportsServiceCreateMetric"
+    ;;
+    reportsServiceCreateProgram)
+    operation="reportsServiceCreateProgram"
+    ;;
     reportsServiceCreateReport)
     operation="reportsServiceCreateReport"
+    ;;
+    reportsServiceCreateRequirement)
+    operation="reportsServiceCreateRequirement"
     ;;
     reportsServiceCreateVariant)
     operation="reportsServiceCreateVariant"
@@ -40624,14 +40799,32 @@ case $key in
     reportsServiceDeleteChartv2)
     operation="reportsServiceDeleteChartv2"
     ;;
+    reportsServiceDeleteControl)
+    operation="reportsServiceDeleteControl"
+    ;;
     reportsServiceDeleteFieldsByCategory)
     operation="reportsServiceDeleteFieldsByCategory"
+    ;;
+    reportsServiceDeleteGrade)
+    operation="reportsServiceDeleteGrade"
     ;;
     reportsServiceDeleteJoin)
     operation="reportsServiceDeleteJoin"
     ;;
+    reportsServiceDeleteMeasure)
+    operation="reportsServiceDeleteMeasure"
+    ;;
+    reportsServiceDeleteMetric)
+    operation="reportsServiceDeleteMetric"
+    ;;
+    reportsServiceDeleteProgram)
+    operation="reportsServiceDeleteProgram"
+    ;;
     reportsServiceDeleteReport)
     operation="reportsServiceDeleteReport"
+    ;;
+    reportsServiceDeleteRequirement)
+    operation="reportsServiceDeleteRequirement"
     ;;
     reportsServiceDeleteVariant)
     operation="reportsServiceDeleteVariant"
@@ -40648,14 +40841,29 @@ case $key in
     reportsServiceGetChartTemplatesv2)
     operation="reportsServiceGetChartTemplatesv2"
     ;;
+    reportsServiceGetControls)
+    operation="reportsServiceGetControls"
+    ;;
     reportsServiceGetFieldsByCategories)
     operation="reportsServiceGetFieldsByCategories"
     ;;
     reportsServiceGetFieldsByCategory)
     operation="reportsServiceGetFieldsByCategory"
     ;;
+    reportsServiceGetGrades)
+    operation="reportsServiceGetGrades"
+    ;;
     reportsServiceGetJoins)
     operation="reportsServiceGetJoins"
+    ;;
+    reportsServiceGetMeasures)
+    operation="reportsServiceGetMeasures"
+    ;;
+    reportsServiceGetMetrics)
+    operation="reportsServiceGetMetrics"
+    ;;
+    reportsServiceGetPrograms)
+    operation="reportsServiceGetPrograms"
     ;;
     reportsServiceGetQueryByReportDefinition)
     operation="reportsServiceGetQueryByReportDefinition"
@@ -40684,6 +40892,9 @@ case $key in
     reportsServiceGetReportsTags)
     operation="reportsServiceGetReportsTags"
     ;;
+    reportsServiceGetRequirements)
+    operation="reportsServiceGetRequirements"
+    ;;
     reportsServiceGetVariant)
     operation="reportsServiceGetVariant"
     ;;
@@ -40695,6 +40906,9 @@ case $key in
     ;;
     reportsServicePartialReportUpdate)
     operation="reportsServicePartialReportUpdate"
+    ;;
+    reportsServiceRunGrades)
+    operation="reportsServiceRunGrades"
     ;;
     reportsServiceRunVariantOperation)
     operation="reportsServiceRunVariantOperation"
@@ -40708,116 +40922,32 @@ case $key in
     reportsServiceUpdateChartv2)
     operation="reportsServiceUpdateChartv2"
     ;;
+    reportsServiceUpdateControl)
+    operation="reportsServiceUpdateControl"
+    ;;
+    reportsServiceUpdateGrade)
+    operation="reportsServiceUpdateGrade"
+    ;;
     reportsServiceUpdateJoin)
     operation="reportsServiceUpdateJoin"
+    ;;
+    reportsServiceUpdateMeasure)
+    operation="reportsServiceUpdateMeasure"
+    ;;
+    reportsServiceUpdateMetric)
+    operation="reportsServiceUpdateMetric"
+    ;;
+    reportsServiceUpdateProgram)
+    operation="reportsServiceUpdateProgram"
     ;;
     reportsServiceUpdateReport)
     operation="reportsServiceUpdateReport"
     ;;
+    reportsServiceUpdateRequirement)
+    operation="reportsServiceUpdateRequirement"
+    ;;
     reportsServiceUpdateVariantOverride)
     operation="reportsServiceUpdateVariantOverride"
-    ;;
-    resourceControllerK8ServiceCreateController)
-    operation="resourceControllerK8ServiceCreateController"
-    ;;
-    resourceControllerK8ServiceCreateHeartBeat)
-    operation="resourceControllerK8ServiceCreateHeartBeat"
-    ;;
-    resourceControllerK8ServiceCreateHeartBeatEx)
-    operation="resourceControllerK8ServiceCreateHeartBeatEx"
-    ;;
-    resourceControllerK8ServiceCreateJob)
-    operation="resourceControllerK8ServiceCreateJob"
-    ;;
-    resourceControllerK8ServiceCreateJobExecution)
-    operation="resourceControllerK8ServiceCreateJobExecution"
-    ;;
-    resourceControllerK8ServiceCreateKeypair)
-    operation="resourceControllerK8ServiceCreateKeypair"
-    ;;
-    resourceControllerK8ServiceDeleteController)
-    operation="resourceControllerK8ServiceDeleteController"
-    ;;
-    resourceControllerK8ServiceDeleteEdgeTenant)
-    operation="resourceControllerK8ServiceDeleteEdgeTenant"
-    ;;
-    resourceControllerK8ServiceDeleteEdgeTenantRequest)
-    operation="resourceControllerK8ServiceDeleteEdgeTenantRequest"
-    ;;
-    resourceControllerK8ServiceDeleteJob)
-    operation="resourceControllerK8ServiceDeleteJob"
-    ;;
-    resourceControllerK8ServiceDownloadControllerLogs)
-    operation="resourceControllerK8ServiceDownloadControllerLogs"
-    ;;
-    resourceControllerK8ServiceGetControllerApps)
-    operation="resourceControllerK8ServiceGetControllerApps"
-    ;;
-    resourceControllerK8ServiceGetControllerCommands)
-    operation="resourceControllerK8ServiceGetControllerCommands"
-    ;;
-    resourceControllerK8ServiceGetControllerJobs)
-    operation="resourceControllerK8ServiceGetControllerJobs"
-    ;;
-    resourceControllerK8ServiceGetControllerStatus)
-    operation="resourceControllerK8ServiceGetControllerStatus"
-    ;;
-    resourceControllerK8ServiceGetControllers)
-    operation="resourceControllerK8ServiceGetControllers"
-    ;;
-    resourceControllerK8ServiceGetControllersWithStatus)
-    operation="resourceControllerK8ServiceGetControllersWithStatus"
-    ;;
-    resourceControllerK8ServiceGetJob)
-    operation="resourceControllerK8ServiceGetJob"
-    ;;
-    resourceControllerK8ServiceGetJobExecution)
-    operation="resourceControllerK8ServiceGetJobExecution"
-    ;;
-    resourceControllerK8ServiceGetJobExecutions)
-    operation="resourceControllerK8ServiceGetJobExecutions"
-    ;;
-    resourceControllerK8ServiceGetJobStatus)
-    operation="resourceControllerK8ServiceGetJobStatus"
-    ;;
-    resourceControllerK8ServiceGetTenantApp)
-    operation="resourceControllerK8ServiceGetTenantApp"
-    ;;
-    resourceControllerK8ServiceGetTenantApps)
-    operation="resourceControllerK8ServiceGetTenantApps"
-    ;;
-    resourceControllerK8ServiceGetTenantJobs)
-    operation="resourceControllerK8ServiceGetTenantJobs"
-    ;;
-    resourceControllerK8ServiceGetVersion)
-    operation="resourceControllerK8ServiceGetVersion"
-    ;;
-    resourceControllerK8ServiceInstallEdgeTenantRequest)
-    operation="resourceControllerK8ServiceInstallEdgeTenantRequest"
-    ;;
-    resourceControllerK8ServiceQueryControllerLogs)
-    operation="resourceControllerK8ServiceQueryControllerLogs"
-    ;;
-    resourceControllerK8ServiceUpdateCommand)
-    operation="resourceControllerK8ServiceUpdateCommand"
-    ;;
-    resourceControllerK8ServiceUpdateController)
-    operation="resourceControllerK8ServiceUpdateController"
-    ;;
-    resourceControllerK8ServiceUpdateControllerStatus)
-    operation="resourceControllerK8ServiceUpdateControllerStatus"
-    ;;
-    resourceControllerK8ServiceUpdateEdgeTenantRequest)
-    operation="resourceControllerK8ServiceUpdateEdgeTenantRequest"
-    ;;
-    resourceControllerK8ServiceUpdateJob)
-    operation="resourceControllerK8ServiceUpdateJob"
-    ;;
-    resourceControllerK8ServiceUpdateJobExecution)
-    operation="resourceControllerK8ServiceUpdateJobExecution"
-    ;;
-    resourceControllerK8ServiceUpdateJobStatus)
-    operation="resourceControllerK8ServiceUpdateJobStatus"
     ;;
     riskAnalyticsControllerEnableDisableRiskEventFeedback)
     operation="riskAnalyticsControllerEnableDisableRiskEventFeedback"
@@ -40942,45 +41072,6 @@ case $key in
     streamsServiceListAWSStreams)
     operation="streamsServiceListAWSStreams"
     ;;
-    templatesServiceCreateIntegration)
-    operation="templatesServiceCreateIntegration"
-    ;;
-    templatesServiceCreateTemplate)
-    operation="templatesServiceCreateTemplate"
-    ;;
-    templatesServiceDeleteIntegration)
-    operation="templatesServiceDeleteIntegration"
-    ;;
-    templatesServiceDeleteTemplate)
-    operation="templatesServiceDeleteTemplate"
-    ;;
-    templatesServiceGetOriginDefaultContent)
-    operation="templatesServiceGetOriginDefaultContent"
-    ;;
-    templatesServiceGetOriginFields)
-    operation="templatesServiceGetOriginFields"
-    ;;
-    templatesServiceGetTemplate)
-    operation="templatesServiceGetTemplate"
-    ;;
-    templatesServiceGetTemplates)
-    operation="templatesServiceGetTemplates"
-    ;;
-    templatesServiceGetTemplatesForEdge)
-    operation="templatesServiceGetTemplatesForEdge"
-    ;;
-    templatesServiceTestTemplate)
-    operation="templatesServiceTestTemplate"
-    ;;
-    templatesServiceTransformTemplate)
-    operation="templatesServiceTransformTemplate"
-    ;;
-    templatesServiceTransformTemplateJSON)
-    operation="templatesServiceTransformTemplateJSON"
-    ;;
-    templatesServiceUpdateTemplate)
-    operation="templatesServiceUpdateTemplate"
-    ;;
     tenantuserCreateAPIKey)
     operation="tenantuserCreateAPIKey"
     ;;
@@ -41067,6 +41158,27 @@ case $key in
     ;;
     universalConnectorManagerUploadPlugin)
     operation="universalConnectorManagerUploadPlugin"
+    ;;
+    vulnerabilityManagementServiceCreateVulnerability)
+    operation="vulnerabilityManagementServiceCreateVulnerability"
+    ;;
+    vulnerabilityManagementServiceGetFiltersForVulnerabilities)
+    operation="vulnerabilityManagementServiceGetFiltersForVulnerabilities"
+    ;;
+    vulnerabilityManagementServiceGetVulnerabilities)
+    operation="vulnerabilityManagementServiceGetVulnerabilities"
+    ;;
+    vulnerabilityManagementServiceGetVulnerabilitiesStats)
+    operation="vulnerabilityManagementServiceGetVulnerabilitiesStats"
+    ;;
+    vulnerabilityManagementServiceGetVulnerability)
+    operation="vulnerabilityManagementServiceGetVulnerability"
+    ;;
+    vulnerabilityManagementServiceUpdateVulnerabilities)
+    operation="vulnerabilityManagementServiceUpdateVulnerabilities"
+    ;;
+    vulnerabilityManagementServiceVulnerabilityIngestionManualTrigger)
+    operation="vulnerabilityManagementServiceVulnerabilityIngestionManualTrigger"
     ;;
     workflowCreateCase)
     operation="workflowCreateCase"
@@ -41228,8 +41340,14 @@ case $operation in
     assetsServiceAssetIngestionManualTrigger)
     call_assetsServiceAssetIngestionManualTrigger
     ;;
+    assetsServiceCancelCSVImport)
+    call_assetsServiceCancelCSVImport
+    ;;
     assetsServiceClonePolicy)
     call_assetsServiceClonePolicy
+    ;;
+    assetsServiceCompareCSVToExistingAssets)
+    call_assetsServiceCompareCSVToExistingAssets
     ;;
     assetsServiceCreateUpdatePolicy)
     call_assetsServiceCreateUpdatePolicy
@@ -41266,6 +41384,9 @@ case $operation in
     ;;
     assetsServiceGetFiltersForAssets)
     call_assetsServiceGetFiltersForAssets
+    ;;
+    assetsServiceImportCSV)
+    call_assetsServiceImportCSV
     ;;
     assetsServiceListPolicy)
     call_assetsServiceListPolicy
@@ -41345,6 +41466,9 @@ case $operation in
     generateOffice365AuthUrl)
     call_generateOffice365AuthUrl
     ;;
+    generateSalesforceAuthUrl)
+    call_generateSalesforceAuthUrl
+    ;;
     generateSlackAuthUrl)
     call_generateSlackAuthUrl
     ;;
@@ -41359,6 +41483,9 @@ case $operation in
     ;;
     getCloudAccountInstallationStatus)
     call_getCloudAccountInstallationStatus
+    ;;
+    getDatabaseMetadata)
+    call_getDatabaseMetadata
     ;;
     getRefreshTokenExpiry)
     call_getRefreshTokenExpiry
@@ -41383,6 +41510,9 @@ case $operation in
     ;;
     submitOffice365TenantInfo)
     call_submitOffice365TenantInfo
+    ;;
+    submitSalesforceAuthCode)
+    call_submitSalesforceAuthCode
     ;;
     submitSlackAuthCode)
     call_submitSlackAuthCode
@@ -41488,6 +41618,12 @@ case $operation in
     ;;
     connectionsServiceValidateAwsConnection)
     call_connectionsServiceValidateAwsConnection
+    ;;
+    connectionsServiceValidateAzureConnection)
+    call_connectionsServiceValidateAzureConnection
+    ;;
+    connectionsServiceValidateGcpConnection)
+    call_connectionsServiceValidateGcpConnection
     ;;
     dashboardsServiceCreateDashboard)
     call_dashboardsServiceCreateDashboard
@@ -41656,15 +41792,6 @@ case $operation in
     ;;
     ecosystemServiceTestIntegration)
     call_ecosystemServiceTestIntegration
-    ;;
-    edgeSchedulerServiceGetEdgeQueryStatus)
-    call_edgeSchedulerServiceGetEdgeQueryStatus
-    ;;
-    edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery)
-    call_edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery
-    ;;
-    edgeSchedulerServiceScheduleEdgeQuery)
-    call_edgeSchedulerServiceScheduleEdgeQuery
     ;;
     featureFlagsServiceDeleteFeatureFlagOverrides)
     call_featureFlagsServiceDeleteFeatureFlagOverrides
@@ -41864,11 +41991,20 @@ case $operation in
     jumpboxServiceAuthorize)
     call_jumpboxServiceAuthorize
     ;;
+    jumpboxServiceDeleteAccount)
+    call_jumpboxServiceDeleteAccount
+    ;;
     jumpboxServiceDeleteTenant)
     call_jumpboxServiceDeleteTenant
     ;;
     jumpboxServiceDeleteUser)
     call_jumpboxServiceDeleteUser
+    ;;
+    jumpboxServiceGetAccount)
+    call_jumpboxServiceGetAccount
+    ;;
+    jumpboxServiceGetAccounts)
+    call_jumpboxServiceGetAccounts
     ;;
     jumpboxServiceGetTenant)
     call_jumpboxServiceGetTenant
@@ -41879,17 +42015,29 @@ case $operation in
     jumpboxServiceGetUsers)
     call_jumpboxServiceGetUsers
     ;;
+    jumpboxServicePostAccount)
+    call_jumpboxServicePostAccount
+    ;;
     jumpboxServicePostTenants)
     call_jumpboxServicePostTenants
     ;;
     jumpboxServicePostUsers)
     call_jumpboxServicePostUsers
     ;;
+    jumpboxServiceResumeAccount)
+    call_jumpboxServiceResumeAccount
+    ;;
     jumpboxServiceSearchUsers)
     call_jumpboxServiceSearchUsers
     ;;
+    jumpboxServiceSuspendAccount)
+    call_jumpboxServiceSuspendAccount
+    ;;
     jumpboxServiceTestUser)
     call_jumpboxServiceTestUser
+    ;;
+    jumpboxServiceUpdateAccount)
+    call_jumpboxServiceUpdateAccount
     ;;
     jumpboxServiceUpdateTenant)
     call_jumpboxServiceUpdateTenant
@@ -41978,6 +42126,12 @@ case $operation in
     policyBuilderGetPolicySyncList)
     call_policyBuilderGetPolicySyncList
     ;;
+    policyBuilderGetPolicyVersion)
+    call_policyBuilderGetPolicyVersion
+    ;;
+    policyBuilderGetPolicyVersionsInfo)
+    call_policyBuilderGetPolicyVersionsInfo
+    ;;
     policyBuilderGetReceivers)
     call_policyBuilderGetReceivers
     ;;
@@ -42004,6 +42158,9 @@ case $operation in
     ;;
     policyBuilderStorePoliciesGdp)
     call_policyBuilderStorePoliciesGdp
+    ;;
+    policyBuilderUpdatePolicy)
+    call_policyBuilderUpdatePolicy
     ;;
     qSDataLoaderQSfileValidator)
     call_qSDataLoaderQSfileValidator
@@ -42095,14 +42252,32 @@ case $operation in
     reportsServiceCreateChartv2)
     call_reportsServiceCreateChartv2
     ;;
+    reportsServiceCreateControl)
+    call_reportsServiceCreateControl
+    ;;
     reportsServiceCreateFieldsByCategory)
     call_reportsServiceCreateFieldsByCategory
+    ;;
+    reportsServiceCreateGrade)
+    call_reportsServiceCreateGrade
     ;;
     reportsServiceCreateJoin)
     call_reportsServiceCreateJoin
     ;;
+    reportsServiceCreateMeasure)
+    call_reportsServiceCreateMeasure
+    ;;
+    reportsServiceCreateMetric)
+    call_reportsServiceCreateMetric
+    ;;
+    reportsServiceCreateProgram)
+    call_reportsServiceCreateProgram
+    ;;
     reportsServiceCreateReport)
     call_reportsServiceCreateReport
+    ;;
+    reportsServiceCreateRequirement)
+    call_reportsServiceCreateRequirement
     ;;
     reportsServiceCreateVariant)
     call_reportsServiceCreateVariant
@@ -42119,14 +42294,32 @@ case $operation in
     reportsServiceDeleteChartv2)
     call_reportsServiceDeleteChartv2
     ;;
+    reportsServiceDeleteControl)
+    call_reportsServiceDeleteControl
+    ;;
     reportsServiceDeleteFieldsByCategory)
     call_reportsServiceDeleteFieldsByCategory
+    ;;
+    reportsServiceDeleteGrade)
+    call_reportsServiceDeleteGrade
     ;;
     reportsServiceDeleteJoin)
     call_reportsServiceDeleteJoin
     ;;
+    reportsServiceDeleteMeasure)
+    call_reportsServiceDeleteMeasure
+    ;;
+    reportsServiceDeleteMetric)
+    call_reportsServiceDeleteMetric
+    ;;
+    reportsServiceDeleteProgram)
+    call_reportsServiceDeleteProgram
+    ;;
     reportsServiceDeleteReport)
     call_reportsServiceDeleteReport
+    ;;
+    reportsServiceDeleteRequirement)
+    call_reportsServiceDeleteRequirement
     ;;
     reportsServiceDeleteVariant)
     call_reportsServiceDeleteVariant
@@ -42143,14 +42336,29 @@ case $operation in
     reportsServiceGetChartTemplatesv2)
     call_reportsServiceGetChartTemplatesv2
     ;;
+    reportsServiceGetControls)
+    call_reportsServiceGetControls
+    ;;
     reportsServiceGetFieldsByCategories)
     call_reportsServiceGetFieldsByCategories
     ;;
     reportsServiceGetFieldsByCategory)
     call_reportsServiceGetFieldsByCategory
     ;;
+    reportsServiceGetGrades)
+    call_reportsServiceGetGrades
+    ;;
     reportsServiceGetJoins)
     call_reportsServiceGetJoins
+    ;;
+    reportsServiceGetMeasures)
+    call_reportsServiceGetMeasures
+    ;;
+    reportsServiceGetMetrics)
+    call_reportsServiceGetMetrics
+    ;;
+    reportsServiceGetPrograms)
+    call_reportsServiceGetPrograms
     ;;
     reportsServiceGetQueryByReportDefinition)
     call_reportsServiceGetQueryByReportDefinition
@@ -42179,6 +42387,9 @@ case $operation in
     reportsServiceGetReportsTags)
     call_reportsServiceGetReportsTags
     ;;
+    reportsServiceGetRequirements)
+    call_reportsServiceGetRequirements
+    ;;
     reportsServiceGetVariant)
     call_reportsServiceGetVariant
     ;;
@@ -42190,6 +42401,9 @@ case $operation in
     ;;
     reportsServicePartialReportUpdate)
     call_reportsServicePartialReportUpdate
+    ;;
+    reportsServiceRunGrades)
+    call_reportsServiceRunGrades
     ;;
     reportsServiceRunVariantOperation)
     call_reportsServiceRunVariantOperation
@@ -42203,116 +42417,32 @@ case $operation in
     reportsServiceUpdateChartv2)
     call_reportsServiceUpdateChartv2
     ;;
+    reportsServiceUpdateControl)
+    call_reportsServiceUpdateControl
+    ;;
+    reportsServiceUpdateGrade)
+    call_reportsServiceUpdateGrade
+    ;;
     reportsServiceUpdateJoin)
     call_reportsServiceUpdateJoin
+    ;;
+    reportsServiceUpdateMeasure)
+    call_reportsServiceUpdateMeasure
+    ;;
+    reportsServiceUpdateMetric)
+    call_reportsServiceUpdateMetric
+    ;;
+    reportsServiceUpdateProgram)
+    call_reportsServiceUpdateProgram
     ;;
     reportsServiceUpdateReport)
     call_reportsServiceUpdateReport
     ;;
+    reportsServiceUpdateRequirement)
+    call_reportsServiceUpdateRequirement
+    ;;
     reportsServiceUpdateVariantOverride)
     call_reportsServiceUpdateVariantOverride
-    ;;
-    resourceControllerK8ServiceCreateController)
-    call_resourceControllerK8ServiceCreateController
-    ;;
-    resourceControllerK8ServiceCreateHeartBeat)
-    call_resourceControllerK8ServiceCreateHeartBeat
-    ;;
-    resourceControllerK8ServiceCreateHeartBeatEx)
-    call_resourceControllerK8ServiceCreateHeartBeatEx
-    ;;
-    resourceControllerK8ServiceCreateJob)
-    call_resourceControllerK8ServiceCreateJob
-    ;;
-    resourceControllerK8ServiceCreateJobExecution)
-    call_resourceControllerK8ServiceCreateJobExecution
-    ;;
-    resourceControllerK8ServiceCreateKeypair)
-    call_resourceControllerK8ServiceCreateKeypair
-    ;;
-    resourceControllerK8ServiceDeleteController)
-    call_resourceControllerK8ServiceDeleteController
-    ;;
-    resourceControllerK8ServiceDeleteEdgeTenant)
-    call_resourceControllerK8ServiceDeleteEdgeTenant
-    ;;
-    resourceControllerK8ServiceDeleteEdgeTenantRequest)
-    call_resourceControllerK8ServiceDeleteEdgeTenantRequest
-    ;;
-    resourceControllerK8ServiceDeleteJob)
-    call_resourceControllerK8ServiceDeleteJob
-    ;;
-    resourceControllerK8ServiceDownloadControllerLogs)
-    call_resourceControllerK8ServiceDownloadControllerLogs
-    ;;
-    resourceControllerK8ServiceGetControllerApps)
-    call_resourceControllerK8ServiceGetControllerApps
-    ;;
-    resourceControllerK8ServiceGetControllerCommands)
-    call_resourceControllerK8ServiceGetControllerCommands
-    ;;
-    resourceControllerK8ServiceGetControllerJobs)
-    call_resourceControllerK8ServiceGetControllerJobs
-    ;;
-    resourceControllerK8ServiceGetControllerStatus)
-    call_resourceControllerK8ServiceGetControllerStatus
-    ;;
-    resourceControllerK8ServiceGetControllers)
-    call_resourceControllerK8ServiceGetControllers
-    ;;
-    resourceControllerK8ServiceGetControllersWithStatus)
-    call_resourceControllerK8ServiceGetControllersWithStatus
-    ;;
-    resourceControllerK8ServiceGetJob)
-    call_resourceControllerK8ServiceGetJob
-    ;;
-    resourceControllerK8ServiceGetJobExecution)
-    call_resourceControllerK8ServiceGetJobExecution
-    ;;
-    resourceControllerK8ServiceGetJobExecutions)
-    call_resourceControllerK8ServiceGetJobExecutions
-    ;;
-    resourceControllerK8ServiceGetJobStatus)
-    call_resourceControllerK8ServiceGetJobStatus
-    ;;
-    resourceControllerK8ServiceGetTenantApp)
-    call_resourceControllerK8ServiceGetTenantApp
-    ;;
-    resourceControllerK8ServiceGetTenantApps)
-    call_resourceControllerK8ServiceGetTenantApps
-    ;;
-    resourceControllerK8ServiceGetTenantJobs)
-    call_resourceControllerK8ServiceGetTenantJobs
-    ;;
-    resourceControllerK8ServiceGetVersion)
-    call_resourceControllerK8ServiceGetVersion
-    ;;
-    resourceControllerK8ServiceInstallEdgeTenantRequest)
-    call_resourceControllerK8ServiceInstallEdgeTenantRequest
-    ;;
-    resourceControllerK8ServiceQueryControllerLogs)
-    call_resourceControllerK8ServiceQueryControllerLogs
-    ;;
-    resourceControllerK8ServiceUpdateCommand)
-    call_resourceControllerK8ServiceUpdateCommand
-    ;;
-    resourceControllerK8ServiceUpdateController)
-    call_resourceControllerK8ServiceUpdateController
-    ;;
-    resourceControllerK8ServiceUpdateControllerStatus)
-    call_resourceControllerK8ServiceUpdateControllerStatus
-    ;;
-    resourceControllerK8ServiceUpdateEdgeTenantRequest)
-    call_resourceControllerK8ServiceUpdateEdgeTenantRequest
-    ;;
-    resourceControllerK8ServiceUpdateJob)
-    call_resourceControllerK8ServiceUpdateJob
-    ;;
-    resourceControllerK8ServiceUpdateJobExecution)
-    call_resourceControllerK8ServiceUpdateJobExecution
-    ;;
-    resourceControllerK8ServiceUpdateJobStatus)
-    call_resourceControllerK8ServiceUpdateJobStatus
     ;;
     riskAnalyticsControllerEnableDisableRiskEventFeedback)
     call_riskAnalyticsControllerEnableDisableRiskEventFeedback
@@ -42437,45 +42567,6 @@ case $operation in
     streamsServiceListAWSStreams)
     call_streamsServiceListAWSStreams
     ;;
-    templatesServiceCreateIntegration)
-    call_templatesServiceCreateIntegration
-    ;;
-    templatesServiceCreateTemplate)
-    call_templatesServiceCreateTemplate
-    ;;
-    templatesServiceDeleteIntegration)
-    call_templatesServiceDeleteIntegration
-    ;;
-    templatesServiceDeleteTemplate)
-    call_templatesServiceDeleteTemplate
-    ;;
-    templatesServiceGetOriginDefaultContent)
-    call_templatesServiceGetOriginDefaultContent
-    ;;
-    templatesServiceGetOriginFields)
-    call_templatesServiceGetOriginFields
-    ;;
-    templatesServiceGetTemplate)
-    call_templatesServiceGetTemplate
-    ;;
-    templatesServiceGetTemplates)
-    call_templatesServiceGetTemplates
-    ;;
-    templatesServiceGetTemplatesForEdge)
-    call_templatesServiceGetTemplatesForEdge
-    ;;
-    templatesServiceTestTemplate)
-    call_templatesServiceTestTemplate
-    ;;
-    templatesServiceTransformTemplate)
-    call_templatesServiceTransformTemplate
-    ;;
-    templatesServiceTransformTemplateJSON)
-    call_templatesServiceTransformTemplateJSON
-    ;;
-    templatesServiceUpdateTemplate)
-    call_templatesServiceUpdateTemplate
-    ;;
     tenantuserCreateAPIKey)
     call_tenantuserCreateAPIKey
     ;;
@@ -42562,6 +42653,27 @@ case $operation in
     ;;
     universalConnectorManagerUploadPlugin)
     call_universalConnectorManagerUploadPlugin
+    ;;
+    vulnerabilityManagementServiceCreateVulnerability)
+    call_vulnerabilityManagementServiceCreateVulnerability
+    ;;
+    vulnerabilityManagementServiceGetFiltersForVulnerabilities)
+    call_vulnerabilityManagementServiceGetFiltersForVulnerabilities
+    ;;
+    vulnerabilityManagementServiceGetVulnerabilities)
+    call_vulnerabilityManagementServiceGetVulnerabilities
+    ;;
+    vulnerabilityManagementServiceGetVulnerabilitiesStats)
+    call_vulnerabilityManagementServiceGetVulnerabilitiesStats
+    ;;
+    vulnerabilityManagementServiceGetVulnerability)
+    call_vulnerabilityManagementServiceGetVulnerability
+    ;;
+    vulnerabilityManagementServiceUpdateVulnerabilities)
+    call_vulnerabilityManagementServiceUpdateVulnerabilities
+    ;;
+    vulnerabilityManagementServiceVulnerabilityIngestionManualTrigger)
+    call_vulnerabilityManagementServiceVulnerabilityIngestionManualTrigger
     ;;
     workflowCreateCase)
     call_workflowCreateCase

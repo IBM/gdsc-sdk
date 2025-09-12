@@ -36,11 +36,13 @@ class TestPolicybuilderv3CreateUpdatePolicyResponse(unittest.TestCase):
         if include_optional:
             return Policybuilderv3CreateUpdatePolicyResponse(
                 activation_status = 56,
-                edge_activation_info = ibm_gdsc_sdk_saas.models.information_about_policy_activated_on_edge.Information about policy activated on edge(
-                    activation_order = 56, 
-                    activation_status = 'NOT_ACTIVATED', 
-                    activation_timestamp = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                    edge_id = '', ),
+                edge_activation_info = [
+                    ibm_gdsc_sdk_saas.models.information_about_policy_activated_on_edge.Information about policy activated on edge(
+                        activation_order = 56, 
+                        activation_status = 'NOT_ACTIVATED', 
+                        activation_timestamp = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                        edge_id = '', )
+                    ],
                 installed_flag = True,
                 policy_id = '',
                 policy_name = '',

@@ -6,6 +6,7 @@ Policy object for creating/storing the policy.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**activation_frequency** | **str** |  | [optional] 
 **activation_status** | **int** | activation_status identifier: 1001 -&gt; install with no issues, 1002-&gt; installed with issues, 1003 -&gt; not installed. | [optional] 
 **contains_rule_types** | [**List[Policybuilderv3RuleType]**](Policybuilderv3RuleType.md) | Indicates different type of rule types contained by the policy. | [optional] 
 **control_flow** | [**Policybuilderv3ControlFlow**](Policybuilderv3ControlFlow.md) |  | [optional] 
@@ -14,6 +15,7 @@ Name | Type | Description | Notes
 **installed_order** | **int** | Variable to indicate the order of the installed policy. | [optional] 
 **installed_timestamp** | **str** | Timestamp to indicate when the policy was installed. | [optional] 
 **last_edited_timestamp** | **str** | Timestamp to indicate when the policy was last edited. | [optional] 
+**last_revised_by** | **str** |  | [optional] 
 **log_flat** | **bool** | Flag to indicate whether the policy has log flat enabled or not. | [optional] 
 **no_of_rules** | **int** | Indicates number of rules in the policy. | [optional] 
 **policy_id** | **str** | Policy Id. | [optional] 
@@ -21,6 +23,7 @@ Name | Type | Description | Notes
 **policy_import_state** | [**Policybuilderv3ImportState**](Policybuilderv3ImportState.md) |  | [optional] 
 **policy_name** | **str** | Policy Name. | [optional] 
 **policy_type** | [**Policybuilderv3PolicyType**](Policybuilderv3PolicyType.md) |  | [optional] 
+**product_id** | [**Policybuilderv3ProductType**](Policybuilderv3ProductType.md) |  | [optional] 
 **rules_on_flat** | **bool** | Flag to indicate whether the policy has rules on flat enabled or not. | [optional] 
 **template** | **bool** | Flag to indicate whether the policy is a template policy or not. | [optional] 
 **ui_sequence** | **int** | Sequence in which the policy will be displayed in the UI. | [optional] 

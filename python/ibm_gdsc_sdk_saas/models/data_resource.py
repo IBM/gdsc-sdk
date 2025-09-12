@@ -39,7 +39,8 @@ class DataResource(BaseModel):
     is_reviewed: Optional[StrictBool] = Field(default=None, alias="isReviewed")
     link: Optional[StrictStr] = None
     stats: Optional[DataResourceStats] = None
-    __properties: ClassVar[List[str]] = ["dataResourceId", "dataResourceName", "dataStoreId", "dataResourceType", "dataResourceOwner", "sizeInBytes", "sizeFormatted", "creationTime", "modificationTime", "isReviewed", "link", "stats"]
+    path: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["dataResourceId", "dataResourceName", "dataStoreId", "dataResourceType", "dataResourceOwner", "sizeInBytes", "sizeFormatted", "creationTime", "modificationTime", "isReviewed", "link", "stats", "path"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -106,7 +107,8 @@ class DataResource(BaseModel):
             "modificationTime": obj.get("modificationTime"),
             "isReviewed": obj.get("isReviewed"),
             "link": obj.get("link"),
-            "stats": DataResourceStats.from_dict(obj["stats"]) if obj.get("stats") is not None else None
+            "stats": DataResourceStats.from_dict(obj["stats"]) if obj.get("stats") is not None else None,
+            "path": obj.get("path")
         })
         return _obj
 

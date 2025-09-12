@@ -44,6 +44,7 @@ export enum VendorCertificateCertificateNameEnum {
     Sox = 'SOX',
     Fisma = 'FISMA',
     Lba = 'LBA',
+    Glba = 'GLBA',
     Iso27001 = 'ISO 27001',
     Iso27018 = 'ISO 27018',
     Nist = 'NIST',

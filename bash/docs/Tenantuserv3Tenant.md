@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **name** | **string** | The descriptive name | [optional] [default to null]
 **partUnderscorenumber** | **string** |  | [optional] [default to null]
 **settings** | **map[String, string]** |  | [optional] [default to null]
+**status** | **string** | Status of the tenant | [optional] [default to null]
 **tenantUnderscorecapabilities** | **map[String, boolean]** | Capabilities enabled for a Tenant i.e GI only or GI + DSPM | [optional] [default to null]
 **tenantUnderscoreid** | **string** |  | [optional] [default to null]
 **uid** | **string** |  | [optional] [default to null]

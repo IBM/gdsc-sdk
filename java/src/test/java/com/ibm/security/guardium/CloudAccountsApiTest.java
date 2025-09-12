@@ -18,12 +18,15 @@ import com.ibm.security.guardium.AddAnalyzedRegion200Response;
 import com.ibm.security.guardium.AddAnalyzedRegionRequest;
 import com.ibm.security.guardium.AddCloudAccounts200Response;
 import com.ibm.security.guardium.AddCloudAccountsRequest;
+import com.ibm.security.guardium.AuthCode;
 import com.ibm.security.guardium.AuthInfo;
 import com.ibm.security.guardium.AuthUrl;
 import com.ibm.security.guardium.Authenticate400Response;
 import com.ibm.security.guardium.ClientInfo;
 import com.ibm.security.guardium.CloudAccountInstallationStatus;
 import com.ibm.security.guardium.CloudServiceProvider;
+import com.ibm.security.guardium.DBMetadataInfo;
+import com.ibm.security.guardium.DbInfo;
 import com.ibm.security.guardium.GetAnalyzedRegionStatus200Response;
 import com.ibm.security.guardium.LinkedAccounts;
 import com.ibm.security.guardium.Office365TenantInfo;
@@ -134,6 +137,19 @@ public class CloudAccountsApiTest {
     }
 
     /**
+     * Generate a Salesforce consent URL
+     *
+     * Generate an administrator consent URL for Salesforce integration.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void generateSalesforceAuthUrlTest() throws ApiException {
+        AuthUrl response = api.generateSalesforceAuthUrl();
+        // TODO: test validations
+    }
+
+    /**
      * Generate a Slack authentication URL
      *
      * Generate a Slack authentication URL.
@@ -200,6 +216,20 @@ public class CloudAccountsApiTest {
         CloudServiceProvider cloudProvider = null;
         String cloudAccountId = null;
         CloudAccountInstallationStatus response = api.getCloudAccountInstallationStatus(cloudProvider, cloudAccountId);
+        // TODO: test validations
+    }
+
+    /**
+     * Get the metadata details of snowflake database.
+     *
+     * Get the metadata details of snowflake database from saas-asset-store.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getDatabaseMetadataTest() throws ApiException {
+        DbInfo dbInfo = null;
+        DBMetadataInfo response = api.getDatabaseMetadata(dbInfo);
         // TODO: test validations
     }
 
@@ -311,6 +341,20 @@ public class CloudAccountsApiTest {
     public void submitOffice365TenantInfoTest() throws ApiException {
         TenantInfo tenantInfo = null;
         Office365TenantInfo response = api.submitOffice365TenantInfo(tenantInfo);
+        // TODO: test validations
+    }
+
+    /**
+     * Submit Salesforce customer information
+     *
+     * Submit customer information for Salesforce integration.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void submitSalesforceAuthCodeTest() throws ApiException {
+        AuthCode authCode = null;
+        api.submitSalesforceAuthCode(authCode);
         // TODO: test validations
     }
 

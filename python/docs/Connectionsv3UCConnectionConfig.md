@@ -1,6 +1,6 @@
 # Connectionsv3UCConnectionConfig
 
-UC connection config with connecion id.
+UC connection config with connection id.
 
 ## Properties
 

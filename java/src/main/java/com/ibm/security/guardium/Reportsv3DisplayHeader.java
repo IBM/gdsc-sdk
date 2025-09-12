@@ -19,6 +19,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.ibm.security.guardium.Reportsv3AggregationType;
 import com.ibm.security.guardium.Reportsv3FieldName;
 import com.ibm.security.guardium.Reportsv3HeaderDescription;
 import java.io.IOException;
@@ -51,8 +52,12 @@ import com.ibm.security.JSON;
 /**
  * DisplayHeader that have the header name and the translated value.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
 public class Reportsv3DisplayHeader {
+  public static final String SERIALIZED_NAME_AGGREGATION_TYPE = "aggregation_type";
+  @SerializedName(SERIALIZED_NAME_AGGREGATION_TYPE)
+  private Reportsv3AggregationType aggregationType = Reportsv3AggregationType.UNDEFINED_AGG_TYPE;
+
   public static final String SERIALIZED_NAME_FIELD_NAME = "field_name";
   @SerializedName(SERIALIZED_NAME_FIELD_NAME)
   private Reportsv3FieldName fieldName;
@@ -79,6 +84,25 @@ public class Reportsv3DisplayHeader {
 
   public Reportsv3DisplayHeader() {
   }
+
+  public Reportsv3DisplayHeader aggregationType(Reportsv3AggregationType aggregationType) {
+    this.aggregationType = aggregationType;
+    return this;
+  }
+
+   /**
+   * Get aggregationType
+   * @return aggregationType
+  **/
+  @javax.annotation.Nullable
+  public Reportsv3AggregationType getAggregationType() {
+    return aggregationType;
+  }
+
+  public void setAggregationType(Reportsv3AggregationType aggregationType) {
+    this.aggregationType = aggregationType;
+  }
+
 
   public Reportsv3DisplayHeader fieldName(Reportsv3FieldName fieldName) {
     this.fieldName = fieldName;
@@ -204,7 +228,8 @@ public class Reportsv3DisplayHeader {
       return false;
     }
     Reportsv3DisplayHeader reportsv3DisplayHeader = (Reportsv3DisplayHeader) o;
-    return Objects.equals(this.fieldName, reportsv3DisplayHeader.fieldName) &&
+    return Objects.equals(this.aggregationType, reportsv3DisplayHeader.aggregationType) &&
+        Objects.equals(this.fieldName, reportsv3DisplayHeader.fieldName) &&
         Objects.equals(this.headerDescription, reportsv3DisplayHeader.headerDescription) &&
         Objects.equals(this.headerId, reportsv3DisplayHeader.headerId) &&
         Objects.equals(this.headerName, reportsv3DisplayHeader.headerName) &&
@@ -214,13 +239,14 @@ public class Reportsv3DisplayHeader {
 
   @Override
   public int hashCode() {
-    return Objects.hash(fieldName, headerDescription, headerId, headerName, sequence, tableName);
+    return Objects.hash(aggregationType, fieldName, headerDescription, headerId, headerName, sequence, tableName);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Reportsv3DisplayHeader {\n");
+    sb.append("    aggregationType: ").append(toIndentedString(aggregationType)).append("\n");
     sb.append("    fieldName: ").append(toIndentedString(fieldName)).append("\n");
     sb.append("    headerDescription: ").append(toIndentedString(headerDescription)).append("\n");
     sb.append("    headerId: ").append(toIndentedString(headerId)).append("\n");
@@ -249,6 +275,7 @@ public class Reportsv3DisplayHeader {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
+    openapiFields.add("aggregation_type");
     openapiFields.add("field_name");
     openapiFields.add("header_description");
     openapiFields.add("header_id");
@@ -281,6 +308,10 @@ public class Reportsv3DisplayHeader {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the optional field `aggregation_type`
+      if (jsonObj.get("aggregation_type") != null && !jsonObj.get("aggregation_type").isJsonNull()) {
+        Reportsv3AggregationType.validateJsonElement(jsonObj.get("aggregation_type"));
+      }
       // validate the optional field `field_name`
       if (jsonObj.get("field_name") != null && !jsonObj.get("field_name").isJsonNull()) {
         Reportsv3FieldName.validateJsonElement(jsonObj.get("field_name"));

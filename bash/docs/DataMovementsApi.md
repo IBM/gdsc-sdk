@@ -4,15 +4,15 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getActualFlow**](DataMovementsApi.md#getActualFlow) | **GET** /api/v1/dspm/dataMovements/actualFlows/{id} | Get actual flow by providing its ID
-[**getActualFlowsSummary**](DataMovementsApi.md#getActualFlowsSummary) | **GET** /api/v1/dspm/dataMovements/actualFlows/summary | Get summary of actual flows
-[**getPotentialFlow**](DataMovementsApi.md#getPotentialFlow) | **GET** /api/v1/dspm/dataMovements/potentialFlows/{flowId} | Get potential flow by providing its ID
-[**getPotentialFlowPath**](DataMovementsApi.md#getPotentialFlowPath) | **GET** /api/v1/dspm/dataMovements/potentialFlows/paths/{flowPathId} | Get potential flow path by providing its ID
-[**getPotentialFlowsSummary**](DataMovementsApi.md#getPotentialFlowsSummary) | **GET** /api/v1/dspm/dataMovements/potentialFlows/summary | Get summary of potential flows according to the filter applied
-[**listActualFlowPaths**](DataMovementsApi.md#listActualFlowPaths) | **GET** /api/v1/dspm/dataMovements/actualFlowPaths | Get summary of actual flows according to the filter applied
-[**listActualFlows**](DataMovementsApi.md#listActualFlows) | **GET** /api/v1/dspm/dataMovements/actualFlows | List actual flows
-[**listPotentialFlows**](DataMovementsApi.md#listPotentialFlows) | **GET** /api/v1/dspm/dataMovements/potentialFlows | List potential flows
-[**listPotentialFlowsPaths**](DataMovementsApi.md#listPotentialFlowsPaths) | **GET** /api/v1/dspm/dataMovements/potentialFlows/paths | List potential flow paths
+[**getActualFlow**](DataMovementsApi.md#getActualFlow) | **GET** /api/v2/dspm/dataMovements/actualFlows/{id} | Get actual flow by providing its ID
+[**getActualFlowsSummary**](DataMovementsApi.md#getActualFlowsSummary) | **GET** /api/v2/dspm/dataMovements/actualFlows/summary | Get summary of actual flows
+[**getPotentialFlow**](DataMovementsApi.md#getPotentialFlow) | **GET** /api/v2/dspm/dataMovements/potentialFlows/{flowId} | Get potential flow by providing its ID
+[**getPotentialFlowPath**](DataMovementsApi.md#getPotentialFlowPath) | **GET** /api/v2/dspm/dataMovements/potentialFlows/paths/{flowPathId} | Get potential flow path by providing its ID
+[**getPotentialFlowsSummary**](DataMovementsApi.md#getPotentialFlowsSummary) | **GET** /api/v2/dspm/dataMovements/potentialFlows/summary | Get summary of potential flows according to the filter applied
+[**listActualFlowPaths**](DataMovementsApi.md#listActualFlowPaths) | **GET** /api/v2/dspm/dataMovements/actualFlowPaths | Get summary of actual flows according to the filter applied
+[**listActualFlows**](DataMovementsApi.md#listActualFlows) | **GET** /api/v2/dspm/dataMovements/actualFlows | List actual flows
+[**listPotentialFlows**](DataMovementsApi.md#listPotentialFlows) | **GET** /api/v2/dspm/dataMovements/potentialFlows | List potential flows
+[**listPotentialFlowsPaths**](DataMovementsApi.md#listPotentialFlowsPaths) | **GET** /api/v2/dspm/dataMovements/potentialFlows/paths | List potential flow paths
 
 
 

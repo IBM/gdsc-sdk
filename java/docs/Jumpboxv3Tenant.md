@@ -16,6 +16,7 @@ Tenant contains id, name, and settings for the specified tenant.
 |**name** | **String** | The descriptive name. |  [optional] |
 |**partNumber** | **String** | Part number. |  [optional] |
 |**settings** | **Map&lt;String, String&gt;** | Settings pertaining to all users of this tenant. |  [optional] |
+|**status** | **String** |  |  [optional] |
 |**tenantCapabilities** | **Map&lt;String, Boolean&gt;** |  |  [optional] |
 |**tenantId** | **String** | The unique id for the tenant object. |  [optional] |
 |**uid** | **String** | Email. |  [optional] |

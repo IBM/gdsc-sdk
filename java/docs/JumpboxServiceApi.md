@@ -5,15 +5,22 @@ All URIs are relative to *http://localhost*
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
 | [**jumpboxServiceAuthorize**](JumpboxServiceApi.md#jumpboxServiceAuthorize) | **POST** /api/v3/authorization | Summary: Authorize Description: Authenticate a user and return a JWT. |
+| [**jumpboxServiceDeleteAccount**](JumpboxServiceApi.md#jumpboxServiceDeleteAccount) | **DELETE** /api/v3/accounts/{account_id} | Summary: Delete account Description: Delete an account. |
 | [**jumpboxServiceDeleteTenant**](JumpboxServiceApi.md#jumpboxServiceDeleteTenant) | **DELETE** /api/v3/tenants/{tenant_id} | Summary: Delete tenant Description: Delete a tenant. |
 | [**jumpboxServiceDeleteUser**](JumpboxServiceApi.md#jumpboxServiceDeleteUser) | **DELETE** /api/v3/users/{user_id} | Summary: Delete user Description: Delete the user. |
+| [**jumpboxServiceGetAccount**](JumpboxServiceApi.md#jumpboxServiceGetAccount) | **GET** /api/v3/accounts/{account_id} | Summary: Get account Description: Get an account. |
+| [**jumpboxServiceGetAccounts**](JumpboxServiceApi.md#jumpboxServiceGetAccounts) | **GET** /api/v3/accounts | Summary: Get accounts Description: Get all accounts based on UID. |
 | [**jumpboxServiceGetTenant**](JumpboxServiceApi.md#jumpboxServiceGetTenant) | **GET** /api/v3/tenants/{tenant_id} | Summary: Get tenant Description: Get a tenant. |
 | [**jumpboxServiceGetTenants**](JumpboxServiceApi.md#jumpboxServiceGetTenants) | **GET** /api/v3/tenants | Summary: Get tenants Description: Get all tenant base on UID. |
 | [**jumpboxServiceGetUsers**](JumpboxServiceApi.md#jumpboxServiceGetUsers) | **GET** /api/v3/users | Summary: Get users Description: Get all users base on a tenantID. |
+| [**jumpboxServicePostAccount**](JumpboxServiceApi.md#jumpboxServicePostAccount) | **POST** /api/v3/accounts | Summary: Post account Description: Create an Account. |
 | [**jumpboxServicePostTenants**](JumpboxServiceApi.md#jumpboxServicePostTenants) | **POST** /api/v3/tenants | Summary: Post tenants Description: Create a tenant. |
 | [**jumpboxServicePostUsers**](JumpboxServiceApi.md#jumpboxServicePostUsers) | **POST** /api/v3/users | Summary: Post users Description: Create users. |
+| [**jumpboxServiceResumeAccount**](JumpboxServiceApi.md#jumpboxServiceResumeAccount) | **PATCH** /api/v3/accounts/{account_id}/resume | Summary: Resume account Description: Resume an account. |
 | [**jumpboxServiceSearchUsers**](JumpboxServiceApi.md#jumpboxServiceSearchUsers) | **POST** /api/v3/users/search | Summary: Search users Description: Search for all users matching the provided string. |
+| [**jumpboxServiceSuspendAccount**](JumpboxServiceApi.md#jumpboxServiceSuspendAccount) | **PATCH** /api/v3/accounts/{account_id}/suspend | Summary: Suspend Account Description: Suspend an account |
 | [**jumpboxServiceTestUser**](JumpboxServiceApi.md#jumpboxServiceTestUser) | **POST** /api/v3/users/test | Summary: Test user Description: Test a user lookup to a given LDAP. |
+| [**jumpboxServiceUpdateAccount**](JumpboxServiceApi.md#jumpboxServiceUpdateAccount) | **PATCH** /api/v3/accounts/{account_id} | Summary: Update Account Description: Updates an account. |
 | [**jumpboxServiceUpdateTenant**](JumpboxServiceApi.md#jumpboxServiceUpdateTenant) | **PATCH** /api/v3/tenants/{tenant_id} | Summary: Update tenant Description: Update a tenant. |
 | [**jumpboxServiceUpdateUsers**](JumpboxServiceApi.md#jumpboxServiceUpdateUsers) | **PATCH** /api/v3/users | Summary: Update users Description: Update an array of users. |
 
@@ -83,6 +90,74 @@ public class Example {
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
+<a id="jumpboxServiceDeleteAccount"></a>
+# **jumpboxServiceDeleteAccount**
+> Jumpboxv3DeleteAccountResponse jumpboxServiceDeleteAccount(accountId)
+
+Summary: Delete account Description: Delete an account.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.JumpboxServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    JumpboxServiceApi apiInstance = new JumpboxServiceApi(defaultClient);
+    String accountId = "accountId_example"; // String | Account id.
+    try {
+      Jumpboxv3DeleteAccountResponse result = apiInstance.jumpboxServiceDeleteAccount(accountId);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling JumpboxServiceApi#jumpboxServiceDeleteAccount");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **accountId** | **String**| Account id. | |
+
+### Return type
+
+[**Jumpboxv3DeleteAccountResponse**](Jumpboxv3DeleteAccountResponse.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 ### HTTP response details
@@ -220,6 +295,157 @@ public class Example {
 ### Return type
 
 **Object**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
+<a id="jumpboxServiceGetAccount"></a>
+# **jumpboxServiceGetAccount**
+> Jumpboxv3GetAccountResponse jumpboxServiceGetAccount(accountId, includeInactive, includeNotReady)
+
+Summary: Get account Description: Get an account.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.JumpboxServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    JumpboxServiceApi apiInstance = new JumpboxServiceApi(defaultClient);
+    String accountId = "accountId_example"; // String | Account id.
+    Boolean includeInactive = true; // Boolean | Include inactive.
+    Boolean includeNotReady = true; // Boolean | Include tenants that are not ready(are in state of being created or deleted).
+    try {
+      Jumpboxv3GetAccountResponse result = apiInstance.jumpboxServiceGetAccount(accountId, includeInactive, includeNotReady);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling JumpboxServiceApi#jumpboxServiceGetAccount");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **accountId** | **String**| Account id. | |
+| **includeInactive** | **Boolean**| Include inactive. | [optional] |
+| **includeNotReady** | **Boolean**| Include tenants that are not ready(are in state of being created or deleted). | [optional] |
+
+### Return type
+
+[**Jumpboxv3GetAccountResponse**](Jumpboxv3GetAccountResponse.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
+<a id="jumpboxServiceGetAccounts"></a>
+# **jumpboxServiceGetAccounts**
+> Jumpboxv3GetAccountsResponse jumpboxServiceGetAccounts(uid, externalId, includeInactive, includeNotReady)
+
+Summary: Get accounts Description: Get all accounts based on UID.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.JumpboxServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    JumpboxServiceApi apiInstance = new JumpboxServiceApi(defaultClient);
+    String uid = "uid_example"; // String | Email.
+    String externalId = "externalId_example"; // String | External id.
+    Boolean includeInactive = true; // Boolean | Include inactive.
+    Boolean includeNotReady = true; // Boolean | Include tenants that are not ready(are in state of being created or deleted).
+    try {
+      Jumpboxv3GetAccountsResponse result = apiInstance.jumpboxServiceGetAccounts(uid, externalId, includeInactive, includeNotReady);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling JumpboxServiceApi#jumpboxServiceGetAccounts");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **uid** | **String**| Email. | [optional] |
+| **externalId** | **String**| External id. | [optional] |
+| **includeInactive** | **Boolean**| Include inactive. | [optional] |
+| **includeNotReady** | **Boolean**| Include tenants that are not ready(are in state of being created or deleted). | [optional] |
+
+### Return type
+
+[**Jumpboxv3GetAccountsResponse**](Jumpboxv3GetAccountsResponse.md)
 
 ### Authorization
 
@@ -460,6 +686,79 @@ public class Example {
 | **200** | A successful response. |  -  |
 | **0** | An unexpected error response. |  -  |
 
+<a id="jumpboxServicePostAccount"></a>
+# **jumpboxServicePostAccount**
+> Jumpboxv3PostAccountResponse jumpboxServicePostAccount(jumpboxv3PostAccountRequest)
+
+Summary: Post account Description: Create an Account.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.JumpboxServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    JumpboxServiceApi apiInstance = new JumpboxServiceApi(defaultClient);
+    Jumpboxv3PostAccountRequest jumpboxv3PostAccountRequest = new Jumpboxv3PostAccountRequest(); // Jumpboxv3PostAccountRequest | 
+    try {
+      Jumpboxv3PostAccountResponse result = apiInstance.jumpboxServicePostAccount(jumpboxv3PostAccountRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling JumpboxServiceApi#jumpboxServicePostAccount");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jumpboxv3PostAccountRequest** | [**Jumpboxv3PostAccountRequest**](Jumpboxv3PostAccountRequest.md)|  | |
+
+### Return type
+
+[**Jumpboxv3PostAccountResponse**](Jumpboxv3PostAccountResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
 <a id="jumpboxServicePostTenants"></a>
 # **jumpboxServicePostTenants**
 > Jumpboxv3PostTenantsResponse jumpboxServicePostTenants(jumpboxv3PostTenantsRequest)
@@ -606,6 +905,74 @@ public class Example {
 | **200** | A successful response. |  -  |
 | **0** | An unexpected error response. |  -  |
 
+<a id="jumpboxServiceResumeAccount"></a>
+# **jumpboxServiceResumeAccount**
+> Jumpboxv3ResumeAccountResponse jumpboxServiceResumeAccount(accountId)
+
+Summary: Resume account Description: Resume an account.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.JumpboxServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    JumpboxServiceApi apiInstance = new JumpboxServiceApi(defaultClient);
+    String accountId = "accountId_example"; // String | account_id represents the user's account ID
+    try {
+      Jumpboxv3ResumeAccountResponse result = apiInstance.jumpboxServiceResumeAccount(accountId);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling JumpboxServiceApi#jumpboxServiceResumeAccount");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **accountId** | **String**| account_id represents the user&#39;s account ID | |
+
+### Return type
+
+[**Jumpboxv3ResumeAccountResponse**](Jumpboxv3ResumeAccountResponse.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
 <a id="jumpboxServiceSearchUsers"></a>
 # **jumpboxServiceSearchUsers**
 > Jumpboxv3SearchUsersResponse jumpboxServiceSearchUsers(jumpboxv3SearchUsersRequest)
@@ -679,6 +1046,74 @@ public class Example {
 | **200** | A successful response. |  -  |
 | **0** | An unexpected error response. |  -  |
 
+<a id="jumpboxServiceSuspendAccount"></a>
+# **jumpboxServiceSuspendAccount**
+> Jumpboxv3SuspendAccountResponse jumpboxServiceSuspendAccount(accountId)
+
+Summary: Suspend Account Description: Suspend an account
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.JumpboxServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    JumpboxServiceApi apiInstance = new JumpboxServiceApi(defaultClient);
+    String accountId = "accountId_example"; // String | account_id represents the user's account ID
+    try {
+      Jumpboxv3SuspendAccountResponse result = apiInstance.jumpboxServiceSuspendAccount(accountId);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling JumpboxServiceApi#jumpboxServiceSuspendAccount");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **accountId** | **String**| account_id represents the user&#39;s account ID | |
+
+### Return type
+
+[**Jumpboxv3SuspendAccountResponse**](Jumpboxv3SuspendAccountResponse.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
 <a id="jumpboxServiceTestUser"></a>
 # **jumpboxServiceTestUser**
 > Jumpboxv3TestUserResponse jumpboxServiceTestUser(jumpboxv3TestUserRequest)
@@ -740,6 +1175,76 @@ public class Example {
 ### Authorization
 
 [BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
+<a id="jumpboxServiceUpdateAccount"></a>
+# **jumpboxServiceUpdateAccount**
+> Jumpboxv3UpdateAccountResponse jumpboxServiceUpdateAccount(accountId, jumpboxv3UpdateAccountRequest)
+
+Summary: Update Account Description: Updates an account.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.JumpboxServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    JumpboxServiceApi apiInstance = new JumpboxServiceApi(defaultClient);
+    String accountId = "accountId_example"; // String | Account id.
+    Jumpboxv3UpdateAccountRequest jumpboxv3UpdateAccountRequest = new Jumpboxv3UpdateAccountRequest(); // Jumpboxv3UpdateAccountRequest | 
+    try {
+      Jumpboxv3UpdateAccountResponse result = apiInstance.jumpboxServiceUpdateAccount(accountId, jumpboxv3UpdateAccountRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling JumpboxServiceApi#jumpboxServiceUpdateAccount");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **accountId** | **String**| Account id. | |
+| **jumpboxv3UpdateAccountRequest** | [**Jumpboxv3UpdateAccountRequest**](Jumpboxv3UpdateAccountRequest.md)|  | |
+
+### Return type
+
+[**Jumpboxv3UpdateAccountResponse**](Jumpboxv3UpdateAccountResponse.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 

@@ -19,8 +19,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
+from ibm_gdsc_sdk_saas.models.notificationsv3_origin import Notificationsv3Origin
 from ibm_gdsc_sdk_saas.models.schedulerv3_recipient import Schedulerv3Recipient
-from ibm_gdsc_sdk_saas.models.templatesv3_origin import Templatesv3Origin
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,7 +28,7 @@ class Notificationsv3PostNotificationRecordRequest(BaseModel):
     """
     Notificationsv3PostNotificationRecordRequest
     """ # noqa: E501
-    origin: Optional[Templatesv3Origin] = None
+    origin: Optional[Notificationsv3Origin] = None
     origin_data: Optional[StrictStr] = None
     target_receivers: Optional[List[Schedulerv3Recipient]] = None
     template_data: Optional[Dict[str, StrictStr]] = None

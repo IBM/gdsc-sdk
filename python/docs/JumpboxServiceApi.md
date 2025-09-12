@@ -5,15 +5,22 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**jumpbox_service_authorize**](JumpboxServiceApi.md#jumpbox_service_authorize) | **POST** /api/v3/authorization | Summary: Authorize Description: Authenticate a user and return a JWT.
+[**jumpbox_service_delete_account**](JumpboxServiceApi.md#jumpbox_service_delete_account) | **DELETE** /api/v3/accounts/{account_id} | Summary: Delete account Description: Delete an account.
 [**jumpbox_service_delete_tenant**](JumpboxServiceApi.md#jumpbox_service_delete_tenant) | **DELETE** /api/v3/tenants/{tenant_id} | Summary: Delete tenant Description: Delete a tenant.
 [**jumpbox_service_delete_user**](JumpboxServiceApi.md#jumpbox_service_delete_user) | **DELETE** /api/v3/users/{user_id} | Summary: Delete user Description: Delete the user.
+[**jumpbox_service_get_account**](JumpboxServiceApi.md#jumpbox_service_get_account) | **GET** /api/v3/accounts/{account_id} | Summary: Get account Description: Get an account.
+[**jumpbox_service_get_accounts**](JumpboxServiceApi.md#jumpbox_service_get_accounts) | **GET** /api/v3/accounts | Summary: Get accounts Description: Get all accounts based on UID.
 [**jumpbox_service_get_tenant**](JumpboxServiceApi.md#jumpbox_service_get_tenant) | **GET** /api/v3/tenants/{tenant_id} | Summary: Get tenant Description: Get a tenant.
 [**jumpbox_service_get_tenants**](JumpboxServiceApi.md#jumpbox_service_get_tenants) | **GET** /api/v3/tenants | Summary: Get tenants Description: Get all tenant base on UID.
 [**jumpbox_service_get_users**](JumpboxServiceApi.md#jumpbox_service_get_users) | **GET** /api/v3/users | Summary: Get users Description: Get all users base on a tenantID.
+[**jumpbox_service_post_account**](JumpboxServiceApi.md#jumpbox_service_post_account) | **POST** /api/v3/accounts | Summary: Post account Description: Create an Account.
 [**jumpbox_service_post_tenants**](JumpboxServiceApi.md#jumpbox_service_post_tenants) | **POST** /api/v3/tenants | Summary: Post tenants Description: Create a tenant.
 [**jumpbox_service_post_users**](JumpboxServiceApi.md#jumpbox_service_post_users) | **POST** /api/v3/users | Summary: Post users Description: Create users.
+[**jumpbox_service_resume_account**](JumpboxServiceApi.md#jumpbox_service_resume_account) | **PATCH** /api/v3/accounts/{account_id}/resume | Summary: Resume account Description: Resume an account.
 [**jumpbox_service_search_users**](JumpboxServiceApi.md#jumpbox_service_search_users) | **POST** /api/v3/users/search | Summary: Search users Description: Search for all users matching the provided string.
+[**jumpbox_service_suspend_account**](JumpboxServiceApi.md#jumpbox_service_suspend_account) | **PATCH** /api/v3/accounts/{account_id}/suspend | Summary: Suspend Account Description: Suspend an account
 [**jumpbox_service_test_user**](JumpboxServiceApi.md#jumpbox_service_test_user) | **POST** /api/v3/users/test | Summary: Test user Description: Test a user lookup to a given LDAP.
+[**jumpbox_service_update_account**](JumpboxServiceApi.md#jumpbox_service_update_account) | **PATCH** /api/v3/accounts/{account_id} | Summary: Update Account Description: Updates an account.
 [**jumpbox_service_update_tenant**](JumpboxServiceApi.md#jumpbox_service_update_tenant) | **PATCH** /api/v3/tenants/{tenant_id} | Summary: Update tenant Description: Update a tenant.
 [**jumpbox_service_update_users**](JumpboxServiceApi.md#jumpbox_service_update_users) | **PATCH** /api/v3/users | Summary: Update users Description: Update an array of users.
 
@@ -93,6 +100,84 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **jumpbox_service_delete_account**
+> Jumpboxv3DeleteAccountResponse jumpbox_service_delete_account(account_id)
+
+Summary: Delete account Description: Delete an account.
+
+### Example
+
+* Api Key Authentication (ApiKeyAuth):
+
+```python
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.jumpboxv3_delete_account_response import Jumpboxv3DeleteAccountResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ibm_gdsc_sdk_saas.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ibm_gdsc_sdk_saas.JumpboxServiceApi(api_client)
+    account_id = 'account_id_example' # str | Account id.
+
+    try:
+        # Summary: Delete account Description: Delete an account.
+        api_response = api_instance.jumpbox_service_delete_account(account_id)
+        print("The response of JumpboxServiceApi->jumpbox_service_delete_account:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling JumpboxServiceApi->jumpbox_service_delete_account: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **account_id** | **str**| Account id. | 
+
+### Return type
+
+[**Jumpboxv3DeleteAccountResponse**](Jumpboxv3DeleteAccountResponse.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 ### HTTP response details
@@ -250,6 +335,179 @@ Name | Type | Description  | Notes
 ### Return type
 
 **object**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **jumpbox_service_get_account**
+> Jumpboxv3GetAccountResponse jumpbox_service_get_account(account_id, include_inactive=include_inactive, include_not_ready=include_not_ready)
+
+Summary: Get account Description: Get an account.
+
+### Example
+
+* Api Key Authentication (ApiKeyAuth):
+
+```python
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.jumpboxv3_get_account_response import Jumpboxv3GetAccountResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ibm_gdsc_sdk_saas.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ibm_gdsc_sdk_saas.JumpboxServiceApi(api_client)
+    account_id = 'account_id_example' # str | Account id.
+    include_inactive = True # bool | Include inactive. (optional)
+    include_not_ready = True # bool | Include tenants that are not ready(are in state of being created or deleted). (optional)
+
+    try:
+        # Summary: Get account Description: Get an account.
+        api_response = api_instance.jumpbox_service_get_account(account_id, include_inactive=include_inactive, include_not_ready=include_not_ready)
+        print("The response of JumpboxServiceApi->jumpbox_service_get_account:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling JumpboxServiceApi->jumpbox_service_get_account: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **account_id** | **str**| Account id. | 
+ **include_inactive** | **bool**| Include inactive. | [optional] 
+ **include_not_ready** | **bool**| Include tenants that are not ready(are in state of being created or deleted). | [optional] 
+
+### Return type
+
+[**Jumpboxv3GetAccountResponse**](Jumpboxv3GetAccountResponse.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **jumpbox_service_get_accounts**
+> Jumpboxv3GetAccountsResponse jumpbox_service_get_accounts(uid=uid, external_id=external_id, include_inactive=include_inactive, include_not_ready=include_not_ready)
+
+Summary: Get accounts Description: Get all accounts based on UID.
+
+### Example
+
+* Basic Authentication (BasicAuth):
+* Api Key Authentication (ApiKeyAuth):
+
+```python
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.jumpboxv3_get_accounts_response import Jumpboxv3GetAccountsResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ibm_gdsc_sdk_saas.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure HTTP basic authorization: BasicAuth
+configuration = ibm_gdsc_sdk_saas.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ibm_gdsc_sdk_saas.JumpboxServiceApi(api_client)
+    uid = 'uid_example' # str | Email. (optional)
+    external_id = 'external_id_example' # str | External id. (optional)
+    include_inactive = True # bool | Include inactive. (optional)
+    include_not_ready = True # bool | Include tenants that are not ready(are in state of being created or deleted). (optional)
+
+    try:
+        # Summary: Get accounts Description: Get all accounts based on UID.
+        api_response = api_instance.jumpbox_service_get_accounts(uid=uid, external_id=external_id, include_inactive=include_inactive, include_not_ready=include_not_ready)
+        print("The response of JumpboxServiceApi->jumpbox_service_get_accounts:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling JumpboxServiceApi->jumpbox_service_get_accounts: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uid** | **str**| Email. | [optional] 
+ **external_id** | **str**| External id. | [optional] 
+ **include_inactive** | **bool**| Include inactive. | [optional] 
+ **include_not_ready** | **bool**| Include tenants that are not ready(are in state of being created or deleted). | [optional] 
+
+### Return type
+
+[**Jumpboxv3GetAccountsResponse**](Jumpboxv3GetAccountsResponse.md)
 
 ### Authorization
 
@@ -527,6 +785,92 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **jumpbox_service_post_account**
+> Jumpboxv3PostAccountResponse jumpbox_service_post_account(jumpboxv3_post_account_request)
+
+Summary: Post account Description: Create an Account.
+
+### Example
+
+* Basic Authentication (BasicAuth):
+* Api Key Authentication (ApiKeyAuth):
+
+```python
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.jumpboxv3_post_account_request import Jumpboxv3PostAccountRequest
+from ibm_gdsc_sdk_saas.models.jumpboxv3_post_account_response import Jumpboxv3PostAccountResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ibm_gdsc_sdk_saas.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure HTTP basic authorization: BasicAuth
+configuration = ibm_gdsc_sdk_saas.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ibm_gdsc_sdk_saas.JumpboxServiceApi(api_client)
+    jumpboxv3_post_account_request = ibm_gdsc_sdk_saas.Jumpboxv3PostAccountRequest() # Jumpboxv3PostAccountRequest | 
+
+    try:
+        # Summary: Post account Description: Create an Account.
+        api_response = api_instance.jumpbox_service_post_account(jumpboxv3_post_account_request)
+        print("The response of JumpboxServiceApi->jumpbox_service_post_account:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling JumpboxServiceApi->jumpbox_service_post_account: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **jumpboxv3_post_account_request** | [**Jumpboxv3PostAccountRequest**](Jumpboxv3PostAccountRequest.md)|  | 
+
+### Return type
+
+[**Jumpboxv3PostAccountResponse**](Jumpboxv3PostAccountResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **jumpbox_service_post_tenants**
 > Jumpboxv3PostTenantsResponse jumpbox_service_post_tenants(jumpboxv3_post_tenants_request)
 
@@ -699,6 +1043,84 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **jumpbox_service_resume_account**
+> Jumpboxv3ResumeAccountResponse jumpbox_service_resume_account(account_id)
+
+Summary: Resume account Description: Resume an account.
+
+### Example
+
+* Api Key Authentication (ApiKeyAuth):
+
+```python
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.jumpboxv3_resume_account_response import Jumpboxv3ResumeAccountResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ibm_gdsc_sdk_saas.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ibm_gdsc_sdk_saas.JumpboxServiceApi(api_client)
+    account_id = 'account_id_example' # str | account_id represents the user's account ID
+
+    try:
+        # Summary: Resume account Description: Resume an account.
+        api_response = api_instance.jumpbox_service_resume_account(account_id)
+        print("The response of JumpboxServiceApi->jumpbox_service_resume_account:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling JumpboxServiceApi->jumpbox_service_resume_account: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **account_id** | **str**| account_id represents the user&#39;s account ID | 
+
+### Return type
+
+[**Jumpboxv3ResumeAccountResponse**](Jumpboxv3ResumeAccountResponse.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **jumpbox_service_search_users**
 > Jumpboxv3SearchUsersResponse jumpbox_service_search_users(jumpboxv3_search_users_request)
 
@@ -785,6 +1207,84 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **jumpbox_service_suspend_account**
+> Jumpboxv3SuspendAccountResponse jumpbox_service_suspend_account(account_id)
+
+Summary: Suspend Account Description: Suspend an account
+
+### Example
+
+* Api Key Authentication (ApiKeyAuth):
+
+```python
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.jumpboxv3_suspend_account_response import Jumpboxv3SuspendAccountResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ibm_gdsc_sdk_saas.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ibm_gdsc_sdk_saas.JumpboxServiceApi(api_client)
+    account_id = 'account_id_example' # str | account_id represents the user's account ID
+
+    try:
+        # Summary: Suspend Account Description: Suspend an account
+        api_response = api_instance.jumpbox_service_suspend_account(account_id)
+        print("The response of JumpboxServiceApi->jumpbox_service_suspend_account:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling JumpboxServiceApi->jumpbox_service_suspend_account: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **account_id** | **str**| account_id represents the user&#39;s account ID | 
+
+### Return type
+
+[**Jumpboxv3SuspendAccountResponse**](Jumpboxv3SuspendAccountResponse.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **jumpbox_service_test_user**
 > Jumpboxv3TestUserResponse jumpbox_service_test_user(jumpboxv3_test_user_request)
 
@@ -856,6 +1356,87 @@ Name | Type | Description  | Notes
 ### Authorization
 
 [BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **jumpbox_service_update_account**
+> Jumpboxv3UpdateAccountResponse jumpbox_service_update_account(account_id, jumpboxv3_update_account_request)
+
+Summary: Update Account Description: Updates an account.
+
+### Example
+
+* Api Key Authentication (ApiKeyAuth):
+
+```python
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.jumpboxv3_update_account_request import Jumpboxv3UpdateAccountRequest
+from ibm_gdsc_sdk_saas.models.jumpboxv3_update_account_response import Jumpboxv3UpdateAccountResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ibm_gdsc_sdk_saas.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ibm_gdsc_sdk_saas.JumpboxServiceApi(api_client)
+    account_id = 'account_id_example' # str | Account id.
+    jumpboxv3_update_account_request = ibm_gdsc_sdk_saas.Jumpboxv3UpdateAccountRequest() # Jumpboxv3UpdateAccountRequest | 
+
+    try:
+        # Summary: Update Account Description: Updates an account.
+        api_response = api_instance.jumpbox_service_update_account(account_id, jumpboxv3_update_account_request)
+        print("The response of JumpboxServiceApi->jumpbox_service_update_account:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling JumpboxServiceApi->jumpbox_service_update_account: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **account_id** | **str**| Account id. | 
+ **jumpboxv3_update_account_request** | [**Jumpboxv3UpdateAccountRequest**](Jumpboxv3UpdateAccountRequest.md)|  | 
+
+### Return type
+
+[**Jumpboxv3UpdateAccountResponse**](Jumpboxv3UpdateAccountResponse.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 

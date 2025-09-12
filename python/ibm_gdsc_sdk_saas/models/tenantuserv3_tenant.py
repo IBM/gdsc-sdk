@@ -36,10 +36,11 @@ class Tenantuserv3Tenant(BaseModel):
     name: Optional[StrictStr] = None
     part_number: Optional[StrictStr] = Field(default=None, description="Part number.")
     settings: Optional[Dict[str, StrictStr]] = Field(default=None, description="Settings pertaining to all users of this tenant.")
+    status: Optional[StrictStr] = None
     tenant_capabilities: Optional[Dict[str, StrictBool]] = None
     tenant_id: Optional[StrictStr] = Field(default=None, description="The unique id for the tenant object.")
     uid: Optional[StrictStr] = Field(default=None, description="Email.")
-    __properties: ClassVar[List[str]] = ["activation_date", "external_id", "external_metadata", "is_inactive", "is_ready", "name", "part_number", "settings", "tenant_capabilities", "tenant_id", "uid"]
+    __properties: ClassVar[List[str]] = ["activation_date", "external_id", "external_metadata", "is_inactive", "is_ready", "name", "part_number", "settings", "status", "tenant_capabilities", "tenant_id", "uid"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -112,6 +113,7 @@ class Tenantuserv3Tenant(BaseModel):
             "name": obj.get("name"),
             "part_number": obj.get("part_number"),
             "settings": obj.get("settings"),
+            "status": obj.get("status"),
             "tenant_capabilities": obj.get("tenant_capabilities"),
             "tenant_id": obj.get("tenant_id"),
             "uid": obj.get("uid")

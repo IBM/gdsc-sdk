@@ -40,10 +40,24 @@ class TestAssetsServiceApi(unittest.TestCase):
         """
         pass
 
+    def test_assets_service_cancel_csv_import(self) -> None:
+        """Test case for assets_service_cancel_csv_import
+
+        CancelCSVImport - Cancel the import of CSV and update the status in import log table
+        """
+        pass
+
     def test_assets_service_clone_policy(self) -> None:
         """Test case for assets_service_clone_policy
 
         ClonePolicy - Clone a policy.
+        """
+        pass
+
+    def test_assets_service_compare_csvto_existing_assets(self) -> None:
+        """Test case for assets_service_compare_csvto_existing_assets
+
+        CompareCSVToExistingAssets - Compare CSV with existing assets and return list of assets(existing/to be imported/both) on demand from csv.
         """
         pass
 
@@ -128,6 +142,13 @@ class TestAssetsServiceApi(unittest.TestCase):
         """Test case for assets_service_get_filters_for_assets
 
         GetFiltersForAssets - Get a list of filters category and sub category with all data.
+        """
+        pass
+
+    def test_assets_service_import_csv(self) -> None:
+        """Test case for assets_service_import_csv
+
+        ImportCSV - Start the async asset import from CSV by starting the db procedure and send notification at the end.
         """
         pass
 

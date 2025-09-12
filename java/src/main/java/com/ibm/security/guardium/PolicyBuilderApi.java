@@ -39,6 +39,8 @@ import com.ibm.security.guardium.Policybuilderv3GetPolicyDetailsResponse;
 import com.ibm.security.guardium.Policybuilderv3GetPolicyNamesFromRuleIDsRequest;
 import com.ibm.security.guardium.Policybuilderv3GetPolicyNamesFromRuleIDsResponse;
 import com.ibm.security.guardium.Policybuilderv3GetPolicySyncListResponse;
+import com.ibm.security.guardium.Policybuilderv3GetPolicyVersionResponse;
+import com.ibm.security.guardium.Policybuilderv3GetPolicyVersionsInfoResponse;
 import com.ibm.security.guardium.Policybuilderv3GetReceiversResponse;
 import com.ibm.security.guardium.Policybuilderv3GetRuleValidationRequest;
 import com.ibm.security.guardium.Policybuilderv3InsertGdpPolicyMetaDataRequest;
@@ -1216,6 +1218,270 @@ public class PolicyBuilderApi {
         return localVarCall;
     }
     /**
+     * Build call for policyBuilderGetPolicyVersion
+     * @param policyId Policy id of the requested policy (required)
+     * @param version Requested version number of the policy (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call policyBuilderGetPolicyVersionCall(String policyId, Integer version, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/policies/{policy_id}/details/versions/{version}"
+            .replace("{" + "policy_id" + "}", localVarApiClient.escapeString(policyId.toString()))
+            .replace("{" + "version" + "}", localVarApiClient.escapeString(version.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call policyBuilderGetPolicyVersionValidateBeforeCall(String policyId, Integer version, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'policyId' is set
+        if (policyId == null) {
+            throw new ApiException("Missing the required parameter 'policyId' when calling policyBuilderGetPolicyVersion(Async)");
+        }
+
+        // verify the required parameter 'version' is set
+        if (version == null) {
+            throw new ApiException("Missing the required parameter 'version' when calling policyBuilderGetPolicyVersion(Async)");
+        }
+
+        return policyBuilderGetPolicyVersionCall(policyId, version, _callback);
+
+    }
+
+    /**
+     * Summary: Get a particular version of the policy Description: Returns a particular version of policy and response code and message
+     * 
+     * @param policyId Policy id of the requested policy (required)
+     * @param version Requested version number of the policy (required)
+     * @return Policybuilderv3GetPolicyVersionResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Policybuilderv3GetPolicyVersionResponse policyBuilderGetPolicyVersion(String policyId, Integer version) throws ApiException {
+        ApiResponse<Policybuilderv3GetPolicyVersionResponse> localVarResp = policyBuilderGetPolicyVersionWithHttpInfo(policyId, version);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Get a particular version of the policy Description: Returns a particular version of policy and response code and message
+     * 
+     * @param policyId Policy id of the requested policy (required)
+     * @param version Requested version number of the policy (required)
+     * @return ApiResponse&lt;Policybuilderv3GetPolicyVersionResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Policybuilderv3GetPolicyVersionResponse> policyBuilderGetPolicyVersionWithHttpInfo(String policyId, Integer version) throws ApiException {
+        okhttp3.Call localVarCall = policyBuilderGetPolicyVersionValidateBeforeCall(policyId, version, null);
+        Type localVarReturnType = new TypeToken<Policybuilderv3GetPolicyVersionResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Get a particular version of the policy Description: Returns a particular version of policy and response code and message (asynchronously)
+     * 
+     * @param policyId Policy id of the requested policy (required)
+     * @param version Requested version number of the policy (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call policyBuilderGetPolicyVersionAsync(String policyId, Integer version, final ApiCallback<Policybuilderv3GetPolicyVersionResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = policyBuilderGetPolicyVersionValidateBeforeCall(policyId, version, _callback);
+        Type localVarReturnType = new TypeToken<Policybuilderv3GetPolicyVersionResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for policyBuilderGetPolicyVersionsInfo
+     * @param policyId Policy id of the requested policy (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call policyBuilderGetPolicyVersionsInfoCall(String policyId, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/policies/{policy_id}/versions/metdata"
+            .replace("{" + "policy_id" + "}", localVarApiClient.escapeString(policyId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call policyBuilderGetPolicyVersionsInfoValidateBeforeCall(String policyId, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'policyId' is set
+        if (policyId == null) {
+            throw new ApiException("Missing the required parameter 'policyId' when calling policyBuilderGetPolicyVersionsInfo(Async)");
+        }
+
+        return policyBuilderGetPolicyVersionsInfoCall(policyId, _callback);
+
+    }
+
+    /**
+     * Summary: Gets policy versions info Description: Returns information of all versions of a policy and response code and message
+     * 
+     * @param policyId Policy id of the requested policy (required)
+     * @return Policybuilderv3GetPolicyVersionsInfoResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Policybuilderv3GetPolicyVersionsInfoResponse policyBuilderGetPolicyVersionsInfo(String policyId) throws ApiException {
+        ApiResponse<Policybuilderv3GetPolicyVersionsInfoResponse> localVarResp = policyBuilderGetPolicyVersionsInfoWithHttpInfo(policyId);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Gets policy versions info Description: Returns information of all versions of a policy and response code and message
+     * 
+     * @param policyId Policy id of the requested policy (required)
+     * @return ApiResponse&lt;Policybuilderv3GetPolicyVersionsInfoResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Policybuilderv3GetPolicyVersionsInfoResponse> policyBuilderGetPolicyVersionsInfoWithHttpInfo(String policyId) throws ApiException {
+        okhttp3.Call localVarCall = policyBuilderGetPolicyVersionsInfoValidateBeforeCall(policyId, null);
+        Type localVarReturnType = new TypeToken<Policybuilderv3GetPolicyVersionsInfoResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Gets policy versions info Description: Returns information of all versions of a policy and response code and message (asynchronously)
+     * 
+     * @param policyId Policy id of the requested policy (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call policyBuilderGetPolicyVersionsInfoAsync(String policyId, final ApiCallback<Policybuilderv3GetPolicyVersionsInfoResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = policyBuilderGetPolicyVersionsInfoValidateBeforeCall(policyId, _callback);
+        Type localVarReturnType = new TypeToken<Policybuilderv3GetPolicyVersionsInfoResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for policyBuilderGetReceivers
      * @param actionId Action id. (optional)
      * @param validateCache Flag that indicates if cache needs to be validated. (optional)
@@ -2385,6 +2651,133 @@ public class PolicyBuilderApi {
 
         okhttp3.Call localVarCall = policyBuilderStorePoliciesGdpValidateBeforeCall(centralManagerId, policybuilderv3StorePolicyGdpRequest, _callback);
         Type localVarReturnType = new TypeToken<Policybuilderv3StorePolicyGdpResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for policyBuilderUpdatePolicy
+     * @param policybuilderv3CreateUpdatePolicyRequest  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call policyBuilderUpdatePolicyCall(Policybuilderv3CreateUpdatePolicyRequest policybuilderv3CreateUpdatePolicyRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = policybuilderv3CreateUpdatePolicyRequest;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/policies";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call policyBuilderUpdatePolicyValidateBeforeCall(Policybuilderv3CreateUpdatePolicyRequest policybuilderv3CreateUpdatePolicyRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'policybuilderv3CreateUpdatePolicyRequest' is set
+        if (policybuilderv3CreateUpdatePolicyRequest == null) {
+            throw new ApiException("Missing the required parameter 'policybuilderv3CreateUpdatePolicyRequest' when calling policyBuilderUpdatePolicy(Async)");
+        }
+
+        return policyBuilderUpdatePolicyCall(policybuilderv3CreateUpdatePolicyRequest, _callback);
+
+    }
+
+    /**
+     * Summary: Update policy Description: Update Policy returns response code and message.
+     * 
+     * @param policybuilderv3CreateUpdatePolicyRequest  (required)
+     * @return Policybuilderv3CreateUpdatePolicyResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Policybuilderv3CreateUpdatePolicyResponse policyBuilderUpdatePolicy(Policybuilderv3CreateUpdatePolicyRequest policybuilderv3CreateUpdatePolicyRequest) throws ApiException {
+        ApiResponse<Policybuilderv3CreateUpdatePolicyResponse> localVarResp = policyBuilderUpdatePolicyWithHttpInfo(policybuilderv3CreateUpdatePolicyRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Update policy Description: Update Policy returns response code and message.
+     * 
+     * @param policybuilderv3CreateUpdatePolicyRequest  (required)
+     * @return ApiResponse&lt;Policybuilderv3CreateUpdatePolicyResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Policybuilderv3CreateUpdatePolicyResponse> policyBuilderUpdatePolicyWithHttpInfo(Policybuilderv3CreateUpdatePolicyRequest policybuilderv3CreateUpdatePolicyRequest) throws ApiException {
+        okhttp3.Call localVarCall = policyBuilderUpdatePolicyValidateBeforeCall(policybuilderv3CreateUpdatePolicyRequest, null);
+        Type localVarReturnType = new TypeToken<Policybuilderv3CreateUpdatePolicyResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Update policy Description: Update Policy returns response code and message. (asynchronously)
+     * 
+     * @param policybuilderv3CreateUpdatePolicyRequest  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call policyBuilderUpdatePolicyAsync(Policybuilderv3CreateUpdatePolicyRequest policybuilderv3CreateUpdatePolicyRequest, final ApiCallback<Policybuilderv3CreateUpdatePolicyResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = policyBuilderUpdatePolicyValidateBeforeCall(policybuilderv3CreateUpdatePolicyRequest, _callback);
+        Type localVarReturnType = new TypeToken<Policybuilderv3CreateUpdatePolicyResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

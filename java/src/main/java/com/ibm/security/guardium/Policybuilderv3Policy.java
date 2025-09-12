@@ -24,6 +24,7 @@ import com.ibm.security.guardium.Policybuilderv3EdgeActivationObject;
 import com.ibm.security.guardium.Policybuilderv3ImportIssue;
 import com.ibm.security.guardium.Policybuilderv3ImportState;
 import com.ibm.security.guardium.Policybuilderv3PolicyType;
+import com.ibm.security.guardium.Policybuilderv3ProductType;
 import com.ibm.security.guardium.Policybuilderv3RuleType;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -57,8 +58,12 @@ import com.ibm.security.JSON;
 /**
  * Policy object for creating/storing the policy.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
 public class Policybuilderv3Policy {
+  public static final String SERIALIZED_NAME_ACTIVATION_FREQUENCY = "activation_frequency";
+  @SerializedName(SERIALIZED_NAME_ACTIVATION_FREQUENCY)
+  private String activationFrequency;
+
   public static final String SERIALIZED_NAME_ACTIVATION_STATUS = "activation_status";
   @SerializedName(SERIALIZED_NAME_ACTIVATION_STATUS)
   private Integer activationStatus;
@@ -91,6 +96,10 @@ public class Policybuilderv3Policy {
   @SerializedName(SERIALIZED_NAME_LAST_EDITED_TIMESTAMP)
   private String lastEditedTimestamp;
 
+  public static final String SERIALIZED_NAME_LAST_REVISED_BY = "last_revised_by";
+  @SerializedName(SERIALIZED_NAME_LAST_REVISED_BY)
+  private String lastRevisedBy;
+
   public static final String SERIALIZED_NAME_LOG_FLAT = "log_flat";
   @SerializedName(SERIALIZED_NAME_LOG_FLAT)
   private Boolean logFlat;
@@ -119,6 +128,10 @@ public class Policybuilderv3Policy {
   @SerializedName(SERIALIZED_NAME_POLICY_TYPE)
   private Policybuilderv3PolicyType policyType = Policybuilderv3PolicyType.DATA_POLICY;
 
+  public static final String SERIALIZED_NAME_PRODUCT_ID = "product_id";
+  @SerializedName(SERIALIZED_NAME_PRODUCT_ID)
+  private Policybuilderv3ProductType productId = Policybuilderv3ProductType.NO_PRODUCT;
+
   public static final String SERIALIZED_NAME_RULES_ON_FLAT = "rules_on_flat";
   @SerializedName(SERIALIZED_NAME_RULES_ON_FLAT)
   private Boolean rulesOnFlat;
@@ -137,6 +150,25 @@ public class Policybuilderv3Policy {
 
   public Policybuilderv3Policy() {
   }
+
+  public Policybuilderv3Policy activationFrequency(String activationFrequency) {
+    this.activationFrequency = activationFrequency;
+    return this;
+  }
+
+   /**
+   * Get activationFrequency
+   * @return activationFrequency
+  **/
+  @javax.annotation.Nullable
+  public String getActivationFrequency() {
+    return activationFrequency;
+  }
+
+  public void setActivationFrequency(String activationFrequency) {
+    this.activationFrequency = activationFrequency;
+  }
+
 
   public Policybuilderv3Policy activationStatus(Integer activationStatus) {
     this.activationStatus = activationStatus;
@@ -306,6 +338,25 @@ public class Policybuilderv3Policy {
   }
 
 
+  public Policybuilderv3Policy lastRevisedBy(String lastRevisedBy) {
+    this.lastRevisedBy = lastRevisedBy;
+    return this;
+  }
+
+   /**
+   * Get lastRevisedBy
+   * @return lastRevisedBy
+  **/
+  @javax.annotation.Nullable
+  public String getLastRevisedBy() {
+    return lastRevisedBy;
+  }
+
+  public void setLastRevisedBy(String lastRevisedBy) {
+    this.lastRevisedBy = lastRevisedBy;
+  }
+
+
   public Policybuilderv3Policy logFlat(Boolean logFlat) {
     this.logFlat = logFlat;
     return this;
@@ -439,6 +490,25 @@ public class Policybuilderv3Policy {
   }
 
 
+  public Policybuilderv3Policy productId(Policybuilderv3ProductType productId) {
+    this.productId = productId;
+    return this;
+  }
+
+   /**
+   * Get productId
+   * @return productId
+  **/
+  @javax.annotation.Nullable
+  public Policybuilderv3ProductType getProductId() {
+    return productId;
+  }
+
+  public void setProductId(Policybuilderv3ProductType productId) {
+    this.productId = productId;
+  }
+
+
   public Policybuilderv3Policy rulesOnFlat(Boolean rulesOnFlat) {
     this.rulesOnFlat = rulesOnFlat;
     return this;
@@ -525,7 +595,8 @@ public class Policybuilderv3Policy {
       return false;
     }
     Policybuilderv3Policy policybuilderv3Policy = (Policybuilderv3Policy) o;
-    return Objects.equals(this.activationStatus, policybuilderv3Policy.activationStatus) &&
+    return Objects.equals(this.activationFrequency, policybuilderv3Policy.activationFrequency) &&
+        Objects.equals(this.activationStatus, policybuilderv3Policy.activationStatus) &&
         Objects.equals(this.containsRuleTypes, policybuilderv3Policy.containsRuleTypes) &&
         Objects.equals(this.controlFlow, policybuilderv3Policy.controlFlow) &&
         Objects.equals(this.edgeActivationInfo, policybuilderv3Policy.edgeActivationInfo) &&
@@ -533,6 +604,7 @@ public class Policybuilderv3Policy {
         Objects.equals(this.installedOrder, policybuilderv3Policy.installedOrder) &&
         Objects.equals(this.installedTimestamp, policybuilderv3Policy.installedTimestamp) &&
         Objects.equals(this.lastEditedTimestamp, policybuilderv3Policy.lastEditedTimestamp) &&
+        Objects.equals(this.lastRevisedBy, policybuilderv3Policy.lastRevisedBy) &&
         Objects.equals(this.logFlat, policybuilderv3Policy.logFlat) &&
         Objects.equals(this.noOfRules, policybuilderv3Policy.noOfRules) &&
         Objects.equals(this.policyId, policybuilderv3Policy.policyId) &&
@@ -540,6 +612,7 @@ public class Policybuilderv3Policy {
         Objects.equals(this.policyImportState, policybuilderv3Policy.policyImportState) &&
         Objects.equals(this.policyName, policybuilderv3Policy.policyName) &&
         Objects.equals(this.policyType, policybuilderv3Policy.policyType) &&
+        Objects.equals(this.productId, policybuilderv3Policy.productId) &&
         Objects.equals(this.rulesOnFlat, policybuilderv3Policy.rulesOnFlat) &&
         Objects.equals(this.template, policybuilderv3Policy.template) &&
         Objects.equals(this.uiSequence, policybuilderv3Policy.uiSequence) &&
@@ -548,13 +621,14 @@ public class Policybuilderv3Policy {
 
   @Override
   public int hashCode() {
-    return Objects.hash(activationStatus, containsRuleTypes, controlFlow, edgeActivationInfo, installedFlag, installedOrder, installedTimestamp, lastEditedTimestamp, logFlat, noOfRules, policyId, policyImportIssue, policyImportState, policyName, policyType, rulesOnFlat, template, uiSequence, version);
+    return Objects.hash(activationFrequency, activationStatus, containsRuleTypes, controlFlow, edgeActivationInfo, installedFlag, installedOrder, installedTimestamp, lastEditedTimestamp, lastRevisedBy, logFlat, noOfRules, policyId, policyImportIssue, policyImportState, policyName, policyType, productId, rulesOnFlat, template, uiSequence, version);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Policybuilderv3Policy {\n");
+    sb.append("    activationFrequency: ").append(toIndentedString(activationFrequency)).append("\n");
     sb.append("    activationStatus: ").append(toIndentedString(activationStatus)).append("\n");
     sb.append("    containsRuleTypes: ").append(toIndentedString(containsRuleTypes)).append("\n");
     sb.append("    controlFlow: ").append(toIndentedString(controlFlow)).append("\n");
@@ -563,6 +637,7 @@ public class Policybuilderv3Policy {
     sb.append("    installedOrder: ").append(toIndentedString(installedOrder)).append("\n");
     sb.append("    installedTimestamp: ").append(toIndentedString(installedTimestamp)).append("\n");
     sb.append("    lastEditedTimestamp: ").append(toIndentedString(lastEditedTimestamp)).append("\n");
+    sb.append("    lastRevisedBy: ").append(toIndentedString(lastRevisedBy)).append("\n");
     sb.append("    logFlat: ").append(toIndentedString(logFlat)).append("\n");
     sb.append("    noOfRules: ").append(toIndentedString(noOfRules)).append("\n");
     sb.append("    policyId: ").append(toIndentedString(policyId)).append("\n");
@@ -570,6 +645,7 @@ public class Policybuilderv3Policy {
     sb.append("    policyImportState: ").append(toIndentedString(policyImportState)).append("\n");
     sb.append("    policyName: ").append(toIndentedString(policyName)).append("\n");
     sb.append("    policyType: ").append(toIndentedString(policyType)).append("\n");
+    sb.append("    productId: ").append(toIndentedString(productId)).append("\n");
     sb.append("    rulesOnFlat: ").append(toIndentedString(rulesOnFlat)).append("\n");
     sb.append("    template: ").append(toIndentedString(template)).append("\n");
     sb.append("    uiSequence: ").append(toIndentedString(uiSequence)).append("\n");
@@ -596,6 +672,7 @@ public class Policybuilderv3Policy {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
+    openapiFields.add("activation_frequency");
     openapiFields.add("activation_status");
     openapiFields.add("contains_rule_types");
     openapiFields.add("control_flow");
@@ -604,6 +681,7 @@ public class Policybuilderv3Policy {
     openapiFields.add("installed_order");
     openapiFields.add("installed_timestamp");
     openapiFields.add("last_edited_timestamp");
+    openapiFields.add("last_revised_by");
     openapiFields.add("log_flat");
     openapiFields.add("no_of_rules");
     openapiFields.add("policy_id");
@@ -611,6 +689,7 @@ public class Policybuilderv3Policy {
     openapiFields.add("policy_import_state");
     openapiFields.add("policy_name");
     openapiFields.add("policy_type");
+    openapiFields.add("product_id");
     openapiFields.add("rules_on_flat");
     openapiFields.add("template");
     openapiFields.add("ui_sequence");
@@ -641,6 +720,9 @@ public class Policybuilderv3Policy {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("activation_frequency") != null && !jsonObj.get("activation_frequency").isJsonNull()) && !jsonObj.get("activation_frequency").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `activation_frequency` to be a primitive type in the JSON string but got `%s`", jsonObj.get("activation_frequency").toString()));
+      }
       // ensure the optional json data is an array if present
       if (jsonObj.get("contains_rule_types") != null && !jsonObj.get("contains_rule_types").isJsonNull() && !jsonObj.get("contains_rule_types").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `contains_rule_types` to be an array in the JSON string but got `%s`", jsonObj.get("contains_rule_types").toString()));
@@ -669,6 +751,9 @@ public class Policybuilderv3Policy {
       if ((jsonObj.get("last_edited_timestamp") != null && !jsonObj.get("last_edited_timestamp").isJsonNull()) && !jsonObj.get("last_edited_timestamp").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `last_edited_timestamp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_edited_timestamp").toString()));
       }
+      if ((jsonObj.get("last_revised_by") != null && !jsonObj.get("last_revised_by").isJsonNull()) && !jsonObj.get("last_revised_by").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `last_revised_by` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_revised_by").toString()));
+      }
       if ((jsonObj.get("policy_id") != null && !jsonObj.get("policy_id").isJsonNull()) && !jsonObj.get("policy_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `policy_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_id").toString()));
       }
@@ -686,6 +771,10 @@ public class Policybuilderv3Policy {
       // validate the optional field `policy_type`
       if (jsonObj.get("policy_type") != null && !jsonObj.get("policy_type").isJsonNull()) {
         Policybuilderv3PolicyType.validateJsonElement(jsonObj.get("policy_type"));
+      }
+      // validate the optional field `product_id`
+      if (jsonObj.get("product_id") != null && !jsonObj.get("product_id").isJsonNull()) {
+        Policybuilderv3ProductType.validateJsonElement(jsonObj.get("product_id"));
       }
   }
 

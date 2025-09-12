@@ -289,7 +289,7 @@ class DataSensitivitiesApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/sensitivities/summary',
+            resource_path='/api/v2/dspm/sensitivities/summary',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -550,7 +550,7 @@ class DataSensitivitiesApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/sensitivities/{sensitivityId}',
+            resource_path='/api/v2/dspm/sensitivities/{sensitivityId}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -864,7 +864,7 @@ class DataSensitivitiesApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/sensitivities',
+            resource_path='/api/v2/dspm/sensitivities',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,

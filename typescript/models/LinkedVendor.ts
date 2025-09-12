@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { SensitivitySummary } from '../models/SensitivitySummary';
 import { Vendor } from '../models/Vendor';
 import { HttpFile } from '../http/http';
 
@@ -17,6 +18,7 @@ export class LinkedVendor {
     'vendor': Vendor;
     'totalAccounts': number;
     'isSensitive': boolean;
+    'sensitivitySummary'?: Array<SensitivitySummary>;
 
     static readonly discriminator: string | undefined = undefined;
 
@@ -37,6 +39,12 @@ export class LinkedVendor {
             "name": "isSensitive",
             "baseName": "isSensitive",
             "type": "boolean",
+            "format": ""
+        },
+        {
+            "name": "sensitivitySummary",
+            "baseName": "sensitivitySummary",
+            "type": "Array<SensitivitySummary>",
             "format": ""
         }    ];
 

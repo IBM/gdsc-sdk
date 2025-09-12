@@ -21,6 +21,7 @@
 | SOX | &quot;SOX&quot; |
 | FISMA | &quot;FISMA&quot; |
 | LBA | &quot;LBA&quot; |
+| GLBA | &quot;GLBA&quot; |
 | ISO_27001 | &quot;ISO 27001&quot; |
 | ISO_27018 | &quot;ISO 27018&quot; |
 | NIST | &quot;NIST&quot; |

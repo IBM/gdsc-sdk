@@ -12,6 +12,7 @@
 
 import { Policybuilderv3ControlFlow } from '../models/Policybuilderv3ControlFlow';
 import { Policybuilderv3PolicyType } from '../models/Policybuilderv3PolicyType';
+import { Policybuilderv3ProductType } from '../models/Policybuilderv3ProductType';
 import { Policybuilderv3Rule } from '../models/Policybuilderv3Rule';
 import { HttpFile } from '../http/http';
 
@@ -57,6 +58,7 @@ export class Policybuilderv3PolicyUpdate {
     */
     'policyName'?: string;
     'policyType'?: Policybuilderv3PolicyType;
+    'productId'?: Policybuilderv3ProductType;
     'rules'?: Array<Policybuilderv3Rule>;
     /**
     * Flag to indicate whether the policy has rules on flat enabled or not.
@@ -138,6 +140,12 @@ export class Policybuilderv3PolicyUpdate {
             "name": "policyType",
             "baseName": "policy_type",
             "type": "Policybuilderv3PolicyType",
+            "format": ""
+        },
+        {
+            "name": "productId",
+            "baseName": "product_id",
+            "type": "Policybuilderv3ProductType",
             "format": ""
         },
         {

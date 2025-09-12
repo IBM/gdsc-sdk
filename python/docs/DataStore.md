@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **cloud_account_details** | [**CloudAccountDetails**](CloudAccountDetails.md) |  | 
 **cloud_region** | **str** |  | [optional] 
 **country** | **str** |  | [optional] 
-**classification_status** | [**ClassificationStatus**](ClassificationStatus.md) |  | [optional] 
+**classification_status** | [**StoreClassificationStatus**](StoreClassificationStatus.md) |  | [optional] 
 **encryption_status** | [**DataStoreEncryptionStatus**](DataStoreEncryptionStatus.md) |  | [optional] 
 **custom_data** | [**List[StringKeyValue]**](StringKeyValue.md) |  | [optional] 
 **label** | **str** |  | [optional] 

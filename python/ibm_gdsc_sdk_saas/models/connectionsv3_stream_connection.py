@@ -35,16 +35,16 @@ class Connectionsv3StreamConnection(BaseModel):
     db_name: Optional[StrictStr] = Field(default=None, description="Database name.")
     db_type: Optional[StrictStr] = Field(default=None, description="Database type.")
     name: Optional[StrictStr] = Field(default=None, description="Event Hub name || Stream name.")
-    namespace: Optional[StrictStr] = Field(default=None, description="Optional: Namespace provided if the coonnection type is Azure.")
+    namespace: Optional[StrictStr] = Field(default=None, description="Optional: Namespace provided if the connection type is Azure.")
     password: Optional[StrictStr] = Field(default=None, description="Database credential password.")
     port: Optional[StrictStr] = Field(default=None, description="Port.")
-    provider: Optional[StrictStr] = Field(default=None, description="Optional: the provider provided if the coonnection type is Azure.")
-    region: Optional[StrictStr] = Field(default=None, description="Optional: the region provided if the coonnection type is AWS.")
+    provider: Optional[StrictStr] = Field(default=None, description="Optional: the provider provided if the connection type is Azure.")
+    region: Optional[StrictStr] = Field(default=None, description="Optional: the region provided if the connection type is AWS.")
     start_monitor: Optional[StrictStr] = Field(default=None, description="Connection Monitoring.")
     status: Optional[Connectionsv3Status] = None
     status_text: Optional[StrictStr] = Field(default=None, description="If status is not OK, details what's wrong (non-localized).")
     status_timestamp: Optional[StrictStr] = Field(default=None, description="The time stamp of status.")
-    storage_connection_string: Optional[StrictStr] = Field(default=None, description="Optional: Storage connection string must be proovided if the coonnection type is Azure.")
+    storage_connection_string: Optional[StrictStr] = Field(default=None, description="Optional: Storage connection string must be provided if the connection type is Azure.")
     username: Optional[StrictStr] = Field(default=None, description="Database credential username.")
     __properties: ClassVar[List[str]] = ["account_id", "account_name", "cluster_resource_id", "consumer_group_name", "db_dns_endpoint", "db_name", "db_type", "name", "namespace", "password", "port", "provider", "region", "start_monitor", "status", "status_text", "status_timestamp", "storage_connection_string", "username"]
 

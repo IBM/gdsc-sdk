@@ -26,6 +26,8 @@ import com.ibm.security.guardium.Policybuilderv3GetPolicyDetailsResponse;
 import com.ibm.security.guardium.Policybuilderv3GetPolicyNamesFromRuleIDsRequest;
 import com.ibm.security.guardium.Policybuilderv3GetPolicyNamesFromRuleIDsResponse;
 import com.ibm.security.guardium.Policybuilderv3GetPolicySyncListResponse;
+import com.ibm.security.guardium.Policybuilderv3GetPolicyVersionResponse;
+import com.ibm.security.guardium.Policybuilderv3GetPolicyVersionsInfoResponse;
 import com.ibm.security.guardium.Policybuilderv3GetReceiversResponse;
 import com.ibm.security.guardium.Policybuilderv3GetRuleValidationRequest;
 import com.ibm.security.guardium.Policybuilderv3InsertGdpPolicyMetaDataRequest;
@@ -162,6 +164,31 @@ public class PolicyBuilderApiTest {
     }
 
     /**
+     * Summary: Get a particular version of the policy Description: Returns a particular version of policy and response code and message
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void policyBuilderGetPolicyVersionTest() throws ApiException {
+        String policyId = null;
+        Integer version = null;
+        Policybuilderv3GetPolicyVersionResponse response = api.policyBuilderGetPolicyVersion(policyId, version);
+        // TODO: test validations
+    }
+
+    /**
+     * Summary: Gets policy versions info Description: Returns information of all versions of a policy and response code and message
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void policyBuilderGetPolicyVersionsInfoTest() throws ApiException {
+        String policyId = null;
+        Policybuilderv3GetPolicyVersionsInfoResponse response = api.policyBuilderGetPolicyVersionsInfo(policyId);
+        // TODO: test validations
+    }
+
+    /**
      * Summary: Get receivers Description: Get all the receivers associated with actions.
      *
      * @throws ApiException if the Api call fails
@@ -270,6 +297,18 @@ public class PolicyBuilderApiTest {
         String centralManagerId = null;
         Policybuilderv3StorePolicyGdpRequest policybuilderv3StorePolicyGdpRequest = null;
         Policybuilderv3StorePolicyGdpResponse response = api.policyBuilderStorePoliciesGdp(centralManagerId, policybuilderv3StorePolicyGdpRequest);
+        // TODO: test validations
+    }
+
+    /**
+     * Summary: Update policy Description: Update Policy returns response code and message.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void policyBuilderUpdatePolicyTest() throws ApiException {
+        Policybuilderv3CreateUpdatePolicyRequest policybuilderv3CreateUpdatePolicyRequest = null;
+        Policybuilderv3CreateUpdatePolicyResponse response = api.policyBuilderUpdatePolicy(policybuilderv3CreateUpdatePolicyRequest);
         // TODO: test validations
     }
 

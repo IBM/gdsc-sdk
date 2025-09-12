@@ -37,6 +37,7 @@ class TestPolicybuilderv3GetPoliciesResponse(unittest.TestCase):
             return Policybuilderv3GetPoliciesResponse(
                 policies = [
                     ibm_gdsc_sdk_saas.models.policybuilderv3_policy.policybuilderv3Policy(
+                        activation_frequency = '', 
                         activation_status = 56, 
                         contains_rule_types = [
                             'ACCESS'
@@ -53,6 +54,7 @@ class TestPolicybuilderv3GetPoliciesResponse(unittest.TestCase):
                         installed_order = 56, 
                         installed_timestamp = '', 
                         last_edited_timestamp = '', 
+                        last_revised_by = '', 
                         log_flat = True, 
                         no_of_rules = 56, 
                         policy_id = '', 
@@ -60,6 +62,7 @@ class TestPolicybuilderv3GetPoliciesResponse(unittest.TestCase):
                         policy_import_state = 'NO_IMPORT_STATUS', 
                         policy_name = '', 
                         policy_type = 'DATA_POLICY', 
+                        product_id = 'NO_PRODUCT', 
                         rules_on_flat = True, 
                         template = True, 
                         ui_sequence = 56, 

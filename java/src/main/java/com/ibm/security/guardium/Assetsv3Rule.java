@@ -54,7 +54,7 @@ import com.ibm.security.JSON;
 /**
  * Base Rule object which is used in create and list APIs.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
 public class Assetsv3Rule {
   public static final String SERIALIZED_NAME_ACTIONS = "actions";
   @SerializedName(SERIALIZED_NAME_ACTIONS)

@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **isReviewed** | **boolean** |  | [optional] [default to null]
 **link** | **string** |  | [optional] [default to null]
 **stats** | [**DataResourceStats**](DataResourceStats.md) |  | [optional] [default to null]
+**path** | **string** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

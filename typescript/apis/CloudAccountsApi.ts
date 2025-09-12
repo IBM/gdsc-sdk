@@ -12,12 +12,15 @@ import { AddAnalyzedRegion200Response } from '../models/AddAnalyzedRegion200Resp
 import { AddAnalyzedRegionRequest } from '../models/AddAnalyzedRegionRequest';
 import { AddCloudAccounts200Response } from '../models/AddCloudAccounts200Response';
 import { AddCloudAccountsRequest } from '../models/AddCloudAccountsRequest';
+import { AuthCode } from '../models/AuthCode';
 import { AuthInfo } from '../models/AuthInfo';
 import { AuthUrl } from '../models/AuthUrl';
 import { Authenticate400Response } from '../models/Authenticate400Response';
 import { ClientInfo } from '../models/ClientInfo';
 import { CloudAccountInstallationStatus } from '../models/CloudAccountInstallationStatus';
 import { CloudServiceProvider } from '../models/CloudServiceProvider';
+import { DBMetadataInfo } from '../models/DBMetadataInfo';
+import { DbInfo } from '../models/DbInfo';
 import { GetAnalyzedRegionStatus200Response } from '../models/GetAnalyzedRegionStatus200Response';
 import { LinkedAccounts } from '../models/LinkedAccounts';
 import { Office365TenantInfo } from '../models/Office365TenantInfo';
@@ -51,7 +54,7 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/cloudAccounts/cloudProviders/analyzedRegions';
+        const localVarPath = '/api/v2/dspm/cloudAccounts/cloudProviders/analyzedRegions';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
@@ -99,7 +102,7 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/cloudAccounts/cloudProviders';
+        const localVarPath = '/api/v2/dspm/cloudAccounts/cloudProviders';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
@@ -140,7 +143,7 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
         let _config = _options || this.configuration;
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/cloudAccounts/saasApps/atlassian-confluence/generateAuthUrl';
+        const localVarPath = '/api/v2/dspm/cloudAccounts/saasApps/atlassian-confluence/generateAuthUrl';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -170,7 +173,7 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
         let _config = _options || this.configuration;
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/cloudAccounts/saasApps/atlassian-jira/generateAuthUrl';
+        const localVarPath = '/api/v2/dspm/cloudAccounts/saasApps/atlassian-jira/generateAuthUrl';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -202,7 +205,7 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/cloudAccounts/azure/generateAuthUrl';
+        const localVarPath = '/api/v2/dspm/cloudAccounts/azure/generateAuthUrl';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -237,7 +240,37 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
         let _config = _options || this.configuration;
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/cloudAccounts/saasApps/office365/generateAuthUrl';
+        const localVarPath = '/api/v2/dspm/cloudAccounts/saasApps/office365/generateAuthUrl';
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        let authMethod: SecurityAuthentication | undefined;
+        // Apply auth methods
+        authMethod = _config.authMethods["ApiKeyAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Generate an administrator consent URL for Salesforce integration.
+     * Generate a Salesforce consent URL
+     */
+    public async generateSalesforceAuthUrl(_options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // Path Params
+        const localVarPath = '/api/v2/dspm/cloudAccounts/saasApps/salesforce/generateAuthUrl';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -267,7 +300,7 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
         let _config = _options || this.configuration;
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/cloudAccounts/saasApps/slack/generateAuthUrl';
+        const localVarPath = '/api/v2/dspm/cloudAccounts/saasApps/slack/generateAuthUrl';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -304,7 +337,7 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/cloudAccounts/saasApps/snowflake/generateAuthUrl';
+        const localVarPath = '/api/v2/dspm/cloudAccounts/saasApps/snowflake/generateAuthUrl';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
@@ -359,7 +392,7 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/cloudAccounts/cloudProviders/analyzedRegions/status';
+        const localVarPath = '/api/v2/dspm/cloudAccounts/cloudProviders/analyzedRegions/status';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -399,7 +432,7 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
         let _config = _options || this.configuration;
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/cloudAccounts/azure/getAdminConsentStatus';
+        const localVarPath = '/api/v2/dspm/cloudAccounts/azure/getAdminConsentStatus';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -443,7 +476,7 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/cloudAccounts/{cloudProvider}/{cloudAccountId}/installationStatus'
+        const localVarPath = '/api/v2/dspm/cloudAccounts/{cloudProvider}/{cloudAccountId}/installationStatus'
             .replace('{' + 'cloudProvider' + '}', encodeURIComponent(String(cloudProvider)))
             .replace('{' + 'cloudAccountId' + '}', encodeURIComponent(String(cloudAccountId)));
 
@@ -451,6 +484,54 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
         requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
 
+
+        let authMethod: SecurityAuthentication | undefined;
+        // Apply auth methods
+        authMethod = _config.authMethods["ApiKeyAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Get the metadata details of snowflake database from saas-asset-store.
+     * Get the metadata details of snowflake database.
+     * @param dbInfo 
+     */
+    public async getDatabaseMetadata(dbInfo: DbInfo, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'dbInfo' is not null or undefined
+        if (dbInfo === null || dbInfo === undefined) {
+            throw new RequiredError("CloudAccountsApi", "getDatabaseMetadata", "dbInfo");
+        }
+
+
+        // Path Params
+        const localVarPath = '/api/v2/dspm/cloudAccounts/saasApps/snowflake/getDatabaseMetadata';
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        // Body Params
+        const contentType = ObjectSerializer.getPreferredMediaType([
+            "application/json"
+        ]);
+        requestContext.setHeaderParam("Content-Type", contentType);
+        const serializedBody = ObjectSerializer.stringify(
+            ObjectSerializer.serialize(dbInfo, "DbInfo", ""),
+            contentType
+        );
+        requestContext.setBody(serializedBody);
 
         let authMethod: SecurityAuthentication | undefined;
         // Apply auth methods
@@ -482,7 +563,7 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/cloudAccounts/saasApps/snowflake/getRefreshTokenExpiry/{providerId}'
+        const localVarPath = '/api/v2/dspm/cloudAccounts/saasApps/snowflake/getRefreshTokenExpiry/{providerId}'
             .replace('{' + 'providerId' + '}', encodeURIComponent(String(providerId)));
 
         // Make Request Context
@@ -513,7 +594,7 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
         let _config = _options || this.configuration;
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/cloudAccounts/linkedAccounts';
+        const localVarPath = '/api/v2/dspm/cloudAccounts/linkedAccounts';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -557,7 +638,7 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/cloudAccounts/removeAccounts';
+        const localVarPath = '/api/v2/dspm/cloudAccounts/removeAccounts';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.DELETE);
@@ -611,7 +692,7 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/cloudAccounts/removeAccountsInstructions';
+        const localVarPath = '/api/v2/dspm/cloudAccounts/removeAccountsInstructions';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -651,7 +732,7 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
         let _config = _options || this.configuration;
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/cloudAccounts/saasApps/google/retrieveServiceAccountId';
+        const localVarPath = '/api/v2/dspm/cloudAccounts/saasApps/google/retrieveServiceAccountId';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -681,7 +762,7 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
         let _config = _options || this.configuration;
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/cloudAccounts/saasApps/snowflake/snowflakeIntegrationScript';
+        const localVarPath = '/api/v2/dspm/cloudAccounts/saasApps/snowflake/snowflakeIntegrationScript';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -718,7 +799,7 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/cloudAccounts/saasApps/google/submitAdminEmail';
+        const localVarPath = '/api/v2/dspm/cloudAccounts/saasApps/google/submitAdminEmail';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
@@ -766,7 +847,7 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/cloudAccounts/saasApps/office365/submitTenantInfo';
+        const localVarPath = '/api/v2/dspm/cloudAccounts/saasApps/office365/submitTenantInfo';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
@@ -780,6 +861,54 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
             ObjectSerializer.serialize(tenantInfo, "TenantInfo", ""),
+            contentType
+        );
+        requestContext.setBody(serializedBody);
+
+        let authMethod: SecurityAuthentication | undefined;
+        // Apply auth methods
+        authMethod = _config.authMethods["ApiKeyAuth"]
+        if (authMethod?.applySecurityAuthentication) {
+            await authMethod?.applySecurityAuthentication(requestContext);
+        }
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Submit customer information for Salesforce integration.
+     * Submit Salesforce customer information
+     * @param authCode 
+     */
+    public async submitSalesforceAuthCode(authCode: AuthCode, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'authCode' is not null or undefined
+        if (authCode === null || authCode === undefined) {
+            throw new RequiredError("CloudAccountsApi", "submitSalesforceAuthCode", "authCode");
+        }
+
+
+        // Path Params
+        const localVarPath = '/api/v2/dspm/cloudAccounts/saasApps/salesforce/submitAuthCodeInfo';
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        // Body Params
+        const contentType = ObjectSerializer.getPreferredMediaType([
+            "application/json"
+        ]);
+        requestContext.setHeaderParam("Content-Type", contentType);
+        const serializedBody = ObjectSerializer.stringify(
+            ObjectSerializer.serialize(authCode, "AuthCode", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -814,7 +943,7 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/cloudAccounts/saasApps/slack/submitAuthCode';
+        const localVarPath = '/api/v2/dspm/cloudAccounts/saasApps/slack/submitAuthCode';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
@@ -862,7 +991,7 @@ export class CloudAccountsApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/cloudAccounts/saasApps/snowflake/submitAuthCode';
+        const localVarPath = '/api/v2/dspm/cloudAccounts/saasApps/snowflake/submitAuthCode';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
@@ -1119,6 +1248,42 @@ export class CloudAccountsApiResponseProcessor {
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
      *
+     * @params response Response returned by the server for a request to generateSalesforceAuthUrl
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async generateSalesforceAuthUrlWithHttpInfo(response: ResponseContext): Promise<HttpInfo<AuthUrl >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: AuthUrl = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "AuthUrl", ""
+            ) as AuthUrl;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("400", response.httpStatusCode)) {
+            const body: Authenticate400Response = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Authenticate400Response", ""
+            ) as Authenticate400Response;
+            throw new ApiException<Authenticate400Response>(response.httpStatusCode, "Bad Request", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: AuthUrl = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "AuthUrl", ""
+            ) as AuthUrl;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
      * @params response Response returned by the server for a request to generateSlackAuthUrl
      * @throws ApiException if the response code was not in [200, 299]
      */
@@ -1289,6 +1454,42 @@ export class CloudAccountsApiResponseProcessor {
                 ObjectSerializer.parse(await response.body.text(), contentType),
                 "CloudAccountInstallationStatus", ""
             ) as CloudAccountInstallationStatus;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to getDatabaseMetadata
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async getDatabaseMetadataWithHttpInfo(response: ResponseContext): Promise<HttpInfo<DBMetadataInfo >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: DBMetadataInfo = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "DBMetadataInfo", ""
+            ) as DBMetadataInfo;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("400", response.httpStatusCode)) {
+            const body: Authenticate400Response = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Authenticate400Response", ""
+            ) as Authenticate400Response;
+            throw new ApiException<Authenticate400Response>(response.httpStatusCode, "Bad Request", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: DBMetadataInfo = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "DBMetadataInfo", ""
+            ) as DBMetadataInfo;
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
         }
 
@@ -1615,6 +1816,55 @@ export class CloudAccountsApiResponseProcessor {
                 ObjectSerializer.parse(await response.body.text(), contentType),
                 "Office365TenantInfo", ""
             ) as Office365TenantInfo;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to submitSalesforceAuthCode
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async submitSalesforceAuthCodeWithHttpInfo(response: ResponseContext): Promise<HttpInfo<void >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, undefined);
+        }
+        if (isCodeInRange("400", response.httpStatusCode)) {
+            const body: Authenticate400Response = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Authenticate400Response", ""
+            ) as Authenticate400Response;
+            throw new ApiException<Authenticate400Response>(response.httpStatusCode, "Bad Request", body, response.headers);
+        }
+        if (isCodeInRange("403", response.httpStatusCode)) {
+            const body: Authenticate400Response = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Authenticate400Response", ""
+            ) as Authenticate400Response;
+            throw new ApiException<Authenticate400Response>(response.httpStatusCode, "Forbidden", body, response.headers);
+        }
+        if (isCodeInRange("500", response.httpStatusCode)) {
+            const body: Authenticate400Response = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Authenticate400Response", ""
+            ) as Authenticate400Response;
+            throw new ApiException<Authenticate400Response>(response.httpStatusCode, "Internal Server Error", body, response.headers);
+        }
+        if (isCodeInRange("503", response.httpStatusCode)) {
+            throw new ApiException<undefined>(response.httpStatusCode, "Service Unavailable", undefined, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: void = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "void", ""
+            ) as void;
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
         }
 

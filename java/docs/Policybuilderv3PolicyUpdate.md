@@ -19,6 +19,7 @@ Create and update policy request message.
 |**policyId** | **String** | Policy Id. |  [optional] |
 |**policyName** | **String** | Policy Name. |  [optional] |
 |**policyType** | **Policybuilderv3PolicyType** |  |  [optional] |
+|**productId** | **Policybuilderv3ProductType** |  |  [optional] |
 |**rules** | [**List&lt;Policybuilderv3Rule&gt;**](Policybuilderv3Rule.md) |  |  [optional] |
 |**rulesOnFlat** | **Boolean** | Flag to indicate whether the policy has rules on flat enabled or not. |  [optional] |
 |**template** | **Boolean** | Flag to indicate whether the policy is a template policy or not. |  [optional] |

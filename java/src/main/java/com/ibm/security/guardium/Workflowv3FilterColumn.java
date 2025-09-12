@@ -52,7 +52,7 @@ import com.ibm.security.JSON;
 /**
  * FilterColumn represents a column field filter.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
 public class Workflowv3FilterColumn {
   public static final String SERIALIZED_NAME_HEADER_NAME = "header_name";
   @SerializedName(SERIALIZED_NAME_HEADER_NAME)

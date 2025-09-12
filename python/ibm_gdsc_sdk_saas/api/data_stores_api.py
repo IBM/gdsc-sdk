@@ -292,7 +292,7 @@ class DataStoresApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/dataStores/{dataStoreId}',
+            resource_path='/api/v2/dspm/dataStores/{dataStoreId}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -555,7 +555,7 @@ class DataStoresApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/dataStores/summary',
+            resource_path='/api/v2/dspm/dataStores/summary',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -835,7 +835,7 @@ class DataStoresApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/dataStores/labels',
+            resource_path='/api/v2/dspm/dataStores/labels',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1149,7 +1149,7 @@ class DataStoresApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/dataStores',
+            resource_path='/api/v2/dspm/dataStores',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1429,7 +1429,7 @@ class DataStoresApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/dataStores/cloudTags/keys',
+            resource_path='/api/v2/dspm/dataStores/cloudTags/keys',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1726,7 +1726,7 @@ class DataStoresApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/dataStores/cloudTags/values',
+            resource_path='/api/v2/dspm/dataStores/cloudTags/values',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1989,7 +1989,7 @@ class DataStoresApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/dataStores/filters/name',
+            resource_path='/api/v2/dspm/dataStores/filters/name',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -2263,7 +2263,7 @@ class DataStoresApi:
 
         return self.api_client.param_serialize(
             method='POST',
-            resource_path='/api/v1/dspm/dataStores/rescan',
+            resource_path='/api/v2/dspm/dataStores/rescan',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -2552,7 +2552,7 @@ class DataStoresApi:
 
         return self.api_client.param_serialize(
             method='PUT',
-            resource_path='/api/v1/dspm/dataStores/{dataStoreId}/labels',
+            resource_path='/api/v2/dspm/dataStores/{dataStoreId}/labels',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -2826,7 +2826,7 @@ class DataStoresApi:
 
         return self.api_client.param_serialize(
             method='POST',
-            resource_path='/api/v1/dspm/dataStores/custodian',
+            resource_path='/api/v2/dspm/dataStores/custodian',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,

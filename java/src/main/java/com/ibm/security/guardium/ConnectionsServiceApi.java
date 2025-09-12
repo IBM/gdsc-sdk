@@ -65,7 +65,9 @@ import com.ibm.security.guardium.Connectionsv3UpdatePluginRequest;
 import com.ibm.security.guardium.Connectionsv3UpdatePluginResponse;
 import com.ibm.security.guardium.Connectionsv3UpdateSettingsRequest;
 import com.ibm.security.guardium.Connectionsv3ValidateAwsConnectionRequest;
+import com.ibm.security.guardium.Connectionsv3ValidateAzureConnectionRequest;
 import com.ibm.security.guardium.Connectionsv3ValidateConnectionResponse;
+import com.ibm.security.guardium.Connectionsv3ValidateGcpConnectionRequest;
 import com.ibm.security.guardium.RuntimeError;
 
 import java.lang.reflect.Type;
@@ -3633,6 +3635,260 @@ public class ConnectionsServiceApi {
     public okhttp3.Call connectionsServiceValidateAwsConnectionAsync(Connectionsv3ValidateAwsConnectionRequest connectionsv3ValidateAwsConnectionRequest, final ApiCallback<Connectionsv3ValidateConnectionResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = connectionsServiceValidateAwsConnectionValidateBeforeCall(connectionsv3ValidateAwsConnectionRequest, _callback);
+        Type localVarReturnType = new TypeToken<Connectionsv3ValidateConnectionResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for connectionsServiceValidateAzureConnection
+     * @param connectionsv3ValidateAzureConnectionRequest  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call connectionsServiceValidateAzureConnectionCall(Connectionsv3ValidateAzureConnectionRequest connectionsv3ValidateAzureConnectionRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = connectionsv3ValidateAzureConnectionRequest;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/connections/validate/azure";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call connectionsServiceValidateAzureConnectionValidateBeforeCall(Connectionsv3ValidateAzureConnectionRequest connectionsv3ValidateAzureConnectionRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'connectionsv3ValidateAzureConnectionRequest' is set
+        if (connectionsv3ValidateAzureConnectionRequest == null) {
+            throw new ApiException("Missing the required parameter 'connectionsv3ValidateAzureConnectionRequest' when calling connectionsServiceValidateAzureConnection(Async)");
+        }
+
+        return connectionsServiceValidateAzureConnectionCall(connectionsv3ValidateAzureConnectionRequest, _callback);
+
+    }
+
+    /**
+     * Summary: Validate an Azure connection. Description: Validate an Azure connection.
+     * 
+     * @param connectionsv3ValidateAzureConnectionRequest  (required)
+     * @return Connectionsv3ValidateConnectionResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Connectionsv3ValidateConnectionResponse connectionsServiceValidateAzureConnection(Connectionsv3ValidateAzureConnectionRequest connectionsv3ValidateAzureConnectionRequest) throws ApiException {
+        ApiResponse<Connectionsv3ValidateConnectionResponse> localVarResp = connectionsServiceValidateAzureConnectionWithHttpInfo(connectionsv3ValidateAzureConnectionRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Validate an Azure connection. Description: Validate an Azure connection.
+     * 
+     * @param connectionsv3ValidateAzureConnectionRequest  (required)
+     * @return ApiResponse&lt;Connectionsv3ValidateConnectionResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Connectionsv3ValidateConnectionResponse> connectionsServiceValidateAzureConnectionWithHttpInfo(Connectionsv3ValidateAzureConnectionRequest connectionsv3ValidateAzureConnectionRequest) throws ApiException {
+        okhttp3.Call localVarCall = connectionsServiceValidateAzureConnectionValidateBeforeCall(connectionsv3ValidateAzureConnectionRequest, null);
+        Type localVarReturnType = new TypeToken<Connectionsv3ValidateConnectionResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Validate an Azure connection. Description: Validate an Azure connection. (asynchronously)
+     * 
+     * @param connectionsv3ValidateAzureConnectionRequest  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call connectionsServiceValidateAzureConnectionAsync(Connectionsv3ValidateAzureConnectionRequest connectionsv3ValidateAzureConnectionRequest, final ApiCallback<Connectionsv3ValidateConnectionResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = connectionsServiceValidateAzureConnectionValidateBeforeCall(connectionsv3ValidateAzureConnectionRequest, _callback);
+        Type localVarReturnType = new TypeToken<Connectionsv3ValidateConnectionResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for connectionsServiceValidateGcpConnection
+     * @param connectionsv3ValidateGcpConnectionRequest  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call connectionsServiceValidateGcpConnectionCall(Connectionsv3ValidateGcpConnectionRequest connectionsv3ValidateGcpConnectionRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = connectionsv3ValidateGcpConnectionRequest;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/connections/validate/gcp";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call connectionsServiceValidateGcpConnectionValidateBeforeCall(Connectionsv3ValidateGcpConnectionRequest connectionsv3ValidateGcpConnectionRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'connectionsv3ValidateGcpConnectionRequest' is set
+        if (connectionsv3ValidateGcpConnectionRequest == null) {
+            throw new ApiException("Missing the required parameter 'connectionsv3ValidateGcpConnectionRequest' when calling connectionsServiceValidateGcpConnection(Async)");
+        }
+
+        return connectionsServiceValidateGcpConnectionCall(connectionsv3ValidateGcpConnectionRequest, _callback);
+
+    }
+
+    /**
+     * Summary: Validate a GCP connection. Description: Validate a GCP connection.
+     * 
+     * @param connectionsv3ValidateGcpConnectionRequest  (required)
+     * @return Connectionsv3ValidateConnectionResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Connectionsv3ValidateConnectionResponse connectionsServiceValidateGcpConnection(Connectionsv3ValidateGcpConnectionRequest connectionsv3ValidateGcpConnectionRequest) throws ApiException {
+        ApiResponse<Connectionsv3ValidateConnectionResponse> localVarResp = connectionsServiceValidateGcpConnectionWithHttpInfo(connectionsv3ValidateGcpConnectionRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Validate a GCP connection. Description: Validate a GCP connection.
+     * 
+     * @param connectionsv3ValidateGcpConnectionRequest  (required)
+     * @return ApiResponse&lt;Connectionsv3ValidateConnectionResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Connectionsv3ValidateConnectionResponse> connectionsServiceValidateGcpConnectionWithHttpInfo(Connectionsv3ValidateGcpConnectionRequest connectionsv3ValidateGcpConnectionRequest) throws ApiException {
+        okhttp3.Call localVarCall = connectionsServiceValidateGcpConnectionValidateBeforeCall(connectionsv3ValidateGcpConnectionRequest, null);
+        Type localVarReturnType = new TypeToken<Connectionsv3ValidateConnectionResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Validate a GCP connection. Description: Validate a GCP connection. (asynchronously)
+     * 
+     * @param connectionsv3ValidateGcpConnectionRequest  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call connectionsServiceValidateGcpConnectionAsync(Connectionsv3ValidateGcpConnectionRequest connectionsv3ValidateGcpConnectionRequest, final ApiCallback<Connectionsv3ValidateConnectionResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = connectionsServiceValidateGcpConnectionValidateBeforeCall(connectionsv3ValidateGcpConnectionRequest, _callback);
         Type localVarReturnType = new TypeToken<Connectionsv3ValidateConnectionResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

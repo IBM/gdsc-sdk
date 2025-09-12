@@ -8,25 +8,42 @@ All URIs are relative to *http://localhost*
 | [**reportsServiceCreateChart**](ReportsServiceApi.md#reportsServiceCreateChart) | **POST** /api/v3/charts | Summary: Create chart Description: Create custom chart based on provided properties. |
 | [**reportsServiceCreateChartTemplatev2**](ReportsServiceApi.md#reportsServiceCreateChartTemplatev2) | **POST** /api/v3/flex-charts/templates | Summary: Create chart template v2 Description: Create custom VEGA chart template. |
 | [**reportsServiceCreateChartv2**](ReportsServiceApi.md#reportsServiceCreateChartv2) | **POST** /api/v3/flex-charts | Summary: Create chart v2 Description: Create custom VEGA chart based on provided properties. |
+| [**reportsServiceCreateControl**](ReportsServiceApi.md#reportsServiceCreateControl) | **POST** /api/v3/compliance/controls | Summary: Create Control. Description: Create a unique Control. |
 | [**reportsServiceCreateFieldsByCategory**](ReportsServiceApi.md#reportsServiceCreateFieldsByCategory) | **POST** /api/v3/reports/fields | Summary - Create fields by category Description: Cteate category fields based on provided properties. |
+| [**reportsServiceCreateGrade**](ReportsServiceApi.md#reportsServiceCreateGrade) | **POST** /api/v3/compliance/grades | Summary: Create Grade. Description: Create a unique Grade. |
 | [**reportsServiceCreateJoin**](ReportsServiceApi.md#reportsServiceCreateJoin) | **POST** /api/v3/reports/categories/joins | Summary: Create a join Description: Create a custom report join |
+| [**reportsServiceCreateMeasure**](ReportsServiceApi.md#reportsServiceCreateMeasure) | **POST** /api/v3/compliance/measures | Summary: Create measure. Description: Create a unique measure. |
+| [**reportsServiceCreateMetric**](ReportsServiceApi.md#reportsServiceCreateMetric) | **POST** /api/v3/compliance/metrics | Summary: Create metric. Description: Create a unique metric. |
+| [**reportsServiceCreateProgram**](ReportsServiceApi.md#reportsServiceCreateProgram) | **POST** /api/v3/compliance/programs | Summary: Create Program. Description: Create a unique Program. |
 | [**reportsServiceCreateReport**](ReportsServiceApi.md#reportsServiceCreateReport) | **POST** /api/v3/reports | Summary: Create report Description: Create custom report based on provided properties. |
+| [**reportsServiceCreateRequirement**](ReportsServiceApi.md#reportsServiceCreateRequirement) | **POST** /api/v3/compliance/requirements | Summary: Create Requirement. Description: Create a unique Requirement. |
 | [**reportsServiceCreateVariant**](ReportsServiceApi.md#reportsServiceCreateVariant) | **POST** /api/v3/reports/variants | Summary: Create a variant Description: Create a variant for reports |
 | [**reportsServiceDeleteCategory**](ReportsServiceApi.md#reportsServiceDeleteCategory) | **DELETE** /api/v3/reports/categories | Summary: Delete a category Description: Delete a report category |
 | [**reportsServiceDeleteChart**](ReportsServiceApi.md#reportsServiceDeleteChart) | **DELETE** /api/v3/charts/{chart_id} | Summary: Delete chart Description: Delete a custom chart. |
 | [**reportsServiceDeleteChartTemplatev2**](ReportsServiceApi.md#reportsServiceDeleteChartTemplatev2) | **DELETE** /api/v3/flex-charts/templates/{template_id} | Summary: Delete chart template v2 Description: Delete a custom VEGA chart template. |
 | [**reportsServiceDeleteChartv2**](ReportsServiceApi.md#reportsServiceDeleteChartv2) | **DELETE** /api/v3/flex-charts/{chart_id} | Summary: Delete chart v2 Description: Delete a custom VEGA chart. |
+| [**reportsServiceDeleteControl**](ReportsServiceApi.md#reportsServiceDeleteControl) | **DELETE** /api/v3/compliance/controls/{control_id} | Summary: Delete Control Description: Delete a Control. |
 | [**reportsServiceDeleteFieldsByCategory**](ReportsServiceApi.md#reportsServiceDeleteFieldsByCategory) | **DELETE** /api/v3/reports/fields | Summary - Delete fields by category Description: Delete category fields based on provided properties. |
+| [**reportsServiceDeleteGrade**](ReportsServiceApi.md#reportsServiceDeleteGrade) | **DELETE** /api/v3/compliance/grades/{grade_id} | Summary: Delete Grade Description: Delete a Grade. |
 | [**reportsServiceDeleteJoin**](ReportsServiceApi.md#reportsServiceDeleteJoin) | **DELETE** /api/v3/reports/categories/joins/{join_id} | Summary: Delete a join Description: Delete a custom join |
+| [**reportsServiceDeleteMeasure**](ReportsServiceApi.md#reportsServiceDeleteMeasure) | **DELETE** /api/v3/compliance/measures/{measure_id} | Summary: Delete measure Description: Delete a measure. |
+| [**reportsServiceDeleteMetric**](ReportsServiceApi.md#reportsServiceDeleteMetric) | **DELETE** /api/v3/compliance/metrics/{metric_id} | Summary: Delete metric Description: Delete a metric. |
+| [**reportsServiceDeleteProgram**](ReportsServiceApi.md#reportsServiceDeleteProgram) | **DELETE** /api/v3/compliance/programs/{program_id} | Summary: Delete Program Description: Delete a Program. |
 | [**reportsServiceDeleteReport**](ReportsServiceApi.md#reportsServiceDeleteReport) | **DELETE** /api/v3/reports/{report_id} | Summary: Delete report Description: Delete a custom report. |
+| [**reportsServiceDeleteRequirement**](ReportsServiceApi.md#reportsServiceDeleteRequirement) | **DELETE** /api/v3/compliance/requirements/{requirement_id} | Summary: Delete Requirement Description: Delete a Requirement. |
 | [**reportsServiceDeleteVariant**](ReportsServiceApi.md#reportsServiceDeleteVariant) | **DELETE** /api/v3/reports/variants/{variant_id} | Summary: Delete a variant Description: Delete a variant |
 | [**reportsServiceGetCategories**](ReportsServiceApi.md#reportsServiceGetCategories) | **GET** /api/v3/reports/categories | Summary:  Get all available report categories. Description: Get all category related fields or all possible fields. |
 | [**reportsServiceGetChartSettings**](ReportsServiceApi.md#reportsServiceGetChartSettings) | **GET** /api/v3/charts | Summary: Get chart settings Description: Get a custom chart based on provided report id. |
 | [**reportsServiceGetChartSettingsv2**](ReportsServiceApi.md#reportsServiceGetChartSettingsv2) | **GET** /api/v3/flex-charts | Summary: Get chart settings v2 Description: Get a custom VEGA chart based on provided report id. |
 | [**reportsServiceGetChartTemplatesv2**](ReportsServiceApi.md#reportsServiceGetChartTemplatesv2) | **GET** /api/v3/flex-charts/templates | Summary: Get chart template v2 Description: Get all custom VEGA chart templates. |
+| [**reportsServiceGetControls**](ReportsServiceApi.md#reportsServiceGetControls) | **GET** /api/v3/compliance/controls | Summary: Get controls Description: Get a list of controls with all data. |
 | [**reportsServiceGetFieldsByCategories**](ReportsServiceApi.md#reportsServiceGetFieldsByCategories) | **GET** /api/v3/reports/fields/categories | Summary: Get fields by categories Description: Get all category related fields or all possible fields based on a list of categories. |
 | [**reportsServiceGetFieldsByCategory**](ReportsServiceApi.md#reportsServiceGetFieldsByCategory) | **GET** /api/v3/reports/fields | Summary: Get fields by category Description: Get all category related fields or all possible fields. |
+| [**reportsServiceGetGrades**](ReportsServiceApi.md#reportsServiceGetGrades) | **GET** /api/v3/compliance/grades | Summary: Get grades Description: Get a list of grades with all data. |
 | [**reportsServiceGetJoins**](ReportsServiceApi.md#reportsServiceGetJoins) | **GET** /api/v3/reports/categories/joins | Summary: Get all joins Description: Get all custom joins. |
+| [**reportsServiceGetMeasures**](ReportsServiceApi.md#reportsServiceGetMeasures) | **GET** /api/v3/compliance/measures | Summary: Get measures Description: Get a list of measures with all data. |
+| [**reportsServiceGetMetrics**](ReportsServiceApi.md#reportsServiceGetMetrics) | **GET** /api/v3/compliance/metrics | Summary: Get metrics Description: Get a list of metrics with all data. |
+| [**reportsServiceGetPrograms**](ReportsServiceApi.md#reportsServiceGetPrograms) | **GET** /api/v3/compliance/programs | Summary: Get controls Description: Get a list of controls with all data. |
 | [**reportsServiceGetQueryByReportDefinition**](ReportsServiceApi.md#reportsServiceGetQueryByReportDefinition) | **POST** /api/v3/reports/query/definition | Summary: Get query by report definition Description: Get query by report definition. |
 | [**reportsServiceGetQueryByReportID**](ReportsServiceApi.md#reportsServiceGetQueryByReportID) | **POST** /api/v3/reports/query/id | Summary: Get query by report ID Description: Get query by report ID. |
 | [**reportsServiceGetReportDefinition**](ReportsServiceApi.md#reportsServiceGetReportDefinition) | **GET** /api/v3/reports/{report_id}/definition | Summary: Get report definition Description: Get report definition. |
@@ -36,16 +53,24 @@ All URIs are relative to *http://localhost*
 | [**reportsServiceGetReports**](ReportsServiceApi.md#reportsServiceGetReports) | **GET** /api/v3/reports | Summary: Get reports Description: Get reports list. |
 | [**reportsServiceGetReportsForJoin**](ReportsServiceApi.md#reportsServiceGetReportsForJoin) | **GET** /api/v3/reports/categories/joins/{join_id}/reports | Summary: Get the reports that use a join Description: Get the reports that use a join and the headers that are imported by the reports using the join |
 | [**reportsServiceGetReportsTags**](ReportsServiceApi.md#reportsServiceGetReportsTags) | **GET** /api/v3/reports/tags | Summary: Get reports tags Description: Get all report distinct tags. |
+| [**reportsServiceGetRequirements**](ReportsServiceApi.md#reportsServiceGetRequirements) | **GET** /api/v3/compliance/requirements | Summary: Get requirements Description: Get a list of requirements with all data. |
 | [**reportsServiceGetVariant**](ReportsServiceApi.md#reportsServiceGetVariant) | **GET** /api/v3/reports/variants/{variant_id} | Summary: Get a variant Description: Get a given variant |
 | [**reportsServiceGetVariants**](ReportsServiceApi.md#reportsServiceGetVariants) | **GET** /api/v3/reports/variants | Summary: Get all variants Description: Get all variants in reports |
 | [**reportsServicePartialChartUpdate**](ReportsServiceApi.md#reportsServicePartialChartUpdate) | **PATCH** /api/v3/charts/{chart_id} | Summary: Partial chart update Description: Update a custom chart with partial information. |
 | [**reportsServicePartialReportUpdate**](ReportsServiceApi.md#reportsServicePartialReportUpdate) | **PATCH** /api/v3/reports/{report_id} | Summary: Partial report update Description: Update a custom report with partial information. |
+| [**reportsServiceRunGrades**](ReportsServiceApi.md#reportsServiceRunGrades) | **POST** /api/v3/compliance/grades/run | Summary: Refresh metrics via grades. Description: Refresh metrics via grades. |
 | [**reportsServiceRunVariantOperation**](ReportsServiceApi.md#reportsServiceRunVariantOperation) | **POST** /api/v3/reports/variants/run | Summary: Run a variant Description: Run the operations in a variant |
 | [**reportsServiceTranspose**](ReportsServiceApi.md#reportsServiceTranspose) | **POST** /api/v3/reports/transpose | Summary: Transpose Description: Return the corresponding full sql data. |
 | [**reportsServiceUpdateChart**](ReportsServiceApi.md#reportsServiceUpdateChart) | **PUT** /api/v3/charts/{chart_id} | Summary: Update chart Description: Update a custom chart. |
 | [**reportsServiceUpdateChartv2**](ReportsServiceApi.md#reportsServiceUpdateChartv2) | **PUT** /api/v3/flex-charts/{chart_id} | Summary: Update chart v2 Description: Update a custom VEGA chart. |
+| [**reportsServiceUpdateControl**](ReportsServiceApi.md#reportsServiceUpdateControl) | **PUT** /api/v3/compliance/controls/{control_id} | Summary: Update Control. Description: Update a Control. |
+| [**reportsServiceUpdateGrade**](ReportsServiceApi.md#reportsServiceUpdateGrade) | **PUT** /api/v3/compliance/grades/{grade_id} | Summary: Update Grade. Description: Update a Grade. |
 | [**reportsServiceUpdateJoin**](ReportsServiceApi.md#reportsServiceUpdateJoin) | **PUT** /api/v3/reports/categories/joins/{join_id} | Summary: Update a join Description: Update a custom join |
+| [**reportsServiceUpdateMeasure**](ReportsServiceApi.md#reportsServiceUpdateMeasure) | **PUT** /api/v3/compliance/measures/{measure_id} | Summary: Update measure. Description: Update a measure. |
+| [**reportsServiceUpdateMetric**](ReportsServiceApi.md#reportsServiceUpdateMetric) | **PUT** /api/v3/compliance/metrics/{metric_id} | Summary: Update metric. Description: Update a metric. |
+| [**reportsServiceUpdateProgram**](ReportsServiceApi.md#reportsServiceUpdateProgram) | **PUT** /api/v3/compliance/programs/{program_id} | Summary: Update Program. Description: Update a Program. |
 | [**reportsServiceUpdateReport**](ReportsServiceApi.md#reportsServiceUpdateReport) | **PUT** /api/v3/reports/{report_id} | Summary: Update report Description: Update a custom report. |
+| [**reportsServiceUpdateRequirement**](ReportsServiceApi.md#reportsServiceUpdateRequirement) | **PUT** /api/v3/compliance/requirements/{requirement_id} | Summary: Update Requirement. Description: Update a Requirement. |
 | [**reportsServiceUpdateVariantOverride**](ReportsServiceApi.md#reportsServiceUpdateVariantOverride) | **PUT** /api/v3/reports/variants/{variant_id} | Summary: Update a variant Description: Update a variant with a custom override |
 
 
@@ -341,6 +366,79 @@ public class Example {
 | **200** | A successful response. |  -  |
 | **0** | An unexpected error response. |  -  |
 
+<a id="reportsServiceCreateControl"></a>
+# **reportsServiceCreateControl**
+> Reportsv3CreateControlResponse reportsServiceCreateControl(reportsv3CreateControlRequest)
+
+Summary: Create Control. Description: Create a unique Control.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ReportsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    ReportsServiceApi apiInstance = new ReportsServiceApi(defaultClient);
+    Reportsv3CreateControlRequest reportsv3CreateControlRequest = new Reportsv3CreateControlRequest(); // Reportsv3CreateControlRequest | 
+    try {
+      Reportsv3CreateControlResponse result = apiInstance.reportsServiceCreateControl(reportsv3CreateControlRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ReportsServiceApi#reportsServiceCreateControl");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reportsv3CreateControlRequest** | [**Reportsv3CreateControlRequest**](Reportsv3CreateControlRequest.md)|  | |
+
+### Return type
+
+[**Reportsv3CreateControlResponse**](Reportsv3CreateControlResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
 <a id="reportsServiceCreateFieldsByCategory"></a>
 # **reportsServiceCreateFieldsByCategory**
 > Reportsv3CreateFieldsByCategoryResponse reportsServiceCreateFieldsByCategory(reportsv3CreateFieldsByCategoryRequest)
@@ -398,6 +496,79 @@ public class Example {
 ### Return type
 
 [**Reportsv3CreateFieldsByCategoryResponse**](Reportsv3CreateFieldsByCategoryResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
+<a id="reportsServiceCreateGrade"></a>
+# **reportsServiceCreateGrade**
+> Reportsv3CreateGradeResponse reportsServiceCreateGrade(reportsv3CreateGradeRequest)
+
+Summary: Create Grade. Description: Create a unique Grade.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ReportsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    ReportsServiceApi apiInstance = new ReportsServiceApi(defaultClient);
+    Reportsv3CreateGradeRequest reportsv3CreateGradeRequest = new Reportsv3CreateGradeRequest(); // Reportsv3CreateGradeRequest | 
+    try {
+      Reportsv3CreateGradeResponse result = apiInstance.reportsServiceCreateGrade(reportsv3CreateGradeRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ReportsServiceApi#reportsServiceCreateGrade");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reportsv3CreateGradeRequest** | [**Reportsv3CreateGradeRequest**](Reportsv3CreateGradeRequest.md)|  | |
+
+### Return type
+
+[**Reportsv3CreateGradeResponse**](Reportsv3CreateGradeResponse.md)
 
 ### Authorization
 
@@ -487,6 +658,225 @@ public class Example {
 | **200** | A successful response. |  -  |
 | **0** | An unexpected error response. |  -  |
 
+<a id="reportsServiceCreateMeasure"></a>
+# **reportsServiceCreateMeasure**
+> Reportsv3CreateMeasureResponse reportsServiceCreateMeasure(reportsv3CreateMeasureRequest)
+
+Summary: Create measure. Description: Create a unique measure.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ReportsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    ReportsServiceApi apiInstance = new ReportsServiceApi(defaultClient);
+    Reportsv3CreateMeasureRequest reportsv3CreateMeasureRequest = new Reportsv3CreateMeasureRequest(); // Reportsv3CreateMeasureRequest | 
+    try {
+      Reportsv3CreateMeasureResponse result = apiInstance.reportsServiceCreateMeasure(reportsv3CreateMeasureRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ReportsServiceApi#reportsServiceCreateMeasure");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reportsv3CreateMeasureRequest** | [**Reportsv3CreateMeasureRequest**](Reportsv3CreateMeasureRequest.md)|  | |
+
+### Return type
+
+[**Reportsv3CreateMeasureResponse**](Reportsv3CreateMeasureResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
+<a id="reportsServiceCreateMetric"></a>
+# **reportsServiceCreateMetric**
+> Reportsv3CreateMetricResponse reportsServiceCreateMetric(reportsv3CreateMetricRequest)
+
+Summary: Create metric. Description: Create a unique metric.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ReportsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    ReportsServiceApi apiInstance = new ReportsServiceApi(defaultClient);
+    Reportsv3CreateMetricRequest reportsv3CreateMetricRequest = new Reportsv3CreateMetricRequest(); // Reportsv3CreateMetricRequest | 
+    try {
+      Reportsv3CreateMetricResponse result = apiInstance.reportsServiceCreateMetric(reportsv3CreateMetricRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ReportsServiceApi#reportsServiceCreateMetric");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reportsv3CreateMetricRequest** | [**Reportsv3CreateMetricRequest**](Reportsv3CreateMetricRequest.md)|  | |
+
+### Return type
+
+[**Reportsv3CreateMetricResponse**](Reportsv3CreateMetricResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
+<a id="reportsServiceCreateProgram"></a>
+# **reportsServiceCreateProgram**
+> Reportsv3CreateProgramResponse reportsServiceCreateProgram(reportsv3CreateProgramRequest)
+
+Summary: Create Program. Description: Create a unique Program.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ReportsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    ReportsServiceApi apiInstance = new ReportsServiceApi(defaultClient);
+    Reportsv3CreateProgramRequest reportsv3CreateProgramRequest = new Reportsv3CreateProgramRequest(); // Reportsv3CreateProgramRequest | 
+    try {
+      Reportsv3CreateProgramResponse result = apiInstance.reportsServiceCreateProgram(reportsv3CreateProgramRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ReportsServiceApi#reportsServiceCreateProgram");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reportsv3CreateProgramRequest** | [**Reportsv3CreateProgramRequest**](Reportsv3CreateProgramRequest.md)|  | |
+
+### Return type
+
+[**Reportsv3CreateProgramResponse**](Reportsv3CreateProgramResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
 <a id="reportsServiceCreateReport"></a>
 # **reportsServiceCreateReport**
 > Reportsv3CreateReportResponse reportsServiceCreateReport(reportsv3CreateReportRequest)
@@ -544,6 +934,79 @@ public class Example {
 ### Return type
 
 [**Reportsv3CreateReportResponse**](Reportsv3CreateReportResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
+<a id="reportsServiceCreateRequirement"></a>
+# **reportsServiceCreateRequirement**
+> Reportsv3CreateRequirementResponse reportsServiceCreateRequirement(reportsv3CreateRequirementRequest)
+
+Summary: Create Requirement. Description: Create a unique Requirement.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ReportsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    ReportsServiceApi apiInstance = new ReportsServiceApi(defaultClient);
+    Reportsv3CreateRequirementRequest reportsv3CreateRequirementRequest = new Reportsv3CreateRequirementRequest(); // Reportsv3CreateRequirementRequest | 
+    try {
+      Reportsv3CreateRequirementResponse result = apiInstance.reportsServiceCreateRequirement(reportsv3CreateRequirementRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ReportsServiceApi#reportsServiceCreateRequirement");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reportsv3CreateRequirementRequest** | [**Reportsv3CreateRequirementRequest**](Reportsv3CreateRequirementRequest.md)|  | |
+
+### Return type
+
+[**Reportsv3CreateRequirementResponse**](Reportsv3CreateRequirementResponse.md)
 
 ### Authorization
 
@@ -927,6 +1390,81 @@ public class Example {
 | **200** | A successful response. |  -  |
 | **0** | An unexpected error response. |  -  |
 
+<a id="reportsServiceDeleteControl"></a>
+# **reportsServiceDeleteControl**
+> Reportsv3DeleteControlResponse reportsServiceDeleteControl(controlId, reportsv3DeleteControlRequest)
+
+Summary: Delete Control Description: Delete a Control.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ReportsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    ReportsServiceApi apiInstance = new ReportsServiceApi(defaultClient);
+    Integer controlId = 56; // Integer | The ID of the control to delete
+    Reportsv3DeleteControlRequest reportsv3DeleteControlRequest = new Reportsv3DeleteControlRequest(); // Reportsv3DeleteControlRequest | 
+    try {
+      Reportsv3DeleteControlResponse result = apiInstance.reportsServiceDeleteControl(controlId, reportsv3DeleteControlRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ReportsServiceApi#reportsServiceDeleteControl");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **controlId** | **Integer**| The ID of the control to delete | |
+| **reportsv3DeleteControlRequest** | [**Reportsv3DeleteControlRequest**](Reportsv3DeleteControlRequest.md)|  | |
+
+### Return type
+
+[**Reportsv3DeleteControlResponse**](Reportsv3DeleteControlResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
 <a id="reportsServiceDeleteFieldsByCategory"></a>
 # **reportsServiceDeleteFieldsByCategory**
 > Reportsv3DeleteFieldsByCategoryResponse reportsServiceDeleteFieldsByCategory(headerIds, tableName)
@@ -994,6 +1532,81 @@ public class Example {
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
+<a id="reportsServiceDeleteGrade"></a>
+# **reportsServiceDeleteGrade**
+> Reportsv3DeleteGradeResponse reportsServiceDeleteGrade(gradeId, reportsv3DeleteGradeRequest)
+
+Summary: Delete Grade Description: Delete a Grade.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ReportsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    ReportsServiceApi apiInstance = new ReportsServiceApi(defaultClient);
+    Integer gradeId = 56; // Integer | The id of the grade to be deleted.
+    Reportsv3DeleteGradeRequest reportsv3DeleteGradeRequest = new Reportsv3DeleteGradeRequest(); // Reportsv3DeleteGradeRequest | 
+    try {
+      Reportsv3DeleteGradeResponse result = apiInstance.reportsServiceDeleteGrade(gradeId, reportsv3DeleteGradeRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ReportsServiceApi#reportsServiceDeleteGrade");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **gradeId** | **Integer**| The id of the grade to be deleted. | |
+| **reportsv3DeleteGradeRequest** | [**Reportsv3DeleteGradeRequest**](Reportsv3DeleteGradeRequest.md)|  | |
+
+### Return type
+
+[**Reportsv3DeleteGradeResponse**](Reportsv3DeleteGradeResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -1075,6 +1688,231 @@ public class Example {
 | **200** | A successful response. |  -  |
 | **0** | An unexpected error response. |  -  |
 
+<a id="reportsServiceDeleteMeasure"></a>
+# **reportsServiceDeleteMeasure**
+> Reportsv3DeleteMeasureResponse reportsServiceDeleteMeasure(measureId, reportsv3DeleteMeasureRequest)
+
+Summary: Delete measure Description: Delete a measure.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ReportsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    ReportsServiceApi apiInstance = new ReportsServiceApi(defaultClient);
+    Integer measureId = 56; // Integer | The id of the measure to be deleted.
+    Reportsv3DeleteMeasureRequest reportsv3DeleteMeasureRequest = new Reportsv3DeleteMeasureRequest(); // Reportsv3DeleteMeasureRequest | 
+    try {
+      Reportsv3DeleteMeasureResponse result = apiInstance.reportsServiceDeleteMeasure(measureId, reportsv3DeleteMeasureRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ReportsServiceApi#reportsServiceDeleteMeasure");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **measureId** | **Integer**| The id of the measure to be deleted. | |
+| **reportsv3DeleteMeasureRequest** | [**Reportsv3DeleteMeasureRequest**](Reportsv3DeleteMeasureRequest.md)|  | |
+
+### Return type
+
+[**Reportsv3DeleteMeasureResponse**](Reportsv3DeleteMeasureResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
+<a id="reportsServiceDeleteMetric"></a>
+# **reportsServiceDeleteMetric**
+> Reportsv3DeleteMetricResponse reportsServiceDeleteMetric(metricId, reportsv3DeleteMetricRequest)
+
+Summary: Delete metric Description: Delete a metric.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ReportsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    ReportsServiceApi apiInstance = new ReportsServiceApi(defaultClient);
+    Integer metricId = 56; // Integer | The id of the metric to be deleted.
+    Reportsv3DeleteMetricRequest reportsv3DeleteMetricRequest = new Reportsv3DeleteMetricRequest(); // Reportsv3DeleteMetricRequest | 
+    try {
+      Reportsv3DeleteMetricResponse result = apiInstance.reportsServiceDeleteMetric(metricId, reportsv3DeleteMetricRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ReportsServiceApi#reportsServiceDeleteMetric");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **metricId** | **Integer**| The id of the metric to be deleted. | |
+| **reportsv3DeleteMetricRequest** | [**Reportsv3DeleteMetricRequest**](Reportsv3DeleteMetricRequest.md)|  | |
+
+### Return type
+
+[**Reportsv3DeleteMetricResponse**](Reportsv3DeleteMetricResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
+<a id="reportsServiceDeleteProgram"></a>
+# **reportsServiceDeleteProgram**
+> Reportsv3DeleteProgramResponse reportsServiceDeleteProgram(programId, reportsv3DeleteProgramRequest)
+
+Summary: Delete Program Description: Delete a Program.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ReportsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    ReportsServiceApi apiInstance = new ReportsServiceApi(defaultClient);
+    Integer programId = 56; // Integer | The ID of the program to delete
+    Reportsv3DeleteProgramRequest reportsv3DeleteProgramRequest = new Reportsv3DeleteProgramRequest(); // Reportsv3DeleteProgramRequest | 
+    try {
+      Reportsv3DeleteProgramResponse result = apiInstance.reportsServiceDeleteProgram(programId, reportsv3DeleteProgramRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ReportsServiceApi#reportsServiceDeleteProgram");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **programId** | **Integer**| The ID of the program to delete | |
+| **reportsv3DeleteProgramRequest** | [**Reportsv3DeleteProgramRequest**](Reportsv3DeleteProgramRequest.md)|  | |
+
+### Return type
+
+[**Reportsv3DeleteProgramResponse**](Reportsv3DeleteProgramResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
 <a id="reportsServiceDeleteReport"></a>
 # **reportsServiceDeleteReport**
 > Reportsv3DeleteReportResponse reportsServiceDeleteReport(reportId)
@@ -1140,6 +1978,81 @@ public class Example {
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
+<a id="reportsServiceDeleteRequirement"></a>
+# **reportsServiceDeleteRequirement**
+> Reportsv3DeleteRequirementResponse reportsServiceDeleteRequirement(requirementId, reportsv3DeleteRequirementRequest)
+
+Summary: Delete Requirement Description: Delete a Requirement.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ReportsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    ReportsServiceApi apiInstance = new ReportsServiceApi(defaultClient);
+    Integer requirementId = 56; // Integer | The requirement to delete's ID
+    Reportsv3DeleteRequirementRequest reportsv3DeleteRequirementRequest = new Reportsv3DeleteRequirementRequest(); // Reportsv3DeleteRequirementRequest | 
+    try {
+      Reportsv3DeleteRequirementResponse result = apiInstance.reportsServiceDeleteRequirement(requirementId, reportsv3DeleteRequirementRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ReportsServiceApi#reportsServiceDeleteRequirement");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **requirementId** | **Integer**| The requirement to delete&#39;s ID | |
+| **reportsv3DeleteRequirementRequest** | [**Reportsv3DeleteRequirementRequest**](Reportsv3DeleteRequirementRequest.md)|  | |
+
+### Return type
+
+[**Reportsv3DeleteRequirementResponse**](Reportsv3DeleteRequirementResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -1513,6 +2426,75 @@ This endpoint does not need any parameter.
 | **200** | A successful response. |  -  |
 | **0** | An unexpected error response. |  -  |
 
+<a id="reportsServiceGetControls"></a>
+# **reportsServiceGetControls**
+> Reportsv3GetControlsResponse reportsServiceGetControls()
+
+Summary: Get controls Description: Get a list of controls with all data.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ReportsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    ReportsServiceApi apiInstance = new ReportsServiceApi(defaultClient);
+    try {
+      Reportsv3GetControlsResponse result = apiInstance.reportsServiceGetControls();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ReportsServiceApi#reportsServiceGetControls");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**Reportsv3GetControlsResponse**](Reportsv3GetControlsResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
 <a id="reportsServiceGetFieldsByCategories"></a>
 # **reportsServiceGetFieldsByCategories**
 > Reportsv3GetFieldsByCategoriesResponse reportsServiceGetFieldsByCategories(categoryIds)
@@ -1663,6 +2645,75 @@ public class Example {
 | **200** | A successful response. |  -  |
 | **0** | An unexpected error response. |  -  |
 
+<a id="reportsServiceGetGrades"></a>
+# **reportsServiceGetGrades**
+> Reportsv3GetGradesResponse reportsServiceGetGrades()
+
+Summary: Get grades Description: Get a list of grades with all data.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ReportsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    ReportsServiceApi apiInstance = new ReportsServiceApi(defaultClient);
+    try {
+      Reportsv3GetGradesResponse result = apiInstance.reportsServiceGetGrades();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ReportsServiceApi#reportsServiceGetGrades");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**Reportsv3GetGradesResponse**](Reportsv3GetGradesResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
 <a id="reportsServiceGetJoins"></a>
 # **reportsServiceGetJoins**
 > Reportsv3GetJoinsResponse reportsServiceGetJoins(categoryId)
@@ -1720,6 +2771,213 @@ public class Example {
 ### Return type
 
 [**Reportsv3GetJoinsResponse**](Reportsv3GetJoinsResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
+<a id="reportsServiceGetMeasures"></a>
+# **reportsServiceGetMeasures**
+> Reportsv3GetMeasuresResponse reportsServiceGetMeasures()
+
+Summary: Get measures Description: Get a list of measures with all data.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ReportsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    ReportsServiceApi apiInstance = new ReportsServiceApi(defaultClient);
+    try {
+      Reportsv3GetMeasuresResponse result = apiInstance.reportsServiceGetMeasures();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ReportsServiceApi#reportsServiceGetMeasures");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**Reportsv3GetMeasuresResponse**](Reportsv3GetMeasuresResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
+<a id="reportsServiceGetMetrics"></a>
+# **reportsServiceGetMetrics**
+> Reportsv3GetMetricsResponse reportsServiceGetMetrics()
+
+Summary: Get metrics Description: Get a list of metrics with all data.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ReportsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    ReportsServiceApi apiInstance = new ReportsServiceApi(defaultClient);
+    try {
+      Reportsv3GetMetricsResponse result = apiInstance.reportsServiceGetMetrics();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ReportsServiceApi#reportsServiceGetMetrics");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**Reportsv3GetMetricsResponse**](Reportsv3GetMetricsResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
+<a id="reportsServiceGetPrograms"></a>
+# **reportsServiceGetPrograms**
+> Reportsv3GetProgramsResponse reportsServiceGetPrograms()
+
+Summary: Get controls Description: Get a list of controls with all data.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ReportsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    ReportsServiceApi apiInstance = new ReportsServiceApi(defaultClient);
+    try {
+      Reportsv3GetProgramsResponse result = apiInstance.reportsServiceGetPrograms();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ReportsServiceApi#reportsServiceGetPrograms");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**Reportsv3GetProgramsResponse**](Reportsv3GetProgramsResponse.md)
 
 ### Authorization
 
@@ -2393,6 +3651,75 @@ This endpoint does not need any parameter.
 | **200** | A successful response. |  -  |
 | **0** | An unexpected error response. |  -  |
 
+<a id="reportsServiceGetRequirements"></a>
+# **reportsServiceGetRequirements**
+> Reportsv3GetRequirementsResponse reportsServiceGetRequirements()
+
+Summary: Get requirements Description: Get a list of requirements with all data.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ReportsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    ReportsServiceApi apiInstance = new ReportsServiceApi(defaultClient);
+    try {
+      Reportsv3GetRequirementsResponse result = apiInstance.reportsServiceGetRequirements();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ReportsServiceApi#reportsServiceGetRequirements");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**Reportsv3GetRequirementsResponse**](Reportsv3GetRequirementsResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
 <a id="reportsServiceGetVariant"></a>
 # **reportsServiceGetVariant**
 > Reportsv3GetVariantResponse reportsServiceGetVariant(variantId)
@@ -2669,6 +3996,79 @@ public class Example {
 ### Return type
 
 [**Reportsv3PartialReportUpdateResponse**](Reportsv3PartialReportUpdateResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
+<a id="reportsServiceRunGrades"></a>
+# **reportsServiceRunGrades**
+> Reportsv3RunGradesResponse reportsServiceRunGrades(reportsv3RunGradesRequest)
+
+Summary: Refresh metrics via grades. Description: Refresh metrics via grades.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ReportsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    ReportsServiceApi apiInstance = new ReportsServiceApi(defaultClient);
+    Reportsv3RunGradesRequest reportsv3RunGradesRequest = new Reportsv3RunGradesRequest(); // Reportsv3RunGradesRequest | 
+    try {
+      Reportsv3RunGradesResponse result = apiInstance.reportsServiceRunGrades(reportsv3RunGradesRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ReportsServiceApi#reportsServiceRunGrades");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reportsv3RunGradesRequest** | [**Reportsv3RunGradesRequest**](Reportsv3RunGradesRequest.md)|  | |
+
+### Return type
+
+[**Reportsv3RunGradesResponse**](Reportsv3RunGradesResponse.md)
 
 ### Authorization
 
@@ -2981,6 +4381,156 @@ public class Example {
 | **200** | A successful response. |  -  |
 | **0** | An unexpected error response. |  -  |
 
+<a id="reportsServiceUpdateControl"></a>
+# **reportsServiceUpdateControl**
+> Reportsv3UpdateControlResponse reportsServiceUpdateControl(controlId, reportsv3UpdateControlRequest)
+
+Summary: Update Control. Description: Update a Control.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ReportsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    ReportsServiceApi apiInstance = new ReportsServiceApi(defaultClient);
+    Integer controlId = 56; // Integer | The id of the control that was updated.
+    Reportsv3UpdateControlRequest reportsv3UpdateControlRequest = new Reportsv3UpdateControlRequest(); // Reportsv3UpdateControlRequest | 
+    try {
+      Reportsv3UpdateControlResponse result = apiInstance.reportsServiceUpdateControl(controlId, reportsv3UpdateControlRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ReportsServiceApi#reportsServiceUpdateControl");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **controlId** | **Integer**| The id of the control that was updated. | |
+| **reportsv3UpdateControlRequest** | [**Reportsv3UpdateControlRequest**](Reportsv3UpdateControlRequest.md)|  | |
+
+### Return type
+
+[**Reportsv3UpdateControlResponse**](Reportsv3UpdateControlResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
+<a id="reportsServiceUpdateGrade"></a>
+# **reportsServiceUpdateGrade**
+> Reportsv3UpdateGradeResponse reportsServiceUpdateGrade(gradeId, reportsv3UpdateGradeRequest)
+
+Summary: Update Grade. Description: Update a Grade.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ReportsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    ReportsServiceApi apiInstance = new ReportsServiceApi(defaultClient);
+    Integer gradeId = 56; // Integer | The id of the grade that was updated.
+    Reportsv3UpdateGradeRequest reportsv3UpdateGradeRequest = new Reportsv3UpdateGradeRequest(); // Reportsv3UpdateGradeRequest | 
+    try {
+      Reportsv3UpdateGradeResponse result = apiInstance.reportsServiceUpdateGrade(gradeId, reportsv3UpdateGradeRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ReportsServiceApi#reportsServiceUpdateGrade");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **gradeId** | **Integer**| The id of the grade that was updated. | |
+| **reportsv3UpdateGradeRequest** | [**Reportsv3UpdateGradeRequest**](Reportsv3UpdateGradeRequest.md)|  | |
+
+### Return type
+
+[**Reportsv3UpdateGradeResponse**](Reportsv3UpdateGradeResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
 <a id="reportsServiceUpdateJoin"></a>
 # **reportsServiceUpdateJoin**
 > Reportsv3UpdateJoinResponse reportsServiceUpdateJoin(joinId, reportsv3UpdateJoinRequest)
@@ -3056,6 +4606,231 @@ public class Example {
 | **200** | A successful response. |  -  |
 | **0** | An unexpected error response. |  -  |
 
+<a id="reportsServiceUpdateMeasure"></a>
+# **reportsServiceUpdateMeasure**
+> Reportsv3UpdateMeasureResponse reportsServiceUpdateMeasure(measureId, reportsv3UpdateMeasureRequest)
+
+Summary: Update measure. Description: Update a measure.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ReportsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    ReportsServiceApi apiInstance = new ReportsServiceApi(defaultClient);
+    Integer measureId = 56; // Integer | The id of the measure that was updated.
+    Reportsv3UpdateMeasureRequest reportsv3UpdateMeasureRequest = new Reportsv3UpdateMeasureRequest(); // Reportsv3UpdateMeasureRequest | 
+    try {
+      Reportsv3UpdateMeasureResponse result = apiInstance.reportsServiceUpdateMeasure(measureId, reportsv3UpdateMeasureRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ReportsServiceApi#reportsServiceUpdateMeasure");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **measureId** | **Integer**| The id of the measure that was updated. | |
+| **reportsv3UpdateMeasureRequest** | [**Reportsv3UpdateMeasureRequest**](Reportsv3UpdateMeasureRequest.md)|  | |
+
+### Return type
+
+[**Reportsv3UpdateMeasureResponse**](Reportsv3UpdateMeasureResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
+<a id="reportsServiceUpdateMetric"></a>
+# **reportsServiceUpdateMetric**
+> Reportsv3UpdateMetricResponse reportsServiceUpdateMetric(metricId, reportsv3UpdateMetricRequest)
+
+Summary: Update metric. Description: Update a metric.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ReportsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    ReportsServiceApi apiInstance = new ReportsServiceApi(defaultClient);
+    Integer metricId = 56; // Integer | The id of the metric that was updated.
+    Reportsv3UpdateMetricRequest reportsv3UpdateMetricRequest = new Reportsv3UpdateMetricRequest(); // Reportsv3UpdateMetricRequest | 
+    try {
+      Reportsv3UpdateMetricResponse result = apiInstance.reportsServiceUpdateMetric(metricId, reportsv3UpdateMetricRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ReportsServiceApi#reportsServiceUpdateMetric");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **metricId** | **Integer**| The id of the metric that was updated. | |
+| **reportsv3UpdateMetricRequest** | [**Reportsv3UpdateMetricRequest**](Reportsv3UpdateMetricRequest.md)|  | |
+
+### Return type
+
+[**Reportsv3UpdateMetricResponse**](Reportsv3UpdateMetricResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
+<a id="reportsServiceUpdateProgram"></a>
+# **reportsServiceUpdateProgram**
+> Reportsv3UpdateProgramResponse reportsServiceUpdateProgram(programId, reportsv3UpdateProgramRequest)
+
+Summary: Update Program. Description: Update a Program.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ReportsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    ReportsServiceApi apiInstance = new ReportsServiceApi(defaultClient);
+    Integer programId = 56; // Integer | The id of the programs that was updated.
+    Reportsv3UpdateProgramRequest reportsv3UpdateProgramRequest = new Reportsv3UpdateProgramRequest(); // Reportsv3UpdateProgramRequest | 
+    try {
+      Reportsv3UpdateProgramResponse result = apiInstance.reportsServiceUpdateProgram(programId, reportsv3UpdateProgramRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ReportsServiceApi#reportsServiceUpdateProgram");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **programId** | **Integer**| The id of the programs that was updated. | |
+| **reportsv3UpdateProgramRequest** | [**Reportsv3UpdateProgramRequest**](Reportsv3UpdateProgramRequest.md)|  | |
+
+### Return type
+
+[**Reportsv3UpdateProgramResponse**](Reportsv3UpdateProgramResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
 <a id="reportsServiceUpdateReport"></a>
 # **reportsServiceUpdateReport**
 > Reportsv3UpdateReportResponse reportsServiceUpdateReport(reportId, reportsv3UpdateReportRequest)
@@ -3115,6 +4890,81 @@ public class Example {
 ### Return type
 
 [**Reportsv3UpdateReportResponse**](Reportsv3UpdateReportResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
+<a id="reportsServiceUpdateRequirement"></a>
+# **reportsServiceUpdateRequirement**
+> Reportsv3UpdateRequirementResponse reportsServiceUpdateRequirement(requirementId, reportsv3UpdateRequirementRequest)
+
+Summary: Update Requirement. Description: Update a Requirement.
+
+### Example
+```java
+// Import classes:
+import com.ibm.security.ApiClient;
+import com.ibm.security.ApiException;
+import com.ibm.security.Configuration;
+import com.ibm.security.auth.*;
+import com.ibm.security.models.*;
+import com.ibm.security.guardium.ReportsServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure HTTP basic authorization: BasicAuth
+    HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+    BasicAuth.setUsername("YOUR USERNAME");
+    BasicAuth.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: ApiKeyAuth
+    ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+    ApiKeyAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //ApiKeyAuth.setApiKeyPrefix("Token");
+
+    ReportsServiceApi apiInstance = new ReportsServiceApi(defaultClient);
+    Integer requirementId = 56; // Integer | The id of the requirements that was updated.
+    Reportsv3UpdateRequirementRequest reportsv3UpdateRequirementRequest = new Reportsv3UpdateRequirementRequest(); // Reportsv3UpdateRequirementRequest | 
+    try {
+      Reportsv3UpdateRequirementResponse result = apiInstance.reportsServiceUpdateRequirement(requirementId, reportsv3UpdateRequirementRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ReportsServiceApi#reportsServiceUpdateRequirement");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **requirementId** | **Integer**| The id of the requirements that was updated. | |
+| **reportsv3UpdateRequirementRequest** | [**Reportsv3UpdateRequirementRequest**](Reportsv3UpdateRequirementRequest.md)|  | |
+
+### Return type
+
+[**Reportsv3UpdateRequirementResponse**](Reportsv3UpdateRequirementResponse.md)
 
 ### Authorization
 

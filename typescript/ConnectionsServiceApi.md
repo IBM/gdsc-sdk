@@ -32,6 +32,8 @@ Method | HTTP request | Description
 [**connectionsServiceUpdatePlugin**](ConnectionsServiceApi.md#connectionsServiceUpdatePlugin) | **PUT** /api/v3/connections/plugins/{id} | Summary: Update plugin. Description: Update plugin.
 [**connectionsServiceUpdateSettings**](ConnectionsServiceApi.md#connectionsServiceUpdateSettings) | **PUT** /api/v3/connections/settings | Summary: Update settings Description: Update Settings.
 [**connectionsServiceValidateAwsConnection**](ConnectionsServiceApi.md#connectionsServiceValidateAwsConnection) | **POST** /api/v3/connections/validate/aws | Summary: Validate an AWS connection. Description: Validate an AWS connection.
+[**connectionsServiceValidateAzureConnection**](ConnectionsServiceApi.md#connectionsServiceValidateAzureConnection) | **POST** /api/v3/connections/validate/azure | Summary: Validate an Azure connection. Description: Validate an Azure connection.
+[**connectionsServiceValidateGcpConnection**](ConnectionsServiceApi.md#connectionsServiceValidateGcpConnection) | **POST** /api/v3/connections/validate/gcp | Summary: Validate a GCP connection. Description: Validate a GCP connection.
 
 
 # **connectionsServiceCreateConnectionsAccounts**
@@ -1759,9 +1761,9 @@ let body:.ConnectionsServiceApiConnectionsServiceValidateAwsConnectionRequest = 
   // Connectionsv3ValidateAwsConnectionRequest
   connectionsv3ValidateAwsConnectionRequest: {
     accessKey: "accessKey_example",
+    bucketName: "bucketName_example",
     groupName: "groupName_example",
     inputPluginType: "inputPluginType_example",
-    logStream: "logStream_example",
     queueUrl: "queueUrl_example",
     region: "region_example",
     secretKey: "secretKey_example",
@@ -1779,6 +1781,123 @@ apiInstance.connectionsServiceValidateAwsConnection(body).then((data:any) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **connectionsv3ValidateAwsConnectionRequest** | **Connectionsv3ValidateAwsConnectionRequest**|  |
+
+
+### Return type
+
+**Connectionsv3ValidateConnectionResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **connectionsServiceValidateAzureConnection**
+> Connectionsv3ValidateConnectionResponse connectionsServiceValidateAzureConnection(connectionsv3ValidateAzureConnectionRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ConnectionsServiceApi(configuration);
+
+let body:.ConnectionsServiceApiConnectionsServiceValidateAzureConnectionRequest = {
+  // Connectionsv3ValidateAzureConnectionRequest
+  connectionsv3ValidateAzureConnectionRequest: {
+    eventHubName: "eventHubName_example",
+    storageConnectionString: "storageConnectionString_example",
+  },
+};
+
+apiInstance.connectionsServiceValidateAzureConnection(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **connectionsv3ValidateAzureConnectionRequest** | **Connectionsv3ValidateAzureConnectionRequest**|  |
+
+
+### Return type
+
+**Connectionsv3ValidateConnectionResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **connectionsServiceValidateGcpConnection**
+> Connectionsv3ValidateConnectionResponse connectionsServiceValidateGcpConnection(connectionsv3ValidateGcpConnectionRequest)
+
+
+### Example
+
+
+```typescript
+import {  } from '';
+import * as fs from 'fs';
+
+const configuration = .createConfiguration();
+const apiInstance = new .ConnectionsServiceApi(configuration);
+
+let body:.ConnectionsServiceApiConnectionsServiceValidateGcpConnectionRequest = {
+  // Connectionsv3ValidateGcpConnectionRequest
+  connectionsv3ValidateGcpConnectionRequest: {
+    clientEmail: "clientEmail_example",
+    privateKey: "privateKey_example",
+    projectId: "projectId_example",
+    subscription: "subscription_example",
+    topic: "topic_example",
+  },
+};
+
+apiInstance.connectionsServiceValidateGcpConnection(body).then((data:any) => {
+  console.log('API called successfully. Returned data: ' + data);
+}).catch((error:any) => console.error(error));
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **connectionsv3ValidateGcpConnectionRequest** | **Connectionsv3ValidateGcpConnectionRequest**|  |
 
 
 ### Return type

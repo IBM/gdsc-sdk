@@ -23,6 +23,7 @@ import com.ibm.security.guardium.Policybuilderv3EdgeActivationObject;
 import com.ibm.security.guardium.Policybuilderv3ImportIssue;
 import com.ibm.security.guardium.Policybuilderv3ImportState;
 import com.ibm.security.guardium.Policybuilderv3PolicyType;
+import com.ibm.security.guardium.Policybuilderv3ProductType;
 import com.ibm.security.guardium.Policybuilderv3RuleType;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -43,6 +44,14 @@ public class Policybuilderv3PolicyTest {
     @Test
     public void testPolicybuilderv3Policy() {
         // TODO: test Policybuilderv3Policy
+    }
+
+    /**
+     * Test the property 'activationFrequency'
+     */
+    @Test
+    public void activationFrequencyTest() {
+        // TODO: test activationFrequency
     }
 
     /**
@@ -110,6 +119,14 @@ public class Policybuilderv3PolicyTest {
     }
 
     /**
+     * Test the property 'lastRevisedBy'
+     */
+    @Test
+    public void lastRevisedByTest() {
+        // TODO: test lastRevisedBy
+    }
+
+    /**
      * Test the property 'logFlat'
      */
     @Test
@@ -163,6 +180,14 @@ public class Policybuilderv3PolicyTest {
     @Test
     public void policyTypeTest() {
         // TODO: test policyType
+    }
+
+    /**
+     * Test the property 'productId'
+     */
+    @Test
+    public void productIdTest() {
+        // TODO: test productId
     }
 
     /**

@@ -49,11 +49,15 @@ import com.ibm.security.JSON;
 /**
  * Connectionsv3ValidateAwsConnectionRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
 public class Connectionsv3ValidateAwsConnectionRequest {
   public static final String SERIALIZED_NAME_ACCESS_KEY = "access_key";
   @SerializedName(SERIALIZED_NAME_ACCESS_KEY)
   private String accessKey;
+
+  public static final String SERIALIZED_NAME_BUCKET_NAME = "bucket_name";
+  @SerializedName(SERIALIZED_NAME_BUCKET_NAME)
+  private String bucketName;
 
   public static final String SERIALIZED_NAME_GROUP_NAME = "group_name";
   @SerializedName(SERIALIZED_NAME_GROUP_NAME)
@@ -62,10 +66,6 @@ public class Connectionsv3ValidateAwsConnectionRequest {
   public static final String SERIALIZED_NAME_INPUT_PLUGIN_TYPE = "input_plugin_type";
   @SerializedName(SERIALIZED_NAME_INPUT_PLUGIN_TYPE)
   private String inputPluginType;
-
-  public static final String SERIALIZED_NAME_LOG_STREAM = "log_stream";
-  @SerializedName(SERIALIZED_NAME_LOG_STREAM)
-  private String logStream;
 
   public static final String SERIALIZED_NAME_QUEUE_URL = "queue_url";
   @SerializedName(SERIALIZED_NAME_QUEUE_URL)
@@ -101,6 +101,25 @@ public class Connectionsv3ValidateAwsConnectionRequest {
   }
 
 
+  public Connectionsv3ValidateAwsConnectionRequest bucketName(String bucketName) {
+    this.bucketName = bucketName;
+    return this;
+  }
+
+   /**
+   * Get bucketName
+   * @return bucketName
+  **/
+  @javax.annotation.Nullable
+  public String getBucketName() {
+    return bucketName;
+  }
+
+  public void setBucketName(String bucketName) {
+    this.bucketName = bucketName;
+  }
+
+
   public Connectionsv3ValidateAwsConnectionRequest groupName(String groupName) {
     this.groupName = groupName;
     return this;
@@ -126,7 +145,7 @@ public class Connectionsv3ValidateAwsConnectionRequest {
   }
 
    /**
-   * aws connection input type as Cloudwatch, SQS, ...
+   * aws connection input type as Cloudwatch, SQS, S3, ...
    * @return inputPluginType
   **/
   @javax.annotation.Nullable
@@ -136,25 +155,6 @@ public class Connectionsv3ValidateAwsConnectionRequest {
 
   public void setInputPluginType(String inputPluginType) {
     this.inputPluginType = inputPluginType;
-  }
-
-
-  public Connectionsv3ValidateAwsConnectionRequest logStream(String logStream) {
-    this.logStream = logStream;
-    return this;
-  }
-
-   /**
-   * Get logStream
-   * @return logStream
-  **/
-  @javax.annotation.Nullable
-  public String getLogStream() {
-    return logStream;
-  }
-
-  public void setLogStream(String logStream) {
-    this.logStream = logStream;
   }
 
 
@@ -226,9 +226,9 @@ public class Connectionsv3ValidateAwsConnectionRequest {
     }
     Connectionsv3ValidateAwsConnectionRequest connectionsv3ValidateAwsConnectionRequest = (Connectionsv3ValidateAwsConnectionRequest) o;
     return Objects.equals(this.accessKey, connectionsv3ValidateAwsConnectionRequest.accessKey) &&
+        Objects.equals(this.bucketName, connectionsv3ValidateAwsConnectionRequest.bucketName) &&
         Objects.equals(this.groupName, connectionsv3ValidateAwsConnectionRequest.groupName) &&
         Objects.equals(this.inputPluginType, connectionsv3ValidateAwsConnectionRequest.inputPluginType) &&
-        Objects.equals(this.logStream, connectionsv3ValidateAwsConnectionRequest.logStream) &&
         Objects.equals(this.queueUrl, connectionsv3ValidateAwsConnectionRequest.queueUrl) &&
         Objects.equals(this.region, connectionsv3ValidateAwsConnectionRequest.region) &&
         Objects.equals(this.secretKey, connectionsv3ValidateAwsConnectionRequest.secretKey);
@@ -236,7 +236,7 @@ public class Connectionsv3ValidateAwsConnectionRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessKey, groupName, inputPluginType, logStream, queueUrl, region, secretKey);
+    return Objects.hash(accessKey, bucketName, groupName, inputPluginType, queueUrl, region, secretKey);
   }
 
   @Override
@@ -244,9 +244,9 @@ public class Connectionsv3ValidateAwsConnectionRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class Connectionsv3ValidateAwsConnectionRequest {\n");
     sb.append("    accessKey: ").append(toIndentedString(accessKey)).append("\n");
+    sb.append("    bucketName: ").append(toIndentedString(bucketName)).append("\n");
     sb.append("    groupName: ").append(toIndentedString(groupName)).append("\n");
     sb.append("    inputPluginType: ").append(toIndentedString(inputPluginType)).append("\n");
-    sb.append("    logStream: ").append(toIndentedString(logStream)).append("\n");
     sb.append("    queueUrl: ").append(toIndentedString(queueUrl)).append("\n");
     sb.append("    region: ").append(toIndentedString(region)).append("\n");
     sb.append("    secretKey: ").append(toIndentedString(secretKey)).append("\n");
@@ -273,9 +273,9 @@ public class Connectionsv3ValidateAwsConnectionRequest {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("access_key");
+    openapiFields.add("bucket_name");
     openapiFields.add("group_name");
     openapiFields.add("input_plugin_type");
-    openapiFields.add("log_stream");
     openapiFields.add("queue_url");
     openapiFields.add("region");
     openapiFields.add("secret_key");
@@ -308,14 +308,14 @@ public class Connectionsv3ValidateAwsConnectionRequest {
       if ((jsonObj.get("access_key") != null && !jsonObj.get("access_key").isJsonNull()) && !jsonObj.get("access_key").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `access_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("access_key").toString()));
       }
+      if ((jsonObj.get("bucket_name") != null && !jsonObj.get("bucket_name").isJsonNull()) && !jsonObj.get("bucket_name").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `bucket_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("bucket_name").toString()));
+      }
       if ((jsonObj.get("group_name") != null && !jsonObj.get("group_name").isJsonNull()) && !jsonObj.get("group_name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `group_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("group_name").toString()));
       }
       if ((jsonObj.get("input_plugin_type") != null && !jsonObj.get("input_plugin_type").isJsonNull()) && !jsonObj.get("input_plugin_type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `input_plugin_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("input_plugin_type").toString()));
-      }
-      if ((jsonObj.get("log_stream") != null && !jsonObj.get("log_stream").isJsonNull()) && !jsonObj.get("log_stream").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `log_stream` to be a primitive type in the JSON string but got `%s`", jsonObj.get("log_stream").toString()));
       }
       if ((jsonObj.get("queue_url") != null && !jsonObj.get("queue_url").isJsonNull()) && !jsonObj.get("queue_url").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `queue_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("queue_url").toString()));

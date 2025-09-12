@@ -53,7 +53,7 @@ import com.ibm.security.JSON;
 /**
  * Tenant contains id, name, and settings for the specified tenant.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
 public class Jumpboxv3Tenant {
   public static final String SERIALIZED_NAME_ACTIVATION_DATE = "activation_date";
   @SerializedName(SERIALIZED_NAME_ACTIVATION_DATE)
@@ -86,6 +86,10 @@ public class Jumpboxv3Tenant {
   public static final String SERIALIZED_NAME_SETTINGS = "settings";
   @SerializedName(SERIALIZED_NAME_SETTINGS)
   private Map<String, String> settings = new HashMap<>();
+
+  public static final String SERIALIZED_NAME_STATUS = "status";
+  @SerializedName(SERIALIZED_NAME_STATUS)
+  private String status;
 
   public static final String SERIALIZED_NAME_TENANT_CAPABILITIES = "tenant_capabilities";
   @SerializedName(SERIALIZED_NAME_TENANT_CAPABILITIES)
@@ -270,6 +274,25 @@ public class Jumpboxv3Tenant {
   }
 
 
+  public Jumpboxv3Tenant status(String status) {
+    this.status = status;
+    return this;
+  }
+
+   /**
+   * Get status
+   * @return status
+  **/
+  @javax.annotation.Nullable
+  public String getStatus() {
+    return status;
+  }
+
+  public void setStatus(String status) {
+    this.status = status;
+  }
+
+
   public Jumpboxv3Tenant tenantCapabilities(Map<String, Boolean> tenantCapabilities) {
     this.tenantCapabilities = tenantCapabilities;
     return this;
@@ -353,6 +376,7 @@ public class Jumpboxv3Tenant {
         Objects.equals(this.name, jumpboxv3Tenant.name) &&
         Objects.equals(this.partNumber, jumpboxv3Tenant.partNumber) &&
         Objects.equals(this.settings, jumpboxv3Tenant.settings) &&
+        Objects.equals(this.status, jumpboxv3Tenant.status) &&
         Objects.equals(this.tenantCapabilities, jumpboxv3Tenant.tenantCapabilities) &&
         Objects.equals(this.tenantId, jumpboxv3Tenant.tenantId) &&
         Objects.equals(this.uid, jumpboxv3Tenant.uid);
@@ -360,7 +384,7 @@ public class Jumpboxv3Tenant {
 
   @Override
   public int hashCode() {
-    return Objects.hash(activationDate, externalId, externalMetadata, isInactive, isReady, name, partNumber, settings, tenantCapabilities, tenantId, uid);
+    return Objects.hash(activationDate, externalId, externalMetadata, isInactive, isReady, name, partNumber, settings, status, tenantCapabilities, tenantId, uid);
   }
 
   @Override
@@ -375,6 +399,7 @@ public class Jumpboxv3Tenant {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    partNumber: ").append(toIndentedString(partNumber)).append("\n");
     sb.append("    settings: ").append(toIndentedString(settings)).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    tenantCapabilities: ").append(toIndentedString(tenantCapabilities)).append("\n");
     sb.append("    tenantId: ").append(toIndentedString(tenantId)).append("\n");
     sb.append("    uid: ").append(toIndentedString(uid)).append("\n");
@@ -408,6 +433,7 @@ public class Jumpboxv3Tenant {
     openapiFields.add("name");
     openapiFields.add("part_number");
     openapiFields.add("settings");
+    openapiFields.add("status");
     openapiFields.add("tenant_capabilities");
     openapiFields.add("tenant_id");
     openapiFields.add("uid");
@@ -445,6 +471,9 @@ public class Jumpboxv3Tenant {
       }
       if ((jsonObj.get("part_number") != null && !jsonObj.get("part_number").isJsonNull()) && !jsonObj.get("part_number").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `part_number` to be a primitive type in the JSON string but got `%s`", jsonObj.get("part_number").toString()));
+      }
+      if ((jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) && !jsonObj.get("status").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
       }
       if ((jsonObj.get("tenant_id") != null && !jsonObj.get("tenant_id").isJsonNull()) && !jsonObj.get("tenant_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `tenant_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tenant_id").toString()));
