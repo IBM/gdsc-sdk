@@ -26,7 +26,7 @@ NAME = "ibm-gdsc-sdk-saas"
 VERSION = "3.0.20250703"
 PYTHON_REQUIRES = ">=3.7"
 REQUIRES = [
-    "urllib3 >= 1.25.3, < 2.1.0",
+    "urllib3 >=2.5.0, <2.5.1",
     "python-dateutil",
     "pydantic >= 2",
     "typing-extensions >= 4.7.1",
